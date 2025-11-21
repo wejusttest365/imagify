@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Code Formatter | CSS, HTML, JS Beautifier</title>
+<meta name="description" content="Online code formatter for CSS, HTML, and JavaScript. Beautify and clean your code instantly with line numbers. Free and easy to use.">
+<meta name="keywords" content="code formatter, CSS formatter, HTML formatter, JavaScript formatter, beautify code, online code beautifier, format code online">
+<meta name="author" content="YourWebsiteName">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Online Code Formatter | CSS, HTML, JS Beautifier">
+<meta property="og:description" content="Beautify and clean your CSS, HTML, and JavaScript code instantly online.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.yourwebsite.com/code-formatter">
+<meta property="og:image" content="https://www.yourwebsite.com/images/code-formatter-preview.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Online Code Formatter | CSS, HTML, JS Beautifier">
+<meta name="twitter:description" content="Beautify and clean your CSS, HTML, and JavaScript code instantly online.">
+<meta name="twitter:image" content="https://www.yourwebsite.com/images/code-formatter-preview.png">
+
+<style>
+body{font-family:Arial,sans-serif;background:#f9f9f9;color:#333;margin:0;padding:0;}
+header{background:#007bff;color:#fff;text-align:center;padding:30px 20px;}
+header h1{margin-bottom:5px;font-size:2rem;}
+header p{font-size:1rem;}
+.container{max-width:1200px;margin:20px auto;padding:20px;background:#fff;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
+
+/* Tabs */
+.tabs{display:flex;gap:5px;margin-bottom:20px;flex-wrap:wrap;}
+.tab{flex:1;text-align:center;padding:12px;background:#e0e0e0;font-weight:bold;cursor:pointer;border-radius:10px 10px 0 0;transition:.3s;}
+.tab.active{background:#007bff;color:#fff;}
+
+/* Formatter Layout */
+.formatter{display:flex;gap:20px;flex-wrap:wrap;}
+.input-area,.output-area{flex:1;min-width:300px;display:flex;flex-direction:column;}
+textarea{width:100%;height:500px;padding:15px;border-radius:10px;border:1px solid #ccc;font-family:monospace;font-size:14px;resize:vertical;}
+.output-area textarea{background:#f1f1f1;line-height:1.4;overflow:auto;}
+button{padding:10px 20px;margin-top:10px;border:none;border-radius:10px;cursor:pointer;transition:.3s;font-weight:bold;}
+button:hover{opacity:.9;}
+#formatBtn{background:#28a745;color:#fff;}
+#copyBtn{background:#007bff;color:#fff;}
+#resetBtn{background:#dc3545;color:#fff;}
+.line-count{text-align:right;margin-top:5px;font-size:12px;color:#555;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Online Code Formatter</h1>
+<p>Beautify and clean your CSS, HTML, or JavaScript code instantly</p>
+</header>
+
+<div class="container">
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab active" data-tab="css">CSS Formatter</div>
+    <div class="tab" data-tab="html">HTML Formatter</div>
+    <div class="tab" data-tab="js">JavaScript Formatter</div>
+  </div>
+
+  <!-- Formatter Section -->
+  <div class="formatter">
+    <!-- Input -->
+    <div class="input-area">
+      <label for="inputCode"><strong>Paste your code here:</strong></label>
+      <textarea id="inputCode" placeholder="Paste your CSS, HTML or JS code here..."></textarea>
+      <div class="line-count" id="inputLineCount">Lines: 0</div>
+      <button id="formatBtn">Format Code</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <!-- Output -->
+    <div class="output-area">
+      <label for="outputCode"><strong>Formatted code:</strong></label>
+      <textarea id="outputCode" readonly></textarea>
+      <div class="line-count" id="outputLineCount">Lines: 0</div>
+      <button id="copyBtn">Copy Formatted Code</button>
+    </div>
+  </div>
+
+  <p style="margin-top:30px;color:#555;font-size:0.95rem;">
+    This online code formatter supports CSS, HTML, and JavaScript. Simply paste your code, choose the type, format it, and copy for your projects. Free and fast!
+  </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify-css.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.7/js/lib/beautify-html.js"></script>
+
+<script>
+// Tabs
+const tabs = document.querySelectorAll('.tab');
+let currentTab = 'css';
+tabs.forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    tabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    currentTab = tab.dataset.tab;
+  });
+});
+
+// Elements
+const inputCode = document.getElementById('inputCode');
+const outputCode = document.getElementById('outputCode');
+const formatBtn = document.getElementById('formatBtn');
+const copyBtn = document.getElementById('copyBtn');
+const resetBtn = document.getElementById('resetBtn');
+const inputLineCount = document.getElementById('inputLineCount');
+const outputLineCount = document.getElementById('outputLineCount');
+
+// Update line counts
+function updateLineCounts(){
+  inputLineCount.textContent = `Lines: ${inputCode.value.split('\n').length}`;
+  outputLineCount.textContent = `Lines: ${outputCode.value.split('\n').length}`;
+}
+
+inputCode.addEventListener('input', updateLineCounts);
+
+// Format code
+formatBtn.addEventListener('click', ()=>{
+  const code = inputCode.value;
+  let formatted = '';
+  if(currentTab==='css'){
+    formatted = css_beautify(code,{indent_size:2});
+  } else if(currentTab==='html'){
+    formatted = html_beautify(code,{indent_size:2});
+  } else if(currentTab==='js'){
+    formatted = js_beautify(code,{indent_size:2});
+  }
+  outputCode.value = formatted;
+  updateLineCounts();
+});
+
+// Copy formatted code
+copyBtn.addEventListener('click', ()=>{
+  outputCode.select();
+  navigator.clipboard.writeText(outputCode.value);
+  copyBtn.textContent='Copied!';
+  setTimeout(()=>copyBtn.textContent='Copy Formatted Code',1000);
+});
+
+// Reset input/output
+resetBtn.addEventListener('click', ()=>{
+  inputCode.value = '';
+  outputCode.value = '';
+  updateLineCounts();
+});
+</script>
+
+</body>
+</html>
