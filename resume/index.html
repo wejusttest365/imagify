@@ -1,454 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resume Builder — Create Professional Resumes (Free)</title>
-  <meta name="description" content="Create professional resumes fast. Rich text editors, skill tags, profile image/logo, and PDF export — ready for recruiters and ATS." />
-  <meta name="keywords" content="resume builder, CV maker, resume template, download resume, pdf resume, online resume" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://example.com/resume-builder" />
-  <meta property="og:title" content="Resume Builder — Create Professional Resumes" />
-  <meta property="og:description" content="Fast, offline resume builder with rich text editors, skill tags, logo upload and multi-page PDF export." />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Dependencies -->
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-  <!-- Quill (rich text) -->
-  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-
-  <style>
-    :root{
-      --accent:#000;
-      --muted:#64748b;
-      --panel:#ffffff;
-      --radius:10px;
-      --maxwidth:100%;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, Arial, sans-serif;
-      background:#f3f6fb;
-      color:#0b1220;
-      padding:18px;
-      -webkit-font-smoothing:antialiased;
-    }
-.resume-canvas .section:last-child {
-    float: right;
-}
-.section .content p{margin-top:5px; margin-bottom:15px}
-.resume-canvas .section:nth-last-of-type(2) {
-    float: left;
-}
-    .topbar{
-      max-width:var(--maxwidth);
-      margin:0 auto 14px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-    }
-    .brand{font-weight:800;font-size:18px}
-    .top-actions{display:flex;gap:8px;align-items:center}
-
-    .btn{
-      background:linear-gradient(90deg,var(--accent),#00d4ff);
-      border:none;color:#041226;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer;
-    }
-    .btn.ghost{background:transparent;border:1px solid rgba(11,92,255,0.12);color:var(--muted);font-weight:600}
-
-    /* Layout: three columns (left inputs, center preview, right ads) */
-    .layout{
-      max-width:var(--maxwidth);
-      margin:0 auto;
-      display:grid;
-      grid-template-columns:360px 1fr 320px;
-      gap:16px;
-      align-items:start;
-    }
-
-    .panel{
-      background:var(--panel);
-      padding:14px;
-      border-radius:var(--radius);
-      box-shadow:0 6px 18px rgba(12,24,48,0.06);
-      border:1px solid rgba(10,20,40,0.03);
-    }
-    h2{margin:0 0 10px 0;font-size:18px}
-    label{display:block;margin-top:10px;font-weight:700;color:#0b1220;font-size:13px}
-    input[type="text"], input[type="file"]{
-      width:100%;padding:9px;border-radius:8px;border:1px solid rgba(11,92,255,0.08);margin-top:6px;background:#fff;
-    }
-    .field-toggle{display:flex;align-items:center;gap:8px;margin-top:6px;color:var(--muted);font-size:13px}
-
-    .sectionField{margin-top:12px;padding-top:8px;border-top:1px dashed rgba(11,92,255,0.04)}
-    .quill-editor{height:90px;margin-top:6px;border-radius:6px;background:#fff}
-    .addBtn{display:inline-block;margin-top:8px;color:var(--accent);cursor:pointer;font-weight:700}
-    .tagbox{display:flex;flex-wrap:wrap;gap:8px;padding:8px;border-radius:8px;border:1px dashed rgba(11,92,255,0.06);margin-top:8px;min-height:44px;background:#fff}
-    .tagbox input{border:none;outline:none;flex:1;padding:6px}
-    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
-
-    /* Preview center */
-    .previewWrap{display:flex;flex-direction:column;gap:10px}
-    .resume-canvas{
-      background:#ffffff;
-      border-radius:10px;
-      padding:0px;
-      min-height:900px; 
-      position:relative;
-      overflow:hidden;
-    }
-    .resume-header{display:flex;gap:14px;align-items:center;margin-bottom:10px}
-    /* rectangular logo on left */
-    .profile-img{width:140px;height:60px;border-radius:6px;object-fit:cover;border:2px solid rgba(11,92,255,0.08);background:#fff}
-    .resume-title{display:flex;flex-direction:column;justify-content:center}
-    .name{font-size:22px;font-weight:800}
-    .role{font-size:14px;color:var(--muted);margin-top:6px}
-    .section{margin-top:14px}
-    .section h3{margin:0 0 5px 0;font-size:15px;color:var(--accent);}
-    .section .content{color:#243b53;line-height:1.45}
-    .skillsRow{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-
-    /* Ads column */
-    .ads-col{display:flex;flex-direction:column;gap:12px}
-    .ad-slot{background:#ffffff;border-radius:8px;padding:12px;text-align:center;border:1px dashed rgba(0,0,0,0.06);min-height:160px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-    .ad-slot small{display:block;color:var(--muted);font-size:12px}
-
-    /* Footer */
-    footer{max-width:var(--maxwidth);margin:18px auto 30px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
-    footer a{color:var(--accent);text-decoration:none;font-weight:600}
-
-    @media (max-width:1100px){
-      .layout{grid-template-columns:320px 1fr;grid-auto-rows:auto}
-      .ads-col{display:none}
-    }
-    @media (max-width:740px){
-      .layout{grid-template-columns:1fr}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imagify Resume Builder – Create Professional Resumes Instantly</title>
+	<meta name="description" content="Create a professional resume in minutes with Imagify Resume Builder. Free, modern templates, instant PDF download, and no login required. Build your job-ready CV now.">
+<meta name="keywords" content="resume builder, free resume maker, online CV builder, create resume online, professional resume templates, CV download PDF, best resume maker 2026, job resume generator">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
-  <div class="topbar">
-    <div class="brand">Resume Builder — Create Professional Resumes</div>
-    <div class="top-actions">
-      <button class="btn" id="downloadBtn">Download PDF</button>
-      <button class="btn ghost" id="clearBtn">Clear</button>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Imagify Resume</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume Builder</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="disclaimer.html">Disclaimer</a></li>
+        <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+        <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
+      </ul>
     </div>
   </div>
+</nav>
 
-  <div class="layout">
-    <!-- LEFT: Controls -->
-    <div class="panel">
-      <h2>Profile & Details</h2>
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="fw-bold display-4">Create a Professional Resume in Minutes</h1>
+    <p class="lead mt-3 mb-4">Free, modern, and easy-to-use resume builder designed for job seekers.</p>
+    <a href="resume.html" class="btn btn-light btn-lg fw-bold">Start Building Resume</a>
+  </div>
+</section>
 
-      <label>Profile Image / Logo (rectangular)</label>
-      <input type="file" id="profileImage" accept="image/*" />
-      <div class="field-toggle"><input type="checkbox" id="toggleImage" checked /> Show image in preview</div>
+<!-- FEATURES -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Features</h2>
 
-      <label>Full name</label>
-      <input id="fullname" type="text" placeholder="Jane Doe" />
+    <div class="row text-center">
 
-      <label>Professional Title</label>
-      <input id="title" type="text" placeholder="Product Designer" />
-
-      <label>Contact (email • phone • portfolio)</label>
-      <input id="contact" type="text" placeholder="jane.doe@example.com • +91 99999" />
-
-      <div class="sectionField" data-section="Summary">
-        <label>Professional Summary</label>
-        <div class="editorWrapper"><div class="quill-editor" id="summaryEditor"></div></div>
-        <div class="addBtn" data-section="Summary">+ Add more</div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-icon mb-3">💼</div>
+        <h5 class="fw-bold">Professional Templates</h5>
+        <p>Choose from beautifully designed resume layouts that attract recruiters.</p>
       </div>
 
-      <div class="sectionField" data-section="Experience">
-        <label>Experience</label>
-        <div class="editorWrapper"><div class="quill-editor" id="experienceEditor"></div></div>
-        <div class="addBtn" data-section="Experience">+ Add more</div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-icon mb-3">⚡</div>
+        <h5 class="fw-bold">Fast & Easy</h5>
+        <p>Create your resume in just a few clicks — no signup required.</p>
       </div>
 
-      <div class="sectionField" data-section="Education">
-        <label>Education</label>
-        <div class="editorWrapper"><div class="quill-editor" id="educationEditor"></div></div>
-        <div class="addBtn" data-section="Education">+ Add more</div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-icon mb-3">🔒</div>
+        <h5 class="fw-bold">Privacy Focused</h5>
+        <p>Your resume data stays in your browser. Nothing is stored on servers.</p>
       </div>
 
-      <div class="sectionField" data-section="Projects">
-        <label>Projects</label>
-        <div class="editorWrapper"><div class="quill-editor" id="projectsEditor"></div></div>
-        <div class="addBtn" data-section="Projects">+ Add more</div>
-      </div>
-
-      <div class="sectionField" data-section="Hobbies">
-        <label>Hobbies</label>
-        <div class="editorWrapper"><div class="quill-editor" id="hobbiesEditor"></div></div>
-      </div>
-
-      <div class="sectionField" data-section="Skills">
-        <label>Skills (press Enter)</label>
-        <div class="tagbox" id="skillsBox">
-          <input type="text" id="skillInput" placeholder="e.g. HTML, CSS, React — press Enter" />
-        </div>
-      </div>
-
-      <div style="margin-top:12px;color:var(--muted);font-size:13px">
-        Tip: Click any skill chip to remove it. Use "+ Add more" to create multiple entries for a section.
-      </div>
-		
-		 
-		 <div class="sectionField" data-section="Date/Place">
-       <label>Date Place</label>
-        <div class="editorWrapper"><div class="quill-editor" id="moreEditor"></div></div>
-      </div>
-		
-		<div class="sectionField" data-section="Signature">
-       <label>Signature</label>
-        <div class="editorWrapper"><div class="quill-editor" id="Signature"></div></div>
-      </div>
-    </div>
-
-    <!-- CENTER: Preview -->
-    <div class="panel">
-      <h2>Live Preview</h2>
-      <div class="previewWrap">
-        <div class="resume-canvas" id="renderArea" aria-live="polite">
-          <!-- preview injected here -->
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT: Ads -->
-    <div class="panel ads-col">
-      <h2>Ad Slots (placeholder)</h2>
-      <div class="ad-slot" id="ad1">
-        <div>
-          <strong>Google Ad Slot #1</strong>
-          <small>Place your Google Ads script here</small>
-        </div>
-      </div>
-      <div class="ad-slot" id="ad2">
-        <div>
-          <strong>Google Ad Slot #2</strong>
-          <small>Place your Google Ads script here</small>
-        </div>
-      </div>
-      <div class="ad-slot" id="ad3">
-        <div>
-          <strong>Google Ad Slot #3</strong>
-          <small>Recommended size: 300×250</small>
-        </div>
-      </div>
     </div>
   </div>
+</section>
 
-  <footer>
-    <div>&copy; <span id="year"></span> Your Company. All rights reserved.</div>
-    <div>Made with ❤️ — <a href="terms-conditions.html" target="_blank" rel="noopener">Terms</a> • <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy</a></div>
-  </footer>
+<!-- HOW IT WORKS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">How It Works</h2>
 
-  <script>
-    // ---- state ----
-    let editors = {};
-    let profileImgData = '';
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="fw-bold">1. Enter Your Information</h5>
+        <p>Fill in personal details, skills, and experience.</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold">2. Choose Design</h5>
+        <p>Select your favorite template and customize styles.</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold">3. Download PDF</h5>
+        <p>Download your resume instantly in high-quality PDF format.</p>
+      </div>
+    </div>
 
-    // ---- helpers ----
-    function uid(){ return 'id' + Date.now() + Math.floor(Math.random()*999) }
+  </div>
+</section>
 
-    // initialize Quill editor (safe: only if element exists)
-    function initQuill(id){
-      if(!document.getElementById(id)) return;
-      const q = new Quill('#' + id, {
-        theme: 'snow',
-        placeholder: 'Type here...'
-      });
-      editors[id] = q;
-      q.on('text-change', renderPreview);
-    }
+<!-- FAQ -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
 
-    // init editors list
-    ['summaryEditor','experienceEditor','educationEditor','projectsEditor','hobbiesEditor', 'moreEditor', 'Signature'].forEach(initQuill);
+    <div class="accordion" id="faqAccordion">
 
-    // Add more editor handler (creates an additional editor in same section)
-    $(document).on('click', '.addBtn', function(){
-      const section = $(this).data('section');
-      const wrapper = $(this).prev('.editorWrapper');
-      const newId = section + 'Editor' + Date.now();
-      const $div = $('<div class="quill-editor" id="'+newId+'"></div>');
-      wrapper.append($div);
-      initQuill(newId);
-      // small delay to allow editor to initialize
-      setTimeout(renderPreview, 120);
-    });
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            Is Imagify Resume free?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            Yes! It is completely free to use with no hidden charges.
+          </div>
+        </div>
+      </div>
 
-    // Skills tags
-    const skillsBox = document.getElementById('skillsBox');
-    const skillInput = document.getElementById('skillInput');
-    skillInput.addEventListener('keydown', function(e){
-      if(e.key === 'Enter' && skillInput.value.trim()){
-        const val = skillInput.value.trim();
-        const chip = document.createElement('div');
-        chip.className = 'chip';
-        chip.textContent = val;
-        chip.title = 'Click to remove';
-        chip.addEventListener('click', function(){ chip.remove(); renderPreview(); });
-        skillsBox.insertBefore(chip, skillInput);
-        skillInput.value = '';
-        renderPreview();
-        e.preventDefault();
-      }
-    });
-    function readSkills(){ return Array.from(skillsBox.querySelectorAll('.chip')).map(x=>x.textContent.trim()); }
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Do you save my resume data?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            No. Everything stays in your browser only.
+          </div>
+        </div>
+      </div>
 
-    // Profile image upload (fixed position, no drag)
-    $('#profileImage').on('change', function(e){
-      const file = e.target.files && e.target.files[0];
-      if(!file) return;
-      const reader = new FileReader();
-      reader.onload = function(ev){
-        profileImgData = ev.target.result;
-        renderPreview();
-      };
-      reader.readAsDataURL(file);
-    });
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Can I download my resume as PDF?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes. You can download it instantly.
+          </div>
+        </div>
+      </div>
 
-    // render preview
-    function renderPreview(){
-      const showImage = $('#toggleImage').prop('checked');
-      const name = $('#fullname').val().trim();
-      const title = $('#title').val().trim();
-      const contact = $('#contact').val().trim();
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+            Is it mobile friendly?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes. You can build your resume from any device.
+          </div>
+        </div>
+      </div>
 
-      let html = '';
+    </div>
+  </div>
+</section>
 
-      // Header: logo left + title
-      html += '<div class="resume-header">';
-      if(showImage && profileImgData){
-        html += '<div><img src="'+profileImgData+'" alt="Profile/Logo" class="profile-img" /></div>';
-      }
-      html += '<div class="resume-title">';
-      html += '<div class="name">' + (name ? escapeHtml(name) : '') + '</div>';
-      if(title) html += '<div class="role">'+ escapeHtml(title) +'</div>';
-      if(contact) html += '<div class="role" style="margin-top:6px">'+ escapeHtml(contact) +'</div>';
-      html += '</div></div>';
+<!-- WHY CHOOSE US -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Why Choose Us?</h2>
 
-      // Sections -- iterate all sectionFields
-      document.querySelectorAll('.sectionField').forEach(function(sectionEl){
-        const secName = sectionEl.getAttribute('data-section') || 'Section';
-        let contentHtml = '';
+    <ul class="list-group list-group-flush fs-5">
+      <li class="list-group-item">✔ Clean, modern templates</li>
+      <li class="list-group-item">✔ 100% free and privacy friendly</li>
+      <li class="list-group-item">✔ No login required</li>
+      <li class="list-group-item">✔ Instant PDF export</li>
+      <li class="list-group-item">✔ Used by students & professionals</li>
+    </ul>
+  </div>
+</section>
 
-        // each quill-editor inside this section (allow multiple editors)
-        sectionEl.querySelectorAll('.quill-editor').forEach(function(qel){
-          const qInner = qel.querySelector('.ql-editor');
-          if(qInner){
-            const inner = qInner.innerHTML.trim();
-            // ignore empty editors
-            if(inner && inner !== '<p><br></p>') contentHtml += '<div class="content">' + inner + '</div>';
-          }
-        });
+<!-- BLOG SECTION -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Blog & Career Tips</h2>
 
-        if(contentHtml){
-          html += '<div class="section"><h3>' + escapeHtml(secName) + '</h3>' + contentHtml + '</div>';
-        }
-      });
+    <div class="row">
 
-      // Skills
-      const skills = readSkills();
-      if(skills.length){
-        html += '<div class="section"><h3>Skills</h3><div class="skillsRow">';
-        skills.forEach(s => { html += '<div class="chip">'+escapeHtml(s)+'</div>'; });
-        html += '</div></div>';
-      }
+      <div class="col-md-4 mb-4">
+        <img src="https://source.unsplash.com/600x400/?resume" class="img-fluid blog-img mb-3">
+        <h5 class="fw-bold">How to Create the Perfect Resume</h5>
+        <p>Tips for building a resume that stands out from the crowd.</p>
+      </div>
 
-      $('#renderArea').html(html);
-    }
+      <div class="col-md-4 mb-4">
+        <img src="https://source.unsplash.com/600x400/?interview" class="img-fluid blog-img mb-3">
+        <h5 class="fw-bold">Top 10 Interview Questions</h5>
+        <p>Prepare for your interviews with confidence.</p>
+      </div>
 
-    // escape helper
-    function escapeHtml(s){
-      if(!s) return '';
-      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    }
+      <div class="col-md-4 mb-4">
+        <img src="https://source.unsplash.com/600x400/?career" class="img-fluid blog-img mb-3">
+        <h5 class="fw-bold">Career Tips for Beginners</h5>
+        <p>Start your professional journey with the right guidance.</p>
+      </div>
 
-    // inputs & controls trigger preview
-    $(document).on('input', '#fullname, #title, #contact', renderPreview);
-    $('#toggleImage').on('change', renderPreview);
+      <div class="col-md-4 mb-4">
+        <img src="https://source.unsplash.com/600x400/?motivation" class="img-fluid blog-img mb-3">
+        <h5 class="fw-bold">Boost Your Productivity</h5>
+        <p>Learn how to stay motivated while job hunting.</p>
+      </div>
 
-    // initial render after ready
-    $(document).ready(function(){
-      // set copyright year
-      document.getElementById('year').textContent = new Date().getFullYear();
+    </div>
 
-      // small delay to let editors initialize
-      setTimeout(renderPreview, 300);
+  </div>
+</section>
 
-      // clear button: resets everything to empty state
-      $('#clearBtn').on('click', function(){
-        $('#fullname,#title,#contact').val('');
-        // clear all quill editors
-        Object.keys(editors).forEach(k => { if(editors[k] && typeof editors[k].setContents === 'function') editors[k].setContents([]); });
-        // remove additional dynamic editors (keep only first editor in each wrapper)
-        $('.editorWrapper').each(function(){
-          $(this).find('.quill-editor').each(function(i, el){
-            if(i>0) $(el).remove();
-          });
-        });
-        // clear skills
-        document.querySelectorAll('#skillsBox .chip').forEach(el => el.remove());
-        profileImgData = '';
-        $('#profileImage').val('');
-        renderPreview();
-      });
-    });
+<!-- FOOTER -->
+<footer class="text-center">
+  <div class="container">
+    <p>© 2026 Imagify Resume. All rights reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> • 
+    <a href="terms.html">Terms</a> • 
+    <a href="disclaimer.html">Disclaimer</a> • 
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
 
-    // PDF download (html2canvas + jsPDF)
-    async function downloadPDF(){
-      // ensure preview fully rendered
-      await new Promise(r => setTimeout(r, 150));
-      const node = document.getElementById('renderArea');
-
-      // render canvas
-      const canvas = await html2canvas(node, {scale:2, useCORS:true, backgroundColor:'#ffffff'});
-      const imgData = canvas.toDataURL('image/png');
-      const { jsPDF } = window.jspdf;
-      const pdf = new jsPDF({unit:'pt', format:'a4'});
-      const pageW = pdf.internal.pageSize.getWidth();
-      const imgW = pageW - 56;
-      const imgH = canvas.height * (imgW / canvas.width);
-
-      if(imgH <= pdf.internal.pageSize.getHeight() - 56){
-        pdf.addImage(imgData, 'PNG', 28, 28, imgW, imgH, undefined, 'FAST');
-      } else {
-        // multiple pages
-        const sliceH = Math.floor((pdf.internal.pageSize.getHeight() - 56) * (canvas.width / imgW));
-        let pos = 0;
-        let page = 0;
-        while(pos < canvas.height){
-          const sliceCanvas = document.createElement('canvas');
-          sliceCanvas.width = canvas.width;
-          sliceCanvas.height = Math.min(sliceH, canvas.height - pos);
-          const ctx = sliceCanvas.getContext('2d');
-          ctx.drawImage(canvas, 0, pos, canvas.width, sliceCanvas.height, 0, 0, canvas.width, sliceCanvas.height);
-          const d = sliceCanvas.toDataURL('image/png');
-          if(page === 0){
-            pdf.addImage(d, 'PNG', 28, 28, imgW, (sliceCanvas.height * imgW) / canvas.width, undefined, 'FAST');
-          } else {
-            pdf.addPage();
-            pdf.addImage(d, 'PNG', 28, 28, imgW, (sliceCanvas.height * imgW) / canvas.width, undefined, 'FAST');
-          }
-          pos += sliceH;
-          page++;
-        }
-      }
-      const filename = ( $('#fullname').val().trim() || 'resume' ) + '.pdf';
-      pdf.save(filename);
-    }
-
-    $('#downloadBtn').on('click', downloadPDF);
-  </script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
