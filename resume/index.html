@@ -24,7 +24,7 @@
 
   <style>
     :root{
-      --accent:#0b5cff;
+      --accent:#000;
       --muted:#64748b;
       --panel:#ffffff;
       --radius:10px;
@@ -39,7 +39,13 @@
       padding:18px;
       -webkit-font-smoothing:antialiased;
     }
-
+.resume-canvas .section:last-child {
+    float: right;
+}
+.section .content p{margin-top:5px; margin-bottom:15px}
+.resume-canvas .section:nth-last-of-type(2) {
+    float: left;
+}
     .topbar{
       max-width:var(--maxwidth);
       margin:0 auto 14px;
@@ -105,7 +111,7 @@
     .name{font-size:22px;font-weight:800}
     .role{font-size:14px;color:var(--muted);margin-top:6px}
     .section{margin-top:14px}
-    .section h3{margin:0 0 8px 0;font-size:15px;color:var(--accent);padding-left:8px;border-left:3px solid rgba(11,92,255,0.12)}
+    .section h3{margin:0 0 5px 0;font-size:15px;color:var(--accent);}
     .section .content{color:#243b53;line-height:1.45}
     .skillsRow{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 
@@ -194,6 +200,17 @@
       <div style="margin-top:12px;color:var(--muted);font-size:13px">
         Tip: Click any skill chip to remove it. Use "+ Add more" to create multiple entries for a section.
       </div>
+		
+		 
+		 <div class="sectionField" data-section="Date/Place"  style="width:50%; float: left">
+       <label>Date Place</label>
+        <div class="editorWrapper"><div class="quill-editor" id="moreEditor"></div></div>
+      </div>
+		
+		<div class="sectionField" data-section="Signature" style="width:40%; float: right">
+       <label>Signature</label>
+        <div class="editorWrapper"><div class="quill-editor" id="Signature"></div></div>
+      </div>
     </div>
 
     <!-- CENTER: Preview -->
@@ -255,7 +272,7 @@
     }
 
     // init editors list
-    ['summaryEditor','experienceEditor','educationEditor','projectsEditor','hobbiesEditor'].forEach(initQuill);
+    ['summaryEditor','experienceEditor','educationEditor','projectsEditor','hobbiesEditor', 'moreEditor', 'Signature'].forEach(initQuill);
 
     // Add more editor handler (creates an additional editor in same section)
     $(document).on('click', '.addBtn', function(){
