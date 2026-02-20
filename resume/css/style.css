@@ -1,0 +1,114 @@
+ :root{
+      --accent:#000;
+      --muted:#64748b;
+      --panel:#ffffff;
+      --radius:10px;
+      --maxwidth:100%;
+    }
+    *{box-sizing:border-box}
+  
+.hero {
+    background: linear-gradient(135deg, #4a6cf7, #6f86ff);
+    color: #fff;
+    padding: 80px 0;
+}
+.feature-icon {
+    font-size: 40px;
+    color: #4a6cf7;
+}
+.blog-img {
+    border-radius: 10px;
+}
+footer {
+    background: #111;
+    color: #ccc;
+    padding: 40px 0;
+}
+footer a { color: #fff; text-decoration: none; }
+.resume-canvas .section:last-child {
+    float: right;
+}
+.section .content p{margin-top:5px; margin-bottom:15px}
+.resume-canvas .section:nth-last-of-type(2) {
+    float: left;
+}
+    .topbar{
+      max-width:var(--maxwidth);
+      margin:0 auto 14px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .brand{font-weight:800;font-size:18px}
+    .top-actions{display:flex;gap:8px;align-items:center}
+
+    
+    .btn.ghost{background:transparent;border:1px solid rgba(11,92,255,0.12);color:var(--muted);font-weight:600}
+
+    /* Layout: three columns (left inputs, center preview, right ads) */
+    .layout{
+      max-width:var(--maxwidth);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:360px 1fr 320px;
+      gap:16px;
+      align-items:start;
+    }
+
+    .panel{
+      background:var(--panel);
+      padding:14px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(12,24,48,0.06);
+      border:1px solid rgba(10,20,40,0.03);
+    }
+    h2{margin:0 0 10px 0;font-size:18px}
+    label{display:block;margin-top:10px;font-weight:700;color:#0b1220;font-size:13px}
+    input[type="text"], input[type="file"]{
+      width:100%;padding:9px;border-radius:8px;border:1px solid rgba(11,92,255,0.08);margin-top:6px;background:#fff;
+    }
+    .field-toggle{display:flex;align-items:center;gap:8px;margin-top:6px;color:var(--muted);font-size:13px}
+
+    .sectionField{margin-top:12px;padding-top:8px;border-top:1px dashed rgba(11,92,255,0.04)}
+    .quill-editor{height:90px;margin-top:6px;border-radius:6px;background:#fff}
+    .addBtn{display:inline-block;margin-top:8px;color:var(--accent);cursor:pointer;font-weight:700}
+    .tagbox{display:flex;flex-wrap:wrap;gap:8px;padding:8px;border-radius:8px;border:1px dashed rgba(11,92,255,0.06);margin-top:8px;min-height:44px;background:#fff}
+    .tagbox input{border:none;outline:none;flex:1;padding:6px}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
+
+    /* Preview center */
+    .previewWrap{display:flex;flex-direction:column;gap:10px}
+    .resume-canvas{
+      background:#ffffff;
+      border-radius:10px;
+      padding:0px;
+      min-height:900px; 
+      position:relative;
+      overflow:hidden;
+    }
+    .resume-header{display:flex;gap:14px;align-items:center;margin-bottom:10px}
+    /* rectangular logo on left */
+    .profile-img{width:140px;height:60px;border-radius:6px;object-fit:cover;border:2px solid rgba(11,92,255,0.08);background:#fff}
+    .resume-title{display:flex;flex-direction:column;justify-content:center}
+    .name{font-size:22px;font-weight:800}
+    .role{font-size:14px;color:var(--muted);margin-top:6px}
+    .section{margin-top:14px}
+    .section h3{margin:0 0 5px 0;font-size:15px;color:var(--accent);}
+    .section .content{color:#243b53;line-height:1.45}
+    .skillsRow{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+
+    /* Ads column */
+    .ads-col{display:flex;flex-direction:column;gap:12px}
+    .ad-slot{background:#ffffff;border-radius:8px;padding:12px;text-align:center;border:1px dashed rgba(0,0,0,0.06);min-height:160px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    .ad-slot small{display:block;color:var(--muted);font-size:12px}
+
+    
+
+    @media (max-width:1100px){
+      .layout{grid-template-columns:320px 1fr;grid-auto-rows:auto}
+      .ads-col{display:none}
+    }
+    @media (max-width:740px){
+      .layout{grid-template-columns:1fr}
+    }

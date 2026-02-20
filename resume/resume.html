@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume Builder — Create Professional Resumes (Free)</title>
+  <meta name="description" content="Create professional resumes fast. Rich text editors, skill tags, profile image/logo, and PDF export — ready for recruiters and ATS." />
+  <meta name="keywords" content="resume builder, CV maker, resume template, download resume, pdf resume, online resume" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://example.com/resume-builder" />
+  <meta property="og:title" content="Resume Builder — Create Professional Resumes" />
+  <meta property="og:description" content="Fast, offline resume builder with rich text editors, skill tags, logo upload and multi-page PDF export." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Quill (rich text) -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Imagify Resume</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume Builder</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="disclaimer.html">Disclaimer</a></li>
+        <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+        <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="topbar">
+    <div class="brand">Resume Builder — Create Professional Resumes</div>
+    <div class="top-actions">
+      <button class="btn" id="downloadBtn">Download PDF</button>
+      <button class="btn ghost" id="clearBtn">Clear</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- LEFT: Controls -->
+    <div class="panel">
+      <h2>Profile & Details</h2>
+
+      <label>Profile Image / Logo (rectangular)</label>
+      <input type="file" id="profileImage" accept="image/*" />
+      <div class="field-toggle"><input type="checkbox" id="toggleImage" checked /> Show image in preview</div>
+
+      <label>Full name</label>
+      <input id="fullname" type="text" placeholder="Jane Doe" />
+
+      <label>Professional Title</label>
+      <input id="title" type="text" placeholder="Product Designer" />
+
+      <label>Contact (email • phone • portfolio)</label>
+      <input id="contact" type="text" placeholder="jane.doe@example.com • +91 99999" />
+
+      <div class="sectionField" data-section="Summary">
+        <label>Professional Summary</label>
+        <div class="editorWrapper"><div class="quill-editor" id="summaryEditor"></div></div>
+        <div class="addBtn" data-section="Summary">+ Add more</div>
+      </div>
+
+      <div class="sectionField" data-section="Experience">
+        <label>Experience</label>
+        <div class="editorWrapper"><div class="quill-editor" id="experienceEditor"></div></div>
+        <div class="addBtn" data-section="Experience">+ Add more</div>
+      </div>
+
+      <div class="sectionField" data-section="Education">
+        <label>Education</label>
+        <div class="editorWrapper"><div class="quill-editor" id="educationEditor"></div></div>
+        <div class="addBtn" data-section="Education">+ Add more</div>
+      </div>
+
+      <div class="sectionField" data-section="Projects">
+        <label>Projects</label>
+        <div class="editorWrapper"><div class="quill-editor" id="projectsEditor"></div></div>
+        <div class="addBtn" data-section="Projects">+ Add more</div>
+      </div>
+
+      <div class="sectionField" data-section="Hobbies">
+        <label>Hobbies</label>
+        <div class="editorWrapper"><div class="quill-editor" id="hobbiesEditor"></div></div>
+      </div>
+
+      <div class="sectionField" data-section="Skills">
+        <label>Skills (press Enter)</label>
+        <div class="tagbox" id="skillsBox">
+          <input type="text" id="skillInput" placeholder="e.g. HTML, CSS, React — press Enter" />
+        </div>
+      </div>
+
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">
+        Tip: Click any skill chip to remove it. Use "+ Add more" to create multiple entries for a section.
+      </div>
+		
+		 
+		 <div class="sectionField" data-section="Date/Place">
+       <label>Date Place</label>
+        <div class="editorWrapper"><div class="quill-editor" id="moreEditor"></div></div>
+      </div>
+		
+		<div class="sectionField" data-section="Signature">
+       <label>Signature</label>
+        <div class="editorWrapper"><div class="quill-editor" id="Signature"></div></div>
+      </div>
+    </div>
+
+    <!-- CENTER: Preview -->
+    <div class="panel">
+      <h2>Live Preview</h2>
+      <div class="previewWrap">
+        <div class="resume-canvas" id="renderArea" aria-live="polite">
+          <!-- preview injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Ads -->
+    <div class="panel ads-col">
+      <h2>Ad Slots (placeholder)</h2>
+      <div class="ad-slot" id="ad1">
+        <div>
+          <strong>Google Ad Slot #1</strong>
+          <small>Place your Google Ads script here</small>
+        </div>
+      </div>
+      <div class="ad-slot" id="ad2">
+        <div>
+          <strong>Google Ad Slot #2</strong>
+          <small>Place your Google Ads script here</small>
+        </div>
+      </div>
+      <div class="ad-slot" id="ad3">
+        <div>
+          <strong>Google Ad Slot #3</strong>
+          <small>Recommended size: 300×250</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- FOOTER -->
+<footer class="text-center">
+  <div class="container">
+    <p>© 2026 Imagify Resume. All rights reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> • 
+    <a href="terms.html">Terms</a> • 
+    <a href="disclaimer.html">Disclaimer</a> • 
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ---- state ----
+    let editors = {};
+    let profileImgData = '';
+
+    // ---- helpers ----
+    function uid(){ return 'id' + Date.now() + Math.floor(Math.random()*999) }
+
+    // initialize Quill editor (safe: only if element exists)
+    function initQuill(id){
+      if(!document.getElementById(id)) return;
+      const q = new Quill('#' + id, {
+        theme: 'snow',
+        placeholder: 'Type here...'
+      });
+      editors[id] = q;
+      q.on('text-change', renderPreview);
+    }
+
+    // init editors list
+    ['summaryEditor','experienceEditor','educationEditor','projectsEditor','hobbiesEditor', 'moreEditor', 'Signature'].forEach(initQuill);
+
+    // Add more editor handler (creates an additional editor in same section)
+    $(document).on('click', '.addBtn', function(){
+      const section = $(this).data('section');
+      const wrapper = $(this).prev('.editorWrapper');
+      const newId = section + 'Editor' + Date.now();
+      const $div = $('<div class="quill-editor" id="'+newId+'"></div>');
+      wrapper.append($div);
+      initQuill(newId);
+      // small delay to allow editor to initialize
+      setTimeout(renderPreview, 120);
+    });
+
+    // Skills tags
+    const skillsBox = document.getElementById('skillsBox');
+    const skillInput = document.getElementById('skillInput');
+    skillInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' && skillInput.value.trim()){
+        const val = skillInput.value.trim();
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        chip.textContent = val;
+        chip.title = 'Click to remove';
+        chip.addEventListener('click', function(){ chip.remove(); renderPreview(); });
+        skillsBox.insertBefore(chip, skillInput);
+        skillInput.value = '';
+        renderPreview();
+        e.preventDefault();
+      }
+    });
+    function readSkills(){ return Array.from(skillsBox.querySelectorAll('.chip')).map(x=>x.textContent.trim()); }
+
+    // Profile image upload (fixed position, no drag)
+    $('#profileImage').on('change', function(e){
+      const file = e.target.files && e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev){
+        profileImgData = ev.target.result;
+        renderPreview();
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // render preview
+    function renderPreview(){
+      const showImage = $('#toggleImage').prop('checked');
+      const name = $('#fullname').val().trim();
+      const title = $('#title').val().trim();
+      const contact = $('#contact').val().trim();
+
+      let html = '';
+
+      // Header: logo left + title
+      html += '<div class="resume-header">';
+      if(showImage && profileImgData){
+        html += '<div><img src="'+profileImgData+'" alt="Profile/Logo" class="profile-img" /></div>';
+      }
+      html += '<div class="resume-title">';
+      html += '<div class="name">' + (name ? escapeHtml(name) : '') + '</div>';
+      if(title) html += '<div class="role">'+ escapeHtml(title) +'</div>';
+      if(contact) html += '<div class="role" style="margin-top:6px">'+ escapeHtml(contact) +'</div>';
+      html += '</div></div>';
+
+      // Sections -- iterate all sectionFields
+      document.querySelectorAll('.sectionField').forEach(function(sectionEl){
+        const secName = sectionEl.getAttribute('data-section') || 'Section';
+        let contentHtml = '';
+
+        // each quill-editor inside this section (allow multiple editors)
+        sectionEl.querySelectorAll('.quill-editor').forEach(function(qel){
+          const qInner = qel.querySelector('.ql-editor');
+          if(qInner){
+            const inner = qInner.innerHTML.trim();
+            // ignore empty editors
+            if(inner && inner !== '<p><br></p>') contentHtml += '<div class="content">' + inner + '</div>';
+          }
+        });
+
+        if(contentHtml){
+          html += '<div class="section"><h3>' + escapeHtml(secName) + '</h3>' + contentHtml + '</div>';
+        }
+      });
+
+      // Skills
+      const skills = readSkills();
+      if(skills.length){
+        html += '<div class="section"><h3>Skills</h3><div class="skillsRow">';
+        skills.forEach(s => { html += '<div class="chip">'+escapeHtml(s)+'</div>'; });
+        html += '</div></div>';
+      }
+
+      $('#renderArea').html(html);
+    }
+
+    // escape helper
+    function escapeHtml(s){
+      if(!s) return '';
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    // inputs & controls trigger preview
+    $(document).on('input', '#fullname, #title, #contact', renderPreview);
+    $('#toggleImage').on('change', renderPreview);
+
+    // initial render after ready
+    $(document).ready(function(){
+      // set copyright year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // small delay to let editors initialize
+      setTimeout(renderPreview, 300);
+
+      // clear button: resets everything to empty state
+      $('#clearBtn').on('click', function(){
+        $('#fullname,#title,#contact').val('');
+        // clear all quill editors
+        Object.keys(editors).forEach(k => { if(editors[k] && typeof editors[k].setContents === 'function') editors[k].setContents([]); });
+        // remove additional dynamic editors (keep only first editor in each wrapper)
+        $('.editorWrapper').each(function(){
+          $(this).find('.quill-editor').each(function(i, el){
+            if(i>0) $(el).remove();
+          });
+        });
+        // clear skills
+        document.querySelectorAll('#skillsBox .chip').forEach(el => el.remove());
+        profileImgData = '';
+        $('#profileImage').val('');
+        renderPreview();
+      });
+    });
+
+    // PDF download (html2canvas + jsPDF)
+    async function downloadPDF(){
+      // ensure preview fully rendered
+      await new Promise(r => setTimeout(r, 150));
+      const node = document.getElementById('renderArea');
+
+      // render canvas
+      const canvas = await html2canvas(node, {scale:2, useCORS:true, backgroundColor:'#ffffff'});
+      const imgData = canvas.toDataURL('image/png');
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF({unit:'pt', format:'a4'});
+      const pageW = pdf.internal.pageSize.getWidth();
+      const imgW = pageW - 56;
+      const imgH = canvas.height * (imgW / canvas.width);
+
+      if(imgH <= pdf.internal.pageSize.getHeight() - 56){
+        pdf.addImage(imgData, 'PNG', 28, 28, imgW, imgH, undefined, 'FAST');
+      } else {
+        // multiple pages
+        const sliceH = Math.floor((pdf.internal.pageSize.getHeight() - 56) * (canvas.width / imgW));
+        let pos = 0;
+        let page = 0;
+        while(pos < canvas.height){
+          const sliceCanvas = document.createElement('canvas');
+          sliceCanvas.width = canvas.width;
+          sliceCanvas.height = Math.min(sliceH, canvas.height - pos);
+          const ctx = sliceCanvas.getContext('2d');
+          ctx.drawImage(canvas, 0, pos, canvas.width, sliceCanvas.height, 0, 0, canvas.width, sliceCanvas.height);
+          const d = sliceCanvas.toDataURL('image/png');
+          if(page === 0){
+            pdf.addImage(d, 'PNG', 28, 28, imgW, (sliceCanvas.height * imgW) / canvas.width, undefined, 'FAST');
+          } else {
+            pdf.addPage();
+            pdf.addImage(d, 'PNG', 28, 28, imgW, (sliceCanvas.height * imgW) / canvas.width, undefined, 'FAST');
+          }
+          pos += sliceH;
+          page++;
+        }
+      }
+      const filename = ( $('#fullname').val().trim() || 'resume' ) + '.pdf';
+      pdf.save(filename);
+    }
+
+    $('#downloadBtn').on('click', downloadPDF);
+  </script>
+	
+	
+</body>
+</html>
