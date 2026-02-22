@@ -7,6 +7,7 @@
 	<meta name="description" content="Create a professional resume in minutes with Imagify Resume Builder. Free, modern templates, instant PDF download, and no login required. Build your job-ready CV now.">
 <meta name="keywords" content="resume builder, free resume maker, online CV builder, create resume online, professional resume templates, CV download PDF, best resume maker 2026, job resume generator">
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -14,15 +15,35 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Imagify Resume</a>
+    <a class="navbar-brand fw-bold" href="index.html">Imagify Resume</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="resume.html">Resume Builder</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        
+
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" 
+             href="#" 
+             role="button" 
+             data-bs-toggle="dropdown">
+            All Tools  <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="resume.html">Resume Builder</a></li> 
+            <li><a class="dropdown-item" href="images-text.html">Image - Text (OCR)</a></li> 
+            <li><a class="dropdown-item" href="images-convertor.html">Image Converter</a></li> 
+            <li><a class="dropdown-item" href="image-compress.html">Compress Images</a></li> 
+            <li><a class="dropdown-item" href="web-font-generate.html">Web Font Generator</a></li> 
+            <li><a class="dropdown-item" href="color-picker.html">Color Picker</a></li> 
+            <li><a class="dropdown-item" href="gradient-maker.html">Gradient Maker</a></li> 
+          </ul>
+        </li>
+       
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="disclaimer.html">Disclaimer</a></li>
         <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
@@ -33,64 +54,300 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero text-center">
+
+<!-- Services -->
+
+ <section class="tools-section">
+<div class="container text-center mb-5">
+    <h2 class="section-title">Powerful Web Tools</h2>
+    <p class="section-sub">Everything you need in one modern platform</p>
+</div>
+
+<div class="container">
+<div class="row g-4">
+
+<!-- Image to Text -->
+<div class="col-md-4">
+<a href="image-text.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">📝</div>
+<div class="tool-title">Image → Text (OCR)</div>
+<div class="tool-desc">Extract editable text from photos and scanned documents.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- Image Converter -->
+<div class="col-md-4">
+<a href="image-converter.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">🖼️</div>
+<div class="tool-title">Image Converter</div>
+<div class="tool-desc">Convert JPG, PNG, WebP, GIF and more formats easily.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- Compress Images -->
+<div class="col-md-4">
+<a href="compress-images.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">⚡</div>
+<div class="tool-title">Compress Images</div>
+<div class="tool-desc">Optimize large images into lightweight formats.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- Font Converter -->
+<div class="col-md-4">
+<a href="font-converter.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">🔤</div>
+<div class="tool-title">Font Converter</div>
+<div class="tool-desc">Convert font formats and preview before downloading.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- Color Picker -->
+<div class="col-md-4">
+<a href="color-picker.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">🎨</div>
+<div class="tool-title">Color Picker</div>
+<div class="tool-desc">Pick colors, copy HEX/RGB values and save palettes.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- Gradient Generator -->
+<div class="col-md-4">
+<a href="gradient-generator.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">🌈</div>
+<div class="tool-title">Gradient Generator</div>
+<div class="tool-desc">Create beautiful gradients and copy CSS instantly.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- Code Format -->
+<div class="col-md-4">
+<a href="code-format.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">💻</div>
+<div class="tool-title">Code Format</div>
+<div class="tool-desc">Beautify and format your HTML, CSS or JavaScript code.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- URL Shortener -->
+<div class="col-md-4">
+<a href="url-shortener.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">🔗</div>
+<div class="tool-title">URL Shortener</div>
+<div class="tool-desc">Create short, shareable links instantly.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- Share File -->
+<div class="col-md-4">
+<a href="share-file.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">📤</div>
+<div class="tool-title">Share File Online</div>
+<div class="tool-desc">Upload files and generate a shareable download link.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+<!-- Resume Builder -->
+<div class="col-md-4">
+<a href="resume.html" class="tool-link">
+<div class="tool-card text-center">
+<div class="tool-icon">📄</div>
+<div class="tool-title">Resume Builder</div>
+<div class="tool-desc">Create professional resumes with modern templates.</div>
+<div class="tool-btn">Open Tool</div>
+</div>
+</a>
+</div>
+
+</div>
+</div>
+</section>
+  <section class="hero text-center">
   <div class="container">
     <h1 class="fw-bold display-4">Create a Professional Resume in Minutes</h1>
     <p class="lead mt-3 mb-4">Free, modern, and easy-to-use resume builder designed for job seekers.</p>
     <a href="resume.html" class="btn btn-light btn-lg fw-bold">Start Building Resume</a>
   </div>
 </section>
-
 <!-- FEATURES -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5">Features</h2>
+ <section class="features-section py-5">
+<div class="container">
 
-    <div class="row text-center">
+<div class="text-center mb-5">
+    <h2 class="features-title">Powerful Online Tools – All in One Place</h2>
+    <p class="features-sub">
+        Access a collection of simple, fast, and secure web tools designed to help with everyday tasks — no installation required.
+    </p>
+</div>
 
-      <div class="col-md-4 mb-4">
-        <div class="feature-icon mb-3">💼</div>
-        <h5 class="fw-bold">Professional Templates</h5>
-        <p>Choose from beautifully designed resume layouts that attract recruiters.</p>
-      </div>
+<div class="row g-4">
 
-      <div class="col-md-4 mb-4">
-        <div class="feature-icon mb-3">⚡</div>
-        <h5 class="fw-bold">Fast & Easy</h5>
-        <p>Create your resume in just a few clicks — no signup required.</p>
-      </div>
+<!-- Feature 1 -->
+<div class="col-md-4">
+<div class="feature-card text-center">
+<div class="feature-icon">🛠️</div>
+<h5>Multiple Useful Tools</h5>
+<p>
+Explore a growing collection of online tools including resume builders, image utilities, color tools, text tools, and more. 
+Each tool is designed for practical daily use.
+</p>
+</div>
+</div>
 
-      <div class="col-md-4 mb-4">
-        <div class="feature-icon mb-3">🔒</div>
-        <h5 class="fw-bold">Privacy Focused</h5>
-        <p>Your resume data stays in your browser. Nothing is stored on servers.</p>
-      </div>
+<!-- Feature 2 -->
+<div class="col-md-4">
+<div class="feature-card text-center">
+<div class="feature-icon">⚡</div>
+<h5>Fast & Browser-Based</h5>
+<p>
+All tools work directly in your web browser. 
+No downloads, no complex setup. 
+Simply open the tool, complete your task, and save your results.
+</p>
+</div>
+</div>
 
-    </div>
-  </div>
+<!-- Feature 3 -->
+<div class="col-md-4">
+<div class="feature-card text-center">
+<div class="feature-icon">🔒</div>
+<h5>Privacy Focused</h5>
+<p>
+We prioritize user privacy. 
+Most tools process data locally in your browser and we do not sell personal information to third parties.
+</p>
+</div>
+</div>
+
+<!-- Feature 4 -->
+<div class="col-md-4">
+<div class="feature-card text-center">
+<div class="feature-icon">📱</div>
+<h5>Mobile Friendly</h5>
+<p>
+Our tools are optimized for desktop, tablet, and mobile devices, 
+so you can use them anytime, anywhere.
+</p>
+</div>
+</div>
+
+<!-- Feature 5 -->
+<div class="col-md-4">
+<div class="feature-card text-center">
+<div class="feature-icon">🧭</div>
+<h5>Simple & Clean Interface</h5>
+<p>
+User-friendly layouts help you complete tasks quickly without distractions or unnecessary complexity.
+</p>
+</div>
+</div>
+
+<!-- Feature 6 -->
+<div class="col-md-4">
+<div class="feature-card text-center">
+<div class="feature-icon">🔄</div>
+<h5>Regular Updates</h5>
+<p>
+We continuously improve existing tools and add new features to enhance performance and usability.
+</p>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5">How It Works</h2>
+ <section class="how-section py-5">
+<div class="container">
 
-    <div class="row">
-      <div class="col-md-4">
-        <h5 class="fw-bold">1. Enter Your Information</h5>
-        <p>Fill in personal details, skills, and experience.</p>
-      </div>
-      <div class="col-md-4">
-        <h5 class="fw-bold">2. Choose Design</h5>
-        <p>Select your favorite template and customize styles.</p>
-      </div>
-      <div class="col-md-4">
-        <h5 class="fw-bold">3. Download PDF</h5>
-        <p>Download your resume instantly in high-quality PDF format.</p>
-      </div>
-    </div>
+<div class="text-center mb-5">
+    <h2 class="how-title">How It Works</h2>
+    <p class="how-sub">
+        Using our online tools is simple and straightforward. 
+        Follow these easy steps to complete your task quickly and efficiently.
+    </p>
+</div>
 
-  </div>
+<div class="row g-4">
+
+<!-- Step 1 -->
+<div class="col-md-4">
+<div class="how-card">
+<div class="step-number">1</div>
+<h5>Select a Tool</h5>
+<p>
+Choose the tool you need from our collection — whether it's a resume builder, 
+image converter, color picker, or other utility.
+</p>
+<ul>
+<li>No installation required</li>
+<li>Accessible on all devices</li>
+</ul>
+</div>
+</div>
+
+<!-- Step 2 -->
+<div class="col-md-4">
+<div class="how-card">
+<div class="step-number">2</div>
+<h5>Enter or Upload Your Data</h5>
+<p>
+Provide the required information or upload your file directly in your browser. 
+Each tool clearly guides you through the process.
+</p>
+<ul>
+<li>Simple user interface</li>
+<li>Real-time processing</li>
+</ul>
+</div>
+</div>
+
+<!-- Step 3 -->
+<div class="col-md-4">
+<div class="how-card">
+<div class="step-number">3</div>
+<h5>Download or Copy Results</h5>
+<p>
+Once processing is complete, download your file or copy the output instantly. 
+No unnecessary steps or complex procedures.
+</p>
+<ul>
+<li>Quick export options</li>
+<li>Easy to use results</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- FAQ -->
@@ -157,54 +414,166 @@
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-4">Why Choose Us?</h2>
+ <section class="why-section py-5">
+<div class="container">
 
-    <ul class="list-group list-group-flush fs-5">
-      <li class="list-group-item">✔ Clean, modern templates</li>
-      <li class="list-group-item">✔ 100% free and privacy friendly</li>
-      <li class="list-group-item">✔ No login required</li>
-      <li class="list-group-item">✔ Instant PDF export</li>
-      <li class="list-group-item">✔ Used by students & professionals</li>
-    </ul>
-  </div>
+<div class="text-center mb-5">
+    <h2 class="section-title">Why Choose Our Tools?</h2>
+    <p class="section-subtitle">
+        Our platform offers simple, secure, and efficient online tools designed 
+        to help you complete everyday digital tasks with confidence.
+    </p>
+</div>
+
+<div class="row">
+
+<!-- 1 -->
+<div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+<div class="why-card">
+<i class="fa fa-desktop why-icon"></i>
+<h5>Modern Interface</h5>
+<p>Clean layouts designed for clarity and smooth user experience.</p>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+<div class="why-card">
+<i class="fa fa-shield why-icon"></i>
+<h5>Privacy First</h5>
+<p>Your files stay in your browser. No unnecessary data storage.</p>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+<div class="why-card">
+<i class="fa fa-bolt why-icon"></i>
+<h5>Fast Processing</h5>
+<p>Quick results for conversions, formatting, and downloads.</p>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+<div class="why-card">
+<i class="fa fa-user why-icon"></i>
+<h5>No Login Required</h5>
+<p>Access most tools instantly without creating an account.</p>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+<div class="why-card">
+<i class="fa fa-users why-icon"></i>
+<h5>For Everyone</h5>
+<p>Useful for students, professionals, and everyday users.</p>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+<div class="why-card">
+<i class="fa fa-cloud why-icon"></i>
+<h5>Online & Accessible</h5>
+<p>Works directly in your browser on desktop and mobile.</p>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- BLOG SECTION -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5">Blog & Career Tips</h2>
+<section class="blog-section py-5">
+<div class="container">
 
-    <div class="row">
+<div class="text-center mb-5">
+    <h2 class="blog-title">Blog & Career Tips</h2>
+    <p class="blog-sub">Helpful articles to boost your career journey</p>
+</div>
 
-      <div class="col-md-4 mb-4">
-        <img src="https://source.unsplash.com/600x400/?resume" class="img-fluid blog-img mb-3">
-        <h5 class="fw-bold">How to Create the Perfect Resume</h5>
-        <p>Tips for building a resume that stands out from the crowd.</p>
-      </div>
+<div class="row g-4">
 
-      <div class="col-md-4 mb-4">
-        <img src="https://source.unsplash.com/600x400/?interview" class="img-fluid blog-img mb-3">
-        <h5 class="fw-bold">Top 10 Interview Questions</h5>
-        <p>Prepare for your interviews with confidence.</p>
-      </div>
+<!-- Blog 1 -->
+<div class="col-md-4">
+<a href="perfect-resume.html" class="blog-link">
+<div class="blog-card">
 
-      <div class="col-md-4 mb-4">
-        <img src="https://source.unsplash.com/600x400/?career" class="img-fluid blog-img mb-3">
-        <h5 class="fw-bold">Career Tips for Beginners</h5>
-        <p>Start your professional journey with the right guidance.</p>
-      </div>
+<div class="blog-img">
+<img src="https://picsum.photos/600/400?random=1" alt="Resume Blog">
+</div>
 
-      <div class="col-md-4 mb-4">
-        <img src="https://source.unsplash.com/600x400/?motivation" class="img-fluid blog-img mb-3">
-        <h5 class="fw-bold">Boost Your Productivity</h5>
-        <p>Learn how to stay motivated while job hunting.</p>
-      </div>
+<div class="blog-content">
+<h5>How to Create the Perfect Resume</h5>
+<p>Learn how to craft a powerful resume that highlights your strengths, skills, and achievements to stand out from the crowd.</p>
+<span class="read-more">Read More →</span>
+</div>
 
-    </div>
+</div>
+</a>
+</div>
 
-  </div>
+<!-- Blog 2 -->
+<div class="col-md-4">
+<a href="top-interview-questions.html" class="blog-link">
+<div class="blog-card">
+
+<div class="blog-img">
+<img src="https://picsum.photos/600/400?random=2" alt="Interview Blog">
+</div>
+
+<div class="blog-content">
+<h5>Top 10 Interview Questions</h5>
+<p>Prepare confidently with common interview questions and smart answering strategies to impress recruiters.</p>
+<span class="read-more">Read More →</span>
+</div>
+
+</div>
+</a>
+</div>
+
+<!-- Blog 3 -->
+<div class="col-md-4">
+<a href="career-tips.html" class="blog-link">
+<div class="blog-card">
+
+<div class="blog-img">
+<img src="https://picsum.photos/600/400?random=3" alt="Career Blog">
+</div>
+
+<div class="blog-content">
+<h5>Career Tips for Beginners</h5>
+<p>Start your professional journey with practical guidance, goal setting strategies, and productivity advice.</p>
+<span class="read-more">Read More →</span>
+</div>
+
+</div>
+</a>
+</div>
+
+<!-- Blog 4 -->
+<div class="col-md-4">
+<a href="boost-productivity.html" class="blog-link">
+<div class="blog-card">
+
+<div class="blog-img">
+<img src="https://picsum.photos/600/400?random=4" alt="Productivity Blog">
+</div>
+
+<div class="blog-content">
+<h5>Boost Your Productivity</h5>
+<p>Discover techniques to stay motivated, manage time effectively, and increase efficiency during job hunting.</p>
+<span class="read-more">Read More →</span>
+</div>
+
+</div>
+</a>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- FOOTER -->

@@ -6,7 +6,7 @@
       --maxwidth:100%;
     }
     *{box-sizing:border-box}
-  
+  body {font-size:16px;}
 .hero {
     background: linear-gradient(135deg, #4a6cf7, #6f86ff);
     color: #fff;
@@ -103,8 +103,351 @@ footer a { color: #fff; text-decoration: none; }
     .ad-slot{background:#ffffff;border-radius:8px;padding:12px;text-align:center;border:1px dashed rgba(0,0,0,0.06);min-height:160px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
     .ad-slot small{display:block;color:var(--muted);font-size:12px}
 
-    
+     .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
 
+  
+
+/* Section */
+.tools-section{
+    padding:30px 0;
+}
+
+/* Heading */
+.section-title{
+    font-size:36px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.section-sub{
+    color:#64748b;
+}
+
+/* Card */
+.tool-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:40px 30px;
+    position:relative;
+    overflow:hidden;
+    transition:all .4s ease;
+    box-shadow:0 8px 30px rgba(0,0,0,0.05);
+    border:1px solid #f1f5f9;
+}
+
+.tool-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* Gradient Border Glow */
+.tool-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    padding:2px;
+    background:linear-gradient(135deg,#4f46e5,#06b6d4,#9333ea);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity:0;
+    transition:.4s;
+}
+
+.tool-card:hover::before{
+    opacity:1;
+}
+
+/* Icon */
+.tool-icon{
+    font-size:48px;
+    transition:transform .4s ease;
+}
+
+.tool-card:hover .tool-icon{
+    transform:scale(1.2) rotate(6deg);
+}
+
+/* Title */
+.tool-title{
+    font-size:20px;
+    font-weight:600;
+    margin-top:20px;
+    color:#1e293b;
+}
+
+/* Description */
+.tool-desc{
+    font-size:16px;
+    color:#64748b;
+    margin:15px 0 25px;
+}
+
+/* Button */
+.tool-btn{
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+    border:none;
+    padding:8px 22px;
+    border-radius:30px;
+    font-size:13px;
+    color:#fff;
+    transform:translateY(20px);
+    opacity:0;
+    transition:all .4s ease;
+}
+.tool-link{
+    text-decoration:none;
+    display:block;
+}
+
+.tool-btn{
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+    border:none;
+    padding:10px 26px;
+    border-radius:40px;
+    font-size:14px;
+    color:#fff;
+    font-weight:500;
+    display:inline-block;
+    transition:all .4s ease;
+    transform:translateY(20px);
+    opacity:0;
+}
+
+.tool-card:hover .tool-btn{
+    transform:translateY(0);
+    opacity:1;
+}
+/*  Blog Section */
+.blog-title{
+    font-size:34px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.blog-sub{
+    color:#64748b;
+}
+
+.blog-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.blog-card{
+    background:#ffffff;
+    border-radius:18px;
+    overflow:hidden;
+    transition:all .4s ease;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
+    height:100%;
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,0.1);
+}
+
+.blog-img{
+    overflow:hidden;
+}
+
+.blog-img img{
+    width:100%;
+    transition:transform .5s ease;
+}
+
+.blog-card:hover .blog-img img{
+    transform:scale(1.08);
+}
+
+.blog-content{
+    padding:20px;
+}
+
+.blog-content h5{
+    font-weight:600;
+    margin-bottom:10px;
+    color:#1e293b;
+}
+
+.blog-content p{
+    font-size:14px;
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+.read-more{
+    font-weight:600;
+    font-size:14px;
+    color:#4f46e5;
+    transition:.3s;
+}
+
+.blog-card:hover .read-more{
+    letter-spacing:1px;
+}
+/* Features section */
+.features-title{
+    font-size:32px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.features-sub{
+    color:#64748b;
+    max-width:600px;
+    margin:0 auto;
+}
+
+.feature-card{
+    background:#ffffff;
+    padding:35px 25px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
+    transition:all .3s ease;
+    height:100%;
+    border:1px solid #eef2f7;
+}
+
+.feature-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.08);
+}
+
+.feature-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.feature-card h5{
+    font-weight:600;
+    margin-bottom:12px;
+    color:#1e293b;
+}
+
+.feature-card p{
+    font-size:14px;
+    color:#64748b;
+    line-height:1.6;
+}
+
+/*  How it works */
+.how-section {
+    background: #ffffff;
+}
+
+.how-title {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.how-sub {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+}
+
+.how-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.how-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.how-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.how-card p {
+    color: #555;
+}
+
+.how-card ul {
+    padding-left: 18px;
+    color: #777;
+    font-size: 14px;
+}
+/* Why us section */
+.why-section {
+    background: #ffffff;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.section-subtitle {
+    max-width: 700px;
+    margin: 10px auto 0;
+    color: #666;
+}
+
+.why-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.why-icon {
+    font-size: 40px;
+    color: #0d6efd;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.why-card:hover .why-icon {
+    transform: scale(1.15);
+}
+
+.why-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #555;
+    font-size: 14px;
+}
     @media (max-width:1100px){
       .layout{grid-template-columns:320px 1fr;grid-auto-rows:auto}
       .ads-col{display:none}
