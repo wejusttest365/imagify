@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TTF to Web Font Converter Convert TrueType Font to WOFF, WOFF2 & EOT Online</title>
+<title>Free Font Converter Online  Convert Text to Stylish Fonts Instantly</title>
+<!-- Basic SEO Meta Tags -->
+<meta name="description" content="free online utilities — image converter, font converter, OCR, URL shortener, PDF tools, color picker, gradient generator and more. Fast, secure and easy to use.">
+  <meta name="keywords" content="image converter, font converter, OCR, url shortener, pdf tools, color picker, gradient generator, online tools, webtools">
+  
+<meta name="author" content="Your Website Name">
+
+<meta name="robots" content="index, follow">
+<!-- Open Graph (For Facebook / Social Sharing) -->
+ <meta property="og:title" content="image converter Online">
+<meta property="og:description" content="free online utilities — image converter, font converter, OCR, URL shortener, PDF tools, color picker, gradient generator and more. Fast, secure and easy to use.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.com/font-converter">
+<meta property="og:image" content="https://yourwebsite.com/images/font-converter-preview.jpg">
+<!-- CSS for the page -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/image-convertor.css" rel="stylesheet">
+</head>
+ 
+<body>
+<!-- NAVBAR -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Imagify Resume</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              All Tools <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="resume.html">Resume Builder</a></li>
+              <li><a class="dropdown-item" href="font-converter.html">Web Font Converter</a></li>
+              <li><a class="dropdown-item" href="images-converter.html">Image Converter</a></li> 
+              <li><a class="dropdown-item" href="images-text.html">Image - Text (OCR)</a></li>
+              <li><a class="dropdown-item" href="image-compress.html">Compress Images</a></li>
+              <li><a class="dropdown-item" href="web-font-generate.html">Web Font Generator</a></li>
+              <li><a class="dropdown-item" href="color-picker.html">Color Picker</a></li>
+              <li><a class="dropdown-item" href="gradient-maker.html">Gradient Maker</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="disclaimer.html">Disclaimer</a></li>
+          <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+          <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <section class="my-2">
+    <div class="image-conversion">
+  <div class="container">
+    <h1>Image Conversion</h1>
+
+    <div class="sub-tabs" role="tablist" aria-label="Conversion types">
+      <button class="sub-tab active" data-conversion="jpg2png">JPG → PNG</button>
+      <button class="sub-tab" data-conversion="png2jpg">PNG → JPG</button>
+      <button class="sub-tab" data-conversion="webp2png">WEBP → PNG</button>
+      <button class="sub-tab" data-conversion="webp2jpg">WEBP → JPG</button>
+      <button class="sub-tab" data-conversion="gif2jpg">GIF → JPG</button>
+    </div>
+
+    <div id="drop-area" class="drop-area">
+      <p><strong>Drag & drop</strong> images here or <button id="add-files">Choose files</button></p>
+      <input id="upload" type="file" accept="image/*" multiple style="display:none" />
+      <div class="hint">Only files matching the selected conversion are accepted. Invalid files will be shown with ❌ and won't be converted.</div>
+    </div>
+
+    <ul id="file-list" aria-live="polite"></ul>
+
+    <div class="controls">
+      <button id="convert-btn">Convert Files <span id="spinner">⏳</span></button> 
+      
+      
+      <button id="download-zip">Download ZIP</button>
+    </div>
+ 
+    <section class="my-5">
+	<hr />
+  <div class="container">  
+  <h2>Image Converter</h2>
+
+<p><b>Description:</b></p>
+<p>
+Convert images instantly into different formats like JPG, PNG, WEBP, or GIF. Our online Image Converter maintains quality while reducing size, making your images perfect for web, social media, and professional use. No software needed — just upload, convert, and download in seconds!
+</p>
+
+<h3>FAQs:</h3>
+<p><b>Q1: Can I convert multiple images at once?</b><br />
+Yes, you can upload multiple images and convert them in bulk.</p>
+<hr />
+<p><b>Q2: Will the quality reduce after conversion?</b><br />
+No, we ensure maximum quality is retained, with optimized file sizes for web use.</p>
+<hr />
+<p><b>Q3: Which formats are supported?</b><br />
+You can convert between JPG, PNG, WEBP, BMP, and GIF.</p>
+  
+  </div>  
+</section>
+
+
+ </div>  
+ <div id="downloadModal" class="modal">
+    <div class="modal-content">
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <i class="fa-solid fa-circle-check me-2"></i>
+  <strong>Success!</strong> Conversion completed successfully.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+       
+      <p>Your files are ready to download.</p>
+      <div class="modal-buttons">
+        <button id="confirmDownload" class="download-btn">⬇️ Download ZIP</button>
+      
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="text-center">
+  <div class="container">
+    <p>© 2026 Imagify Resume. All rights reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> • 
+    <a href="terms.html">Terms</a> • 
+    <a href="disclaimer.html">Disclaimer</a> • 
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+<script src="js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const subTabs = Array.from(document.querySelectorAll('.sub-tab'));
+  const dropArea = document.getElementById('drop-area');
+  const uploadInput = document.getElementById('upload');
+  const addFilesBtn = document.getElementById('add-files');
+  const fileListEl = document.getElementById('file-list');
+  const convertBtn = document.getElementById('convert-btn');
+  const downloadZipBtn = document.getElementById('download-zip');
+  const spinner = document.getElementById('spinner');
+  const counterEl = document.getElementById('counter');
+
+  const modal = document.getElementById('downloadModal');
+  const confirmDownload = document.getElementById('confirmDownload');
+  const closeBtn = modal.querySelector('.close-btn');
+
+  let currentConversion = 'jpg2png';
+  let fileQueue = [];
+  let zip = null;
+
+  const allowedFormats = {
+    jpg2png: ['image/jpeg', '.jpg', '.jpeg'],
+    png2jpg: ['image/png', '.png'],
+    webp2png: ['image/webp', '.webp'],
+    webp2jpg: ['image/webp', '.webp'],
+    gif2jpg: ['image/gif', '.gif']
+  };
+
+  const ext = (name) => {
+    const p = name.lastIndexOf('.');
+    return p >= 0 ? name.slice(p).toLowerCase() : '';
+  };
+  function fileAllowed(file, conv) {
+    const allowed = allowedFormats[conv] || [];
+    return allowed.some(a => a === file.type.toLowerCase() || a === ext(file.name));
+  }
+  function setConvertEnabled() {
+    convertBtn.disabled = fileQueue.length === 0;
+  }
+  // async function loadCounter() {
+  //   try {
+  //     const res = await fetch('get_counter.php', {cache:'no-store'});
+  //     const json = await res.json();
+  //     counterEl.textContent = json && Number(json.count) ? json.count : 0;
+  //   } catch {}
+  // 
+  //loadCounter();
+
+  subTabs.forEach(tab => tab.addEventListener('click', () => {
+    subTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentConversion = tab.dataset.conversion;
+    fileQueue = [];
+    fileListEl.innerHTML = '';
+    downloadZipBtn.style.display = 'none';
+    setConvertEnabled();
+  }));
+
+  ['dragenter','dragover'].forEach(evt=>dropArea.addEventListener(evt,e=>{e.preventDefault();dropArea.classList.add('dragover');}));
+  ['dragleave','drop'].forEach(evt=>dropArea.addEventListener(evt,e=>{e.preventDefault();dropArea.classList.remove('dragover');}));
+  dropArea.addEventListener('drop', e => {handleAddFiles(e.dataTransfer.files);});
+  addFilesBtn.addEventListener('click', ()=>uploadInput.click());
+  uploadInput.addEventListener('change', e => {handleAddFiles(e.target.files);uploadInput.value='';});
+
+  function handleAddFiles(files){
+    Array.from(files).forEach(file=>{
+      const li=document.createElement('li'); li.className='file-item';
+      const left=document.createElement('div'); left.className='left';
+      const nameSpan=document.createElement('span'); nameSpan.className='file-name'; nameSpan.textContent=file.name;
+      left.appendChild(nameSpan);
+      const invalidSpan=document.createElement('span'); left.appendChild(invalidSpan);
+      li.appendChild(left);
+
+      if(!fileAllowed(file,currentConversion)){
+        invalidSpan.className='invalid'; invalidSpan.textContent='❌ Invalid format';
+      }else{ fileQueue.push(file); }
+
+      const removeBtn=document.createElement('button'); removeBtn.className='btn remove'; removeBtn.textContent='Remove';
+      removeBtn.onclick=()=>{li.remove(); fileQueue=fileQueue.filter(f=>f!==file); setConvertEnabled();};
+      li.appendChild(removeBtn);
+      fileListEl.appendChild(li);
+      setConvertEnabled();
+    });
+  }
+
+  function readFileAsDataURL(file){
+    return new Promise(res=>{const r=new FileReader(); r.onload=e=>res(e.target.result); r.readAsDataURL(file);});
+  }
+
+  convertBtn.addEventListener('click', async()=>{
+    if(!fileQueue.length) return alert('Add valid images.');
+    spinner.style.display='inline-block'; convertBtn.disabled=true; downloadZipBtn.style.display='none';
+    zip=new JSZip(); let converted=0;
+    try{
+      for(const file of fileQueue){
+        const dataUrl=await readFileAsDataURL(file);
+        const img=new Image(); img.src=dataUrl; await new Promise(r=>img.onload=r);
+        const canvas=document.createElement('canvas'); canvas.width=img.width; canvas.height=img.height;
+        canvas.getContext('2d').drawImage(img,0,0);
+        let mime='image/png',ext='png'; if(currentConversion.includes('jpg')){mime='image/jpeg'; ext='jpg';}
+        const blob=await new Promise(r=>canvas.toBlob(r,mime,0.92));
+        zip.file(file.name.replace(/\.[^/.]+$/,'')+'.'+ext,blob);
+        converted++;
+      }
+      // update counter
+      // await fetch('update_counter.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:`count=${converted}`});
+      // loadCounter();
+      modal.style.display='flex'; // open modal instead of showing direct button
+    }catch(e){console.error(e);}
+    spinner.style.display='none'; convertBtn.disabled=false; fileQueue=[]; setConvertEnabled();
+  });
+
+  confirmDownload.addEventListener('click', async()=>{
+    if(!zip) return;
+    const blob=await zip.generateAsync({type:'blob'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a'); a.href=url; a.download='converted_images.zip'; a.click();
+    URL.revokeObjectURL(url);
+    modal.style.display='none';
+  });
+  closeBtn.addEventListener('click',()=>modal.style.display='none');
+});
+</script>
+
+
+</body>
+</html>
