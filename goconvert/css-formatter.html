@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced CSS Formatter – Organize, Beautify, Minify & Analyze CSS Online</title>
+  <!-- Basic SEO Meta Tags -->
+  <meta name="description"
+    content="Format and optimize your CSS instantly with our Advanced CSS Formatter. Organize styles, beautify messy code, minify CSS, and analyze selectors and file size. Free online CSS optimization tool for developers.">
+
+  <meta name="keywords"
+    content="css formatter, css beautifier, css minifier, css optimizer, format css online, organize css code, css analyzer tool, free css formatter, beautify css online">
+
+  <meta name="author" content="Your Website Name">
+
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph (For Facebook / Social Sharing) -->
+  <meta property="og:title" content="Free CSS formatter online">
+  <meta property="og:description"
+    content="Format and optimize your CSS instantly with our Advanced CSS Formatter. Organize styles, beautify messy code, minify CSS, and analyze selectors and file size. Free online CSS optimization tool for developers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/font-converter">
+  <meta property="og:image" content="https://yourwebsite.com/images/font-converter-preview.jpg">
+  <!-- CSS for the page -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/font-convert.css" rel="stylesheet">
+ <style>
+ 
+
+.dark{
+background:#1e1e1e;
+color:#ddd;
+}
+
+.header-box{
+background:#0d6efd;
+color:white;
+padding:25px;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+.dark .header-box{
+background:#111;
+}
+
+textarea{
+width:100%;
+height:350px;
+font-family:monospace;
+}
+
+.result-box{
+background:white;
+border:1px solid #ddd;
+padding:20px;
+border-radius:6px;
+white-space:pre-wrap;
+font-family:monospace;
+min-height:350px;
+max-height: 350px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.dark .result-box{
+background:#2a2a2a;
+border-color:#444;
+}
+
+.stats{
+background:white;
+border:1px solid #ddd;
+padding:15px;
+border-radius:6px;
+margin-top:20px;
+}
+
+.dark .stats{
+background:#2a2a2a;
+border-color:#444;
+}
+
+.btn-main{
+margin-right:8px;
+margin-bottom:10px;
+}
+label.small-header {
+    background: #0d6efd;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+</style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Convertigo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              All Tools <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="resume.html">Resume Builder</a></li>
+              <li><a class="dropdown-item" href="font-converter.html">Web Font Converter</a></li>
+              <li><a class="dropdown-item" href="image-converter.html">Image Converter</a></li>
+              <li><a class="dropdown-item" href="image-text.html">Image - Text (OCR)</a></li>
+              <li><a class="dropdown-item" href="image-compress.html">Compress Images</a></li>
+              <li><a class="dropdown-item" href="css-formatter.html">CSS Format</a></li>
+<!--         <li><a class="dropdown-item" href="color-picker.html">Color Picker</a></li>
+              <li><a class="dropdown-item" href="gradient-maker.html">Gradient Maker</a></li> -->
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="disclaimer.html">Disclaimer</a></li>
+          <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
+          <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="py-2">
+    <div class="container mt-2">
+ <div class="text-center">
+<h2>Advanced CSS Formatter</h2>
+<p><b>Organize, Beautify, Minify and Analyze CSS</b></p>
+</div>
+ 
+<div class="row">
+<div class="col-lg-6">
+
+<label class="small-header">Input CSS</label>
+<textarea id="cssInput" class="form-control" placeholder="Input CSS code and see magic"></textarea>
+
+<input type="file" id="fileUpload" class="form-control mt-3">
+
+<div class="mt-3">
+
+<button class="btn btn-primary btn-main" id="organizeBtn">Organize CSS</button>
+<button class="btn btn-success btn-main" id="beautifyBtn">Beautify</button>
+<button class="btn btn-warning btn-main" id="minifyBtn">Minify</button>
+<button class="btn btn-dark btn-main" id="darkBtn">Dark Mode</button>
+<button class="btn btn-danger btn-main" id="clearBtn">Clear</button>
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+<label  class="small-header">Output</label>
+
+<div class="result-box" id="output"></div>
+
+<button class="btn btn-info mt-3" id="downloadBtn">Download CSS</button>
+
+<div class="stats" id="stats">
+
+<h5>CSS Statistics</h5>
+
+<div>Total Selectors: <span id="selectors">0</span></div>
+<div>Total Rules: <span id="rules">0</span></div>
+<div>Original Size: <span id="originalSize">0</span> bytes</div>
+<div>Formatted Size: <span id="newSize">0</span> bytes</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+  </section>
+  <section class="seo-content mt-5">
+
+<div class="container">
+
+<h1 class="mb-4">Advanced CSS Formatter  </h1>
+<p><b>Organize, Beautify, Minify & Analyze CSS</b></p>
+<p>
+Managing large CSS files can quickly become messy and difficult to maintain. Our <strong>Advanced CSS Formatter</strong> helps developers automatically organize, beautify, and optimize CSS code in seconds. Whether you're cleaning up existing styles or working on a large project, this tool restructures your CSS into clear and readable sections.
+</p>
+
+<p>
+The tool intelligently groups CSS into logical categories such as <strong>Header, Navigation, Footer, Layout, Typography, Utilities, and Other Styles</strong>, making it easier to maintain and debug your code.
+</p>
+
+
+<h2 class="mt-4">Key Features</h2>
+
+<div class="row mt-3">
+
+<div class="col-md-6 mb-3">
+<h5>Automatic CSS Organization</h5>
+<p>
+Automatically organize CSS rules into structured sections including header styles, navigation styles, footer styles, layout components, typography rules, and utility classes.
+</p>
+</div>
+
+<div class="col-md-6 mb-3">
+<h5>CSS Beautifier</h5>
+<p>
+Convert messy or compressed CSS into clean and readable code with proper spacing and formatting. This makes editing and reviewing stylesheets much easier.
+</p>
+</div>
+
+<div class="col-md-6 mb-3">
+<h5>CSS Minifier</h5>
+<p>
+Reduce CSS file size by removing unnecessary whitespace and formatting. Smaller files improve website performance and loading speed.
+</p>
+</div>
+
+<div class="col-md-6 mb-3">
+<h5>CSS Statistics Analyzer</h5>
+<p>
+Analyze your CSS file with built-in statistics including selector count, rule count, original size, and optimized size.
+</p>
+</div>
+
+</div>
+
+
+<h2 class="mt-4">How to Use the Tool</h2>
+
+<ol>
+<li>Paste your CSS code into the editor or upload a <code>.css</code> file.</li>
+<li>Select an action such as <strong>Organize CSS</strong>, <strong>Beautify CSS</strong>, or <strong>Minify CSS</strong>.</li>
+<li>Review the formatted CSS output.</li>
+<li>Check the statistics to analyze your stylesheet.</li>
+<li>Download the optimized CSS file for use in your project.</li>
+</ol>
+
+
+<h2 class="mt-4">Benefits of Using a CSS Formatter</h2>
+
+<ul>
+<li>Improves code readability</li>
+<li>Organizes stylesheets into logical sections</li>
+<li>Reduces CSS file size</li>
+<li>Improves website loading speed</li>
+<li>Makes debugging easier</li>
+<li>Helps maintain cleaner code structure</li>
+</ul>
+
+
+<h2 class="mt-4">Frequently Asked Questions</h2>
+
+<div class="faq-item mb-3">
+<h5>What is a CSS Formatter?</h5>
+<p>
+A CSS formatter is a tool that restructures CSS code into a clean and readable format. It helps developers organize stylesheets and improve maintainability.
+</p>
+</div>
+
+<div class="faq-item mb-3">
+<h5>What is the difference between CSS beautify and CSS minify?</h5>
+<p>
+CSS beautify formats code with proper indentation and spacing to make it easier to read. CSS minify removes unnecessary spaces and characters to reduce file size and improve website performance.
+</p>
+</div>
+
+<div class="faq-item mb-3">
+<h5>Is this CSS formatter free to use?</h5>
+<p>
+Yes, this online CSS formatter is completely free to use and works directly in your browser without requiring any installation.
+</p>
+</div>
+
+<div class="faq-item mb-3">
+<h5>Does this tool store my CSS code?</h5>
+<p>
+No. The tool processes your CSS directly in your browser and does not store or upload your code to any server.
+</p>
+</div>
+
+
+</div>
+
+</section>
+  <!-- FOOTER -->
+  <footer class="text-center">
+    <div class="container">
+      <p>© 2026 Convertigo. All rights reserved.</p>
+      <a href="privacy.html">Privacy Policy</a> •
+      <a href="terms.html">Terms</a> •
+      <a href="disclaimer.html">Disclaimer</a> •
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+ 
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+function groupCSS(css){
+
+let header=[],nav=[],footer=[],layout=[],typography=[],utility=[],other=[];
+
+let rules = css.split("}");
+
+rules.forEach(function(rule){
+
+rule = rule.trim();
+
+if(rule=="") return;
+
+rule += "}";
+
+let l = rule.toLowerCase();
+
+if(l.includes("header")) header.push(rule);
+
+else if(l.includes("nav")) nav.push(rule);
+
+else if(l.includes("footer")) footer.push(rule);
+
+else if(l.includes("container") || l.includes("row") || l.includes("grid") || l.includes("flex"))
+layout.push(rule);
+
+else if(l.includes("font") || l.includes("text") || l.includes("line-height"))
+typography.push(rule);
+
+else if(l.includes("btn") || l.includes("margin") || l.includes("padding"))
+utility.push(rule);
+
+else other.push(rule);
+
+});
+
+let result="";
+
+/* helper */
+
+function block(title,arr){
+
+if(arr.length){
+
+result+="\n/* ===== "+title+" ===== */\n\n";
+
+arr.forEach(r=>result+=r+"\n\n");
+
+}
+
+}
+
+block("HEADER",header);
+block("NAVIGATION",nav);
+block("FOOTER",footer);
+block("LAYOUT",layout);
+block("TYPOGRAPHY",typography);
+block("UTILITIES",utility);
+block("OTHER STYLES",other);
+
+return result;
+
+}
+
+
+function beautify(css){
+
+return css.replace(/}/g,"}\n\n");
+
+}
+
+
+function minify(css){
+
+return css.replace(/\s+/g," ")
+.replace(/\s*{\s*/g,"{")
+.replace(/\s*}\s*/g,"}")
+.replace(/\s*;\s*/g,";")
+.replace(/\s*:\s*/g,":");
+
+}
+
+
+function stats(original,formatted){
+
+let selectorCount = (formatted.match(/{/g)||[]).length;
+
+$("#selectors").text(selectorCount);
+$("#rules").text(selectorCount);
+
+$("#originalSize").text(original.length);
+$("#newSize").text(formatted.length);
+
+}
+
+
+$("#organizeBtn").click(function(){
+
+let css = $("#cssInput").val();
+
+let formatted = groupCSS(css);
+
+$("#output").text(formatted);
+
+stats(css,formatted);
+
+});
+
+
+$("#beautifyBtn").click(function(){
+
+let css = $("#cssInput").val();
+
+let formatted = beautify(css);
+
+$("#output").text(formatted);
+
+stats(css,formatted);
+
+});
+
+
+$("#minifyBtn").click(function(){
+
+let css = $("#cssInput").val();
+
+let formatted = minify(css);
+
+$("#output").text(formatted);
+
+stats(css,formatted);
+
+});
+
+
+$("#clearBtn").click(function(){
+
+$("#cssInput").val("");
+$("#output").text("");
+
+});
+
+
+$("#darkBtn").click(function(){
+
+$("body").toggleClass("dark");
+
+});
+
+
+$("#downloadBtn").click(function(){
+
+let text = $("#output").text();
+
+let blob = new Blob([text], {type: "text/css"});
+
+let url = URL.createObjectURL(blob);
+
+let a = document.createElement("a");
+
+a.href=url;
+
+a.download="formatted.css";
+
+a.click();
+
+});
+
+
+$("#fileUpload").on("change",function(e){
+
+let file = e.target.files[0];
+
+let reader = new FileReader();
+
+reader.onload=function(ev){
+
+$("#cssInput").val(ev.target.result);
+
+};
+
+reader.readAsText(file);
+
+});
+
+</script>
+
+</body>
+</html>

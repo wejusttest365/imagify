@@ -40,19 +40,15 @@
      text-decoration: none;
  }
 
- .resume-canvas .section:last-child {
-     /* float: right; */
- }
 
  .section .content p {
      margin-top: 5px;
      margin-bottom: 15px
  }
 
- .resume-canvas .section:nth-last-of-type(2) {
-     /* float: left; */
- }
-
+button.accordion-button {
+    font-weight: 600;
+}
  .topbar {
      max-width: var(--maxwidth);
      margin: 20px 0 5px;
