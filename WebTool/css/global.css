@@ -1,0 +1,694 @@
+/* ==========================================================================
+   GLOBAL CONFIG & ROOT VARIABLES
+   ========================================================================== */
+
+:root {
+  
+  --footer-black: #ffffff;
+  --fontOpenSans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --fontRobotoSans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --fontPoppinSans: "Poppins", sans-serif;
+}
+ 
+   
+
+/* ==========================================================================
+   MAIN HEADER & brand (Standard & Sticky)
+   ========================================================================== */
+#header {
+    position: relative;
+    background-color: rgb(255 255 255);
+    z-index: 9;
+    float: left;
+    width: 100%;
+    border: 0px;
+    box-shadow: rgba(232, 232, 232, 0.66) 0px 2px 7px 5px;
+    transition: 0.5ms;
+}
+
+#header #header-wrap {
+    box-shadow: 0 0 5px #ccc;
+    margin-bottom: 2px;
+    padding: 5px 0px;
+    float: left;
+    width: 100%;
+}
+
+/* Sticky State Transitions */
+header#header.sticky-header {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 111;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px, transparent 0px 3px 2px;
+    transition: 0.5ms;
+}
+
+header#header.sticky-header #brand {
+    margin-top: 0px;
+}
+
+header#header.sticky-header #brand img {
+    max-height: 60px;
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+/* ==========================================================================
+   MOBILE TOGGLE BUTTON (Hamburger)
+   ========================================================================== */
+.lines-button {
+    cursor: pointer;
+    background: rgb(191, 30, 45);
+    border: 0px;
+    float: right;
+    margin-top: 19px;
+    height: 34px;
+    padding: 5px;
+    border-radius: 2px;
+    outline: none !important;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Button Focus States */
+.lines-button:focus {
+    background: rgb(235 28 8);
+}
+
+button.lines-button.x.close {
+    background: #ed1750;
+    min-width: 35px;
+    opacity: 1;
+}
+
+button.lines-button.x.close:focus {
+    background: #000000;
+}
+
+/* Hide helper text */
+.lines-button span.menutext {
+    display: none;
+    text-indent: -99999px;
+    opacity: 0;
+}
+
+/* ==========================================================================
+   HAMBURGER ICON ANIMATION (The "Lines")
+   ========================================================================== */
+.lines {
+    display: inline-block;
+    width: 29px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    border-radius: 37px;
+    position: relative;
+    float: right;
+    transition: 0.35s;
+}
+
+/* The Top and Bottom bars */
+.lines::before, 
+.lines::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 0px;
+    right: 0;
+    margin: auto;
+    transition: 0.35s;
+    transform-origin: 0.178571rem center;
+}
+
+.lines::before { top: 8px; }
+.lines::after { top: -8px; }
+
+/* Animation to "X" */
+.lines-button.x .lines::before, 
+.lines-button.x .lines::after {
+    transform-origin: 50% 50%;
+    transition: top 0.3s 0.1s, transform 0.3s;
+}
+
+.close .lines {
+    background: transparent !important; /* Hides middle bar */
+}
+
+.lines-button.x.close .lines {
+    transform: rotate3d(0, 0, 1, 90deg);
+}
+
+.lines-button.x.close .lines::before, 
+.lines-button.x.close .lines::after {
+    top: 2px;
+    opacity: 1 !important;
+    transition: top 0.3s, transform 0.3s 0.1s;
+}
+
+.lines-button.x.close .lines::before {
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.lines-button.x.close .lines::after {
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+/* ==========================================================================
+   HEADER & brand BASE
+   ========================================================================== */
+#header, 
+#header-wrap, 
+#brand img {
+    height: auto;
+    transition: height 0.4s, opacity 0.3s;
+}
+
+#header #brand img {
+    width: auto;
+    max-height: 90px;
+    padding: 0px;
+    border-radius: 0px;
+    transition: height 0.4s, opacity 0.3s;
+}
+
+/* ==========================================================================
+   PRIMARY MENU CONTAINER
+   ========================================================================== */
+#mainmenu {
+    float: right;
+    width: 100%;
+    background: transparent;
+    border: 0px;
+    height: auto;
+}
+
+#mainmenu ul {
+    list-style: none;
+    margin: auto;
+    padding: 5px;
+    white-space: nowrap;
+    border-radius: 0px;
+}
+
+/* Flexbox Layout for Full Header */
+#header.full-header #mainmenu > ul {
+    float: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* Aligns menu to the right */
+}
+
+/* Standard List Layout */
+#mainmenu > ul {
+    float: left;
+    width: 100%;
+    text-align: right;
+}
+
+#mainmenu ul li {
+    position: relative;
+}
+
+#mainmenu > ul > li {
+    display: inline-block;
+    float: none;
+    margin: 0px 2px;
+    text-align: center;
+    vertical-align: middle;
+    flex: 0 0 auto;
+}
+
+#mainmenu > ul > li:first-child { margin-left: 0px; }
+
+/* ==========================================================================
+   MENU LINKS (TYPOGRAPHY & BUTTONS)
+   ========================================================================== */
+#mainmenu ul li > a {
+    display: block;
+    line-height: normal;
+    padding: 10px 8px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: var(--fontOpenSans);
+    border-radius: 4px;
+    position: relative;
+    transition: 0.5s;
+}
+
+/* Active / Current Page State */
+#mainmenu ul li.current > a {
+    padding: 10px 15px;
+    color: rgb(255, 255, 255) !important;
+    background: rgb(201, 0, 53) !important;
+}
+
+/* Icons inside links */
+#mainmenu ul li > a i {
+    position: relative;
+    top: -1px;
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+    margin-right: 6px;
+    vertical-align: top;
+}
+
+/* ==========================================================================
+   HOVER EFFECTS & ANIMATIONS (UNDERLINES)
+   ========================================================================== */
+/* Main Hover Background */
+#mainmenu > ul > li:hover > a, 
+#mainmenu > ul > li:focus > a {
+    background: var(--menu-hover-bg);
+    color: #2196F3;
+    transition: 1s;
+    text-decoration: none;
+}
+ 
+
+/* ==========================================================================
+   DROPDOWN MENUS
+   ========================================================================== */
+#mainmenu ul.dropdown-menu {
+    background: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#mainmenu > ul > li:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+#mainmenu ul.dropdown-menu.dropdown-menu-right {
+    left: auto;
+    right: 0px;
+}
+
+/* Dropdown Link Styles */
+#mainmenu ul ul li > a {
+    color: rgb(255, 255, 255); /* Assuming dropdown has a dark bg or logic else override */
+    padding: 10px 12px;
+    white-space: nowrap;
+    transition: 0.2s ease-in-out;
+}
+
+#mainmenu ul ul li > a:hover {
+    background: var(--menu-hover-bg);
+    color: #2196F3;
+}
+
+/* Sub-menu Arrow Rotation */
+#mainmenu ul li.sub-menu a span {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+#mainmenu ul li.sub-menu:hover a span {
+    transform: rotate(180deg);
+}
+
+/* Hide Mobile Trigger by Default */
+#mainmenu-trigger {
+    display: none;
+}
+ 
+ 
+ /* ==========================================================================
+   FOOTER - MAIN CONTAINER
+   ========================================================================== */
+.footer {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 70px 0px 0;
+    z-index: 1;
+    margin-top: 0px;
+    background: #000000 !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Global Footer Typography & Links */
+.footer, 
+.footer p, 
+.footer a, 
+.footer ul li a {
+    font-family: var(--fontOpenSans);
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255 255 255) !important;
+    transition: 0.5s;
+}
+footer .headingfooter {
+    font-size: 30px;
+}
+/* Images & Branding in Footer */
+footer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+footer .h3 {
+    font-family: var(--fontOpenSans);
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+/* ==========================================================================
+   FOOTER INTERACTION (HOVERS)
+   ========================================================================== */
+.footer a {
+    word-break: break-word;
+}
+
+.footer a:hover, 
+.footer ul li a:hover, 
+.footer a:active, 
+.footer ul li a:focus {
+    color: rgb(245 25 5) !important; /* Your specific red hover */
+    text-decoration: none !important;
+    background: transparent;
+    transition: 0.5s;
+}
+
+.footer .socialf a {
+    line-height: normal;
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* ==========================================================================
+   FOOTER NAVIGATION (fnav)
+   ========================================================================== */
+.footer ul.fnav {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+.footer ul.fnav li {
+    list-style: none;
+    display: block;
+    position: relative;
+}
+.footer ul.fnav li a:hover {
+    padding-left: 5px;
+}
+.footer ul.fnav li a {
+    float: left;
+    width: 100%;
+    padding: 4px 3px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+ 
+/* Hover Icon (Fixed FontAwesome content) */
+.footer ul.fnav li a::after {
+    /* content: "\f0da"; */ /* Cleaned up the garbled text to a standard FA arrow */
+    font-family: FontAwesome;
+    margin-left: 5px;
+    transition: 0.5s;
+    opacity: 0;
+    display: none; /* Set to inline-block if you want the icon to appear */
+}
+
+.footer ul.fnav li a:hover::after {
+    opacity: 1;
+    display: inline-block;
+}
+.footer .studentLoginImg {
+    background: #fff;
+}
+
+/* ==========================================================================
+   COPYRIGHTS BAR
+   ========================================================================== */
+.copyright {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0px 0px;
+    margin-top: 20px;
+    border-top: 1px solid rgb(96 96 96);
+}
+
+#copyrights {
+    text-align: center;
+    padding: 30px 0;
+    background: #111;
+    margin-top: 30px;
+}
+/* ==========================================================================
+   1. LARGE DESKTOP (1200px and Up)
+   ========================================================================== */
+@media (min-width: 1200px) {
+    header .container, footer .container {
+        max-width: 1170px;
+        width: 100%;
+    }
+
+    .middle_box {
+        border-left: 1px solid rgb(185, 185, 185);
+        border-right: 1px solid rgb(185, 185, 185);
+        float: left;
+        width: 100%;
+        padding: 0px 43px;
+    }
+
+    #header.full-header #mainmenu > ul {
+        justify-content: end;
+    }
+
+    #mainmenu > ul > li {
+        flex: inherit;
+    }
+}
+
+/* Specific adjustment for Large Screens */
+@media (min-width: 1200px) and (max-width: 1270px) {
+    header .container {
+        max-width: 1100px;
+    }
+}
+
+/* ==========================================================================
+   2. DESKTOP & TABLET LANDSCAPE (992px and Up)
+   ========================================================================== */
+@media (min-width: 992px) {
+    #header {
+        z-index: 999;
+        float: left;
+        width: 100%;
+        transition: 0.5ms;
+    }
+ 
+
+    .flexmenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+  
+
+    /* Desktop Menu & Dropdowns */
+    #mainmenu ul.dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        display: block;
+        top: 100%;
+        left: 2px;
+        min-width: 285px;
+        z-index: 2147483647 !important;
+        background: rgb(255, 255, 255) !important;
+        padding: 5px;
+    }
+
+    #mainmenu ul.dropdown-menu li a {
+        color: rgb(0, 0, 0);
+        white-space: normal;
+    }
+
+    .lines-button {
+        display: none;
+    }
+
+    /* Sticky State Adjustments */
+    header#header.sticky-header > #mainmenu > ul > li > a {
+        padding: 30px 0px;
+    }
+
+    header#header.sticky-header .mainmenubar {
+        margin-top: 10px;
+    }
+}
+
+/* Specific adjustment for Small Laptops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    header#header.sticky-header .mainmenubar {
+        margin-top: 10px !important;
+    }
+
+    #top-header a {
+        letter-spacing: 0.5px;
+    }
+}
+
+/* ==========================================================================
+   3. TABLET PORTRAIT & MOBILE (Under 1199px)
+   ========================================================================== */
+@media (max-width: 1199px) {
+    div#header-wrap .container {
+        width: 100%;
+    }
+
+    nav#top-header {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    div#brand {
+        padding: 0px;
+    }
+}
+
+/* ==========================================================================
+   4. MOBILE BREAKPOINT (Under 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+    /* brand & Branding */
+    div#brand {
+        margin-bottom: 0px;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    div#brand h1 {
+        font-size: 30px;
+        color: rgb(30, 109, 165);
+        padding: 20px 0px;
+        text-align: center;
+    }
+
+    #header #brand img {
+        display: inline;
+        max-height: 71px;
+        width: auto;
+    }
+
+    /* Mobile Menu Logic */
+    .mainmenubar {
+        display: none; /* Hidden until toggled */
+        float: left;
+        width: 100%;
+        max-height: 60vh;
+        padding: 5px;
+        overflow: auto;
+    }
+
+    .mainmenu-open .mainmenubar {
+        display: block;
+        left: 0px;
+        z-index: 2147483647;
+        box-shadow: rgb(161, 161, 161) 0px 0px 8px;
+    }
+
+    #mainmenu-trigger {
+        display: block;
+        margin-top: 28px;
+    }
+
+    #mainmenu > ul > li {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    #mainmenu ul.dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        background: transparent;
+        display: block;
+        width: 100%;
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    /* Submenu Indicators (Arrows/Icons) */
+    #mainmenu li.sub-menu .submenu {
+        position: absolute;
+        right: 0px;
+        width: 30px;
+        height: 40px;
+        background: rgb(234, 170, 0);
+        line-height: 39px;
+    }
+
+    #mainmenu ul li.sub-menu.active a span {
+        transform: rotate(180deg) !important;
+    }
+
+    /* Footer Mobile Adjustments */
+    ul.fnav li a {
+        font-size: 16px;
+        padding: 7px 0px;
+        text-align: left;
+    }
+}
+
+/* ==========================================================================
+   5. PHONE BREAKPOINT (Under 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    #top-header {
+        text-align: right !important;
+    }
+
+    .contact_top {
+        display: flex;
+        justify-content: end;
+    }
+
+    .topRight .enroll {
+        display: none;
+    }
+
+    /* Footer Typography */
+    .footer h1, .footer h2, .footer h3 {
+        letter-spacing: 1px;
+    }
+
+    footer.footer h2 {
+        margin-top: 20px;
+    }
+
+    article.fotercontent {
+        padding: 0px 0px 30px;
+    }
+
+    div#DSSLanguageTranslateorWidget.clsdropdown select {
+        max-width: 126px;
+    }
+}
