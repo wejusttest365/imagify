@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Multi Shadow Generator – Free Tool | WebToolOcean</title>
+<meta name="description" content="Create multiple CSS box-shadow layers online with live preview. Adjust offsets, blur, spread, color, opacity, and copy CSS. Modern UI with collapsible layers.">
+<meta name="keywords" content="CSS shadow generator, multi shadow, box-shadow online, multiple shadow layers, WebToolOcean tools, free CSS tool">
+<link rel="canonical" href="https://webtoolocean.com/shadow-generator-multi-upgraded.html">
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f6fb;margin:0;padding:30px;}
+.container{max-width:1200px;margin:auto;}
+h1{text-align:center;margin-bottom:30px;}
+.generator{display:flex;gap:20px;flex-wrap:wrap;}
+/* LEFT PANEL */
+.controls{background:white;padding:20px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.08);flex:1;min-width:320px;max-height:80vh;overflow-y:auto;}
+#addShadow{width:100%;padding:10px;background:#3b82f6;color:white;border:none;border-radius:6px;cursor:pointer;margin-top:10px;margin-bottom:20px;font-size:16px;}
+.shadow-layer{border:1px solid #ddd;border-radius:10px;margin-bottom:15px;background:#fafafa;transition:0.3s;}
+.layer-header{display:flex;justify-content:space-between;align-items:center;padding:10px;cursor:pointer;font-weight:600;}
+.layer-header:hover{background:#e5e7eb;}
+.layer-controls{padding:10px;}
+.layer-controls label{display:block;margin-top:8px;font-size:13px;}
+.layer-controls input[type=range]{width:100%;height:6px;border-radius:6px;background:#e5e7eb;margin-top:3px;}
+.layer-controls input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:white;border:3px solid #3b82f6;cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,0.25);margin-top:-6px;}
+.layer-controls input[type=color]{width:60px;height:35px;border:none;margin-top:5px;cursor:pointer;}
+.removeLayer{background:#ef4444;border:none;color:white;padding:4px 8px;border-radius:5px;cursor:pointer;font-size:12px;margin-left:10px;}
+/* RIGHT PANEL */
+.preview-area{flex:1;min-width:320px;display:flex;flex-direction:column;gap:20px;}
+.preview{height:350px;background:white;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,0.08);}
+.box{width:160px;height:160px;background:white;border-radius:12px;}
+.code{background:#111827;color:#e5e7eb;padding:20px;border-radius:10px;font-family:monospace;position:relative;}
+.copy-btn{position:absolute;top:10px;right:10px;background:#3b82f6;border:none;padding:6px 12px;color:white;cursor:pointer;border-radius:6px;}
+@media(max-width:768px){.generator{flex-direction:column;}}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>Multi CSS Shadow Generator – Upgraded UI</h1>
+<div class="generator">
+
+<!-- LEFT PANEL -->
+<div class="controls">
+<div id="shadowLayers"></div>
+<button id="addShadow">+ Add Shadow Layer</button>
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="preview-area">
+<div class="preview">
+<div class="box" id="box"></div>
+</div>
+<div class="code">
+<button class="copy-btn">Copy</button>
+<code id="cssCode"></code>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+let layerCount=0;
+
+// Add new shadow layer
+function addLayer(){
+layerCount++;
+let layer=$(`
+<div class="shadow-layer" data-layer="${layerCount}">
+  <div class="layer-header">Shadow ${layerCount}<button class="removeLayer">Remove</button></div>
+  <div class="layer-controls">
+    <label>X Offset</label><input type="range" min="-100" max="100" value="10" class="x">
+    <label>Y Offset</label><input type="range" min="-100" max="100" value="10" class="y">
+    <label>Blur</label><input type="range" min="0" max="100" value="20" class="blur">
+    <label>Spread</label><input type="range" min="-50" max="50" value="0" class="spread">
+    <label>Color</label><input type="color" value="#000000" class="color">
+    <label>Opacity</label><input type="range" min="0" max="1" step="0.01" value="0.3" class="opacity">
+  </div>
+</div>`);
+$("#shadowLayers").append(layer);
+updateShadow();
+}
+
+// Toggle collapse layer
+$(document).on("click",".layer-header",function(e){
+if($(e.target).hasClass("removeLayer")) return;
+$(this).siblings(".layer-controls").slideToggle();
+});
+
+// Remove layer
+$(document).on("click",".removeLayer",function(){
+$(this).closest(".shadow-layer").remove();
+updateShadow();
+});
+
+// Update shadow on input change
+$(document).on("input change",".shadow-layer input",function(){updateShadow();});
+
+// Compute and apply box-shadow
+function updateShadow(){
+let shadows=[];
+$(".shadow-layer").each(function(){
+let x=$(this).find(".x").val(),
+y=$(this).find(".y").val(),
+blur=$(this).find(".blur").val(),
+spread=$(this).find(".spread").val(),
+color=$(this).find(".color").val(),
+opacity=$(this).find(".opacity").val();
+let r=parseInt(color.substr(1,2),16),
+g=parseInt(color.substr(3,2),16),
+b=parseInt(color.substr(5,2),16);
+let rgba=`rgba(${r},${g},${b},${opacity})`;
+shadows.push(`${x}px ${y}px ${blur}px ${spread}px ${rgba}`);
+});
+let finalShadow=shadows.join(",");
+$("#box").css("box-shadow",finalShadow);
+$("#cssCode").text(`box-shadow: ${finalShadow};`);
+}
+
+// Copy CSS button
+$(".copy-btn").click(function(){
+navigator.clipboard.writeText($("#cssCode").text());
+$(this).text("Copied!");
+setTimeout(()=>{$(this).text("Copy");},1500);
+});
+
+// Add shadow layer button
+$("#addShadow").click(addLayer);
+
+// Start with one shadow layer
+addLayer();
+</script>
+</body>
+</html>
