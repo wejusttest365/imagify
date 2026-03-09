@@ -2,136 +2,529 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS Multi Shadow Generator – Free Tool | WebToolOcean</title>
-<meta name="description" content="Create multiple CSS box-shadow layers online with live preview. Adjust offsets, blur, spread, color, opacity, and copy CSS. Modern UI with collapsible layers.">
-<meta name="keywords" content="CSS shadow generator, multi shadow, box-shadow online, multiple shadow layers, WebToolOcean tools, free CSS tool">
-<link rel="canonical" href="https://webtoolocean.com/shadow-generator-multi-upgraded.html">
-<link rel="icon" type="image/png" href="/favicon.png">
-
+<title>CSS Clip Path Generator</title>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <style>
-body{font-family:Arial,sans-serif;background:#f4f6fb;margin:0;padding:30px;}
-.container{max-width:1200px;margin:auto;}
-h1{text-align:center;margin-bottom:30px;}
-.generator{display:flex;gap:20px;flex-wrap:wrap;}
-/* LEFT PANEL */
-.controls{background:white;padding:20px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.08);flex:1;min-width:320px;max-height:80vh;overflow-y:auto;}
-#addShadow{width:100%;padding:10px;background:#3b82f6;color:white;border:none;border-radius:6px;cursor:pointer;margin-top:10px;margin-bottom:20px;font-size:16px;}
-.shadow-layer{border:1px solid #ddd;border-radius:10px;margin-bottom:15px;background:#fafafa;transition:0.3s;}
-.layer-header{display:flex;justify-content:space-between;align-items:center;padding:10px;cursor:pointer;font-weight:600;}
-.layer-header:hover{background:#e5e7eb;}
-.layer-controls{padding:10px;}
-.layer-controls label{display:block;margin-top:8px;font-size:13px;}
-.layer-controls input[type=range]{width:100%;height:6px;border-radius:6px;background:#e5e7eb;margin-top:3px;}
-.layer-controls input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:white;border:3px solid #3b82f6;cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,0.25);margin-top:-6px;}
-.layer-controls input[type=color]{width:60px;height:35px;border:none;margin-top:5px;cursor:pointer;}
-.removeLayer{background:#ef4444;border:none;color:white;padding:4px 8px;border-radius:5px;cursor:pointer;font-size:12px;margin-left:10px;}
-/* RIGHT PANEL */
-.preview-area{flex:1;min-width:320px;display:flex;flex-direction:column;gap:20px;}
-.preview{height:350px;background:white;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,0.08);}
-.box{width:160px;height:160px;background:white;border-radius:12px;}
-.code{background:#111827;color:#e5e7eb;padding:20px;border-radius:10px;font-family:monospace;position:relative;}
-.copy-btn{position:absolute;top:10px;right:10px;background:#3b82f6;border:none;padding:6px 12px;color:white;cursor:pointer;border-radius:6px;}
-@media(max-width:768px){.generator{flex-direction:column;}}
+
+body{
+margin:0;
+font-family:system-ui;
+background:#eef2f7;
+}
+
+/* APP LAYOUT */
+
+.app{
+display:flex;
+height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:260px;
+background:white;
+border-right:1px solid #e5e7eb;
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.sidebar h3{
+margin:0;
+font-size:16px;
+}
+
+/* SHAPE BUTTONS */
+
+.shape-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+}
+
+.shape-grid button{
+padding:10px;
+border:none;
+border-radius:8px;
+background:#3b82f6;
+color:white;
+cursor:pointer;
+}
+
+.shape-grid button:hover{
+background:#2563eb;
+}
+
+/* UPLOAD */
+
+.upload-box{
+position:relative;
+border:2px dashed #d1d5db;
+border-radius:10px;
+padding:16px;
+cursor:pointer;
+background:#f9fafb;
+}
+
+.upload-box:hover{
+border-color:#3b82f6;
+background:#eff6ff;
+}
+
+.upload-box input{
+position:absolute;
+inset:0;
+opacity:0;
+cursor:pointer;
+}
+
+.upload-ui{
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+.upload-icon{
+font-size:22px;
+}
+
+/* CANVAS */
+
+.canvas{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.preview{
+position:relative;
+overflow:hidden;
+background:white;
+
+/* GRID */
+background-image:
+linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+max-width:700px;
+max-height:500px;
+display:flex;
+align-items:center;
+justify-content:center;
+    min-width: 600px;
+    min-height: 400px;
+}
+
+.preview img{
+max-width:100%;
+max-height:100%;
+}
+
+/* POINT */
+
+.point{
+position:absolute;
+width:12px;
+height:12px;
+background:#ef4444;
+border:2px solid white;
+border-radius:50%;
+transform:translate(-50%,-50%);
+cursor:pointer;
+}
+
+/* OUTPUT */
+
+.output{
+margin-top:20px;
+background:#111827;
+color:white;
+padding:14px;
+border-radius:8px;
+width:600px;
+max-width:100%;
+font-family:monospace;
+position:relative;
+}
+
+.copy{
+position:absolute;
+right:10px;
+top:10px;
+border:none;
+background:#3b82f6;
+color:white;
+padding:6px 10px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.tools{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+}
+
+.tools button{
+padding:9px;
+border:none;
+background:#10b981;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+}
+
+.tools button:hover{
+background:#059669;
+}
+
 </style>
 </head>
 
 <body>
-<div class="container">
-<h1>Multi CSS Shadow Generator – Upgraded UI</h1>
-<div class="generator">
 
-<!-- LEFT PANEL -->
-<div class="controls">
-<div id="shadowLayers"></div>
-<button id="addShadow">+ Add Shadow Layer</button>
+<div class="app">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h3>Shapes</h3>
+
+<div class="shape-grid">
+<button data-shape="circle">Circle</button>
+<button data-shape="ellipse">Ellipse</button>
+<button data-shape="triangle">Triangle</button>
+<button data-shape="hexagon">Hexagon</button>
+<button data-shape="star">Star</button>
+<button data-shape="heart">Heart</button>
+<button data-shape="diamond">Diamond</button>
+<button data-shape="pentagon">Pentagon</button>
+<button data-shape="octagon">Octagon</button>
+<button data-shape="arrow">Arrow</button>
+<button data-shape="message">Message</button>
+<button class="btn btn-block" style="width:100%" data-shape="polygon">Custom</button>
 </div>
 
-<!-- RIGHT PANEL -->
-<div class="preview-area">
-<div class="preview">
-<div class="box" id="box"></div>
+<h3>Image</h3>
+
+<div class="upload-box">
+<input type="file" id="upload">
+<div class="upload-ui">
+<div class="upload-icon">📁</div>
+<div>
+<strong>Upload Image</strong><br>
+<span style="font-size:12px;color:#6b7280">Click or drag</span>
 </div>
-<div class="code">
-<button class="copy-btn">Copy</button>
-<code id="cssCode"></code>
 </div>
 </div>
 
+<h3>Edit</h3>
+
+<div class="tools">
+<button id="undo">Undo</button>
+<button id="redo">Redo</button>
+<button id="zoomIn">Zoom +</button>
+<button id="zoomOut">Zoom -</button>
+<button id="clear">Clear</button>
 </div>
+
 </div>
+
+
+<!-- CANVAS -->
+
+<div class="canvas">
+
+<div class="preview" id="preview">
+<img id="img" src="https://via.placeholder.com/600x400">
+</div>
+
+<div class="output">
+<button class="copy">Copy</button>
+<span id="css">clip-path: circle(50% at 50% 50%)</span>
+</div>
+
+</div>
+
+</div>
+
 
 <script>
-let layerCount=0;
 
-// Add new shadow layer
-function addLayer(){
-layerCount++;
-let layer=$(`
-<div class="shadow-layer" data-layer="${layerCount}">
-  <div class="layer-header">Shadow ${layerCount}<button class="removeLayer">Remove</button></div>
-  <div class="layer-controls">
-    <label>X Offset</label><input type="range" min="-100" max="100" value="10" class="x">
-    <label>Y Offset</label><input type="range" min="-100" max="100" value="10" class="y">
-    <label>Blur</label><input type="range" min="0" max="100" value="20" class="blur">
-    <label>Spread</label><input type="range" min="-50" max="50" value="0" class="spread">
-    <label>Color</label><input type="color" value="#000000" class="color">
-    <label>Opacity</label><input type="range" min="0" max="1" step="0.01" value="0.3" class="opacity">
-  </div>
-</div>`);
-$("#shadowLayers").append(layer);
-updateShadow();
+let shape="circle"
+let points=[]
+let dragging=null
+
+let history=[]
+let redoStack=[]
+
+const img=$("#img")
+const preview=$("#preview")
+
+const grid=40
+const snap=true
+
+function snapValue(v){
+return snap ? Math.round(v/grid)*grid : v
 }
 
-// Toggle collapse layer
-$(document).on("click",".layer-header",function(e){
-if($(e.target).hasClass("removeLayer")) return;
-$(this).siblings(".layer-controls").slideToggle();
-});
-
-// Remove layer
-$(document).on("click",".removeLayer",function(){
-$(this).closest(".shadow-layer").remove();
-updateShadow();
-});
-
-// Update shadow on input change
-$(document).on("input change",".shadow-layer input",function(){updateShadow();});
-
-// Compute and apply box-shadow
-function updateShadow(){
-let shadows=[];
-$(".shadow-layer").each(function(){
-let x=$(this).find(".x").val(),
-y=$(this).find(".y").val(),
-blur=$(this).find(".blur").val(),
-spread=$(this).find(".spread").val(),
-color=$(this).find(".color").val(),
-opacity=$(this).find(".opacity").val();
-let r=parseInt(color.substr(1,2),16),
-g=parseInt(color.substr(3,2),16),
-b=parseInt(color.substr(5,2),16);
-let rgba=`rgba(${r},${g},${b},${opacity})`;
-shadows.push(`${x}px ${y}px ${blur}px ${spread}px ${rgba}`);
-});
-let finalShadow=shadows.join(",");
-$("#box").css("box-shadow",finalShadow);
-$("#cssCode").text(`box-shadow: ${finalShadow};`);
+function saveHistory(){
+history.push(JSON.stringify(points))
+if(history.length>50) history.shift()
 }
 
-// Copy CSS button
-$(".copy-btn").click(function(){
-navigator.clipboard.writeText($("#cssCode").text());
-$(this).text("Copied!");
-setTimeout(()=>{$(this).text("Copy");},1500);
+function undo(){
+if(history.length===0) return
+redoStack.push(JSON.stringify(points))
+points=JSON.parse(history.pop())
+renderPoints()
+}
+
+function redo(){
+if(redoStack.length===0) return
+history.push(JSON.stringify(points))
+points=JSON.parse(redoStack.pop())
+renderPoints()
+}
+
+$("#undo").click(undo)
+$("#redo").click(redo)
+
+/* CSS */
+
+function updateCSS(){
+
+const w=img.width()
+const h=img.height()
+
+if(shape==="polygon"){
+
+const poly=points.map(p=>`${(p.x/w)*100}% ${(p.y/h)*100}%`).join(",")
+
+img.css("clip-path",`polygon(${poly})`)
+
+$("#css").text(`clip-path: polygon(${poly});`)
+
+}else{
+
+let clip="circle(50% at 50% 50%)"
+
+if(shape==="ellipse") clip="ellipse(50% 50% at 50% 50%)"
+if(shape==="triangle") clip="polygon(50% 0%,0% 100%,100% 100%)"
+if(shape==="hexagon") clip="polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"
+if(shape==="star") clip="polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"
+
+img.css("clip-path",clip)
+
+$("#css").text(`clip-path: ${clip};`)
+
+}
+if(shape==="heart")
+clip="polygon(50% 90%, 10% 50%, 10% 25%, 30% 10%, 50% 25%, 70% 10%, 90% 25%, 90% 50%)";
+
+if(shape==="diamond")
+clip="polygon(50% 0%,100% 50%,50% 100%,0% 50%)";
+
+if(shape==="pentagon")
+clip="polygon(50% 0%, 95% 35%, 80% 100%, 20% 100%, 5% 35%)";
+
+if(shape==="octagon")
+clip="polygon(30% 0%,70% 0%,100% 30%,100% 70%,70% 100%,30% 100%,0% 70%,0% 30%)";
+
+if(shape==="arrow")
+clip="polygon(0% 40%,60% 40%,60% 20%,100% 50%,60% 80%,60% 60%,0% 60%)";
+
+if(shape==="message")
+clip="polygon(0% 0%,100% 0%,100% 80%,60% 80%,50% 100%,40% 80%,0% 80%)";
+}
+
+/* RENDER */
+
+function renderPoints(){
+
+$(".point").remove()
+
+if(shape!=="polygon") return
+
+points.forEach((p,i)=>{
+
+let el=$("<div class='point'></div>")
+
+el.css({
+left:p.x,
+top:p.y
+})
+
+el.attr("data-i",i)
+
+preview.append(el)
+
+})
+
+updateCSS()
+
+}
+
+/* SHAPE */
+
+function setShape(s){
+
+shape=s
+points=[]
+
+$(".point").remove()
+
+if(shape==="polygon"){
+
+let w=img.width()
+let h=img.height()
+
+points=[
+{x:w/2,y:40},
+{x:40,y:h-40},
+{x:w-40,y:h-40}
+]
+
+}
+
+renderPoints()
+updateCSS()
+
+}
+
+$(".shape-grid button").click(function(){
+setShape($(this).data("shape"))
+})
+
+/* DRAG */
+
+$(document).on("mousedown",".point",function(){
+dragging=$(this).data("i")
+saveHistory()
+})
+
+$(document).on("mouseup",()=>dragging=null)
+
+$(document).on("mousemove",function(e){
+
+if(dragging===null) return
+
+let offset=preview.offset()
+
+points[dragging]={
+x:snapValue(e.pageX-offset.left),
+y:snapValue(e.pageY-offset.top)
+}
+
+renderPoints()
+
+})
+
+/* ADD POINT */
+
+preview.click(function(e){
+
+if(shape!=="polygon") return
+
+if($(e.target).hasClass("point")) return
+
+let offset=preview.offset()
+
+saveHistory()
+
+points.push({
+x:snapValue(e.pageX-offset.left),
+y:snapValue(e.pageY-offset.top)
+})
+
+renderPoints()
+
+})
+
+/* REMOVE */
+
+$(document).on("contextmenu",".point",function(e){
+
+e.preventDefault()
+
+saveHistory()
+
+points.splice($(this).data("i"),1)
+
+renderPoints()
+
+})
+
+/* IMAGE */
+
+$("#upload").change(function(e){
+
+let url=URL.createObjectURL(e.target.files[0])
+
+img.attr("src",url)
+
+})
+
+/* COPY */
+
+$(".copy").click(()=>{
+navigator.clipboard.writeText($("#css").text())
+})
+
+setShape("circle")
+
+
+let zoom = 1;
+
+function updateZoom(){
+img.css("transform","scale("+zoom+")");
+}
+
+$("#zoomIn").click(function(){
+
+zoom += 0.1;
+
+if(zoom > 3) zoom = 3;
+
+updateZoom();
+
 });
 
-// Add shadow layer button
-$("#addShadow").click(addLayer);
+$("#zoomOut").click(function(){
 
-// Start with one shadow layer
-addLayer();
+zoom -= 0.1;
+
+if(zoom < 0.5) zoom = 0.5;
+
+updateZoom();
+
+});
+$("#clear").click(function(){
+
+points = [];
+
+shape = "circle";
+
+img.css("clip-path","none");
+
+$(".point").remove();
+
+$("#css").text("clip-path: none;");
+
+});
 </script>
+
 </body>
 </html>
