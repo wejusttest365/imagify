@@ -1,0 +1,234 @@
+ :root {
+   --primary: #3498db;
+   --danger: #e74c3c;
+   --ok: #2ecc71;
+   --muted: #777;
+ }
+
+  
+
+/* Image COnversion CSS started*/
+.image-conversion h1 {
+   margin: 0 0 18px;
+   text-align: center;
+   /* font-size: 22px; */
+}
+
+.image-conversion .sub-tabs {
+   display: flex;
+   gap: 8px;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-bottom: 14px;
+}
+
+.image-conversion .sub-tab {
+   padding: 8px 14px;
+   border-radius: 8px;
+   border: none;
+   background: #eee;
+   cursor: pointer;
+   transition: all .15s;
+}
+
+.image-conversion .sub-tab.active {
+   background: var(--primary);
+   color: #fff;
+}
+
+.image-conversion .drop-area {
+   border: 2px dashed var(--primary);
+   padding: 50px;
+   border-radius: 10px;
+   text-align: center;
+   transition: .15s;
+   background: #fff;
+}
+
+.image-conversion .drop-area.dragover {
+   background: #eaf6ff;
+   border-color: #1f78c8;
+}
+
+.image-conversion .drop-area button {
+   background: var(--primary);
+   color: #fff;
+   border: none;
+   padding: 8px 12px;
+   border-radius: 6px;
+   cursor: pointer;
+}
+
+.image-conversion ul {
+   list-style: none;
+   padding: 0;
+   margin:  0;
+}
+
+.image-conversion .file-item {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   padding: 10px;
+   border-radius: 8px;
+   border: 1px solid #eef2f6;
+   margin-bottom: 8px;
+   justify-content: space-between;
+}
+
+.image-conversion .left {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   min-width: 0;
+}
+
+.image-conversion .file-name {
+   font-size: 14px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 420px;
+}
+
+.image-conversion .invalid {
+   color: var(--danger);
+   font-weight: 600;
+   margin-left: 6px;
+}
+
+.image-conversion .btn {
+   padding: 8px 12px;
+   border-radius: 7px;
+   border: none;
+   cursor: pointer;
+}
+
+.image-conversion .btn.remove {
+   background: var(--danger);
+   color: #fff;
+}
+
+.image-conversion .controls {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   margin-top: 12px;
+   flex-wrap: wrap;
+}
+
+.image-conversion #convert-btn {
+   background: var(--primary);
+   color: #fff;
+   border: none;
+   padding: 10px 14px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+.image-conversion #convert-btn[disabled] {
+   opacity: .6;
+   cursor: not-allowed;
+}
+
+.image-conversion #download-zip {
+   background: var(--ok);
+   color: #fff;
+   border: none;
+   padding: 10px 14px;
+   border-radius: 8px;
+   display: none;
+}
+
+.image-conversion #spinner {
+   margin-left: 8px;
+   display: none;
+}
+
+.image-conversion #counter-wrap {
+   text-align: center;
+   margin-top: 18px;
+   color: var(--muted);
+   font-weight: 600;
+}
+
+.image-conversion .hint {
+   font-size: 13px;
+   color: var(--muted);
+   text-align: center;
+   margin-top: 8px;
+}
+
+/* Modal */
+.image-conversion .modal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, .5);
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+}
+
+.image-conversion .modal-content {
+   background: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   max-width: 550px;
+   width: 90%;
+   text-align: center;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-conversion .modal h2 {
+   margin-top: 0;
+   color: var(--primary);
+}
+
+.image-conversion .modal p {
+   margin: 10px 0;
+   color: #333;
+}
+
+.image-conversion .modal-buttons {
+   margin-top: 16px;
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+}
+
+.image-conversion .modal-buttons button {
+   padding: 10px 20px;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
+}
+
+.image-conversion .download-btn {
+   background: var(--ok);
+   color: #fff;
+   font-size: 15px;
+   font-weight: 600;
+}
+
+.image-conversion .close-btn {
+   background: var(--danger);
+   color: #fff;
+}
+
+.image-conversion div#downloadModal p {
+   font-size: 25px;
+}
+
+.image-conversion .text-muted {
+   --bs-text-opacity: 1;
+   color: var(--bs-primary-color) !important;
+}
+
+
+/* Image conversion css ended*/
