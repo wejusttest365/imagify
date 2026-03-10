@@ -192,7 +192,7 @@ to{transform:rotate(360deg);}
 <header id="header" class="full-header">
   <div id="header-wrap">
     <div class="container">
-      <button title="Click to open menu" id="togglemeu" class="lines-button x"> <span class="lines"></span> <span class="menutext">menu</span> </button>
+      <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu">
         <div id="brand" class=""> <a href="index.html"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a> </div>
         <div class="mainmenubar">
@@ -652,5 +652,14 @@ if(image) generateIcons()
 </script>
  
 <!-- InstanceEndEditable -->
+<script>
+		const btn = document.getElementById("togglemeu");
+const menu = document.querySelector(".mainmenubar");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+	</script>	
 </body>
 <!-- InstanceEnd --></html>
