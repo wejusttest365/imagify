@@ -265,6 +265,32 @@ cursor:pointer;
     background: red;
     color: #fff;
 }
+	 .preset-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:6px;
+margin-top:8px;
+}
+
+.preset{
+height:40px;
+border-radius:6px;
+cursor:pointer;
+border:1px solid #eee;
+}
+
+.palette-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:5px;
+margin-top:8px;
+}
+
+.palette{
+height:35px;
+cursor:pointer;
+border-radius:4px;
+}
 </style> 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
@@ -313,6 +339,7 @@ cursor:pointer;
                   <li><a class="dropdown-item" href="css-shadow-generator.html">Box Shadow Generator</a></li>
                   <li><a class="dropdown-item" href="css-shadow-generator-multi.html">Advance Multi Box Shadow Generator</a></li>
                   <li><a class="dropdown-item" href="css-clip-image.html">Clip Image CSS</a></li>
+                  <li><a class="dropdown-item" href="gradient-generator.html">Gradient Generator</a></li>
                 </ul>
               </li> 
 				 <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Other Tools <span class="caret"></span> </a>
@@ -468,6 +495,28 @@ Upload or change image <span class="fa fa-image"></span>
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>  
   <script src="js/bootstrap.bundle.min.js"></script>
     <script>
+/* Gradient presets */
+
+const presets=[
+["#ff9a9e","#fad0c4"],
+["#a18cd1","#fbc2eb"],
+["#fad0c4","#ffd1ff"],
+["#ffecd2","#fcb69f"],
+["#f6d365","#fda085"],
+["#84fab0","#8fd3f4"],
+["#43cea2","#185a9d"],
+["#fa709a","#fee140"]
+]
+
+/* Color palettes */
+
+const palettes=[
+["#ff6a00","#ee0979","#ff512f","#dd2476","#da4453"],
+["#56ab2f","#a8e063","#38ef7d","#11998e","#0575e6"],
+["#fc466b","#3f5efb","#00c6ff","#0072ff","#6a11cb"],
+["#f7971e","#ffd200","#f953c6","#b91d73","#ff4e50"]
+]
+
 
 let shape="circle"
 let points=[]
@@ -779,7 +828,61 @@ link.click()
 })
 
 setShape("circle")
+function renderPresets(){
 
+presets.forEach(p=>{
+
+let gradient=`linear-gradient(45deg,${p.join(",")})`
+
+$("#presets").append(
+`<div class="preset" style="background:${gradient}" data-colors='${JSON.stringify(p)}'></div>`
+)
+
+})
+
+$(".preset").click(function(){
+
+let colors=JSON.parse($(this).attr("data-colors"))
+
+stops=[
+{color:colors[0],pos:0},
+{color:colors[1],pos:100}
+]
+
+renderStops()
+
+})
+
+}
+
+function renderPalettes(){
+
+palettes.forEach(p=>{
+
+let palette=$("<div class='palette'></div>")
+
+palette.css("background",`linear-gradient(90deg,${p.join(",")})`)
+
+palette.attr("data-colors",JSON.stringify(p))
+
+$("#palettes").append(palette)
+
+})
+
+$(".palette").click(function(){
+
+let colors=JSON.parse($(this).attr("data-colors"))
+
+stops=colors.map((c,i)=>({
+color:c,
+pos:Math.round((i/(colors.length-1))*100)
+}))
+
+renderStops()
+
+})
+
+}
 </script> 
    
 <!-- InstanceEndEditable -->
