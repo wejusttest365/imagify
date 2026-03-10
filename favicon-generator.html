@@ -6,91 +6,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<!-- ===================================================== -->
-<!-- ===================================================== -->
-<!-- PAGE TITLE --> 
-
-<title>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO Online | WebToolOcean</title>
-
-<meta name="description" content="Free SVG Converter online. Convert SVG to PNG, JPG, WEBP, or ICO instantly. Batch SVG conversion, transparent background option, SVG optimizer, and resize tool for developers and designers.">
-
-<meta name="keywords" content="svg converter, svg to png, svg to ico, svg to jpg, svg to webp, batch svg converter, svg optimizer, convert svg online, favicon converter, svg image converter">
-
+<title>Favicon Generator – Create favicon.ico & Website Icons Online | WebToolOcean</title>
+<meta name="description" content="Free Favicon Generator to create favicon.ico, Apple touch icons, Android icons and manifest.json instantly. Upload your logo and download a full favicon pack.">
+<meta name="keywords" content="favicon generator, favicon.ico generator, favicon maker, create favicon online, website favicon generator, favicon png generator">
 <meta name="robots" content="index, follow">
-
+<link rel="canonical" href="https://webtoolocean.com/favicon-generator.html">
 <meta name="author" content="WebToolOcean">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph -->
 
-<link rel="canonical" href="https://webtoolocean.com/svg-converter.html">
-
-
-<!-- Open Graph (Facebook / LinkedIn) -->
-
-<meta property="og:title" content="SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO">
-<meta property="og:description" content="Convert SVG files to PNG, JPG, WEBP, or ICO online. Free batch SVG converter with resize, optimizer, and transparent background support.">
+<meta property="og:title" content="Favicon Generator – Create favicon.ico Online">
+<meta property="og:description" content="Generate favicon.ico, Apple icons and Android icons instantly. Free online favicon generator.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://webtoolocean.com/svg-converter.html">
-<meta property="og:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
-<meta property="og:site_name" content="WebToolOcean">
+<meta property="og:url" content="https://webtoolocean.com/favicon-generator.html">
+<meta property="og:image" content="https://webtoolocean.com/images/favicon-generator-preview.png">
 
-
-<!-- Twitter SEO -->
+<!-- Twitter -->
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SVG Converter – Convert SVG to PNG JPG WEBP ICO">
-<meta name="twitter:description" content="Free online SVG converter tool. Convert SVG to PNG, JPG, WEBP, ICO with batch conversion and optimizer.">
-<meta name="twitter:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
+<meta name="twitter:title" content="Favicon Generator – Create favicon.ico Online">
+<meta name="twitter:description" content="Generate favicon.ico and all favicon sizes instantly.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/favicon-generator-preview.png">
 
-
-<!-- Structured Data -->
+<!-- Schema --> 
 
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "WebApplication",
- "name": "SVG Converter",
- "url": "https://webtoolocean.com/svg-converter.html",
+ "name": "Favicon Generator",
+ "url": "https://webtoolocean.com/favicon-generator.html",
  "applicationCategory": "DeveloperApplication",
  "operatingSystem": "All",
- "description": "Free online SVG converter tool to convert SVG files to PNG, JPG, WEBP, or ICO with batch conversion, resize, and optimization.",
+ "description": "Free online favicon generator that creates favicon.ico, Apple icons and Android icons instantly.",
  "offers": {
    "@type": "Offer",
    "price": "0",
    "priceCurrency": "USD"
  }
 }
-</script>
-<!-- ===================================================== -->
-	
-<!--CSS for the website-->
- 
-  <!-- Dependencies -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/font-convert.css" rel="stylesheet">
-  
+</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <style>
- 
-
-.generator{
-display:grid;
-grid-template-columns:350px 1fr;
-gap:30px;
-}
 
 .controls{
 background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.preview-area{
-background:white;
-padding:25px;
-border-radius:12px;
+padding:30px;
+border-radius:10px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 text-align:center;
 }
@@ -98,75 +60,114 @@ text-align:center;
 .dropzone{
 border:2px dashed #cbd5e1;
 padding:40px;
-border-radius:10px;
-text-align:center;
 cursor:pointer;
-transition:.3s;
+border-radius:8px;
+margin-bottom:20px;
 }
 
-.dropzone:hover{
-border-color:#6366f1;
-background:#f8f9ff;
+.tool-options{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:20px;
 }
 
-.control{
+.preview-row{
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
 margin-top:15px;
 }
 
-.control label{
-display:block;
-font-size:14px;
-margin-bottom:5px;
+.preview-box{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.06);
+text-align:center;
 }
 
-.control input,
-.control select{
-width:100%;
-padding:8px;
-border:1px solid #ddd;
+.preview-box img{
+width:32px;
+height:32px;
+}
+
+.codebox{
+background:#111;
+color:#00ff9c;
+padding:18px;
+border-radius:8px;
+position:relative;
+overflow:auto;
+}
+
+.copybtn{
+position:absolute;
+right:10px;
+top:10px;
+background:#6366f1;
+border:none;
+color:white;
+padding:5px 10px;
 border-radius:6px;
-}
-
-.preview img{
-max-width:100%;
-margin-top:20px;
+cursor:pointer;
+width:100px;
 }
 
 button{
-margin-top:20px;
-padding:12px 18px;
-border:none;
 background:#6366f1;
 color:white;
+border:none;
+padding:12px 20px;
 border-radius:8px;
 cursor:pointer;
-font-size:15px;
-width:100%;
 }
 
-button:hover{
-background:#4f46e5;
+button:disabled{
+background:#9ca3af;
+cursor:not-allowed;
 }
 
-.file-list{
-margin-top:15px;
-font-size:13px;
-color:#666;
-}
-.control.checkboxcontrol label {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 8px;
+.toast{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#111827;
+color:white;
+padding:14px 18px;
+border-radius:8px;
+display:none;
+align-items:center;
+gap:10px;
 }
 
- 
+.spinner{
+width:18px;
+height:18px;
+border:3px solid rgba(255,255,255,.3);
+border-top:3px solid white;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
 
-.control.checkboxcontrol label input {
-    width: auto;
+@keyframes spin{
+to{transform:rotate(360deg);}
+}
+.favicon-preview {
+    padding: 10px;
+    text-align: center;
 }
 </style>
-	  
+
+<!--CSS for the website--> 
+
+<!-- Dependencies -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/font-convert.css" rel="stylesheet">
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -237,141 +238,126 @@ color:#666;
     </div>
   </div>
 </header>
-<!-- InstanceBeginEditable name="center" -->
- 
-  <!-- Start dynamic content -->
- <!-- <section id="testimonials">
+<!-- InstanceBeginEditable name="center" --> 
+
+<!-- Start dynamic content --> 
+<!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>-->
-  <!-- End dynamic content -->
-  <div class="clearfix"></div>
-  <!-- End dynamic content --> 
-  
-  <!-- Sevices section -->
-  <section id="content">
-   
-   <section class="py-5">
-      <div class="container">
+  </section>--> 
+<!-- End dynamic content -->
+<div class="clearfix"></div>
+<!-- End dynamic content --> 
 
-<h1>SVG Converter</h1>
+<!-- Sevices section -->
+ <section id="content">
 
-<div class="generator">
+<section class="py-5">
+<div class="container">
 
-<!-- Controls -->
+<h1>Favicon Generator</h1>
 
 <div class="controls">
 
 <div class="dropzone" id="dropzone">
-Drop SVG File Here<br>or Click to Upload
-<input type="file" id="fileInput" accept=".svg" multiple hidden>
+Upload Logo (PNG / JPG / SVG)
+<input type="file" id="fileInput" hidden accept="image/*,.svg">
 </div>
 
-<div class="file-list" id="fileList"></div>
+<div class="tool-options">
 
-<div class="control">
-<label>Width</label>
-<input type="number" id="width">
-</div>
+<label>Padding</label>
+<input type="range" id="paddingRange" min="0" max="30" value="10">
 
-<div class="control">
-<label>Height</label>
-<input type="number" id="height">
-</div>
-
-<div class="control checkboxcontrol">
-<label>
-<input type="checkbox" id="lockRatio" checked>
-Lock Aspect Ratio
-</label>
-</div>
-
-<div class="control">
-<label>Export Format</label>
-<select id="format">
-<option value="png">PNG</option>
-<option value="jpeg">JPG</option>
-<option value="webp">WEBP</option>
-<option value="ico">ICO</option>
+<label>Background</label>
+<select id="bgColor">
+<option value="transparent">Transparent</option>
+<option value="#ffffff">White</option>
+<option value="#000000">Black</option>
+<option value="#f1f5f9">Light Gray</option>
 </select>
+
 </div>
 
-<div class="control checkboxcontrol">
-<label>
-<input type="checkbox" id="transparent" checked>
-Transparent Background
-</label>
-</div>
-
-<button id="downloadBtn">Download File</button>
+<button id="downloadZip" disabled>
+Download Favicon Pack
+</button>
 
 </div>
 
 
-<!-- Preview -->
-
-<div class="preview-area">
+<div class="favicon-preview" id="faviconPreview" style="display:none">
 
 <h3>Preview</h3>
 
-<div class="preview">
-<img id="previewImg">
+<div class="preview-row">
+
+<div class="preview-box">
+<p>Browser Tab</p>
+<img id="tabPreview">
+</div>
+
+<div class="preview-box">
+<p>Bookmark</p>
+<img id="bookmarkPreview">
+</div>
+
+<div class="preview-box">
+<p>Mobile</p>
+<img id="mobilePreview">
 </div>
 
 </div>
 
 </div>
 
+
+<div class="preview" id="preview" style="display:none">
+
+<h3>HTML Code</h3>
+
+<div class="codebox">
+<button class="copybtn" onclick="copyCode('htmlCode')">Copy</button>
+<pre id="htmlCode"></pre>
 </div>
-  </section> 
-	  <section class="py-4">
+
+<h3 style="margin-top:25px;">manifest.json</h3>
+
+<div class="codebox">
+<button class="copybtn" onclick="copyCode('manifestCode')">Copy</button>
+<pre id="manifestCode"></pre>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="toast" id="toast">
+<div class="spinner"></div>
+<span id="toastText">Processing...</span>
+</div>
+
+</section>
+
+
+<section class="seo-content bg-light py-5">
 <div class="container">
 
-<h1>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO</h1>
+<h1>Favicon Generator – Create favicon.ico & App Icons Online</h1>
 
 <p>
-WebToolOcean SVG Converter lets you easily convert SVG files into PNG, JPG, WEBP, or ICO formats directly in your browser.
-Upload one or multiple SVG files, resize images, maintain aspect ratio, enable transparent background, and optimize SVG code.
-This free online tool is designed for web designers, developers, and digital creators who need fast and reliable SVG conversions.
+WebToolOcean’s <strong>Favicon Generator</strong> lets you convert any image (PNG, JPG, SVG)
+into a complete set of favicon files required for modern websites and applications.
 </p>
-
-<h2>Features of This SVG Converter</h2>
-
-<ul>
-<li>Convert SVG to PNG, JPG, WEBP, and ICO</li>
-<li>Batch SVG conversion support</li>
-<li>Resize images with locked aspect ratio</li>
-<li>Transparent background option</li>
-<li>Built-in SVG optimizer to reduce file size</li>
-<li>Drag and drop SVG upload</li>
-<li>Instant browser-based conversion</li>
-</ul>
-
-<h2>Why Use an SVG Converter?</h2>
-
-<p>
-SVG images are scalable vector graphics that maintain high quality at any size. However, many platforms require raster formats like PNG or JPG.
-This tool helps convert SVG graphics into widely supported formats without losing visual quality.
-</p>
-
-<h2>Who Can Use This Tool?</h2>
-
-<ul>
-<li>Web designers creating website graphics</li>
-<li>Developers generating favicon or icon images</li>
-<li>UI/UX designers exporting vector illustrations</li>
-<li>Content creators preparing images for the web</li>
-</ul>
 
 </div>
 </section>
-	</section>
-     
- 
 
-  <!-- InstanceEndEditable -->
+</section>
+<!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer class="footer light">
   <div class="clearfix"></div>
@@ -434,173 +420,237 @@ This tool helps convert SVG graphics into widely supported formats without losin
 </footer>
 <div class="clearfix"></div>
 
-<!-- InstanceBeginEditable name="EditRegion5" -->
-     
-  <script src="js/bootstrap.bundle.min.js"></script>
-   <script>
+<!-- InstanceBeginEditable name="EditRegion5" --> 
+<script src="js/bootstrap.bundle.min.js"></script> 
+    
+<script>
 
-let svgFiles=[]
-let svgTexts=[]
-let aspectRatio=null
+const sizes=[16,32,48,64,96,128,144,180,192,256,384,512]
 
-const input=document.getElementById("fileInput")
+let image=null
+let generatedIcons=[]
+
+const paddingRange=document.getElementById("paddingRange")
+const bgColor=document.getElementById("bgColor")
+
 const drop=document.getElementById("dropzone")
-const preview=document.getElementById("previewImg")
-const fileList=document.getElementById("fileList")
+const input=document.getElementById("fileInput")
+
+const preview=document.getElementById("preview")
+const previewUI=document.getElementById("faviconPreview")
+
+const tabPreview=document.getElementById("tabPreview")
+const bookmarkPreview=document.getElementById("bookmarkPreview")
+const mobilePreview=document.getElementById("mobilePreview")
+
+const downloadBtn=document.getElementById("downloadZip")
+
+const toast=document.getElementById("toast")
+const toastText=document.getElementById("toastText")
+
 
 drop.onclick=()=>input.click()
 
-input.onchange=e=>{
-handleFiles(e.target.files)
-}
+input.onchange=e=>loadImage(e.target.files[0])
 
-drop.ondragover=e=>{
-e.preventDefault()
-}
+drop.ondragover=e=>e.preventDefault()
 
 drop.ondrop=e=>{
 e.preventDefault()
-handleFiles(e.dataTransfer.files)
+loadImage(e.dataTransfer.files[0])
 }
 
-function handleFiles(files){
 
-svgFiles=[...files]
-svgTexts=[]
-fileList.innerHTML=""
+function showToast(msg){
+toast.style.display="flex"
+toastText.textContent=msg
+}
 
-svgFiles.forEach(file=>{
+function hideToast(){
+setTimeout(()=>toast.style.display="none",1500)
+}
 
-fileList.innerHTML+=file.name+"<br>"
+
+function loadImage(file){
+
+showToast("Loading image...")
 
 let reader=new FileReader()
 
 reader.onload=e=>{
 
-let svg=optimizeSVG(e.target.result)
+image=new Image()
 
-svgTexts.push(svg)
+image.onload=()=>{
 
-let img=new Image()
-
-img.onload=function(){
-
-aspectRatio=img.width/img.height
-
-preview.src="data:image/svg+xml;base64,"+btoa(svg)
-
-if(!width.value){
-width.value=img.width
-height.value=img.height
-}
+generateIcons()
 
 }
 
-img.src="data:image/svg+xml;base64,"+btoa(svg)
+image.src=e.target.result
+}
+
+reader.readAsDataURL(file)
 
 }
 
-reader.readAsText(file)
 
-})
+function drawIcon(size){
 
-}
-
-/* SVG Optimizer */
-
-function optimizeSVG(svg){
-
-return svg
-.replace(/\n/g,"")
-.replace(/\t/g,"")
-.replace(/\s{2,}/g," ")
-.replace(/>\s+</g,"><")
-
-}
-
-/* Aspect Ratio */
-
-const width=document.getElementById("width")
-const height=document.getElementById("height")
-const lock=document.getElementById("lockRatio")
-
-width.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-height.value=Math.round(width.value/aspectRatio)
-
-}
-
-}
-
-height.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-width.value=Math.round(height.value*aspectRatio)
-
-}
-
-}
-
-/* Download */
-
-document.getElementById("downloadBtn").onclick=function(){
-
-if(!svgTexts.length) return
-
-let format=document.getElementById("format").value
-let transparent=document.getElementById("transparent").checked
-
-svgTexts.forEach((svg,i)=>{
-
-let img=new Image()
-
-img.onload=function(){
+let padding=size*(paddingRange.value/100)
 
 let canvas=document.createElement("canvas")
-
-canvas.width=width.value||img.width
-canvas.height=height.value||img.height
+canvas.width=size
+canvas.height=size
 
 let ctx=canvas.getContext("2d")
 
-if(!transparent){
+if(bgColor.value!=="transparent"){
+ctx.fillStyle=bgColor.value
+ctx.fillRect(0,0,size,size)
+}
 
-ctx.fillStyle="#ffffff"
-ctx.fillRect(0,0,canvas.width,canvas.height)
+let drawSize=size-(padding*2)
+
+ctx.drawImage(image,padding,padding,drawSize,drawSize)
+
+return canvas.toDataURL()
 
 }
 
-ctx.drawImage(img,0,0,canvas.width,canvas.height)
+
+function generateIcons(){
+
+generatedIcons=[]
+
+sizes.forEach(size=>{
+
+let data=drawIcon(size)
+
+generatedIcons.push({
+size:size,
+data:data
+})
+
+})
+
+updatePreview()
+generateCode()
+
+downloadBtn.disabled=false
+
+preview.style.display="block"
+previewUI.style.display="block"
+
+showToast("Icons generated!")
+
+hideToast()
+
+}
+
+
+function updatePreview(){
+
+let icon=generatedIcons.find(i=>i.size==32)
+
+tabPreview.src=icon.data
+bookmarkPreview.src=icon.data
+mobilePreview.src=icon.data
+
+}
+
+
+function generateCode(){
+
+document.getElementById("htmlCode").textContent=
+`<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="manifest" href="/manifest.json">`
+
+let manifest={
+name:"Website",
+short_name:"Site",
+icons:[
+{src:"favicon-192.png",sizes:"192x192",type:"image/png"},
+{src:"favicon-512.png",sizes:"512x512",type:"image/png"}
+],
+theme_color:"#ffffff",
+background_color:"#ffffff",
+display:"standalone"
+}
+
+document.getElementById("manifestCode").textContent=
+JSON.stringify(manifest,null,2)
+
+}
+
+
+downloadBtn.onclick=function(){
+
+showToast("Generating ZIP...")
+
+let zip=new JSZip()
+
+generatedIcons.forEach(icon=>{
+zip.file(`favicon-${icon.size}.png`,
+icon.data.split(",")[1],
+{base64:true})
+})
+
+let icoIcon=generatedIcons.find(i=>i.size==32)
+
+zip.file("favicon.ico",
+icoIcon.data.split(",")[1],
+{base64:true})
+
+let manifest=JSON.parse(
+document.getElementById("manifestCode").textContent
+)
+
+zip.file("manifest.json",
+JSON.stringify(manifest,null,2)
+)
+
+zip.generateAsync({type:"blob"}).then(content=>{
 
 let link=document.createElement("a")
 
-if(format==="ico"){
+link.href=URL.createObjectURL(content)
 
-link.download="icon_"+i+".ico"
-link.href=canvas.toDataURL("image/png")
-
-}else{
-
-link.download="converted_"+i+"."+format
-link.href=canvas.toDataURL("image/"+format)
-
-}
+link.download="favicon-pack.zip"
 
 link.click()
 
-}
+showToast("Download ready!")
 
-img.src="data:image/svg+xml;base64,"+btoa(svg)
+hideToast()
 
 })
 
 }
 
-</script>  
-   
+
+function copyCode(id){
+
+let text=document.getElementById(id).textContent
+
+navigator.clipboard.writeText(text)
+
+showToast("Copied!")
+
+hideToast()
+
+}
+paddingRange.addEventListener("input",()=>{
+if(image) generateIcons()
+})
+
+bgColor.addEventListener("change",()=>{
+if(image) generateIcons()
+})
+</script>
+ 
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
