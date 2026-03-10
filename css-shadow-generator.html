@@ -132,7 +132,7 @@ font-family:monospace;
 position:relative;
 }
 
-.copy-btn {
+.copy-btn, .copy-tailwind {
     position: static;
     top: 10px;
     right: 10px;
@@ -244,6 +244,9 @@ input[type=range]::-moz-range-thumb{
   border:3px solid #3b82f6;
   cursor:pointer;
   box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+	.copylayesr p {
+    margin-bottom: 4px;
 }
 </style>
 
@@ -408,7 +411,8 @@ input[type=range]::-moz-range-thumb{
 <div class="preview" id="preview">
 <div class="box" id="box"></div>
 </div>
-
+	<div class="copylayesr">
+<p><strong>Plain CSS</strong></p>
 <div class="code">
 
 <button class="copy-btn">Copy</button>
@@ -416,7 +420,16 @@ input[type=range]::-moz-range-thumb{
 <code id="cssCode"></code>
 
 </div>
+	<br />
+	<p><strong>Tailwind CSS</strong></p>
+	<div class="code">
 
+<button class="copy-tailwind">Copy </button>
+
+<code id="tailwindCode"></code>
+
+</div>
+</div>
 </div>
 
 </div>
@@ -503,7 +516,7 @@ Use it to enhance buttons, cards, modals, and other components in your web proje
 
 <!-- InstanceBeginEditable name="EditRegion5" --> 
 <script src="js/bootstrap.bundle.min.js"></script> 
-	<script>
+	 <script>
 
 function updateShadow(){
 
@@ -538,6 +551,8 @@ $("#box").css({
 
 $("#preview").css("background",$("#bgcolor").val());
 
+/* CSS EXPORT */
+
 let css=`.box{
   border-radius:${radius}px;
   box-shadow:${shadow};
@@ -545,11 +560,22 @@ let css=`.box{
 
 $("#cssCode").text(css);
 
+/* TAILWIND EXPORT */
+
+let twShadow=`shadow-[${x}px_${y}px_${blur}px_${spread}px_rgba(${r},${g},${b},${opacity})]`;
+let twRadius=`rounded-[${radius}px]`;
+
+let tailwind=`${twShadow} ${twRadius}`;
+
+$("#tailwindCode").text(tailwind);
+
 }
 
 $("input").on("input change",updateShadow)
 
 updateShadow()
+
+/* Copy CSS */
 
 $(".copy-btn").click(function(){
 
@@ -565,6 +591,23 @@ $(this).text("Copy")
 
 })
 
+/* Copy Tailwind */
+
+$(".copy-tailwind").click(function(){
+
+let text=$("#tailwindCode").text()
+
+navigator.clipboard.writeText(text)
+
+$(this).text("Copied!")
+
+setTimeout(()=>{
+$(this).text("Copy Tailwind")
+},1500)
+
+})
+
+/* Presets */
 
 $(".preset").click(function(){
 

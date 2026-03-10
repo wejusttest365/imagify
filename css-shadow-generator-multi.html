@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<html dir="ltr" lang="en-US">
+<!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
@@ -51,36 +52,168 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="css/font-convert.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
- <style>
-  
-.generator{display:flex;gap:20px;flex-wrap:wrap;}
+<style>
+.generator {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 /* LEFT PANEL */
-.controls{background:white;padding:20px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.08);flex:1;min-width:320px;max-height:80vh;overflow-y:auto;}
-#addShadow{width:100%;padding:10px;background:#3b82f6;color:white;border:none;border-radius:6px;cursor:pointer;margin-top:10px;margin-bottom:20px;font-size:16px;}
-.shadow-layer{border:1px solid #ddd;border-radius:10px;margin-bottom:15px;background:#fafafa;transition:0.3s;}
-.layer-header{display:flex;justify-content:space-between;align-items:center;padding:10px;cursor:pointer;font-weight:600;}
-.layer-header:hover{background:#e5e7eb;}
-.layer-controls{padding:10px;}
-.layer-controls label{display:block;margin-top:8px;font-size:13px;}
-.layer-controls input[type=range]{width:100%;height:6px;border-radius:6px;background:#e5e7eb;margin-top:3px;}
-.layer-controls input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:white;border:3px solid #3b82f6;cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,0.25);margin-top:-6px;}
-.layer-controls input[type=color]{width:60px;height:35px;border:none;margin-top:5px;cursor:pointer;}
-.removeLayer{background:#ef4444;border:none;color:white;padding:4px 8px;border-radius:5px;cursor:pointer;font-size:12px;margin-left:10px;}
+.controls {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 320px;
+    overflow-y: auto;
+}
+#addShadow {
+    width: 100%;
+    padding: 10px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.shadow-layer {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #fafafa;
+    transition: 0.3s;
+}
+.layer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.layer-header:hover {
+    background: #e5e7eb;
+}
+.layer-controls {
+    padding: 10px;
+}
+.layer-controls label {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+}
+.layer-controls input[type=range] {
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    background: #e5e7eb;
+    margin-top: 3px;
+}
+.layer-controls input[type=range]::-webkit-slider-thumb {
+-webkit-appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:white;
+border:3px solid #3b82f6;
+cursor:pointer;
+box-shadow:0 3px 8px rgba(0,0,0,0.25);
+margin-top:-6px;
+}
+.layer-controls input[type=color] {
+    width: 60px;
+    height: 35px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.removeLayer {
+    background: #ef4444;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 10px;
+}
 /* RIGHT PANEL */
-.preview-area{flex:1;min-width:320px;display:flex;flex-direction:column;gap:20px;}
-.preview{height:350px;background:white;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,0.08);}
-.box{width:160px;height:160px;background:white;border-radius:12px;}
-.code{background:#111827;color:#e5e7eb;padding:20px;border-radius:10px;font-family:monospace;position:relative;}
-.copy-btn{position:absolute;top:10px;right:10px;background:#3b82f6;border:none;padding:6px 12px;color:white;cursor:pointer;border-radius:6px;}
-@media(max-width:768px){.generator{flex-direction:column;}}
+.preview-area {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.preview {
+    height: 350px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.box {
+    width: 160px;
+    height: 160px;
+    background: white;
+    border-radius: 12px;
+}
+.code {
+    background: #111827;
+    color: #e5e7eb;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #3b82f6;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+@media(max-width:768px) {
+.generator {
+    flex-direction: column;
+}
+}
+.copy-btn, .copy-tailwind {
+    position: static;
+    top: 10px;
+    right: 10px;
+    background: #3b82f6;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 12px;
+    float: right;
+	margin-top:0;
+}
+	code { 
+    word-break: break-all;
+}
 </style>
-
-
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
- 
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
 
@@ -97,7 +230,7 @@
 <!--END ACCESSIBILITY CONTROLS   --> 
 <!-- Document Wrapper	  
 	============================================= -->
- 
+
 <header id="header" class="full-header">
   <div id="header-wrap">
     <div class="container">
@@ -108,16 +241,16 @@
           <nav id="mainmenu" class="">
             <ul>
               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-				  <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Image Tools <span class="caret"></span> </a>
-                <ul class="dropdown-menu">  
+                <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="image-converter.html">Image Converter</a></li>
                   <li><a class="dropdown-item" href="image-text-ocr.html">Image - Text (OCR)</a></li>
-                  <li><a class="dropdown-item" href="image-compress.html">Compress Images</a></li> 
+                  <li><a class="dropdown-item" href="image-compress.html">Compress Images</a></li>
                 </ul>
-              </li> 
-				 <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> CSS Tools <span class="caret"></span> </a>
-                <ul class="dropdown-menu"> 
+              </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> CSS Tools <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="css-formatter.html">Beautify CSS </a></li>
                   <li><a class="dropdown-item" href="css-formatter.html">Minify CSS</a></li>
                   <li><a class="dropdown-item" href="check-css-error.html">Check CSS Errors</a></li>
@@ -126,15 +259,14 @@
                   <li><a class="dropdown-item" href="css-clip-image.html">Clip Image CSS</a></li>
                   <li><a class="dropdown-item" href="gradient-generator.html">Gradient Generator</a></li>
                 </ul>
-              </li> 
-				 <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Other Tools <span class="caret"></span> </a>
+              </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Other Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="resume.html">Resume Builder</a></li>
-                  <li><a class="dropdown-item" href="font-converter.html">Web Font Converter</a></li> 
+                  <li><a class="dropdown-item" href="font-converter.html">Web Font Converter</a></li>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li> 
-               
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
             </ul>
           </nav>
         </div>
@@ -158,68 +290,63 @@
 <!-- Sevices section -->
 <section id="content">
   <section class="py-5">
-      <div class="container">
-<h1>Multi CSS Shadow Generator</h1>
-<div class="generator my-3">
-
-<!-- LEFT PANEL -->
-<div class="controls">
-<div id="shadowLayers"></div>
-<button id="addShadow">+ Add Shadow Layer</button>
-</div>
-
-<!-- RIGHT PANEL -->
-<div class="preview-area">
-<div class="preview">
-<div class="box" id="box"></div>
-</div>
-<div class="code">
-<button class="copy-btn">Copy</button>
-<code id="cssCode"></code>
-</div>
-</div>
-
-</div>
-</div>
-
-
+    <div class="container">
+      <h1>Multi CSS Shadow Generator</h1>
+      <div class="generator my-3"> 
+        
+        <!-- LEFT PANEL -->
+        <div class="controls">
+          <div id="shadowLayers"></div>
+          <button id="addShadow">+ Add Shadow Layer</button>
+        </div>
+        
+        <!-- RIGHT PANEL -->
+        <div class="preview-area">
+          <div class="preview">
+            <div class="box" id="box"></div>
+          </div>
+          <div class="copylayesr">
+            <p><strong>Plain CSS</strong></p>
+            <div class="code"> <code id="cssCode"></code>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <br />
+            <p><strong>Tailwind CSS</strong></p>
+            <div class="code"> <code id="tailwindCode"></code>
+              <button class="copy-tailwind">Copy </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-	<section class="py-4">
-	<div class="container">
-		<h1>CSS Multi Box Shadow Generator</h1>
-
-<p>
-WebToolOcean CSS Multi Shadow Generator lets you create multiple CSS box-shadow layers easily.
-Adjust horizontal and vertical offsets, blur, spread, opacity, and color of each layer with live preview.
-Copy the generated CSS instantly for your website or project. Perfect for designers, developers, and front-end enthusiasts.
-</p>
-
-<h2>How to Use the CSS Shadow Generator</h2>
-<ul>
-<li>Click <strong>+ Add Shadow Layer</strong> to create a new shadow.</li>
-<li>Adjust X/Y offset, blur, spread, color, and opacity for each layer.</li>
-<li>Preview the result in real-time.</li>
-<li>Copy the generated CSS code using the <strong>Copy</strong> button.</li>
-<li>Combine multiple shadows to create professional UI designs.</li>
-</ul>
-
-<h2>Why Use a CSS Shadow Generator?</h2>
-<p>
-Creating box-shadow effects manually can be tricky, especially with multiple layers.
-This free online tool simplifies the process, making it faster to create beautiful shadows and UI elements.
-Use it to enhance buttons, cards, modals, and other components in your web projects.
-</p>
-
-<h2>Tips for Using Shadows in Web Design</h2>
-<ul>
-<li>Use subtle shadows for material design and neumorphism.</li>
-<li>Combine multiple layers to create depth.</li>
-<li>Adjust opacity to match light source and design style.</li>
-<li>Use inset shadows to create inner depth effects.</li>
-</ul>
-		</div>
-		
-	</section>
+  <section class="py-4">
+    <div class="container">
+      <h1>CSS Multi Box Shadow Generator</h1>
+      <p> WebToolOcean CSS Multi Shadow Generator lets you create multiple CSS box-shadow layers easily.
+        Adjust horizontal and vertical offsets, blur, spread, opacity, and color of each layer with live preview.
+        Copy the generated CSS instantly for your website or project. Perfect for designers, developers, and front-end enthusiasts. </p>
+      <h2>How to Use the CSS Shadow Generator</h2>
+      <ul>
+        <li>Click <strong>+ Add Shadow Layer</strong> to create a new shadow.</li>
+        <li>Adjust X/Y offset, blur, spread, color, and opacity for each layer.</li>
+        <li>Preview the result in real-time.</li>
+        <li>Copy the generated CSS code using the <strong>Copy</strong> button.</li>
+        <li>Combine multiple shadows to create professional UI designs.</li>
+      </ul>
+      <h2>Why Use a CSS Shadow Generator?</h2>
+      <p> Creating box-shadow effects manually can be tricky, especially with multiple layers.
+        This free online tool simplifies the process, making it faster to create beautiful shadows and UI elements.
+        Use it to enhance buttons, cards, modals, and other components in your web projects. </p>
+      <h2>Tips for Using Shadows in Web Design</h2>
+      <ul>
+        <li>Use subtle shadows for material design and neumorphism.</li>
+        <li>Combine multiple layers to create depth.</li>
+        <li>Adjust opacity to match light source and design style.</li>
+        <li>Use inset shadows to create inner depth effects.</li>
+      </ul>
+    </div>
+  </section>
 </section>
 <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
@@ -228,7 +355,6 @@ Use it to enhance buttons, cards, modals, and other components in your web proje
   <article class="fotercontent">
     <div class="container">
       <div class="row">
-        
         <div class="col-sm-6 col-md-4 col-xs-12  mb-1  ">
           <p class="headingfooter"><strong>Services</strong></p>
           <ul class="fnav">
@@ -239,8 +365,8 @@ Use it to enhance buttons, cards, modals, and other components in your web proje
             <li><a class="dropdown-item" href="image-compress.html">Compress Images</a></li>
             <li><a class="dropdown-item" href="css-formatter.html">CSS Format</a></li>
           </ul>
-        </div> 
-	    <div class="col-sm-6 col-md-4 col-xs-12 mb-1   contactinfo ">
+        </div>
+        <div class="col-sm-6 col-md-4 col-xs-12 mb-1   contactinfo ">
           <p class="headingfooter"><strong>Support</strong></p>
           <ul class="fnav">
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
@@ -265,20 +391,20 @@ Use it to enhance buttons, cards, modals, and other components in your web proje
       <div class="col-xs-12 col-sm-12 text-center">
         <p> © Copyright <span id="spanYear">2026</span> Web Tool Ocean  | Made With Love </p>
       </div>
-    </div> 
+    </div>
   </article>
 </footer>
 <div class="clearfix"></div>
-
 <!-- InstanceBeginEditable name="EditRegion5" --> 
 <script src="js/bootstrap.bundle.min.js"></script> 
-
 <script>
+
 let layerCount=0;
 
 // Add new shadow layer
 function addLayer(){
 layerCount++;
+
 let layer=$(`
 <div class="shadow-layer" data-layer="${layerCount}">
   <div class="layer-header">Shadow ${layerCount}<button class="removeLayer">Remove</button></div>
@@ -291,9 +417,12 @@ let layer=$(`
     <label>Opacity</label><input type="range" min="0" max="1" step="0.01" value="0.3" class="opacity">
   </div>
 </div>`);
+
 $("#shadowLayers").append(layer);
+
 updateShadow();
 }
+
 
 // Toggle collapse layer
 $(document).on("click",".layer-header",function(e){
@@ -301,50 +430,110 @@ if($(e.target).hasClass("removeLayer")) return;
 $(this).siblings(".layer-controls").slideToggle();
 });
 
+
 // Remove layer
 $(document).on("click",".removeLayer",function(){
 $(this).closest(".shadow-layer").remove();
 updateShadow();
 });
 
+
 // Update shadow on input change
-$(document).on("input change",".shadow-layer input",function(){updateShadow();});
+$(document).on("input change",".shadow-layer input",function(){
+updateShadow();
+});
+
 
 // Compute and apply box-shadow
 function updateShadow(){
+
 let shadows=[];
+let tailwindShadows=[];
+
 $(".shadow-layer").each(function(){
+
 let x=$(this).find(".x").val(),
 y=$(this).find(".y").val(),
 blur=$(this).find(".blur").val(),
 spread=$(this).find(".spread").val(),
 color=$(this).find(".color").val(),
 opacity=$(this).find(".opacity").val();
+
 let r=parseInt(color.substr(1,2),16),
 g=parseInt(color.substr(3,2),16),
 b=parseInt(color.substr(5,2),16);
+
 let rgba=`rgba(${r},${g},${b},${opacity})`;
-shadows.push(`${x}px ${y}px ${blur}px ${spread}px ${rgba}`);
+
+let cssShadow=`${x}px ${y}px ${blur}px ${spread}px ${rgba}`;
+shadows.push(cssShadow);
+
+/* Tailwind format */
+
+let twShadow=`${x}px_${y}px_${blur}px_${spread}px_rgba(${r},${g},${b},${opacity})`;
+tailwindShadows.push(twShadow);
+
 });
+
+
 let finalShadow=shadows.join(",");
+let tailwindShadow=`shadow-[${tailwindShadows.join(",")}]`;
+
+
+/* Apply preview */
+
 $("#box").css("box-shadow",finalShadow);
+
+
+/* CSS output */
+
 $("#cssCode").text(`box-shadow: ${finalShadow};`);
+
+
+/* Tailwind output */
+
+$("#tailwindCode").text(tailwindShadow);
+
 }
+
 
 // Copy CSS button
 $(".copy-btn").click(function(){
+
 navigator.clipboard.writeText($("#cssCode").text());
+
 $(this).text("Copied!");
-setTimeout(()=>{$(this).text("Copy");},1500);
+
+setTimeout(()=>{
+$(this).text("Copy");
+},1500);
+
 });
+
+
+// Copy Tailwind button
+$(".copy-tailwind").click(function(){
+
+navigator.clipboard.writeText($("#tailwindCode").text());
+
+$(this).text("Copied!");
+
+setTimeout(()=>{
+$(this).text("Copy Tailwind");
+},1500);
+
+});
+
 
 // Add shadow layer button
 $("#addShadow").click(addLayer);
 
+
 // Start with one shadow layer
 addLayer();
-</script>	 
 
+</script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
