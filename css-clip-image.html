@@ -67,8 +67,7 @@
     background: #eef2f7;
 }
 .app{
-display:flex;
-height:100vh;
+display:flex; 
 }
 
 /* SIDEBAR */
@@ -81,9 +80,10 @@ padding:20px;
 overflow:auto;
 }
 
-.sidebar h3{
-margin-top:15px;
-font-size:15px;
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
 }
 
 .shape-grid{
@@ -119,7 +119,7 @@ gap:8px;
 }
 
 .tools button{
-padding:9px;
+padding:6px;
 border:none;
 background:#10b981;
 color:white;
@@ -129,14 +129,18 @@ cursor:pointer;
 
 /* UPLOAD */
 
-.upload{
-border:2px dashed #d1d5db;
-padding:15px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-background:#f9fafb;
-margin-top:10px;
+.upload {
+    border: 2px dashed #d1d5db;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #f9fafb;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+	    font-size: 20px;
 }
 
 .upload input{
@@ -151,7 +155,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-padding:20px;
+    padding: 10px 20px;
 }
 
 .preview{
@@ -173,7 +177,7 @@ border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,.1);
 
 max-width:700px;
-max-height:500px;
+max-height:600px;
 
 display:flex;
 align-items:center;
@@ -211,30 +215,56 @@ cursor:pointer;
 
 /* OUTPUT */
 
-.output{
-margin-top:20px;
-background:#111827;
-color:white;
-padding:12px;
-border-radius:8px;
-width:600px;
-max-width:100%;
-font-family:monospace;
-position:relative;
+.output {
+    margin-top: 20px;
+    background: #111827;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 600px;
+    max-width: 100%;
+    font-family: monospace;
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    justify-content: space-between;
 }
 
-.copy{
-position:absolute;
-right:10px;
-top:10px;
-border:none;
-background:#3b82f6;
-color:white;
-padding:6px 10px;
-border-radius:6px;
-cursor:pointer;
+.copy {
+    position: static;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0;
+}
+.toolsgrid {
+    display: flex;
+    align-items: center;
 }
 
+.toolsgrid button {
+    background: #cfcfcf;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.toolsgrid button#download {
+    background: green;
+    color: #fff;
+}
+
+.toolsgrid button#clear {
+    background: red;
+    color: #fff;
+}
 </style> 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
@@ -322,7 +352,7 @@ cursor:pointer;
 
 <div class="sidebar">
 
-<h3>Shapes</h3>
+<h3>Available Shapes</h3>
 
 <div class="shape-grid">
 
@@ -341,20 +371,26 @@ cursor:pointer;
 <button data-shape="chevron">❯ Chevron</button>
 <button data-shape="cross">✚ Cross</button>
 <button data-shape="frame">🖼 Frame</button>
-<button data-shape="polygon">✏ Custom</button>
+<button style="background: #FF5722;" data-shape="polygon"><span class="fa fa-edit"></span> Custom</button>
 
 </div>
+ 
+</div>
 
-<h3>Upload</h3>
-
+<div class="canvas"> 
 <label class="upload">
-Upload Image
+Upload or change image <span class="fa fa-image"></span>
 <input type="file" id="upload">
 </label>
+<div class="preview" id="preview">
+<img id="img" src="images/placeholder-clip-image.png" alt=""  crossorigin="anonymous">
+</div>
 
-<h3>Tools</h3>
-
-<div class="tools">
+<div class="output">
+<span id="css">clip-path: circle(50% at 50% 50%)</span>
+<button class="copy">Copy</button>
+</div>
+	<div class="toolsgrid">
 
 <button id="undo">↶ Undo</button>
 <button id="redo">↷ Redo</button>
@@ -362,26 +398,10 @@ Upload Image
 <button id="zoomIn">＋ Zoom</button>
 <button id="zoomOut">－ Zoom</button>
 
-<button id="clear">Clear</button>
+
 <button id="download">⬇ Download</button>
+<button id="clear">Clear</button>
 
-</div>
-
-<h3>Rotate</h3>
-
-<input type="range" id="rotate" min="0" max="360" value="0" style="width:100%">
-
-</div>
-
-<div class="canvas">
-
-<div class="preview" id="preview">
-<img id="img" src="https://via.placeholder.com/600x400">
-</div>
-
-<div class="output">
-<button class="copy">Copy</button>
-<span id="css">clip-path: circle(50% at 50% 50%)</span>
 </div>
 
 </div>
