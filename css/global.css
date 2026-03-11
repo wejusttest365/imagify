@@ -264,7 +264,13 @@ button#togglemeu {
     margin-right: 6px;
     vertical-align: top;
 }
+#mainmenu ul ul li {
+    border-bottom: 1px solid #eee;
+}
 
+#mainmenu ul ul li:last-child {
+    border: 0;
+}
 /* ==========================================================================
    HOVER EFFECTS & ANIMATIONS (UNDERLINES)
    ========================================================================== */

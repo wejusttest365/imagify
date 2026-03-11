@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PDF to Word Converter – Free Online Tool | WebToolOcean</title>
+
+<meta name="description" content="Free online PDF to Word converter. Upload your PDF and download an editable DOCX document instantly.">
+
+<link rel="canonical" href="https://webtoolocean.com/pdf-to-word.html">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- PDF.js -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+<!-- DOCX Browser Build -->
+
+<script src="https://unpkg.com/docx@7.7.0/build/index.js"></script>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6fb;
+margin:0;
+}
+
+.container{
+max-width:850px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+text-align:center;
+}
+
+.subtitle{
+text-align:center;
+color:#666;
+margin-bottom:30px;
+}
+
+.upload-box{
+border:2px dashed #4a7aff;
+background:#fff;
+padding:40px;
+text-align:center;
+border-radius:10px;
+cursor:pointer;
+}
+
+.upload-box:hover{
+background:#eef3ff;
+}
+
+.file-info{
+text-align:center;
+margin-top:15px;
+}
+
+button{
+background:#4a7aff;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:6px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#375bd1;
+}
+
+#progress{
+display:none;
+margin-top:20px;
+text-align:center;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>PDF to Word Converter</h1>
+<p class="subtitle">Convert PDF files into editable Word documents instantly.</p>
+
+<div class="upload-box" onclick="document.getElementById('fileInput').click()">
+
+<i class="fa fa-file-pdf-o fa-3x"></i>
+
+<p>Click to Upload PDF</p>
+
+<input type="file" id="fileInput" accept="application/pdf" hidden>
+
+</div>
+
+<div class="file-info" id="fileInfo"></div>
+
+<div style="text-align:center">
+
+<button id="convertBtn" style="display:none;">Convert to Word</button>
+
+</div>
+
+<div id="progress">Processing PDF...</div>
+
+</div>
+<div id="previewSection" style="display:none;margin-top:30px;text-align:center;">
+
+<h3>PDF Preview</h3>
+
+<canvas id="pdfPreview" style="border:1px solid #ddd;max-width:100%;"></canvas>
+
+</div>
+
+<div id="downloadSection" style="display:none;margin-top:30px;text-align:center;">
+
+<h3>Converted File</h3>
+
+<div style="background:white;padding:20px;border-radius:8px;display:inline-block">
+
+<i class="fa fa-file-word-o fa-3x" style="color:#2b579a"></i>
+
+<p id="wordFileName"></p>
+
+<a id="downloadLink" class="btn btn-primary">Download Word File</a>
+
+</div>
+
+</div>
+ <script>
+ /* ================================
+   PDF.js Worker Setup
+================================ */
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+
+/* ================================
+   Elements
+================================ */
+let selectedFile = null;
+
+const fileInput = document.getElementById("fileInput");
+const fileInfo = document.getElementById("fileInfo");
+const convertBtn = document.getElementById("convertBtn");
+const progress = document.getElementById("progress");
+
+const previewSection = document.getElementById("previewSection");
+const downloadSection = document.getElementById("downloadSection");
+
+
+/* ================================
+   File Upload
+================================ */
+fileInput.addEventListener("change", function(){
+
+const file = this.files[0];
+
+if(!file) return;
+
+if(file.type !== "application/pdf"){
+alert("Please upload a PDF file.");
+return;
+}
+
+selectedFile = file;
+
+fileInfo.innerHTML = "Selected File: <b>" + file.name + "</b>";
+
+convertBtn.style.display = "inline-block";
+
+/* show preview */
+showPDFPreview(file);
+
+});
+
+
+/* ================================
+   Show PDF Thumbnail
+================================ */
+async function showPDFPreview(file){
+
+const fileURL = URL.createObjectURL(file);
+
+const pdf = await pdfjsLib.getDocument(fileURL).promise;
+
+const page = await pdf.getPage(1);
+
+const canvas = document.getElementById("pdfPreview");
+
+const context = canvas.getContext("2d");
+
+const viewport = page.getViewport({scale:1});
+
+canvas.width = viewport.width;
+canvas.height = viewport.height;
+
+await page.render({
+canvasContext:context,
+viewport:viewport
+}).promise;
+
+previewSection.style.display = "block";
+
+}
+
+
+/* ================================
+   Convert Button
+================================ */
+convertBtn.onclick = function(){
+
+progress.style.display = "block";
+progress.innerHTML = "Reading PDF...";
+
+const reader = new FileReader();
+
+reader.onload = function(){
+
+const typedarray = new Uint8Array(this.result);
+
+pdfjsLib.getDocument(typedarray).promise.then(function(pdf){
+
+let text = "";
+
+let pagePromises = [];
+
+for(let i=1;i<=pdf.numPages;i++){
+
+pagePromises.push(pdf.getPage(i));
+
+}
+
+Promise.all(pagePromises).then(function(pages){
+
+let textPromises = pages.map(function(page){
+
+return page.getTextContent();
+
+});
+
+Promise.all(textPromises).then(function(contents){
+
+contents.forEach(function(content){
+
+let lastY = null;
+let line = "";
+
+content.items.forEach(item => {
+
+if(lastY === item.transform[5] || lastY === null){
+
+line += item.str + " ";
+
+}else{
+
+text += line.trim() + "\n";
+line = item.str + " ";
+
+}
+
+lastY = item.transform[5];
+
+});
+
+text += line.trim() + "\n\n";
+
+});
+
+createWord(text);
+
+});
+
+});
+
+});
+
+};
+
+reader.readAsArrayBuffer(selectedFile);
+
+};
+
+
+/* ================================
+   Create Word File
+================================ */
+function createWord(text){
+
+const doc = new docx.Document({
+
+sections:[{
+children:[
+new docx.Paragraph(text)
+]
+}]
+
+});
+
+docx.Packer.toBlob(doc).then(function(blob){
+
+const url = URL.createObjectURL(blob);
+
+/* show download card */
+
+downloadSection.style.display = "block";
+
+document.getElementById("downloadLink").href = url;
+document.getElementById("downloadLink").download = "converted.docx";
+
+document.getElementById("wordFileName").innerText = "converted.docx";
+
+progress.style.display = "none";
+
+});
+
+}
+</script>
+</body>
+</html>
