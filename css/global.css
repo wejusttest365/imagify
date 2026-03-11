@@ -504,6 +504,7 @@ footer .h3 {
    2. DESKTOP & TABLET LANDSCAPE (992px and Up)
    ========================================================================== */
 @media (min-width: 992px) {
+	#togglemeu {display: none}
     #header {
         z-index: 999;
         float: left;
@@ -593,6 +594,9 @@ footer .h3 {
    4. MOBILE BREAKPOINT (Under 991px)
    ========================================================================== */
 @media (max-width: 991px) {
+	.generator {
+    display: block;
+}
     /* brand & Branding */
     div#brand {
         margin-bottom: 0px;
