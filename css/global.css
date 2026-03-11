@@ -156,6 +156,12 @@ button.lines-button.x.close:focus {
 .lines-button.x.close .lines::after {
     transform: rotate3d(0, 0, 1, 45deg);
 }
+.mainmenubar.open {
+    display: block;
+}
+button#togglemeu {
+    float: right;
+}
 /* ==========================================================================
    HEADER & brand BASE
    ========================================================================== */
