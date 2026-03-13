@@ -348,7 +348,9 @@ button#togglemeu {
     font-size: 15px;
     font-weight: 600;
 }
-
+article#copyrights a {
+    display: inline-block;
+}
 /* Global Footer Typography & Links */
 .footer, 
 .footer p, 
@@ -361,7 +363,7 @@ button#togglemeu {
     transition: 0.5s;
 }
 footer .headingfooter {
-    font-size: 30px;
+    font-size: 24px;
 }
 /* Images & Branding in Footer */
 footer img {

@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>WebToolOcean Photo Editor</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+background:#1e1e1e;
+font-family:Arial;
+color:white;
+overflow:hidden;
+}
+
+.editor{
+display:flex;
+height:100vh;
+}
+ 
+
+.sidebar button:hover,.sidebar label:hover{
+background:#555;
+}
+
+.workspace{
+flex:1;
+display:flex;
+}
+
+.canvasArea{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#444;
+}
+
+#canvas{
+background:white;
+border:1px solid #aaa;
+}
+
+.panel{
+width:220px;
+background:#2b2b2b;
+padding:10px;
+overflow:auto;
+}
+
+.layer{
+padding:6px;
+border-bottom:1px solid #444;
+cursor:grab;
+}
+
+.topControls{
+position:absolute;
+top:10px;
+left:120px;
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+}
+
+.topControls select,
+.topControls input,
+.topControls button{
+background:#3a3a3a;
+border:none;
+color:white;
+padding:6px 8px;
+border-radius:4px;
+}
+.topControls{
+display:flex;
+gap:12px;
+padding:10px;
+background:#2a2a2a;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.toolGroup{
+position:relative;
+}
+
+.dropBtn{
+background:#3a3a3a;
+border:none;
+color:white;
+padding:6px 12px;
+border-radius:4px;
+cursor:pointer;
+}
+
+.dropMenu{
+display:none;
+position:absolute;
+top:35px;
+left:0;
+background:#2f2f2f;
+padding:10px;
+border-radius:6px;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
+min-width:180px;
+z-index:10;
+}
+
+.dropMenu label{
+display:block;
+font-size:12px;
+margin-top:6px;
+}
+
+.dropMenu input,
+.dropMenu select,
+.dropMenu button{
+width:100%;
+margin-top:4px;
+background:#3a3a3a;
+border:none;
+color:white;
+padding:6px;
+border-radius:4px;
+}
+
+.dropdown:hover .dropMenu{
+display:block;
+}
+.editor{
+display:flex;
+height:100vh;
+}
+.sidebar{
+width:120px;
+background:#2b2b2b;
+display:flex;
+flex-direction:column;
+padding:10px;
+gap:6px;
+}
+
+.toolItem{
+display:flex;
+align-items:center;
+gap:8px;
+background:#3a3a3a;
+border:none;
+color:white;
+padding:8px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+.toolItem i{
+width:18px;
+text-align:center;
+}
+
+.toolItem:hover{
+background:#505050;
+}
+
+.sidebar label{
+cursor:pointer;
+}
+
+.workspace{
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+.topControls{
+background:#2a2a2a;
+padding:10px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.workspaceBody{
+flex:1;
+display:flex;
+}
+
+.canvasArea{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#444;
+}
+
+.panel{
+width:220px;
+background:#2b2b2b;
+padding:10px;
+overflow:auto;
+}
+</style>
+
+</head>
+
+<body>
+
+ <div class="editor">
+
+<!-- LEFT SIDEBAR -->
+
+<div class="sidebar">
+
+<label class="toolItem" title="Upload Image">
+<i class="fa fa-image"></i>
+<span>Image</span>
+<input type="file" id="upload" hidden>
+</label>
+
+<button class="toolItem" onclick="newCanvas()" title="New File">
+<i class="fa fa-file"></i>
+<span>New</span>
+</button>
+
+<button class="toolItem" data-bs-toggle="modal" data-bs-target="#resizeModal" title="Resize Canvas">
+<i class="fa fa-expand"></i>
+<span>Resize</span>
+</button>
+
+<button class="toolItem" onclick="addText()" title="Add Text">
+<i class="fa fa-font"></i>
+<span>Text</span>
+</button>
+
+<button class="toolItem" onclick="trimCanvas()" title="Trim Canvas">
+<i class="fa fa-crop"></i>
+<span>Trim</span>
+</button>
+
+<button class="toolItem" onclick="deleteObject()" title="Delete Layer">
+<i class="fa fa-trash"></i>
+<span>Delete</span>
+</button>
+
+<button class="toolItem" onclick="undo()" title="Undo">
+<i class="fa fa-rotate-left"></i>
+<span>Undo</span>
+</button>
+
+<button class="toolItem" onclick="redo()" title="Redo">
+<i class="fa fa-rotate-right"></i>
+<span>Redo</span>
+</button>
+
+<button class="toolItem" onclick="exportImage()" title="Export Image">
+<i class="fa fa-download"></i>
+<span>Save</span>
+</button>
+<button class="toolItem" onclick="startCrop()" title="Crop">
+<i class="fa fa-crop"></i>
+<span>Crop</span>
+</button>
+</div>
+
+
+<!-- RIGHT WORKSPACE -->
+
+<div class="workspace">
+
+
+<!-- TOP CONTROLS -->
+
+<div class="topControls">
+
+<div class="toolGroup">
+
+<select onchange="addShape(this.value)">
+<option value="">Shapes</option>
+<option value="rect">Rectangle</option>
+<option value="circle">Circle</option>
+<option value="triangle">Triangle</option>
+<option value="ellipse">Ellipse</option>
+<option value="line">Line</option>
+</select>
+
+</div>
+
+
+<div class="toolGroup dropdown">
+
+<button class="dropBtn">Colors ▾</button>
+
+<div class="dropMenu">
+
+<label>Fill</label>
+<input type="color" id="fillColor" value="#ff0000">
+
+<label>Stroke</label>
+<input type="color" id="strokeColor" value="#000000">
+
+<label>Text</label>
+<input type="color" id="textColor" value="#000000">
+
+</div>
+
+</div>
+
+
+<div class="toolGroup dropdown">
+
+<button class="dropBtn">Text ▾</button>
+
+<div class="dropMenu">
+
+<label>Font</label>
+
+<select id="fontFamily">
+<option value="Arial">Arial</option>
+<option value="Verdana">Verdana</option>
+<option value="Times New Roman">Times</option>
+<option value="Courier New">Courier</option>
+<option value="Impact">Impact</option>
+</select>
+
+<label>Size</label>
+<input type="number" id="fontSize" value="32">
+
+<label>Letter Spacing</label>
+<input type="number" id="letterSpacing" value="0">
+
+<label>Line Height</label>
+<input type="number" id="lineHeight" value="1.2" step="0.1">
+
+</div>
+
+</div>
+
+
+<div class="toolGroup dropdown">
+
+<button class="dropBtn">Text Style ▾</button>
+
+<div class="dropMenu">
+
+<button onclick="setBold()">Bold</button>
+<button onclick="setItalic()">Italic</button>
+<button onclick="setUnderline()">Underline</button>
+
+<select onchange="setAlign(this.value)">
+<option value="">Align</option>
+<option value="left">Left</option>
+<option value="center">Center</option>
+<option value="right">Right</option>
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CANVAS + LAYERS -->
+
+<div class="workspaceBody">
+
+<div class="canvasArea">
+
+<canvas id="canvas" width="900" height="500"></canvas>
+
+</div>
+
+<div class="panel">
+
+<h6>Layers</h6>
+<div id="layers"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="modal fade" id="resizeModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content bg-dark text-white">
+
+<div class="modal-header">
+<h5>Resize Canvas</h5>
+<button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+
+<label>Width</label>
+<input id="canvasW" class="form-control">
+
+<label class="mt-2">Height</label>
+<input id="canvasH" class="form-control">
+
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-primary" onclick="applyResize()">Apply</button>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ <script>
+
+const canvas = new fabric.Canvas("canvas",{preserveObjectStacking:true})
+
+/* --------------------------------
+SMART IMAGE FIT FUNCTION
+-------------------------------- */
+
+function fitImageToCanvas(img){
+
+let canvasW = canvas.getWidth()
+let canvasH = canvas.getHeight()
+
+let imgW = img.width
+let imgH = img.height
+
+let scale = 1
+
+if(imgW > canvasW || imgH > canvasH){
+
+let scaleX = canvasW / imgW
+let scaleY = canvasH / imgH
+
+scale = Math.min(scaleX,scaleY)
+
+}
+
+img.scale(scale)
+
+img.set({
+left:canvasW/2,
+top:canvasH/2,
+originX:"center",
+originY:"center"
+})
+
+canvas.add(img)
+canvas.setActiveObject(img)
+
+canvas.renderAll()
+
+updateLayers()
+
+}
+
+
+/* --------------------------------
+DRAG & DROP IMAGE UPLOAD
+-------------------------------- */
+
+const canvasContainer = document.querySelector(".canvasArea")
+
+canvasContainer.addEventListener("dragover",function(e){
+e.preventDefault()
+canvasContainer.style.background="#555"
+})
+
+canvasContainer.addEventListener("dragleave",function(){
+canvasContainer.style.background="#444"
+})
+
+canvasContainer.addEventListener("drop",function(e){
+
+e.preventDefault()
+canvasContainer.style.background="#444"
+
+let file = e.dataTransfer.files[0]
+
+if(!file || !file.type.startsWith("image")) return
+
+let reader = new FileReader()
+
+reader.onload=function(event){
+
+fabric.Image.fromURL(event.target.result,function(img){
+
+fitImageToCanvas(img)
+
+})
+
+}
+
+reader.readAsDataURL(file)
+
+})
+
+
+/* --------------------------------
+UPLOAD IMAGE BUTTON
+-------------------------------- */
+
+document.getElementById("upload").addEventListener("change",function(e){
+
+let file = e.target.files[0]
+
+if(!file) return
+
+let reader = new FileReader()
+
+reader.onload=function(event){
+
+fabric.Image.fromURL(event.target.result,function(img){
+
+fitImageToCanvas(img)
+
+})
+
+}
+
+reader.readAsDataURL(file)
+
+})
+
+
+/* --------------------------------
+UNDO / REDO HISTORY
+-------------------------------- */
+
+let history=[]
+let redoStack=[]
+
+function saveHistory(){
+history.push(JSON.stringify(canvas))
+redoStack=[]
+}
+
+canvas.on("object:added",saveHistory)
+canvas.on("object:modified",saveHistory)
+
+function undo(){
+
+if(history.length<2) return
+
+redoStack.push(history.pop())
+
+canvas.loadFromJSON(history[history.length-1],()=>canvas.renderAll())
+
+}
+
+function redo(){
+
+if(!redoStack.length) return
+
+let state=redoStack.pop()
+
+history.push(state)
+
+canvas.loadFromJSON(state,()=>canvas.renderAll())
+
+}
+
+
+/* --------------------------------
+NEW CANVAS
+-------------------------------- */
+
+function newCanvas(){
+
+canvas.clear()
+
+canvas.setWidth(900)
+canvas.setHeight(500)
+
+updateLayers()
+
+}
+
+
+/* --------------------------------
+RESIZE CANVAS (AUTO SCALE OBJECTS)
+-------------------------------- */
+
+function applyResize(){
+
+let newW = parseInt(document.getElementById("canvasW").value)
+let newH = parseInt(document.getElementById("canvasH").value)
+
+let oldW = canvas.getWidth()
+let oldH = canvas.getHeight()
+
+let scaleX = newW/oldW
+let scaleY = newH/oldH
+
+canvas.getObjects().forEach(obj=>{
+
+obj.scaleX *= scaleX
+obj.scaleY *= scaleY
+
+obj.left *= scaleX
+obj.top *= scaleY
+
+obj.setCoords()
+
+})
+
+canvas.setWidth(newW)
+canvas.setHeight(newH)
+
+canvas.renderAll()
+
+}
+
+
+/* --------------------------------
+ADD SHAPES
+-------------------------------- */
+
+function addShape(type){
+
+let fill=document.getElementById("fillColor").value
+let stroke=document.getElementById("strokeColor").value
+
+let obj
+
+if(type==="rect"){
+
+obj=new fabric.Rect({
+width:120,
+height:80,
+fill:fill,
+stroke:stroke,
+strokeWidth:2
+})
+
+}
+
+if(type==="circle"){
+
+obj=new fabric.Circle({
+radius:60,
+fill:fill,
+stroke:stroke,
+strokeWidth:2
+})
+
+}
+
+if(type==="triangle"){
+
+obj=new fabric.Triangle({
+width:120,
+height:100,
+fill:fill,
+stroke:stroke,
+strokeWidth:2
+})
+
+}
+
+if(type==="ellipse"){
+
+obj=new fabric.Ellipse({
+rx:80,
+ry:50,
+fill:fill,
+stroke:stroke,
+strokeWidth:2
+})
+
+}
+
+if(type==="line"){
+
+obj=new fabric.Line([0,0,150,0],{
+stroke:stroke,
+strokeWidth:4
+})
+
+}
+
+if(obj){
+
+canvas.add(obj)
+canvas.centerObject(obj)
+canvas.setActiveObject(obj)
+
+canvas.renderAll()
+
+updateLayers()
+
+}
+
+}
+
+
+/* --------------------------------
+ADD TEXT
+-------------------------------- */
+
+function addText(){
+
+let t=new fabric.IText("Edit Text",{
+fontSize:32,
+fill:"#000"
+})
+
+canvas.add(t)
+canvas.centerObject(t)
+canvas.setActiveObject(t)
+
+canvas.renderAll()
+
+updateLayers()
+
+}
+
+
+/* --------------------------------
+DELETE OBJECT
+-------------------------------- */
+
+function deleteObject(){
+
+let obj=canvas.getActiveObject()
+
+if(!obj) return
+
+canvas.remove(obj)
+
+updateLayers()
+
+}
+
+
+/* --------------------------------
+EXPORT IMAGE
+-------------------------------- */
+
+function exportImage(){
+
+let data=canvas.toDataURL({format:"png"})
+
+let a=document.createElement("a")
+
+a.href=data
+a.download="image.png"
+
+a.click()
+
+}
+
+
+/* --------------------------------
+LAYERS PANEL
+-------------------------------- */
+
+function updateLayers(){
+
+let panel=document.getElementById("layers")
+
+panel.innerHTML=""
+
+canvas.getObjects().forEach((obj,i)=>{
+
+let div=document.createElement("div")
+
+div.className="layer"
+
+div.innerText=obj.type
+
+div.draggable=true
+
+div.onclick=()=>canvas.setActiveObject(obj)
+
+div.ondragstart=e=>e.dataTransfer.setData("index",i)
+
+div.ondrop=e=>{
+
+let from=e.dataTransfer.getData("index")
+
+let to=i
+
+canvas.moveTo(canvas.item(from),to)
+
+updateLayers()
+
+}
+
+div.ondragover=e=>e.preventDefault()
+
+panel.appendChild(div)
+
+})
+
+}
+
+
+/* --------------------------------
+DELETE KEY
+-------------------------------- */
+
+document.addEventListener("keydown",function(e){
+
+if(e.key==="Delete") deleteObject()
+
+})
+
+
+/* --------------------------------
+COLOR CONTROLS
+-------------------------------- */
+
+document.getElementById("fillColor").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj){
+obj.set("fill",this.value)
+canvas.renderAll()
+}
+
+}
+
+document.getElementById("strokeColor").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj){
+obj.set("stroke",this.value)
+canvas.renderAll()
+}
+
+}
+
+
+/* --------------------------------
+TEXT CONTROLS
+-------------------------------- */
+
+document.getElementById("fontFamily").onchange=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.set("fontFamily",this.value)
+
+canvas.renderAll()
+
+}
+
+}
+
+document.getElementById("fontSize").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.set("fontSize",parseInt(this.value))
+
+canvas.renderAll()
+
+}
+
+}
+
+document.getElementById("textColor").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.set("fill",this.value)
+
+canvas.renderAll()
+
+}
+
+}
+
+
+/* --------------------------------
+TEXT STYLE
+-------------------------------- */
+
+function setBold(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.fontWeight = obj.fontWeight==="bold" ? "normal" : "bold"
+
+canvas.renderAll()
+
+}
+
+}
+
+function setItalic(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.fontStyle = obj.fontStyle==="italic" ? "normal" : "italic"
+
+canvas.renderAll()
+
+}
+
+}
+
+function setUnderline(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.underline = !obj.underline
+
+canvas.renderAll()
+
+}
+
+}
+
+function setAlign(val){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.textAlign = val
+
+canvas.renderAll()
+
+}
+
+}
+
+
+/* --------------------------------
+LETTER SPACING
+-------------------------------- */
+
+document.getElementById("letterSpacing").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.charSpacing=parseInt(this.value)*10
+
+canvas.renderAll()
+
+}
+
+}
+
+
+/* --------------------------------
+LINE HEIGHT
+-------------------------------- */
+
+document.getElementById("lineHeight").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.lineHeight=parseFloat(this.value)
+
+canvas.renderAll()
+
+}
+
+}
+// Mouse crop
+/* -----------------------------
+CROP TOOL (WORKING)
+----------------------------- */
+
+let cropMode = false;
+let cropRect = null;
+let startX = 0;
+let startY = 0;
+
+function startCrop(){
+
+  cropMode = true;
+
+  canvas.discardActiveObject();
+  canvas.selection = false;
+  canvas.defaultCursor = "crosshair";
+
+  canvas.on("mouse:down", cropStart);
+  canvas.on("mouse:move", cropMove);
+  canvas.on("mouse:up", cropEnd);
+
+}
+
+function cropStart(o){
+
+  if(!cropMode) return;
+
+  const pointer = canvas.getPointer(o.e);
+
+  startX = pointer.x;
+  startY = pointer.y;
+
+  cropRect = new fabric.Rect({
+    left:startX,
+    top:startY,
+    width:1,
+    height:1,
+    fill:"rgba(0,0,0,0.25)",
+    stroke:"red",
+    strokeDashArray:[6,6],
+    selectable:false,
+    evented:false
+  });
+
+  canvas.add(cropRect);
+}
+
+function cropMove(o){
+
+  if(!cropRect) return;
+
+  const pointer = canvas.getPointer(o.e);
+
+  const w = pointer.x - startX;
+  const h = pointer.y - startY;
+
+  cropRect.set({
+    width:Math.abs(w),
+    height:Math.abs(h),
+    left: w < 0 ? pointer.x : startX,
+    top:  h < 0 ? pointer.y : startY
+  });
+
+  canvas.renderAll();
+}
+
+function cropEnd(){
+
+  if(!cropRect) return;
+
+  const rect = cropRect.getBoundingRect();
+
+  canvas.remove(cropRect);
+
+  stopCrop();
+
+  if(rect.width < 10 || rect.height < 10) return;
+
+  applyCrop(rect);
+}
+
+function stopCrop(){
+
+  cropMode = false;
+
+  canvas.selection = true;
+  canvas.defaultCursor = "default";
+
+  canvas.off("mouse:down", cropStart);
+  canvas.off("mouse:move", cropMove);
+  canvas.off("mouse:up", cropEnd);
+
+}
+
+function applyCrop(rect){
+
+  const objects = canvas.getObjects();
+
+  objects.forEach(obj => {
+
+    const objRect = obj.getBoundingRect();
+
+    if(
+      objRect.left + objRect.width < rect.left ||
+      objRect.left > rect.left + rect.width ||
+      objRect.top + objRect.height < rect.top ||
+      objRect.top > rect.top + rect.height
+    ){
+      canvas.remove(obj);
+    }else{
+      obj.left -= rect.left;
+      obj.top  -= rect.top;
+      obj.setCoords();
+    }
+
+  });
+
+  canvas.setWidth(rect.width);
+  canvas.setHeight(rect.height);
+
+  canvas.renderAll();
+
+  updateLayers();
+}
+</script>
+
+</body>
+</html>
