@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Color Contrast Checker</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+background:#f4f6fb;
+}
+
+.tool-card{
+background:white;
+padding:35px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.preview{
+padding:30px;
+font-size:20px;
+border-radius:8px;
+text-align:center;
+margin-top:20px;
+}
+
+.suggestion{
+width:40px;
+height:40px;
+border-radius:6px;
+cursor:pointer;
+border:2px solid #ddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container py-5">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-6">
+
+<div class="tool-card">
+
+<h3 class="text-center mb-4">Color Contrast Checker</h3>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<label>Text Color</label>
+<input type="color" id="textColor" class="form-control form-control-color" value="#000000">
+
+</div>
+
+<div class="col-md-6">
+
+<label>Background Color</label>
+<input type="color" id="bgColor" class="form-control form-control-color" value="#ffffff">
+
+</div>
+
+</div>
+
+<button class="btn btn-primary w-100 mt-4" onclick="checkContrast()">
+Check Contrast
+</button>
+
+<div id="preview" class="preview">
+Sample Text Preview
+</div>
+
+<div id="result" class="mt-3 text-center"></div>
+
+<div id="suggestions" class="d-flex gap-2 justify-content-center mt-3"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function hexToRgb(hex){
+
+hex=hex.replace("#","")
+
+let r=parseInt(hex.substring(0,2),16)
+let g=parseInt(hex.substring(2,4),16)
+let b=parseInt(hex.substring(4,6),16)
+
+return [r,g,b]
+
+}
+
+function luminance(r,g,b){
+
+let a=[r,g,b].map(function(v){
+
+v/=255
+
+return v<=0.03928
+? v/12.92
+: Math.pow((v+0.055)/1.055,2.4)
+
+})
+
+return 0.2126*a[0]+0.7152*a[1]+0.0722*a[2]
+
+}
+
+function contrast(rgb1,rgb2){
+
+let lum1=luminance(rgb1[0],rgb1[1],rgb1[2])
+let lum2=luminance(rgb2[0],rgb2[1],rgb2[2])
+
+let brightest=Math.max(lum1,lum2)
+let darkest=Math.min(lum1,lum2)
+
+return (brightest+0.05)/(darkest+0.05)
+
+}
+
+function checkContrast(){
+
+let text=document.getElementById("textColor").value
+let bg=document.getElementById("bgColor").value
+
+let ratio=contrast(hexToRgb(text),hexToRgb(bg)).toFixed(2)
+
+let preview=document.getElementById("preview")
+
+preview.style.color=text
+preview.style.background=bg
+
+let status="PASS"
+let color="green"
+
+if(ratio<4.5){
+
+status="FAIL"
+color="red"
+
+}
+
+document.getElementById("result").innerHTML=
+"Contrast Ratio: <b>"+ratio+"</b> <span style='color:"+color+"'>"+status+"</span>"
+
+showSuggestions(bg)
+
+}
+
+function showSuggestions(bg){
+
+let suggestions=["#000000","#333333","#ffffff","#0d6efd","#ff6600"]
+
+let html=""
+
+suggestions.forEach(c=>{
+
+html+="<div class='suggestion' style='background:"+c+"' onclick='applyColor(\""+c+"\")'></div>"
+
+})
+
+document.getElementById("suggestions").innerHTML=html
+
+}
+
+function applyColor(c){
+
+document.getElementById("textColor").value=c
+
+checkContrast()
+
+}
+
+</script>
+
+</body>
+</html>
