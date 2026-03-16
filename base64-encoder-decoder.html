@@ -6,167 +6,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<!-- ===================================================== -->
-<!-- ===================================================== -->
-<!-- PAGE TITLE --> 
+<!-- ===================================================== --> 
 
-<title>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO Online | WebToolOcean</title>
-
-<meta name="description" content="Free SVG Converter online. Convert SVG to PNG, JPG, WEBP, or ICO instantly. Batch SVG conversion, transparent background option, SVG optimizer, and resize tool for developers and designers.">
-
-<meta name="keywords" content="svg converter, svg to png, svg to ico, svg to jpg, svg to webp, batch svg converter, svg optimizer, convert svg online, favicon converter, svg image converter">
-
-<meta name="robots" content="index, follow">
-
-<meta name="author" content="WebToolOcean">
-
+<!-- Basic SEO Meta Tags -->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 Encoder & Decoder Online | WebToolOcean</title>
+<meta name="description" content="Free online Base64 Encoder and Decoder tool. Encode text to Base64 or decode Base64 to text instantly with WebToolOcean developer tools.">
+<meta name="keywords" content="base64 encoder, base64 decoder, encode base64 online, decode base64 string, base64 converter">
+<meta name="author" content="WebToolOcean">
+<meta property="og:title" content="Base64 Encoder & Decoder">
+<meta property="og:description" content="Encode text to Base64 or decode Base64 instantly online.">
+<meta property="og:url" content="https://webtoolocean.com/base64-encoder-decoder.html">
 
-<link rel="canonical" href="https://webtoolocean.com/svg-converter.html">
+<!-- ===================================================== --> 
 
+<!--CSS for the website--> 
 
-<!-- Open Graph (Facebook / LinkedIn) -->
-
-<meta property="og:title" content="SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO">
-<meta property="og:description" content="Convert SVG files to PNG, JPG, WEBP, or ICO online. Free batch SVG converter with resize, optimizer, and transparent background support.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://webtoolocean.com/svg-converter.html">
-<meta property="og:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
-<meta property="og:site_name" content="WebToolOcean">
-
-
-<!-- Twitter SEO -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SVG Converter – Convert SVG to PNG JPG WEBP ICO">
-<meta name="twitter:description" content="Free online SVG converter tool. Convert SVG to PNG, JPG, WEBP, ICO with batch conversion and optimizer.">
-<meta name="twitter:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
-
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "SVG Converter",
- "url": "https://webtoolocean.com/svg-converter.html",
- "applicationCategory": "DeveloperApplication",
- "operatingSystem": "All",
- "description": "Free online SVG converter tool to convert SVG files to PNG, JPG, WEBP, or ICO with batch conversion, resize, and optimization.",
- "offers": {
-   "@type": "Offer",
-   "price": "0",
-   "priceCurrency": "USD"
- }
-}
-</script>
-<!-- ===================================================== -->
-	
-<!--CSS for the website-->
- 
-  <!-- Dependencies -->
- <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/font-convert.css" rel="stylesheet">
-  
+<!-- Dependencies -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/font-convert.css" rel="stylesheet">
 <style>
- 
-
-.generator{
-display:grid;
-grid-template-columns:350px 1fr;
-gap:30px;
+body {
+    background: #f5f7fb;
 }
-
-.controls{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+.tool-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
 }
-
-.preview-area{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-text-align:center;
+textarea {
+    height: 160px;
+    resize: none;
 }
-
-.dropzone{
-border:2px dashed #cbd5e1;
-padding:40px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-transition:.3s;
+.progress {
+    display: none;
+    height: 22px;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
 }
-
-.dropzone:hover{
-border-color:#6366f1;
-background:#f8f9ff;
+.success-msg {
+    display: none;
+    color: green;
+    font-weight: 600;
+    margin-top: 10px;
 }
-
-.control{
-margin-top:15px;
+ .form-check-inline input {
+    line-height: normal;
+    margin-top: 2px;
+    /* position: relative; */
 }
-
-.control label{
-display:block;
-font-size:14px;
-margin-bottom:5px;
+	.form-check-inline label {margin-top:0;}
+.form-check-inline input {
+    line-height: normal;
+    margin-top: 2px;
+    position: relative;
 }
-
-.control input,
-.control select{
-width:100%;
-padding:8px;
-border:1px solid #ddd;
-border-radius:6px;
+.form-check-input {
+   border-color:#4a4a4a !important;
 }
-
-.preview img{
-max-width:100%;
-margin-top:20px;
+@media(max-width:768px) {
+textarea {
+    height: 140px;
 }
-
-section button{
-margin-top:20px;
-padding:12px 18px;
-border:none;
-background:#6366f1;
-color:white;
-border-radius:8px;
-cursor:pointer;
-font-size:15px;
-width:100%;
+.col-md-6 {
+    margin-bottom: 20px;
 }
-
-section button:hover{
-background:#4f46e5;
-}
-
-.file-list{
-margin-top:15px;
-font-size:13px;
-color:#666;
-}
-.control.checkboxcontrol label {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 8px;
-}
-
- 
-
-.control.checkboxcontrol label input {
-    width: auto;
 }
 </style>
-	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -255,140 +166,77 @@ color:#666;
   </div>
 </header>
 <!-- InstanceBeginEditable name="center" -->
- 
-  <!-- Start dynamic content -->
- <!-- <section id="testimonials">
+
+<!-- Start dynamic content --> 
+<!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>-->
-  <!-- End dynamic content -->
-  <div class="clearfix"></div>
-  <!-- End dynamic content --> 
-  
-  <!-- Sevices section -->
-  <section id="content">
-   
-   <section class="py-5">
-      <div class="container">
+  </section>--> 
+<!-- End dynamic content -->
+<div class="clearfix"></div>
+<!-- End dynamic content --> 
 
-<h1>SVG Converter</h1>
-
-<div class="generator">
-
-<!-- Controls -->
-
-<div class="controls">
-
-<div class="dropzone" id="dropzone">
-Drop SVG File Here<br>or Click to Upload
-<input type="file" id="fileInput" accept=".svg" multiple hidden>
-</div>
-
-<div class="file-list" id="fileList"></div>
-
-<div class="control">
-<label>Width</label>
-<input type="number" id="width">
-</div>
-
-<div class="control">
-<label>Height</label>
-<input type="number" id="height">
-</div>
-
-<div class="control checkboxcontrol">
-<label>
-<input type="checkbox" id="lockRatio" checked>
-Lock Aspect Ratio
-</label>
-</div>
-
-<div class="control">
-<label>Export Format</label>
-<select id="format">
-<option value="png">PNG</option>
-<option value="jpeg">JPG</option>
-<option value="webp">WEBP</option>
-<option value="ico">ICO</option>
-</select>
-</div>
-
-<div class="control checkboxcontrol">
-<label>
-<input type="checkbox" id="transparent" checked>
-Transparent Background
-</label>
-</div>
-
-<button id="downloadBtn">Download File</button>
-
-</div>
-
-
-<!-- Preview -->
-
-<div class="preview-area">
-
-<h3>Preview</h3>
-
-<div class="preview">
-<img id="previewImg">
-</div>
-
-</div>
-
-</div>
-
-</div>
-  </section> 
-	  <section class="py-4">
-<div class="container">
-
-<h1>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO</h1>
-
-<p>
-WebToolOcean SVG Converter lets you easily convert SVG files into PNG, JPG, WEBP, or ICO formats directly in your browser.
-Upload one or multiple SVG files, resize images, maintain aspect ratio, enable transparent background, and optimize SVG code.
-This free online tool is designed for web designers, developers, and digital creators who need fast and reliable SVG conversions.
-</p>
-
-<h2>Features of This SVG Converter</h2>
-
-<ul>
-<li>Convert SVG to PNG, JPG, WEBP, and ICO</li>
-<li>Batch SVG conversion support</li>
-<li>Resize images with locked aspect ratio</li>
-<li>Transparent background option</li>
-<li>Built-in SVG optimizer to reduce file size</li>
-<li>Drag and drop SVG upload</li>
-<li>Instant browser-based conversion</li>
-</ul>
-
-<h2>Why Use an SVG Converter?</h2>
-
-<p>
-SVG images are scalable vector graphics that maintain high quality at any size. However, many platforms require raster formats like PNG or JPG.
-This tool helps convert SVG graphics into widely supported formats without losing visual quality.
-</p>
-
-<h2>Who Can Use This Tool?</h2>
-
-<ul>
-<li>Web designers creating website graphics</li>
-<li>Developers generating favicon or icon images</li>
-<li>UI/UX designers exporting vector illustrations</li>
-<li>Content creators preparing images for the web</li>
-</ul>
-
-</div>
+<!-- Sevices section -->
+<section id="content">
+  <section class="py-5">
+    <div class="container py-5">
+      <h1 class="text-center mb-3">Base64 Encoder / Decoder</h1>
+      <p class="text-center text-muted"> Encode text to Base64 or decode Base64 back to text instantly. </p>
+      <div class="tool-box">
+        <div class="row"> 
+          
+          <!-- INPUT SIDE -->
+          
+          <div class="col-md-6">
+            <label class="form-label">Input</label>
+            <textarea id="inputText" class="form-control" placeholder="Enter text or Base64 string"></textarea>
+            <div class="mt-3">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="encode" value="encode" checked>
+                <label class="form-check-label" for="encode">Encode</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="decode" value="decode">
+                <label class="form-check-label" for="decode">Decode</label>
+              </div>
+            </div>
+            <button class="btn btn-primary mt-3" onclick="convertBase64()"> Convert </button>
+            <div class="progress">
+              <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">0%</div>
+            </div>
+          </div>
+          
+          <!-- OUTPUT SIDE -->
+          
+          <div class="col-md-6">
+            <label class="form-label">Output</label>
+            <textarea id="outputText" class="form-control" readonly></textarea>
+            <button class="btn btn-success mt-3" onclick="copyText()"> Copy Result </button>
+            <div class="success-msg" id="successMsg"> ✔ Copied successfully </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SEO CONTENT SECTION -->
+    <div class="seo-section">
+      <div class="container mt-5">
+        <h2>What is Base64 Encoding?</h2>
+        <p> Base64 encoding converts binary data into text format so it can be safely transmitted through systems that handle text data. It is widely used in APIs, email attachments, and embedding images in HTML or CSS. </p>
+        <h2>How to Use Base64 Encoder / Decoder?</h2>
+        <ol>
+          <li>Enter text or Base64 string in the input field.</li>
+          <li>Select Encode or Decode.</li>
+          <li>Click Convert.</li>
+          <li>Copy the result instantly.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 </section>
-	</section>
-     
- 
-
-  <!-- InstanceEndEditable -->
+<!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer class="footer light">
   <div class="clearfix"></div>
@@ -453,174 +301,89 @@ This tool helps convert SVG graphics into widely supported formats without losin
   </article>
 </footer>
 <div class="clearfix"></div>
-<!-- InstanceBeginEditable name="EditRegion5" -->
-     
-  <script src="js/bootstrap.bundle.min.js"></script>
-   <script>
+<!-- InstanceBeginEditable name="EditRegion5" --> 
+<script src="js/bootstrap.bundle.min.js"></script> 
+ 
+<script>
 
-let svgFiles=[]
-let svgTexts=[]
-let aspectRatio=null
+const progress = document.querySelector(".progress")
+const progressBar = document.getElementById("progressBar")
+const outputText = document.getElementById("outputText")
+const successMsg = document.getElementById("successMsg")
 
-const input=document.getElementById("fileInput")
-const drop=document.getElementById("dropzone")
-const preview=document.getElementById("previewImg")
-const fileList=document.getElementById("fileList")
+function simulateProgress(callback){
 
-drop.onclick=()=>input.click()
+progress.style.display="block"
+progressBar.style.width="0%"
+progressBar.innerText="0%"
 
-input.onchange=e=>{
-handleFiles(e.target.files)
+let percent = 0
+
+let interval = setInterval(()=>{
+
+percent += 10
+progressBar.style.width = percent + "%"
+progressBar.innerText = percent + "%"
+
+if(percent >= 90){
+clearInterval(interval)
 }
 
-drop.ondragover=e=>{
-e.preventDefault()
-}
+},300)
 
-drop.ondrop=e=>{
-e.preventDefault()
-handleFiles(e.dataTransfer.files)
-}
+setTimeout(()=>{
 
-function handleFiles(files){
+progressBar.style.width="100%"
+progressBar.innerText="100%"
 
-svgFiles=[...files]
-svgTexts=[]
-fileList.innerHTML=""
+callback()
 
-svgFiles.forEach(file=>{
+setTimeout(()=>{
+progress.style.display="none"
+},800)
 
-fileList.innerHTML+=file.name+"<br>"
-
-let reader=new FileReader()
-
-reader.onload=e=>{
-
-let svg=optimizeSVG(e.target.result)
-
-svgTexts.push(svg)
-
-let img=new Image()
-
-img.onload=function(){
-
-aspectRatio=img.width/img.height
-
-preview.src="data:image/svg+xml;base64,"+btoa(svg)
-
-if(!width.value){
-width.value=img.width
-height.value=img.height
-}
+},3500)
 
 }
 
-img.src="data:image/svg+xml;base64,"+btoa(svg)
+function convertBase64(){
 
+let text = document.getElementById("inputText").value.trim()
+let mode = document.querySelector('input[name="mode"]:checked').value
+
+simulateProgress(()=>{
+
+try{
+
+if(mode === "encode"){
+outputText.value = btoa(unescape(encodeURIComponent(text)))
+}
+else{
+outputText.value = decodeURIComponent(escape(atob(text)))
 }
 
-reader.readAsText(file)
+}
+catch{
+outputText.value = "Invalid Base64 string"
+}
 
 })
 
 }
 
-/* SVG Optimizer */
+function copyText(){
 
-function optimizeSVG(svg){
+navigator.clipboard.writeText(outputText.value)
 
-return svg
-.replace(/\n/g,"")
-.replace(/\t/g,"")
-.replace(/\s{2,}/g," ")
-.replace(/>\s+</g,"><")
+successMsg.style.display="block"
 
-}
-
-/* Aspect Ratio */
-
-const width=document.getElementById("width")
-const height=document.getElementById("height")
-const lock=document.getElementById("lockRatio")
-
-width.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-height.value=Math.round(width.value/aspectRatio)
+setTimeout(()=>{
+successMsg.style.display="none"
+},2000)
 
 }
 
-}
-
-height.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-width.value=Math.round(height.value*aspectRatio)
-
-}
-
-}
-
-/* Download */
-
-document.getElementById("downloadBtn").onclick=function(){
-
-if(!svgTexts.length) return
-
-let format=document.getElementById("format").value
-let transparent=document.getElementById("transparent").checked
-
-svgTexts.forEach((svg,i)=>{
-
-let img=new Image()
-
-img.onload=function(){
-
-let canvas=document.createElement("canvas")
-
-canvas.width=width.value||img.width
-canvas.height=height.value||img.height
-
-let ctx=canvas.getContext("2d")
-
-if(!transparent){
-
-ctx.fillStyle="#ffffff"
-ctx.fillRect(0,0,canvas.width,canvas.height)
-
-}
-
-ctx.drawImage(img,0,0,canvas.width,canvas.height)
-
-let link=document.createElement("a")
-
-if(format==="ico"){
-
-link.download="icon_"+i+".ico"
-link.href=canvas.toDataURL("image/png")
-
-}else{
-
-link.download="converted_"+i+"."+format
-link.href=canvas.toDataURL("image/"+format)
-
-}
-
-link.click()
-
-}
-
-img.src="data:image/svg+xml;base64,"+btoa(svg)
-
-})
-
-}
-
-</script>  
-   
-<!-- InstanceEndEditable --> 
+</script><!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");
 const menu = document.querySelector(".mainmenubar");

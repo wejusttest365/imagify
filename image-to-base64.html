@@ -7,166 +7,107 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
 <!-- ===================================================== -->
-<!-- ===================================================== -->
-<!-- PAGE TITLE --> 
 
-<title>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO Online | WebToolOcean</title>
-
-<meta name="description" content="Free SVG Converter online. Convert SVG to PNG, JPG, WEBP, or ICO instantly. Batch SVG conversion, transparent background option, SVG optimizer, and resize tool for developers and designers.">
-
-<meta name="keywords" content="svg converter, svg to png, svg to ico, svg to jpg, svg to webp, batch svg converter, svg optimizer, convert svg online, favicon converter, svg image converter">
-
-<meta name="robots" content="index, follow">
-
-<meta name="author" content="WebToolOcean">
-
+<!-- Basic SEO Meta Tags -->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="canonical" href="https://webtoolocean.com/svg-converter.html">
+<!-- Page Title (Important for SEO) -->
+<title>Image to Base64 Converter Online Free | WebToolOcean</title>
 
+<!-- Meta Description (Shows in Google search results) -->
+<meta name="description" content="Convert images to Base64 online for free. Upload PNG, JPG, WEBP images and get Base64 code instantly. Fast and secure tool by WebToolOcean.">
 
-<!-- Open Graph (Facebook / LinkedIn) -->
+<!-- Keywords (Optional but helpful) -->
+<meta name="keywords" content="image to base64, convert image to base64, base64 encoder image, base64 converter online">
 
-<meta property="og:title" content="SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO">
-<meta property="og:description" content="Convert SVG files to PNG, JPG, WEBP, or ICO online. Free batch SVG converter with resize, optimizer, and transparent background support.">
+<!-- Author -->
+<meta name="author" content="WebToolOcean">
+
+<!-- Open Graph for social sharing -->
+<meta property="og:title" content="Image to Base64 Converter | WebToolOcean">
+<meta property="og:description" content="Free online tool to convert images into Base64 code instantly.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://webtoolocean.com/svg-converter.html">
-<meta property="og:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
-<meta property="og:site_name" content="WebToolOcean">
 
-
-<!-- Twitter SEO -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SVG Converter – Convert SVG to PNG JPG WEBP ICO">
-<meta name="twitter:description" content="Free online SVG converter tool. Convert SVG to PNG, JPG, WEBP, ICO with batch conversion and optimizer.">
-<meta name="twitter:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
-
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "SVG Converter",
- "url": "https://webtoolocean.com/svg-converter.html",
- "applicationCategory": "DeveloperApplication",
- "operatingSystem": "All",
- "description": "Free online SVG converter tool to convert SVG files to PNG, JPG, WEBP, or ICO with batch conversion, resize, and optimization.",
- "offers": {
-   "@type": "Offer",
-   "price": "0",
-   "priceCurrency": "USD"
- }
-}
-</script>
+<!-- Robots -->
+<meta name="robots" content="index, follow">
 <!-- ===================================================== -->
 	
 <!--CSS for the website-->
  
   <!-- Dependencies -->
- <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/font-convert.css" rel="stylesheet">
-  
-<style>
- 
+ <style>
 
-.generator{
-display:grid;
-grid-template-columns:350px 1fr;
-gap:30px;
+body{
+background:#f4f7fb;
+font-family:Arial;
 }
 
-.controls{
-background:white;
-padding:25px;
+.tool-box{
+background:#fff;
 border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+padding:30px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-.preview-area{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-.dropzone{
-border:2px dashed #cbd5e1;
-padding:40px;
+.drop-area{
+border:2px dashed #0d6efd;
 border-radius:10px;
+padding:40px;
 text-align:center;
 cursor:pointer;
 transition:.3s;
 }
 
-.dropzone:hover{
-border-color:#6366f1;
-background:#f8f9ff;
-}
-
-.control{
-margin-top:15px;
-}
-
-.control label{
-display:block;
-font-size:14px;
-margin-bottom:5px;
-}
-
-.control input,
-.control select{
-width:100%;
-padding:8px;
-border:1px solid #ddd;
-border-radius:6px;
+.drop-area:hover{
+background:#f1f7ff;
 }
 
 .preview img{
-max-width:100%;
-margin-top:20px;
-}
-
-section button{
-margin-top:20px;
-padding:12px 18px;
-border:none;
-background:#6366f1;
-color:white;
-border-radius:8px;
-cursor:pointer;
-font-size:15px;
-width:100%;
-}
-
-section button:hover{
-background:#4f46e5;
-}
-
-.file-list{
+max-width:220px;
 margin-top:15px;
+}
+
+textarea{
+height:160px;
 font-size:13px;
-color:#666;
-}
-.control.checkboxcontrol label {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 8px;
 }
 
- 
-
-.control.checkboxcontrol label input {
-    width: auto;
+#copyMsg{
+display:none;
+color:green;
+font-weight:600;
 }
-</style>
-	  
+
+.progress{
+display:none;
+height:18px; /* bigger height */
+margin-top:20px;
+background:#e9ecef;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:100%;
+font-size:12px;
+font-weight:600;
+line-height:18px;
+}
+
+.seo-section{
+background:#fff;
+margin-top:40px;
+padding:30px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+</style> 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -271,119 +212,89 @@ color:#666;
   <section id="content">
    
    <section class="py-5">
-      <div class="container">
+      <div class="container py-1">
 
-<h1>SVG Converter</h1>
+<h1 class="text-center mb-4">Image to Base64 Converter</h1>
 
-<div class="generator">
+<div class="tool-box">
 
-<!-- Controls -->
-
-<div class="controls">
-
-<div class="dropzone" id="dropzone">
-Drop SVG File Here<br>or Click to Upload
-<input type="file" id="fileInput" accept=".svg" multiple hidden>
+<!-- Upload Area -->
+<div id="dropArea" class="drop-area">
+<p class="mb-2">Drag & Drop Image Here</p>
+<p>or Click to Upload</p>
+<input type="file" id="fileInput" accept="image/*" hidden>
 </div>
 
-<div class="file-list" id="fileList"></div>
-
-<div class="control">
-<label>Width</label>
-<input type="number" id="width">
+<!-- Progress Bar -->
+<div class="progress">
+<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%"></div>
 </div>
 
-<div class="control">
-<label>Height</label>
-<input type="number" id="height">
+<!-- Image Preview -->
+<div class="preview text-center"></div>
+
+<!-- Base64 Output -->
+<div class="mt-4">
+
+<textarea id="base64Output" class="form-control" readonly></textarea>
+	 <h2 class="text-center mt-3">Base64 Output</h2> 
 </div>
 
-<div class="control checkboxcontrol">
-<label>
-<input type="checkbox" id="lockRatio" checked>
-Lock Aspect Ratio
-</label>
+<!-- Buttons -->
+<div class="mt-3 text-center">
+
+<button class="btn btn-primary me-2" onclick="copyBase64()">Copy Base64</button>
+
+<button class="btn btn-success" onclick="downloadBase64()">Download TXT</button>
+
+<div id="copyMsg">
+✔ Copied to clipboard
 </div>
 
-<div class="control">
-<label>Export Format</label>
-<select id="format">
-<option value="png">PNG</option>
-<option value="jpeg">JPG</option>
-<option value="webp">WEBP</option>
-<option value="ico">ICO</option>
-</select>
 </div>
-
-<div class="control checkboxcontrol">
-<label>
-<input type="checkbox" id="transparent" checked>
-Transparent Background
-</label>
-</div>
-
-<button id="downloadBtn">Download File</button>
 
 </div>
 
 
-<!-- Preview -->
+<!-- SEO CONTENT SECTION -->
+<div class="seo-section">
 
-<div class="preview-area">
+<h2>What is Image to Base64?</h2>
 
-<h3>Preview</h3>
+<p>
+Base64 is a text encoding format used to represent binary data like images as text.
+Developers often use Base64 encoded images directly in HTML, CSS, or JSON files.
+This tool allows you to convert images into Base64 format instantly in your browser.
+</p>
 
-<div class="preview">
-<img id="previewImg">
-</div>
+<h2>How to Convert Image to Base64</h2>
 
-</div>
+<ol>
+<li>Upload your image file.</li>
+<li>The tool automatically converts it to Base64.</li>
+<li>Copy the Base64 code.</li>
+<li>Use it in HTML, CSS, or APIs.</li>
+</ol>
+
+<h2>Example Usage in HTML</h2>
+
+<pre>
+&lt;img src="data:image/png;base64,BASE64_STRING"&gt;
+</pre>
+
+<h2>Why Use Base64 Images?</h2>
+
+<ul>
+<li>Embed images directly inside HTML</li>
+<li>Reduce external image requests</li>
+<li>Useful for API responses</li>
+<li>Great for small icons and assets</li>
+</ul>
 
 </div>
 
 </div>
   </section> 
-	  <section class="py-4">
-<div class="container">
-
-<h1>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO</h1>
-
-<p>
-WebToolOcean SVG Converter lets you easily convert SVG files into PNG, JPG, WEBP, or ICO formats directly in your browser.
-Upload one or multiple SVG files, resize images, maintain aspect ratio, enable transparent background, and optimize SVG code.
-This free online tool is designed for web designers, developers, and digital creators who need fast and reliable SVG conversions.
-</p>
-
-<h2>Features of This SVG Converter</h2>
-
-<ul>
-<li>Convert SVG to PNG, JPG, WEBP, and ICO</li>
-<li>Batch SVG conversion support</li>
-<li>Resize images with locked aspect ratio</li>
-<li>Transparent background option</li>
-<li>Built-in SVG optimizer to reduce file size</li>
-<li>Drag and drop SVG upload</li>
-<li>Instant browser-based conversion</li>
-</ul>
-
-<h2>Why Use an SVG Converter?</h2>
-
-<p>
-SVG images are scalable vector graphics that maintain high quality at any size. However, many platforms require raster formats like PNG or JPG.
-This tool helps convert SVG graphics into widely supported formats without losing visual quality.
-</p>
-
-<h2>Who Can Use This Tool?</h2>
-
-<ul>
-<li>Web designers creating website graphics</li>
-<li>Developers generating favicon or icon images</li>
-<li>UI/UX designers exporting vector illustrations</li>
-<li>Content creators preparing images for the web</li>
-</ul>
-
-</div>
-</section>
 	</section>
      
  
@@ -456,170 +367,111 @@ This tool helps convert SVG graphics into widely supported formats without losin
 <!-- InstanceBeginEditable name="EditRegion5" -->
      
   <script src="js/bootstrap.bundle.min.js"></script>
+     
    <script>
 
-let svgFiles=[]
-let svgTexts=[]
-let aspectRatio=null
+const dropArea = document.getElementById("dropArea");
+const fileInput = document.getElementById("fileInput");
+const preview = document.querySelector(".preview");
+const output = document.getElementById("base64Output");
 
-const input=document.getElementById("fileInput")
-const drop=document.getElementById("dropzone")
-const preview=document.getElementById("previewImg")
-const fileList=document.getElementById("fileList")
+const progress = document.querySelector(".progress");
+const progressBar = document.querySelector(".progress-bar");
 
-drop.onclick=()=>input.click()
+dropArea.addEventListener("click", () => fileInput.click());
 
-input.onchange=e=>{
-handleFiles(e.target.files)
+fileInput.addEventListener("change", handleFile);
+
+dropArea.addEventListener("dragover", (e)=>{
+e.preventDefault();
+});
+
+dropArea.addEventListener("drop", (e)=>{
+e.preventDefault();
+const file = e.dataTransfer.files[0];
+convertToBase64(file);
+});
+
+function handleFile(){
+const file = fileInput.files[0];
+convertToBase64(file);
 }
 
-drop.ondragover=e=>{
-e.preventDefault()
+function convertToBase64(file){
+
+if(!file) return;
+
+progress.style.display="block";
+progressBar.style.width="0%";
+
+let percent = 0;
+
+const fakeProgress = setInterval(()=>{
+
+percent += 10;
+
+progressBar.style.width = percent + "%";
+
+if(percent >= 90){
+clearInterval(fakeProgress);
 }
 
-drop.ondrop=e=>{
-e.preventDefault()
-handleFiles(e.dataTransfer.files)
-}
+},300); // smooth progress
 
-function handleFiles(files){
+const reader = new FileReader();
 
-svgFiles=[...files]
-svgTexts=[]
-fileList.innerHTML=""
+reader.onload = function(e){
 
-svgFiles.forEach(file=>{
+setTimeout(()=>{
 
-fileList.innerHTML+=file.name+"<br>"
+progressBar.style.width="100%";
 
-let reader=new FileReader()
+const base64 = e.target.result;
 
-reader.onload=e=>{
+output.value = base64;
 
-let svg=optimizeSVG(e.target.result)
+preview.innerHTML = `<img src="${base64}" class="img-fluid">`;
 
-svgTexts.push(svg)
+setTimeout(()=>{
+progress.style.display="none";
+progressBar.style.width="0%";
+},1000);
 
-let img=new Image()
+},3500); // show progress for 3.5 seconds
 
-img.onload=function(){
+};
 
-aspectRatio=img.width/img.height
-
-preview.src="data:image/svg+xml;base64,"+btoa(svg)
-
-if(!width.value){
-width.value=img.width
-height.value=img.height
-}
-
-}
-
-img.src="data:image/svg+xml;base64,"+btoa(svg)
-
-}
-
-reader.readAsText(file)
-
-})
-
-}
-
-/* SVG Optimizer */
-
-function optimizeSVG(svg){
-
-return svg
-.replace(/\n/g,"")
-.replace(/\t/g,"")
-.replace(/\s{2,}/g," ")
-.replace(/>\s+</g,"><")
+reader.readAsDataURL(file);
 
 }
 
-/* Aspect Ratio */
+function copyBase64(){
 
-const width=document.getElementById("width")
-const height=document.getElementById("height")
-const lock=document.getElementById("lockRatio")
+output.select();
+document.execCommand("copy");
 
-width.oninput=function(){
+const msg = document.getElementById("copyMsg");
 
-if(lock.checked && aspectRatio){
+msg.style.display="block";
 
-height.value=Math.round(width.value/aspectRatio)
-
-}
-
-}
-
-height.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-width.value=Math.round(height.value*aspectRatio)
+setTimeout(()=>{
+msg.style.display="none";
+},2000);
 
 }
 
-}
+function downloadBase64(){
 
-/* Download */
+const blob = new Blob([output.value],{type:"text/plain"});
+const a = document.createElement("a");
 
-document.getElementById("downloadBtn").onclick=function(){
-
-if(!svgTexts.length) return
-
-let format=document.getElementById("format").value
-let transparent=document.getElementById("transparent").checked
-
-svgTexts.forEach((svg,i)=>{
-
-let img=new Image()
-
-img.onload=function(){
-
-let canvas=document.createElement("canvas")
-
-canvas.width=width.value||img.width
-canvas.height=height.value||img.height
-
-let ctx=canvas.getContext("2d")
-
-if(!transparent){
-
-ctx.fillStyle="#ffffff"
-ctx.fillRect(0,0,canvas.width,canvas.height)
+a.href = URL.createObjectURL(blob);
+a.download="base64.txt";
+a.click();
 
 }
 
-ctx.drawImage(img,0,0,canvas.width,canvas.height)
-
-let link=document.createElement("a")
-
-if(format==="ico"){
-
-link.download="icon_"+i+".ico"
-link.href=canvas.toDataURL("image/png")
-
-}else{
-
-link.download="converted_"+i+"."+format
-link.href=canvas.toDataURL("image/"+format)
-
-}
-
-link.click()
-
-}
-
-img.src="data:image/svg+xml;base64,"+btoa(svg)
-
-})
-
-}
-
-</script>  
-   
+</script>
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");
