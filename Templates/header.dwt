@@ -159,7 +159,7 @@
         <p> © Copyright <span id="spanYear">2026</span> Web Tool Ocean  | Made With Love </p>
         <p> <a class="nav-link" href="https://webtoolocean.com/about/">About Us</a> | <a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a> | <a class="nav-link" href="https://webtoolocean.com/disclaimer.html">Disclaimer</a> | <a class="nav-link" href="https://webtoolocean.com/privacy/">Privacy</a> | <a class="nav-link" href="https://webtoolocean.com/terms/">Terms</a> </p>
       </div>
-    </div>
+    </div> 
   </article>
 </footer>
 <div class="clearfix"></div>
