@@ -7,107 +7,120 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
 <!-- ===================================================== -->
+<!-- ===================================================== -->
+<!-- PAGE TITLE -->
 
-<!-- Basic SEO Meta Tags -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter & Validator Online | WebToolOcean</title>
 
-<!-- Page Title (Important for SEO) -->
-<title>Image to Base64 Converter Online Free | WebToolOcean</title>
+<meta name="description" content="Free online JSON Formatter and Validator. Beautify, format and validate JSON instantly with WebToolOcean developer tools.">
 
-<!-- Meta Description (Shows in Google search results) -->
-<meta name="description" content="Convert images to Base64 online for free. Upload PNG, JPG, WEBP images and get Base64 code instantly. Fast and secure tool by WebToolOcean.">
+<meta name="keywords" content="json formatter, json validator, json beautifier, format json online, validate json">
 
-<!-- Keywords (Optional but helpful) -->
-<meta name="keywords" content="image to base64, convert image to base64, base64 encoder image, base64 converter online">
-
-<!-- Author -->
 <meta name="author" content="WebToolOcean">
 
-<!-- Open Graph for social sharing -->
-<meta property="og:title" content="Image to Base64 Converter | WebToolOcean">
-<meta property="og:description" content="Free online tool to convert images into Base64 code instantly.">
-<meta property="og:type" content="website">
-
-<!-- Robots -->
-<meta name="robots" content="index, follow">
+<meta property="og:title" content="JSON Formatter & Validator">
+<meta property="og:description" content="Beautify and validate JSON instantly online.">
+<meta property="og:url" content="https://webtoolocean.com/json-formatter.html">
 <!-- ===================================================== -->
 	
 <!--CSS for the website-->
  
   <!-- Dependencies -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/font-convert.css" rel="stylesheet">
+	
+	<link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">
  <style>
 
 body{
-background:#f4f7fb;
-font-family:Arial;
+background:#f5f7fb;
 }
 
 .tool-box{
 background:#fff;
-border-radius:12px;
 padding:30px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+border-radius:12px;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+}
+.valid{
+color:green;
 }
 
-.drop-area{
-border:2px dashed #0d6efd;
-border-radius:10px;
-padding:40px;
-text-align:center;
-cursor:pointer;
-transition:.3s;
+.invalid{
+color:red;
+}
+.editor{
+display:flex;
+border-radius:8px;
+overflow:hidden;
+background:#1e1e1e;
+height: 350px;
 }
 
-.drop-area:hover{
-background:#f1f7ff;
-}
-
-.preview img{
-max-width:220px;
-margin-top:15px;
+.line-numbers{
+background:#2b2b2b;
+color:#aaa;
+padding:10px;
+text-align:right;
+user-select:none;
+font-size:13px;
+min-width:40px;
 }
 
 textarea{
-height:160px;
-font-size:13px;
-}
-
-#copyMsg{
-display:none;
-color:green;
-font-weight:600;
+border:none;
+outline:none;
+resize:none;
+padding:10px;
+font-family:monospace;
+font-size:14px;
+background:#1e1e1e;
+color:#fff;
+width:100%;
+height:auto;
 }
 
 .progress{
 display:none;
-height:18px; /* bigger height */
+height:22px;
 margin-top:20px;
-background:#e9ecef;
-border-radius:10px;
+border-radius:12px;
 overflow:hidden;
 }
 
-.progress-bar{
-height:100%;
-font-size:12px;
+.success-msg{
+display:none;
+color:green;
 font-weight:600;
-line-height:18px;
+margin-top:10px;
 }
 
-.seo-section{
-background:#fff;
-margin-top:40px;
-padding:30px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.05);
+.error-msg{
+display:none;
+color:red;
+font-weight:600;
+margin-top:10px;
 }
 
-</style> 	  
+.stats{
+font-size:13px;
+color:#666;
+margin-top:5px;
+}
+
+@media(max-width:768px){
+textarea{
+height:200px;
+}
+.col-md-6{
+margin-bottom:20px;
+}
+}
+
+</style>
+ 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -177,11 +190,8 @@ box-shadow:0 3px 10px rgba(0,0,0,0.05);
                   <li><a class="dropdown-item" href="html-formatter.html">HTML Formatter</a></li>
                   <li><a class="dropdown-item" href="css-formatter.html">Beautify / Minify CSS</a></li>
                   <li><a class="dropdown-item" href="check-css-error.html">Check CSS Errors</a></li>
-       
                   <li><a class="dropdown-item" href="base64-encoder-decoder.html">Base64 Encoder-Decoder</a></li>
-				<li><a class="dropdown-item" href="developer-tools/json-formatter/">JSON Formatter</a></li> 
                 </ul>
-				  
               </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Other Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
@@ -215,86 +225,110 @@ box-shadow:0 3px 10px rgba(0,0,0,0.05);
   <section id="content">
    
    <section class="py-5">
-      <div class="container py-1">
+      <div class="container py-5">
 
-<h1 class="text-center mb-4">Image to Base64 Converter</h1>
+<h1 class="text-center mb-3">JSON Formatter & Validator</h1>
+
+<p class="text-center text-muted">
+Format, beautify and validate JSON data instantly.
+</p>
 
 <div class="tool-box">
 
-<!-- Upload Area -->
-<div id="dropArea" class="drop-area">
-<p class="mb-2">Drag & Drop Image Here</p>
-<p>or Click to Upload</p>
-<input type="file" id="fileInput" accept="image/*" hidden>
-</div>
+<div class="row">
 
-<!-- Progress Bar -->
+<!-- INPUT -->
+<div class="col-md-6">
+
+<label class="form-label">Input JSON</label>
+
+<div class="editor">
+<div class="line-numbers" id="lineNumbersInput">1</div>
+<textarea id="inputJSON"
+oninput="updateLines('inputJSON','lineNumbersInput'); updateStats(); toggleActionButtons(); validateJSONLive();"
+placeholder="Paste JSON here..."></textarea>
+
+</div>
+<div id="jsonStatus" class="mt-2 fw-semibold"></div>
+<div class="stats" id="inputStats">0 chars</div>
+
+<button id="formatBtn" class="btn btn-primary mt-3" onclick="formatJSON()" disabled>
+Format JSON
+</button>
+
+<button id="minifyBtn" class="btn btn-dark mt-3" onclick="minifyJSON()" disabled>
+Minify
+</button>
+<button class="btn btn-secondary mt-3" onclick="clearJSON()">Clear</button>
+
 <div class="progress">
-<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%"></div>
+<div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">0%</div>
 </div>
 
-<!-- Image Preview -->
-<div class="preview text-center"></div>
-
-<!-- Base64 Output -->
-<div class="mt-4">
-
-<textarea id="base64Output" class="form-control" readonly></textarea>
-	 <h2 class="text-center mt-3">Base64 Output</h2> 
-</div>
-
-<!-- Buttons -->
-<div class="mt-3 text-center">
-
-<button class="btn btn-primary me-2" onclick="copyBase64()">Copy Base64</button>
-
-<button class="btn btn-success" onclick="downloadBase64()">Download TXT</button>
-
-<div id="copyMsg">
-✔ Copied to clipboard
-</div>
+<div class="error-msg" id="errorMsg"></div>
 
 </div>
 
+<!-- OUTPUT -->
+<div class="col-md-6">
+
+<label class="form-label">Formatted JSON</label>
+
+<div class="editor">
+<div class="line-numbers" id="lineNumbersOutput">1</div>
+<textarea id="outputJSON" readonly></textarea>
 </div>
 
+<div class="stats" id="outputStats">0 chars</div>
 
-<!-- SEO CONTENT SECTION -->
-<div class="seo-section">
+<button id="copyBtn" class="btn btn-success mt-3" onclick="copyJSON()" disabled>
+Copy Result
+</button>
 
-<h2>What is Image to Base64?</h2>
+<button id="downloadBtn" class="btn btn-outline-success mt-3" onclick="downloadJSON()" disabled>
+Download
+</button>
+
+<div class="success-msg" id="successMsg">
+✔ Copied successfully
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+  </section> 
+   <section class="py-5">
+     <div class="container mt-5">
+
+<h2>What is JSON Formatter?</h2>
 
 <p>
-Base64 is a text encoding format used to represent binary data like images as text.
-Developers often use Base64 encoded images directly in HTML, CSS, or JSON files.
-This tool allows you to convert images into Base64 format instantly in your browser.
+JSON Formatter is a tool used to beautify and structure JSON data so it becomes easy to read and debug. Developers often work with APIs that return JSON data, and formatting helps in understanding complex structures.
 </p>
 
-<h2>How to Convert Image to Base64</h2>
+<h2>How to Use JSON Formatter?</h2>
 
 <ol>
-<li>Upload your image file.</li>
-<li>The tool automatically converts it to Base64.</li>
-<li>Copy the Base64 code.</li>
-<li>Use it in HTML, CSS, or APIs.</li>
+<li>Paste JSON data into the input field.</li>
+<li>Click Format JSON.</li>
+<li>The tool will validate and beautify the JSON.</li>
+<li>Copy or download the formatted JSON.</li>
 </ol>
 
-<h2>Example Usage in HTML</h2>
-
-<pre>
-&lt;img src="data:image/png;base64,BASE64_STRING"&gt;
-</pre>
-
-<h2>Why Use Base64 Images?</h2>
+<h2>Features of This Tool</h2>
 
 <ul>
-<li>Embed images directly inside HTML</li>
-<li>Reduce external image requests</li>
-<li>Useful for API responses</li>
-<li>Great for small icons and assets</li>
+<li>Instant JSON formatting</li>
+<li>JSON validation with error detection</li>
+<li>Minify JSON option</li>
+<li>Download formatted JSON</li>
+<li>Works completely in browser</li>
+<li>Secure and free developer tool</li>
 </ul>
-
-</div>
 
 </div>
   </section> 
@@ -370,111 +404,233 @@ This tool allows you to convert images into Base64 format instantly in your brow
 <!-- InstanceBeginEditable name="EditRegion5" -->
      
   <script src="js/bootstrap.bundle.min.js"></script>
-     
    <script>
 
-const dropArea = document.getElementById("dropArea");
-const fileInput = document.getElementById("fileInput");
-const preview = document.querySelector(".preview");
-const output = document.getElementById("base64Output");
+const progress = document.querySelector(".progress")
+const progressBar = document.getElementById("progressBar")
+const successMsg = document.getElementById("successMsg")
+const errorMsg = document.getElementById("errorMsg")
 
-const progress = document.querySelector(".progress");
-const progressBar = document.querySelector(".progress-bar");
+ function simulateProgress(callback){
 
-dropArea.addEventListener("click", () => fileInput.click());
+const copyBtn = document.getElementById("copyBtn")
+const downloadBtn = document.getElementById("downloadBtn")
 
-fileInput.addEventListener("change", handleFile);
+// Disable buttons
+copyBtn.disabled = true
+downloadBtn.disabled = true
 
-dropArea.addEventListener("dragover", (e)=>{
-e.preventDefault();
-});
+progress.style.display="block"
+progressBar.style.width="0%"
+progressBar.innerText="0%"
 
-dropArea.addEventListener("drop", (e)=>{
-e.preventDefault();
-const file = e.dataTransfer.files[0];
-convertToBase64(file);
-});
+let percent = 0
 
-function handleFile(){
-const file = fileInput.files[0];
-convertToBase64(file);
-}
-
-function convertToBase64(file){
-
-if(!file) return;
-
-progress.style.display="block";
-progressBar.style.width="0%";
-
-let percent = 0;
-
-const fakeProgress = setInterval(()=>{
-
-percent += 10;
-
-progressBar.style.width = percent + "%";
-
-if(percent >= 90){
-clearInterval(fakeProgress);
-}
-
-},300); // smooth progress
-
-const reader = new FileReader();
-
-reader.onload = function(e){
+let interval = setInterval(()=>{
+percent += 10
+progressBar.style.width = percent + "%"
+progressBar.innerText = percent + "%"
+if(percent >= 90) clearInterval(interval)
+},300)
 
 setTimeout(()=>{
 
-progressBar.style.width="100%";
+progressBar.style.width="100%"
+progressBar.innerText="100%"
 
-const base64 = e.target.result;
+callback()
 
-output.value = base64;
-
-preview.innerHTML = `<img src="${base64}" class="img-fluid">`;
-
+// Enable buttons ONLY if output exists
 setTimeout(()=>{
-progress.style.display="none";
-progressBar.style.width="0%";
-},1000);
 
-},3500); // show progress for 3.5 seconds
+let output = document.getElementById("outputJSON").value
 
-};
+if(output.trim() !== ""){
+copyBtn.disabled = false
+downloadBtn.disabled = false
+}
 
-reader.readAsDataURL(file);
+progress.style.display="none"
+
+},800)
+
+},3500)
 
 }
 
-function copyBase64(){
+function formatJSON(){
 
-output.select();
-document.execCommand("copy");
+let input = document.getElementById("inputJSON").value
+errorMsg.style.display="none"
 
-const msg = document.getElementById("copyMsg");
+simulateProgress(()=>{
 
-msg.style.display="block";
+try{
+let parsed = JSON.parse(input)
+let formatted = JSON.stringify(parsed, null, 4)
 
-setTimeout(()=>{
-msg.style.display="none";
-},2000);
+document.getElementById("outputJSON").value = formatted
+
+updateLines('outputJSON','lineNumbersOutput')
+updateStats()
+
+}catch(e){
+errorMsg.style.display="block"
+errorMsg.innerText = "Invalid JSON: " + e.message
+document.getElementById("outputJSON").value = ""
+}
+
+})
 
 }
 
-function downloadBase64(){
+ function minifyJSON(){
 
-const blob = new Blob([output.value],{type:"text/plain"});
-const a = document.createElement("a");
+let input = document.getElementById("inputJSON").value
+errorMsg.style.display="none"
 
-a.href = URL.createObjectURL(blob);
-a.download="base64.txt";
-a.click();
+simulateProgress(()=>{
+
+try{
+
+let parsed = JSON.parse(input)
+let minified = JSON.stringify(parsed)
+
+document.getElementById("outputJSON").value = minified
+
+updateLines('outputJSON','lineNumbersOutput')
+updateStats()
+
+}catch(e){
+
+errorMsg.style.display="block"
+errorMsg.innerText = "Invalid JSON"
+document.getElementById("outputJSON").value = ""
 
 }
 
-</script>
+})
+
+}
+
+function clearJSON(){
+
+document.getElementById("inputJSON").value=""
+document.getElementById("outputJSON").value=""
+errorMsg.style.display="none"
+
+document.getElementById("copyBtn").disabled = true
+document.getElementById("downloadBtn").disabled = true
+
+updateLines('inputJSON','lineNumbersInput')
+updateLines('outputJSON','lineNumbersOutput')
+updateStats()
+document.getElementById("formatBtn").disabled = true
+document.getElementById("minifyBtn").disabled = true
+}
+
+function copyJSON(){
+let text = document.getElementById("outputJSON").value
+navigator.clipboard.writeText(text)
+successMsg.style.display="block"
+setTimeout(()=>{ successMsg.style.display="none" },2000)
+}
+
+function downloadJSON(){
+
+let content = document.getElementById("outputJSON").value
+let blob = new Blob([content], {type:"application/json"})
+let a = document.createElement("a")
+
+a.href = URL.createObjectURL(blob)
+a.download = "formatted.json"
+a.click()
+
+}
+
+function updateLines(textareaId, lineId){
+
+let text = document.getElementById(textareaId).value
+let lines = text.split("\n").length
+
+let numbers = ""
+for(let i=1;i<=lines;i++){
+numbers += i + "<br>"
+}
+
+document.getElementById(lineId).innerHTML = numbers
+
+}
+
+function updateStats(){
+
+let input = document.getElementById("inputJSON").value.length
+let output = document.getElementById("outputJSON").value.length
+
+document.getElementById("inputStats").innerText = input + " chars"
+document.getElementById("outputStats").innerText = output + " chars"
+
+}
+
+updateLines('inputJSON','lineNumbersInput')
+updateLines('outputJSON','lineNumbersOutput')
+
+
+function toggleActionButtons(){
+
+let input = document.getElementById("inputJSON").value.trim()
+
+const formatBtn = document.getElementById("formatBtn")
+const minifyBtn = document.getElementById("minifyBtn")
+
+if(input.length > 0){
+formatBtn.disabled = false
+minifyBtn.disabled = false
+}else{
+formatBtn.disabled = true
+minifyBtn.disabled = true
+}
+
+}
+
+function validateJSONLive(){
+
+let input = document.getElementById("inputJSON").value.trim()
+const status = document.getElementById("jsonStatus")
+
+// Empty state
+if(input === ""){
+status.innerHTML = ""
+return
+}
+
+try{
+
+JSON.parse(input)
+
+status.innerHTML = "✔ Valid JSON"
+status.className = "valid"
+
+}catch(e){
+
+// Extract line number
+let match = e.message.match(/position (\d+)/)
+
+let line = 1
+
+if(match){
+let pos = parseInt(match[1])
+line = input.substring(0,pos).split("\n").length
+}
+
+status.innerHTML = "❌ Invalid JSON at line " + line
+status.className = "invalid"
+
+}
+
+}
+</script>  
+   
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");
