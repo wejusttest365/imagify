@@ -6,22 +6,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<title>Disclaimer | WebToolOcean</title>
+<!-- ===================================================== --> 
 
-<meta name="description" content="Read the disclaimer for WebToolOcean. Understand the limitations of liability and responsibility when using our online tools and website content.">
-<meta name="keywords" content="WebToolOcean disclaimer, website disclaimer, tools usage disclaimer">
+<!-- Basic SEO Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 Encoder & Decoder Online | WebToolOcean</title>
+<meta name="description" content="Free online Base64 Encoder and Decoder tool. Encode text to Base64 or decode Base64 to text instantly with WebToolOcean developer tools.">
+<meta name="keywords" content="base64 encoder, base64 decoder, encode base64 online, decode base64 string, base64 converter">
 <meta name="author" content="WebToolOcean">
-<meta name="robots" content="index, follow">
+<meta property="og:title" content="Base64 Encoder & Decoder">
+<meta property="og:description" content="Encode text to Base64 or decode Base64 instantly online.">
+<meta property="og:url" content="https://webtoolocean.com/base64-encoder-decoder.html">
 
-<link rel="canonical" href="http://webtoolocean.com/disclaimer.html">
+<!-- ===================================================== --> 
 
 <!--CSS for the website--> 
 
 <!-- Dependencies -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/font-convert.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">
+<style>
+body {
+    background: #f5f7fb;
+}
+.tool-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+textarea {
+    height: 160px;
+    resize: none;
+}
+.progress {
+    display: none;
+    height: 22px;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.success-msg {
+    display: none;
+    color: green;
+    font-weight: 600;
+    margin-top: 10px;
+}
+ .form-check-inline input {
+    line-height: normal;
+    margin-top: 2px;
+    /* position: relative; */
+}
+	.form-check-inline label {margin-top:0;}
+.form-check-inline input {
+    line-height: normal;
+    margin-top: 2px;
+    position: relative;
+}
+.form-check-input {
+   border-color:#4a4a4a !important;
+}
+@media(max-width:768px) {
+textarea {
+    height: 140px;
+}
+.col-md-6 {
+    margin-bottom: 20px;
+}
+}
+</style>
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -33,7 +90,7 @@
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<link href="css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
@@ -58,7 +115,7 @@
     <div class="container">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
       <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
@@ -89,12 +146,12 @@
               </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Developer Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="developer-tools/html-formatter">HTML Formatter</a></li>
-                  <li><a class="dropdown-item" href="developer-tools/css-formatter">Beautify / Minify CSS</a></li>
-                  <li><a class="dropdown-item" href="developer-tools/check-css-error">Check CSS Errors</a></li>
+                  <li><a class="dropdown-item" href="../html-formatter">HTML Formatter</a></li>
+                  <li><a class="dropdown-item" href="../css-formatter">Beautify / Minify CSS</a></li>
+                  <li><a class="dropdown-item" href="../check-css-error">Check CSS Errors</a></li>
        
-                  <li><a class="dropdown-item" href="developer-tools/base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
-				<li><a class="dropdown-item" href="developer-tools/json-formatter/">JSON Formatter</a></li> 
+                  <li><a class="dropdown-item" href="../base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
+				<li><a class="dropdown-item" href="../json-formatter/">JSON Formatter</a></li> 
                 </ul>
 				  
               </li>
@@ -113,7 +170,7 @@
     </div>
   </div>
 </header>
-<!-- InstanceBeginEditable name="center" --> 
+<!-- InstanceBeginEditable name="center" -->
 
 <!-- Start dynamic content --> 
 <!-- <section id="testimonials">
@@ -129,48 +186,59 @@
 <!-- Sevices section -->
 <section id="content">
   <section class="py-5">
-     <div class="container">
-
-<h1>Disclaimer for WebToolOcean</h1>
-
-<p><strong>Last Updated:</strong> March 9, 2026</p>
-
-<p>If you require any more information or have any questions about our site's disclaimer, please feel free to contact us.</p>
-
-<h2>General Disclaimer</h2>
-
-<p>All the information on this website – <strong>WebToolOcean</strong> – is published in good faith and for general information purposes only.</p>
-
-<p>WebToolOcean does not make any warranties about the completeness, reliability, or accuracy of this information.</p>
-
-<p>Any action you take upon the information you find on this website is strictly at your own risk.</p>
-
-<h2>Tools Disclaimer</h2>
-
-<p>The online tools provided on WebToolOcean are designed for convenience and informational purposes.</p>
-
-<p>While we strive to keep the tools accurate and updated, we do not guarantee that results generated by the tools will always be completely accurate or suitable for every situation.</p>
-
-<h2>External Links Disclaimer</h2>
-
-<p>Our website may contain links to external websites that are not provided or maintained by us.</p>
-
-<p>Please note that WebToolOcean does not guarantee the accuracy, relevance, or completeness of any information on these external websites.</p>
-
-<h2>Professional Disclaimer</h2>
-
-<p>The content on this website is not intended to replace professional advice.</p>
-
-<p>Users should consult appropriate professionals before making decisions based on the information or tools provided on this website.</p>
-
-<h2>Consent</h2>
-
-<p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
-
-<h2>Updates</h2>
-
-<p>We may update, amend, or make changes to this document at any time without prior notice.</p>
- 
+    <div class="container py-5">
+      <h1 class="text-center mb-3">Base64 Encoder / Decoder</h1>
+      <p class="text-center text-muted"> Encode text to Base64 or decode Base64 back to text instantly. </p>
+      <div class="tool-box">
+        <div class="row"> 
+          
+          <!-- INPUT SIDE -->
+          
+          <div class="col-md-6">
+            <label class="form-label">Input</label>
+            <textarea id="inputText" class="form-control" placeholder="Enter text or Base64 string"></textarea>
+            <div class="mt-3">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="encode" value="encode" checked>
+                <label class="form-check-label" for="encode">Encode</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="decode" value="decode">
+                <label class="form-check-label" for="decode">Decode</label>
+              </div>
+            </div>
+            <button class="btn btn-primary mt-3" onclick="convertBase64()"> Convert </button>
+            <div class="progress">
+              <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">0%</div>
+            </div>
+          </div>
+          
+          <!-- OUTPUT SIDE -->
+          
+          <div class="col-md-6">
+            <label class="form-label">Output</label>
+            <textarea id="outputText" class="form-control" readonly></textarea>
+            <button class="btn btn-success mt-3" onclick="copyText()"> Copy Result </button>
+            <div class="success-msg" id="successMsg"> ✔ Copied successfully </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SEO CONTENT SECTION -->
+    <div class="seo-section">
+      <div class="container mt-5">
+        <h2>What is Base64 Encoding?</h2>
+        <p> Base64 encoding converts binary data into text format so it can be safely transmitted through systems that handle text data. It is widely used in APIs, email attachments, and embedding images in HTML or CSS. </p>
+        <h2>How to Use Base64 Encoder / Decoder?</h2>
+        <ol>
+          <li>Enter text or Base64 string in the input field.</li>
+          <li>Select Encode or Decode.</li>
+          <li>Click Convert.</li>
+          <li>Copy the result instantly.</li>
+        </ol>
+      </div>
+    </div>
   </section>
 </section>
 <!-- InstanceEndEditable -->
@@ -240,7 +308,87 @@
 <div class="clearfix"></div>
 <!-- InstanceBeginEditable name="EditRegion5" --> 
 <script src="js/bootstrap.bundle.min.js"></script> 
-<!-- InstanceEndEditable --> 
+ 
+<script>
+
+const progress = document.querySelector(".progress")
+const progressBar = document.getElementById("progressBar")
+const outputText = document.getElementById("outputText")
+const successMsg = document.getElementById("successMsg")
+
+function simulateProgress(callback){
+
+progress.style.display="block"
+progressBar.style.width="0%"
+progressBar.innerText="0%"
+
+let percent = 0
+
+let interval = setInterval(()=>{
+
+percent += 10
+progressBar.style.width = percent + "%"
+progressBar.innerText = percent + "%"
+
+if(percent >= 90){
+clearInterval(interval)
+}
+
+},300)
+
+setTimeout(()=>{
+
+progressBar.style.width="100%"
+progressBar.innerText="100%"
+
+callback()
+
+setTimeout(()=>{
+progress.style.display="none"
+},800)
+
+},3500)
+
+}
+
+function convertBase64(){
+
+let text = document.getElementById("inputText").value.trim()
+let mode = document.querySelector('input[name="mode"]:checked').value
+
+simulateProgress(()=>{
+
+try{
+
+if(mode === "encode"){
+outputText.value = btoa(unescape(encodeURIComponent(text)))
+}
+else{
+outputText.value = decodeURIComponent(escape(atob(text)))
+}
+
+}
+catch{
+outputText.value = "Invalid Base64 string"
+}
+
+})
+
+}
+
+function copyText(){
+
+navigator.clipboard.writeText(outputText.value)
+
+successMsg.style.display="block"
+
+setTimeout(()=>{
+successMsg.style.display="none"
+},2000)
+
+}
+
+</script><!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");
 const menu = document.querySelector(".mainmenubar");

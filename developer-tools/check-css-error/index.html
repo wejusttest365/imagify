@@ -6,121 +6,197 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<!-- ===================================================== -->
-<!-- ===================================================== -->
-<!-- PAGE TITLE -->
+<!-- ===================================================== --> 
+<!-- ===================================================== --> 
+<!-- PAGE TITLE (Most important SEO element - keep under 60 chars) -->
+<title>Free CSS Error Checker Online – Find and Fix CSS Code Errors</title>
 
-<title>JSON Formatter & Validator Online | WebToolOcean</title>
+<!-- ===================================================== --> 
+<!-- META DESCRIPTION (150–160 characters recommended) -->
+<meta name="description" content="Check and fix CSS errors instantly with our free CSS Error Checker tool. Detect syntax mistakes, missing semicolons, and invalid CSS rules online.">
 
-<meta name="description" content="Free online JSON Formatter and Validator. Beautify, format and validate JSON instantly with WebToolOcean developer tools.">
+<!-- ===================================================== --> 
+<!-- SEO KEYWORDS (Optional but useful for other search engines) -->
+<meta name="keywords" content="css error checker, css validator online, check css syntax, find css errors, css debugging tool, css code validator, css error finder, webtoolocean css tools">
 
-<meta name="keywords" content="json formatter, json validator, json beautifier, format json online, validate json">
+<!-- ===================================================== --> 
+<!-- ROBOTS (Allow search engines to index this page) -->
+<meta name="robots" content="index, follow">
 
-<meta name="author" content="WebToolOcean">
+<!-- ===================================================== --> 
+<!-- AUTHOR -->
+<meta name="author" content="Web Tool Ocean">
 
-<meta property="og:title" content="JSON Formatter & Validator">
-<meta property="og:description" content="Beautify and validate JSON instantly online.">
-<meta property="og:url" content="https://webtoolocean.com/json-formatter.html">
-<!-- ===================================================== -->
-	
-<!--CSS for the website-->
- 
-  <!-- Dependencies -->
-	
-	<link href="../../css/global.css" rel="stylesheet">
+<!-- ===================================================== --> 
+<!-- MOBILE RESPONSIVE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===================================================== --> 
+<!-- CANONICAL URL (Prevents duplicate SEO issues) -->
+<link rel="canonical" href="https://webtoolocean.com/check-css-error.html">
+
+<!-- ===================================================== --> 
+<!-- OPEN GRAPH TAGS (Facebook / LinkedIn / WhatsApp sharing) -->
+<meta property="og:title" content="Free CSS Error Checker Tool">
+<meta property="og:description" content="Find and fix CSS syntax errors instantly using our free CSS Error Checker tool. Improve your CSS code quality online.">
+<meta property="og:url" content="https://webtoolocean.com/check-css-error.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Web Tool Ocean">
+<meta property="og:image" content="https://webtoolocean.com/images/css-error-checker-preview.png">
+
+<!-- ===================================================== --> 
+<!-- TWITTER CARD SEO -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free CSS Error Checker Online">
+<meta name="twitter:description" content="Check CSS code for syntax errors and fix issues instantly with our free CSS validator tool.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/css-error-checker-preview.png">
+
+<!-- ===================================================== --> 
+<!-- THEME COLOR -->
+<meta name="theme-color" content="#0d6efd">
+
+<!-- ===================================================== --> 
+<!-- STRUCTURED DATA (SCHEMA MARKUP FOR GOOGLE) --> 
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "SoftwareApplication",
+"name": "CSS Error Checker Tool",
+"operatingSystem": "All",
+"applicationCategory": "DeveloperApplication",
+"description": "Free online CSS Error Checker tool to detect syntax errors, missing semicolons and invalid CSS rules.",
+"url": "https://webtoolocean.com/check-css-error.html",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script> 
+<!-- ===================================================== --> 
+
+<!--CSS for the website--> 
+<!-- CSS for the page -->
+<link href="../../css/global.css" rel="stylesheet">
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
   <link href="../../css/style.css" rel="stylesheet">
   <link href="../../css/font-convert.css" rel="stylesheet">
- <style>
-
-body{
-background:#f5f7fb;
+<style>
+.editorWrap {
+    display: flex;
+    border: 1px solid #ccc;
+    background: #fff;
+    height: 450px;
+    overflow: hidden;
 }
-
-.tool-box{
-background:#fff;
-padding:30px;
-border-radius:12px;
-box-shadow:0 6px 25px rgba(0,0,0,0.08);
+#lineNumbers {
+    background: #eee;
+    padding: 10px 6px;
+    text-align: right;
+    user-select: none;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 14px;
 }
-.valid{
-color:green;
+#lineNumbers div {
+    height: 20px;
+    color: #666;
 }
-
-.invalid{
+/*#lineNumbers .errorLine{
+background:#ffd6d6;
 color:red;
+font-weight:bold;
+}*/
+
+textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: auto;
 }
-.editor{
+textarea.errorLine {
+    background: #ffe5e5;
+}
+.buttons {
+    margin-top: 15px;
+}
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+.check {
+    background: #007bff
+}
+.copy {
+    background: #28a745
+}
+.clear {
+    background: #666
+}
+.results {
+    margin-top: 20px;
+    display: none;
+    gap: 20px;
+}
+.box {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+.box h3 {
+    margin-top: 0;
+}
+.item {
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.item.error {
+    color: red;
+    font-weight: bold;
+}
+.item:hover {
+    background: #f3f3f3;
+}
+	.uploadWrap{
+margin-top:15px;
+}
+
+.uploadBox{
 display:flex;
+align-items:center;
+gap:10px;
+border:2px dashed #6c63ff;
+background:#f4f3ff;
+padding:14px 18px;
 border-radius:8px;
-overflow:hidden;
-background:#1e1e1e;
-height: 350px;
-}
-
-.line-numbers{
-background:#2b2b2b;
-color:#aaa;
-padding:10px;
-text-align:right;
-user-select:none;
-font-size:13px;
-min-width:40px;
-}
-
-textarea{
-border:none;
-outline:none;
-resize:none;
-padding:10px;
-font-family:monospace;
-font-size:14px;
-background:#1e1e1e;
-color:#fff;
-width:100%;
-height:auto;
-}
-
-.progress{
-display:none;
-height:22px;
-margin-top:20px;
-border-radius:12px;
-overflow:hidden;
-}
-
-.success-msg{
-display:none;
-color:green;
+cursor:pointer;
 font-weight:600;
-margin-top:10px;
+color:#6c63ff;
+width:220px;
+transition:0.2s;
 }
 
-.error-msg{
-display:none;
-color:red;
-font-weight:600;
-margin-top:10px;
+.uploadBox:hover{
+background:#ecebff;
+border-color:#4e46d4;
 }
 
-.stats{
-font-size:13px;
-color:#666;
-margin-top:5px;
+.uploadIcon{
+font-size:18px;
 }
-
-@media(max-width:768px){
-textarea{
-height:200px;
-}
-.col-md-6{
-margin-bottom:20px;
-}
-}
-
 </style>
- 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -212,90 +288,74 @@ margin-bottom:20px;
     </div>
   </div>
 </header>
-<!-- InstanceBeginEditable name="center" -->
- 
-  <!-- Start dynamic content -->
- <!-- <section id="testimonials">
+<!-- InstanceBeginEditable name="center" --> 
+
+<!-- Start dynamic content --> 
+<!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>-->
-  <!-- End dynamic content -->
-  <div class="clearfix"></div>
-  <!-- End dynamic content --> 
-  
-  <!-- Sevices section -->
-  <section id="content">
-   
-   <section class="py-5">
-      <div class="container">
+  </section>--> 
+<!-- End dynamic content -->
+<div class="clearfix"></div>
+<!-- End dynamic content --> 
 
-<h1 class="text-center mb-3">JSON Formatter & Validator</h1>
+<!-- Sevices section -->
+<section id="content">
 
-<p class="text-center text-muted">
-Format, beautify and validate JSON data instantly.
-</p>
+<section class="py-4">
 
-<div class="tool-box">
+<div class="container">
 
-<div class="row">
+<h1>CSS Error Checker</h1>
 
-<!-- INPUT -->
-<div class="col-md-6">
+<div class="editorWrap">
 
-<label class="form-label">Input JSON</label>
+<div id="lineNumbers"></div>
 
-<div class="editor">
-<div class="line-numbers" id="lineNumbersInput">1</div>
-<textarea id="inputJSON"
-oninput="updateLines('inputJSON','lineNumbersInput'); updateStats(); toggleActionButtons(); validateJSONLive();"
-placeholder="Paste JSON here..."></textarea>
-
-</div>
-<div id="jsonStatus" class="mt-2 fw-semibold"></div>
-<div class="stats" id="inputStats">0 chars</div>
-
-<button id="formatBtn" class="btn btn-primary mt-3" onclick="formatJSON()" disabled>
-Format JSON
-</button>
-
-<button id="minifyBtn" class="btn btn-dark mt-3" onclick="minifyJSON()" disabled>
-Minify
-</button>
-<button class="btn btn-secondary mt-3" onclick="clearJSON()">Clear</button>
-
-<div class="progress">
-<div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">0%</div>
-</div>
-
-<div class="error-msg" id="errorMsg"></div>
+<textarea id="editor" spellcheck="false" placeholder="Paste CSS code here or upload a CSS file"></textarea>
 
 </div>
 
-<!-- OUTPUT -->
-<div class="col-md-6">
+<div class="uploadWrap">
+  <label for="cssUpload" class="uploadBox">
+    <span class="uploadIcon">📁</span>
+    <span>Upload CSS File</span>
+  </label>
 
-<label class="form-label">Formatted JSON</label>
+  <input type="file" id="cssUpload" accept=".css" hidden onchange="uploadCSS(event)">
+</div>
+<div class="buttons">
+ 
 
-<div class="editor">
-<div class="line-numbers" id="lineNumbersOutput">1</div>
-<textarea id="outputJSON" readonly></textarea>
+<button class="check btn btn-primary" onclick="checkCSS()">Check CSS</button>
+
+<button class="copy btn btn-success" id="copyBtn" onclick="copyCSS()">Copy CSS</button>
+
+<button class="clear btn btn-danger" onclick="clearCSS()">Clear</button>
+
+
+<input type="file" id="cssUpload" accept=".css" hidden onchange="uploadCSS(event)">
+
 </div>
 
-<div class="stats" id="outputStats">0 chars</div>
 
-<button id="copyBtn" class="btn btn-success mt-3" onclick="copyJSON()" disabled>
-Copy Result
-</button>
+<div class="results">
 
-<button id="downloadBtn" class="btn btn-outline-success mt-3" onclick="downloadJSON()" disabled>
-Download
-</button>
+<div class="box">
 
-<div class="success-msg" id="successMsg">
-✔ Copied successfully
+<h3>Errors</h3>
+
+<div id="errorList"></div>
+
 </div>
+
+<div class="box">
+
+<h3>Warnings</h3>
+
+<div id="warningList"></div>
 
 </div>
 
@@ -303,44 +363,44 @@ Download
 
 </div>
 
-</div>
-  </section> 
-   <section class="bg-white">
-     <div class="container py-5">
+</section>
 
-<h2>What is JSON Formatter?</h2>
+
+
+<section class="seo-content mt-5">
+
+<div class="container">
+
+<h2>Free CSS Error Checker Tool</h2>
 
 <p>
-JSON Formatter is a tool used to beautify and structure JSON data so it becomes easy to read and debug. Developers often work with APIs that return JSON data, and formatting helps in understanding complex structures.
+Our CSS Error Checker helps developers quickly detect and fix CSS syntax errors.
+Paste your CSS code and instantly find issues like missing semicolons, invalid properties, and incorrect syntax.
 </p>
 
-<h2>How to Use JSON Formatter?</h2>
 
-<ol>
-<li>Paste JSON data into the input field.</li>
-<li>Click Format JSON.</li>
-<li>The tool will validate and beautify the JSON.</li>
-<li>Copy or download the formatted JSON.</li>
-</ol>
-
-<h2>Features of This Tool</h2>
+<h2>Why Use a CSS Error Checker?</h2>
 
 <ul>
-<li>Instant JSON formatting</li>
-<li>JSON validation with error detection</li>
-<li>Minify JSON option</li>
-<li>Download formatted JSON</li>
-<li>Works completely in browser</li>
-<li>Secure and free developer tool</li>
+
+<li>Detect CSS syntax mistakes instantly</li>
+
+<li>Fix missing semicolons and invalid rules</li>
+
+<li>Improve CSS code quality</li>
+
+<li>Save debugging time for developers</li>
+
+<li>Ensure browser compatibility</li>
+
 </ul>
 
 </div>
-  </section> 
-	</section>
-     
- 
 
-  <!-- InstanceEndEditable -->
+</section>
+
+</section>
+<!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer class="footer light">
   <div class="clearfix"></div>
@@ -405,236 +465,353 @@ JSON Formatter is a tool used to beautify and structure JSON data so it becomes 
   </article>
 </footer>
 <div class="clearfix"></div>
-<!-- InstanceBeginEditable name="EditRegion5" -->
-     
-  <script src="js/bootstrap.bundle.min.js"></script>
-   <script>
+<!-- InstanceBeginEditable name="EditRegion5" --> 
+<script src="js/bootstrap.bundle.min.js"></script> 
+<script>
+let editor=document.getElementById("editor");
+let lineBox=document.getElementById("lineNumbers");
 
-const progress = document.querySelector(".progress")
-const progressBar = document.getElementById("progressBar")
-const successMsg = document.getElementById("successMsg")
-const errorMsg = document.getElementById("errorMsg")
 
- function simulateProgress(callback){
+/* -----------------------
+LINE NUMBER SYSTEM
+----------------------- */
 
-const copyBtn = document.getElementById("copyBtn")
-const downloadBtn = document.getElementById("downloadBtn")
+function updateLines(){
 
-// Disable buttons
-copyBtn.disabled = true
-downloadBtn.disabled = true
+let lines=editor.value.split("\n").length;
 
-progress.style.display="block"
-progressBar.style.width="0%"
-progressBar.innerText="0%"
+lineBox.innerHTML="";
 
-let percent = 0
-
-let interval = setInterval(()=>{
-percent += 10
-progressBar.style.width = percent + "%"
-progressBar.innerText = percent + "%"
-if(percent >= 90) clearInterval(interval)
-},300)
-
-setTimeout(()=>{
-
-progressBar.style.width="100%"
-progressBar.innerText="100%"
-
-callback()
-
-// Enable buttons ONLY if output exists
-setTimeout(()=>{
-
-let output = document.getElementById("outputJSON").value
-
-if(output.trim() !== ""){
-copyBtn.disabled = false
-downloadBtn.disabled = false
-}
-
-progress.style.display="none"
-
-},800)
-
-},3500)
-
-}
-
-function formatJSON(){
-
-let input = document.getElementById("inputJSON").value
-errorMsg.style.display="none"
-
-simulateProgress(()=>{
-
-try{
-let parsed = JSON.parse(input)
-let formatted = JSON.stringify(parsed, null, 4)
-
-document.getElementById("outputJSON").value = formatted
-
-updateLines('outputJSON','lineNumbersOutput')
-updateStats()
-
-}catch(e){
-errorMsg.style.display="block"
-errorMsg.innerText = "Invalid JSON: " + e.message
-document.getElementById("outputJSON").value = ""
-}
-
-})
-
-}
-
- function minifyJSON(){
-
-let input = document.getElementById("inputJSON").value
-errorMsg.style.display="none"
-
-simulateProgress(()=>{
-
-try{
-
-let parsed = JSON.parse(input)
-let minified = JSON.stringify(parsed)
-
-document.getElementById("outputJSON").value = minified
-
-updateLines('outputJSON','lineNumbersOutput')
-updateStats()
-
-}catch(e){
-
-errorMsg.style.display="block"
-errorMsg.innerText = "Invalid JSON"
-document.getElementById("outputJSON").value = ""
-
-}
-
-})
-
-}
-
-function clearJSON(){
-
-document.getElementById("inputJSON").value=""
-document.getElementById("outputJSON").value=""
-errorMsg.style.display="none"
-
-document.getElementById("copyBtn").disabled = true
-document.getElementById("downloadBtn").disabled = true
-
-updateLines('inputJSON','lineNumbersInput')
-updateLines('outputJSON','lineNumbersOutput')
-updateStats()
-document.getElementById("formatBtn").disabled = true
-document.getElementById("minifyBtn").disabled = true
-}
-
-function copyJSON(){
-let text = document.getElementById("outputJSON").value
-navigator.clipboard.writeText(text)
-successMsg.style.display="block"
-setTimeout(()=>{ successMsg.style.display="none" },2000)
-}
-
-function downloadJSON(){
-
-let content = document.getElementById("outputJSON").value
-let blob = new Blob([content], {type:"application/json"})
-let a = document.createElement("a")
-
-a.href = URL.createObjectURL(blob)
-a.download = "formatted.json"
-a.click()
-
-}
-
-function updateLines(textareaId, lineId){
-
-let text = document.getElementById(textareaId).value
-let lines = text.split("\n").length
-
-let numbers = ""
 for(let i=1;i<=lines;i++){
-numbers += i + "<br>"
-}
 
-document.getElementById(lineId).innerHTML = numbers
-
-}
-
-function updateStats(){
-
-let input = document.getElementById("inputJSON").value.length
-let output = document.getElementById("outputJSON").value.length
-
-document.getElementById("inputStats").innerText = input + " chars"
-document.getElementById("outputStats").innerText = output + " chars"
+let d=document.createElement("div");
+d.textContent=i;
+lineBox.appendChild(d);
 
 }
 
-updateLines('inputJSON','lineNumbersInput')
-updateLines('outputJSON','lineNumbersOutput')
+}
+
+editor.addEventListener("input",updateLines);
+
+editor.addEventListener("scroll",()=>{
+lineBox.scrollTop=editor.scrollTop;
+});
+
+updateLines();
 
 
-function toggleActionButtons(){
 
-let input = document.getElementById("inputJSON").value.trim()
+/* -----------------------
+UPLOAD CSS FILE
+----------------------- */
 
-const formatBtn = document.getElementById("formatBtn")
-const minifyBtn = document.getElementById("minifyBtn")
+function uploadCSS(event){
 
-if(input.length > 0){
-formatBtn.disabled = false
-minifyBtn.disabled = false
+let file=event.target.files[0];
+
+if(!file) return;
+
+if(!file.name.endsWith(".css")){
+alert("Please upload a CSS file");
+return;
+}
+
+let reader=new FileReader();
+
+reader.onload=function(e){
+
+editor.value=e.target.result;
+updateLines();
+
+};
+
+reader.readAsText(file);
+
+}
+
+
+
+/* -----------------------
+CSS CHECKER
+----------------------- */
+
+function checkCSS(){
+
+document.querySelector(".results").style.display="flex";
+
+let css=editor.value.replace(/\r/g,"");
+
+let lines=css.split("\n");
+
+let errorList=document.getElementById("errorList");
+let warningList=document.getElementById("warningList");
+
+errorList.innerHTML="";
+warningList.innerHTML="";
+
+let errors=[];
+let warnings=[];
+
+let insideBlock=false;
+let props={};
+let propCount=0;
+
+for(let i=0;i<lines.length;i++){
+
+let rawLine=lines[i];
+
+/* REMOVE COMMENTS */
+
+let line=rawLine.replace(/\/\*.*?\*\//g,'').trim();
+
+/* ignore empty */
+
+if(line==="") continue;
+
+
+/* block start */
+
+if(line.includes("{")){
+insideBlock=true;
+props={};
+propCount=0;
+continue;
+}
+
+
+/* block end */
+
+if(line.includes("}")){
+insideBlock=false;
+continue;
+}
+
+if(!insideBlock) continue;
+
+
+/* property detection */
+
+if(line.includes(":")){
+
+propCount++;
+
+let propName=line.split(":")[0].trim().toLowerCase();
+
+
+/* duplicate property warning */
+
+if(props[propName]){
+
+warnings.push({
+line:i,
+msg:"Duplicate property '"+propName+"'"
+});
+
 }else{
-formatBtn.disabled = true
-minifyBtn.disabled = true
+
+props[propName]=true;
+
+}
+
+
+/* find next non empty line */
+
+let nextLine="";
+
+for(let j=i+1;j<lines.length;j++){
+
+let next=lines[j].replace(/\/\*.*?\*\//g,'').trim();
+
+if(next!==""){
+nextLine=next;
+break;
 }
 
 }
 
-function validateJSONLive(){
 
-let input = document.getElementById("inputJSON").value.trim()
-const status = document.getElementById("jsonStatus")
+/* detect missing semicolon */
 
-// Empty state
-if(input === ""){
-status.innerHTML = ""
-return
-}
+if(!line.endsWith(";") && nextLine!=="}"){
 
-try{
+if(propCount>1){
 
-JSON.parse(input)
-
-status.innerHTML = "✔ Valid JSON"
-status.className = "valid"
-
-}catch(e){
-
-// Extract line number
-let match = e.message.match(/position (\d+)/)
-
-let line = 1
-
-if(match){
-let pos = parseInt(match[1])
-line = input.substring(0,pos).split("\n").length
-}
-
-status.innerHTML = "❌ Invalid JSON at line " + line
-status.className = "invalid"
+errors.push({
+line:i,
+msg:"Missing semicolon"
+});
 
 }
 
 }
-</script>  
-   
+
+
+/* invalid important */
+
+if(line.includes("!!important")){
+
+errors.push({
+line:i,
+msg:"Invalid !!important"
+});
+
+}
+
+}
+
+}
+
+highlightLines(errors);
+
+showResults(errors,warnings);
+
+}
+
+
+
+/* -----------------------
+HIGHLIGHT LINES
+----------------------- */
+
+function highlightLines(errors){
+
+let nums=lineBox.querySelectorAll("div");
+
+nums.forEach(n=>n.classList.remove("errorLine"));
+
+errors.forEach(e=>{
+
+if(nums[e.line]) nums[e.line].classList.add("errorLine");
+
+});
+
+}
+
+
+
+/* -----------------------
+SHOW RESULTS
+----------------------- */
+
+function showResults(errors,warnings){
+
+let errorList=document.getElementById("errorList");
+let warningList=document.getElementById("warningList");
+
+if(errors.length===0){
+
+errorList.innerHTML="No major errors";
+
+}else{
+
+errors.forEach(e=>{
+
+let div=document.createElement("div");
+
+div.className="item error";
+div.textContent="Line "+(e.line+1)+" : "+e.msg;
+
+div.onclick=()=>jumpToLine(e.line);
+
+errorList.appendChild(div);
+
+});
+
+}
+
+
+if(warnings.length===0){
+
+warningList.innerHTML="No warnings";
+
+}else{
+
+warnings.forEach(w=>{
+
+let div=document.createElement("div");
+
+div.className="item";
+
+div.textContent="Line "+(w.line+1)+" : "+w.msg;
+
+div.onclick=()=>jumpToLine(w.line);
+
+warningList.appendChild(div);
+
+});
+
+}
+
+}
+
+
+
+/* -----------------------
+JUMP TO ERROR
+----------------------- */
+
+function jumpToLine(line){
+
+let lines=editor.value.split("\n");
+
+let position=0;
+
+for(let i=0;i<line;i++){
+position+=lines[i].length+1;
+}
+
+editor.focus();
+editor.setSelectionRange(position,position);
+
+let lineHeight=parseFloat(getComputedStyle(editor).lineHeight);
+
+editor.scrollTop=(line*lineHeight)-(editor.clientHeight/2);
+
+editor.classList.add("flashLine");
+
+setTimeout(()=>{
+editor.classList.remove("flashLine");
+},400);
+
+}
+
+
+
+/* -----------------------
+COPY BUTTON
+----------------------- */
+
+function copyCSS(){
+
+navigator.clipboard.writeText(editor.value);
+
+let btn=document.getElementById("copyBtn");
+
+btn.textContent="Copied!";
+
+setTimeout(()=>{
+btn.textContent="Copy CSS";
+},2000);
+
+}
+
+
+
+/* -----------------------
+CLEAR
+----------------------- */
+
+function clearCSS(){
+
+editor.value="";
+lineBox.innerHTML="";
+document.querySelector(".results").style.display="none";
+
+updateLines();
+
+}
+</script> 
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");
