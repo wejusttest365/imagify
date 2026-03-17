@@ -6,163 +6,293 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<!-- ===================================================== -->
- 
-<!-- PAGE TITLE (Important for Google Ranking) -->
-<title>Free CSS Formatter & Beautifier Online – Format and Organize CSS - Web Tool Ocean</title>
+<title>CSS Clip Path Generator – Free Online Image Clip Tool (40+ Shapes)</title>
 
-<!-- ===================================================== -->
-<!-- META DESCRIPTION (150–160 characters recommended) -->
-<meta name="description" content="Format and beautify your CSS code instantly with our free CSS Formatter tool. Clean, organize and optimize CSS code online for better readability and development.">
+<meta name="description" content="Free CSS Clip Path Generator to clip images into custom shapes. Choose from 40+ shapes, drag polygon points, export PNG or SVG, and copy CSS instantly.">
 
-<!-- ===================================================== -->
-<!-- SEO KEYWORDS (Optional but useful for other search engines) -->
-<meta name="keywords" content="css formatter, css beautifier, css formatter online, format css code, css code beautifier, css organizer, css code formatter tool, clean css code online, webtoolocean">
+<meta name="keywords" content="clip path generator, css clip path generator, clip path tool, css shape generator, polygon clip path generator, css image clipping tool, clip path editor">
 
-<!-- ===================================================== -->
-<!-- ROBOTS -->
 <meta name="robots" content="index, follow">
 
-<!-- ===================================================== -->
-<!-- AUTHOR -->
-<meta name="author" content="Web Tool Ocean">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- ===================================================== -->
-<!-- MOBILE RESPONSIVE -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://webtoolocean.com/css-design-tools/clip-image/index.html">
 
-<!-- ===================================================== -->
-<!-- CANONICAL URL -->
-<link rel="canonical" href="https://webtoolocean.com/developer-tools/css-formatter/index.html">
 
-<!-- ===================================================== -->
-<!-- OPEN GRAPH (FACEBOOK / LINKEDIN SHARING) -->
-<meta property="og:title" content="Free CSS Formatter & Beautifier Online">
-<meta property="og:description" content="Beautify and format CSS code instantly with our free online CSS Formatter. Improve readability and organize your stylesheets easily.">
-<meta property="og:url" content="https://webtoolocean.com/developer-tools/css-formatter/index.html">
+<!-- Open Graph -->
+
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Web Tool Ocean">
+<meta property="og:title" content="CSS Clip Path Generator – Free Online Image Shape Tool">
+<meta property="og:description" content="Create custom CSS clip-path shapes visually. 40+ shapes, polygon editor, PNG export, SVG export.">
+<meta property="og:url" content="https://webtoolocean.com/css-design-tools/clip-image/index.html">
 <meta property="og:image" content="https://webtoolocean.com/images/preview.png">
 
-<!-- ===================================================== -->
-<!-- TWITTER SEO -->
+
+<!-- Twitter -->
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free CSS Formatter & Beautifier Tool">
-<meta name="twitter:description" content="Format and beautify CSS code online instantly. Clean and organize your stylesheets using our free CSS Formatter tool.">
+<meta name="twitter:title" content="CSS Clip Path Generator – Create Custom Shapes Online">
+<meta name="twitter:description" content="Visual clip path generator with 40+ shapes, drag points editor and PNG export.">
 <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
-
-<!-- ===================================================== -->
-<!-- THEME COLOR -->
-<meta name="theme-color" content="#0d6efd">
-
-<!-- ===================================================== -->
-<!-- STRUCTURED DATA (SCHEMA MARKUP FOR GOOGLE) -->
 <script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@type": "SoftwareApplication",
-"name": "CSS Formatter Tool",
-"operatingSystem": "All",
-"applicationCategory": "DeveloperApplication",
-"description": "Free online CSS Formatter tool to beautify and organize CSS code for better readability and development.",
-"url": "https://webtoolocean.com/css-formatter.html",
-"offers": {
-"@type": "Offer",
-"price": "0",
-"priceCurrency": "USD"
-}
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "CSS Clip Path Generator",
+ "operatingSystem": "All",
+ "applicationCategory": "DeveloperApplication",
+ "url": "https://webtoolocean.com/css-clip-image.html",
+ "description": "Free CSS Clip Path Generator that lets users create custom image clipping shapes with 40+ presets, polygon editor, and export options.",
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ }
 }
 </script>
 <!-- ===================================================== -->
-<!-- ===================================================== -->
 	
 <!--CSS for the website-->
-   <!-- CSS for the page -->
+ 
+  <!-- Dependencies -->
 <link href="../../css/global.css" rel="stylesheet">
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
   <link href="../../css/style.css" rel="stylesheet">
   <link href="../../css/font-convert.css" rel="stylesheet">
  <style>
-.CodeMirror { 
-    height: 350px !important;
-    color: #000; 
-    border: 1px solid #ccc;
+
+ body {
+    margin: 0;
+    font-family: system-ui;
+    background: #eef2f7;
+}
+.app{
+display:flex; 
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:280px;
+background:white;
+border-right:1px solid #e5e7eb;
+padding:20px;
+overflow:auto;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.shape-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+}
+
+.shape-grid button{
+padding:9px;
+border:none;
+background:#3b82f6;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+transition:.2s;
+}
+
+.shape-grid button:hover{
+background:#2563eb;
+transform:translateY(-1px);
+}
+
+.tools{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+}
+
+.tools button{
+padding:6px;
+border:none;
+background:#10b981;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* UPLOAD */
+
+.upload {
+    border: 2px dashed #d1d5db;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #f9fafb;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+	    font-size: 20px;
+}
+
+.upload input{
+display:none;
+}
+
+/* CANVAS */
+
+.canvas{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+    padding: 10px 20px;
+}
+
+.preview{
+
+position:relative;
+
+background:white;
+
+/* GRID */
+
+background-image:
+linear-gradient(to right, rgba(0,0,0,.05) 1px, transparent 1px),
+linear-gradient(to bottom, rgba(0,0,0,.05) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+max-width:700px;
+max-height:600px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+.preview img{
+max-width:100%;
+max-height:100%;
+}
+
+/* POINT */
+
+.point{
+
+position:absolute;
+
+width:12px;
+height:12px;
+
+background:#ef4444;
+
+border:2px solid white;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+cursor:pointer;
+
+}
+
+/* OUTPUT */
+
+.output {
+    margin-top: 20px;
+    background: #111827;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 600px;
+    max-width: 100%;
+    font-family: monospace;
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    justify-content: space-between;
+}
+
+.copy {
+    position: static;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0;
+}
+.toolsgrid {
+    display: flex;
+    align-items: center;
+}
+
+.toolsgrid button {
+    background: #cfcfcf;
+    padding: 8px;
     border-radius: 4px;
 }
 
-.header-box{
-background:#0d6efd;
-color:white;
-padding:25px;
-border-radius:8px;
-margin-bottom:20px;
-}
-
- 
-
-textarea{
-width:100%;
-height:350px;
-font-family:monospace;
-}
-
-.result-box{
-background:white;
-border:1px solid #ddd;
-padding:20px;
-border-radius:6px;
-white-space:pre-wrap;
-font-family:monospace;
-min-height:350px;
-max-height: 350px;
-    overflow: auto;
-    word-wrap: break-word;
-}
-
-.dark .result-box{
-background:#2a2a2a;
-border-color:#444;
-}
-
-.stats{
-background:white;
-border:1px solid #ddd;
-padding:15px;
-border-radius:6px;
-margin-top:20px;
-}
-
-.dark .stats{
-background:#2a2a2a;
-border-color:#444;
-}
-
-.btn-main{
-margin-right:8px;
-margin-bottom:10px;
-}
-label.small-header {
-    background: #0d6efd;
-    text-align: center;
-    padding: 5px;
-    font-size: 16px;
+.toolsgrid button#download {
+    background: green;
     color: #fff;
-    border-radius: 4px 4px 0 0;
-}
-.line-error{
-background:#ffe6e6;
 }
 
-.css-error{
-background:#fff3cd;
-padding:8px;
-margin-bottom:5px;
-cursor:pointer;
-border-left:4px solid #ff9800;
-font-size:14px;
+.toolsgrid button#clear {
+    background: red;
+    color: #fff;
 }
-</style>   
+	 .preset-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:6px;
+margin-top:8px;
+}
+
+.preset{
+height:40px;
+border-radius:6px;
+cursor:pointer;
+border:1px solid #eee;
+}
+
+.palette-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:5px;
+margin-top:8px;
+}
+
+.palette{
+height:35px;
+cursor:pointer;
+border-radius:4px;
+}
+</style> 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -268,166 +398,71 @@ font-size:14px;
   <!-- Sevices section -->
   <section id="content">
    
-   <section class="py-2">
-    <div class="container mt-2">
- <div class="text-center">
-<h1>Advanced CSS Formatter</h1>
-<p><b>Organize, Beautify, Minify and Analyze CSS</b></p>
+   <section>
+     <div class="container-fluid">
+ <div class="app">
+
+<div class="sidebar">
+
+<h3>Available Shapes</h3>
+
+<div class="shape-grid">
+
+<button data-shape="circle">⭕ Circle</button>
+<button data-shape="ellipse">🥚 Ellipse</button>
+<button data-shape="triangle">🔺 Triangle</button>
+<button data-shape="diamond">💎 Diamond</button>
+<button data-shape="pentagon">⬟ Pentagon</button>
+<button data-shape="hexagon">⬢ Hexagon</button>
+<button data-shape="octagon">🛑 Octagon</button>
+<button data-shape="star">⭐ Star</button>
+<button data-shape="heart">❤️ Heart</button>
+<button data-shape="arrow">➡ Arrow</button>
+<button data-shape="message">💬 Message</button>
+<button data-shape="parallelogram">▱ Parallelogram</button>
+<button data-shape="chevron">❯ Chevron</button>
+<button data-shape="cross">✚ Cross</button>
+<button data-shape="frame">🖼 Frame</button>
+<button style="background: #FF5722;" data-shape="polygon"><span class="fa fa-edit"></span> Custom</button>
+
 </div>
  
-<div class="row">
-<div class="col-lg-6">
-
-<label class="small-header">Input CSS</label>
-<textarea id="cssInput" class="form-control" placeholder="Input CSS code and see magic"></textarea>
-
-<input type="file" id="fileUpload" class="form-control mt-3">
-<div id="cssErrors" style="margin-top:15px;"></div>
-<div class="mt-3">
-
-<button class="btn btn-primary btn-main" id="organizeBtn">Organize CSS</button>
-<button class="btn btn-success btn-main" id="beautifyBtn">Beautify</button>
-<button class="btn btn-warning btn-main" id="minifyBtn">Minify</button> 
-<button class="btn btn-danger btn-main" id="clearBtn">Clear</button>
-
 </div>
 
+<div class="canvas"> 
+<label class="upload">
+Upload or change image <span class="fa fa-image"></span>
+<input type="file" id="upload">
+</label>
+<div class="preview" id="preview">
+<img id="img" src="images/placeholder-clip-image.png" alt=""  crossorigin="anonymous">
 </div>
 
-<div class="col-lg-6">
+<div class="output">
+<span id="css">clip-path: circle(50% at 50% 50%)</span>
+<button class="copy">Copy</button>
+</div>
+	<div class="toolsgrid">
 
-<label  class="small-header">Output</label>
+<button id="undo">↶ Undo</button>
+<button id="redo">↷ Redo</button>
 
-<div class="result-box" id="output"></div>
+<button id="zoomIn">＋ Zoom</button>
+<button id="zoomOut">－ Zoom</button>
 
-<button class="btn btn-info mt-3" id="downloadBtn">Download CSS</button>
-<button class="btn btn-info mt-3" id="copyBtn">Copy CSS</button>
 
-<div class="stats" id="stats">
-
-<p><strong>CSS Statistics</strong></p>
-
-<div>Total Selectors: <span id="selectors">0</span></div>
-<div>Total Rules: <span id="rules">0</span></div>
-<div>Original Size: <span id="originalSize">0</span> bytes</div>
-<div>Formatted Size: <span id="newSize">0</span> bytes</div>
+<button id="download">⬇ Download</button>
+<button id="clear">Clear</button>
 
 </div>
 
 </div>
 
 </div>
-
-</div>
-
-  </section>
-  <section class="seo-content mt-5">
-
-<div class="container">
-
-<h1 class="mb-4">Advanced CSS Formatter  </h1>
-<p><b>Organize, Beautify, Minify & Analyze CSS</b></p>
-<p>
-Managing large CSS files can quickly become messy and difficult to maintain. Our <strong>Advanced CSS Formatter</strong> helps developers automatically organize, beautify, and optimize CSS code in seconds. Whether you're cleaning up existing styles or working on a large project, this tool restructures your CSS into clear and readable sections.
-</p>
-
-<p>
-The tool intelligently groups CSS into logical categories such as <strong>Header, Navigation, Footer, Layout, Typography, Utilities, and Other Styles</strong>, making it easier to maintain and debug your code.
-</p>
-
-
-<h2 class="mt-4">Key Features</h2>
-
-<div class="row mt-3">
-
-<div class="col-md-6 mb-3">
-<h2>Automatic CSS Organization</h2>
-<p>
-Automatically organize CSS rules into structured sections including header styles, navigation styles, footer styles, layout components, typography rules, and utility classes.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h2>CSS Beautifier</h2>
-<p>
-Convert messy or compressed CSS into clean and readable code with proper spacing and formatting. This makes editing and reviewing stylesheets much easier.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h2>CSS Minifier</h2>
-<p>
-Reduce CSS file size by removing unnecessary whitespace and formatting. Smaller files improve website performance and loading speed.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h22>CSS Statistics Analyzer</h2>
-<p>
-Analyze your CSS file with built-in statistics including selector count, rule count, original size, and optimized size.
-</p>
-</div>
-
-</div>
-
-
-<h2 class="mt-4">How to Use the Tool</h2>
-
-<ol>
-<li>Paste your CSS code into the editor or upload a <code>.css</code> file.</li>
-<li>Select an action such as <strong>Organize CSS</strong>, <strong>Beautify CSS</strong>, or <strong>Minify CSS</strong>.</li>
-<li>Review the formatted CSS output.</li>
-<li>Check the statistics to analyze your stylesheet.</li>
-<li>Download the optimized CSS file for use in your project.</li>
-</ol>
-
-
-<h2 class="mt-4">Benefits of Using a CSS Formatter</h2>
-
-<ul>
-<li>Improves code readability</li>
-<li>Organizes stylesheets into logical sections</li>
-<li>Reduces CSS file size</li>
-<li>Improves website loading speed</li>
-<li>Makes debugging easier</li>
-<li>Helps maintain cleaner code structure</li>
-</ul>
-
-
-<h2 class="mt-4">Frequently Asked Questions</h2>
-
-<div class="faq-item mb-3">
-<h2>What is a CSS Formatter?</h2>
-<p>
-A CSS formatter is a tool that restructures CSS code into a clean and readable format. It helps developers organize stylesheets and improve maintainability.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h2>What is the difference between CSS beautify and CSS minify?</h2>
-<p>
-CSS beautify formats code with proper indentation and spacing to make it easier to read. CSS minify removes unnecessary spaces and characters to reduce file size and improve website performance.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h2>Is this CSS formatter free to use?</h2>
-<p>
-Yes, this online CSS formatter is completely free to use and works directly in your browser without requiring any installation.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h2>Does this tool store my CSS code?</h2>
-<p>
-No. The tool processes your CSS directly in your browser and does not store or upload your code to any server.
-</p>
-</div>
-
-
-</div>
-
-</section> 
+	   </div>
+  </section> 
+	  
+	   
 	</section>
      
  
@@ -499,292 +534,398 @@ No. The tool processes your CSS directly in your browser and does not store or u
 </footer>
 <div class="clearfix"></div>
 <!-- InstanceBeginEditable name="EditRegion5" -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>  
   <script src="js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <script>
+/* Gradient presets */
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+const presets=[
+["#ff9a9e","#fad0c4"],
+["#a18cd1","#fbc2eb"],
+["#fad0c4","#ffd1ff"],
+["#ffecd2","#fcb69f"],
+["#f6d365","#fda085"],
+["#84fab0","#8fd3f4"],
+["#43cea2","#185a9d"],
+["#fa709a","#fee140"]
+]
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
- 
- <script>
+/* Color palettes */
 
-/* ================================
-INITIALIZE CODEMIRROR EDITOR
-================================ */
-
-let editor = CodeMirror.fromTextArea(
-document.getElementById("cssInput"),
-{
-lineNumbers:true,
-mode:"css",
-theme:"default",
-lineWrapping:true
-});
+const palettes=[
+["#ff6a00","#ee0979","#ff512f","#dd2476","#da4453"],
+["#56ab2f","#a8e063","#38ef7d","#11998e","#0575e6"],
+["#fc466b","#3f5efb","#00c6ff","#0072ff","#6a11cb"],
+["#f7971e","#ffd200","#f953c6","#b91d73","#ff4e50"]
+]
 
 
-/* ================================
-GROUP / ORGANIZE CSS
-================================ */
+let shape="circle"
+let points=[]
+let dragging=null
+let zoom=1
+let rotation=0
 
-function groupCSS(css){
+let history=[]
+let redoStack=[]
 
-let header=[],nav=[],footer=[],layout=[],typography=[],utility=[],other=[];
+const img=$("#img")
+const preview=$("#preview")
 
-let rules = css.match(/[^{}]+\{[^{}]*\}/g) || [];
+const grid=40
 
-rules.forEach(function(rule){
+function snap(v){
+return Math.round(v/grid)*grid
+}
 
-let l = rule.toLowerCase();
+function saveHistory(){
+history.push(JSON.stringify(points))
+}
 
-rule = rule
-.replace(/\s+/g," ")
-.replace(/\s*{\s*/g," {\n  ")
-.replace(/;\s*/g,";\n  ")
-.replace(/\s*}\s*/g,"\n}");
+$("#undo").click(()=>{
+if(!history.length) return
+redoStack.push(JSON.stringify(points))
+points=JSON.parse(history.pop())
+renderPoints()
+})
 
-if(l.includes("header")) header.push(rule);
+$("#redo").click(()=>{
+if(!redoStack.length) return
+history.push(JSON.stringify(points))
+points=JSON.parse(redoStack.pop())
+renderPoints()
+})
 
-else if(l.includes("nav")) nav.push(rule);
+function getShapeClip(){
 
-else if(l.includes("footer")) footer.push(rule);
+let clip="circle(50% at 50% 50%)"
 
-else if(l.includes("container") || l.includes("row") || l.includes("grid") || l.includes("flex"))
-layout.push(rule);
+if(shape=="ellipse") clip="ellipse(50% 50% at 50% 50%)"
 
-else if(l.includes("font") || l.includes("text") || l.includes("line-height"))
-typography.push(rule);
+if(shape=="triangle")
+clip="polygon(50% 0%,0% 100%,100% 100%)"
 
-else if(l.includes("btn") || l.includes("margin") || l.includes("padding"))
-utility.push(rule);
+if(shape=="diamond")
+clip="polygon(50% 0%,100% 50%,50% 100%,0% 50%)"
 
-else other.push(rule);
+if(shape=="pentagon")
+clip="polygon(50% 0%,95% 35%,80% 100%,20% 100%,5% 35%)"
 
-});
+if(shape=="hexagon")
+clip="polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"
 
-let result="";
+if(shape=="octagon")
+clip="polygon(30% 0%,70% 0%,100% 30%,100% 70%,70% 100%,30% 100%,0% 70%,0% 30%)"
 
-function block(title,arr){
+if(shape=="star")
+clip="polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"
 
-if(arr.length){
+if(shape=="heart")
+clip="polygon(50% 90%,10% 50%,10% 25%,30% 10%,50% 25%,70% 10%,90% 25%,90% 50%)"
 
-result+="\n/* ===== "+title+" ===== */\n\n";
+if(shape=="arrow")
+clip="polygon(0% 40%,60% 40%,60% 20%,100% 50%,60% 80%,60% 60%,0% 60%)"
 
-arr.forEach(r=>result+=r+"\n\n");
+if(shape=="message")
+clip="polygon(0% 0%,100% 0%,100% 80%,60% 80%,50% 100%,40% 80%,0% 80%)"
+
+if(shape=="parallelogram")
+clip="polygon(25% 0%,100% 0%,75% 100%,0% 100%)"
+
+if(shape=="chevron")
+clip="polygon(0% 0%,75% 0%,100% 50%,75% 100%,0% 100%,25% 50%)"
+
+if(shape=="cross")
+clip="polygon(35% 0%,65% 0%,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0% 65%,0% 35%,35% 35%)"
+
+if(shape=="frame")
+clip="polygon(0% 0%,100% 0%,100% 100%,0% 100%,0% 70%,70% 70%,70% 30%,0% 30%)"
+
+return clip
+}
+
+function updateCSS(){
+
+if(shape!="polygon"){
+
+let clip=getShapeClip()
+
+img.css("clip-path",clip)
+
+$("#css").text("clip-path: "+clip)
+
+}else{
+
+const w=img.width()
+const h=img.height()
+
+const poly=points.map(p=>`${(p.x/w)*100}% ${(p.y/h)*100}%`).join(",")
+
+img.css("clip-path","polygon("+poly+")")
+
+$("#css").text("clip-path: polygon("+poly+")")
 
 }
 
 }
 
-block("HEADER",header);
-block("NAVIGATION",nav);
-block("FOOTER",footer);
-block("LAYOUT",layout);
-block("TYPOGRAPHY",typography);
-block("UTILITIES",utility);
-block("OTHER STYLES",other);
+function renderPoints(){
 
-return result;
+$(".point").remove()
 
-}
+if(shape!="polygon") return
 
+points.forEach((p,i)=>{
 
-/* ================================
-BEAUTIFY CSS
-================================ */
+let el=$("<div class='point'></div>")
 
-function beautify(css){
+el.css({
+left:p.x,
+top:p.y
+})
 
-return css
-.replace(/\s+/g," ")
-.replace(/\s*{\s*/g," {\n  ")
-.replace(/;\s*/g,";\n  ")
-.replace(/\s*}\s*/g,"\n}\n\n")
-.replace(/\n\s+\n/g,"\n");
+el.attr("data-i",i)
+
+preview.append(el)
+
+})
+
+updateCSS()
 
 }
 
+function setShape(s){
 
-/* ================================
-MINIFY CSS
-================================ */
+shape=s
+points=[]
 
-function minify(css){
+if(shape=="polygon"){
 
-return css.replace(/\s+/g," ")
-.replace(/\s*{\s*/g,"{")
-.replace(/\s*}\s*/g,"}")
-.replace(/\s*;\s*/g,";")
-.replace(/\s*:\s*/g,":");
+let w=img.width()
+let h=img.height()
 
-}
-
-
-/* ================================
-CSS STATS
-================================ */
-
-function stats(original,formatted){
-
-let selectorCount = (formatted.match(/{/g)||[]).length;
-
-$("#selectors").text(selectorCount);
-$("#rules").text(selectorCount);
-
-$("#originalSize").text(original.length);
-$("#newSize").text(formatted.length);
+points=[
+{x:w/2,y:40},
+{x:40,y:h-40},
+{x:w-40,y:h-40}
+]
 
 }
 
-
-/* ================================
-ORGANIZE BUTTON
-================================ */
-
-$("#organizeBtn").click(function(){
-
-let css = editor.getValue();
-
-let formatted = groupCSS(css);
-
-$("#output").text(formatted);
-
-stats(css,formatted);
-
-});
-
-
-/* ================================
-BEAUTIFY BUTTON
-================================ */
-
-$("#beautifyBtn").click(function(){
-
-let css = editor.getValue();
-
-let formatted = beautify(css);
-
-$("#output").text(formatted);
-
-stats(css,formatted);
-
-});
-
-
-/* ================================
-MINIFY BUTTON
-================================ */
-
-$("#minifyBtn").click(function(){
-
-let css = editor.getValue();
-
-let formatted = minify(css);
-
-$("#output").text(formatted);
-
-stats(css,formatted);
-
-});
-
-
-/* ================================
-CLEAR BUTTON
-================================ */
-
-$("#clearBtn").click(function(){
-
-editor.setValue("");
-
-$("#output").text("");
-
-$("#selectors").text("0");
-$("#rules").text("0");
-$("#originalSize").text("0");
-$("#newSize").text("0");
-
-});
-
-
-/* ================================
-DOWNLOAD CSS
-================================ */
-
-$("#downloadBtn").click(function(){
-
-let text = $("#output").text();
-
-let blob = new Blob([text], {type:"text/css"});
-
-let url = URL.createObjectURL(blob);
-
-let a = document.createElement("a");
-
-a.href = url;
-a.download = "formatted.css";
-
-a.click();
-
-});
-
-
-/* ================================
-COPY CSS
-================================ */
-
-$("#copyBtn").click(function(){
-
-let text = $("#output").text();
-
-navigator.clipboard.writeText(text).then(function(){
-
-$("#copyBtn").text("Copied!");
-
-setTimeout(function(){
-$("#copyBtn").text("Copy CSS");
-},2000);
-
-});
-
-});
-
-
-/* ================================
-UPLOAD CSS FILE (FIXED)
-================================ */
-
-$("#fileUpload").on("change",function(e){
-
-let file = e.target.files[0];
-
-if(!file) return;
-
-if(!file.name.endsWith(".css")){
-
-alert("Please upload a CSS file");
-
-return;
+renderPoints()
+updateCSS()
 
 }
 
-let reader = new FileReader();
+$(".shape-grid button").click(function(){
+setShape($(this).data("shape"))
+})
 
-reader.onload = function(ev){
+$(document).on("mousedown",".point",function(){
+dragging=$(this).data("i")
+saveHistory()
+})
 
-editor.setValue(ev.target.result);
-editor.setCursor({line:0,ch:0});
+$(document).on("mouseup",()=>dragging=null)
 
-};
+$(document).on("mousemove",function(e){
 
-reader.readAsText(file);
+if(dragging===null) return
 
-});
+let offset=preview.offset()
 
-</script>
+points[dragging]={
+x:snap(e.pageX-offset.left),
+y:snap(e.pageY-offset.top)
+}
 
- 
+renderPoints()
 
+})
 
+preview.click(function(e){
+
+if(shape!="polygon") return
+if($(e.target).hasClass("point")) return
+
+let offset=preview.offset()
+
+saveHistory()
+
+points.push({
+x:snap(e.pageX-offset.left),
+y:snap(e.pageY-offset.top)
+})
+
+renderPoints()
+
+})
+
+$(document).on("contextmenu",".point",function(e){
+
+e.preventDefault()
+
+saveHistory()
+
+points.splice($(this).data("i"),1)
+
+renderPoints()
+
+})
+
+$("#upload").change(function(e){
+
+let url=URL.createObjectURL(e.target.files[0])
+
+img.attr("src",url)
+
+})
+
+function updateTransform(){
+img.css("transform","scale("+zoom+") rotate("+rotation+"deg)")
+}
+
+$("#zoomIn").click(()=>{ zoom+=0.1; updateTransform() })
+$("#zoomOut").click(()=>{ zoom-=0.1; updateTransform() })
+
+$("#rotate").on("input",function(){
+rotation=$(this).val()
+updateTransform()
+})
+
+$("#clear").click(()=>{
+
+shape="circle"
+points=[]
+
+img.css("clip-path","none")
+
+$(".point").remove()
+
+})
+
+$(".copy").click(function(){
+
+navigator.clipboard.writeText($("#css").text())
+
+let btn=$(this)
+
+btn.text("Copied ✓")
+
+setTimeout(()=>{
+btn.text("Copy")
+},1500)
+
+})
+
+$("#download").click(function(){
+
+const canvas=document.createElement("canvas")
+const ctx=canvas.getContext("2d")
+
+const image=document.getElementById("img")
+
+canvas.width=image.naturalWidth
+canvas.height=image.naturalHeight
+
+ctx.save()
+
+const css=$("#css").text()
+
+if(css.includes("polygon")){
+
+const poly=css.replace("clip-path: polygon(","").replace(")","").split(",")
+
+ctx.beginPath()
+
+poly.forEach((p,i)=>{
+
+let xy=p.trim().split(" ")
+
+let x=parseFloat(xy[0])/100*canvas.width
+let y=parseFloat(xy[1])/100*canvas.height
+
+if(i==0) ctx.moveTo(x,y)
+else ctx.lineTo(x,y)
+
+})
+
+ctx.closePath()
+ctx.clip()
+
+}
+
+ctx.drawImage(image,0,0,canvas.width,canvas.height)
+
+ctx.restore()
+
+const link=document.createElement("a")
+
+link.download="clipped-image.png"
+
+link.href=canvas.toDataURL()
+
+link.click()
+
+})
+
+setShape("circle")
+function renderPresets(){
+
+presets.forEach(p=>{
+
+let gradient=`linear-gradient(45deg,${p.join(",")})`
+
+$("#presets").append(
+`<div class="preset" style="background:${gradient}" data-colors='${JSON.stringify(p)}'></div>`
+)
+
+})
+
+$(".preset").click(function(){
+
+let colors=JSON.parse($(this).attr("data-colors"))
+
+stops=[
+{color:colors[0],pos:0},
+{color:colors[1],pos:100}
+]
+
+renderStops()
+
+})
+
+}
+
+function renderPalettes(){
+
+palettes.forEach(p=>{
+
+let palette=$("<div class='palette'></div>")
+
+palette.css("background",`linear-gradient(90deg,${p.join(",")})`)
+
+palette.attr("data-colors",JSON.stringify(p))
+
+$("#palettes").append(palette)
+
+})
+
+$(".palette").click(function(){
+
+let colors=JSON.parse($(this).attr("data-colors"))
+
+stops=colors.map((c,i)=>({
+color:c,
+pos:Math.round((i/(colors.length-1))*100)
+}))
+
+renderStops()
+
+})
+
+}
+</script> 
    
 <!-- InstanceEndEditable --> 
 <script>

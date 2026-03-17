@@ -6,82 +6,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
+<!-- ===================================================== -->
+<!-- ===================================================== -->
+<!-- PAGE TITLE --> 
+
+<title>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO Online | WebToolOcean</title>
+
+<meta name="description" content="Free SVG Converter online. Convert SVG to PNG, JPG, WEBP, or ICO instantly. Batch SVG conversion, transparent background option, SVG optimizer, and resize tool for developers and designers.">
+
+<meta name="keywords" content="svg converter, svg to png, svg to ico, svg to jpg, svg to webp, batch svg converter, svg optimizer, convert svg online, favicon converter, svg image converter">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="WebToolOcean">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 Not Found – WebToolOcean</title>
-<meta name="description" content="Oops! The page you are looking for does not exist. Explore WebToolOcean's free online tools or return home.">
-<meta name="keywords" content="404, page not found, WebToolOcean, online tools, free tools">
-<link rel="icon" href="/favicon.png" type="image/png">
 
-<!--CSS for the website--> 
+<link rel="canonical" href="https://webtoolocean.com/image-tools/svg-to-image-converter/index.html">
 
-<!-- Dependencies -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/font-convert.css" rel="stylesheet">
-	<style>
+
+<!-- Open Graph (Facebook / LinkedIn) -->
+
+<meta property="og:title" content="SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO">
+<meta property="og:description" content="Convert SVG files to PNG, JPG, WEBP, or ICO online. Free batch SVG converter with resize, optimizer, and transparent background support.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webtoolocean.com/image-tools/svg-to-image-converter/index.html">
+<meta property="og:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
+<meta property="og:site_name" content="WebToolOcean">
+
+
+<!-- Twitter SEO -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SVG Converter – Convert SVG to PNG JPG WEBP ICO">
+<meta name="twitter:description" content="Free online SVG converter tool. Convert SVG to PNG, JPG, WEBP, ICO with batch conversion and optimizer.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
+
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "SVG Converter",
+ "url": "https://webtoolocean.com/svg-converter.html",
+ "applicationCategory": "DeveloperApplication",
+ "operatingSystem": "All",
+ "description": "Free online SVG converter tool to convert SVG files to PNG, JPG, WEBP, or ICO with batch conversion, resize, and optimization.",
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ }
+}
+</script>
+<!-- ===================================================== -->
+	
+<!--CSS for the website-->
+ 
+  <!-- Dependencies -->
+  <link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">
+  
+<style>
  
 
-h1{
-  font-size:120px;
-  margin:0;
-  color:#3b82f6;
+.generator{
+display:grid;
+grid-template-columns:350px 1fr;
+gap:30px;
 }
 
-h2{
-  font-size:28px;
-  margin:10px 0 20px;
+.controls{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-p{
-  font-size:16px;
-  margin-bottom:30px;
-  color:#555;
+.preview-area{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+text-align:center;
 }
 
-a.button{
-  display:inline-block;
-  padding:12px 25px;
-  background:#3b82f6;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-  transition:0.3s;
+.dropzone{
+border:2px dashed #cbd5e1;
+padding:40px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
 }
 
-a.button:hover{
-  background:#2563eb;
+.dropzone:hover{
+border-color:#6366f1;
+background:#f8f9ff;
 }
 
-input[type="text"]{
-  padding:10px 15px;
-  width:60%;
-  max-width:300px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  margin-right:10px;
-  outline:none;
+.control{
+margin-top:15px;
 }
 
-input[type="submit"]{
-  padding:10px 15px;
-  background:#3b82f6;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  transition:0.3s;
+.control label{
+display:block;
+font-size:14px;
+margin-bottom:5px;
 }
 
-input[type="submit"]:hover{
-  background:#2563eb;
+.control input,
+.control select{
+width:100%;
+padding:8px;
+border:1px solid #ddd;
+border-radius:6px;
 }
 
-.search-form{
-  margin-top:20px;
+.preview img{
+max-width:100%;
+margin-top:20px;
+}
+
+section button{
+margin-top:20px;
+padding:12px 18px;
+border:none;
+background:#6366f1;
+color:white;
+border-radius:8px;
+cursor:pointer;
+font-size:15px;
+width:100%;
+}
+
+section button:hover{
+background:#4f46e5;
+}
+
+.file-list{
+margin-top:15px;
+font-size:13px;
+color:#666;
+}
+.control.checkboxcontrol label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+ 
+
+.control.checkboxcontrol label input {
+    width: auto;
 }
 </style>
+	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -93,7 +179,7 @@ input[type="submit"]:hover{
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<link href="css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
@@ -118,7 +204,7 @@ input[type="submit"]:hover{
     <div class="container">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
       <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
@@ -171,32 +257,141 @@ input[type="submit"]:hover{
     </div>
   </div>
 </header>
-<!-- InstanceBeginEditable name="center" --> 
-
-<!-- Start dynamic content --> 
-<!-- <section id="testimonials">
+<!-- InstanceBeginEditable name="center" -->
+ 
+  <!-- Start dynamic content -->
+ <!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>--> 
-<!-- End dynamic content -->
-<div class="clearfix"></div>
-<!-- End dynamic content --> 
+  </section>-->
+  <!-- End dynamic content -->
+  <div class="clearfix"></div>
+  <!-- End dynamic content --> 
+  
+  <!-- Sevices section -->
+  <section id="content">
+   
+   <section class="py-5">
+      <div class="container">
 
-<!-- Sevices section -->
-<section id="content">
-  <section class="py-5">
-     <div class="container">
-  <h1>404</h1>
-  <h2>Oops! Page Not Found</h2>
-  <p>The page you are looking for does not exist or has been moved. Try returning home or search for a tool below.</p>
-  <a href="https://webtoolocean.com/" class="button">Go to Home</a>
- 
+<h1>SVG Converter</h1>
+
+<div class="generator">
+
+<!-- Controls -->
+
+<div class="controls">
+
+<div class="dropzone" id="dropzone">
+Drop SVG File Here<br>or Click to Upload
+<input type="file" id="fileInput" accept=".svg" multiple hidden>
 </div>
-  </section>
+
+<div class="file-list" id="fileList"></div>
+
+<div class="control">
+<label>Width</label>
+<input type="number" id="width">
+</div>
+
+<div class="control">
+<label>Height</label>
+<input type="number" id="height">
+</div>
+
+<div class="control checkboxcontrol">
+<label>
+<input type="checkbox" id="lockRatio" checked>
+Lock Aspect Ratio
+</label>
+</div>
+
+<div class="control">
+<label>Export Format</label>
+<select id="format">
+<option value="png">PNG</option>
+<option value="jpeg">JPG</option>
+<option value="webp">WEBP</option>
+<option value="ico">ICO</option>
+</select>
+</div>
+
+<div class="control checkboxcontrol">
+<label>
+<input type="checkbox" id="transparent" checked>
+Transparent Background
+</label>
+</div>
+
+<button id="downloadBtn">Download File</button>
+
+</div>
+
+
+<!-- Preview -->
+
+<div class="preview-area">
+
+<h3>Preview</h3>
+
+<div class="preview">
+<img id="previewImg">
+</div>
+
+</div>
+
+</div>
+
+</div>
+  </section> 
+	  <section class="py-4">
+<div class="container">
+
+<h1>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO</h1>
+
+<p>
+WebToolOcean SVG Converter lets you easily convert SVG files into PNG, JPG, WEBP, or ICO formats directly in your browser.
+Upload one or multiple SVG files, resize images, maintain aspect ratio, enable transparent background, and optimize SVG code.
+This free online tool is designed for web designers, developers, and digital creators who need fast and reliable SVG conversions.
+</p>
+
+<h2>Features of This SVG Converter</h2>
+
+<ul>
+<li>Convert SVG to PNG, JPG, WEBP, and ICO</li>
+<li>Batch SVG conversion support</li>
+<li>Resize images with locked aspect ratio</li>
+<li>Transparent background option</li>
+<li>Built-in SVG optimizer to reduce file size</li>
+<li>Drag and drop SVG upload</li>
+<li>Instant browser-based conversion</li>
+</ul>
+
+<h2>Why Use an SVG Converter?</h2>
+
+<p>
+SVG images are scalable vector graphics that maintain high quality at any size. However, many platforms require raster formats like PNG or JPG.
+This tool helps convert SVG graphics into widely supported formats without losing visual quality.
+</p>
+
+<h2>Who Can Use This Tool?</h2>
+
+<ul>
+<li>Web designers creating website graphics</li>
+<li>Developers generating favicon or icon images</li>
+<li>UI/UX designers exporting vector illustrations</li>
+<li>Content creators preparing images for the web</li>
+</ul>
+
+</div>
 </section>
-<!-- InstanceEndEditable -->
+	</section>
+     
+ 
+
+  <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer class="footer light">
   <div class="clearfix"></div>
@@ -262,8 +457,173 @@ input[type="submit"]:hover{
   </article>
 </footer>
 <div class="clearfix"></div>
-<!-- InstanceBeginEditable name="EditRegion5" --> 
-<script src="js/bootstrap.bundle.min.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion5" -->
+     
+  <script src="js/bootstrap.bundle.min.js"></script>
+   <script>
+
+let svgFiles=[]
+let svgTexts=[]
+let aspectRatio=null
+
+const input=document.getElementById("fileInput")
+const drop=document.getElementById("dropzone")
+const preview=document.getElementById("previewImg")
+const fileList=document.getElementById("fileList")
+
+drop.onclick=()=>input.click()
+
+input.onchange=e=>{
+handleFiles(e.target.files)
+}
+
+drop.ondragover=e=>{
+e.preventDefault()
+}
+
+drop.ondrop=e=>{
+e.preventDefault()
+handleFiles(e.dataTransfer.files)
+}
+
+function handleFiles(files){
+
+svgFiles=[...files]
+svgTexts=[]
+fileList.innerHTML=""
+
+svgFiles.forEach(file=>{
+
+fileList.innerHTML+=file.name+"<br>"
+
+let reader=new FileReader()
+
+reader.onload=e=>{
+
+let svg=optimizeSVG(e.target.result)
+
+svgTexts.push(svg)
+
+let img=new Image()
+
+img.onload=function(){
+
+aspectRatio=img.width/img.height
+
+preview.src="data:image/svg+xml;base64,"+btoa(svg)
+
+if(!width.value){
+width.value=img.width
+height.value=img.height
+}
+
+}
+
+img.src="data:image/svg+xml;base64,"+btoa(svg)
+
+}
+
+reader.readAsText(file)
+
+})
+
+}
+
+/* SVG Optimizer */
+
+function optimizeSVG(svg){
+
+return svg
+.replace(/\n/g,"")
+.replace(/\t/g,"")
+.replace(/\s{2,}/g," ")
+.replace(/>\s+</g,"><")
+
+}
+
+/* Aspect Ratio */
+
+const width=document.getElementById("width")
+const height=document.getElementById("height")
+const lock=document.getElementById("lockRatio")
+
+width.oninput=function(){
+
+if(lock.checked && aspectRatio){
+
+height.value=Math.round(width.value/aspectRatio)
+
+}
+
+}
+
+height.oninput=function(){
+
+if(lock.checked && aspectRatio){
+
+width.value=Math.round(height.value*aspectRatio)
+
+}
+
+}
+
+/* Download */
+
+document.getElementById("downloadBtn").onclick=function(){
+
+if(!svgTexts.length) return
+
+let format=document.getElementById("format").value
+let transparent=document.getElementById("transparent").checked
+
+svgTexts.forEach((svg,i)=>{
+
+let img=new Image()
+
+img.onload=function(){
+
+let canvas=document.createElement("canvas")
+
+canvas.width=width.value||img.width
+canvas.height=height.value||img.height
+
+let ctx=canvas.getContext("2d")
+
+if(!transparent){
+
+ctx.fillStyle="#ffffff"
+ctx.fillRect(0,0,canvas.width,canvas.height)
+
+}
+
+ctx.drawImage(img,0,0,canvas.width,canvas.height)
+
+let link=document.createElement("a")
+
+if(format==="ico"){
+
+link.download="icon_"+i+".ico"
+link.href=canvas.toDataURL("image/png")
+
+}else{
+
+link.download="converted_"+i+"."+format
+link.href=canvas.toDataURL("image/"+format)
+
+}
+
+link.click()
+
+}
+
+img.src="data:image/svg+xml;base64,"+btoa(svg)
+
+})
+
+}
+
+</script>  
+   
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");

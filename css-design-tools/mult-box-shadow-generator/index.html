@@ -6,80 +6,208 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
+<!-- PAGE TITLE -->
+<title>CSS Multi Box Shadow Generator – Free Tool | WebToolOcean</title>
+
+<!-- META DESCRIPTION -->
+<meta name="description" content="Create multiple CSS box-shadow layers online with live preview. Adjust offsets, blur, spread, color, opacity, and copy CSS. Modern UI with collapsible layers.">
+<meta name="keywords" content="CSS shadow generator, multi shadow, box-shadow online, multiple shadow layers, WebToolOcean tools, free CSS tool">
+
+<!-- META KEYWORDS -->
+<meta name="keywords" content="CSS shadow generator, box-shadow tool, multiple shadow layers, CSS shadow online, shadow preview, copy CSS shadow, WebToolOcean tools, CSS box-shadow generator, free CSS tool, design shadows online">
+
+<!-- AUTHOR & ROBOTS -->
+<meta name="author" content="WebToolOcean">
+<meta name="robots" content="index, follow">
+
+<!-- VIEWPORT FOR MOBILE SEO -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 Not Found – WebToolOcean</title>
-<meta name="description" content="Oops! The page you are looking for does not exist. Explore WebToolOcean's free online tools or return home.">
-<meta name="keywords" content="404, page not found, WebToolOcean, online tools, free tools">
-<link rel="icon" href="/favicon.png" type="image/png">
+
+<!-- CANONICAL URL -->
+<link rel="canonical" href="https://webtoolocean.com/css-design-tools/mult-box-shadow-generator/index.html">
+
+<!-- OPEN GRAPH (Facebook/LinkedIn/WhatsApp Sharing) -->
+<meta property="og:title" content="Free CSS Box Shadow Generator – WebToolOcean">
+<meta property="og:description" content="Create multiple CSS box-shadow layers online, adjust offsets, blur, spread, opacity and copy CSS instantly. Free tool for designers and developers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webtoolocean.com/css-design-tools/mult-box-shadow-generator/index.html">
+<meta property="og:image" content="https://webtoolocean.com/images/preview.png">
+<meta property="og:site_name" content="WebToolOcean">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CSS Multi Box Shadow Generator – Free Tool">
+<meta name="twitter:description" content="Generate multiple CSS shadow layers online with live preview. Copy CSS instantly. Free online CSS tool by WebToolOcean.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="/favicon.png">
 
 <!--CSS for the website--> 
 
 <!-- Dependencies -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/font-convert.css" rel="stylesheet">
-	<style>
- 
-
-h1{
-  font-size:120px;
-  margin:0;
-  color:#3b82f6;
+<link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+.generator {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/* LEFT PANEL */
+.controls {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 320px;
+    overflow-y: auto;
+}
+#addShadow {
+    width: 100%;
+    padding: 10px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.shadow-layer {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #fafafa;
+    transition: 0.3s;
+}
+.layer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.layer-header:hover {
+    background: #e5e7eb;
+}
+.layer-controls {
+    padding: 10px;
+}
+.layer-controls label {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+}
+.layer-controls input[type=range] {
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    background: #e5e7eb;
+    margin-top: 3px;
+}
+.layer-controls input[type=range]::-webkit-slider-thumb {
+-webkit-appearance:none;
+width:18px;
+height:18px;
+border-radius:50%;
+background:white;
+border:3px solid #3b82f6;
+cursor:pointer;
+box-shadow:0 3px 8px rgba(0,0,0,0.25);
+margin-top:-6px;
+}
+.layer-controls input[type=color] {
+    width: 60px;
+    height: 35px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.removeLayer {
+    background: #ef4444;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 10px;
+}
+/* RIGHT PANEL */
+.preview-area {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.preview {
+    height: 350px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.box {
+    width: 160px;
+    height: 160px;
+    background: white;
+    border-radius: 12px;
+}
+.code {
+    background: #111827;
+    color: #e5e7eb;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #3b82f6;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
 }
 
-h2{
-  font-size:28px;
-  margin:10px 0 20px;
+@media(max-width:768px) {
+.generator {
+    flex-direction: column;
 }
-
-p{
-  font-size:16px;
-  margin-bottom:30px;
-  color:#555;
 }
-
-a.button{
-  display:inline-block;
-  padding:12px 25px;
-  background:#3b82f6;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-  transition:0.3s;
+.copy-btn, .copy-tailwind {
+    position: static;
+    top: 10px;
+    right: 10px;
+    background: #3b82f6;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 12px;
+    float: right;
+	margin-top:0;
 }
-
-a.button:hover{
-  background:#2563eb;
-}
-
-input[type="text"]{
-  padding:10px 15px;
-  width:60%;
-  max-width:300px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  margin-right:10px;
-  outline:none;
-}
-
-input[type="submit"]{
-  padding:10px 15px;
-  background:#3b82f6;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-input[type="submit"]:hover{
-  background:#2563eb;
-}
-
-.search-form{
-  margin-top:20px;
+	code { 
+    word-break: break-all;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -93,7 +221,7 @@ input[type="submit"]:hover{
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<link href="css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
@@ -118,7 +246,7 @@ input[type="submit"]:hover{
     <div class="container">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
       <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
@@ -187,13 +315,62 @@ input[type="submit"]:hover{
 <!-- Sevices section -->
 <section id="content">
   <section class="py-5">
-     <div class="container">
-  <h1>404</h1>
-  <h2>Oops! Page Not Found</h2>
-  <p>The page you are looking for does not exist or has been moved. Try returning home or search for a tool below.</p>
-  <a href="https://webtoolocean.com/" class="button">Go to Home</a>
- 
-</div>
+    <div class="container">
+      <h1>Multi CSS Shadow Generator</h1>
+      <div class="generator my-3"> 
+        
+        <!-- LEFT PANEL -->
+        <div class="controls">
+          <div id="shadowLayers"></div>
+          <button id="addShadow">+ Add Shadow Layer</button>
+        </div>
+        
+        <!-- RIGHT PANEL -->
+        <div class="preview-area">
+          <div class="preview">
+            <div class="box" id="box"></div>
+          </div>
+          <div class="copylayesr">
+            <p><strong>Plain CSS</strong></p>
+            <div class="code"> <code id="cssCode"></code>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <br />
+            <p><strong>Tailwind CSS</strong></p>
+            <div class="code"> <code id="tailwindCode"></code>
+              <button class="copy-tailwind">Copy </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-4">
+    <div class="container">
+      <h1>CSS Multi Box Shadow Generator</h1>
+      <p> WebToolOcean CSS Multi Shadow Generator lets you create multiple CSS box-shadow layers easily.
+        Adjust horizontal and vertical offsets, blur, spread, opacity, and color of each layer with live preview.
+        Copy the generated CSS instantly for your website or project. Perfect for designers, developers, and front-end enthusiasts. </p>
+      <h2>How to Use the CSS Shadow Generator</h2>
+      <ul>
+        <li>Click <strong>+ Add Shadow Layer</strong> to create a new shadow.</li>
+        <li>Adjust X/Y offset, blur, spread, color, and opacity for each layer.</li>
+        <li>Preview the result in real-time.</li>
+        <li>Copy the generated CSS code using the <strong>Copy</strong> button.</li>
+        <li>Combine multiple shadows to create professional UI designs.</li>
+      </ul>
+      <h2>Why Use a CSS Shadow Generator?</h2>
+      <p> Creating box-shadow effects manually can be tricky, especially with multiple layers.
+        This free online tool simplifies the process, making it faster to create beautiful shadows and UI elements.
+        Use it to enhance buttons, cards, modals, and other components in your web projects. </p>
+      <h2>Tips for Using Shadows in Web Design</h2>
+      <ul>
+        <li>Use subtle shadows for material design and neumorphism.</li>
+        <li>Combine multiple layers to create depth.</li>
+        <li>Adjust opacity to match light source and design style.</li>
+        <li>Use inset shadows to create inner depth effects.</li>
+      </ul>
+    </div>
   </section>
 </section>
 <!-- InstanceEndEditable -->
@@ -264,6 +441,142 @@ input[type="submit"]:hover{
 <div class="clearfix"></div>
 <!-- InstanceBeginEditable name="EditRegion5" --> 
 <script src="js/bootstrap.bundle.min.js"></script> 
+<script>
+
+let layerCount=0;
+
+// Add new shadow layer
+function addLayer(){
+layerCount++;
+
+let layer=$(`
+<div class="shadow-layer" data-layer="${layerCount}">
+  <div class="layer-header">Shadow ${layerCount}<button class="removeLayer">Remove</button></div>
+  <div class="layer-controls">
+    <label>X Offset</label><input type="range" min="-100" max="100" value="10" class="x">
+    <label>Y Offset</label><input type="range" min="-100" max="100" value="10" class="y">
+    <label>Blur</label><input type="range" min="0" max="100" value="20" class="blur">
+    <label>Spread</label><input type="range" min="-50" max="50" value="0" class="spread">
+    <label>Color</label><input type="color" value="#000000" class="color">
+    <label>Opacity</label><input type="range" min="0" max="1" step="0.01" value="0.3" class="opacity">
+  </div>
+</div>`);
+
+$("#shadowLayers").append(layer);
+
+updateShadow();
+}
+
+
+// Toggle collapse layer
+$(document).on("click",".layer-header",function(e){
+if($(e.target).hasClass("removeLayer")) return;
+$(this).siblings(".layer-controls").slideToggle();
+});
+
+
+// Remove layer
+$(document).on("click",".removeLayer",function(){
+$(this).closest(".shadow-layer").remove();
+updateShadow();
+});
+
+
+// Update shadow on input change
+$(document).on("input change",".shadow-layer input",function(){
+updateShadow();
+});
+
+
+// Compute and apply box-shadow
+function updateShadow(){
+
+let shadows=[];
+let tailwindShadows=[];
+
+$(".shadow-layer").each(function(){
+
+let x=$(this).find(".x").val(),
+y=$(this).find(".y").val(),
+blur=$(this).find(".blur").val(),
+spread=$(this).find(".spread").val(),
+color=$(this).find(".color").val(),
+opacity=$(this).find(".opacity").val();
+
+let r=parseInt(color.substr(1,2),16),
+g=parseInt(color.substr(3,2),16),
+b=parseInt(color.substr(5,2),16);
+
+let rgba=`rgba(${r},${g},${b},${opacity})`;
+
+let cssShadow=`${x}px ${y}px ${blur}px ${spread}px ${rgba}`;
+shadows.push(cssShadow);
+
+/* Tailwind format */
+
+let twShadow=`${x}px_${y}px_${blur}px_${spread}px_rgba(${r},${g},${b},${opacity})`;
+tailwindShadows.push(twShadow);
+
+});
+
+
+let finalShadow=shadows.join(",");
+let tailwindShadow=`shadow-[${tailwindShadows.join(",")}]`;
+
+
+/* Apply preview */
+
+$("#box").css("box-shadow",finalShadow);
+
+
+/* CSS output */
+
+$("#cssCode").text(`box-shadow: ${finalShadow};`);
+
+
+/* Tailwind output */
+
+$("#tailwindCode").text(tailwindShadow);
+
+}
+
+
+// Copy CSS button
+$(".copy-btn").click(function(){
+
+navigator.clipboard.writeText($("#cssCode").text());
+
+$(this).text("Copied!");
+
+setTimeout(()=>{
+$(this).text("Copy");
+},1500);
+
+});
+
+
+// Copy Tailwind button
+$(".copy-tailwind").click(function(){
+
+navigator.clipboard.writeText($("#tailwindCode").text());
+
+$(this).text("Copied!");
+
+setTimeout(()=>{
+$(this).text("Copy Tailwind");
+},1500);
+
+});
+
+
+// Add shadow layer button
+$("#addShadow").click(addLayer);
+
+
+// Start with one shadow layer
+addLayer();
+
+</script> 
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");

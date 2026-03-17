@@ -6,82 +6,133 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
+<!-- ===================================================== -->
+
+<!-- Basic SEO Meta Tags -->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 Not Found – WebToolOcean</title>
-<meta name="description" content="Oops! The page you are looking for does not exist. Explore WebToolOcean's free online tools or return home.">
-<meta name="keywords" content="404, page not found, WebToolOcean, online tools, free tools">
-<link rel="icon" href="/favicon.png" type="image/png">
 
-<!--CSS for the website--> 
+<title>Base64 to Image Converter Online | WebToolOcean</title>
 
-<!-- Dependencies -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/font-convert.css" rel="stylesheet">
-	<style>
+<meta name="description" content="Convert Base64 string to image instantly. Free online Base64 to Image converter tool by WebToolOcean. Supports PNG, JPG and WebP.">
+
+<meta name="keywords" content="base64 to image, convert base64 to image, base64 decoder, base64 image converter">
+
+<meta name="author" content="WebToolOcean">
+
+<!-- Open Graph for social sharing -->
+<meta property="og:title" content="Base64 to Image Converter">
+<meta property="og:description" content="Convert Base64 string into image instantly online.">
+<meta property="og:url" content="https://webtoolocean.com/image-tools/base64-to-image/index.html">
  
+<!-- ===================================================== -->
+	
+<!--CSS for the website-->
+ 
+  <!-- Dependencies -->
+ <link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">
+ <style>
 
-h1{
-  font-size:120px;
-  margin:0;
-  color:#3b82f6;
+body{
+background:#f4f7fb;
+font-family:Arial;
 }
 
-h2{
-  font-size:28px;
-  margin:10px 0 20px;
+.tool-box{
+background:#fff;
+border-radius:12px;
+padding:30px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-p{
-  font-size:16px;
-  margin-bottom:30px;
-  color:#555;
+.drop-area{
+border:2px dashed #0d6efd;
+border-radius:10px;
+padding:40px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
 }
 
-a.button{
-  display:inline-block;
-  padding:12px 25px;
-  background:#3b82f6;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-  transition:0.3s;
+.drop-area:hover{
+background:#f1f7ff;
 }
 
-a.button:hover{
-  background:#2563eb;
+.preview img{
+max-width:220px;
+margin-top:15px;
 }
 
-input[type="text"]{
-  padding:10px 15px;
-  width:60%;
-  max-width:300px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  margin-right:10px;
-  outline:none;
+textarea{
+height:160px;
+font-size:13px;
 }
 
-input[type="submit"]{
-  padding:10px 15px;
-  background:#3b82f6;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  transition:0.3s;
+#copyMsg{
+display:none;
+color:green;
+font-weight:600;
 }
 
-input[type="submit"]:hover{
-  background:#2563eb;
+.progress{
+display:none;
+height:18px; /* bigger height */
+margin-top:20px;
+background:#e9ecef;
+border-radius:10px;
+overflow:hidden;
 }
 
-.search-form{
-  margin-top:20px;
+.progress-bar{
+height:100%;
+font-size:12px;
+font-weight:600;
+line-height:18px;
 }
-</style>
+
+.seo-section{
+background:#fff;
+margin-top:40px;
+padding:30px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.tool-box{
+background:#fff;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.preview-area{
+margin-top:20px;
+text-align:center;
+}
+
+.progress{
+display:none;
+height:18px;
+margin-top:20px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.success-msg{
+display:none;
+color:green;
+font-weight:600;
+margin-top:10px;
+}
+
+textarea{
+height:150px;
+}
+</style> 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -93,7 +144,7 @@ input[type="submit"]:hover{
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<link href="css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
@@ -118,7 +169,7 @@ input[type="submit"]:hover{
     <div class="container">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
       <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
@@ -171,32 +222,93 @@ input[type="submit"]:hover{
     </div>
   </div>
 </header>
-<!-- InstanceBeginEditable name="center" --> 
-
-<!-- Start dynamic content --> 
-<!-- <section id="testimonials">
+<!-- InstanceBeginEditable name="center" -->
+ 
+  <!-- Start dynamic content -->
+ <!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>--> 
-<!-- End dynamic content -->
-<div class="clearfix"></div>
-<!-- End dynamic content --> 
+  </section>-->
+  <!-- End dynamic content -->
+  <div class="clearfix"></div>
+  <!-- End dynamic content --> 
+  
+  <!-- Sevices section -->
+  <section id="content">
+   
+   <section class="py-5"> 
 
-<!-- Sevices section -->
-<section id="content">
-  <section class="py-5">
-     <div class="container">
-  <h1>404</h1>
-  <h2>Oops! Page Not Found</h2>
-  <p>The page you are looking for does not exist or has been moved. Try returning home or search for a tool below.</p>
-  <a href="https://webtoolocean.com/" class="button">Go to Home</a>
- 
+ <div class="container py-1">
+
+<h1 class="text-center mb-3">Base64 to Image Converter</h1>
+
+<p class="text-center text-muted">
+Paste your Base64 code and convert it into an image instantly.
+</p>
+
+<div class="tool-box">
+
+<textarea id="base64Input" class="form-control" placeholder="Paste Base64 string here..."></textarea>
+
+<button class="btn btn-primary mt-3" onclick="convertImage()">Convert to Image</button>
+
+<div class="progress">
+<div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">0%</div>
 </div>
-  </section>
-</section>
-<!-- InstanceEndEditable -->
+
+<div class="preview-area" id="preview"></div>
+
+<button id="downloadBtn" class="btn btn-success mt-3" style="display:none">Download Image</button>
+
+<div class="success-msg" id="successMsg">
+✔ Image generated successfully
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SEO CONTENT SECTION -->
+<div class="seo-section">
+  <div class="container mt-1">
+
+<h2>What is Base64 to Image Converter?</h2>
+
+<p>
+Base64 to Image Converter is a free online tool that allows you to convert Base64 encoded strings into images instantly. Developers often use Base64 encoding to embed images directly inside HTML, CSS, or JSON files.
+</p>
+
+<h2>How to Convert Base64 to Image?</h2>
+
+<ol>
+<li>Paste the Base64 string into the input field.</li>
+<li>Click the Convert button.</li>
+<li>The tool will generate the image preview.</li>
+<li>You can download the image instantly.</li>
+</ol>
+
+<h2>Features of This Tool</h2>
+
+<ul>
+<li>100% free and browser based</li>
+<li>Fast Base64 decoding</li>
+<li>Supports PNG, JPG, GIF and WebP</li>
+<li>No upload required</li>
+<li>Secure and private</li>
+</ul>
+
+</div>
+
+</div>
+  </section> 
+	</section>
+     
+ 
+
+  <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer class="footer light">
   <div class="clearfix"></div>
@@ -262,8 +374,75 @@ input[type="submit"]:hover{
   </article>
 </footer>
 <div class="clearfix"></div>
-<!-- InstanceBeginEditable name="EditRegion5" --> 
-<script src="js/bootstrap.bundle.min.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion5" -->
+     
+  <script src="js/bootstrap.bundle.min.js"></script>
+     
+    <script>
+
+const progress = document.querySelector(".progress")
+const progressBar = document.getElementById("progressBar")
+const preview = document.getElementById("preview")
+const downloadBtn = document.getElementById("downloadBtn")
+const successMsg = document.getElementById("successMsg")
+
+function convertImage(){
+
+let base64 = document.getElementById("base64Input").value.trim()
+
+if(!base64){
+alert("Please paste Base64 code")
+return
+}
+
+progress.style.display="block"
+progressBar.style.width="0%"
+progressBar.innerText="0%"
+
+let percent = 0
+
+let fakeProgress = setInterval(()=>{
+
+percent += 10
+
+progressBar.style.width = percent + "%"
+progressBar.innerText = percent + "%"
+
+if(percent >= 90){
+clearInterval(fakeProgress)
+}
+
+},300)
+
+setTimeout(()=>{
+
+progressBar.style.width="100%"
+progressBar.innerText="100%"
+
+preview.innerHTML = `<img src="${base64}" class="img-fluid rounded shadow">`
+
+downloadBtn.style.display="inline-block"
+
+downloadBtn.onclick = function(){
+
+let link = document.createElement("a")
+link.href = base64
+link.download = "image.png"
+link.click()
+
+}
+
+successMsg.style.display="block"
+
+setTimeout(()=>{
+progress.style.display="none"
+},1000)
+
+},3500)
+
+}
+
+</script>
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");

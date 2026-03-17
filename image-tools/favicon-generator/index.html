@@ -6,82 +6,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 Not Found – WebToolOcean</title>
-<meta name="description" content="Oops! The page you are looking for does not exist. Explore WebToolOcean's free online tools or return home.">
-<meta name="keywords" content="404, page not found, WebToolOcean, online tools, free tools">
-<link rel="icon" href="/favicon.png" type="image/png">
+<title>Favicon Generator – Create favicon.ico & Website Icons Online | WebToolOcean</title>
+<meta name="description" content="Free Favicon Generator to create favicon.ico, Apple touch icons, Android icons and manifest.json instantly. Upload your logo and download a full favicon pack.">
+<meta name="keywords" content="favicon generator, favicon.ico generator, favicon maker, create favicon online, website favicon generator, favicon png generator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://webtoolocean.com/image-tools/favicon-generator/index.html">
+<meta name="author" content="WebToolOcean">
 
-<!--CSS for the website--> 
+<!-- Open Graph -->
 
-<!-- Dependencies -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/font-convert.css" rel="stylesheet">
-	<style>
- 
+<meta property="og:title" content="Favicon Generator – Create favicon.ico Online">
+<meta property="og:description" content="Generate favicon.ico, Apple icons and Android icons instantly. Free online favicon generator.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webtoolocean.com/image-tools/favicon-generator/index.html">
+<meta property="og:image" content="https://webtoolocean.com/images/preview.png">
 
-h1{
-  font-size:120px;
-  margin:0;
-  color:#3b82f6;
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Favicon Generator – Create favicon.ico Online">
+<meta name="twitter:description" content="Generate favicon.ico and all favicon sizes instantly.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/.png">
+
+<!-- Schema --> 
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Favicon Generator",
+ "url": "https://webtoolocean.com/favicon-generator.html",
+ "applicationCategory": "DeveloperApplication",
+ "operatingSystem": "All",
+ "description": "Free online favicon generator that creates favicon.ico, Apple icons and Android icons instantly.",
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ }
+}
+</script> 
+ <link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+
+.controls{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+text-align:center;
 }
 
-h2{
-  font-size:28px;
-  margin:10px 0 20px;
+.dropzone{
+border:2px dashed #cbd5e1;
+padding:40px;
+cursor:pointer;
+border-radius:8px;
+margin-bottom:20px;
 }
 
-p{
-  font-size:16px;
-  margin-bottom:30px;
-  color:#555;
+.tool-options{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:20px;
 }
 
-a.button{
-  display:inline-block;
-  padding:12px 25px;
-  background:#3b82f6;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-  transition:0.3s;
+.preview-row{
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:15px;
 }
 
-a.button:hover{
-  background:#2563eb;
+.preview-box{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.06);
+text-align:center;
 }
 
-input[type="text"]{
-  padding:10px 15px;
-  width:60%;
-  max-width:300px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  margin-right:10px;
-  outline:none;
+.preview-box img{
+width:32px;
+height:32px;
 }
 
-input[type="submit"]{
-  padding:10px 15px;
-  background:#3b82f6;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  transition:0.3s;
+.codebox{
+background:#111;
+color:#00ff9c;
+padding:18px;
+border-radius:8px;
+position:relative;
+overflow:auto;
 }
 
-input[type="submit"]:hover{
-  background:#2563eb;
+.copybtn{
+position:absolute;
+right:10px;
+top:10px;
+background:#6366f1;
+border:none;
+color:white;
+padding:5px 10px;
+border-radius:6px;
+cursor:pointer;
+width:100px;
 }
 
-.search-form{
-  margin-top:20px;
+button{
+background:#6366f1;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:disabled{
+background:#9ca3af;
+cursor:not-allowed;
+}
+
+.toast{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#111827;
+color:white;
+padding:14px 18px;
+border-radius:8px;
+display:none;
+align-items:center;
+gap:10px;
+}
+
+.spinner{
+width:18px;
+height:18px;
+border:3px solid rgba(255,255,255,.3);
+border-top:3px solid white;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+to{transform:rotate(360deg);}
+}
+.favicon-preview {
+    padding: 10px;
+    text-align: center;
 }
 </style>
+
+<!--CSS for the website--> 
+ 
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -93,7 +179,7 @@ input[type="submit"]:hover{
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<link href="css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
@@ -118,7 +204,7 @@ input[type="submit"]:hover{
     <div class="container">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
       <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
@@ -185,16 +271,110 @@ input[type="submit"]:hover{
 <!-- End dynamic content --> 
 
 <!-- Sevices section -->
-<section id="content">
-  <section class="py-5">
-     <div class="container">
-  <h1>404</h1>
-  <h2>Oops! Page Not Found</h2>
-  <p>The page you are looking for does not exist or has been moved. Try returning home or search for a tool below.</p>
-  <a href="https://webtoolocean.com/" class="button">Go to Home</a>
- 
+ <section id="content">
+
+<section class="py-5">
+<div class="container">
+
+<h1>Favicon Generator</h1>
+
+<div class="controls">
+
+<div class="dropzone" id="dropzone">
+Upload Logo (PNG / JPG / SVG)
+<input type="file" id="fileInput" hidden accept="image/*,.svg">
 </div>
-  </section>
+
+<div class="tool-options">
+
+<label>Padding</label>
+<input type="range" id="paddingRange" min="0" max="30" value="10">
+
+<label>Background</label>
+<select id="bgColor">
+<option value="transparent">Transparent</option>
+<option value="#ffffff">White</option>
+<option value="#000000">Black</option>
+<option value="#f1f5f9">Light Gray</option>
+</select>
+
+</div>
+
+<button id="downloadZip" disabled>
+Download Favicon Pack
+</button>
+
+</div>
+
+
+<div class="favicon-preview" id="faviconPreview" style="display:none">
+
+<h3>Preview</h3>
+
+<div class="preview-row">
+
+<div class="preview-box">
+<p>Browser Tab</p>
+<img id="tabPreview">
+</div>
+
+<div class="preview-box">
+<p>Bookmark</p>
+<img id="bookmarkPreview">
+</div>
+
+<div class="preview-box">
+<p>Mobile</p>
+<img id="mobilePreview">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="preview" id="preview" style="display:none">
+
+<h3>HTML Code</h3>
+
+<div class="codebox">
+<button class="copybtn" onclick="copyCode('htmlCode')">Copy</button>
+<pre id="htmlCode"></pre>
+</div>
+
+<h3 style="margin-top:25px;">manifest.json</h3>
+
+<div class="codebox">
+<button class="copybtn" onclick="copyCode('manifestCode')">Copy</button>
+<pre id="manifestCode"></pre>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="toast" id="toast">
+<div class="spinner"></div>
+<span id="toastText">Processing...</span>
+</div>
+
+</section>
+
+
+<section class="seo-content bg-light py-5">
+<div class="container">
+
+<h1>Favicon Generator – Create favicon.ico & App Icons Online</h1>
+
+<p>
+WebToolOcean’s <strong>Favicon Generator</strong> lets you convert any image (PNG, JPG, SVG)
+into a complete set of favicon files required for modern websites and applications.
+</p>
+
+</div>
+</section>
+
 </section>
 <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
@@ -264,6 +444,235 @@ input[type="submit"]:hover{
 <div class="clearfix"></div>
 <!-- InstanceBeginEditable name="EditRegion5" --> 
 <script src="js/bootstrap.bundle.min.js"></script> 
+    
+<script>
+
+const sizes=[16,32,48,64,96,128,144,180,192,256,384,512]
+
+let image=null
+let generatedIcons=[]
+
+const paddingRange=document.getElementById("paddingRange")
+const bgColor=document.getElementById("bgColor")
+
+const drop=document.getElementById("dropzone")
+const input=document.getElementById("fileInput")
+
+const preview=document.getElementById("preview")
+const previewUI=document.getElementById("faviconPreview")
+
+const tabPreview=document.getElementById("tabPreview")
+const bookmarkPreview=document.getElementById("bookmarkPreview")
+const mobilePreview=document.getElementById("mobilePreview")
+
+const downloadBtn=document.getElementById("downloadZip")
+
+const toast=document.getElementById("toast")
+const toastText=document.getElementById("toastText")
+
+
+drop.onclick=()=>input.click()
+
+input.onchange=e=>loadImage(e.target.files[0])
+
+drop.ondragover=e=>e.preventDefault()
+
+drop.ondrop=e=>{
+e.preventDefault()
+loadImage(e.dataTransfer.files[0])
+}
+
+
+function showToast(msg){
+toast.style.display="flex"
+toastText.textContent=msg
+}
+
+function hideToast(){
+setTimeout(()=>toast.style.display="none",1500)
+}
+
+
+function loadImage(file){
+
+showToast("Loading image...")
+
+let reader=new FileReader()
+
+reader.onload=e=>{
+
+image=new Image()
+
+image.onload=()=>{
+
+generateIcons()
+
+}
+
+image.src=e.target.result
+}
+
+reader.readAsDataURL(file)
+
+}
+
+
+function drawIcon(size){
+
+let padding=size*(paddingRange.value/100)
+
+let canvas=document.createElement("canvas")
+canvas.width=size
+canvas.height=size
+
+let ctx=canvas.getContext("2d")
+
+if(bgColor.value!=="transparent"){
+ctx.fillStyle=bgColor.value
+ctx.fillRect(0,0,size,size)
+}
+
+let drawSize=size-(padding*2)
+
+ctx.drawImage(image,padding,padding,drawSize,drawSize)
+
+return canvas.toDataURL()
+
+}
+
+
+function generateIcons(){
+
+generatedIcons=[]
+
+sizes.forEach(size=>{
+
+let data=drawIcon(size)
+
+generatedIcons.push({
+size:size,
+data:data
+})
+
+})
+
+updatePreview()
+generateCode()
+
+downloadBtn.disabled=false
+
+preview.style.display="block"
+previewUI.style.display="block"
+
+showToast("Icons generated!")
+
+hideToast()
+
+}
+
+
+function updatePreview(){
+
+let icon=generatedIcons.find(i=>i.size==32)
+
+tabPreview.src=icon.data
+bookmarkPreview.src=icon.data
+mobilePreview.src=icon.data
+
+}
+
+
+function generateCode(){
+
+document.getElementById("htmlCode").textContent=
+`<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="manifest" href="/manifest.json">`
+
+let manifest={
+name:"Website",
+short_name:"Site",
+icons:[
+{src:"favicon-192.png",sizes:"192x192",type:"image/png"},
+{src:"favicon-512.png",sizes:"512x512",type:"image/png"}
+],
+theme_color:"#ffffff",
+background_color:"#ffffff",
+display:"standalone"
+}
+
+document.getElementById("manifestCode").textContent=
+JSON.stringify(manifest,null,2)
+
+}
+
+
+downloadBtn.onclick=function(){
+
+showToast("Generating ZIP...")
+
+let zip=new JSZip()
+
+generatedIcons.forEach(icon=>{
+zip.file(`favicon-${icon.size}.png`,
+icon.data.split(",")[1],
+{base64:true})
+})
+
+let icoIcon=generatedIcons.find(i=>i.size==32)
+
+zip.file("favicon.ico",
+icoIcon.data.split(",")[1],
+{base64:true})
+
+let manifest=JSON.parse(
+document.getElementById("manifestCode").textContent
+)
+
+zip.file("manifest.json",
+JSON.stringify(manifest,null,2)
+)
+
+zip.generateAsync({type:"blob"}).then(content=>{
+
+let link=document.createElement("a")
+
+link.href=URL.createObjectURL(content)
+
+link.download="favicon-pack.zip"
+
+link.click()
+
+showToast("Download ready!")
+
+hideToast()
+
+})
+
+}
+
+
+function copyCode(id){
+
+let text=document.getElementById(id).textContent
+
+navigator.clipboard.writeText(text)
+
+showToast("Copied!")
+
+hideToast()
+
+}
+paddingRange.addEventListener("input",()=>{
+if(image) generateIcons()
+})
+
+bgColor.addEventListener("change",()=>{
+if(image) generateIcons()
+})
+</script>
+ 
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");

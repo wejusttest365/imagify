@@ -6,82 +6,251 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
+<!-- PAGE TITLE -->
+<title>CSS Box Shadow Generator – Free Online Tool | WebToolOcean</title>
+
+<!-- META DESCRIPTION -->
+<meta name="description" content="Generate custom CSS box shadows online for free. Create multiple shadow layers, adjust X/Y offset, blur, spread, opacity, and copy the CSS instantly with WebToolOcean.">
+
+<!-- META KEYWORDS -->
+<meta name="keywords" content="CSS shadow generator, box-shadow tool, multiple shadow layers, CSS shadow online, shadow preview, copy CSS shadow, WebToolOcean tools, CSS box-shadow generator, free CSS tool, design shadows online">
+
+<!-- AUTHOR & ROBOTS -->
+<meta name="author" content="WebToolOcean">
+<meta name="robots" content="index, follow">
+
+<!-- VIEWPORT FOR MOBILE SEO -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 Not Found – WebToolOcean</title>
-<meta name="description" content="Oops! The page you are looking for does not exist. Explore WebToolOcean's free online tools or return home.">
-<meta name="keywords" content="404, page not found, WebToolOcean, online tools, free tools">
-<link rel="icon" href="/favicon.png" type="image/png">
+
+<!-- CANONICAL URL -->
+<link rel="canonical" href="https://webtoolocean.com/css-design-tools/box-shadow-generator/index.html">
+
+<!-- OPEN GRAPH (Facebook/LinkedIn/WhatsApp Sharing) -->
+<meta property="og:title" content="Free CSS Box Shadow Generator – WebToolOcean">
+<meta property="og:description" content="Create multiple CSS box-shadow layers online, adjust offsets, blur, spread, opacity and copy CSS instantly. Free tool for designers and developers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webtoolocean.com/css-design-tools/box-shadow-generator/index.html">
+<meta property="og:image" content="https://webtoolocean.com/images/css-shadow-generator-preview.png">
+<meta property="og:site_name" content="WebToolOcean">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CSS Box Shadow Generator – Free Tool">
+<meta name="twitter:description" content="Generate multiple CSS shadow layers online with live preview. Copy CSS instantly. Free online CSS tool by WebToolOcean.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/css-shadow-generator-preview.png">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="/favicon.png">
 
 <!--CSS for the website--> 
 
 <!-- Dependencies -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/font-convert.css" rel="stylesheet">
-	<style>
+<link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
  
 
-h1{
-  font-size:120px;
-  margin:0;
-  color:#3b82f6;
+/* layout */
+
+.generator{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
 }
 
-h2{
-  font-size:28px;
-  margin:10px 0 20px;
+/* controls */
+
+.controls{
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+flex:1;
+min-width:330px;
 }
 
-p{
-  font-size:16px;
-  margin-bottom:30px;
-  color:#555;
+.control{
+margin-bottom:20px;
 }
 
-a.button{
-  display:inline-block;
-  padding:12px 25px;
-  background:#3b82f6;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-  transition:0.3s;
+.control label{
+display:flex;
+justify-content:space-between;
+font-size:14px;
+margin-bottom:5px;
 }
 
-a.button:hover{
-  background:#2563eb;
+.control input[type=range]{
+width:100%;
 }
 
-input[type="text"]{
-  padding:10px 15px;
-  width:60%;
-  max-width:300px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  margin-right:10px;
+.control input[type=color]{
+width:60px;
+height:35px;
+border:none;
+cursor:pointer;
+}
+
+/* preview */
+
+.preview-area{
+flex:1;
+min-width:330px;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.preview{
+height:260px;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.box{
+width:160px;
+height:160px;
+background:white;
+border-radius:12px;
+}
+
+/* code block */
+
+.code{
+background:#111827;
+color:#e5e7eb;
+padding:20px;
+border-radius:10px;
+font-family:monospace;
+position:relative;
+}
+
+.copy-btn, .copy-tailwind {
+    position: static;
+    top: 10px;
+    right: 10px;
+    background: #3b82f6;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 12px;
+    float: right;
+}
+
+/* presets */
+
+.presets{
+margin-top:20px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.preset{
+background:#f1f5f9;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+}
+
+.preset:hover{
+background:#e2e8f0;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+.generator{
+flex-direction:column;
+}
+}
+/* ===== MODERN RANGE SLIDER ===== */
+
+input[type=range]{
+  -webkit-appearance:none;
+  width:100%;
+  height:8px;
+  border-radius:10px;
+  background:#e5e7eb;
   outline:none;
+  transition:all .3s ease;
 }
 
-input[type="submit"]{
-  padding:10px 15px;
-  background:#3b82f6;
-  color:white;
-  border:none;
-  border-radius:6px;
+/* ===== TRACK PROGRESS EFFECT ===== */
+
+input[type=range]::-webkit-slider-runnable-track{
+  height:8px;
+  border-radius:10px;
+  background:linear-gradient(90deg,#3b82f6,#6366f1);
+}
+
+/* ===== HANDLE ===== */
+
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#ffffff;
+  border:3px solid #3b82f6;
   cursor:pointer;
-  transition:0.3s;
+  margin-top:-6px;
+  transition:all .2s ease;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-input[type="submit"]:hover{
-  background:#2563eb;
+/* ===== HOVER EFFECT ===== */
+
+input[type=range]::-webkit-slider-thumb:hover{
+  transform:scale(1.15);
 }
 
-.search-form{
-  margin-top:20px;
+/* ===== ACTIVE DRAG GLOW ===== */
+
+input[type=range]:active::-webkit-slider-thumb{
+  box-shadow:0 0 12px #3b82f6;
+}
+
+
+/* ===== FIREFOX SUPPORT ===== */
+
+input[type=range]::-moz-range-track{
+  height:8px;
+  border-radius:10px;
+  background:#e5e7eb;
+}
+
+input[type=range]::-moz-range-progress{
+  height:8px;
+  border-radius:10px;
+  background:linear-gradient(90deg,#3b82f6,#6366f1);
+}
+
+input[type=range]::-moz-range-thumb{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#ffffff;
+  border:3px solid #3b82f6;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+	.copylayesr p {
+    margin-bottom: 4px;
 }
 </style>
+
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -93,7 +262,7 @@ input[type="submit"]:hover{
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<link href="css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
@@ -118,7 +287,7 @@ input[type="submit"]:hover{
     <div class="container">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
       <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
@@ -188,13 +357,138 @@ input[type="submit"]:hover{
 <section id="content">
   <section class="py-5">
      <div class="container">
-  <h1>404</h1>
-  <h2>Oops! Page Not Found</h2>
-  <p>The page you are looking for does not exist or has been moved. Try returning home or search for a tool below.</p>
-  <a href="https://webtoolocean.com/" class="button">Go to Home</a>
+
+<h1>CSS Box Shadow Generator</h1>
+
+<div class="generator">
+
+<!-- Controls -->
+
+<div class="controls">
+
+<div class="control">
+<label>Horizontal Offset <span id="xVal">10</span>px</label>
+<input type="range" min="-100" max="100" value="10" id="x">
+</div>
+
+<div class="control">
+<label>Vertical Offset <span id="yVal">10</span>px</label>
+<input type="range" min="-100" max="100" value="10" id="y">
+</div>
+
+<div class="control">
+<label>Blur Radius <span id="blurVal">20</span>px</label>
+<input type="range" min="0" max="100" value="20" id="blur">
+</div>
+
+<div class="control">
+<label>Spread Radius <span id="spreadVal">0</span>px</label>
+<input type="range" min="-50" max="50" value="0" id="spread">
+</div>
+
+<div class="control">
+<label>Border Radius <span id="radiusVal">12</span>px</label>
+<input type="range" min="0" max="100" value="12" id="radius">
+</div>
+
+<div class="control">
+<label>Opacity <span id="opacityVal">0.3</span></label>
+<input type="range" min="0" max="1" step="0.01" value="0.3" id="opacity">
+</div>
+
+<div class="control">
+<label>Shadow Color</label>
+<input type="color" id="color" value="#000000">
+</div>
+
+<div class="control">
+<label>Preview Background</label>
+<input type="color" id="bgcolor" value="#ffffff">
+</div>
+
+<div class="control">
+ 
+<input type="checkbox" id="inset"> Inset Shadow
  
 </div>
+
+<!-- presets -->
+
+<div class="presets">
+
+<div class="preset" data-shadow="0 10px 25px rgba(0,0,0,0.15)">Soft</div>
+
+<div class="preset" data-shadow="0 20px 40px rgba(0,0,0,0.2)">Floating</div>
+
+<div class="preset" data-shadow="0 5px 10px rgba(0,0,0,0.3)">Hard</div>
+
+<div class="preset" data-shadow="0 0 20px rgba(0,0,0,0.4)">Glow</div>
+
+</div>
+
+</div>
+
+
+<!-- preview -->
+
+<div class="preview-area">
+
+<div class="preview" id="preview">
+<div class="box" id="box"></div>
+</div>
+	<div class="copylayesr">
+<p><strong>Plain CSS</strong></p>
+<div class="code">
+
+<button class="copy-btn">Copy</button>
+
+<code id="cssCode"></code>
+
+</div>
+	<br />
+	<p><strong>Tailwind CSS</strong></p>
+	<div class="code">
+
+<button class="copy-tailwind">Copy </button>
+
+<code id="tailwindCode"></code>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
   </section>
+	<section class="py-4">
+	<div class="container">
+		<h1>CSS Box Shadow Generator</h1>
+
+<p>
+WebToolOcean CSS Shadow Generator lets you create multiple CSS box-shadow layers easily.
+Adjust horizontal and vertical offsets, blur, spread, opacity, and color of each layer with live preview.
+Copy the generated CSS instantly for your website or project. Perfect for designers, developers, and front-end enthusiasts.
+</p>
+ 
+<h2>Why Use a CSS Shadow Generator?</h2>
+<p>
+Creating box-shadow effects manually can be tricky, especially with multiple layers.
+This free online tool simplifies the process, making it faster to create beautiful shadows and UI elements.
+Use it to enhance buttons, cards, modals, and other components in your web projects.
+</p>
+
+<h2>Tips for Using Shadows in Web Design</h2>
+<ul>
+<li>Use subtle shadows for material design and neumorphism.</li>
+<li>Combine multiple layers to create depth.</li>
+<li>Adjust opacity to match light source and design style.</li>
+<li>Use inset shadows to create inner depth effects.</li>
+</ul>
+		</div>
+		
+	</section>
 </section>
 <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
@@ -264,6 +558,111 @@ input[type="submit"]:hover{
 <div class="clearfix"></div>
 <!-- InstanceBeginEditable name="EditRegion5" --> 
 <script src="js/bootstrap.bundle.min.js"></script> 
+	 <script>
+
+function updateShadow(){
+
+let x=$("#x").val();
+let y=$("#y").val();
+let blur=$("#blur").val();
+let spread=$("#spread").val();
+let radius=$("#radius").val();
+let color=$("#color").val();
+let opacity=$("#opacity").val();
+let inset=$("#inset").is(":checked") ? "inset " : "";
+
+$("#xVal").text(x)
+$("#yVal").text(y)
+$("#blurVal").text(blur)
+$("#spreadVal").text(spread)
+$("#radiusVal").text(radius)
+$("#opacityVal").text(opacity)
+
+let r=parseInt(color.substr(1,2),16);
+let g=parseInt(color.substr(3,2),16);
+let b=parseInt(color.substr(5,2),16);
+
+let rgba=`rgba(${r},${g},${b},${opacity})`;
+
+let shadow=`${inset}${x}px ${y}px ${blur}px ${spread}px ${rgba}`;
+
+$("#box").css({
+"box-shadow":shadow,
+"border-radius":radius+"px"
+});
+
+$("#preview").css("background",$("#bgcolor").val());
+
+/* CSS EXPORT */
+
+let css=`.box{
+  border-radius:${radius}px;
+  box-shadow:${shadow};
+}`
+
+$("#cssCode").text(css);
+
+/* TAILWIND EXPORT */
+
+let twShadow=`shadow-[${x}px_${y}px_${blur}px_${spread}px_rgba(${r},${g},${b},${opacity})]`;
+let twRadius=`rounded-[${radius}px]`;
+
+let tailwind=`${twShadow} ${twRadius}`;
+
+$("#tailwindCode").text(tailwind);
+
+}
+
+$("input").on("input change",updateShadow)
+
+updateShadow()
+
+/* Copy CSS */
+
+$(".copy-btn").click(function(){
+
+let text=$("#cssCode").text()
+
+navigator.clipboard.writeText(text)
+
+$(this).text("Copied!")
+
+setTimeout(()=>{
+$(this).text("Copy")
+},1500)
+
+})
+
+/* Copy Tailwind */
+
+$(".copy-tailwind").click(function(){
+
+let text=$("#tailwindCode").text()
+
+navigator.clipboard.writeText(text)
+
+$(this).text("Copied!")
+
+setTimeout(()=>{
+$(this).text("Copy Tailwind")
+},1500)
+
+})
+
+/* Presets */
+
+$(".preset").click(function(){
+
+let shadow=$(this).data("shadow")
+
+$("#box").css("box-shadow",shadow)
+
+$("#cssCode").text(`box-shadow: ${shadow};`)
+
+})
+
+</script>
+
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");

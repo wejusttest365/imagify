@@ -6,82 +6,141 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
+<!-- ===================================================== -->
+<!-- PAGE TITLE (Most important SEO element) -->
+<!-- Keep it under 60 characters for best Google display -->
+<title>Free Image to Text Converter (OCR) – Extract Text from Images Online</title>
+
+<!-- ===================================================== -->
+<!-- META DESCRIPTION (150–160 characters recommended) -->
+<meta name="description" content="Convert images to editable text instantly with our free Image to Text OCR tool. Extract text from screenshots, scanned documents, JPG, PNG, or WebP images online.">
+
+<!-- ===================================================== -->
+<!-- OPTIONAL SEO KEYWORDS (Not very important for Google but OK to include) -->
+<meta name="keywords" content="image to text converter, OCR online free, extract text from image, screenshot to text, OCR tool online, image text extractor, convert image to text, OCR web tool, WebToolOcean">
+
+<!-- ===================================================== -->
+<!-- ROBOTS TAG (Allow search engines to index page) -->
+<meta name="robots" content="index, follow">
+
+<!-- ===================================================== -->
+<!-- AUTHOR -->
+<meta name="author" content="Web Tool Ocean">
+
+<!-- ===================================================== -->
+<!-- MOBILE RESPONSIVE -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 Not Found – WebToolOcean</title>
-<meta name="description" content="Oops! The page you are looking for does not exist. Explore WebToolOcean's free online tools or return home.">
-<meta name="keywords" content="404, page not found, WebToolOcean, online tools, free tools">
-<link rel="icon" href="/favicon.png" type="image/png">
 
-<!--CSS for the website--> 
+<!-- ===================================================== -->
+<!-- CANONICAL URL (Important for SEO to avoid duplicate pages) -->
+<link rel="canonical" href="https://webtoolocean.com/image-tools/image-to-text-ocr/index.html">
 
-<!-- Dependencies -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/font-convert.css" rel="stylesheet">
-	<style>
+<!-- ===================================================== -->
+<!-- OPEN GRAPH TAGS (Used when sharing on Facebook / LinkedIn / WhatsApp) -->
+<meta property="og:title" content="Free Image to Text Converter (OCR)">
+<meta property="og:description" content="Extract text from images, screenshots and scanned documents instantly with our free online OCR tool.">
+<meta property="og:url" content="https://webtoolocean.com/image-tools/image-to-text-ocr/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Web Tool Ocean">
+<meta property="og:image" content="https://webtoolocean.com/images/preview.png">
+
+<!-- ===================================================== -->
+<!-- TWITTER CARD SEO -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Image to Text OCR Tool">
+<meta name="twitter:description" content="Upload an image and extract text instantly using our powerful OCR tool. Supports JPG, PNG and WebP images.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+
+<!-- ===================================================== -->
+<!-- THEME COLOR (Optional but nice for browsers and mobile UI) -->
+<meta name="theme-color" content="#0d6efd">
+
+<!-- ===================================================== -->
+<!-- STRUCTURED DATA (SCHEMA MARKUP FOR GOOGLE) -->
+<!-- Helps search engines understand this is a web tool -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "SoftwareApplication",
+"name": "Image to Text OCR Tool",
+"operatingSystem": "All",
+"applicationCategory": "WebApplication",
+"description": "Free online tool to extract text from images using OCR technology. Supports JPG, PNG and WebP images.",
+"url": "https://webtoolocean.com/image-text-ocr.html",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<!-- ===================================================== -->
+	
+<!--CSS for the website-->
  
+  <!-- Dependencies -->
+   <link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">
+ <style>
+  .nav-item.active-font-converter a {
+    color: #fff;
+    background: blue;
+    border-radius: 4px;
+  }
 
-h1{
-  font-size:120px;
-  margin:0;
-  color:#3b82f6;
-}
+  #dropArea {
+    border: 2px dashed #6c757d;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    color: #6c757d;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.2s;
+  }
 
-h2{
-  font-size:28px;
-  margin:10px 0 20px;
-}
+  #dropArea.dragover {
+    background: #e9ecef;
+  }
 
-p{
-  font-size:16px;
-  margin-bottom:30px;
-  color:#555;
-}
+  .file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dee2e6;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+  }
 
-a.button{
-  display:inline-block;
-  padding:12px 25px;
-  background:#3b82f6;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-  transition:0.3s;
-}
+  .file-item span {
+    word-break: break-all;
+  }
 
-a.button:hover{
-  background:#2563eb;
-}
+  .previewBox {
+    border: 2px dashed #6c757d;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 2rem;
+    margin-top: 10px;
+    min-height: 100px;
+  }
 
-input[type="text"]{
-  padding:10px 15px;
-  width:60%;
-  max-width:300px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  margin-right:10px;
-  outline:none;
-}
+  pre {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
 
-input[type="submit"]{
-  padding:10px 15px;
-  background:#3b82f6;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-input[type="submit"]:hover{
-  background:#2563eb;
-}
-
-.search-form{
-  margin-top:20px;
-}
-</style>
+  .text-left {
+    text-align: left !important;
+  }
+</style>	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -93,7 +152,7 @@ input[type="submit"]:hover{
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<link href="css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
@@ -118,7 +177,7 @@ input[type="submit"]:hover{
     <div class="container">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
       <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
@@ -171,32 +230,69 @@ input[type="submit"]:hover{
     </div>
   </div>
 </header>
-<!-- InstanceBeginEditable name="center" --> 
-
-<!-- Start dynamic content --> 
-<!-- <section id="testimonials">
+<!-- InstanceBeginEditable name="center" -->
+ 
+  <!-- Start dynamic content -->
+ <!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>--> 
-<!-- End dynamic content -->
-<div class="clearfix"></div>
-<!-- End dynamic content --> 
+  </section>-->
+  <!-- End dynamic content -->
+  <div class="clearfix"></div>
+  <!-- End dynamic content --> 
+  
+  <!-- Sevices section -->
+  <section id="content">
+   
+    <section class="py-5">
+    <h1 class="mb-4 text-center">Convert Image to Text</h1>
+    <div class="container">
+      <div id="dropZone">
+        <p>Drag & drop an image here, or <br /> <span class="btn btn-primary text-uppercase mt-2"> Click to Select</span></p>
+        <input type="file" id="imageUpload" accept="image/*">
+      </div>
 
-<!-- Sevices section -->
-<section id="content">
-  <section class="py-5">
-     <div class="container">
-  <h1>404</h1>
-  <h2>Oops! Page Not Found</h2>
-  <p>The page you are looking for does not exist or has been moved. Try returning home or search for a tool below.</p>
-  <a href="https://webtoolocean.com/" class="button">Go to Home</a>
- 
-</div>
+      <div id="progressBar">
+        <div id="progress"></div>
+      </div>
+      <div id="result">Extracted text will appear here...</div>
+
+      <button class="convert" id="convertBtn">Convert</button>
+      <button class="reset" id="resetBtn" disabled>Reset</button>
+      <button class="convert" id="copyBtn" disabled>Copy Text</button>
+    </div>
   </section>
-</section>
-<!-- InstanceEndEditable -->
+  <section class="why-section py-5 text-center bg-light">
+    <div class="container">
+		 
+      <h2>How It Works</h2>
+      <p>Upload your image and click "Convert" to extract text. The process is fully interactive and controlled by you.
+      </p>
+      <div class="features">
+        <div class="feature-box">
+          <h3>Upload Image</h3>
+          <p>Drag and drop or select an image containing text.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Click Convert</h3>
+          <p>Start OCR processing manually at your convenience.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Copy & Use</h3>
+          <p>Extracted text can be copied or used in your documents.</p>
+        </div>
+      </div> 
+     
+    </div>
+  </section>
+   
+	</section>
+     
+ 
+
+  <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer class="footer light">
   <div class="clearfix"></div>
@@ -262,8 +358,96 @@ input[type="submit"]:hover{
   </article>
 </footer>
 <div class="clearfix"></div>
-<!-- InstanceBeginEditable name="EditRegion5" --> 
-<script src="js/bootstrap.bundle.min.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion5" -->
+   <script>
+    const dropZone = document.getElementById('dropZone');
+    const imageUpload = document.getElementById('imageUpload');
+    const resultDiv = document.getElementById('result');
+    const progressDiv = document.getElementById('progress');
+    const progressBar = document.getElementById('progressBar');
+    const convertBtn = document.getElementById('convertBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    let uploadedFile = null;
+
+    // Click opens file select
+    dropZone.addEventListener('click', () => imageUpload.click());
+
+    // Drag & Drop
+    dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('hover'); });
+    dropZone.addEventListener('dragleave', e => { dropZone.classList.remove('hover'); });
+    dropZone.addEventListener('drop', e => {
+      e.preventDefault();
+      dropZone.classList.remove('hover');
+      uploadedFile = e.dataTransfer.files[0];
+      if (uploadedFile) {
+        resultDiv.textContent = "Ready to convert: " + uploadedFile.name;
+        dropZone.classList.add('drop-animate');
+        setTimeout(() => dropZone.classList.remove('drop-animate'), 400);
+        resetBtn.disabled = false; // Enable Reset
+      }
+    });
+
+    // File select
+    imageUpload.addEventListener('change', e => {
+      uploadedFile = e.target.files[0];
+      if (uploadedFile) {
+        resultDiv.textContent = "Ready to convert: " + uploadedFile.name;
+        resetBtn.disabled = false; // Enable Reset
+      }
+    });
+
+    // Convert
+    convertBtn.addEventListener('click', () => {
+      if (!uploadedFile) { alert("Please select an image first!"); return; }
+      resultDiv.textContent = "Processing image...";
+      progressBar.style.display = "block";
+      progressDiv.style.width = "0%";
+
+      Tesseract.recognize(uploadedFile, 'eng', {
+        logger: m => { if (m.status === 'recognizing text') progressDiv.style.width = (m.progress * 100) + '%'; }
+      }).then(({ data: { text } }) => {
+        resultDiv.textContent = text || "No text found in the image.";
+        progressDiv.style.width = "100%";
+        copyBtn.disabled = !text; // Enable Copy if text exists
+      }).catch(err => {
+        resultDiv.textContent = "Error processing image.";
+        console.error(err);
+      });
+    });
+
+    // Reset
+    resetBtn.addEventListener('click', () => {
+      uploadedFile = null;
+      imageUpload.value = "";
+      resultDiv.textContent = "Extracted text will appear here...";
+      progressDiv.style.width = "0%";
+      progressBar.style.display = "none";
+      resetBtn.disabled = true; // Disable again
+      copyBtn.disabled = true;  // Disable again
+    });
+
+    // Copy Text
+    copyBtn.addEventListener('click', () => {
+      const text = resultDiv.textContent;
+      if (!text || text === "Extracted text will appear here...") {
+        alert("No text to copy!");
+        return;
+      }
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Text copied to clipboard!");
+      }).catch(err => {
+        alert("Failed to copy text");
+        console.error(err);
+      });
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.1.1/dist/tesseract.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+     
+   
 <!-- InstanceEndEditable --> 
 <script>
 		const btn = document.getElementById("togglemeu");

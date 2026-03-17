@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="images/favicon.png">
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<!-- =========================
+SEO TITLE
+Appears in Google search results
+========================= -->
+<title>Free Online Photo Editor – Mini Photoshop Style Tool | WebToolOcean</title>
+
+<!-- =========================
+META DESCRIPTION
+Shown in Google search snippet
+========================= -->
+<meta name="description" content="Free online photo editor similar to Photoshop. Edit images, add text, crop photos, draw shapes and download instantly. No signup required.">
+
+<!-- =========================
+META KEYWORDS (optional)
+========================= -->
+<meta name="keywords" content="online photo editor, photoshop online, mini photoshop editor, edit image online, add text to image, crop image online, free photo editor tool">
+
+<!-- =========================
+AUTHOR
+========================= -->
+<meta name="author" content="WebToolOcean">
+
+<!-- =========================
+ROBOTS
+========================= -->
+<meta name="robots" content="index, follow">
+
+<!-- =========================
+OPEN GRAPH (Facebook / WhatsApp)
+========================= -->
+<meta property="og:title" content="Free Online Photo Editor – Photoshop Style Mini Editor">
+<meta property="og:description" content="Edit images online with a Photoshop-style editor. Add text, crop photos, draw shapes and download instantly.">
+<meta property="og:url" content="https://webtoolocean.com/photoshop-mini.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://webtoolocean.com/images/photo-editor-preview.png">
+
+<!-- =========================
+TWITTER CARD
+========================= -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Online Photo Editor – Photoshop Style Mini Editor">
+<meta name="twitter:description" content="Edit images online with this free Photoshop-like editor. Add text, crop photos and download instantly.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/photo-editor-preview.png">
+
+<!-- =========================
+CANONICAL URL
+Prevents duplicate SEO issues
+========================= -->
+<link rel="canonical" href="https://webtoolocean.com/photoshop-mini.html">
+
+<!-- =========================
+STRUCTURED DATA (SEO BOOST)
+========================= -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "WebToolOcean Mini Photoshop Editor",
+ "url": "https://webtoolocean.com/photoshop-mini.html",
+ "applicationCategory": "PhotoEditor",
+ "operatingSystem": "Any",
+ "description": "Free online photo editor similar to Photoshop. Edit images, add text, crop photos and download instantly.",
+ "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+ }
+}
+</script>
+<!-- ===================================================== -->
+	
+<!--CSS for the website-->
+ 
+  <!-- Dependencies -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/font-convert.css" rel="stylesheet">
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+background:#1e1e1e; 
+color:white; 
+}
+
+.editor{
+display:flex;
+height:100vh;
+}
+ 
+
+.sidebar button:hover,.sidebar label:hover{
+background:#555;
+}
+
+.workspace{
+flex:1;
+display:flex;
+}
+
+.canvasArea{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#444;
+}
+
+#canvas{
+background:white;
+border:1px solid #aaa;
+}
+
+.panel{
+width:220px;
+background:#2b2b2b;
+padding:10px;
+overflow:auto;
+}
+
+.layer{
+padding:6px;
+border-bottom:1px solid #444;
+cursor:grab;
+}
+
+.topControls{
+position:static;
+top:10px;
+left:120px;
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+}
+
+.topControls select,
+.topControls input,
+.topControls button{
+background:#3a3a3a;
+border:none;
+color:white;
+padding:6px 8px;
+border-radius:4px;
+}
+.topControls{
+display:flex;
+gap:12px;
+padding:10px;
+background:#2a2a2a;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.toolGroup{
+position:relative;
+}
+
+.dropBtn{
+background:#3a3a3a;
+border:none;
+color:white;
+padding:6px 12px;
+border-radius:4px;
+cursor:pointer;
+}
+
+.dropMenu{
+display:none;
+position:absolute;
+top:35px;
+left:0;
+background:#2f2f2f;
+padding:10px;
+border-radius:6px;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
+min-width:180px;
+z-index:10;
+}
+
+.dropMenu label{
+display:block;
+font-size:12px;
+margin-top:6px;
+	color:#fff;
+}
+
+.dropMenu input,
+.dropMenu select,
+.dropMenu button{
+width:100%;
+margin-top:4px;
+background:#3a3a3a;
+border:none;
+color:white;
+padding:6px;
+border-radius:4px;
+}
+
+.dropdown:hover .dropMenu{
+display:block;
+}
+.editor{
+display:flex;
+height:100vh;
+}
+.sidebar{
+width:120px;
+background:#2b2b2b;
+display:flex;
+flex-direction:column;
+padding:10px;
+gap:6px;
+}
+
+.toolItem{
+display:flex;
+align-items:center;
+gap:8px;
+background:#3a3a3a;
+border:none;
+color:white;
+padding:8px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+.toolItem i{
+width:18px;
+text-align:center;
+}
+
+.toolItem:hover{
+background:#505050;
+}
+
+.sidebar label{
+cursor:pointer;
+}
+
+.workspace{
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+.topControls{
+background:#2a2a2a;
+padding:10px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.workspaceBody{
+flex:1;
+display:flex;
+}
+
+.canvasArea{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#444;
+}
+
+.panel{
+width:220px;
+background:#2b2b2b;
+padding:10px;
+overflow:auto;
+}
+</style>
+	  
+<!-- InstanceEndEditable -->
+<!-- Stylesheets     
+	============================================= --> 
+ 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+<!-- Document Title   
+	============================================= -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<link href="../css/global.css" rel="stylesheet">
+<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4C1PP726EZ');
+</script>
+<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
+</head>
+
+<body class="">
+<!--ACCESSIBILITY CONTROLS   --> 
+
+<!--END ACCESSIBILITY CONTROLS   --> 
+<!-- Document Wrapper	  
+	============================================= -->
+<header id="header" class="full-header">
+  <div id="header-wrap">
+    <div class="container">
+      <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
+      <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <!-- InstanceEndEditable -->
+        <div class="mainmenubar">
+          <nav id="mainmenu" class="">
+            <ul>
+              <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/">Home</a></li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> Image Tools <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-converter/">Image Converter</a></li> 
+                 
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-text-ocr/">Image to Text (OCR)</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-compress/">Compress Images</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/svg-converter/">SVG Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-to-base64/">Image to Base64</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image  </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> CSS/Design Tools <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/css-shadow-generator/">Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/css-shadow-generator-multi/">Multi Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/css-clip-image/">Clip Image CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/css-card-builder/">CSS Card Builder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/gradient-generator/">Gradient Generator</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> Developer Tools <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/html-formatter">HTML Formatter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/css-formatter">Beautify / Minify CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/check-css-error">Check CSS Errors</a></li>
+       
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
+				<li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li> 
+                </ul>
+				  
+              </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> Other Tools <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/resume-maker/">Resume Builder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
+                 <!-- <li><a class="dropdown-item" href="https://webtoolocean.com/photoshop-mini.html">Photoshop Mini</a></li>--> 
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- InstanceBeginEditable name="center" -->
+ 
+  <!-- Start dynamic content -->
+ <!-- <section id="testimonials">
+    <div class="container aniboxes animate__animated text-center">
+      <div id="contentwidget1"></div>
+      <br>
+    </div>
+  </section>-->
+  <!-- End dynamic content -->
+  <div class="clearfix"></div>
+  <!-- End dynamic content --> 
+  
+  <!-- Sevices section -->
+  <section id="content">
+   
+  
+ <div class="editor">
+
+<!-- LEFT SIDEBAR -->
+
+<div class="sidebar">
+
+<label class="toolItem" title="Upload Image">
+<i class="fa fa-image"></i>
+<span>Image</span>
+<input type="file" id="upload" hidden>
+</label>
+
+<button class="toolItem" onclick="newCanvas()" title="New File">
+<i class="fa fa-file"></i>
+<span>New</span>
+</button>
+
+<button class="toolItem" data-bs-toggle="modal" data-bs-target="#resizeModal" title="Resize Canvas">
+<i class="fa fa-expand"></i>
+<span>Resize</span>
+</button>
+
+<button class="toolItem" onclick="addText()" title="Add Text">
+<i class="fa fa-font"></i>
+<span>Text</span>
+</button>
+
+<button class="toolItem" onclick="trimCanvas()" title="Trim Canvas">
+<i class="fa fa-crop"></i>
+<span>Trim</span>
+</button>
+
+<button class="toolItem" onclick="deleteObject()" title="Delete Layer">
+<i class="fa fa-trash"></i>
+<span>Delete</span>
+</button>
+
+<button class="toolItem" onclick="undo()" title="Undo">
+<i class="fa fa-rotate-left"></i>
+<span>Undo</span>
+</button>
+
+<button class="toolItem" onclick="redo()" title="Redo">
+<i class="fa fa-rotate-right"></i>
+<span>Redo</span>
+</button>
+
+<button class="toolItem" onclick="exportImage()" title="Export Image">
+<i class="fa fa-download"></i>
+<span>Save</span>
+</button>
+<button class="toolItem" onclick="startCrop()" title="Crop">
+<i class="fa fa-crop"></i>
+<span>Crop</span>
+</button>
+</div>
+
+
+<!-- RIGHT WORKSPACE -->
+
+<div class="workspace">
+
+
+<!-- TOP CONTROLS -->
+
+<div class="topControls">
+
+<div class="toolGroup">
+
+<select onchange="addShape(this.value)">
+<option value="">Shapes</option>
+<option value="rect">Rectangle</option>
+<option value="circle">Circle</option>
+<option value="triangle">Triangle</option>
+<option value="ellipse">Ellipse</option>
+<option value="line">Line</option>
+</select>
+
+</div>
+
+
+<div class="toolGroup dropdown">
+
+<button class="dropBtn">Colors ▾</button>
+
+<div class="dropMenu">
+
+<label>Fill</label>
+<input type="color" id="fillColor" value="#ff0000">
+
+<label>Stroke</label>
+<input type="color" id="strokeColor" value="#000000">
+
+<label>Text</label>
+<input type="color" id="textColor" value="#000000">
+
+</div>
+
+</div>
+
+
+<div class="toolGroup dropdown">
+
+<button class="dropBtn">Text ▾</button>
+
+<div class="dropMenu">
+
+<label>Font</label>
+
+<select id="fontFamily">
+<option value="Arial">Arial</option>
+<option value="Verdana">Verdana</option>
+<option value="Times New Roman">Times</option>
+<option value="Courier New">Courier</option>
+<option value="Impact">Impact</option>
+</select>
+
+<label>Size</label>
+<input type="number" id="fontSize" value="32">
+
+<label>Letter Spacing</label>
+<input type="number" id="letterSpacing" value="0">
+
+<label>Line Height</label>
+<input type="number" id="lineHeight" value="1.2" step="0.1">
+
+</div>
+
+</div>
+
+
+<div class="toolGroup dropdown">
+
+<button class="dropBtn">Text Style ▾</button>
+
+<div class="dropMenu">
+
+<button onclick="setBold()">Bold</button>
+<button onclick="setItalic()">Italic</button>
+<button onclick="setUnderline()">Underline</button>
+
+<select onchange="setAlign(this.value)">
+<option value="">Align</option>
+<option value="left">Left</option>
+<option value="center">Center</option>
+<option value="right">Right</option>
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CANVAS + LAYERS -->
+
+<div class="workspaceBody">
+
+<div class="canvasArea">
+
+<canvas id="canvas" width="900" height="500"></canvas>
+
+</div>
+
+<div class="panel">
+
+<h6>Layers</h6>
+<div id="layers"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="modal fade" id="resizeModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content bg-dark text-white">
+
+<div class="modal-header">
+<h5>Resize Canvas</h5>
+<button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+
+<label>Width</label>
+<input id="canvasW" class="form-control">
+
+<label class="mt-2">Height</label>
+<input id="canvasH" class="form-control">
+
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-primary" onclick="applyResize()">Apply</button>
+</div>
+
+</div>
+</div>
+</div>
+   
+	</section>
+     
+ 
+
+  <!-- InstanceEndEditable -->
+<div class="clearfix"></div>
+<footer class="footer light">
+  <div class="clearfix"></div>
+  <article class="fotercontent">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-3 col-xs-12  mb-1  ">
+          <p class="headingfooter"><strong>Image Tools</strong></p>
+          <ul class="fnav">
+            <li><a class="dropdown-item" href="image-converter.html">Image Converter</a></li>
+                   <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-converter/">Image Converter</a></li> 
+                 
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-text-ocr/">Image to Text (OCR)</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-compress/">Compress Images</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/svg-converter/">SVG Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-to-base64/">Image to Base64</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image  </a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3 col-xs-12  mb-1  ">
+          <p class="headingfooter"><strong>CSS/Design Tools</strong></p>
+          <ul class="fnav">
+           <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/css-shadow-generator/">Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/css-shadow-generator-multi/">Multi Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/css-clip-image/">Clip Image CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/css-card-builder/">CSS Card Builder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-design-tools/gradient-generator/">Gradient Generator</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3 col-xs-12 mb-1   contactinfo ">
+          <p class="headingfooter"><strong>Developer Tools</strong></p>
+          <ul class="fnav">
+           <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/html-formatter">HTML Formatter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/css-formatter">Beautify / Minify CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/check-css-error">Check CSS Errors</a></li>
+       
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
+				<li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li> 
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-3 col-xs-12">
+          <p class="headingfooter"><strong>Contact & Support</strong></p>
+          <p><strong>Send Us email:</strong></p>
+          <p><a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a></p>
+          <p class="headingfooter"><strong>Share with friend</strong></p>
+          <div class="soacilmediashare"><a href="https://wa.me/?text=https://webtoolocean.com/" target="_blank"> <i class="fa fa-whatsapp"></i> </a> <br>
+            <br>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://webtoolocean.com/" target="_blank"> <i class="fa fa-facebook"></i> </a></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </article>
+  <div class="clearfix"></div>
+  <article id="copyrights">
+    <div class="container">
+      <div class="col-xs-12 col-sm-12 text-center">
+        <p> © Copyright <span id="spanYear">2026</span> Web Tool Ocean  | Made With Love </p>
+        <p> <a class="nav-link" href="https://webtoolocean.com/about/">About Us</a> | <a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a> | <a class="nav-link" href="https://webtoolocean.com/disclaimer.html">Disclaimer</a> | <a class="nav-link" href="https://webtoolocean.com/privacy/">Privacy</a> | <a class="nav-link" href="https://webtoolocean.com/terms/">Terms</a> </p>
+      </div>
+    </div>
+  </article>
+</footer>
+<div class="clearfix"></div>
+<!-- InstanceBeginEditable name="EditRegion5" -->
+     
+  <script src="js/bootstrap.bundle.min.js"></script>
+   <script>
+
+const canvas = new fabric.Canvas("canvas",{preserveObjectStacking:true})
+
+/* --------------------------------
+SMART IMAGE FIT FUNCTION
+-------------------------------- */
+
+function fitImageToCanvas(img){
+
+let canvasW = canvas.getWidth()
+let canvasH = canvas.getHeight()
+
+let imgW = img.width
+let imgH = img.height
+
+let scale = 1
+
+if(imgW > canvasW || imgH > canvasH){
+
+let scaleX = canvasW / imgW
+let scaleY = canvasH / imgH
+
+scale = Math.min(scaleX,scaleY)
+
+}
+
+img.scale(scale)
+
+img.set({
+left:canvasW/2,
+top:canvasH/2,
+originX:"center",
+originY:"center"
+})
+
+canvas.add(img)
+canvas.setActiveObject(img)
+
+canvas.renderAll()
+
+updateLayers()
+
+}
+
+
+/* --------------------------------
+DRAG & DROP IMAGE UPLOAD
+-------------------------------- */
+
+const canvasContainer = document.querySelector(".canvasArea")
+
+canvasContainer.addEventListener("dragover",function(e){
+e.preventDefault()
+canvasContainer.style.background="#555"
+})
+
+canvasContainer.addEventListener("dragleave",function(){
+canvasContainer.style.background="#444"
+})
+
+canvasContainer.addEventListener("drop",function(e){
+
+e.preventDefault()
+canvasContainer.style.background="#444"
+
+let file = e.dataTransfer.files[0]
+
+if(!file || !file.type.startsWith("image")) return
+
+let reader = new FileReader()
+
+reader.onload=function(event){
+
+fabric.Image.fromURL(event.target.result,function(img){
+
+fitImageToCanvas(img)
+
+})
+
+}
+
+reader.readAsDataURL(file)
+
+})
+
+
+/* --------------------------------
+UPLOAD IMAGE BUTTON
+-------------------------------- */
+
+document.getElementById("upload").addEventListener("change",function(e){
+
+let file = e.target.files[0]
+
+if(!file) return
+
+let reader = new FileReader()
+
+reader.onload=function(event){
+
+fabric.Image.fromURL(event.target.result,function(img){
+
+fitImageToCanvas(img)
+
+})
+
+}
+
+reader.readAsDataURL(file)
+
+})
+
+
+/* --------------------------------
+UNDO / REDO HISTORY
+-------------------------------- */
+
+let history=[]
+let redoStack=[]
+
+function saveHistory(){
+history.push(JSON.stringify(canvas))
+redoStack=[]
+}
+
+canvas.on("object:added",saveHistory)
+canvas.on("object:modified",saveHistory)
+
+function undo(){
+
+if(history.length<2) return
+
+redoStack.push(history.pop())
+
+canvas.loadFromJSON(history[history.length-1],()=>canvas.renderAll())
+
+}
+
+function redo(){
+
+if(!redoStack.length) return
+
+let state=redoStack.pop()
+
+history.push(state)
+
+canvas.loadFromJSON(state,()=>canvas.renderAll())
+
+}
+
+
+/* --------------------------------
+NEW CANVAS
+-------------------------------- */
+
+function newCanvas(){
+
+canvas.clear()
+
+canvas.setWidth(900)
+canvas.setHeight(500)
+
+updateLayers()
+
+}
+
+
+/* --------------------------------
+RESIZE CANVAS (AUTO SCALE OBJECTS)
+-------------------------------- */
+
+function applyResize(){
+
+let newW = parseInt(document.getElementById("canvasW").value)
+let newH = parseInt(document.getElementById("canvasH").value)
+
+let oldW = canvas.getWidth()
+let oldH = canvas.getHeight()
+
+let scaleX = newW/oldW
+let scaleY = newH/oldH
+
+canvas.getObjects().forEach(obj=>{
+
+obj.scaleX *= scaleX
+obj.scaleY *= scaleY
+
+obj.left *= scaleX
+obj.top *= scaleY
+
+obj.setCoords()
+
+})
+
+canvas.setWidth(newW)
+canvas.setHeight(newH)
+
+canvas.renderAll()
+
+}
+
+
+/* --------------------------------
+ADD SHAPES
+-------------------------------- */
+
+function addShape(type){
+
+let fill=document.getElementById("fillColor").value
+let stroke=document.getElementById("strokeColor").value
+
+let obj
+
+if(type==="rect"){
+
+obj=new fabric.Rect({
+width:120,
+height:80,
+fill:fill,
+stroke:stroke,
+strokeWidth:2
+})
+
+}
+
+if(type==="circle"){
+
+obj=new fabric.Circle({
+radius:60,
+fill:fill,
+stroke:stroke,
+strokeWidth:2
+})
+
+}
+
+if(type==="triangle"){
+
+obj=new fabric.Triangle({
+width:120,
+height:100,
+fill:fill,
+stroke:stroke,
+strokeWidth:2
+})
+
+}
+
+if(type==="ellipse"){
+
+obj=new fabric.Ellipse({
+rx:80,
+ry:50,
+fill:fill,
+stroke:stroke,
+strokeWidth:2
+})
+
+}
+
+if(type==="line"){
+
+obj=new fabric.Line([0,0,150,0],{
+stroke:stroke,
+strokeWidth:4
+})
+
+}
+
+if(obj){
+
+canvas.add(obj)
+canvas.centerObject(obj)
+canvas.setActiveObject(obj)
+
+canvas.renderAll()
+
+updateLayers()
+
+}
+
+}
+
+
+/* --------------------------------
+ADD TEXT
+-------------------------------- */
+
+function addText(){
+
+let t=new fabric.IText("Edit Text",{
+fontSize:32,
+fill:"#000"
+})
+
+canvas.add(t)
+canvas.centerObject(t)
+canvas.setActiveObject(t)
+
+canvas.renderAll()
+
+updateLayers()
+
+}
+
+
+/* --------------------------------
+DELETE OBJECT
+-------------------------------- */
+
+function deleteObject(){
+
+let obj=canvas.getActiveObject()
+
+if(!obj) return
+
+canvas.remove(obj)
+
+updateLayers()
+
+}
+
+
+/* --------------------------------
+EXPORT IMAGE
+-------------------------------- */
+
+function exportImage(){
+
+let data=canvas.toDataURL({format:"png"})
+
+let a=document.createElement("a")
+
+a.href=data
+a.download="image.png"
+
+a.click()
+
+}
+
+
+/* --------------------------------
+LAYERS PANEL
+-------------------------------- */
+
+function updateLayers(){
+
+let panel=document.getElementById("layers")
+
+panel.innerHTML=""
+
+canvas.getObjects().forEach((obj,i)=>{
+
+let div=document.createElement("div")
+
+div.className="layer"
+
+div.innerText=obj.type
+
+div.draggable=true
+
+div.onclick=()=>canvas.setActiveObject(obj)
+
+div.ondragstart=e=>e.dataTransfer.setData("index",i)
+
+div.ondrop=e=>{
+
+let from=e.dataTransfer.getData("index")
+
+let to=i
+
+canvas.moveTo(canvas.item(from),to)
+
+updateLayers()
+
+}
+
+div.ondragover=e=>e.preventDefault()
+
+panel.appendChild(div)
+
+})
+
+}
+
+
+/* --------------------------------
+DELETE KEY
+-------------------------------- */
+
+document.addEventListener("keydown",function(e){
+
+if(e.key==="Delete") deleteObject()
+
+})
+
+
+/* --------------------------------
+COLOR CONTROLS
+-------------------------------- */
+
+document.getElementById("fillColor").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj){
+obj.set("fill",this.value)
+canvas.renderAll()
+}
+
+}
+
+document.getElementById("strokeColor").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj){
+obj.set("stroke",this.value)
+canvas.renderAll()
+}
+
+}
+
+
+/* --------------------------------
+TEXT CONTROLS
+-------------------------------- */
+
+document.getElementById("fontFamily").onchange=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.set("fontFamily",this.value)
+
+canvas.renderAll()
+
+}
+
+}
+
+document.getElementById("fontSize").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.set("fontSize",parseInt(this.value))
+
+canvas.renderAll()
+
+}
+
+}
+
+document.getElementById("textColor").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.set("fill",this.value)
+
+canvas.renderAll()
+
+}
+
+}
+
+
+/* --------------------------------
+TEXT STYLE
+-------------------------------- */
+
+function setBold(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.fontWeight = obj.fontWeight==="bold" ? "normal" : "bold"
+
+canvas.renderAll()
+
+}
+
+}
+
+function setItalic(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.fontStyle = obj.fontStyle==="italic" ? "normal" : "italic"
+
+canvas.renderAll()
+
+}
+
+}
+
+function setUnderline(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.underline = !obj.underline
+
+canvas.renderAll()
+
+}
+
+}
+
+function setAlign(val){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.textAlign = val
+
+canvas.renderAll()
+
+}
+
+}
+
+
+/* --------------------------------
+LETTER SPACING
+-------------------------------- */
+
+document.getElementById("letterSpacing").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.charSpacing=parseInt(this.value)*10
+
+canvas.renderAll()
+
+}
+
+}
+
+
+/* --------------------------------
+LINE HEIGHT
+-------------------------------- */
+
+document.getElementById("lineHeight").oninput=function(){
+
+let obj=canvas.getActiveObject()
+
+if(obj && obj.type==="i-text"){
+
+obj.lineHeight=parseFloat(this.value)
+
+canvas.renderAll()
+
+}
+
+}
+// Mouse crop
+/* -----------------------------
+CROP TOOL (WORKING)
+----------------------------- */
+
+let cropMode = false;
+let cropRect = null;
+let startX = 0;
+let startY = 0;
+
+function startCrop(){
+
+  cropMode = true;
+
+  canvas.discardActiveObject();
+  canvas.selection = false;
+  canvas.defaultCursor = "crosshair";
+
+  canvas.on("mouse:down", cropStart);
+  canvas.on("mouse:move", cropMove);
+  canvas.on("mouse:up", cropEnd);
+
+}
+
+function cropStart(o){
+
+  if(!cropMode) return;
+
+  const pointer = canvas.getPointer(o.e);
+
+  startX = pointer.x;
+  startY = pointer.y;
+
+  cropRect = new fabric.Rect({
+    left:startX,
+    top:startY,
+    width:1,
+    height:1,
+    fill:"rgba(0,0,0,0.25)",
+    stroke:"red",
+    strokeDashArray:[6,6],
+    selectable:false,
+    evented:false
+  });
+
+  canvas.add(cropRect);
+}
+
+function cropMove(o){
+
+  if(!cropRect) return;
+
+  const pointer = canvas.getPointer(o.e);
+
+  const w = pointer.x - startX;
+  const h = pointer.y - startY;
+
+  cropRect.set({
+    width:Math.abs(w),
+    height:Math.abs(h),
+    left: w < 0 ? pointer.x : startX,
+    top:  h < 0 ? pointer.y : startY
+  });
+
+  canvas.renderAll();
+}
+
+function cropEnd(){
+
+  if(!cropRect) return;
+
+  const rect = cropRect.getBoundingRect();
+
+  canvas.remove(cropRect);
+
+  stopCrop();
+
+  if(rect.width < 10 || rect.height < 10) return;
+
+  applyCrop(rect);
+}
+
+function stopCrop(){
+
+  cropMode = false;
+
+  canvas.selection = true;
+  canvas.defaultCursor = "default";
+
+  canvas.off("mouse:down", cropStart);
+  canvas.off("mouse:move", cropMove);
+  canvas.off("mouse:up", cropEnd);
+
+}
+
+function applyCrop(rect){
+
+  const objects = canvas.getObjects();
+
+  objects.forEach(obj => {
+
+    const objRect = obj.getBoundingRect();
+
+    if(
+      objRect.left + objRect.width < rect.left ||
+      objRect.left > rect.left + rect.width ||
+      objRect.top + objRect.height < rect.top ||
+      objRect.top > rect.top + rect.height
+    ){
+      canvas.remove(obj);
+    }else{
+      obj.left -= rect.left;
+      obj.top  -= rect.top;
+      obj.setCoords();
+    }
+
+  });
+
+  canvas.setWidth(rect.width);
+  canvas.setHeight(rect.height);
+
+  canvas.renderAll();
+
+  updateLayers();
+}
+</script>
+   
+   
+<!-- InstanceEndEditable --> 
+<script>
+		const btn = document.getElementById("togglemeu");
+const menu = document.querySelector(".mainmenubar");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+	</script> 
+<script id="3q6qk9">
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+</script> 
+<script id="7c7b4s">
+document.addEventListener("keydown", function(e){
+
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.key === "U") {
+        e.preventDefault();
+    }
+
+});
+</script> 
+<script id="5h2r0p">
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", function(e){
+
+if(e.key=="F12"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
+
+if(e.ctrlKey && e.key=="U"){e.preventDefault();}
+
+});
+
+setInterval(function(){
+
+if(window.outerWidth - window.innerWidth > 160){
+document.body.innerHTML="Access Restricted";
+}
+
+},1000);
+</script> 
+<script>
+document.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && e.key === "u") {
+    e.preventDefault();
+  }
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
+    e.preventDefault();
+  }
+});
+</script>
+</body>
+<!-- InstanceEnd --></html>
