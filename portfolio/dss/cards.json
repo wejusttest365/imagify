@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "title": "Beginner Lessons",
+        "description": "Start your driving journey with confidence. Our instructors guide you step-by-step.",
+        "image": "../src/assets/beginner-lessons.jpg",
+        "cta": "Learn More"
+    },
+    {
+        "id": "2",
+        "title": "Road Test Prep",
+        "description": "Get ready for your driving test with hands-on practice and expert feedback.",
+        "image": "../src/assets/road-test-prep.jpg",
+        "cta": "Get Started"
+    },
+    {
+        "id": "3",
+        "title": "Advanced Training",
+        "description": "Improve your skills with defensive driving and advanced handling techniques.",
+        "image": "../src/assets/advanced-training.jpg",
+        "cta": "Join Now"
+    }
+]

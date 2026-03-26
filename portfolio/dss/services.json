@@ -1,0 +1,41 @@
+[
+    {
+        "packageId": "1",
+        "locationId": "4",
+        "title": "A. TEEN DRIVER EDUCATION PACKAGE",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "urlToEnroll": "",
+        "price": "629.00",
+        "base_price": "0",
+        "tax": "0",
+        "packageCode": "DE",
+        "discount": "200",
+        "webName": "A. TEEN DRIVER EDUCATION PACKAGE"
+    },
+    {
+        "packageId": "2",
+        "locationId": "4",
+        "title": "D: QUICK SIX PACKAGE",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "urlToEnroll": "",
+        "price": "474.00",
+        "base_price": "0",
+        "tax": "0",
+        "packageCode": "BTW",
+        "discount": "55",
+        "webName": "D: QUICK SIX PACKAGE"
+    },
+    {
+        "packageId": "3",
+        "locationId": "4",
+        "title": "D: QUICK SIX PACKAGE",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "urlToEnroll": "",
+        "price": "474.00",
+        "base_price": "0",
+        "tax": "0",
+        "packageCode": "BTW",
+        "discount": "55",
+        "webName": "D: QUICK SIX PACKAGE"
+    }
+]

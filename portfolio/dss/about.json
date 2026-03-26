@@ -1,0 +1,12 @@
+{
+    "title": "About Us",
+    "paragraphs": [
+        "We are a locally owned driving school dedicated to building safe, confident drivers.",
+        "Our instructors are certified and focus on practical, defensive driving skills.",
+        "With flexible scheduling and modern vehicles, we make learning stress-free.",
+        "We offer both beginner training and advanced coaching to match your needs.",
+        "Safety is our top priority — we teach habits that last a lifetime."
+    ],
+    "image": "../src/assets/about-us.jpg",
+    "buttonText": "Learn More About Us"
+}
