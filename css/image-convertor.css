@@ -32,7 +32,7 @@
 }
 
 .image-conversion .sub-tab.active {
-   background: var(--primary);
+   background: #005893;
    color: #fff;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .image-conversion .drop-area button {
-   background: var(--primary);
+   background: #005893;
    color: #fff;
    border: none;
    padding: 8px 12px;
@@ -118,7 +118,7 @@
 }
 
 .image-conversion #convert-btn {
-   background: var(--primary);
+   background: #005893;
    color: #fff;
    border: none;
    padding: 10px 14px;
