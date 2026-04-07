@@ -154,7 +154,7 @@
 
 .image-conversion .hint {
    font-size: 13px;
-   color: var(--muted);
+   color: #000000;
    text-align: center;
    margin-top: 8px;
 }

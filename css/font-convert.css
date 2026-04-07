@@ -11,7 +11,7 @@
  
  #dropZone {
    background: #f0f8ff;
-   border: 3px solid #007bff;
+   border: 3px solid #005893;
    border-radius: 20px;
    padding: 50px 20px;
    cursor: pointer;
@@ -51,7 +51,7 @@
 
  #dropZone p {
    font-size: 18px;
-   color: #007bff;
+   color: #005893;
  }
 
  #imageUpload {
@@ -100,7 +100,7 @@
  }
 
  button.convert {
-   background: #007bff;
+   background: #005893;
    color: #fff;
  }
 
@@ -163,11 +163,11 @@ section ul {
  }
 
  .feature-box h3 {
-   color: #007bff;
+   color: #005893;
    margin-bottom: 15px;
  }
 
  .feature-box p {
-   color: #555;
+   color: #000000;
    font-size: 1rem;
  }
