@@ -280,12 +280,15 @@ to{transform:rotate(360deg);}
 
 <div class="dropzone" id="dropzone">
 Upload Logo (PNG / JPG / SVG)
+	
+<label for="fileInput" area-label="hidden input" style="display:none">Upload</label>	
 <input type="file" id="fileInput" hidden accept="image/*,.svg">
 </div>
 
 <div class="tool-options">
 
 <label>Padding</label>
+	<label for="paddingRange" area-label="hidden input" style="display:none">Padding</label>
 <input type="range" id="paddingRange" min="0" max="30" value="10">
 
 <label>Background</label>
