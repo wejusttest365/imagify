@@ -84,7 +84,7 @@ button.lines-button.x.close {
 }
 
 button.lines-button.x.close:focus {
-    background: #000000;
+    background: #00000;
 }
 
 /* Hide helper text */
@@ -344,7 +344,7 @@ button#togglemeu {
     padding: 70px 0px 0;
     z-index: 1;
     margin-top: 0px;
-    background: #000000 !important;
+    background: #00000 !important;
     font-size: 15px;
     font-weight: 600;
 }

@@ -1,6 +1,6 @@
  :root {
      --accent: #000;
-     --muted: #64748b;
+     --muted: #000;
      --panel: #ffffff;
      --radius: 10px;
      --maxwidth: 100%;
@@ -15,7 +15,7 @@
  }
 
  .hero {
-     background: linear-gradient(135deg, #4a6cf7, #6f86ff);
+     background: linear-gradient(135deg, #000000, #001897);
      color: #fff;
      padding: 80px 0;
  }
@@ -297,7 +297,7 @@ button.accordion-button {
  }
 
  .section-sub {
-     color: #64748b;
+     color: #000;
  }
 
  /* Card */
@@ -359,7 +359,7 @@ button.accordion-button {
  /* Description */
  .tool-desc {
      font-size: 16px;
-     color: #64748b;
+     color: #000;
      margin: 15px 0 25px;
  }
 
@@ -408,7 +408,7 @@ button.accordion-button {
  }
 
  .blog-sub {
-     color: #64748b;
+     color: #000;
  }
 
  .blog-link {
@@ -456,7 +456,7 @@ button.accordion-button {
 
  .blog-content p {
      font-size: 14px;
-     color: #64748b;
+     color: #000;
      margin-bottom: 15px;
  }
 
@@ -479,7 +479,7 @@ button.accordion-button {
  }
 
  .features-sub {
-     color: #64748b;
+     color: #000;
      max-width: 600px;
      margin: 0 auto;
  }
@@ -511,8 +511,8 @@ button.accordion-button {
  }
 
  .feature-card p {
-     font-size: 14px;
-     color: #64748b;
+     font-size: 16px;
+     color: #000;
      line-height: 1.6;
  }
 
@@ -530,7 +530,7 @@ button.accordion-button {
  .how-sub {
      max-width: 650px;
      margin: 0 auto;
-     color: #666;
+     color: #000;
  }
 
  .how-card {
@@ -566,12 +566,12 @@ button.accordion-button {
  }
 
  .how-card p {
-     color: #555;
+     color: #000000;
  }
 
  .how-card ul {
      padding-left: 18px;
-     color: #777;
+     color: #000000;
      font-size: 14px;
  }
 
@@ -588,7 +588,7 @@ button.accordion-button {
  .section-subtitle {
      max-width: 700px;
      margin: 10px auto 0;
-     color: #666;
+     color: #000000;
  }
 
  .why-card {
@@ -623,7 +623,7 @@ button.accordion-button {
  }
 
  .why-card p {
-     color: #555;
+     color: #000000;
      font-size: 14px;
  }
 
