@@ -723,3 +723,9 @@ footer .h3 {
         max-width: 126px;
     }
 }
+
+#mainmenu ul li:focus-within > ul.dropdown-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
