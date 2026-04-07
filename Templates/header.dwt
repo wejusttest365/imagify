@@ -37,7 +37,7 @@
 <!--END ACCESSIBILITY CONTROLS   --> 
 <!-- Document Wrapper	  
 	============================================= -->
-<header id="header" class="full-header">
+<header role="banner"  id="header" class="full-header">
   <div id="header-wrap">
     <div class="container">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
@@ -94,10 +94,10 @@
   </div>
 </header>
 <!-- TemplateBeginEditable name="center" -->
-<section id="content"> </section>
+<section  role="main" id="content"> </section> 
 <!-- TemplateEndEditable -->
 <div class="clearfix"></div>
-<footer class="footer light">
+<footer  role="contentinfo" class="footer light">
   <div class="clearfix"></div>
   <article class="fotercontent">
     <div class="container">
