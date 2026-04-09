@@ -396,184 +396,181 @@ The tool supports conversion between JPG, PNG, WEBP, and GIF formats.
 <script src="../image-converter/js/global.js"></script>		
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
    
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-  const subTabs = Array.from(document.querySelectorAll('.sub-tab'));
-  const dropArea = document.getElementById('drop-area');
+  const subTabs = document.querySelectorAll('.sub-tab');
   const uploadInput = document.getElementById('upload');
   const addFilesBtn = document.getElementById('add-files');
   const fileListEl = document.getElementById('file-list');
   const convertBtn = document.getElementById('convert-btn');
-  const downloadZipBtn = document.getElementById('download-zip');
-  const spinner = document.getElementById('spinner');
-
-  const modal = document.getElementById('downloadModal');
-  const confirmDownload = document.getElementById('confirmDownload');
-  const closeBtn = modal.querySelector('.close-btn');
+  const controls = document.querySelector('.controls');
 
   let currentConversion = 'jpg2png';
   let fileQueue = [];
-  let zip = null;
+  let convertedFiles = [];
+
+  /* ================= VALIDATION ================= */
 
   const allowedFormats = {
-    jpg2png: ['image/jpeg', '.jpg', '.jpeg'],
-    png2jpg: ['image/png', '.png'],
-    webp2png: ['image/webp', '.webp'],
-    webp2jpg: ['image/webp', '.webp'],
-    gif2jpg: ['image/gif', '.gif']
+    jpg2png: ['image/jpeg'],
+    png2jpg: ['image/png'],
+    webp2png: ['image/webp'],
+    webp2jpg: ['image/webp'],
+    gif2jpg: ['image/gif']
   };
 
-  function getExt(name) {
-    const p = name.lastIndexOf('.');
-    return p >= 0 ? name.slice(p).toLowerCase() : '';
+  function fileAllowed(file) {
+    return allowedFormats[currentConversion].includes(file.type);
   }
 
-  function fileAllowed(file, conv) {
-    const allowed = allowedFormats[conv] || [];
-    return allowed.some(a =>
-      a === file.type.toLowerCase() || a === getExt(file.name)
-    );
-  }
+  /* ================= BUTTONS ================= */
 
-  function setConvertEnabled() {
+  const downloadAllBtn = document.createElement('button');
+  downloadAllBtn.textContent = 'Download ZIP';
+  downloadAllBtn.disabled = true;
+  downloadAllBtn.style.cssText = "background:#065f46;color:#fff;padding:8px 15px;border:none;border-radius:5px;margin-left:10px;";
+
+  const clearAllBtn = document.createElement('button');
+  clearAllBtn.textContent = 'Clear All';
+  clearAllBtn.disabled = true;
+  clearAllBtn.style.cssText = "background:#dc2626;color:#fff;padding:8px 15px;border:none;border-radius:5px;margin-left:10px;";
+
+  controls.appendChild(downloadAllBtn);
+  controls.appendChild(clearAllBtn);
+
+  function toggleButtons() {
     convertBtn.disabled = fileQueue.length === 0;
+    clearAllBtn.disabled = fileQueue.length === 0;
+    downloadAllBtn.disabled = convertedFiles.length === 0;
   }
 
-  /* TAB SWITCH */
+  /* ================= PROGRESS BAR ================= */
+
+  const progressWrapper = document.createElement('div');
+  progressWrapper.style.cssText = "width:100%;background:#eee;margin:20px 0;display:none;border-radius:5px;overflow:hidden";
+
+  const progressBar = document.createElement('div');
+  progressBar.style.cssText = "height:20px;width:0;background:#16a34a;color:#fff;text-align:center;font-size:12px";
+
+  progressWrapper.appendChild(progressBar);
+  controls.prepend(progressWrapper);
+
+  function showLoader(cb) {
+    progressWrapper.style.display = 'block';
+    let w = 0;
+
+    const i = setInterval(() => {
+      w += 10;
+      progressBar.style.width = w + '%';
+      progressBar.innerText = w + '%';
+
+      if (w >= 100) {
+        clearInterval(i);
+        setTimeout(() => {
+          progressWrapper.style.display = 'none';
+          progressBar.style.width = '0%';
+          progressBar.innerText = '0%';
+          cb();
+        }, 300);
+      }
+    }, 1000);
+  }
+
+  /* ================= TABS ================= */
 
   subTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-
       subTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
       currentConversion = tab.dataset.conversion;
 
       fileQueue = [];
+      convertedFiles = [];
       fileListEl.innerHTML = '';
-      setConvertEnabled();
+      toggleButtons();
     });
   });
 
-  /* DRAG EVENTS */
-
-  ['dragenter','dragover'].forEach(evt => {
-    dropArea.addEventListener(evt, e => {
-      e.preventDefault();
-      dropArea.classList.add('dragover');
-    });
-  });
-
-  ['dragleave','drop'].forEach(evt => {
-    dropArea.addEventListener(evt, e => {
-      e.preventDefault();
-      dropArea.classList.remove('dragover');
-    });
-  });
-
-  dropArea.addEventListener('drop', e => {
-    handleAddFiles(e.dataTransfer.files);
-  });
+  /* ================= ADD FILES ================= */
 
   addFilesBtn.addEventListener('click', () => uploadInput.click());
 
   uploadInput.addEventListener('change', e => {
-    handleAddFiles(e.target.files);
+    handleFiles(e.target.files);
     uploadInput.value = '';
   });
 
-  /* ADD FILES */
-
-  function handleAddFiles(files) {
-
+  function handleFiles(files) {
     Array.from(files).forEach(file => {
 
       const li = document.createElement('li');
-      li.className = 'file-item';
+      li.style.cssText = "display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ddd;padding:10px";
 
       const left = document.createElement('div');
-      left.className = 'left';
+      left.style.display = 'flex';
+      left.style.alignItems = 'center';
+      left.style.gap = '10px';
 
-      const nameSpan = document.createElement('span');
-      nameSpan.className = 'file-name';
-      nameSpan.textContent = file.name;
+      /* PREVIEW */
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      img.style.width = '50px';
+      img.style.height = '50px';
+      img.style.objectFit = 'cover';
+      img.style.borderRadius = '5px';
 
-      left.appendChild(nameSpan);
+      const name = document.createElement('span');
+      name.textContent = file.name;
 
-      const invalidSpan = document.createElement('span');
-      left.appendChild(invalidSpan);
+      left.appendChild(img);
+      left.appendChild(name);
 
-      li.appendChild(left);
-
-      if (!fileAllowed(file, currentConversion)) {
-
-        invalidSpan.className = 'invalid';
-        invalidSpan.textContent = ' ❌ Invalid format';
-
+      if (!fileAllowed(file)) {
+        const invalid = document.createElement('span');
+        invalid.textContent = ' ❌ Invalid';
+        invalid.style.color = 'red';
+        left.appendChild(invalid);
       } else {
-
         fileQueue.push(file);
       }
 
+      /* REMOVE BUTTON */
       const removeBtn = document.createElement('button');
-      removeBtn.className = 'btn remove';
       removeBtn.textContent = 'Remove';
+      removeBtn.style.cssText = "background:#dc2626;color:#fff;border:none;padding:6px 10px;border-radius:5px";
 
       removeBtn.onclick = () => {
         li.remove();
         fileQueue = fileQueue.filter(f => f !== file);
-        setConvertEnabled();
+        toggleButtons();
       };
 
+      li.appendChild(left);
       li.appendChild(removeBtn);
-
       fileListEl.appendChild(li);
 
-      setConvertEnabled();
+      toggleButtons();
     });
   }
 
-  /* FILE READER */
+  /* ================= CONVERT ================= */
 
-  function readFileAsDataURL(file) {
+  convertBtn.addEventListener('click', () => {
 
-    return new Promise(resolve => {
+    if (!fileQueue.length) return;
 
-      const reader = new FileReader();
+    showLoader(async () => {
 
-      reader.onload = e => resolve(e.target.result);
-
-      reader.readAsDataURL(file);
-    });
-  }
-
-  /* CONVERT BUTTON */
-
-  convertBtn.addEventListener('click', async () => {
-
-    if (!fileQueue.length) {
-      alert('Add valid images.');
-      return;
-    }
-
-    spinner.style.display = 'inline-block';
-    convertBtn.disabled = true;
-
-    zip = new JSZip();
-
-    try {
+      convertedFiles = [];
 
       for (const file of fileQueue) {
 
-        const dataUrl = await readFileAsDataURL(file);
-
         const img = new Image();
-        img.src = dataUrl;
-
+        img.src = URL.createObjectURL(file);
         await new Promise(r => img.onload = r);
 
         const canvas = document.createElement('canvas');
@@ -583,81 +580,102 @@ document.addEventListener('DOMContentLoaded', () => {
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0);
 
-        let mime;
-        let outputExt;
+        let mime, ext;
 
         switch (currentConversion) {
-
           case 'jpg2png':
           case 'webp2png':
             mime = 'image/png';
-            outputExt = 'png';
+            ext = 'png';
             break;
 
           case 'png2jpg':
           case 'webp2jpg':
           case 'gif2jpg':
             mime = 'image/jpeg';
-            outputExt = 'jpg';
+            ext = 'jpg';
             break;
 
           default:
             mime = 'image/png';
-            outputExt = 'png';
+            ext = 'png';
         }
 
-        const blob = await new Promise(resolve =>
-          canvas.toBlob(resolve, mime, 0.92)
+        const blob = await new Promise(res =>
+          canvas.toBlob(res, mime, 0.92)
         );
 
-        const newName =
-          file.name.replace(/\.[^/.]+$/, '') + '.' + outputExt;
-
-        zip.file(newName, blob);
+        convertedFiles.push({
+          blob,
+          name: file.name.replace(/\.[^/.]+$/, '') + '.' + ext
+        });
       }
 
-      modal.style.display = 'flex';
-
-    } catch (err) {
-
-      console.error(err);
-      alert('Conversion failed');
-
-    }
-
-    spinner.style.display = 'none';
-    convertBtn.disabled = false;
-
-    fileQueue = [];
-    setConvertEnabled();
+      renderConverted();
+      toggleButtons();
+    });
   });
 
-  /* DOWNLOAD ZIP */
+  /* ================= RENDER ================= */
 
-  confirmDownload.addEventListener('click', async () => {
+  function renderConverted() {
+    fileListEl.innerHTML = '';
 
-    if (!zip) return;
+    convertedFiles.forEach(file => {
+
+      const li = document.createElement('li');
+      li.style.cssText = "display:flex;justify-content:space-between;border-bottom:1px solid #ddd;padding:10px";
+
+      const name = document.createElement('span');
+      name.textContent = file.name;
+
+      const btn = document.createElement('button');
+      btn.textContent = 'Download';
+      btn.style.cssText = "background:#065f46;color:#fff;border:none;padding:6px 12px;border-radius:5px";
+
+      btn.onclick = () => {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(file.blob);
+        a.download = file.name;
+        a.click();
+      };
+
+      li.appendChild(name);
+      li.appendChild(btn);
+      fileListEl.appendChild(li);
+    });
+  }
+
+  /* ================= CLEAR ================= */
+
+  clearAllBtn.onclick = () => {
+    fileQueue = [];
+    convertedFiles = [];
+    fileListEl.innerHTML = '';
+    toggleButtons();
+  };
+
+  /* ================= DOWNLOAD ZIP ================= */
+
+  downloadAllBtn.onclick = async () => {
+
+    const zip = new JSZip();
+
+    convertedFiles.forEach(file => {
+      zip.file(file.name, file.blob);
+    });
 
     const blob = await zip.generateAsync({ type: 'blob' });
 
-    const url = URL.createObjectURL(blob);
-
     const a = document.createElement('a');
-    a.href = url;
+    a.href = URL.createObjectURL(blob);
     a.download = 'converted_images.zip';
     a.click();
-
-    URL.revokeObjectURL(url);
-
-    modal.style.display = 'none';
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+  };
 
 });
-</script><!-- InstanceEndEditable --> 
+</script>
+<!-- InstanceEndEditable --> 
 <!--<script>
 		const btn = document.getElementById("togglemeu");
 const menu = document.querySelector(".mainmenubar");

@@ -465,8 +465,8 @@ border-color:#0a58ca;
   <!-- JSZip -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
-    <script>
-
+     
+  <script>
 let files = [];
 let compressedFiles = [];
 let totalOriginalSize = 0;
@@ -476,27 +476,23 @@ const dropZone = document.getElementById("dropZone");
 const fileInput = document.getElementById("fileInput");
 
 /* CLICK TO UPLOAD */
-dropZone.addEventListener("click", function () {
-  fileInput.click();
-});
+dropZone.addEventListener("click", () => fileInput.click());
 
-/* FILE SELECT */
-fileInput.addEventListener("change", function (e) {
+fileInput.addEventListener("change", (e) => {
   handleFiles(e.target.files);
 });
 
-/* DRAG EVENTS */
-
-dropZone.addEventListener("dragover", function (e) {
+/* DRAG */
+dropZone.addEventListener("dragover", (e) => {
   e.preventDefault();
   dropZone.classList.add("dragover");
 });
 
-dropZone.addEventListener("dragleave", function () {
+dropZone.addEventListener("dragleave", () => {
   dropZone.classList.remove("dragover");
 });
 
-dropZone.addEventListener("drop", function (e) {
+dropZone.addEventListener("drop", (e) => {
   e.preventDefault();
   dropZone.classList.remove("dragover");
   handleFiles(e.dataTransfer.files);
@@ -513,7 +509,7 @@ function handleFiles(selectedFiles) {
 
   document.getElementById("fileList").innerHTML = "";
 
-  Array.from(selectedFiles).forEach(function (file) {
+  Array.from(selectedFiles).forEach(file => {
 
     if (file.type.startsWith("image/")) {
 
@@ -521,11 +517,39 @@ function handleFiles(selectedFiles) {
       totalOriginalSize += file.size;
 
       const li = document.createElement("li");
-      li.className = "list-group-item d-flex justify-content-between";
-      li.innerHTML = `
-        ${file.name}
-        <span>${(file.size / 1024).toFixed(2)} KB</span>
+      li.className = "list-group-item";
+      li.style.display = "flex";
+      li.style.alignItems = "center";
+      li.style.justifyContent = "space-between";
+      li.style.gap = "10px";
+
+      /* LEFT SIDE (PREVIEW + NAME) */
+      const left = document.createElement("div");
+      left.style.display = "flex";
+      left.style.alignItems = "center";
+      left.style.gap = "10px";
+
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(file);
+      img.style.width = "50px";
+      img.style.height = "50px";
+      img.style.objectFit = "cover";
+      img.style.borderRadius = "5px";
+
+      const name = document.createElement("span");
+      name.innerHTML = `
+        ${file.name}<br>
+        <small>${(file.size / 1024).toFixed(2)} KB</small>
       `;
+
+      left.appendChild(img);
+      left.appendChild(name);
+
+      /* RIGHT SIDE (DOWNLOAD BUTTON placeholder) */
+      const right = document.createElement("div");
+
+      li.appendChild(left);
+      li.appendChild(right);
 
       document.getElementById("fileList").appendChild(li);
     }
@@ -535,12 +559,11 @@ function handleFiles(selectedFiles) {
   if (files.length > 0) {
     document.getElementById("compressBtn").style.display = "inline-block";
   }
-
 }
 
-/* COMPRESS BUTTON */
+/* COMPRESS */
 
-document.getElementById("compressBtn").addEventListener("click", function () {
+ document.getElementById("compressBtn").addEventListener("click", function () {
 
   const progressArea = document.getElementById("progressArea");
   const progressBar = document.getElementById("progressBar");
@@ -552,7 +575,26 @@ document.getElementById("compressBtn").addEventListener("click", function () {
   let zip = new JSZip();
   let processed = 0;
 
-  files.forEach(function (file) {
+  compressedFiles = [];
+
+  const listItems = document.querySelectorAll("#fileList li");
+
+  /* ===== FAKE 10s LOADER ===== */
+  let fakeProgress = 0;
+
+  const loaderInterval = setInterval(() => {
+    fakeProgress += 10;
+    progressBar.style.width = fakeProgress + "%";
+    progressBar.innerText = fakeProgress + "%";
+
+    if (fakeProgress >= 100) {
+      clearInterval(loaderInterval);
+    }
+  }, 1000);
+
+  /* ===== REAL PROCESS ===== */
+
+  files.forEach((file, index) => {
 
     const reader = new FileReader();
 
@@ -571,29 +613,54 @@ document.getElementById("compressBtn").addEventListener("click", function () {
 
         ctx.drawImage(img, 0, 0);
 
-        /* FAKE PROCESS DELAY (2–3 seconds) */
-
-        setTimeout(function () {
+        setTimeout(() => {
 
           canvas.toBlob(function (blob) {
 
-            compressedFiles.push(blob);
+            compressedFiles.push({ blob, name: file.name });
             totalCompressedSize += blob.size;
 
             zip.file(file.name, blob);
 
+            /* SINGLE DOWNLOAD BUTTON WITH SPINNER */
+            const btn = document.createElement("button");
+            btn.textContent = "Download";
+            btn.style.cssText = "background:#065f46;color:#fff;border:none;padding:6px 12px;border-radius:5px";
+
+            btn.onclick = () => {
+
+              btn.disabled = true;
+              btn.innerText = "Downloading... ⏳";
+
+              let spinTime = 0;
+
+              const spinInterval = setInterval(() => {
+                spinTime++;
+
+                if (spinTime >= 5) {
+                  clearInterval(spinInterval);
+
+                  const a = document.createElement("a");
+                  a.href = URL.createObjectURL(blob);
+                  a.download = file.name;
+                  a.click();
+
+                  btn.disabled = false;
+                  btn.innerText = "Download";
+                }
+
+              }, 1000);
+
+            };
+
+            listItems[index].lastChild.innerHTML = "";
+            listItems[index].lastChild.appendChild(btn);
+
             processed++;
-
-            /* UPDATE PROGRESS */
-
-            let percent = Math.round((processed / files.length) * 100);
-
-            progressBar.style.width = percent + "%";
-            progressBar.innerText = percent + "%";
 
             if (processed === files.length) {
 
-              setTimeout(function () {
+              setTimeout(() => {
                 progressArea.style.display = "none";
                 showResults(zip);
               }, 500);
@@ -602,7 +669,7 @@ document.getElementById("compressBtn").addEventListener("click", function () {
 
           }, "image/jpeg", 0.6);
 
-        }, 2000 + Math.random() * 1000);
+        }, 500);
 
       };
 
@@ -614,8 +681,7 @@ document.getElementById("compressBtn").addEventListener("click", function () {
 
 });
 
-/* SHOW RESULTS */
-
+/* RESULTS */
 function showResults(zip) {
 
   const saved = totalOriginalSize - totalCompressedSize;
@@ -630,52 +696,71 @@ function showResults(zip) {
 
   downloadBtn.style.display = "inline-block";
 
+  /* ===== DOWNLOAD PROGRESS BAR ===== */
+
+  let downloadProgress = document.getElementById("downloadProgressWrapper");
+
+  if (!downloadProgress) {
+    downloadProgress = document.createElement("div");
+    downloadProgress.id = "downloadProgressWrapper";
+    downloadProgress.style.cssText = "width:100%;background:#eee;margin-top:15px;border-radius:5px;overflow:hidden;display:none";
+
+    const bar = document.createElement("div");
+    bar.id = "downloadProgressBar";
+    bar.style.cssText = "height:20px;width:0;background:#065f46;color:#fff;text-align:center;font-size:12px";
+
+    downloadProgress.appendChild(bar);
+
+    downloadBtn.parentNode.appendChild(downloadProgress);
+  }
+
+  const progressBar = document.getElementById("downloadProgressBar");
+
+  /* ===== DOWNLOAD CLICK ===== */
+
   downloadBtn.onclick = function () {
 
-    zip.generateAsync({ type: "blob" }).then(function (content) {
+    downloadBtn.disabled = true;
+    downloadBtn.innerText = "Preparing ZIP...";
 
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(content);
-      a.download = "compressed_images.zip";
-      a.click();
+    downloadProgress.style.display = "block";
 
-    });
+    let progress = 0;
+
+    const interval = setInterval(() => {
+      progress += 10;
+      progressBar.style.width = progress + "%";
+      progressBar.innerText = progress + "%";
+
+      if (progress >= 100) {
+        clearInterval(interval);
+
+        /* ACTUAL DOWNLOAD */
+        zip.generateAsync({ type: "blob" }).then(function (content) {
+
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(content);
+          a.download = "compressed_images.zip";
+          a.click();
+
+          /* RESET UI */
+          setTimeout(() => {
+            downloadBtn.disabled = false;
+            downloadBtn.innerText = "Download ZIP";
+
+            progressBar.style.width = "0%";
+            progressBar.innerText = "0%";
+            downloadProgress.style.display = "none";
+          }, 500);
+
+        });
+
+      }
+
+    }, 1000); // 10 seconds total
 
   };
 
-}
-
-</script>
-  <script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "FAQPage",
-"mainEntity": [
-{
-"@type": "Question",
-"name": "Is this image compressor free?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes, this image compressor is completely free and allows unlimited image compression."
-}
-},
-{
-"@type": "Question",
-"name": "Does image compression reduce quality?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "The tool uses smart compression to reduce file size while preserving the best possible image quality."
-}
-},
-{
-"@type": "Question",
-"name": "Which image formats are supported?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "The tool supports JPG, PNG and WEBP image formats."
-}
-}
-]
 }
 </script>
 <!-- InstanceEndEditable --> 

@@ -58,6 +58,11 @@
     gap: 20px;
     flex-wrap: wrap;
 }
+code {
+    font-size: 14px;
+    color: #ffffff;
+    word-wrap: break-word;
+}
 /* LEFT PANEL */
 .controls {
     background: white;
@@ -67,11 +72,12 @@
     flex: 1;
     min-width: 320px;
     overflow-y: auto;
+    max-height:620px;
 }
 #addShadow {
     width: 100%;
     padding: 10px;
-    background: #3b82f6;
+    background: #004378;
     color: white;
     border: none;
     border-radius: 6px;
@@ -132,7 +138,7 @@ margin-top:-6px;
     cursor: pointer;
 }
 .removeLayer {
-    background: #ef4444;
+    background: #af0000;
     border: none;
     color: white;
     padding: 4px 8px;
@@ -166,7 +172,7 @@ margin-top:-6px;
 }
 .code {
     background: #111827;
-    color: #e5e7eb;
+    color: #fff;
     padding: 20px;
     border-radius: 10px;
     font-family: monospace;
@@ -179,10 +185,10 @@ margin-top:-6px;
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #3b82f6;
+    background: #fff;
     border: none;
     padding: 6px 12px;
-    color: white;
+    color: #000;
     cursor: pointer;
     border-radius: 6px;
 }
@@ -196,13 +202,13 @@ margin-top:-6px;
     position: static;
     top: 10px;
     right: 10px;
-    background: #3b82f6;
+    background: #fff;
     border: none;
     padding: 6px 12px;
-    color: white;
+    color: #000;
     cursor: pointer;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 14px;
     float: right;
 	margin-top:0;
 }
@@ -311,7 +317,7 @@ margin-top:-6px;
 <!-- End dynamic content --> 
 
 <!-- Sevices section -->
-<section id="content">
+<main id="content">
   <section class="py-5">
     <div class="container">
       <h1>Multi CSS Shadow Generator</h1>
@@ -370,7 +376,7 @@ margin-top:-6px;
       </ul>
     </div>
   </section>
-</section>
+</main>
 <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer  role="contentinfo" class="footer light">
@@ -450,12 +456,12 @@ let layer=$(`
 <div class="shadow-layer" data-layer="${layerCount}">
   <div class="layer-header">Shadow ${layerCount}<button class="removeLayer">Remove</button></div>
   <div class="layer-controls">
-    <label>X Offset</label><input type="range" min="-100" max="100" value="10" class="x">
-    <label>Y Offset</label><input type="range" min="-100" max="100" value="10" class="y">
-    <label>Blur</label><input type="range" min="0" max="100" value="20" class="blur">
-    <label>Spread</label><input type="range" min="-50" max="50" value="0" class="spread">
-    <label>Color</label><input type="color" value="#00000" class="color">
-    <label>Opacity</label><input type="range" min="0" max="1" step="0.01" value="0.3" class="opacity">
+    <label for="a">X Offset</label><input id="a" type="range" min="-100" max="100" value="10" class="x">
+    <label for="b">Y Offset</label><input id="b" type="range" min="-100" max="100" value="10" class="y">
+    <label for="c">Blur</label><input id="c" type="range" min="0" max="100" value="20" class="blur">
+    <label for="d">Spread</label><input id="d"  type="range" min="-50" max="50" value="0" class="spread">
+    <label for="e">Color</label><input id="e"  type="color" value="#00000" class="color">
+    <label for="f">Opacity</label><input id="f"  type="range" min="0" max="1" step="0.01" value="0.3" class="opacity">
   </div>
 </div>`);
 
