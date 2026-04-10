@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<title>Free Image Converter Online – JPG, PNG, WEBP, GIF | WebToolOcean</title>
-<meta name="description" content="Free online image converter to convert JPG, PNG, WEBP, GIF and more. Quickly convert images between formats like JPG to PNG, PNG to JPG, WEBP to JPG and GIF to JPG. Fast, secure and easy to use.">
-<meta name="keywords" content="image converter, jpg to png, png to jpg, webp to jpg, gif to jpg, convert image online, free image converter, image format converter, jpg converter, png converter, webp converter, gif converter">
+<title>Image to SVG Converter (JPG, PNG to SVG Online) - Free Tool | WebToolOcean</title>
+<meta name="description" content="Convert JPG or PNG images to SVG vector format online for free. Fast, secure, no upload required. Generate SVG code instantly.">
+<meta name="keywords" content="jpg to svg, png to svg, gif to svg, svg converter online free">
 	
 <meta name="author" content="WebToolOcean">
 <meta name="robots" content="index, follow">
 	
-<link rel="canonical" href="https://webtoolocean.com/image-tools/image-converter/">
+<link rel="canonical" href="https://webtoolocean.com/image-tools/image-svg-converter/">
 	
 <!--Open Graph (Facebook / LinkedIn Sharing)-->
 <meta property="og:title" content="Free Image Converter Online – JPG, PNG, WEBP, GIF">
@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="Convert JPG, PNG, WEBP, GIF and other image formats instantly with WebToolOcean free image converter.">
 <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
 <!--Extra SEO Tag (Recommended)-->	
-<link rel="canonical" href="https://webtoolocean.com/image-tools/image-converter/">
+<link rel="canonical" href="https://webtoolocean.com/image-tools/image-svg-converter/">
 <meta name="theme-color" content="#0f172a">
 	
 <!--CSS for the website-->
@@ -65,7 +65,116 @@
 </script>
 <meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
 </head>
+ <style>
+  
+/* DROP AREA */
+#drop-area {
+  border: 2px dashed #cbd5e1;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  background: #fff;
+  transition: 0.3s;
+}
 
+#drop-area.dragover {
+  border-color: #16a34a;
+  background: #ecfdf5;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 120px;
+  text-align: center;
+}
+
+.btn-green {
+  background: #065f46;
+  color: white;
+}
+
+.btn-red {
+  background: #dc2626;
+  color: white;
+}
+.btn:hover {background-color: #000; color:#fff;}
+.btn-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* PROGRESS */
+#progress-container {
+  display: none;
+  margin: 20px 0;
+}
+
+.progress-bar-bg {
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 14px;
+  width: 0%;
+  background: linear-gradient(90deg, #16a34a, #065f46);
+  transition: width 0.2s;
+}
+
+#progress-text {
+  text-align: right;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* FILE LIST */
+.file-card {
+    background: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.file-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  height:100px;
+}
+ </style>
 <body class="">
 <!--ACCESSIBILITY CONTROLS   --> 
 
@@ -146,180 +255,70 @@
    
    <section class="my-5">
     <div class="image-conversion">
-      <div class="container">
-        <h1>Select the format for Conversion</h1>
+       <div class="container">
 
-        <div class="sub-tabs" role="tablist" aria-label="Conversion types">
-          <button role="jpg to png" class="sub-tab active" data-conversion="jpg2png">JPG → PNG</button>
-          <button role="png to jpg" class="sub-tab" data-conversion="png2jpg">PNG → JPG</button>
-          <button role="webp to png" class="sub-tab" data-conversion="webp2png">WEBP → PNG</button>
-            <button class="sub-tab" data-conversion="png2webp">PNG → WEBP</button>
-          <button role="webp to jpg" class="sub-tab" data-conversion="webp2jpg">WEBP → JPG</button>
-          <button class="sub-tab" data-conversion="jpg2webp">JPG → WEBP</button>
+    <h1>JPG / PNG to SVG Converter</h1>
 
-          <button role="gif tp jpg" class="sub-tab" data-conversion="gif2jpg">GIF → JPG</button>
-        </div>
+    
+<div id="drop-area">
+  <p>Drag & Drop Images</p>
+  <button id="add-files" class="btn btn-green">Choose Files</button>
+  <input type="file" id="upload" accept=".png,.jpg,.jpeg" multiple hidden>
+</div>
 
-        <div id="drop-area" class="drop-area">
-          <p><strong>Drag & drop</strong> images here or <button id="add-files">Choose files</button></p>
-          <label for="upload" class="sr-only">Upload Image</label><input id="upload" type="file" accept="image/*" multiple style="display:none" />
-          <div class="hint">Only files matching the selected conversion are accepted. Invalid files will be shown with ❌
-            and won't be converted.</div>
-        </div>
-
-        <ul id="file-list" aria-live="polite"></ul>
-
-        <div class="controls">
-          <button id="convert-btn">Convert Files <span id="spinner">⏳</span></button>
+<div id="progress-container">
+  <div class="progress-bar-bg">
+    <div id="progress-bar"></div>
+  </div>
+  <div id="progress-text">0%</div>
+</div>
+<div id="file-list"></div>
+<div class="btn-row">
+  <button id="convert-btn" class="btn btn-green">Convert SVG</button>
+  <button id="clear-all" class="btn btn-red">Clear All</button>
+</div>
 
 
-          <button id="download-zip">Download ZIP</button>
-        </div>
-
-      
-
-
-      </div>
-      <div id="downloadModal" class="modal">
-        <div class="modal-content">
-          <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <i class="fa-solid fa-circle-check me-2"></i>
-            <strong>Success!</strong> Conversion completed successfully.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-
-          <p>Your files are ready to download.</p>
-          <div class="modal-buttons">
-            <button id="confirmDownload" class="download-btn">⬇️ Download ZIP</button>
-
-            <button class="close-btn">Close</button>
-          </div>
-        </div>
-      </div>
+  </div>
+   
     </div>
   </section>
   <hr />
 <section class="seo-content mt-5">
 
 <div class="container">
-
-<h2 class="mb-4">Free Image Converter – Convert JPG, PNG, WEBP & GIF Online</h2>
-
+ 
+<h2>Free Image to SVG Converter Online</h2>
 <p>
-Our <strong>Free Image Converter</strong> allows you to easily convert images between multiple formats including 
-<strong>JPG, PNG, WEBP, and GIF</strong>. Whether you need to optimize images for websites, reduce file size, or 
-change file compatibility, this tool provides a quick and simple solution directly in your browser.
+Convert raster images like JPG and PNG into SVG format easily using our free online tool.
+SVG files are scalable vector graphics that maintain quality at any size, making them perfect for logos, icons, and web graphics.
 </p>
 
-<p>
-Upload your image, choose the format you want, and download the converted file instantly. No installation 
-or registration is required.
-</p>
-
-
-<h2 class="mt-4">Supported Image Conversions</h2>
-
+<h2>Why Convert Images to SVG?</h2>
 <ul>
-<li>Convert JPG to PNG</li>
-<li>Convert PNG to JPG</li>
-<li>Convert WEBP to JPG</li>
-<li>Convert WEBP to PNG</li>
-<li>Convert GIF to JPG</li>
-<li>Convert GIF to PNG</li>
-<li>Convert PNG to WEBP</li>
-<li>Convert JPG to WEBP</li>
+<li>Infinite scalability without quality loss</li>
+<li>Lightweight file size</li>
+<li>Perfect for logos and UI icons</li>
+<li>SEO-friendly vector graphics</li>
 </ul>
 
-
-<h2 class="mt-4">Key Features</h2>
-
-<div class="row mt-3">
-
-<div class="col-md-6 mb-3">
-<h3>Multiple Image Format Support</h3>
-<p>
-Convert between popular image formats including JPG, PNG, WEBP, and GIF quickly and easily.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h3>Fast Image Processing</h3>
-<p>
-Our tool converts images instantly in your browser without uploading files to a server, ensuring speed and privacy.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h3>High Quality Conversion</h3>
-<p>
-Maintain image clarity and resolution during conversion without noticeable quality loss.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h3>Free and Easy to Use</h3>
-<p>
-The image converter works directly in your browser and is completely free to use without limits.
-</p>
-</div>
-
-</div>
-
-
-<h2 class="mt-4">How to Convert Images</h2>
-
+<h2>How to Convert JPG or PNG to SVG</h2>
 <ol>
-<li>Upload your image file.</li>
-<li>Select the output format such as JPG, PNG, WEBP, or GIF.</li>
-<li>Click the convert button.</li>
-<li>Download the converted image instantly.</li>
+<li>Upload your image</li>
+<li>Click convert</li>
+<li>Download SVG file or copy code</li>
 </ol>
 
+<h2>FAQ</h2>
 
-<h2 class="mt-4">Why Use an Image Converter?</h2>
+<h3>Is this SVG converter free?</h3>
+<p>Yes, it is completely free and works in your browser.</p>
 
-<p>
-Different image formats are used for different purposes. For example, JPG files are ideal for photographs, 
-PNG files support transparent backgrounds, and WEBP images provide better compression for websites.
-</p>
+<h3>Are my images uploaded?</h3>
+<p>No, everything is processed locally in your browser.</p>
 
-<p>
-Using an image converter allows you to quickly change formats to ensure compatibility, reduce file size, 
-and improve website performance.
-</p>
-
-
-<h2 class="mt-4">Frequently Asked Questions</h2>
-
-<div class="faq-item mb-3">
-<h3>What is an Image Converter?</h3>
-<p>
-An image converter is a tool that allows you to change an image from one file format to another, such as converting JPG to PNG or WEBP to JPG.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h3>Is this image converter free?</h3>
-<p>
-Yes, this online image converter is completely free and works directly in your browser without installing any software.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h3>Will my images be uploaded to a server?</h3>
-<p>
-No. All image conversions are processed in your browser to ensure privacy and security.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h3>Which image formats are supported?</h3>
-<p>
-The tool supports conversion between JPG, PNG, WEBP, and GIF formats.
-</p>
-</div>
-
-
+<h3>Does it create real vector SVG?</h3>
+<p>This tool creates simplified SVG output. For complex tracing, advanced tools may be required.</p>
 
 </div>
 
@@ -397,308 +396,216 @@ The tool supports conversion between JPG, PNG, WEBP, and GIF formats.
 <!-- InstanceBeginEditable name="EditRegion5" -->
 <script src="../image-converter/js/bootstrap.bundle.min.js"></script>
 <script src="../image-converter/js/global.js"></script>		
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
-   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+ 
+<script>
 
- <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-  const subTabs = document.querySelectorAll('.sub-tab');
-  const uploadInput = document.getElementById('upload');
-  const addFilesBtn = document.getElementById('add-files');
-  const dropArea = document.getElementById('drop-area');
-  const fileListEl = document.getElementById('file-list');
-  const convertBtn = document.getElementById('convert-btn');
-  const controls = document.querySelector('.controls');
+const dropArea = document.getElementById('drop-area');
+const fileInput = document.getElementById('upload');
+const addBtn = document.getElementById('add-files');
+const fileList = document.getElementById('file-list');
+const convertBtn = document.getElementById('convert-btn');
+const clearBtn = document.getElementById('clear-all');
 
-  let currentConversion = 'jpg2png';
-  let fileQueue = [];
-  let convertedFiles = [];
+let files = [];
 
-  /* ================= VALIDATION ================= */
+/* PROGRESS */
+function showProgress(text) {
+  document.getElementById('progress-container').style.display = 'block';
+  document.getElementById('progress-text').textContent = text + ' 0%';
+}
 
-  const allowedFormats = {
-    jpg2png: ['image/jpeg'],
-    png2jpg: ['image/png'],
-    webp2png: ['image/webp'],
-    webp2jpg: ['image/webp'],
-    gif2jpg: ['image/gif'],
-    jpg2webp: ['image/jpeg'],   // NEW
-    png2webp: ['image/png']     // NEW
-  };
+function animateProgress(duration) {
+  return new Promise(resolve => {
+    const bar = document.getElementById('progress-bar');
+    const text = document.getElementById('progress-text');
 
-  function fileAllowed(file) {
-    return allowedFormats[currentConversion]?.includes(file.type);
+    let start = null;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      let progress = timestamp - start;
+      let percent = Math.min((progress / duration) * 100, 100);
+
+      bar.style.width = percent + '%';
+      text.textContent = Math.floor(percent) + '%';
+
+      if (progress < duration) {
+        requestAnimationFrame(step);
+      } else resolve();
+    }
+
+    requestAnimationFrame(step);
+  });
+}
+
+function hideProgress() {
+  document.getElementById('progress-container').style.display = 'none';
+}
+
+/* VALIDATION */
+function isValid(file) {
+  const name = file.name.toLowerCase();
+  return name.endsWith('.png') || name.endsWith('.jpg') || name.endsWith('.jpeg');
+}
+
+/* DRAG DROP */
+['dragover'].forEach(e=>{
+  dropArea.addEventListener(e, ev=>{
+    ev.preventDefault();
+    dropArea.classList.add('dragover');
+  });
+});
+
+['dragleave','drop'].forEach(e=>{
+  dropArea.addEventListener(e, ev=>{
+    ev.preventDefault();
+    dropArea.classList.remove('dragover');
+  });
+});
+
+dropArea.addEventListener('drop', e=>{
+  handleFiles(e.dataTransfer.files);
+});
+
+addBtn.onclick = ()=> fileInput.click();
+
+fileInput.onchange = e => handleFiles(e.target.files);
+
+/* HANDLE FILES */
+async function handleFiles(selected){
+
+  showProgress("Uploading");
+  await animateProgress(3000);
+
+  Array.from(selected).forEach(file=>{
+
+    const card = document.createElement('div');
+    card.className = 'file-card';
+
+    const header = document.createElement('div');
+    header.className = 'file-header';
+
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+
+    const name = document.createElement('div');
+    name.textContent = file.name;
+
+    header.appendChild(img);
+    header.appendChild(name);
+
+    const remove = document.createElement('button');
+    remove.className = 'btn btn-red';
+    remove.textContent = 'Remove';
+
+    remove.onclick = ()=>{
+      card.remove();
+      files = files.filter(f=>f!==file);
+    };
+
+    if(isValid(file)) files.push(file);
+
+    card.appendChild(header);
+    card.appendChild(remove);
+
+    fileList.appendChild(card);
+
+  });
+
+  hideProgress();
+}
+
+/* CONVERT */
+convertBtn.onclick = async ()=>{
+
+  const valid = files.filter(isValid);
+
+  if(!valid.length){
+    alert("Upload valid images");
+    return;
   }
 
-  /* ================= DRAG & DROP ================= */
+  showProgress("Converting");
+  await animateProgress(10000);
 
-  ['dragenter','dragover'].forEach(event => {
-    dropArea.addEventListener(event, e => {
-      e.preventDefault();
-      e.stopPropagation();
-      dropArea.classList.add('dragover');
-    });
-  });
+  fileList.innerHTML = '';
 
-  ['dragleave','drop'].forEach(event => {
-    dropArea.addEventListener(event, e => {
-      e.preventDefault();
-      e.stopPropagation();
-      dropArea.classList.remove('dragover');
-    });
-  });
+  valid.forEach(file=>{
 
-  dropArea.addEventListener('drop', e => {
-    handleFiles(e.dataTransfer.files);
-  });
+    const reader = new FileReader();
 
-  /* ================= BUTTONS ================= */
+    reader.onload = e=>{
 
-  const downloadAllBtn = document.createElement('button');
-  downloadAllBtn.textContent = 'Download ZIP';
-  downloadAllBtn.disabled = true;
-  downloadAllBtn.style.cssText = "background:#065f46;color:#fff;padding:8px 15px;border:none;border-radius:5px;margin-left:10px;";
+      const img = new Image();
+      img.src = e.target.result;
 
-  const clearAllBtn = document.createElement('button');
-  clearAllBtn.textContent = 'Clear All';
-  clearAllBtn.disabled = true;
-  clearAllBtn.style.cssText = "background:#dc2626;color:#fff;padding:8px 15px;border:none;border-radius:5px;margin-left:10px;";
+      img.onload = ()=>{
 
-  controls.appendChild(downloadAllBtn);
-  controls.appendChild(clearAllBtn);
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${img.width}" height="${img.height}">
+<image href="${e.target.result}" width="${img.width}" height="${img.height}"/></svg>`;
 
-  function toggleButtons() {
-    convertBtn.disabled = fileQueue.length === 0;
-    clearAllBtn.disabled = fileQueue.length === 0;
-    downloadAllBtn.disabled = convertedFiles.length === 0;
-  }
+        const card = document.createElement('div');
+        card.className = 'file-card';
 
-  /* ================= PROGRESS ================= */
+        const textarea = document.createElement('textarea');
+        textarea.value = svg;
 
-  const progressWrapper = document.createElement('div');
-  progressWrapper.style.cssText = "width:100%;background:#eee;margin:20px 0;display:none;border-radius:5px;overflow:hidden";
+        const actions = document.createElement('div');
+        actions.className = 'file-actions';
 
-  const progressBar = document.createElement('div');
-  progressBar.style.cssText = "height:20px;width:0;background:#16a34a;color:#fff;text-align:center;font-size:12px";
+        const copy = document.createElement('button');
+        copy.className = 'btn btn-green';
+        copy.textContent = 'Copy';
 
-  progressWrapper.appendChild(progressBar);
-  controls.prepend(progressWrapper);
+        copy.onclick = ()=>{
+          navigator.clipboard.writeText(svg);
+          copy.textContent = 'Copied ✔';
+          setTimeout(()=>copy.textContent='Copy',2000);
+        };
 
-  function showLoader(cb) {
-    progressWrapper.style.display = 'block';
-    let w = 0;
+        const download = document.createElement('button');
+        download.className = 'btn btn-green';
+        download.textContent = 'Download';
 
-    const i = setInterval(() => {
-      w += 10;
-      progressBar.style.width = w + '%';
-      progressBar.innerText = w + '%';
+        download.onclick = ()=>{
+          const blob = new Blob([svg]);
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = file.name + ".svg";
+          a.click();
+        };
 
-      if (w >= 100) {
-        clearInterval(i);
-        setTimeout(() => {
-          progressWrapper.style.display = 'none';
-          progressBar.style.width = '0%';
-          progressBar.innerText = '0%';
-          cb();
-        }, 300);
-      }
-    }, 1000);
-  }
+        const remove = document.createElement('button');
+        remove.className = 'btn btn-red';
+        remove.textContent = 'Remove';
+        remove.onclick = ()=> card.remove();
 
-  /* ================= TABS ================= */
+        actions.append(copy,download,remove);
 
-  subTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      subTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      currentConversion = tab.dataset.conversion;
-
-      fileQueue = [];
-      convertedFiles = [];
-      fileListEl.innerHTML = '';
-      toggleButtons();
-    });
-  });
-
-  /* ================= ADD FILES ================= */
-
-  addFilesBtn.addEventListener('click', () => uploadInput.click());
-
-  uploadInput.addEventListener('change', e => {
-    handleFiles(e.target.files);
-    uploadInput.value = '';
-  });
-
-  function handleFiles(files) {
-
-    Array.from(files).forEach(file => {
-
-      const li = document.createElement('li');
-      li.style.cssText = "display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ddd;padding:10px";
-
-      const left = document.createElement('div');
-      left.style.display = 'flex';
-      left.style.alignItems = 'center';
-      left.style.gap = '10px';
-
-      const img = document.createElement('img');
-      img.src = URL.createObjectURL(file);
-      img.style.cssText = "width:50px;height:50px;object-fit:cover;border-radius:5px";
-
-      const name = document.createElement('span');
-      name.textContent = file.name;
-
-      left.appendChild(img);
-      left.appendChild(name);
-
-      if (!fileAllowed(file)) {
-        const invalid = document.createElement('span');
-        invalid.textContent = ' ❌ Invalid';
-        invalid.style.color = 'red';
-        left.appendChild(invalid);
-      } else {
-        fileQueue.push(file);
-      }
-
-      const removeBtn = document.createElement('button');
-      removeBtn.textContent = 'Remove';
-      removeBtn.style.cssText = "background:#dc2626;color:#fff;border:none;padding:6px 10px;border-radius:5px";
-
-      removeBtn.onclick = () => {
-        li.remove();
-        fileQueue = fileQueue.filter(f => f !== file);
-        toggleButtons();
+        card.append(textarea,actions);
+        fileList.appendChild(card);
       };
+    };
 
-      li.appendChild(left);
-      li.appendChild(removeBtn);
-      fileListEl.appendChild(li);
+    reader.readAsDataURL(file);
 
-      toggleButtons();
-    });
-  }
-
-  /* ================= CONVERT ================= */
-
-  convertBtn.addEventListener('click', () => {
-
-    if (!fileQueue.length) return;
-
-    showLoader(async () => {
-
-      convertedFiles = [];
-
-      for (const file of fileQueue) {
-
-        const img = new Image();
-        img.src = URL.createObjectURL(file);
-        await new Promise(r => img.onload = r);
-
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-
-        let mime, ext;
-
-        switch (currentConversion) {
-
-          case 'jpg2png':
-          case 'webp2png':
-            mime = 'image/png'; ext = 'png'; break;
-
-          case 'png2jpg':
-          case 'webp2jpg':
-          case 'gif2jpg':
-            mime = 'image/jpeg'; ext = 'jpg'; break;
-
-          case 'jpg2webp':
-          case 'png2webp':
-            mime = 'image/webp'; ext = 'webp'; break;
-
-          default:
-            mime = 'image/png'; ext = 'png';
-        }
-
-        const blob = await new Promise(res =>
-          canvas.toBlob(res, mime, 0.92)
-        );
-
-        convertedFiles.push({
-          blob,
-          name: file.name.replace(/\.[^/.]+$/, '') + '.' + ext
-        });
-      }
-
-      renderConverted();
-      toggleButtons();
-    });
   });
 
-  /* ================= RENDER ================= */
+  hideProgress();
+};
 
-  function renderConverted() {
-    fileListEl.innerHTML = '';
-
-    convertedFiles.forEach(file => {
-
-      const li = document.createElement('li');
-      li.style.cssText = "display:flex;justify-content:space-between;border-bottom:1px solid #ddd;padding:10px";
-
-      const name = document.createElement('span');
-      name.textContent = file.name;
-
-      const btn = document.createElement('button');
-      btn.textContent = 'Download';
-      btn.style.cssText = "background:#065f46;color:#fff;border:none;padding:6px 12px;border-radius:5px";
-
-      btn.onclick = () => {
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(file.blob);
-        a.download = file.name;
-        a.click();
-      };
-
-      li.appendChild(name);
-      li.appendChild(btn);
-      fileListEl.appendChild(li);
-    });
-  }
-
-  /* ================= CLEAR ================= */
-
-  clearAllBtn.onclick = () => {
-    fileQueue = [];
-    convertedFiles = [];
-    fileListEl.innerHTML = '';
-    toggleButtons();
-  };
-
-  /* ================= ZIP ================= */
-
-  downloadAllBtn.onclick = async () => {
-
-    const zip = new JSZip();
-
-    convertedFiles.forEach(file => {
-      zip.file(file.name, file.blob);
-    });
-
-    const blob = await zip.generateAsync({ type: 'blob' });
-
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'converted_images.zip';
-    a.click();
-  };
+/* CLEAR */
+clearBtn.onclick = ()=>{
+  files=[];
+  fileList.innerHTML='';
+};
 
 });
 </script>
+ 
+
 <!-- InstanceEndEditable --> 
 <!--<script>
 		const btn = document.getElementById("togglemeu");

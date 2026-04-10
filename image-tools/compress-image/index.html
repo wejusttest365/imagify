@@ -466,7 +466,7 @@ border-color:#0a58ca;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
      
-  <script>
+ <script>
 let files = [];
 let compressedFiles = [];
 let totalOriginalSize = 0;
@@ -499,7 +499,6 @@ dropZone.addEventListener("drop", (e) => {
 });
 
 /* HANDLE FILES */
-
 function handleFiles(selectedFiles) {
 
   files = [];
@@ -509,7 +508,7 @@ function handleFiles(selectedFiles) {
 
   document.getElementById("fileList").innerHTML = "";
 
-  Array.from(selectedFiles).forEach(file => {
+  Array.from(selectedFiles).forEach((file, index) => {
 
     if (file.type.startsWith("image/")) {
 
@@ -523,7 +522,7 @@ function handleFiles(selectedFiles) {
       li.style.justifyContent = "space-between";
       li.style.gap = "10px";
 
-      /* LEFT SIDE (PREVIEW + NAME) */
+      /* LEFT SIDE */
       const left = document.createElement("div");
       left.style.display = "flex";
       left.style.alignItems = "center";
@@ -531,21 +530,24 @@ function handleFiles(selectedFiles) {
 
       const img = document.createElement("img");
       img.src = URL.createObjectURL(file);
-      img.style.width = "50px";
+      img.style.width = "auto";
       img.style.height = "50px";
       img.style.objectFit = "cover";
       img.style.borderRadius = "5px";
 
       const name = document.createElement("span");
+
       name.innerHTML = `
-        ${file.name}<br>
-        <small>${(file.size / 1024).toFixed(2)} KB</small>
+        <strong>${file.name}</strong><br>
+        <small id="size-${index}">
+          Original: ${(file.size / 1024).toFixed(2)} KB
+        </small>
       `;
 
       left.appendChild(img);
       left.appendChild(name);
 
-      /* RIGHT SIDE (DOWNLOAD BUTTON placeholder) */
+      /* RIGHT SIDE */
       const right = document.createElement("div");
 
       li.appendChild(left);
@@ -562,8 +564,7 @@ function handleFiles(selectedFiles) {
 }
 
 /* COMPRESS */
-
- document.getElementById("compressBtn").addEventListener("click", function () {
+document.getElementById("compressBtn").addEventListener("click", function () {
 
   const progressArea = document.getElementById("progressArea");
   const progressBar = document.getElementById("progressBar");
@@ -579,7 +580,7 @@ function handleFiles(selectedFiles) {
 
   const listItems = document.querySelectorAll("#fileList li");
 
-  /* ===== FAKE 10s LOADER ===== */
+  /* FAKE LOADER */
   let fakeProgress = 0;
 
   const loaderInterval = setInterval(() => {
@@ -592,8 +593,7 @@ function handleFiles(selectedFiles) {
     }
   }, 1000);
 
-  /* ===== REAL PROCESS ===== */
-
+  /* REAL PROCESS */
   files.forEach((file, index) => {
 
     const reader = new FileReader();
@@ -617,12 +617,36 @@ function handleFiles(selectedFiles) {
 
           canvas.toBlob(function (blob) {
 
-            compressedFiles.push({ blob, name: file.name });
-            totalCompressedSize += blob.size;
+            const originalSize = file.size;
+            const compressedSize = blob.size;
+            const savedSize = originalSize - compressedSize;
+
+            compressedFiles.push({
+              blob,
+              name: file.name,
+              originalSize,
+              compressedSize,
+              savedSize
+            });
+
+            totalCompressedSize += compressedSize;
 
             zip.file(file.name, blob);
 
-            /* SINGLE DOWNLOAD BUTTON WITH SPINNER */
+            /* UPDATE SIZE UI */
+            const sizeLabel = document.getElementById(`size-${index}`);
+
+            sizeLabel.innerHTML = `
+              <div style="font-size:13px;">
+                📦 Original: ${(originalSize / 1024).toFixed(2)} KB<br>
+                ⚡ Compressed: ${(compressedSize / 1024).toFixed(2)} KB<br>
+                <span style="color:#16a34a;font-weight:600;">
+                  💾 Saved: ${(savedSize / 1024).toFixed(2)} KB
+                </span>
+              </div>
+            `;
+
+            /* DOWNLOAD BUTTON */
             const btn = document.createElement("button");
             btn.textContent = "Download";
             btn.style.cssText = "background:#065f46;color:#fff;border:none;padding:6px 12px;border-radius:5px";
@@ -650,7 +674,6 @@ function handleFiles(selectedFiles) {
                 }
 
               }, 1000);
-
             };
 
             listItems[index].lastChild.innerHTML = "";
@@ -659,12 +682,10 @@ function handleFiles(selectedFiles) {
             processed++;
 
             if (processed === files.length) {
-
               setTimeout(() => {
                 progressArea.style.display = "none";
                 showResults(zip);
               }, 500);
-
             }
 
           }, "image/jpeg", 0.6);
@@ -687,16 +708,16 @@ function showResults(zip) {
   const saved = totalOriginalSize - totalCompressedSize;
 
   document.getElementById("resultText").innerHTML = `
-    Original: ${(totalOriginalSize / 1024).toFixed(2)} KB<br>
-    Compressed: ${(totalCompressedSize / 1024).toFixed(2)} KB<br>
-    Saved: ${(saved / 1024).toFixed(2)} KB
+    <strong>Original:</strong> ${(totalOriginalSize / 1024).toFixed(2)} KB<br>
+    <strong>Compressed:</strong> ${(totalCompressedSize / 1024).toFixed(2)} KB<br>
+    <span style="color:#16a34a;font-weight:600;">
+      Saved: ${(saved / 1024).toFixed(2)} KB
+    </span>
   `;
 
   const downloadBtn = document.getElementById("downloadZip");
 
   downloadBtn.style.display = "inline-block";
-
-  /* ===== DOWNLOAD PROGRESS BAR ===== */
 
   let downloadProgress = document.getElementById("downloadProgressWrapper");
 
@@ -710,13 +731,10 @@ function showResults(zip) {
     bar.style.cssText = "height:20px;width:0;background:#065f46;color:#fff;text-align:center;font-size:12px";
 
     downloadProgress.appendChild(bar);
-
     downloadBtn.parentNode.appendChild(downloadProgress);
   }
 
   const progressBar = document.getElementById("downloadProgressBar");
-
-  /* ===== DOWNLOAD CLICK ===== */
 
   downloadBtn.onclick = function () {
 
@@ -735,7 +753,6 @@ function showResults(zip) {
       if (progress >= 100) {
         clearInterval(interval);
 
-        /* ACTUAL DOWNLOAD */
         zip.generateAsync({ type: "blob" }).then(function (content) {
 
           const a = document.createElement("a");
@@ -743,7 +760,6 @@ function showResults(zip) {
           a.download = "compressed_images.zip";
           a.click();
 
-          /* RESET UI */
           setTimeout(() => {
             downloadBtn.disabled = false;
             downloadBtn.innerText = "Download ZIP";
@@ -757,10 +773,8 @@ function showResults(zip) {
 
       }
 
-    }, 1000); // 10 seconds total
-
+    }, 1000);
   };
-
 }
 </script>
 <!-- InstanceEndEditable --> 
