@@ -392,7 +392,7 @@ button.accordion-button {
      display: inline-block;
      transition: all .4s ease;
      transform: translateY(20px);
-     opacity: 0;
+     opacity: 1;
  }
 
  .tool-card:hover .tool-btn {
