@@ -40,7 +40,116 @@
   <link href="../../css/style.css" rel="stylesheet">
   <link href="../../css/font-convert.css" rel="stylesheet">
 	  <link href="../../css/image-convertor.css" rel="stylesheet">
-	  
+	   <style>
+  
+/* DROP AREA */
+#drop-area {
+  border: 2px dashed #cbd5e1;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+#drop-area.dragover {
+  border-color: #16a34a;
+  background: #ecfdf5;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 120px;
+  text-align: center;
+}
+
+.btn-green {
+  background: #065f46;
+  color: white;
+}
+
+.btn-red {
+  background: #dc2626;
+  color: white;
+}
+.btn:hover {background-color: #000; color:#fff;}
+.btn-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* PROGRESS */
+#progress-container {
+  display: none;
+  margin: 20px 0;
+}
+
+.progress-bar-bg {
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 14px;
+  width: 0%;
+  background: linear-gradient(90deg, #16a34a, #065f46);
+  transition: width 0.2s;
+}
+
+#progress-text {
+  text-align: right;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* FILE LIST */
+.file-card {
+    background: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.file-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  height:100px;
+}
+ </style>
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -142,7 +251,7 @@
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
-  <main id="content">
+    <main id="content">
    
    <section class="my-5">
     <div class="image-conversion">
@@ -288,7 +397,7 @@ SVG files are scalable vector graphics that maintain quality at any size, making
 <script src="../image-converter/js/bootstrap.bundle.min.js"></script>
 <script src="../image-converter/js/global.js"></script>		
  
-<script>
+ <script>
 
 document.addEventListener('DOMContentLoaded', () => {
 
