@@ -400,7 +400,7 @@ The tool supports conversion between JPG, PNG, WEBP, and GIF formats.
 <script src="js/jquery.js"></script> 
 <!-- InstanceBeginEditable name="EditRegion5" -->
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/global.js"></script>		
+ 	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
    <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -744,8 +744,10 @@ $("#togglemeu").click(function(){
 $(".mainmenubar").slideToggle();
 
 });
-}); 
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
 </script>
+	 
 
 </body>
 <!-- InstanceEnd --></html>

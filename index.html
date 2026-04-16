@@ -703,7 +703,7 @@ No installation is required. All tools work directly in your web browser.
 <script src="js/jquery.js"></script> 
 <!-- InstanceBeginEditable name="EditRegion5" -->
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/global.js"></script>	
+ 	
 <!-- InstanceEndEditable --> 
  
 <!--<script>
@@ -784,8 +784,10 @@ $("#togglemeu").click(function(){
 $(".mainmenubar").slideToggle();
 
 });
-}); 
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
 </script>
+	 
 
 </body>
 <!-- InstanceEnd --></html>

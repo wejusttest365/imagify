@@ -404,7 +404,7 @@ The tool supports conversion between JPG, PNG, WEBP, and GIF formats.
 <script src="js/jquery.js"></script> 
 <!-- InstanceBeginEditable name="EditRegion5" -->
 <script src="../image-converter/js/bootstrap.bundle.min.js"></script>
-<script src="../image-converter/js/global.js"></script>		
+ 	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
@@ -787,8 +787,10 @@ $("#togglemeu").click(function(){
 $(".mainmenubar").slideToggle();
 
 });
-}); 
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
 </script>
+	 
 
 </body>
 <!-- InstanceEnd --></html>
