@@ -167,7 +167,7 @@
   </article> 
 </footer>
 <div class="clearfix"></div> 
-<script src="js/jquery.js"></script> 
+<script src="js/jquery.js"></script>  
 <!-- TemplateBeginEditable name="EditRegion5" --> 
 <script src="js/bootstrap.bundle.min.js"></script> 
 <!-- TemplateEndEditable --> 
