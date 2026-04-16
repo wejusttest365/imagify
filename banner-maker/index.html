@@ -14,6 +14,13 @@ body {
   background: #f3f4f6;
 }
 
+/* CENTER CONTAINER (ADS FRIENDLY) */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
 header {
   padding: 20px;
   text-align: center;
@@ -21,81 +28,36 @@ header {
   color: #fff;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+/* SECTION TITLE */
+.section-title {
+  margin: 30px 0 10px;
+  font-size: 22px;
+  font-weight: 700;
 }
 
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
 .card {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: 0.3s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
+/* PREVIEW */
 .preview {
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: bold;
-}
-
-.card h3 {
-  padding: 10px;
-  margin: 0;
-}
-	.preview {
-  height: 160px;
-  padding: 15px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  border-radius:12px;
-  color:#fff;
-}
-
-/* Individual designs */
-.business {
-  background: linear-gradient(135deg,#0f172a,#2563eb);
-}
-
-.promo {
-  background: linear-gradient(135deg,#f97316,#fb923c);
-}
-
-.luxury {
-  background: linear-gradient(135deg,#000,#444);
-}
-
-.portfolio {
-  background: linear-gradient(135deg,#1e293b,#64748b);
-}
-
-.ecommerce {
-  background: linear-gradient(135deg,#dc2626,#f87171);
-}
-
-.preview h2 {
-  margin:0;
-  font-size:20px;
-  font-weight:700;
-}
-
-.preview p {
-  margin:0;
-  font-size:12px;
-}
-	.preview {
   position: relative;
   height: 160px;
   overflow: hidden;
@@ -107,6 +69,7 @@ header {
   object-fit: cover;
 }
 
+/* OVERLAY TEXT */
 .overlay {
   position: absolute;
   bottom: 10px;
@@ -116,12 +79,25 @@ header {
 
 .overlay h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .overlay p {
   margin: 0;
   font-size: 12px;
+}
+
+/* SIZE LABEL */
+.size {
+  font-size: 12px;
+  color: #555;
+  padding: 8px 10px;
+}
+
+.card h3 {
+  padding: 0 10px 10px;
+  margin: 0;
+  font-size: 16px;
 }
 </style>
 </head>
@@ -129,62 +105,108 @@ header {
 <body>
 
 <header>
-  <h1>🎨 Choose a Banner Template</h1>
+  <h1>🎨 Choose Banner Size & Template</h1>
 </header>
 
- <div class="grid">
+<div class="container">
 
-<div class="card" onclick="openEditor('modernBusiness')">
-  <div class="preview">
-    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" />
-    <div class="overlay">
-      <h2>Grow Business</h2>
-      <p>Professional Solutions</p>
+  <!-- LINKEDIN -->
+  <div class="section-title">LinkedIn Banners</div>
+  <div class="grid">
+
+    <div class="card" onclick="openEditor(1584,396,'business')">
+      <div class="preview">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0">
+        <div class="overlay">
+          <h2>LinkedIn Cover</h2>
+          <p>Professional Branding</p>
+        </div>
+      </div>
+      <div class="size">1584 x 396</div>
+      <h3>Business Banner</h3>
     </div>
-  </div>
-  <h3>Modern Business</h3>
-</div>
 
-<div class="card" onclick="openEditor('instaPromo')">
-  <div class="preview promo">
-    <h2>50% OFF</h2>
-    <p>Limited Offer</p>
-  </div>
-  <h3>Instagram Promo</h3>
-</div>
+    <div class="card" onclick="openEditor(1200,627,'portfolio')">
+      <div class="preview">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+        <div class="overlay">
+          <h2>Content Post</h2>
+          <p>Engagement</p>
+        </div>
+      </div>
+      <div class="size">1200 x 627</div>
+      <h3>LinkedIn Post</h3>
+    </div>
 
-<div class="card" onclick="openEditor('darkLuxury')">
-  <div class="preview luxury">
-    <h2>Luxury Brand</h2>
-    <p>Exclusive</p>
   </div>
-  <h3>Dark Luxury</h3>
-</div>
 
-<div class="card" onclick="openEditor('portfolio')">
-  <div class="preview portfolio">
-    <h2>Your Portfolio</h2>
-    <p>Creative Design</p>
-  </div>
-  <h3>Portfolio</h3>
-</div>
+  <!-- INSTAGRAM -->
+  <div class="section-title">Instagram Banners</div>
+  <div class="grid">
 
-<div class="card" onclick="openEditor('ecommerceSale')">
-  <div class="preview ecommerce">
-    <h2>SALE</h2>
-    <p>Shop Now</p>
+    <div class="card" onclick="openEditor(1080,1080,'promo')">
+      <div class="preview">
+        <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd53">
+        <div class="overlay">
+          <h2>Sale</h2>
+          <p>50% OFF</p>
+        </div>
+      </div>
+      <div class="size">1080 x 1080</div>
+      <h3>Instagram Post</h3>
+    </div>
+
+    <div class="card" onclick="openEditor(1080,1920,'story')">
+      <div class="preview">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+        <div class="overlay">
+          <h2>Story</h2>
+          <p>Full Screen</p>
+        </div>
+      </div>
+      <div class="size">1080 x 1920</div>
+      <h3>Instagram Story</h3>
+    </div>
+
   </div>
-  <h3>E-commerce Sale</h3>
-</div>
+
+  <!-- FACEBOOK -->
+  <div class="section-title">Facebook Banners</div>
+  <div class="grid">
+
+    <div class="card" onclick="openEditor(820,312,'business')">
+      <div class="preview">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+        <div class="overlay">
+          <h2>Facebook Cover</h2>
+          <p>Brand Page</p>
+        </div>
+      </div>
+      <div class="size">820 x 312</div>
+      <h3>Cover Banner</h3>
+    </div>
+
+    <div class="card" onclick="openEditor(1200,630,'sale')">
+      <div class="preview">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+        <div class="overlay">
+          <h2>Ad Banner</h2>
+          <p>Marketing</p>
+        </div>
+      </div>
+      <div class="size">1200 x 630</div>
+      <h3>Facebook Post</h3>
+    </div>
+
+  </div>
 
 </div>
 
 <script>
-function openEditor(template) {
-  window.location.href = "editor.html?template=" + template;
+function openEditor(w, h, type) {
+  window.location.href = `editor.html?w=${w}&h=${h}&type=${type}`;
 }
 </script>
-	 
- 
+
 </body>
 </html>

@@ -249,7 +249,7 @@ margin-top:-6px;
 	============================================= -->
 <header role="banner"  id="header" class="full-header">
   <div id="header-wrap">
-    <div class="container">
+    <div class="container-fluid">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
       <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
@@ -289,10 +289,17 @@ margin-top:-6px;
                 </ul>
 				  
               </li>
-              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> Other Tools <span class="caret"></span> </a>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> PDF Tools <span class="caret"></span> </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/merge-pdf">Merge PDF</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages">Reorder PDF Pages</a></li>  </ul>    </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> More <span class="caret"></span> </a> 
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/resume-maker/">Resume Builder</a></li>
-                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li> 
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
+                  
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/banner-maker/">Banner Maker</a></li>
+                   
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a></li>
@@ -439,9 +446,10 @@ margin-top:-6px;
         <p> <a class="nav-link" href="https://webtoolocean.com/about/">About Us</a> | <a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a> | <a class="nav-link" href="https://webtoolocean.com/disclaimer/">Disclaimer</a> | <a class="nav-link" href="https://webtoolocean.com/privacy/">Privacy</a> | <a class="nav-link" href="https://webtoolocean.com/terms/">Terms</a> </p>
       </div>
     </div> 
-  </article>
+  </article> 
 </footer>
-<div class="clearfix"></div>
+<div class="clearfix"></div> 
+<script src="js/jquery.js"></script> 
 <!-- InstanceBeginEditable name="EditRegion5" --> 
 <script src="js/bootstrap.bundle.min.js"></script> 
 <script>
@@ -581,7 +589,8 @@ addLayer();
 
 </script> 
 <!-- InstanceEndEditable --> 
-<script>
+ 
+<!--<script>
 		const btn = document.getElementById("togglemeu");
 const menu = document.querySelector(".mainmenubar");
 
@@ -651,6 +660,16 @@ document.addEventListener("keydown", function(e) {
     e.preventDefault();
   }
 });
+</script>-->
+
+<script>
+ $(document).ready(function(){
+$("#togglemeu").click(function(){
+$(".mainmenubar").slideToggle();
+
+});
+}); 
 </script>
+
 </body>
 <!-- InstanceEnd --></html>

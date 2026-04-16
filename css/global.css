@@ -163,6 +163,10 @@ button.lines-button.x.close:focus {
 }
 button#togglemeu {
     float: right;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    font-size: 18px;
 }
 /* ==========================================================================
    HEADER & brand BASE

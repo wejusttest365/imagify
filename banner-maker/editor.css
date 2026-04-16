@@ -1,0 +1,694 @@
+ 
+	body {
+  margin:0;
+  display:flex;
+  height:100vh;
+  font-family:'Poppins', Arial;
+  background:#f8fafc;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width:260px;
+  background:#0f172a;
+  color:#fff;
+  padding:18px;
+  overflow:auto;
+  border-right:1px solid #1e293b;
+}
+
+.section {
+  margin-bottom:18px;
+  padding:12px;
+  background:#111827;
+  border-radius:10px;
+}
+
+.section h3 {
+  font-size:13px;
+  color:#94a3b8;
+  margin-bottom:10px;
+}
+
+/* Buttons */
+button {
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#1e293b;
+  color:#fff;
+  cursor:pointer;
+  transition:0.2s;
+  font-size:13px;
+}
+
+button:hover {
+  background:#2563eb;
+}
+
+.upload {
+  background:#1e293b;
+  text-align:center;
+  padding:12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* Inputs */
+input, select {
+  width:100%;
+  padding:8px;
+  border-radius:6px;
+  border:none;
+  margin-bottom:8px;
+}
+
+/* ===== MAIN ===== */
+.main {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ===== TOOLBAR ===== */
+.toolbar {
+  background:#fff;
+  padding:10px 15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.toolbar-left {
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+/* Toolbar groups */
+.group {
+  display:flex;
+  flex-direction:column;
+  font-size:11px;
+  gap:4px;
+}
+
+.group label {
+  color:#6b7280;
+}
+
+/* Inline controls */
+.inline {
+  display:flex;
+  gap:6px;
+}
+
+.small-btn {
+  padding:6px 10px;
+  border-radius:6px;
+  background:#e5e7eb;
+  color:#111;
+  font-size:12px;
+}
+
+.small-btn:hover {
+  background:#2563eb;
+  color:#fff;
+}
+
+/* Download button */
+.download-btn {
+  background:#2563eb;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:13px;
+}
+
+/* ===== CANVAS ===== */
+.canvas-wrap {
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#eef2f7;
+}
+
+canvas {
+  border-radius:6px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Guides */
+.guide {
+  position:absolute;
+  background:red;
+  pointer-events:none;
+}
+#vGuide { width:1px;height:100%;display:none; }
+#hGuide { height:1px;width:100%;display:none; }
+
+/* Modal */
+#resizeModal {
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.4);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-box {
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  width:280px;
+}
+input[type="color"] {
+    width: 100%;
+    padding: 2px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 8px;
+    height: 48px;
+    width: 50px;
+}	
+	 select {
+		 borde:1px solid #ccc;
+	 }
+	 input[type="number"] {border:1px solid #ccc; max-wdth:60px;}
+	/* ===== TOOLBAR CONTAINER ===== */
+.toolbar {
+  background: #1f2937;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #374151;
+  height: 60px;
+  overflow-x: auto;
+}
+
+/* LEFT SIDE */
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== GROUP ===== */
+.group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  border-right: 1px solid #374151; /* separator */
+}
+
+/* remove last separator */
+.group:last-child {
+  border-right: none;
+}
+
+/* ===== LABEL ===== */
+.group label {
+  font-size: 10px;
+  color: #9ca3af;
+  display: none; /* hide for compact UI */
+}
+
+/* ===== INPUTS ===== */
+.group input,
+.group select {
+  height: 28px;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: none;
+  background: #374151;
+  color: #fff;
+}
+
+/* color picker small */
+input[type="color"] {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* number input small */
+input[type="number"] {
+  width: 60px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  height: 28px;
+  min-width: 28px;
+  padding: 0 8px;
+  border-radius: 6px;
+
+  border: none;
+  background: #374151;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* ICON BUTTONS */
+button i {
+  font-size: 12px;
+}
+
+/* ===== ALIGN BUTTONS ===== */
+.group button {
+  width: 28px;
+}
+
+/* ===== RANGE SLIDER ===== */
+input[type="range"] {
+  width: 70px;
+  height: 3px;
+  accent-color: #2563eb;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.toolbar > button {
+  background: #16a34a;
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.toolbar > button:hover {
+  background: #22c55e;
+}
+
+/* ===== SCROLL FIX ===== */
+.toolbar::-webkit-scrollbar {
+  height: 4px;
+}
+.toolbar::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 10px;
+}
+	 .group.updownlayer {
+    display: flex;
+    flex-direction: row;
+}
+	 /* ===== TOOLBAR MAIN ===== */
+.toolbar {
+  background: #111827;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px solid #1f2937;
+  overflow-x: auto;
+}
+
+/* smooth scroll */
+.toolbar::-webkit-scrollbar {
+  height: 4px;
+}
+.toolbar::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 10px;
+}
+
+/* ===== LEFT SIDE ===== */
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===== GROUP (PHOTOSHOP STYLE) ===== */
+.group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  border-right: 1px solid #1f2937;
+  position: relative;
+}
+
+/* remove last border */
+.group:last-child {
+  border-right: none;
+}
+
+/* subtle separator glow */
+.group::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 8px;
+  height: 60%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #374151, transparent);
+}
+
+/* ===== HIDE LABEL (MINIMAL UI) ===== */
+.group label {
+  display: none;
+}
+
+/* ===== INPUTS ===== */
+.group input, .group select {
+    height: 26px;
+    font-size: 11px;
+    border-radius: 5px;
+    border: 1px solid #757575;
+    background: #1f2937;
+    color: #e5e7eb;
+    padding: 0 6px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* focus glow */
+.group input:focus,
+.group select:focus {
+  background: #111827;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* ===== COLOR PICKERS ===== */
+input[type="color"] {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #374151;
+}
+
+/* ===== RANGE SLIDER ===== */
+input[type="range"] {
+  width: 60px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  height: 26px;
+  min-width: 26px;
+  border-radius: 6px;
+  border: none;
+  background: #1f2937;
+  color: #d1d5db;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* hover effect */
+button:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* click press */
+button:active {
+  transform: scale(0.95);
+}
+
+/* ===== ICON STYLE ===== */
+button i {
+  font-size: 13px;
+}
+
+/* ===== TOOLTIP (AUTO FROM TITLE ATTR) ===== */
+button[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  background: #000;
+  color: #fff;
+  font-size: 10px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+/* ===== ACTIVE STATE ===== */
+button.active {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 0 0 1px #3b82f6 inset;
+}
+
+/* ===== ALIGN BUTTONS SMALL ===== */
+.group button {
+  width: 26px;
+}
+
+/* ===== NUMBER INPUT SMALL ===== */
+input[type="number"] {
+  width: 50px;
+}
+
+/* ===== DOWNLOAD BUTTON (PRIMARY CTA) ===== */
+.toolbar > button {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+/* hover */
+.toolbar > button:hover {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+}
+
+/* ===== RESPONSIVE (AUTO SHRINK) ===== */
+@media(max-width: 900px){
+  .group {
+    padding: 0 5px;
+  }
+
+  input[type="range"] {
+    width: 40px;
+  }
+
+  input[type="number"] {
+    width: 40px;
+  }
+}
+	 
+	 /* ===== SIDEBAR MAIN ===== */
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 14px;
+  overflow-y: auto;
+  border-right: 1px solid #1f2937;
+}
+
+/* scroll */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 10px;
+}
+
+/* ===== SECTION CARD ===== */
+.section {
+  background: #1f2937;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 14px;
+  box-shadow: inset 0 0 0 1px #111827;
+  transition: 0.2s;
+}
+
+/* hover lift */
+.section:hover {
+  background: #243041;
+}
+
+/* ===== SECTION TITLE ===== */
+.section h3 {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== GLOBAL LABEL ===== */
+.sidebar label {
+  font-size: 10px;
+  color: #9ca3af;
+  display: block;
+  margin: 6px 0 4px;
+}
+
+/* ===== BUTTONS ===== */
+.sidebar button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #374151;
+  color: #e5e7eb;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.sidebar button:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* click */
+.sidebar button:active {
+  transform: scale(0.96);
+}
+
+/* ===== INPUTS ===== */
+.sidebar input,
+.sidebar select {
+  width: 100%;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: #374151;
+  color: #fff;
+  padding: 0 6px;
+  font-size: 12px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* focus glow */
+.sidebar input:focus,
+.sidebar select:focus {
+  background: #111827;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* ===== COLOR PICKER ===== */
+.sidebar input[type="color"] {
+  height: 30px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+/* ===== RANGE SLIDER ===== */
+.sidebar input[type="range"] {
+  width: 100%;
+  height: 3px;
+  margin: 6px 0 10px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+/* ===== UPLOAD BOX ===== */
+.upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f2937;
+  border: 1px dashed #374151;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 12px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* hover upload */
+.upload:hover {
+  border-color: #2563eb;
+  color: #fff;
+  background: #243041;
+}
+
+/* ===== GROUP (OPACITY ETC) ===== */
+.group {
+  margin-top: 10px;
+  padding: 10px;
+  background: #1f2937;
+  border-radius: 8px;
+}
+
+/* ===== SIZE LABEL ===== */
+#sizeLabel {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* ===== SMALL DIVIDER ===== */
+.sidebar hr {
+  border: none;
+  height: 1px;
+  background: #1f2937;
+  margin: 10px 0;
+}
+
+/* ===== MICRO INTERACTION ===== */
+.sidebar button,
+.upload {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 900px){
+  .sidebar {
+    width: 200px;
+    padding: 10px;
+  }
+
+  .sidebar button {
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+	 .modal-box button, .modal-box input {
+    /* max-width: 49%; */
+    display: inline-block;
+    min-width: 115px;
+    margin: 5px 0;
+}
+	 .gradcover {
+    display: flex;
+    gap: 10px;
+}
+	 .shapecontainer {
+    display: flex;
+    gap: 6px;
+}
