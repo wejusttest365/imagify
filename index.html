@@ -35,6 +35,9 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <style>
+  *{margin:0;padding:0;box-sizing:border-box}a{text-decoration:none;color:inherit}.container{width:92%;max-width:1200px;margin:auto}.topbar{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:99}.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}.logo{font-size:28px;font-weight:700}.logo span{color:#06b6d4}.menu{display:flex;gap:24px}.btn{background:#06b6d4;color:#fff;padding:12px 18px;border-radius:10px;display:inline-block}.hero{background:linear-gradient(135deg,#06b6d4,#1d4ed8);color:#fff;padding:70px 0}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}.hero h1{font-size:52px;line-height:1.1}.hero p{margin:18px 0;font-size:18px;opacity:.95}.badge{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;font-size:14px}.search-box{background:#fff;color:#111;padding:25px;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,.12)}.search-box input{width:100%;padding:14px;border:1px solid #ddd;border-radius:12px;font-size:16px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.quick div{background:#f1f5f9;padding:12px;border-radius:12px;cursor:pointer}.section{padding:70px 0}.title{font-size:34px;margin-bottom:25px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:#fff;padding:22px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.06);transition:.2s}.card:hover{transform:translateY(-5px)}.card h3{font-size:20px}.card p{font-size:14px;color:#64748b;margin:10px 0 16px}.why{background:#fff;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb}.faq-item{background:#fff;padding:18px;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.05);margin-bottom:15px}.footer{background:#0f172a;color:#cbd5e1;padding:50px 0;margin-top:40px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px}.small{font-size:14px;line-height:1.7}.mobile-toggle{display:none;font-size:26px;cursor:pointer}@media(max-width:900px){.hero-grid,.grid,.footer-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}}@media(max-width:700px){.menu{display:none;position:absolute;top:64px;left:0;width:100%;background:#fff;padding:20px;flex-direction:column}.menu.show{display:flex}.mobile-toggle{display:block}.hero-grid,.grid,.footer-grid{grid-template-columns:1fr}.hero h1{font-size:34px}}
+  </style>
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -147,144 +150,24 @@
   <!-- Sevices section -->
   <section  role="main" id="content">
    <!-- Services -->
-
-  <section class="tools-section">
-    <div class="container text-center mb-5">
-      <h2 class="section-title">Powerful Web Tools</h2>
-      <p class="section-sub">Everything you need in one modern platform</p>
-    </div>
-
-    <div class="container">
-      <div class="row g-4">
-
-        <!-- Image to Text -->
-        <div class="col-md-3">
-          <a href="https://webtoolocean.com/image-tools/image-to-text-ocr/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">📝</div>
-              <div class="tool-title">Image → Text (OCR)</div>
-              <div class="tool-desc">Extract editable text from photos and scanned documents.</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Image Converter -->
-        <div class="col-md-3">
-          <a href="https://webtoolocean.com/image-tools/convert-image/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">🖼️</div>
-              <div class="tool-title">Image Converter</div>
-              <div class="tool-desc">Convert JPG, PNG, WebP, GIF and more formats easily.</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Compress Images -->
-        <div class="col-md-3">
-          <a href="https://webtoolocean.com/image-tools/compress-image/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">⚡</div>
-              <div class="tool-title">Compress Images</div>
-              <div class="tool-desc">Optimize large images into lightweight formats.</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div>
-		  
-        <!-- Favicon Generator -->
-         <div class="col-md-3">
-          <a href="https://webtoolocean.com/image-tools/favicon-generator/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">🖼️</div>
-              <div class="tool-title">Favicon Generator</div>
-              <div class="tool-desc">Create favicon.ico, Apple touch, Android icons and more.</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div> 
+<section class='hero'>
+<div class='container hero-grid'>
+<div>
+<h1 style="color:#fff">Free Online PDF, Image & File Tools</h1>
+<p>Fast, secure and easy browser-based tools to merge PDFs, compress files, convert images and boost productivity.</p>
+<a href='#' class='btn'>Explore Tools</a>
+<div class='badge'><div>✓ No Signup</div><div>✓ Fast Processing</div><div>✓ Mobile Friendly</div><div>✓ Secure Tools</div></div>
+</div>
+<div class='search-box'>
+<input type='text' id='search' placeholder='Search tools e.g. Merge PDF'>
+<div class='quick'>
+<div>Merge PDF</div><div>Split PDF</div><div>Compress PDF</div><div>JPG to PDF</div><div>Resize Image</div><div>QR Generator</div>
+</div>
+</div>
+</div>
+</section>
    
-        <!-- Font Converter -->
-        <div class="col-md-3">
-          <a href="https://webtoolocean.com/font-converter/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">🔤</div>
-              <div class="tool-title">Font Converter</div>
-              <div class="tool-desc">Convert font formats and preview before downloading.</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div> 
-
-        <!-- Gradient Generator -->
-         <div class="col-md-3">
-          <a href="https://webtoolocean.com/css-design-tools/gradient-generator/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">🌈</div>
-              <div class="tool-title">Gradient Generator</div>
-              <div class="tool-desc">Create beautiful gradients and copy CSS instantly.</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div> 
-
-        <!-- Code Format -->
-        <div class="col-md-3">
-          <a href="https://webtoolocean.com/developer-tools/css-formatter/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">💻</div>
-              <div class="tool-title">CSS Format</div>
-              <div class="tool-desc">Organize, Beautify, Minify and Analyze CSS</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div>
-  <!-- Clip Path CSS -->
-        <div class="col-md-3">
-          <a href="https://webtoolocean.com/css-design-tools/clip-image/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">💻</div>
-              <div class="tool-title">CSS Clip Image</div>
-              <div class="tool-desc">Clip images path into custom shapes</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div>
- 	<!-- Box Shadow Generator -->
-        <div class="col-md-3">
-          <a href="https://webtoolocean.com/css-design-tools/box-shadow-generator/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">💻</div>
-              <div class="tool-title">CSS Box Shadow</div>
-              <div class="tool-desc">Generate custom CSS box shadows online for free</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div>
-     <!-- Resume Builder -->
-        <div class="col-md-3">
-          <a href="https://webtoolocean.com/resume-maker/" class="tool-link">
-            <div class="tool-card text-center">
-              <div class="tool-icon">📄</div>
-              <div class="tool-title">Resume Builder</div>
-              <div class="tool-desc">Create professional resumes with modern templates.</div>
-              <div class="tool-btn">Open Tool</div>
-            </div>
-          </a>
-        </div> 
-
-
-      </div>
-    </div>
-  </section>
-  <section class="hero text-center">
-    <div class="container">
-      <h1 class="fw-bold display-4 text-white">Create a Professional Resume in Minutes</h1>
-      <p class="lead mt-3 mb-4">Free, modern, and easy-to-use resume builder designed for job seekers.</p>
-      <a href="https://webtoolocean.com/resume-maker/" class="btn btn-light btn-lg fw-bold">Start Building Resume</a>
-    </div>
-  </section>
+   <section class="section"><div class="container"><h2 class="title">About WebToolOcean</h2><p class="">WebToolOcean is a free online platform that offers practical tools for PDF editing, image conversion, file compression and everyday productivity tasks. Our goal is to make complex file tasks simple for everyone using secure browser-based tools that work instantly without downloads.</p> <p class="">Whether you need to merge PDF files, split pages, compress large documents, convert JPG to PDF or optimize images for websites, WebToolOcean helps students, professionals, businesses and creators save time every day.</p></div></section>
   <!-- FEATURES -->
   <section class="features-section py-5">
     <div class="container">
