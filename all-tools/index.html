@@ -358,155 +358,194 @@
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
-  <main  role="main" id="content">
-   <!-- Services -->
- <!-- WebToolOcean Explore Tools Page Body Content Only -->
-<!-- Paste inside your website body area (No header/footer included) -->
+        <main id="content">
+   
+   <section class="my-5">
+    <div class="image-conversion">
+      <div class="container">
+        <h1>Select the format for Conversion</h1>
 
-<section class="wto-tools-page" aria-labelledby="toolsPageTitle">
-  
-<div class="container">
-  <div class="wto-wrap">
+        <div class="sub-tabs" role="tablist" aria-label="Conversion types">
+          <button role="jpg to png" class="sub-tab active" data-conversion="jpg2png">JPG → PNG</button>
+          <button role="png to jpg" class="sub-tab" data-conversion="png2jpg">PNG → JPG</button>
+          <button role="webp to png" class="sub-tab" data-conversion="webp2png">WEBP → PNG</button>
+            <button class="sub-tab" data-conversion="png2webp">PNG → WEBP</button>
+          <button role="webp to jpg" class="sub-tab" data-conversion="webp2jpg">WEBP → JPG</button>
+          <button class="sub-tab" data-conversion="jpg2webp">JPG → WEBP</button>
 
-    <!-- HERO -->
-    <div class="wto-hero">
-      <h1 id="toolsPageTitle">Explore All Free Online Tools – WebToolOcean</h1>
-      <p>
-        Discover fast, secure and easy-to-use browser tools for PDFs, images, coding, productivity and daily work.
-        No signup required. Works on desktop and mobile.
-      </p>
-    </div>
+          <button role="gif tp jpg" class="sub-tab" data-conversion="gif2jpg">GIF → JPG</button>
+        </div>
 
-    <!-- SEARCH -->
-    <div class="wto-search" role="search">
-      <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
-      <input type="text" id="toolSearch" placeholder="Search any tool like Merge PDF, JSON Formatter, Resume Builder..." aria-label="Search tools">
-    </div>
+        <div id="drop-area" class="drop-area">
+          <p><strong>Drag & drop</strong> images here or <button id="add-files">Choose files</button></p>
+          <label for="upload" class="sr-only">Upload Image</label><input id="upload" type="file" accept="image/*" multiple style="display:none" />
+          <div class="hint">Only files matching the selected conversion are accepted. Invalid files will be shown with ❌
+            and won't be converted.</div>
+        </div>
 
-    <!-- STATS -->
-    <div class="wto-stats">
-      <div class="wto-stat"><strong>25+</strong> Tools</div>
-      <div class="wto-stat"><strong>100%</strong> Free to Use</div>
-      <div class="wto-stat"><strong>Fast</strong> Browser Based</div>
-      <div class="wto-stat"><strong>Mobile</strong> Friendly</div>
-    </div>
+        <ul id="file-list" aria-live="polite"></ul>
 
-    <!-- TOOLS GRID -->
-    <div class="wto-grid">
+        <div class="controls">
+          <button id="convert-btn">Convert Files <span id="spinner">⏳</span></button>
 
-      <!-- PDF -->
-      <article class="wto-card tool-card">
-        <h2>PDF Tools</h2>
-        <ul class="wto-list">
+
+          <button id="download-zip">Download ZIP</button>
+        </div>
+
       
-          
-           <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/pdf-tools/split-pdf/">Split PDF <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/pdf-tools/compress-pdf/">Compress PDF <span class="wto-arrow">›</span></a></li>
-        </ul>
-      </article>
 
-      <!-- IMAGE -->
-      <article class="wto-card tool-card">
-        <h2>Image Tools</h2>
-        <ul class="wto-list">
-          <li><a href="https://webtoolocean.com/image-tools/convert-image/">Converter Image <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR) <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress Images <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG Converter <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64 <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image <span class="wto-arrow">›</span></a></li>
-    </ul>
-      </article>
 
-      <!-- CSS -->
-      <article class="wto-card tool-card">
-        <h2>CSS / Design Tools</h2>
-        <ul class="wto-list">
-          <li><a href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/css-tools/multi-box-shadow-generator/">Multi Box Shadow Generator <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/css-tools/clip-image-css/">Clip Image CSS <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/css-tools/css-card-builder/">CSS Card Builder <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator <span class="wto-arrow">›</span></a></li>
-    </ul>
-      </article>
-
-      <!-- DEV -->
-      <article class="wto-card tool-card">
-        <h2>Developer Tools</h2>
-        <ul class="wto-list">
-          <li><a href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/developer-tools/beautify-minify-css/">Beautify / Minify CSS <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/developer-tools/check-css-errors/">Check CSS Errors <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder Decoder <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter <span class="wto-arrow">›</span></a></li>
-    </ul>
-      </article>
-
-      <!-- MORE -->
-      <article class="wto-card tool-card">
-        <h2>More Tools</h2>
-        <ul class="wto-list">
-          <li><a class="dropdown-item" href="https://webtoolocean.com/resume-maker/">Resume Builder <span class="wto-arrow">›</span></a></li>
-                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter <span class="wto-arrow">›</span></a></li>
-                  
-                  <li><a class="dropdown-item" href="https://webtoolocean.com/banner-maker/">Banner Maker <span class="wto-arrow">›</span></a></li>
-    </ul>
-      </article>
-
-    </div>
-
-    <!-- WHY / HOW -->
-    <div class="wto-info">
-
-      <div class="wto-box">
-        <h3>Why Use WebToolOcean?</h3>
-        <ul>
-          <li>Free online tools for everyday work</li>
-          <li>No software installation required</li>
-          <li>Works directly in browser</li>
-          <li>Simple interface for all users</li>
-          <li>Fast results on desktop & mobile</li>
-        </ul>
       </div>
+      <div id="downloadModal" class="modal">
+        <div class="modal-content">
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fa-solid fa-circle-check me-2"></i>
+            <strong>Success!</strong> Conversion completed successfully.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
 
-      <div class="wto-box">
-        <h3>How to Use These Tools</h3>
-        <ul>
-          <li>Select the category you need</li>
-          <li>Open your preferred tool</li>
-          <li>Upload file or enter data</li>
-          <li>Process instantly</li>
-          <li>Download or copy final result</li>
-        </ul>
+          <p>Your files are ready to download.</p>
+          <div class="modal-buttons">
+            <button id="confirmDownload" class="download-btn">⬇️ Download ZIP</button>
+
+            <button class="close-btn">Close</button>
+          </div>
+        </div>
       </div>
-
     </div>
+  </section>
+  <hr />
+<section class="seo-content mt-5">
 
-    <!-- SEO CONTENT -->
-    <div class="wto-seo">
-      <h2>All-in-One Productivity Tools for Everyone</h2>
-      <p>
-        WebToolOcean helps students, freelancers, developers, office users and businesses complete common tasks online.
-        Whether you need to merge PDF files, compress images, format JSON, generate CSS effects or build a resume,
-        our tools are designed for speed, simplicity and convenience.
-      </p>
-      <p>
-        This tools directory lets you browse every available tool in one place so you can quickly find what you need.
-        We continue adding useful new utilities regularly to make WebToolOcean your daily work companion.
-      </p>
-    </div>
+<div class="container">
 
-  </div>
+<h2 class="mb-4">Free Image Converter – Convert JPG, PNG, WEBP & GIF Online</h2>
+
+<p>
+Our <strong>Free Image Converter</strong> allows you to easily convert images between multiple formats including 
+<strong>JPG, PNG, WEBP, and GIF</strong>. Whether you need to optimize images for websites, reduce file size, or 
+change file compatibility, this tool provides a quick and simple solution directly in your browser.
+</p>
+
+<p>
+Upload your image, choose the format you want, and download the converted file instantly. No installation 
+or registration is required.
+</p>
+
+
+<h2 class="mt-4">Supported Image Conversions</h2>
+
+<ul>
+<li>Convert JPG to PNG</li>
+<li>Convert PNG to JPG</li>
+<li>Convert WEBP to JPG</li>
+<li>Convert WEBP to PNG</li>
+<li>Convert GIF to JPG</li>
+<li>Convert GIF to PNG</li>
+<li>Convert PNG to WEBP</li>
+<li>Convert JPG to WEBP</li>
+</ul>
+
+
+<h2 class="mt-4">Key Features</h2>
+
+<div class="row mt-3">
+
+<div class="col-md-6 mb-3">
+<h3>Multiple Image Format Support</h3>
+<p>
+Convert between popular image formats including JPG, PNG, WEBP, and GIF quickly and easily.
+</p>
+</div>
+
+<div class="col-md-6 mb-3">
+<h3>Fast Image Processing</h3>
+<p>
+Our tool converts images instantly in your browser without uploading files to a server, ensuring speed and privacy.
+</p>
+</div>
+
+<div class="col-md-6 mb-3">
+<h3>High Quality Conversion</h3>
+<p>
+Maintain image clarity and resolution during conversion without noticeable quality loss.
+</p>
+</div>
+
+<div class="col-md-6 mb-3">
+<h3>Free and Easy to Use</h3>
+<p>
+The image converter works directly in your browser and is completely free to use without limits.
+</p>
+</div>
 
 </div>
+
+
+<h2 class="mt-4">How to Convert Images</h2>
+
+<ol>
+<li>Upload your image file.</li>
+<li>Select the output format such as JPG, PNG, WEBP, or GIF.</li>
+<li>Click the convert button.</li>
+<li>Download the converted image instantly.</li>
+</ol>
+
+
+<h2 class="mt-4">Why Use an Image Converter?</h2>
+
+<p>
+Different image formats are used for different purposes. For example, JPG files are ideal for photographs, 
+PNG files support transparent backgrounds, and WEBP images provide better compression for websites.
+</p>
+
+<p>
+Using an image converter allows you to quickly change formats to ensure compatibility, reduce file size, 
+and improve website performance.
+</p>
+
+
+<h2 class="mt-4">Frequently Asked Questions</h2>
+
+<div class="faq-item mb-3">
+<h3>What is an Image Converter?</h3>
+<p>
+An image converter is a tool that allows you to change an image from one file format to another, such as converting JPG to PNG or WEBP to JPG.
+</p>
+</div>
+
+<div class="faq-item mb-3">
+<h3>Is this image converter free?</h3>
+<p>
+Yes, this online image converter is completely free and works directly in your browser without installing any software.
+</p>
+</div>
+
+<div class="faq-item mb-3">
+<h3>Will my images be uploaded to a server?</h3>
+<p>
+No. All image conversions are processed in your browser to ensure privacy and security.
+</p>
+</div>
+
+<div class="faq-item mb-3">
+<h3>Which image formats are supported?</h3>
+<p>
+The tool supports conversion between JPG, PNG, WEBP, and GIF formats.
+</p>
+</div>
+
+
+
+</div>
+
 </section>
-  
 
 	</main>
+     
+ 
+     
+ 
  
   <!-- InstanceEndEditable -->
 <div class="clearfix"></div>

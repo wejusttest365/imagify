@@ -39,7 +39,22 @@
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
   <link href="../../css/style.css" rel="stylesheet">
   <link href="../../css/font-convert.css" rel="stylesheet">
-	  
+	  <link href="../../css/image-convertor.css" rel="stylesheet">
+	  <style>
+	  .simple-box ul {
+    padding: 0;
+}
+
+.simple-box ul li a {
+    text-decoration: none;
+}
+
+.simple-box ul li a span {
+    float: left;
+    margin-right: 8px;
+    font-size: 16px;
+}
+</style>
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -152,24 +167,29 @@
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
-  <section id="content">
+     <main id="content">
    
    <section class="my-5">
     <div class="image-conversion">
       <div class="container">
-        <h1>Select the format for Conversion</h1>
-
+      <div class="row">
+      <div class="col-md-9  col-sm-8 col-xs-12">
+      <div class="simple-box">
+        <h1>Select the format for Conversion</h1> 
         <div class="sub-tabs" role="tablist" aria-label="Conversion types">
-          <button class="sub-tab active" data-conversion="jpg2png">JPG → PNG</button>
-          <button class="sub-tab" data-conversion="png2jpg">PNG → JPG</button>
-          <button class="sub-tab" data-conversion="webp2png">WEBP → PNG</button>
-          <button class="sub-tab" data-conversion="webp2jpg">WEBP → JPG</button>
-          <button class="sub-tab" data-conversion="gif2jpg">GIF → JPG</button>
+          <button role="jpg to png" class="sub-tab active" data-conversion="jpg2png">JPG → PNG</button>
+          <button role="png to jpg" class="sub-tab" data-conversion="png2jpg">PNG → JPG</button>
+          <button role="webp to png" class="sub-tab" data-conversion="webp2png">WEBP → PNG</button>
+            <button class="sub-tab" data-conversion="png2webp">PNG → WEBP</button>
+          <button role="webp to jpg" class="sub-tab" data-conversion="webp2jpg">WEBP → JPG</button>
+          <button class="sub-tab" data-conversion="jpg2webp">JPG → WEBP</button>
+
+          <button role="gif tp jpg" class="sub-tab" data-conversion="gif2jpg">GIF → JPG</button>
         </div>
 
         <div id="drop-area" class="drop-area">
           <p><strong>Drag & drop</strong> images here or <button id="add-files">Choose files</button></p>
-          <input id="upload" type="file" accept="image/*" multiple style="display:none" />
+          <label for="upload" class="sr-only">Upload Image</label><input id="upload" type="file" accept="image/*" multiple style="display:none" />
           <div class="hint">Only files matching the selected conversion are accepted. Invalid files will be shown with ❌
             and won't be converted.</div>
         </div>
@@ -181,160 +201,111 @@
 
 
           <button id="download-zip">Download ZIP</button>
-        </div>
-
-      
-
-
+        </div> 
       </div>
-      <div id="downloadModal" class="modal">
-        <div class="modal-content">
-          <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <i class="fa-solid fa-circle-check me-2"></i>
-            <strong>Success!</strong> Conversion completed successfully.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-
-          <p>Your files are ready to download.</p>
-          <div class="modal-buttons">
-            <button id="confirmDownload" class="download-btn">⬇️ Download ZIP</button>
-
-            <button class="close-btn">Close</button>
-          </div>
-        </div>
       </div>
+      <div class="col-md-3 col-sm-4 col-xs-12"><div class="simple-box">
+<h3>You may like this</h3>
+
+<ul class="wto-list">
+          <li><a href="https://webtoolocean.com/image-tools/convert-image/">Converter Image <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR) <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress Images <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG Converter <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64 <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image <span class="wto-arrow">›</span></a></li>
+    </ul>
+</div></div>
+      </div>
+       
     </div>
   </section>
-  <hr />
-<section class="seo-content mt-5">
+ <section class="seo-content mt-5">
 
 <div class="container">
 
-<h2 class="mb-4">Free Image Converter – Convert JPG, PNG, WEBP & GIF Online</h2>
+<h2 class="main-title">Free Image Converter – JPG, PNG, WEBP & GIF</h2>
 
-<p>
-Our <strong>Free Image Converter</strong> allows you to easily convert images between multiple formats including 
-<strong>JPG, PNG, WEBP, and GIF</strong>. Whether you need to optimize images for websites, reduce file size, or 
-change file compatibility, this tool provides a quick and simple solution directly in your browser.
-</p>
-
-<p>
-Upload your image, choose the format you want, and download the converted file instantly. No installation 
-or registration is required.
+<p class="top-text">
+Convert images online in seconds. Fast, free and easy to use with high quality output.
 </p>
 
 
-<h2 class="mt-4">Supported Image Conversions</h2>
+<!-- Steps -->
+<div class="simple-box">
+<h3>How to Use</h3>
+
+<div class="step-grid">
+<div class="step-card">1. Upload Image</div>
+<div class="step-card">2. Select Format</div>
+<div class="step-card">3. Click Convert</div>
+<div class="step-card">4. Download File</div>
+</div>
+</div>
+
+
+<!-- Supported -->
+<div class="simple-box">
+<h3>Supported Conversions</h3>
+
+<div class="tag-grid">
+<span>JPG → PNG</span>
+<span>PNG → JPG</span>
+<span>WEBP → PNG</span>
+<span>WEBP → JPG</span>
+<span>PNG → WEBP</span>
+<span>JPG → WEBP</span>
+<span>GIF → JPG</span>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6 col-xs-12">
+
+<!-- FAQ -->
+<div class="simple-box">
+<h3>FAQ</h3>
+ 
+
+<p><strong>What is an Image Converter?</strong><br />
+An image converter is a tool that allows you to change an image from one file format to another, such as converting JPG to PNG or WEBP to JPG.</p>
+
+<p><strong>Is this image converter free?</strong><br />
+Yes, this online image converter is completely free and works directly in your browser without installing any software.</p>
+
+<p><strong>Will my images be uploaded to a server?</strong><br />
+No. All image conversions are processed in your browser to ensure privacy and security.</p>
+
+<p><strong>Can I convert many files?</strong><br />
+ Yes, batch conversion supported.</p>
+
+</div>
+</div>
+<div class="col-md-6 col-xs-12">
+<!-- Why -->
+<div class="simple-box">
+<h3>Why Use This Tool?</h3>
 
 <ul>
-<li>Convert JPG to PNG</li>
-<li>Convert PNG to JPG</li>
-<li>Convert WEBP to JPG</li>
-<li>Convert WEBP to PNG</li>
-<li>Convert GIF to JPG</li>
-<li>Convert GIF to PNG</li>
-<li>Convert PNG to WEBP</li>
-<li>Convert JPG to WEBP</li>
+<li>Free forever</li>
+<li>High quality conversion</li>
+<li>Multiple files supported</li>
+<li>Fast processing</li>
+<li>No signup needed</li>
 </ul>
-
-
-<h2 class="mt-4">Key Features</h2>
-
-<div class="row mt-3">
-
-<div class="col-md-6 mb-3">
-<h5>Multiple Image Format Support</h5>
-<p>
-Convert between popular image formats including JPG, PNG, WEBP, and GIF quickly and easily.
-</p>
 </div>
-
-<div class="col-md-6 mb-3">
-<h5>Fast Image Processing</h5>
-<p>
-Our tool converts images instantly in your browser without uploading files to a server, ensuring speed and privacy.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h5>High Quality Conversion</h5>
-<p>
-Maintain image clarity and resolution during conversion without noticeable quality loss.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h5>Free and Easy to Use</h5>
-<p>
-The image converter works directly in your browser and is completely free to use without limits.
-</p>
 </div>
 
 </div>
-
-
-<h2 class="mt-4">How to Convert Images</h2>
-
-<ol>
-<li>Upload your image file.</li>
-<li>Select the output format such as JPG, PNG, WEBP, or GIF.</li>
-<li>Click the convert button.</li>
-<li>Download the converted image instantly.</li>
-</ol>
-
-
-<h2 class="mt-4">Why Use an Image Converter?</h2>
-
-<p>
-Different image formats are used for different purposes. For example, JPG files are ideal for photographs, 
-PNG files support transparent backgrounds, and WEBP images provide better compression for websites.
-</p>
-
-<p>
-Using an image converter allows you to quickly change formats to ensure compatibility, reduce file size, 
-and improve website performance.
-</p>
-
-
-<h2 class="mt-4">Frequently Asked Questions</h2>
-
-<div class="faq-item mb-3">
-<h5>What is an Image Converter?</h5>
-<p>
-An image converter is a tool that allows you to change an image from one file format to another, such as converting JPG to PNG or WEBP to JPG.
-</p>
 </div>
-
-<div class="faq-item mb-3">
-<h5>Is this image converter free?</h5>
-<p>
-Yes, this online image converter is completely free and works directly in your browser without installing any software.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h5>Will my images be uploaded to a server?</h5>
-<p>
-No. All image conversions are processed in your browser to ensure privacy and security.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h5>Which image formats are supported?</h5>
-<p>
-The tool supports conversion between JPG, PNG, WEBP, and GIF formats.
-</p>
-</div>
-
-
-
-</div>
-
 </section>
-
-	</section>
-     
  
+ 
+</main>
+   
 
   <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
@@ -420,184 +391,203 @@ The tool supports conversion between JPG, PNG, WEBP, and GIF formats.
 <div class="clearfix"></div> 
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
 <!-- InstanceBeginEditable name="EditRegion5" -->
-<script src="js/bootstrap.bundle.min.js"></script>
- 	
+ 
+<script src="../image-converter/js/bootstrap.bundle.min.js"></script> 	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
-   <script>
-document.addEventListener('DOMContentLoaded', () => {
 
-  const subTabs = Array.from(document.querySelectorAll('.sub-tab'));
-  const dropArea = document.getElementById('drop-area');
+ <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const subTabs = document.querySelectorAll('.sub-tab');
   const uploadInput = document.getElementById('upload');
   const addFilesBtn = document.getElementById('add-files');
+  const dropArea = document.getElementById('drop-area');
   const fileListEl = document.getElementById('file-list');
   const convertBtn = document.getElementById('convert-btn');
-  const downloadZipBtn = document.getElementById('download-zip');
-  const spinner = document.getElementById('spinner');
-
-  const modal = document.getElementById('downloadModal');
-  const confirmDownload = document.getElementById('confirmDownload');
-  const closeBtn = modal.querySelector('.close-btn');
+  const controls = document.querySelector('.controls');
 
   let currentConversion = 'jpg2png';
   let fileQueue = [];
-  let zip = null;
+  let convertedFiles = [];
+
+  /* ================= VALIDATION ================= */
 
   const allowedFormats = {
-    jpg2png: ['image/jpeg', '.jpg', '.jpeg'],
-    png2jpg: ['image/png', '.png'],
-    webp2png: ['image/webp', '.webp'],
-    webp2jpg: ['image/webp', '.webp'],
-    gif2jpg: ['image/gif', '.gif']
+    jpg2png: ['image/jpeg'],
+    png2jpg: ['image/png'],
+    webp2png: ['image/webp'],
+    webp2jpg: ['image/webp'],
+    gif2jpg: ['image/gif'],
+    jpg2webp: ['image/jpeg'],   // NEW
+    png2webp: ['image/png']     // NEW
   };
 
-  function getExt(name) {
-    const p = name.lastIndexOf('.');
-    return p >= 0 ? name.slice(p).toLowerCase() : '';
+  function fileAllowed(file) {
+    return allowedFormats[currentConversion]?.includes(file.type);
   }
 
-  function fileAllowed(file, conv) {
-    const allowed = allowedFormats[conv] || [];
-    return allowed.some(a =>
-      a === file.type.toLowerCase() || a === getExt(file.name)
-    );
-  }
+  /* ================= DRAG & DROP ================= */
 
-  function setConvertEnabled() {
+  ['dragenter','dragover'].forEach(event => {
+    dropArea.addEventListener(event, e => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropArea.classList.add('dragover');
+    });
+  });
+
+  ['dragleave','drop'].forEach(event => {
+    dropArea.addEventListener(event, e => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropArea.classList.remove('dragover');
+    });
+  });
+
+  dropArea.addEventListener('drop', e => {
+    handleFiles(e.dataTransfer.files);
+  });
+
+  /* ================= BUTTONS ================= */
+
+  const downloadAllBtn = document.createElement('button');
+  downloadAllBtn.textContent = 'Download ZIP';
+  downloadAllBtn.disabled = true;
+  downloadAllBtn.style.cssText = "background:#065f46;color:#fff;padding:8px 15px;border:none;border-radius:5px;margin-left:10px;";
+
+  const clearAllBtn = document.createElement('button');
+  clearAllBtn.textContent = 'Clear All';
+  clearAllBtn.disabled = true;
+  clearAllBtn.style.cssText = "background:#dc2626;color:#fff;padding:8px 15px;border:none;border-radius:5px;margin-left:10px;";
+
+  controls.appendChild(downloadAllBtn);
+  controls.appendChild(clearAllBtn);
+
+  function toggleButtons() {
     convertBtn.disabled = fileQueue.length === 0;
+    clearAllBtn.disabled = fileQueue.length === 0;
+    downloadAllBtn.disabled = convertedFiles.length === 0;
   }
 
-  /* TAB SWITCH */
+  /* ================= PROGRESS ================= */
+
+  const progressWrapper = document.createElement('div');
+  progressWrapper.style.cssText = "width:100%;background:#eee;margin:20px 0;display:none;border-radius:5px;overflow:hidden";
+
+  const progressBar = document.createElement('div');
+  progressBar.style.cssText = "height:20px;width:0;background:#16a34a;color:#fff;text-align:center;font-size:12px";
+
+  progressWrapper.appendChild(progressBar);
+  controls.prepend(progressWrapper);
+
+  function showLoader(cb) {
+    progressWrapper.style.display = 'block';
+    let w = 0;
+
+    const i = setInterval(() => {
+      w += 10;
+      progressBar.style.width = w + '%';
+      progressBar.innerText = w + '%';
+
+      if (w >= 100) {
+        clearInterval(i);
+        setTimeout(() => {
+          progressWrapper.style.display = 'none';
+          progressBar.style.width = '0%';
+          progressBar.innerText = '0%';
+          cb();
+        }, 300);
+      }
+    }, 1000);
+  }
+
+  /* ================= TABS ================= */
 
   subTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-
       subTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
       currentConversion = tab.dataset.conversion;
 
       fileQueue = [];
+      convertedFiles = [];
       fileListEl.innerHTML = '';
-      setConvertEnabled();
+      toggleButtons();
     });
   });
 
-  /* DRAG EVENTS */
-
-  ['dragenter','dragover'].forEach(evt => {
-    dropArea.addEventListener(evt, e => {
-      e.preventDefault();
-      dropArea.classList.add('dragover');
-    });
-  });
-
-  ['dragleave','drop'].forEach(evt => {
-    dropArea.addEventListener(evt, e => {
-      e.preventDefault();
-      dropArea.classList.remove('dragover');
-    });
-  });
-
-  dropArea.addEventListener('drop', e => {
-    handleAddFiles(e.dataTransfer.files);
-  });
+  /* ================= ADD FILES ================= */
 
   addFilesBtn.addEventListener('click', () => uploadInput.click());
 
   uploadInput.addEventListener('change', e => {
-    handleAddFiles(e.target.files);
+    handleFiles(e.target.files);
     uploadInput.value = '';
   });
 
-  /* ADD FILES */
-
-  function handleAddFiles(files) {
+  function handleFiles(files) {
 
     Array.from(files).forEach(file => {
 
       const li = document.createElement('li');
-      li.className = 'file-item';
+      li.style.cssText = "display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ddd;padding:10px";
 
       const left = document.createElement('div');
-      left.className = 'left';
+      left.style.display = 'flex';
+      left.style.alignItems = 'center';
+      left.style.gap = '10px';
 
-      const nameSpan = document.createElement('span');
-      nameSpan.className = 'file-name';
-      nameSpan.textContent = file.name;
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      img.style.cssText = "width:50px;height:50px;object-fit:cover;border-radius:5px";
 
-      left.appendChild(nameSpan);
+      const name = document.createElement('span');
+      name.textContent = file.name;
 
-      const invalidSpan = document.createElement('span');
-      left.appendChild(invalidSpan);
+      left.appendChild(img);
+      left.appendChild(name);
 
-      li.appendChild(left);
-
-      if (!fileAllowed(file, currentConversion)) {
-
-        invalidSpan.className = 'invalid';
-        invalidSpan.textContent = ' ❌ Invalid format';
-
+      if (!fileAllowed(file)) {
+        const invalid = document.createElement('span');
+        invalid.textContent = ' ❌ Invalid';
+        invalid.style.color = 'red';
+        left.appendChild(invalid);
       } else {
-
         fileQueue.push(file);
       }
 
       const removeBtn = document.createElement('button');
-      removeBtn.className = 'btn remove';
       removeBtn.textContent = 'Remove';
+      removeBtn.style.cssText = "background:#dc2626;color:#fff;border:none;padding:6px 10px;border-radius:5px";
 
       removeBtn.onclick = () => {
         li.remove();
         fileQueue = fileQueue.filter(f => f !== file);
-        setConvertEnabled();
+        toggleButtons();
       };
 
+      li.appendChild(left);
       li.appendChild(removeBtn);
-
       fileListEl.appendChild(li);
 
-      setConvertEnabled();
+      toggleButtons();
     });
   }
 
-  /* FILE READER */
+  /* ================= CONVERT ================= */
 
-  function readFileAsDataURL(file) {
+  convertBtn.addEventListener('click', () => {
 
-    return new Promise(resolve => {
+    if (!fileQueue.length) return;
 
-      const reader = new FileReader();
+    showLoader(async () => {
 
-      reader.onload = e => resolve(e.target.result);
-
-      reader.readAsDataURL(file);
-    });
-  }
-
-  /* CONVERT BUTTON */
-
-  convertBtn.addEventListener('click', async () => {
-
-    if (!fileQueue.length) {
-      alert('Add valid images.');
-      return;
-    }
-
-    spinner.style.display = 'inline-block';
-    convertBtn.disabled = true;
-
-    zip = new JSZip();
-
-    try {
+      convertedFiles = [];
 
       for (const file of fileQueue) {
 
-        const dataUrl = await readFileAsDataURL(file);
-
         const img = new Image();
-        img.src = dataUrl;
-
+        img.src = URL.createObjectURL(file);
         await new Promise(r => img.onload = r);
 
         const canvas = document.createElement('canvas');
@@ -607,81 +597,103 @@ document.addEventListener('DOMContentLoaded', () => {
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0);
 
-        let mime;
-        let outputExt;
+        let mime, ext;
 
         switch (currentConversion) {
 
           case 'jpg2png':
           case 'webp2png':
-            mime = 'image/png';
-            outputExt = 'png';
-            break;
+            mime = 'image/png'; ext = 'png'; break;
 
           case 'png2jpg':
           case 'webp2jpg':
           case 'gif2jpg':
-            mime = 'image/jpeg';
-            outputExt = 'jpg';
-            break;
+            mime = 'image/jpeg'; ext = 'jpg'; break;
+
+          case 'jpg2webp':
+          case 'png2webp':
+            mime = 'image/webp'; ext = 'webp'; break;
 
           default:
-            mime = 'image/png';
-            outputExt = 'png';
+            mime = 'image/png'; ext = 'png';
         }
 
-        const blob = await new Promise(resolve =>
-          canvas.toBlob(resolve, mime, 0.92)
+        const blob = await new Promise(res =>
+          canvas.toBlob(res, mime, 0.92)
         );
 
-        const newName =
-          file.name.replace(/\.[^/.]+$/, '') + '.' + outputExt;
-
-        zip.file(newName, blob);
+        convertedFiles.push({
+          blob,
+          name: file.name.replace(/\.[^/.]+$/, '') + '.' + ext
+        });
       }
 
-      modal.style.display = 'flex';
-
-    } catch (err) {
-
-      console.error(err);
-      alert('Conversion failed');
-
-    }
-
-    spinner.style.display = 'none';
-    convertBtn.disabled = false;
-
-    fileQueue = [];
-    setConvertEnabled();
+      renderConverted();
+      toggleButtons();
+    });
   });
 
-  /* DOWNLOAD ZIP */
+  /* ================= RENDER ================= */
 
-  confirmDownload.addEventListener('click', async () => {
+  function renderConverted() {
+    fileListEl.innerHTML = '';
 
-    if (!zip) return;
+    convertedFiles.forEach(file => {
+
+      const li = document.createElement('li');
+      li.style.cssText = "display:flex;justify-content:space-between;border-bottom:1px solid #ddd;padding:10px";
+
+      const name = document.createElement('span');
+      name.textContent = file.name;
+
+      const btn = document.createElement('button');
+      btn.textContent = 'Download';
+      btn.style.cssText = "background:#065f46;color:#fff;border:none;padding:6px 12px;border-radius:5px";
+
+      btn.onclick = () => {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(file.blob);
+        a.download = file.name;
+        a.click();
+      };
+
+      li.appendChild(name);
+      li.appendChild(btn);
+      fileListEl.appendChild(li);
+    });
+  }
+
+  /* ================= CLEAR ================= */
+
+  clearAllBtn.onclick = () => {
+    fileQueue = [];
+    convertedFiles = [];
+    fileListEl.innerHTML = '';
+    toggleButtons();
+  };
+
+  /* ================= ZIP ================= */
+
+  downloadAllBtn.onclick = async () => {
+
+    const zip = new JSZip();
+
+    convertedFiles.forEach(file => {
+      zip.file(file.name, file.blob);
+    });
 
     const blob = await zip.generateAsync({ type: 'blob' });
 
-    const url = URL.createObjectURL(blob);
-
     const a = document.createElement('a');
-    a.href = url;
+    a.href = URL.createObjectURL(blob);
     a.download = 'converted_images.zip';
     a.click();
-
-    URL.revokeObjectURL(url);
-
-    modal.style.display = 'none';
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+  };
 
 });
-</script>
+ 
+ </script>	
+  
 
 
 
