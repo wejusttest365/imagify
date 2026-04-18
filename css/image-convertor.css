@@ -278,7 +278,16 @@ font-weight:800;
 margin-bottom:16px;
 color:#1e73ff;
 }
+.simple-box li a {
+    text-decoration: none;
+	transition: all ease 0.5s;
+}
 
+.simple-box li a:hover {
+    color: #000;
+    padding-left: 5px;
+    transition: all ease 0.5s;
+}
 /* steps */
 .step-grid{
 display:grid;
