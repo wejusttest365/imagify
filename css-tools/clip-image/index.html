@@ -6,153 +6,278 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<!-- ===================================================== -->
-<!-- ===================================================== -->
-<!-- PAGE TITLE --> 
+<title>CSS Clip Path Generator – Free Online Image Clip Tool (40+ Shapes)</title>
 
-<title>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO Online | WebToolOcean</title>
+<meta name="description" content="Free CSS Clip Path Generator to clip images into custom shapes. Choose from 40+ shapes, drag polygon points, export PNG or SVG, and copy CSS instantly.">
 
-<meta name="description" content="Free SVG Converter online. Convert SVG to PNG, JPG, WEBP, or ICO instantly. Batch SVG conversion, transparent background option, SVG optimizer, and resize tool for developers and designers.">
-
-<meta name="keywords" content="svg converter, svg to png, svg to ico, svg to jpg, svg to webp, batch svg converter, svg optimizer, convert svg online, favicon converter, svg image converter">
+<meta name="keywords" content="clip path generator, css clip path generator, clip path tool, css shape generator, polygon clip path generator, css image clipping tool, clip path editor">
 
 <meta name="robots" content="index, follow">
 
-<meta name="author" content="WebToolOcean">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="canonical" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
+<link rel="canonical" href="https://webtoolocean.com/css-tools/clip-image/index.html">
 
 
-<!-- Open Graph (Facebook / LinkedIn) -->
+<!-- Open Graph -->
 
-<meta property="og:title" content="SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO">
-<meta property="og:description" content="Convert SVG files to PNG, JPG, WEBP, or ICO online. Free batch SVG converter with resize, optimizer, and transparent background support.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://webtoolocean.com/image-tools/svg-to-image-converter/">
-<meta property="og:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
-<meta property="og:site_name" content="WebToolOcean">
+<meta property="og:title" content="CSS Clip Path Generator – Free Online Image Shape Tool">
+<meta property="og:description" content="Create custom CSS clip-path shapes visually. 40+ shapes, polygon editor, PNG export, SVG export.">
+<meta property="og:url" content="https://webtoolocean.com/css-tools/clip-image/index.html">
+<meta property="og:image" content="https://webtoolocean.com/images/preview.png">
 
 
-<!-- Twitter SEO -->
+<!-- Twitter -->
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SVG Converter – Convert SVG to PNG JPG WEBP ICO">
-<meta name="twitter:description" content="Free online SVG converter tool. Convert SVG to PNG, JPG, WEBP, ICO with batch conversion and optimizer.">
+<meta name="twitter:title" content="CSS Clip Path Generator – Create Custom Shapes Online">
+<meta name="twitter:description" content="Visual clip path generator with 40+ shapes, drag points editor and PNG export.">
 <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
-
-
-<!-- Structured Data -->
-
  
 <!-- ===================================================== -->
 	
 <!--CSS for the website-->
  
   <!-- Dependencies -->
-  <link href="../../css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
   <link href="../../css/style.css" rel="stylesheet">
   <link href="../../css/font-convert.css" rel="stylesheet">
-  
-<style>
- 
+ <style>
 
-.generator{
+ body {
+    margin: 0;
+    font-family: system-ui;
+    background: #eef2f7;
+}
+.app{
+display:flex; 
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:280px;
+background:white;
+border-right:1px solid #e5e7eb;
+padding:20px;
+overflow:auto;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.shape-grid{
 display:grid;
-grid-template-columns:350px 1fr;
-gap:30px;
+grid-template-columns:1fr 1fr;
+gap:8px;
 }
 
-.controls{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.preview-area{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-.dropzone{
-border:2px dashed #cbd5e1;
-padding:40px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-transition:.3s;
-}
-
-.dropzone:hover{
-border-color:#6366f1;
-background:#f8f9ff;
-}
-
-.control{
-margin-top:15px;
-}
-
-.control label{
-display:block;
-font-size:14px;
-margin-bottom:5px;
-}
-
-.control input,
-.control select{
-width:100%;
-padding:8px;
-border:1px solid #ddd;
+.shape-grid button{
+padding:9px;
+border:none;
+background:#3b82f6;
+color:white;
 border-radius:6px;
+cursor:pointer;
+font-size:13px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+transition:.2s;
+}
+
+.shape-grid button:hover{
+background:#2563eb;
+transform:translateY(-1px);
+}
+
+.tools{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+}
+
+.tools button{
+padding:6px;
+border:none;
+background:#10b981;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* UPLOAD */
+
+.upload {
+    border: 2px dashed #d1d5db;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #f9fafb;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+	    font-size: 20px;
+}
+
+.upload input{
+display:none;
+}
+
+/* CANVAS */
+
+.canvas{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+    padding: 10px 20px;
+}
+
+.preview{
+
+position:relative;
+
+background:white;
+
+/* GRID */
+
+background-image:
+linear-gradient(to right, rgba(0,0,0,.05) 1px, transparent 1px),
+linear-gradient(to bottom, rgba(0,0,0,.05) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+max-width:700px;
+max-height:600px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+overflow:hidden;
+
 }
 
 .preview img{
 max-width:100%;
-margin-top:20px;
+max-height:100%;
 }
 
-section button{
-margin-top:20px;
-padding:12px 18px;
-border:none;
-background:#6366f1;
-color:white;
-border-radius:8px;
+/* POINT */
+
+.point{
+
+position:absolute;
+
+width:12px;
+height:12px;
+
+background:#ef4444;
+
+border:2px solid white;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
 cursor:pointer;
-font-size:15px;
-width:100%;
+
 }
 
-section button:hover{
-background:#4f46e5;
-}
+/* OUTPUT */
 
-.file-list{
-margin-top:15px;
-font-size:13px;
-color:#666;
-}
-.control.checkboxcontrol label {
+.output {
+    margin-top: 20px;
+    background: #111827;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 600px;
+    max-width: 100%;
+    font-family: monospace;
+    position: relative;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: start;
-    gap: 8px;
+    gap: 10px;
+    height: auto;
+    justify-content: space-between;
 }
 
- 
-
-.control.checkboxcontrol label input {
-    width: auto;
+.copy {
+    position: static;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0;
 }
-</style>
-	  
+.toolsgrid {
+    display: flex;
+    align-items: center;
+}
+
+.toolsgrid button {
+    background: #cfcfcf;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.toolsgrid button#download {
+    background: green;
+    color: #fff;
+}
+
+.toolsgrid button#clear {
+    background: red;
+    color: #fff;
+}
+	 .preset-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:6px;
+margin-top:8px;
+}
+
+.preset{
+height:40px;
+border-radius:6px;
+cursor:pointer;
+border:1px solid #eee;
+}
+
+.palette-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:5px;
+margin-top:8px;
+}
+
+.palette{
+height:35px;
+cursor:pointer;
+border-radius:4px;
+}
+</style> 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -208,21 +333,19 @@ color:#666;
                   <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image  </a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> CSS Tools <span class="caret"></span> </a>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> CSS/Design Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/css-formatter">Beautify / Minify CSS</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow Generator</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a></li>
-                  
                 </ul>
               </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> Developer Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/html-formatter">HTML Formatter</a></li>
-        
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/css-formatter">Beautify / Minify CSS</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/check-css-error">Check CSS Errors</a></li>
        
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
@@ -265,124 +388,74 @@ color:#666;
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
-  <main id="content">
+  <section id="content">
    
-   <section class="py-5">
-      <div class="container">
+   <section>
+     <div class="container-fluid">
+ <div class="app">
 
-<h1>SVG Converter</h1>
+<div class="sidebar">
 
-<div class="generator">
+<h3>Available Shapes</h3>
 
-<!-- Controls -->
+<div class="shape-grid">
 
-<div class="controls">
+<button data-shape="circle">⭕ Circle</button>
+<button data-shape="ellipse">🥚 Ellipse</button>
+<button data-shape="triangle">🔺 Triangle</button>
+<button data-shape="diamond">💎 Diamond</button>
+<button data-shape="pentagon">⬟ Pentagon</button>
+<button data-shape="hexagon">⬢ Hexagon</button>
+<button data-shape="octagon">🛑 Octagon</button>
+<button data-shape="star">⭐ Star</button>
+<button data-shape="heart">❤️ Heart</button>
+<button data-shape="arrow">➡ Arrow</button>
+<button data-shape="message">💬 Message</button>
+<button data-shape="parallelogram">▱ Parallelogram</button>
+<button data-shape="chevron">❯ Chevron</button>
+<button data-shape="cross">✚ Cross</button>
+<button data-shape="frame">🖼 Frame</button>
+<button style="background: #FF5722;" data-shape="polygon"><span class="fa fa-edit"></span> Custom</button>
 
-<div class="dropzone" id="dropzone">
-Drop SVG File Here<br>or Click to Upload
-	 <label for="fileInput"  class="sr-only">Upload Image</label>
-<input type="file" id="fileInput" accept=".svg" multiple hidden>
+</div>
+ 
 </div>
 
-<div class="file-list" id="fileList"></div>
-
-<div class="control">
-<label for="width">Width</label>
-<input type="number" id="width">
-</div>
-
-<div class="control">
-<label for="height">Height</label>
-<input type="number" id="height">
-</div>
-
-<div class="control checkboxcontrol">
-<label for="lockRatio">
-<input type="checkbox" id="lockRatio" checked>
-Lock Aspect Ratio
+<div class="canvas"> 
+<label class="upload">
+Upload or change image <span class="fa fa-image"></span>
+<input type="file" id="upload">
 </label>
+<div class="preview" id="preview">
+<img id="img" src="images/placeholder-clip-image.png" alt=""  crossorigin="anonymous">
 </div>
 
-<div class="control">
-<label>Export Format</label>
-<select id="format">
-<option value="png">PNG</option>
-<option value="jpeg">JPG</option>
-<option value="webp">WEBP</option>
-<option value="ico">ICO</option>
-</select>
+<div class="output">
+<span id="css">clip-path: circle(50% at 50% 50%)</span>
+<button class="copy">Copy</button>
 </div>
+	<div class="toolsgrid">
 
-<div class="control checkboxcontrol">
-<label for="transparent">
-<input type="checkbox" id="transparent" checked>
-Transparent Background
-</label>
-</div>
+<button id="undo">↶ Undo</button>
+<button id="redo">↷ Redo</button>
 
-<button id="downloadBtn">Download File</button>
-
-</div>
+<button id="zoomIn">＋ Zoom</button>
+<button id="zoomOut">－ Zoom</button>
 
 
-<!-- Preview -->
-
-<div class="preview-area">
-
-<h3>Preview</h3>
-
-<div class="preview">
-<img id="previewImg" alt="Preview Image">
-</div>
+<button id="download">⬇ Download</button>
+<button id="clear">Clear</button>
 
 </div>
 
 </div>
 
 </div>
+	   </div>
   </section> 
-	  <section class="py-4">
-<div class="container">
-
-<h1>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO</h1>
-
-<p>
-WebToolOcean SVG Converter lets you easily convert SVG files into PNG, JPG, WEBP, or ICO formats directly in your browser.
-Upload one or multiple SVG files, resize images, maintain aspect ratio, enable transparent background, and optimize SVG code.
-This free online tool is designed for web designers, developers, and digital creators who need fast and reliable SVG conversions.
-</p>
-
-<h2>Features of This SVG Converter</h2>
-
-<ul>
-<li>Convert SVG to PNG, JPG, WEBP, and ICO</li>
-<li>Batch SVG conversion support</li>
-<li>Resize images with locked aspect ratio</li>
-<li>Transparent background option</li>
-<li>Built-in SVG optimizer to reduce file size</li>
-<li>Drag and drop SVG upload</li>
-<li>Instant browser-based conversion</li>
-</ul>
-
-<h2>Why Use an SVG Converter?</h2>
-
-<p>
-SVG images are scalable vector graphics that maintain high quality at any size. However, many platforms require raster formats like PNG or JPG.
-This tool helps convert SVG graphics into widely supported formats without losing visual quality.
-</p>
-
-<h2>Who Can Use This Tool?</h2>
-
-<ul>
-<li>Web designers creating website graphics</li>
-<li>Developers generating favicon or icon images</li>
-<li>UI/UX designers exporting vector illustrations</li>
-<li>Content creators preparing images for the web</li>
-</ul>
-
-</div>
-</section>
-	</main>
+	  
+	   
+	</section>
      
  
 
@@ -453,173 +526,400 @@ This tool helps convert SVG graphics into widely supported formats without losin
 <div class="clearfix"></div> 
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
 <!-- InstanceBeginEditable name="EditRegion5" -->
-     
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>  
   <script src="js/bootstrap.bundle.min.js"></script>
-   <script>
+     
+   
+<script>
+/* Gradient presets */
 
-let svgFiles=[]
-let svgTexts=[]
-let aspectRatio=null
+const presets=[
+["#ff9a9e","#fad0c4"],
+["#a18cd1","#fbc2eb"],
+["#fad0c4","#ffd1ff"],
+["#ffecd2","#fcb69f"],
+["#f6d365","#fda085"],
+["#84fab0","#8fd3f4"],
+["#43cea2","#185a9d"],
+["#fa709a","#fee140"]
+]
 
-const input=document.getElementById("fileInput")
-const drop=document.getElementById("dropzone")
-const preview=document.getElementById("previewImg")
-const fileList=document.getElementById("fileList")
+/* Color palettes */
 
-drop.onclick=()=>input.click()
+const palettes=[
+["#ff6a00","#ee0979","#ff512f","#dd2476","#da4453"],
+["#56ab2f","#a8e063","#38ef7d","#11998e","#0575e6"],
+["#fc466b","#3f5efb","#00c6ff","#0072ff","#6a11cb"],
+["#f7971e","#ffd200","#f953c6","#b91d73","#ff4e50"]
+]
 
-input.onchange=e=>{
-handleFiles(e.target.files)
+
+let shape="circle"
+let points=[]
+let dragging=null
+let zoom=1
+let rotation=0
+
+let history=[]
+let redoStack=[]
+
+const img=$("#img")
+const preview=$("#preview")
+
+const grid=40
+
+function snap(v){
+return Math.round(v/grid)*grid
 }
 
-drop.ondragover=e=>{
-e.preventDefault()
+function saveHistory(){
+history.push(JSON.stringify(points))
 }
 
-drop.ondrop=e=>{
-e.preventDefault()
-handleFiles(e.dataTransfer.files)
-}
-
-function handleFiles(files){
-
-svgFiles=[...files]
-svgTexts=[]
-fileList.innerHTML=""
-
-svgFiles.forEach(file=>{
-
-fileList.innerHTML+=file.name+"<br>"
-
-let reader=new FileReader()
-
-reader.onload=e=>{
-
-let svg=optimizeSVG(e.target.result)
-
-svgTexts.push(svg)
-
-let img=new Image()
-
-img.onload=function(){
-
-aspectRatio=img.width/img.height
-
-preview.src="data:image/svg+xml;base64,"+btoa(svg)
-
-if(!width.value){
-width.value=img.width
-height.value=img.height
-}
-
-}
-
-img.src="data:image/svg+xml;base64,"+btoa(svg)
-
-}
-
-reader.readAsText(file)
-
+$("#undo").click(()=>{
+if(!history.length) return
+redoStack.push(JSON.stringify(points))
+points=JSON.parse(history.pop())
+renderPoints()
 })
 
+$("#redo").click(()=>{
+if(!redoStack.length) return
+history.push(JSON.stringify(points))
+points=JSON.parse(redoStack.pop())
+renderPoints()
+})
+
+function getShapeClip(){
+
+let clip="circle(50% at 50% 50%)"
+
+if(shape=="ellipse") clip="ellipse(50% 50% at 50% 50%)"
+
+if(shape=="triangle")
+clip="polygon(50% 0%,0% 100%,100% 100%)"
+
+if(shape=="diamond")
+clip="polygon(50% 0%,100% 50%,50% 100%,0% 50%)"
+
+if(shape=="pentagon")
+clip="polygon(50% 0%,95% 35%,80% 100%,20% 100%,5% 35%)"
+
+if(shape=="hexagon")
+clip="polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"
+
+if(shape=="octagon")
+clip="polygon(30% 0%,70% 0%,100% 30%,100% 70%,70% 100%,30% 100%,0% 70%,0% 30%)"
+
+if(shape=="star")
+clip="polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"
+
+if(shape=="heart")
+clip="polygon(50% 90%,10% 50%,10% 25%,30% 10%,50% 25%,70% 10%,90% 25%,90% 50%)"
+
+if(shape=="arrow")
+clip="polygon(0% 40%,60% 40%,60% 20%,100% 50%,60% 80%,60% 60%,0% 60%)"
+
+if(shape=="message")
+clip="polygon(0% 0%,100% 0%,100% 80%,60% 80%,50% 100%,40% 80%,0% 80%)"
+
+if(shape=="parallelogram")
+clip="polygon(25% 0%,100% 0%,75% 100%,0% 100%)"
+
+if(shape=="chevron")
+clip="polygon(0% 0%,75% 0%,100% 50%,75% 100%,0% 100%,25% 50%)"
+
+if(shape=="cross")
+clip="polygon(35% 0%,65% 0%,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0% 65%,0% 35%,35% 35%)"
+
+if(shape=="frame")
+clip="polygon(0% 0%,100% 0%,100% 100%,0% 100%,0% 70%,70% 70%,70% 30%,0% 30%)"
+
+return clip
 }
 
-/* SVG Optimizer */
+function updateCSS(){
 
-function optimizeSVG(svg){
+if(shape!="polygon"){
 
-return svg
-.replace(/\n/g,"")
-.replace(/\t/g,"")
-.replace(/\s{2,}/g," ")
-.replace(/>\s+</g,"><")
+let clip=getShapeClip()
 
-}
+img.css("clip-path",clip)
 
-/* Aspect Ratio */
-
-const width=document.getElementById("width")
-const height=document.getElementById("height")
-const lock=document.getElementById("lockRatio")
-
-width.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-height.value=Math.round(width.value/aspectRatio)
-
-}
-
-}
-
-height.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-width.value=Math.round(height.value*aspectRatio)
-
-}
-
-}
-
-/* Download */
-
-document.getElementById("downloadBtn").onclick=function(){
-
-if(!svgTexts.length) return
-
-let format=document.getElementById("format").value
-let transparent=document.getElementById("transparent").checked
-
-svgTexts.forEach((svg,i)=>{
-
-let img=new Image()
-
-img.onload=function(){
-
-let canvas=document.createElement("canvas")
-
-canvas.width=width.value||img.width
-canvas.height=height.value||img.height
-
-let ctx=canvas.getContext("2d")
-
-if(!transparent){
-
-ctx.fillStyle="#ffffff"
-ctx.fillRect(0,0,canvas.width,canvas.height)
-
-}
-
-ctx.drawImage(img,0,0,canvas.width,canvas.height)
-
-let link=document.createElement("a")
-
-if(format==="ico"){
-
-link.download="icon_"+i+".ico"
-link.href=canvas.toDataURL("image/png")
+$("#css").text("clip-path: "+clip)
 
 }else{
 
-link.download="converted_"+i+"."+format
-link.href=canvas.toDataURL("image/"+format)
+const w=img.width()
+const h=img.height()
+
+const poly=points.map(p=>`${(p.x/w)*100}% ${(p.y/h)*100}%`).join(",")
+
+img.css("clip-path","polygon("+poly+")")
+
+$("#css").text("clip-path: polygon("+poly+")")
 
 }
+
+}
+
+function renderPoints(){
+
+$(".point").remove()
+
+if(shape!="polygon") return
+
+points.forEach((p,i)=>{
+
+let el=$("<div class='point'></div>")
+
+el.css({
+left:p.x,
+top:p.y
+})
+
+el.attr("data-i",i)
+
+preview.append(el)
+
+})
+
+updateCSS()
+
+}
+
+function setShape(s){
+
+shape=s
+points=[]
+
+if(shape=="polygon"){
+
+let w=img.width()
+let h=img.height()
+
+points=[
+{x:w/2,y:40},
+{x:40,y:h-40},
+{x:w-40,y:h-40}
+]
+
+}
+
+renderPoints()
+updateCSS()
+
+}
+
+$(".shape-grid button").click(function(){
+setShape($(this).data("shape"))
+})
+
+$(document).on("mousedown",".point",function(){
+dragging=$(this).data("i")
+saveHistory()
+})
+
+$(document).on("mouseup",()=>dragging=null)
+
+$(document).on("mousemove",function(e){
+
+if(dragging===null) return
+
+let offset=preview.offset()
+
+points[dragging]={
+x:snap(e.pageX-offset.left),
+y:snap(e.pageY-offset.top)
+}
+
+renderPoints()
+
+})
+
+preview.click(function(e){
+
+if(shape!="polygon") return
+if($(e.target).hasClass("point")) return
+
+let offset=preview.offset()
+
+saveHistory()
+
+points.push({
+x:snap(e.pageX-offset.left),
+y:snap(e.pageY-offset.top)
+})
+
+renderPoints()
+
+})
+
+$(document).on("contextmenu",".point",function(e){
+
+e.preventDefault()
+
+saveHistory()
+
+points.splice($(this).data("i"),1)
+
+renderPoints()
+
+})
+
+$("#upload").change(function(e){
+
+let url=URL.createObjectURL(e.target.files[0])
+
+img.attr("src",url)
+
+})
+
+function updateTransform(){
+img.css("transform","scale("+zoom+") rotate("+rotation+"deg)")
+}
+
+$("#zoomIn").click(()=>{ zoom+=0.1; updateTransform() })
+$("#zoomOut").click(()=>{ zoom-=0.1; updateTransform() })
+
+$("#rotate").on("input",function(){
+rotation=$(this).val()
+updateTransform()
+})
+
+$("#clear").click(()=>{
+
+shape="circle"
+points=[]
+
+img.css("clip-path","none")
+
+$(".point").remove()
+
+})
+
+$(".copy").click(function(){
+
+navigator.clipboard.writeText($("#css").text())
+
+let btn=$(this)
+
+btn.text("Copied ✓")
+
+setTimeout(()=>{
+btn.text("Copy")
+},1500)
+
+})
+
+$("#download").click(function(){
+
+const canvas=document.createElement("canvas")
+const ctx=canvas.getContext("2d")
+
+const image=document.getElementById("img")
+
+canvas.width=image.naturalWidth
+canvas.height=image.naturalHeight
+
+ctx.save()
+
+const css=$("#css").text()
+
+if(css.includes("polygon")){
+
+const poly=css.replace("clip-path: polygon(","").replace(")","").split(",")
+
+ctx.beginPath()
+
+poly.forEach((p,i)=>{
+
+let xy=p.trim().split(" ")
+
+let x=parseFloat(xy[0])/100*canvas.width
+let y=parseFloat(xy[1])/100*canvas.height
+
+if(i==0) ctx.moveTo(x,y)
+else ctx.lineTo(x,y)
+
+})
+
+ctx.closePath()
+ctx.clip()
+
+}
+
+ctx.drawImage(image,0,0,canvas.width,canvas.height)
+
+ctx.restore()
+
+const link=document.createElement("a")
+
+link.download="clipped-image.png"
+
+link.href=canvas.toDataURL()
 
 link.click()
 
-}
+})
 
-img.src="data:image/svg+xml;base64,"+btoa(svg)
+setShape("circle")
+function renderPresets(){
+
+presets.forEach(p=>{
+
+let gradient=`linear-gradient(45deg,${p.join(",")})`
+
+$("#presets").append(
+`<div class="preset" style="background:${gradient}" data-colors='${JSON.stringify(p)}'></div>`
+)
+
+})
+
+$(".preset").click(function(){
+
+let colors=JSON.parse($(this).attr("data-colors"))
+
+stops=[
+{color:colors[0],pos:0},
+{color:colors[1],pos:100}
+]
+
+renderStops()
 
 })
 
 }
 
-</script>  
-   
-<!-- InstanceEndEditable --> 
+function renderPalettes(){
+
+palettes.forEach(p=>{
+
+let palette=$("<div class='palette'></div>")
+
+palette.css("background",`linear-gradient(90deg,${p.join(",")})`)
+
+palette.attr("data-colors",JSON.stringify(p))
+
+$("#palettes").append(palette)
+
+})
+
+$(".palette").click(function(){
+
+let colors=JSON.parse($(this).attr("data-colors"))
+
+stops=colors.map((c,i)=>({
+color:c,
+pos:Math.round((i/(colors.length-1))*100)
+}))
+
+renderStops()
+
+})
+
+}
+</script><!-- InstanceEndEditable --> 
  
 <!--<script>
 		const btn = document.getElementById("togglemeu");

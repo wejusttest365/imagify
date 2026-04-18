@@ -7,152 +7,75 @@
 <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
 <!-- ===================================================== -->
-<!-- ===================================================== -->
-<!-- PAGE TITLE --> 
-
-<title>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO Online | WebToolOcean</title>
-
-<meta name="description" content="Free SVG Converter online. Convert SVG to PNG, JPG, WEBP, or ICO instantly. Batch SVG conversion, transparent background option, SVG optimizer, and resize tool for developers and designers.">
-
-<meta name="keywords" content="svg converter, svg to png, svg to ico, svg to jpg, svg to webp, batch svg converter, svg optimizer, convert svg online, favicon converter, svg image converter">
-
+<title>CSS Card Builder – Build Custom CSS Cards Online | WebToolOcean</title>
+<meta name="description" content="Create and customize CSS cards online with WebToolOcean’s CSS Card Builder. Download HTML, CSS, React, and Tailwind-ready code instantly.">
+<meta name="keywords" content="CSS Card Builder, CSS Card Generator, HTML Card Code, CSS Card Animation, React Card Component, Tailwind Card Design, Online Card Builder">
 <meta name="robots" content="index, follow">
-
-<meta name="author" content="WebToolOcean">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="canonical" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
-
-
-<!-- Open Graph (Facebook / LinkedIn) -->
-
-<meta property="og:title" content="SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO">
-<meta property="og:description" content="Convert SVG files to PNG, JPG, WEBP, or ICO online. Free batch SVG converter with resize, optimizer, and transparent background support.">
+<meta property="og:title" content="CSS Card Builder – Build Custom CSS Cards Online">
+<meta property="og:description" content="Create and customize CSS cards online with WebToolOcean. Get HTML, CSS, React, and Tailwind-ready code instantly.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://webtoolocean.com/image-tools/svg-to-image-converter/">
-<meta property="og:image" content="https://webtoolocean.com/images/svg-converter-preview.png">
-<meta property="og:site_name" content="WebToolOcean">
-
-
-<!-- Twitter SEO -->
-
+<meta property="og:url" content="https://webtoolocean.com/css-tools/card-builder/index.html">
+<meta property="og:image" content="https://webtoolocean.com/assets/images/preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SVG Converter – Convert SVG to PNG JPG WEBP ICO">
-<meta name="twitter:description" content="Free online SVG converter tool. Convert SVG to PNG, JPG, WEBP, ICO with batch conversion and optimizer.">
-<meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+<meta name="twitter:title" content="CSS Card Builder – Build Custom CSS Cards Online">
+<meta name="twitter:description" content="Create and customize CSS cards online with WebToolOcean. Get HTML, CSS, React, and Tailwind-ready code instantly.">
+<meta name="twitter:image" content="https://webtoolocean.com/assets/images/preview.png">
 
 
-<!-- Structured Data -->
-
- 
 <!-- ===================================================== -->
 	
 <!--CSS for the website-->
  
   <!-- Dependencies -->
-  <link href="../../css/global.css" rel="stylesheet">
+ <link href="../../css/global.css" rel="stylesheet">
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
   <link href="../../css/style.css" rel="stylesheet">
   <link href="../../css/font-convert.css" rel="stylesheet">
-  
-<style>
- 
+  <style>
 
-.generator{
-display:grid;
-grid-template-columns:350px 1fr;
-gap:30px;
-}
 
-.controls{
+.panel{
 background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.preview-area{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-.dropzone{
-border:2px dashed #cbd5e1;
-padding:40px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-transition:.3s;
-}
-
-.dropzone:hover{
-border-color:#6366f1;
-background:#f8f9ff;
-}
-
-.control{
-margin-top:15px;
-}
-
-.control label{
-display:block;
-font-size:14px;
-margin-bottom:5px;
-}
-
-.control input,
-.control select{
-width:100%;
-padding:8px;
-border:1px solid #ddd;
-border-radius:6px;
-}
-
-.preview img{
-max-width:100%;
-margin-top:20px;
-}
-
-section button{
-margin-top:20px;
-padding:12px 18px;
-border:none;
-background:#6366f1;
-color:white;
+padding:20px;
 border-radius:8px;
-cursor:pointer;
-font-size:15px;
-width:100%;
-}
-
-section button:hover{
-background:#4f46e5;
-}
-
-.file-list{
-margin-top:15px;
-font-size:13px;
-color:#666;
-}
-.control.checkboxcontrol label {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 8px;
-}
-
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
  
-
-.control.checkboxcontrol label input {
-    width: auto;
 }
-</style>
-	  
+
+#grid{
+display:grid;
+gap:20px;
+}
+
+.card-box{
+background:white;
+border-radius:8px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+.card-box img{
+width:100%;
+height:140px;
+object-fit:cover;
+}
+
+.card-body{
+padding:15px;
+}
+
+.card-box.active { 
+    outline: 2px solid #2196F3;
+    outline-offset: 3px;
+}
+
+textarea{
+font-family:monospace;
+}
+	  .minH200 {min-height:400px; margin-bottom: 20px;}
+</style>	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -208,21 +131,19 @@ color:#666;
                   <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image  </a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> CSS Tools <span class="caret"></span> </a>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> CSS/Design Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/css-formatter">Beautify / Minify CSS</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow Generator</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a></li>
-                  
                 </ul>
               </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> Developer Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/html-formatter">HTML Formatter</a></li>
-        
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/css-formatter">Beautify / Minify CSS</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/check-css-error">Check CSS Errors</a></li>
        
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
@@ -265,124 +186,144 @@ color:#666;
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
-  <main id="content">
+  <section id="content">
    
-   <section class="py-5">
-      <div class="container">
+         <section class="py-5">
+  <div class="container">
 
-<h1>SVG Converter</h1>
+    <h1 class="text-center mb-4">Card Grid Builder</h1>
 
-<div class="generator">
+    <div class="row g-4">
 
-<!-- Controls -->
+      <!-- LEFT PANEL -->
+      <div class="col-lg-3">
+        <div class="panel">
 
-<div class="controls">
+          <h6>Grid Settings</h6>
+          <label>Columns</label>
+          <input type="number" id="cols" class="form-control" value="3">
+          <label class="mt-2">Gap</label>
+          <input type="range" id="gap" min="0" max="40" value="20" class="form-range">
 
-<div class="dropzone" id="dropzone">
-Drop SVG File Here<br>or Click to Upload
-	 <label for="fileInput"  class="sr-only">Upload Image</label>
-<input type="file" id="fileInput" accept=".svg" multiple hidden>
-</div>
+          <hr>
 
-<div class="file-list" id="fileList"></div>
+          <h6>Global Styles</h6>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="enableShadow" checked>
+            <label class="form-check-label" for="enableShadow">Enable Shadow</label>
+          </div>
 
-<div class="control">
-<label for="width">Width</label>
-<input type="number" id="width">
-</div>
+          <label class="mt-2">Border Width (px)</label>
+          <input type="number" id="borderWidth" class="form-control" value="1">
 
-<div class="control">
-<label for="height">Height</label>
-<input type="number" id="height">
-</div>
+          <label class="mt-2">Border Color</label>
+          <input type="color" id="borderColor" class="form-control" value="#00000">
 
-<div class="control checkboxcontrol">
-<label for="lockRatio">
-<input type="checkbox" id="lockRatio" checked>
-Lock Aspect Ratio
-</label>
-</div>
+          <label class="mt-2">Grid Background</label>
+          <input type="color" id="gridBg" class="form-control" value="#ffffff">
 
-<div class="control">
-<label>Export Format</label>
-<select id="format">
-<option value="png">PNG</option>
-<option value="jpeg">JPG</option>
-<option value="webp">WEBP</option>
-<option value="ico">ICO</option>
-</select>
-</div>
+          <label class="mt-2">Title Color</label>
+          <input type="color" id="titleColor" class="form-control" value="#00000">
 
-<div class="control checkboxcontrol">
-<label for="transparent">
-<input type="checkbox" id="transparent" checked>
-Transparent Background
-</label>
-</div>
+          <hr>
 
-<button id="downloadBtn">Download File</button>
+          <button class="btn btn-success w-100" onclick="addCard()">+ Add Card</button>
+          <button class="btn btn-danger w-100 mt-2" onclick="deleteCard()">Delete Card</button>
 
-</div>
+          <hr>
 
+          <h6>Edit Card</h6>
+          <input class="form-control mt-2" id="img" placeholder="Image URL">
+          <input class="form-control mt-2" id="title" placeholder="Title">
+          <textarea class="form-control mt-2" id="desc" placeholder="Description"></textarea>
+          <input class="form-control mt-2" id="btnText" placeholder="Button Text">
+          <input class="form-control mt-2" id="btnLink" placeholder="Button Link">
 
-<!-- Preview -->
+        </div>
+      </div>
 
-<div class="preview-area">
+      <!-- PREVIEW PANEL -->
+      <div class="col-lg-9">
+        <div class="panel minH200">
+          <h6>Preview</h6>
+          <div id="grid" style="display:grid; gap:20px;"></div>
+        </div>
 
-<h3>Preview</h3>
+        <div class="panel copyHTMLPanel mt-3">
+          <div class="row">
+            <div class="col-md-6 col-xs-12 mb-3">
+              <h6>HTML</h6>
+              <textarea id="htmlCode" class="form-control" rows="6"></textarea>
+              <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('htmlCode')">Copy HTML</button>
+            </div>
+            <div class="col-md-6 col-xs-12 mb-3">
+              <h6>CSS</h6>
+              <textarea id="cssCode" class="form-control" rows="6"></textarea>
+              <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('cssCode')">Copy CSS</button>
+            </div>
+            <div class="col-md-6 col-xs-12 mb-3">
+              <h6>React</h6>
+              <textarea id="reactCode" class="form-control" rows="6"></textarea>
+              <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('reactCode')">Copy React</button>
+            </div>
+            <div class="col-md-6 col-xs-12 mb-3">
+              <h6>Tailwind</h6>
+              <textarea id="tailwindCode" class="form-control" rows="4"></textarea>
+              <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('tailwindCode')">Copy Tailwind</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div class="preview">
-<img id="previewImg" alt="Preview Image">
-</div>
-
-</div>
-
-</div>
-
-</div>
-  </section> 
-	  <section class="py-4">
-<div class="container">
-
-<h1>SVG Converter – Convert SVG to PNG, JPG, WEBP, ICO</h1>
-
-<p>
-WebToolOcean SVG Converter lets you easily convert SVG files into PNG, JPG, WEBP, or ICO formats directly in your browser.
-Upload one or multiple SVG files, resize images, maintain aspect ratio, enable transparent background, and optimize SVG code.
-This free online tool is designed for web designers, developers, and digital creators who need fast and reliable SVG conversions.
-</p>
-
-<h2>Features of This SVG Converter</h2>
-
-<ul>
-<li>Convert SVG to PNG, JPG, WEBP, and ICO</li>
-<li>Batch SVG conversion support</li>
-<li>Resize images with locked aspect ratio</li>
-<li>Transparent background option</li>
-<li>Built-in SVG optimizer to reduce file size</li>
-<li>Drag and drop SVG upload</li>
-<li>Instant browser-based conversion</li>
-</ul>
-
-<h2>Why Use an SVG Converter?</h2>
-
-<p>
-SVG images are scalable vector graphics that maintain high quality at any size. However, many platforms require raster formats like PNG or JPG.
-This tool helps convert SVG graphics into widely supported formats without losing visual quality.
-</p>
-
-<h2>Who Can Use This Tool?</h2>
-
-<ul>
-<li>Web designers creating website graphics</li>
-<li>Developers generating favicon or icon images</li>
-<li>UI/UX designers exporting vector illustrations</li>
-<li>Content creators preparing images for the web</li>
-</ul>
-
-</div>
+    </div>
+  </div>
 </section>
-	</main>
+  </div>
+</section>
+
+
+ 
+	  <!-- SEO Content Section -->
+<section class="seo-content bg-light py-5">
+  <div class="container">
+    <h1>CSS Card Builder – Build Custom CSS Cards Online</h1>
+    <p>WebToolOcean’s <strong>CSS Card Builder</strong> allows you to create fully customizable card designs for your website. 
+       Adjust colors, borders, shadows, and animations with a live preview. Download production-ready HTML, CSS, React, and Tailwind-ready code for instant use.</p>
+    
+    <h2>Features of CSS Card Builder</h2>
+    <ul>
+      <li>Design responsive and modern CSS cards</li>
+      <li>Customizable colors, borders, shadows, and fonts</li>
+      <li>Download ready-to-use HTML & CSS code</li>
+      <li>React component code for quick integration</li>
+      <li>Tailwind CSS-ready code for modern frameworks</li>
+      <li>Interactive live preview with real-time changes</li>
+      <li>Adjust card padding, hover effects, and animations</li>
+      <li>Free and browser-based — no installation needed</li>
+    </ul>
+
+    <h2>How to Use the CSS Card Builder</h2>
+    <ol>
+      <li>Select your card style and background color using the controls.</li>
+      <li>Customize borders, shadows, and text elements.</li>
+      <li>Preview your card live in the animation canvas.</li>
+      <li>Click “Download Code” to get HTML, CSS, React, and Tailwind-ready files.</li>
+      <li>Copy the generated HTML or React code into your projects.</li>
+    </ol>
+
+    <h2>Why Use CSS Card Builder</h2>
+    <p>Custom cards improve website design, showcase content elegantly, and enhance UX. 
+       With WebToolOcean, you get ready-to-use code compatible with modern frameworks, saving you time and effort.</p>
+
+    <h2>Supported Platforms</h2>
+    <p>The generated code works on all major browsers including Chrome, Firefox, Edge, and Safari. 
+       It is also compatible with React.js projects and Tailwind CSS framework for seamless integration.</p>
+
+    <h2>Get Started Now</h2>
+    <p>Start building custom CSS cards today! Experiment with designs, hover effects, and shadows, and download the code instantly for your projects.</p>
+  </div>
+</section>
+	</section>
      
  
 
@@ -455,169 +396,152 @@ This tool helps convert SVG graphics into widely supported formats without losin
 <!-- InstanceBeginEditable name="EditRegion5" -->
      
   <script src="js/bootstrap.bundle.min.js"></script>
-   <script>
+    
+ 
+ 
+ 
+ 
+<script>
+let grid = document.getElementById("grid");
+let cards = [];
+let activeCard = null;
 
-let svgFiles=[]
-let svgTexts=[]
-let aspectRatio=null
-
-const input=document.getElementById("fileInput")
-const drop=document.getElementById("dropzone")
-const preview=document.getElementById("previewImg")
-const fileList=document.getElementById("fileList")
-
-drop.onclick=()=>input.click()
-
-input.onchange=e=>{
-handleFiles(e.target.files)
+// ADD CARD
+function addCard() {
+  let card = document.createElement("div");
+  card.className = "card-box";
+  card.innerHTML = `
+    <img src="https://picsum.photos/300/200">
+    <div class="card-body">
+      <h5>Title</h5>
+      <p>Description</p>
+      <a class="btn btn-primary btn-sm" href="#">Button</a>
+    </div>`;
+  card.onclick = () => selectCard(card);
+  grid.appendChild(card);
+  cards.push(card);
+  selectCard(card);
+  generateCode();
 }
 
-drop.ondragover=e=>{
-e.preventDefault()
+// Add a default card initially
+addCard();
+
+// SELECT CARD
+function selectCard(card) {
+  cards.forEach(c => c.classList.remove("active"));
+  card.classList.add("active");
+  activeCard = card;
+
+  document.getElementById("img").value = card.querySelector("img").src;
+  document.getElementById("title").value = card.querySelector("h5").innerText;
+  document.getElementById("desc").value = card.querySelector("p").innerText;
+  document.getElementById("btnText").value = card.querySelector("a").innerText;
+  document.getElementById("btnLink").value = card.querySelector("a").href;
 }
 
-drop.ondrop=e=>{
-e.preventDefault()
-handleFiles(e.dataTransfer.files)
+// DELETE CARD
+function deleteCard() {
+  if (!activeCard) return;
+  activeCard.remove();
+  cards = cards.filter(c => c !== activeCard);
+  activeCard = null;
+  generateCode();
 }
 
-function handleFiles(files){
+// LIVE EDITS
+["img","title","desc","btnText","btnLink","cols","gap","borderWidth","borderColor","gridBg","titleColor","enableShadow"].forEach(id => {
+  document.getElementById(id).addEventListener("input", generateCode);
+});
+document.getElementById("enableShadow").addEventListener("change", generateCode);
 
-svgFiles=[...files]
-svgTexts=[]
-fileList.innerHTML=""
+function generateCode() {
+  const cols = document.getElementById("cols").value;
+  const gap = document.getElementById("gap").value;
+  const borderWidth = document.getElementById("borderWidth").value;
+  const borderColor = document.getElementById("borderColor").value;
+  const enableShadow = document.getElementById("enableShadow").checked;
+  const gridBg = document.getElementById("gridBg").value;
+  const titleColor = document.getElementById("titleColor").value;
 
-svgFiles.forEach(file=>{
+  // GRID STYLES
+  grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+  grid.style.gap = gap + "px";
 
-fileList.innerHTML+=file.name+"<br>"
+  // APPLY TO ALL CARDS
+  cards.forEach(card => {
+    card.style.border = `${borderWidth}px solid ${borderColor}`;
+    card.style.boxShadow = enableShadow ? "0 5px 15px rgba(0,0,0,0.2)" : "none";
+    card.style.backgroundColor = gridBg;
 
-let reader=new FileReader()
+    let img = card.querySelector("img");
+    img.style.transition = "transform 0.3s";
+    img.onmouseover = e => e.target.style.transform = "scale(1.05)";
+    img.onmouseout = e => e.target.style.transform = "scale(1)";
 
-reader.onload=e=>{
+    let title = card.querySelector("h5");
+    title.style.backgroundColor = gridBg;
+    title.style.color = titleColor;
+    title.style.padding = "2px 4px";
+  });
 
-let svg=optimizeSVG(e.target.result)
+  // HTML CODE
+  document.getElementById("htmlCode").value = `<div class="card-grid">\n${grid.innerHTML}\n</div>`;
 
-svgTexts.push(svg)
+  // CSS CODE
+  document.getElementById("cssCode").value = `
+.card-grid { display:grid; grid-template-columns:repeat(${cols},1fr); gap:${gap}px; }
+.card-box { border:${borderWidth}px solid ${borderColor}; background-color:${gridBg}; border-radius:8px; overflow:hidden; ${enableShadow ? 'box-shadow:0 5px 15px rgba(0,0,0,0.2);' : ''} }
+.card-box img { width:100%; height:160px; object-fit:cover; transition:transform 0.3s; }
+.card-box img:hover { transform:scale(1.05); }
+.card-box h5 { color:${titleColor}; background-color:${gridBg}; padding:2px 4px; }
+.card-body { padding:15px; }
+@media(max-width:992px){ .card-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:600px){ .card-grid{ grid-template-columns:1fr; } }`;
 
-let img=new Image()
+  // React CODE
+  let reactCards = Array.from(cards).map(card => {
+    let img = card.querySelector("img").src;
+    let title = card.querySelector("h5").innerText;
+    let desc = card.querySelector("p").innerText;
+    let btnText = card.querySelector("a").innerText;
+    let btnLink = card.querySelector("a").href;
+    return `<div className="card-box" style={{ border: "${borderWidth}px solid ${borderColor}", backgroundColor: "${gridBg}", ${enableShadow ? 'boxShadow:"0 5px 15px rgba(0,0,0,0.2)"' : ''} }}>
+  <img src="${img}" style={{ transition:"transform 0.3s" }} />
+  <div className="card-body">
+    <h5 style={{ color:"${titleColor}", backgroundColor:"${gridBg}", padding:"2px 4px" }}>${title}</h5>
+    <p>${desc}</p>
+    <a className="btn btn-primary btn-sm" href="${btnLink}">${btnText}</a>
+  </div>
+</div>`;
+  }).join("\n");
+  document.getElementById("reactCode").value = `<div className="card-grid">\n${reactCards}\n</div>`;
 
-img.onload=function(){
-
-aspectRatio=img.width/img.height
-
-preview.src="data:image/svg+xml;base64,"+btoa(svg)
-
-if(!width.value){
-width.value=img.width
-height.value=img.height
+  // Tailwind CODE
+  document.getElementById("tailwindCode").value = `<div class="grid grid-cols-${cols} gap-${Math.round(gap/4)} md:grid-cols-2 sm:grid-cols-1"> <!-- cards --> </div>`;
 }
 
+// EDIT CARD FIELDS LIVE
+["img","title","desc","btnText","btnLink"].forEach(id => {
+  document.getElementById(id).addEventListener("input", () => {
+    if (!activeCard) return;
+    activeCard.querySelector("img").src = document.getElementById("img").value;
+    activeCard.querySelector("h5").innerText = document.getElementById("title").value;
+    activeCard.querySelector("p").innerText = document.getElementById("desc").value;
+    activeCard.querySelector("a").innerText = document.getElementById("btnText").value;
+    activeCard.querySelector("a").href = document.getElementById("btnLink").value;
+    generateCode();
+  });
+});
+
+// COPY CODE
+function copyCode(id) {
+  let text = document.getElementById(id);
+  text.select();
+  document.execCommand("copy");
+  alert("Copied!");
 }
-
-img.src="data:image/svg+xml;base64,"+btoa(svg)
-
-}
-
-reader.readAsText(file)
-
-})
-
-}
-
-/* SVG Optimizer */
-
-function optimizeSVG(svg){
-
-return svg
-.replace(/\n/g,"")
-.replace(/\t/g,"")
-.replace(/\s{2,}/g," ")
-.replace(/>\s+</g,"><")
-
-}
-
-/* Aspect Ratio */
-
-const width=document.getElementById("width")
-const height=document.getElementById("height")
-const lock=document.getElementById("lockRatio")
-
-width.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-height.value=Math.round(width.value/aspectRatio)
-
-}
-
-}
-
-height.oninput=function(){
-
-if(lock.checked && aspectRatio){
-
-width.value=Math.round(height.value*aspectRatio)
-
-}
-
-}
-
-/* Download */
-
-document.getElementById("downloadBtn").onclick=function(){
-
-if(!svgTexts.length) return
-
-let format=document.getElementById("format").value
-let transparent=document.getElementById("transparent").checked
-
-svgTexts.forEach((svg,i)=>{
-
-let img=new Image()
-
-img.onload=function(){
-
-let canvas=document.createElement("canvas")
-
-canvas.width=width.value||img.width
-canvas.height=height.value||img.height
-
-let ctx=canvas.getContext("2d")
-
-if(!transparent){
-
-ctx.fillStyle="#ffffff"
-ctx.fillRect(0,0,canvas.width,canvas.height)
-
-}
-
-ctx.drawImage(img,0,0,canvas.width,canvas.height)
-
-let link=document.createElement("a")
-
-if(format==="ico"){
-
-link.download="icon_"+i+".ico"
-link.href=canvas.toDataURL("image/png")
-
-}else{
-
-link.download="converted_"+i+"."+format
-link.href=canvas.toDataURL("image/"+format)
-
-}
-
-link.click()
-
-}
-
-img.src="data:image/svg+xml;base64,"+btoa(svg)
-
-})
-
-}
-
-</script>  
+</script>
    
 <!-- InstanceEndEditable --> 
  

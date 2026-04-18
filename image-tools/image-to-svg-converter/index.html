@@ -6,21 +6,150 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-<title>Terms and Conditions | WebToolOcean</title>
-<meta name="description" content="Read the Terms and Conditions for using WebToolOcean and its online tools and services.">
-<meta name="keywords" content="WebToolOcean terms, website terms and conditions, website usage policy">
+<title>Image to SVG Converter (JPG, PNG to SVG Online) - Free Tool | WebToolOcean</title>
+<meta name="description" content="Convert JPG or PNG images to SVG vector format online for free. Fast, secure, no upload required. Generate SVG code instantly.">
+<meta name="keywords" content="jpg to svg, png to svg, gif to svg, svg converter online free">
+	
 <meta name="author" content="WebToolOcean">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="http://webtoolocean.com/terms/index.html">
+	
+<link rel="canonical" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
+	
+<!--Open Graph (Facebook / LinkedIn Sharing)-->
+<meta property="og:title" content="Free Image Converter Online – JPG, PNG, WEBP, GIF">
+<meta property="og:description" content="Convert images online between JPG, PNG, WEBP and GIF formats instantly. Free and secure image converter tool by WebToolOcean.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="WebToolOcean">
+<meta property="og:image" content="https://webtoolocean.com/images/preview.png">	
+<!--Twitter SEO Tags-->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Image Converter Online – JPG PNG WEBP GIF">
+<meta name="twitter:description" content="Convert JPG, PNG, WEBP, GIF and other image formats instantly with WebToolOcean free image converter.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+<!--Extra SEO Tag (Recommended)-->	
+<link rel="canonical" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
+<meta name="theme-color" content="#0f172a">
+	
+<!--CSS for the website-->
+ 
+  <!-- Dependencies -->
+ <link href="../../css/global.css" rel="stylesheet">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/font-convert.css" rel="stylesheet">
+	  <link href="../../css/image-convertor.css" rel="stylesheet">
+	   <style>
+  
+/* DROP AREA */
+#drop-area {
+  border: 2px dashed #cbd5e1;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  background: #fff;
+  transition: 0.3s;
+}
 
-<!--CSS for the website--> 
+#drop-area.dragover {
+  border-color: #16a34a;
+  background: #ecfdf5;
+}
 
-<!-- Dependencies -->
- <link href="file:///C|/Users/Ishika/Downloads/imagify-main (1)/css/global.css" rel="stylesheet">
-  <link href="file:///C|/Users/Ishika/Downloads/imagify-main (1)/css/bootstrap.min.css" rel="stylesheet">
-  <link href="file:///C|/Users/Ishika/Downloads/imagify-main (1)/css/font-awesome.min.css" rel="stylesheet">
-  <link href="file:///C|/Users/Ishika/Downloads/imagify-main (1)/css/style.css" rel="stylesheet">
-  <link href="file:///C|/Users/Ishika/Downloads/imagify-main (1)/css/font-convert.css" rel="stylesheet">
+/* BUTTONS */
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 120px;
+  text-align: center;
+}
+
+.btn-green {
+  background: #065f46;
+  color: white;
+}
+
+.btn-red {
+  background: #dc2626;
+  color: white;
+}
+.btn:hover {background-color: #000; color:#fff;}
+.btn-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* PROGRESS */
+#progress-container {
+  display: none;
+  margin: 20px 0;
+}
+
+.progress-bar-bg {
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 14px;
+  width: 0%;
+  background: linear-gradient(90deg, #16a34a, #065f46);
+  transition: width 0.2s;
+}
+
+#progress-text {
+  text-align: right;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* FILE LIST */
+.file-card {
+    background: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.file-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  height:100px;
+}
+ </style>
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -32,7 +161,7 @@
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<link href="../css/global.css" rel="stylesheet">
+<link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
@@ -59,7 +188,7 @@
     <div class="container-fluid">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="file:///C|/Users/Ishika/Downloads/imagify-main (1)/images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
       <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
@@ -119,47 +248,98 @@
     </div>
   </div>
 </header>
-<!-- InstanceBeginEditable name="center" --> 
-
-<!-- Start dynamic content --> 
-<!-- <section id="testimonials">
+<!-- InstanceBeginEditable name="center" -->
+ 
+  <!-- Start dynamic content -->
+ <!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>--> 
-<!-- End dynamic content -->
-<div class="clearfix"></div>
-<!-- End dynamic content --> 
+  </section>-->
+  <!-- End dynamic content -->
+  <div class="clearfix"></div>
+  <!-- End dynamic content --> 
+  
+  <!-- Sevices section -->
+    <main id="content">
+   
+   <section class="my-5">
+    <div class="image-conversion">
+       <div class="container">
 
-<!-- Sevices section -->
-<section id="content">
-  <section class="py-5">
-    <div class="container">
-      <h1>Terms and Conditions</h1>
-      <p><strong>Last Updated:</strong> March 9, 2026</p>
-      <p>Welcome to <strong>WebToolOcean</strong>. By accessing or using our website, you agree to comply with these Terms and Conditions.</p>
-      <h2>Use of the Website</h2>
-      <p>You may use our website and tools for personal and informational purposes only.</p>
-      <p>You agree not to misuse the website, attempt to disrupt services, or use the tools for unlawful purposes.</p>
-      <h2>Intellectual Property</h2>
-      <p>All content on this website including text, design, tools, and graphics is the property of WebToolOcean unless otherwise stated.</p>
-      <p>You may not reproduce or distribute content without permission.</p>
-      <h2>Disclaimer</h2>
-      <p>The tools and information provided on WebToolOcean are offered "as is" without warranties of any kind.</p>
-      <p>We do not guarantee accuracy, reliability, or availability of the tools at all times.</p>
-      <h2>Limitation of Liability</h2>
-      <p>WebToolOcean will not be liable for any losses or damages resulting from the use of our website or tools.</p>
-      <h2>External Links</h2>
-      <p>Our website may contain links to third-party websites. We are not responsible for the content or policies of those websites.</p>
-      <h2>Changes to Terms</h2>
-      <p>We may update these Terms and Conditions at any time. Changes will be posted on this page.</p>
-      <h2>Consent</h2>
-      <p>By using our website, you agree to these Terms and Conditions.</p>
+    <h1>JPG / PNG to SVG Converter</h1>
+
+    
+<div id="drop-area">
+  <p>Drag & Drop Images</p>
+  <button id="add-files" class="btn btn-green">Choose Files</button>
+  <input type="file" id="upload" accept=".png,.jpg,.jpeg" multiple hidden>
+</div>
+
+<div id="progress-container">
+  <div class="progress-bar-bg">
+    <div id="progress-bar"></div>
+  </div>
+  <div id="progress-text">0%</div>
+</div>
+<div id="file-list"></div>
+<div class="btn-row">
+  <button id="convert-btn" class="btn btn-green">Convert SVG</button>
+  <button id="clear-all" class="btn btn-red">Clear All</button>
+</div>
+
+
+  </div>
+   
     </div>
   </section>
+  <hr />
+<section class="seo-content mt-5">
+
+<div class="container">
+ 
+<h2>Free Image to SVG Converter Online</h2>
+<p>
+Convert raster images like JPG and PNG into SVG format easily using our free online tool.
+SVG files are scalable vector graphics that maintain quality at any size, making them perfect for logos, icons, and web graphics.
+</p>
+
+<h2>Why Convert Images to SVG?</h2>
+<ul>
+<li>Infinite scalability without quality loss</li>
+<li>Lightweight file size</li>
+<li>Perfect for logos and UI icons</li>
+<li>SEO-friendly vector graphics</li>
+</ul>
+
+<h2>How to Convert JPG or PNG to SVG</h2>
+<ol>
+<li>Upload your image</li>
+<li>Click convert</li>
+<li>Download SVG file or copy code</li>
+</ol>
+
+<h2>FAQ</h2>
+
+<h3>Is this SVG converter free?</h3>
+<p>Yes, it is completely free and works in your browser.</p>
+
+<h3>Are my images uploaded?</h3>
+<p>No, everything is processed locally in your browser.</p>
+
+<h3>Does it create real vector SVG?</h3>
+<p>This tool creates simplified SVG output. For complex tracing, advanced tools may be required.</p>
+
+</div>
+
 </section>
-<!-- InstanceEndEditable -->
+
+	</main>
+     
+ 
+
+  <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer  role="contentinfo" class="footer light">
   <div class="clearfix"></div>
@@ -225,9 +405,220 @@
 </footer>
 <div class="clearfix"></div> 
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
-<!-- InstanceBeginEditable name="EditRegion5" --> 
-<script src="../terms/js/bootstrap.bundle.min.js"></script> 
-<!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="EditRegion5" -->
+<script src="../image-converter/js/bootstrap.bundle.min.js"></script>
+ 
+ 
+ 
+ 
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+const dropArea = document.getElementById('drop-area');
+const fileInput = document.getElementById('upload');
+const addBtn = document.getElementById('add-files');
+const fileList = document.getElementById('file-list');
+const convertBtn = document.getElementById('convert-btn');
+const clearBtn = document.getElementById('clear-all');
+
+let files = [];
+
+/* PROGRESS */
+function showProgress(text) {
+  document.getElementById('progress-container').style.display = 'block';
+  document.getElementById('progress-text').textContent = text + ' 0%';
+}
+
+function animateProgress(duration) {
+  return new Promise(resolve => {
+    const bar = document.getElementById('progress-bar');
+    const text = document.getElementById('progress-text');
+
+    let start = null;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      let progress = timestamp - start;
+      let percent = Math.min((progress / duration) * 100, 100);
+
+      bar.style.width = percent + '%';
+      text.textContent = Math.floor(percent) + '%';
+
+      if (progress < duration) {
+        requestAnimationFrame(step);
+      } else resolve();
+    }
+
+    requestAnimationFrame(step);
+  });
+}
+
+function hideProgress() {
+  document.getElementById('progress-container').style.display = 'none';
+}
+
+/* VALIDATION */
+function isValid(file) {
+  const name = file.name.toLowerCase();
+  return name.endsWith('.png') || name.endsWith('.jpg') || name.endsWith('.jpeg');
+}
+
+/* DRAG DROP */
+['dragover'].forEach(e=>{
+  dropArea.addEventListener(e, ev=>{
+    ev.preventDefault();
+    dropArea.classList.add('dragover');
+  });
+});
+
+['dragleave','drop'].forEach(e=>{
+  dropArea.addEventListener(e, ev=>{
+    ev.preventDefault();
+    dropArea.classList.remove('dragover');
+  });
+});
+
+dropArea.addEventListener('drop', e=>{
+  handleFiles(e.dataTransfer.files);
+});
+
+addBtn.onclick = ()=> fileInput.click();
+
+fileInput.onchange = e => handleFiles(e.target.files);
+
+/* HANDLE FILES */
+async function handleFiles(selected){
+
+  showProgress("Uploading");
+  await animateProgress(3000);
+
+  Array.from(selected).forEach(file=>{
+
+    const card = document.createElement('div');
+    card.className = 'file-card';
+
+    const header = document.createElement('div');
+    header.className = 'file-header';
+
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+
+    const name = document.createElement('div');
+    name.textContent = file.name;
+
+    header.appendChild(img);
+    header.appendChild(name);
+
+    const remove = document.createElement('button');
+    remove.className = 'btn btn-red';
+    remove.textContent = 'Remove';
+
+    remove.onclick = ()=>{
+      card.remove();
+      files = files.filter(f=>f!==file);
+    };
+
+    if(isValid(file)) files.push(file);
+
+    card.appendChild(header);
+    card.appendChild(remove);
+
+    fileList.appendChild(card);
+
+  });
+
+  hideProgress();
+}
+
+/* CONVERT */
+convertBtn.onclick = async ()=>{
+
+  const valid = files.filter(isValid);
+
+  if(!valid.length){
+    alert("Upload valid images");
+    return;
+  }
+
+  showProgress("Converting");
+  await animateProgress(10000);
+
+  fileList.innerHTML = '';
+
+  valid.forEach(file=>{
+
+    const reader = new FileReader();
+
+    reader.onload = e=>{
+
+      const img = new Image();
+      img.src = e.target.result;
+
+      img.onload = ()=>{
+
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${img.width}" height="${img.height}">
+<image href="${e.target.result}" width="${img.width}" height="${img.height}"/></svg>`;
+
+        const card = document.createElement('div');
+        card.className = 'file-card';
+
+        const textarea = document.createElement('textarea');
+        textarea.value = svg;
+
+        const actions = document.createElement('div');
+        actions.className = 'file-actions';
+
+        const copy = document.createElement('button');
+        copy.className = 'btn btn-green';
+        copy.textContent = 'Copy';
+
+        copy.onclick = ()=>{
+          navigator.clipboard.writeText(svg);
+          copy.textContent = 'Copied ✔';
+          setTimeout(()=>copy.textContent='Copy',2000);
+        };
+
+        const download = document.createElement('button');
+        download.className = 'btn btn-green';
+        download.textContent = 'Download';
+
+        download.onclick = ()=>{
+          const blob = new Blob([svg]);
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = file.name + ".svg";
+          a.click();
+        };
+
+        const remove = document.createElement('button');
+        remove.className = 'btn btn-red';
+        remove.textContent = 'Remove';
+        remove.onclick = ()=> card.remove();
+
+        actions.append(copy,download,remove);
+
+        card.append(textarea,actions);
+        fileList.appendChild(card);
+      };
+    };
+
+    reader.readAsDataURL(file);
+
+  });
+
+  hideProgress();
+};
+
+/* CLEAR */
+clearBtn.onclick = ()=>{
+  files=[];
+  fileList.innerHTML='';
+};
+
+});
+</script><!-- InstanceEndEditable --> 
  
 <!--<script>
 		const btn = document.getElementById("togglemeu");

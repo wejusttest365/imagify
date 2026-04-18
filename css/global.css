@@ -168,6 +168,11 @@ button#togglemeu {
     border-radius: 2px;
     border: 1px solid #ccc;
     font-size: 18px;
+    width: 30px;
+    height: 30px;
+}
+.bg-gray {
+    background: #efefef;
 }
 /* ==========================================================================
    HEADER & brand BASE
@@ -745,4 +750,9 @@ footer .h3 {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+@media (min-width:1200px){
+	.container-fluid {
+    max-width: 1200px;
+}
 }
