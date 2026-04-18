@@ -236,7 +236,7 @@ button.accordion-button {
      font-size: 20px;
      color: var(--accent);
  }
-
+img {max-width:100%}
  .section .content {
      color: #243b53;
      line-height: 1.45

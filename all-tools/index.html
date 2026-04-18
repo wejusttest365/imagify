@@ -35,154 +35,216 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <style>
- 
-  
-.hero {
-    background: linear-gradient(261deg, #00b6d5, #00258d);
-    color: #fff;
-    padding: 70px 0;
-}
-.hero .btn {
-    background: #ffffff;
-    color: #000000;
-    padding: 12px 18px;
-    border-radius: 10px;
-    display: inline-block;
-    font-weight: bold;
-}
+   <style>
+    .wto-tools-page{
+      --primary:#1e73ff;
+      --primary-dark:#1259cf;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --shadow:0 10px 30px rgba(0,0,0,.07);
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      padding:40px 15px 60px;
+    }
 
-.hero-grid {
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:40px;
-  align-items:center
-}
+    .wto-wrap{
+      max-width:1250px;
+      margin:auto;
+    }
 
-.hero h1 {
-  font-size:52px;
-  line-height:1.1
-}
+    .wto-hero{
+      text-align:center;
+      margin-bottom:28px;
+    }
 
-.hero p {
-  margin:18px 0;
-  font-size:18px;
-  opacity:.95
-}
+    .wto-hero h1{
+      font-size:38px;
+      line-height:1.2;
+      margin:0 0 12px;
+      font-weight:800;
+    }
 
-.badge {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 20px;
-    font-size: 19px;
-    text-align: left;
-}
+    .wto-hero p{
+      max-width:820px;
+      margin:auto;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.7;
+    }
 
-.search-box {
-  background:#fff;
-  color:#111;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,.12)
-}
+    .wto-search{
+      margin:28px auto 35px;
+      max-width:760px;
+      position:relative;
+    }
 
-.search-box input {
-  width:100%;
-  padding:14px;
-  border:1px solid #ddd;
-  border-radius:12px;
-  font-size:16px
-}
+    .wto-search input{
+      width:100%;
+      height:58px;
+      border:2px solid var(--border);
+      border-radius:14px;
+      padding:0 18px 0 52px;
+      font-size:16px;
+      outline:none;
+      background:#fff;
+    }
 
-.quick {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-top:14px
-}
+    .wto-search input:focus{
+      border-color:var(--primary);
+    }
 
-.quick div {
-    background: #d8e4ff;
-    padding: 12px;
-    border-radius: 12px;
-    cursor: pointer;
-    text-align: center;
-}
-.quick div:hover {
-  background: linear-gradient(261deg, #00b6d5, #00258d);
-  color: #fff;
-}
-.quick div a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    text-align: center;
+    .wto-search svg{
+      position:absolute;
+      left:18px;
+      top:18px;
+      width:22px;
+      height:22px;
+      fill:#8b8b8b;
+    }
 
-}
-.quick div:hover a { 
-  color: #fff;
- 
-}
-   
-.title {
-  font-size:34px;
-  margin-bottom:25px
-}
+    .wto-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:22px;
+      margin-bottom:45px;
+    }
 
-.grid {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px
-}
+    .wto-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
 
-.card {
-  background:#fff;
-  padding:22px;
-  border-radius:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,.06);
-  transition:.2s
-}
+    .wto-card h2{
+      margin:0 0 16px;
+      font-size:22px;
+      color:var(--primary);
+    }
 
-.card:hover {
-  transform:translateY(-5px)
-}
+    .wto-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
 
-.card h3 {
-  font-size:20px
-}
+    .wto-list li{
+      border-top:1px solid #f1f1f1;
+    }
 
-.card p {
-  font-size:14px;
-  color:#64748b;
-  margin:10px 0 16px
-}
+    .wto-list li:first-child{
+      border-top:none;
+    }
 
- 
- 
-@media(max-width:900px) {
-  .hero-grid,.grid,.footer-grid {
-  grid-template-columns:1fr 1fr
-}
+    .wto-list a{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:13px 0;
+      color:var(--text);
+      text-decoration:none;
+      font-size:15px;
+      font-weight:700;
+      gap:10px;
+    }
 
-.hero h1 {
-  font-size:40px
-}
-}
+    .wto-list a:hover{
+      color:var(--primary);
+    }
 
-@media(max-width:700px) {
+    .wto-arrow{
+      color:#9ca3af;
+      font-size:18px;
+    }
 
+    .wto-info{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:22px;
+      margin-top:20px;
+    }
 
-.hero-grid,.grid,.footer-grid {
-  grid-template-columns:1fr
-}
+    .wto-box{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
 
-.hero h1 {
-  font-size:34px
-}
-}
+    .wto-box h3{
+      margin-top:0;
+      font-size:22px;
+      margin-bottom:14px;
+    }
 
+    .wto-box p,.wto-box li{
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
+    }
 
+    .wto-box ul{
+      padding-left:18px;
+      margin:0;
+    }
+
+    .wto-stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:15px;
+      margin:28px 0 38px;
+    }
+
+    .wto-stat{
+      background:#fff;
+      border-radius:14px;
+      padding:18px;
+      text-align:center;
+      border:1px solid var(--border);
+    }
+
+    .wto-stat strong{
+      display:block;
+      font-size:28px;
+      color:var(--primary);
+      margin-bottom:6px;
+    }
+
+    .wto-seo{
+      margin-top:45px;
+      background:#fff;
+      border-radius:18px;
+      padding:28px;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
+    .wto-seo h2{
+      margin-top:0;
+      font-size:28px;
+    }
+
+    .wto-seo p{
+      color:var(--muted);
+      line-height:1.9;
+      font-size:16px;
+    }
+
+    @media(max-width:768px){
+      .wto-hero h1{
+        font-size:30px;
+      }
+      .wto-search input{
+        height:52px;
+      }
+    }
+	 .tool-card::before {display:none;}
   </style>
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
@@ -298,396 +360,151 @@
   <!-- Sevices section -->
   <main  role="main" id="content">
    <!-- Services -->
-<section class='hero'>
-<div class='container hero-grid'>
-<div>
-<h1 style="color:#fff">Free Online PDF, Image & File Tools</h1>
-<p>Fast, secure and easy browser-based tools to merge PDFs, compress files, convert images and boost productivity.</p>
-<a href='https://webtoolocean.com/all-tools/' class='btn'>Explore Tools</a>
-<div class='badge'><div>✓ No Signup</div><div>✓ Fast Processing</div><div>✓ Mobile Friendly</div><div>✓ Secure Tools</div></div>
-</div>
-<div class='search-box'>
-<h2 class="h2 text-uppercase text-center">Popular Tools</h2>
-<!--<input type='text' id='search' placeholder='Search tools e.g. Merge PDF'>-->
-<div class='quick'>
-<div><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></div>
-<div><a href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages">Reorder PDF</a></div> 
-<div><a href="https://webtoolocean.com/image-tools/convert-image/">PNG to JPG</a></div>
-<div><a href="https://webtoolocean.com/image-tools/convert-image/">WEBP to JPG</a></div>
-<div><a href="https://webtoolocean.com/css-tools/clip-image-css/">Clip Image </a></div>
-<div><a href="https://webtoolocean.com/image-tools/compress-image/">Compress Image</a></div>
-<div><a href="https://webtoolocean.com/css-tools/css-formatter">Format CSS</a></div>
-<div><a href="https://webtoolocean.com/developer-tools/html-formatter">Format HTML</a></div> 
+ <!-- WebToolOcean Explore Tools Page Body Content Only -->
+<!-- Paste inside your website body area (No header/footer included) -->
 
-</div>
-</div>
+<section class="wto-tools-page" aria-labelledby="toolsPageTitle">
+  
+<div class="container">
+  <div class="wto-wrap">
+
+    <!-- HERO -->
+    <div class="wto-hero">
+      <h1 id="toolsPageTitle">Explore All Free Online Tools – WebToolOcean</h1>
+      <p>
+        Discover fast, secure and easy-to-use browser tools for PDFs, images, coding, productivity and daily work.
+        No signup required. Works on desktop and mobile.
+      </p>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="wto-search" role="search">
+      <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+      <input type="text" id="toolSearch" placeholder="Search any tool like Merge PDF, JSON Formatter, Resume Builder..." aria-label="Search tools">
+    </div>
+
+    <!-- STATS -->
+    <div class="wto-stats">
+      <div class="wto-stat"><strong>25+</strong> Tools</div>
+      <div class="wto-stat"><strong>100%</strong> Free to Use</div>
+      <div class="wto-stat"><strong>Fast</strong> Browser Based</div>
+      <div class="wto-stat"><strong>Mobile</strong> Friendly</div>
+    </div>
+
+    <!-- TOOLS GRID -->
+    <div class="wto-grid">
+
+      <!-- PDF -->
+      <article class="wto-card tool-card">
+        <h2>PDF Tools</h2>
+        <ul class="wto-list">
+      
+          
+           <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/pdf-tools/split-pdf/">Split PDF <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/pdf-tools/compress-pdf/">Compress PDF <span class="wto-arrow">›</span></a></li>
+        </ul>
+      </article>
+
+      <!-- IMAGE -->
+      <article class="wto-card tool-card">
+        <h2>Image Tools</h2>
+        <ul class="wto-list">
+          <li><a href="https://webtoolocean.com/image-tools/convert-image/">Converter Image <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR) <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress Images <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG Converter <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64 <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image <span class="wto-arrow">›</span></a></li>
+    </ul>
+      </article>
+
+      <!-- CSS -->
+      <article class="wto-card tool-card">
+        <h2>CSS / Design Tools</h2>
+        <ul class="wto-list">
+          <li><a href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/css-tools/multi-box-shadow-generator/">Multi Box Shadow Generator <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/css-tools/clip-image-css/">Clip Image CSS <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/css-tools/css-card-builder/">CSS Card Builder <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator <span class="wto-arrow">›</span></a></li>
+    </ul>
+      </article>
+
+      <!-- DEV -->
+      <article class="wto-card tool-card">
+        <h2>Developer Tools</h2>
+        <ul class="wto-list">
+          <li><a href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/developer-tools/beautify-minify-css/">Beautify / Minify CSS <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/developer-tools/check-css-errors/">Check CSS Errors <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder Decoder <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter <span class="wto-arrow">›</span></a></li>
+    </ul>
+      </article>
+
+      <!-- MORE -->
+      <article class="wto-card tool-card">
+        <h2>More Tools</h2>
+        <ul class="wto-list">
+          <li><a class="dropdown-item" href="https://webtoolocean.com/resume-maker/">Resume Builder <span class="wto-arrow">›</span></a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter <span class="wto-arrow">›</span></a></li>
+                  
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/banner-maker/">Banner Maker <span class="wto-arrow">›</span></a></li>
+    </ul>
+      </article>
+
+    </div>
+
+    <!-- WHY / HOW -->
+    <div class="wto-info">
+
+      <div class="wto-box">
+        <h3>Why Use WebToolOcean?</h3>
+        <ul>
+          <li>Free online tools for everyday work</li>
+          <li>No software installation required</li>
+          <li>Works directly in browser</li>
+          <li>Simple interface for all users</li>
+          <li>Fast results on desktop & mobile</li>
+        </ul>
+      </div>
+
+      <div class="wto-box">
+        <h3>How to Use These Tools</h3>
+        <ul>
+          <li>Select the category you need</li>
+          <li>Open your preferred tool</li>
+          <li>Upload file or enter data</li>
+          <li>Process instantly</li>
+          <li>Download or copy final result</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="wto-seo">
+      <h2>All-in-One Productivity Tools for Everyone</h2>
+      <p>
+        WebToolOcean helps students, freelancers, developers, office users and businesses complete common tasks online.
+        Whether you need to merge PDF files, compress images, format JSON, generate CSS effects or build a resume,
+        our tools are designed for speed, simplicity and convenience.
+      </p>
+      <p>
+        This tools directory lets you browse every available tool in one place so you can quickly find what you need.
+        We continue adding useful new utilities regularly to make WebToolOcean your daily work companion.
+      </p>
+    </div>
+
+  </div>
+
 </div>
 </section>
-   
-   <section class="section py-4">
-   <div class="container">
-   <div class="row">
-   <div class="col-md-8">
-   <h2 class="title">About WebToolOcean</h2><p class="">WebToolOcean is a free online platform that offers practical tools for PDF editing, image conversion, file compression and everyday productivity tasks. Our goal is to make complex file tasks simple for everyone using secure browser-based tools that work instantly without downloads.</p> <p class="">Whether you need to merge PDF files, split pages, compress large documents, convert JPG to PDF or optimize images for websites, WebToolOcean helps students, professionals, businesses and creators save time every day.</p>
-
-</div>
-<div class="col-md-4">
-<img src="images/logo-icon.png" class="img-responsive" alt="Webtoolocean Logo">
-</div>
-</div>
-
-   </div>
-   
-   </section>
-  <!-- FEATURES -->
-  <section class="features-section py-3  bg-gray">
-    <div class="container">
-
-      <div class="text-center mb-5">
-        <h2 class="features-title">Powerful Online Tools – All in One Place</h2>
-        <p class="features-sub">
-          Access a collection of simple, fast, and secure web tools designed to help with everyday tasks — no
-          installation required.
-        </p>
-      </div>
-
-      <div class="row g-4">
-
-        <!-- Feature 1 -->
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">🛠️</div>
-            <h3>Multiple Useful Tools</h3>
-            <p>
-              Explore a growing collection of online tools including resume builders, image utilities, color tools, text
-              tools, and more.
-              Each tool is designed for practical daily use.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">⚡</div>
-            <h3>Fast & Browser-Based</h3>
-            <p>
-              All tools work directly in your web browser.
-              No downloads, no complex setup.
-              Simply open the tool, complete your task, and save your results.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">🔒</div>
-            <h3>Privacy Focused</h3>
-            <p>
-              We prioritize user privacy.
-              Most tools process data locally in your browser and we do not sell personal information to third parties.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">📱</div>
-            <h3>Mobile Friendly</h3>
-            <p>
-              Our tools are optimized for desktop, tablet, and mobile devices,
-              so you can use them anytime, anywhere.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">🧭</div>
-            <h3>Simple & Clean Interface</h3>
-            <p>
-              User-friendly layouts help you complete tasks quickly without distractions or unnecessary complexity.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">🔄</div>
-            <h3>Regular Updates</h3>
-            <p>
-              We continuously improve existing tools and add new features to enhance performance and usability.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-section py-5">
-    <div class="container">
-
-      <div class="text-center mb-5">
-        <h2 class="how-title">How It Works</h2>
-        <p class="how-sub">
-          Using our online tools is simple and straightforward.
-          Follow these easy steps to complete your task quickly and efficiently.
-        </p>
-      </div>
-
-      <div class="row g-4">
-
-        <!-- Step 1 -->
-        <div class="col-md-4">
-          <div class="how-card">
-            <div class="step-number">1</div>
-            <h3>Select a Tool</h3>
-            <p>
-              Choose the tool you need from our collection — whether it's a resume builder,
-              image converter, color picker, or other utility.
-            </p>
-            <ul>
-              <li>No installation required</li>
-              <li>Accessible on all devices</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="col-md-4">
-          <div class="how-card">
-            <div class="step-number">2</div>
-            <h3>Enter or Upload Your Data</h3>
-            <p>
-              Provide the required information or upload your file directly in your browser.
-              Each tool clearly guides you through the process.
-            </p>
-            <ul>
-              <li>Simple user interface</li>
-              <li>Real-time processing</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="col-md-4">
-          <div class="how-card">
-            <div class="step-number">3</div>
-            <h3>Download or Copy Results</h3>
-            <p>
-              Once processing is complete, download your file or copy the output instantly.
-              No unnecessary steps or complex procedures.
-            </p>
-            <ul>
-              <li>Quick export options</li>
-              <li>Easy to use results</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
-
-      <div class="accordion mt-4" id="faqAccordion">
-
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
-Are these tools free to use?
-</button>
-</h2>
-<div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-<div class="accordion-body">
-Yes. All tools on our website are completely free to use including the Resume Builder, Image Converter, CSS Formatter, Web Font Converter and OCR tools.
-</div>
-</div>
-</div>
-
-
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
-Do you save my resume data?
-</button>
-</h2>
-<div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-<div class="accordion-body">
-No. Everything stays in your browser only and is not stored on our servers.
-</div>
-</div>
-</div>
-
-
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
-Do I need to create an account?
-</button>
-</h2>
-<div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-<div class="accordion-body">
-No account or registration is required. You can use all tools instantly without logging in.
-</div>
-</div>
-</div>
-
-
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
-Do you store uploaded files or images?
-</button>
-</h2>
-<div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-<div class="accordion-body">
-No. We do not store or save uploaded images, fonts, or files. All processing happens temporarily during your session.
-</div>
-</div>
-</div>
-
-
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
-What happens to my files after conversion?
-</button>
-</h2>
-<div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-<div class="accordion-body">
-All files are automatically cleared when you refresh or close the page.
-</div>
-</div>
-</div>
-
-
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
-Are my files secure?
-</button>
-</h2>
-<div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-<div class="accordion-body">
-Yes. Your files are processed securely and are not shared with any third parties.
-</div>
-</div>
-</div>
-
-
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq7">
-Can I use these tools on mobile devices?
-</button>
-</h2>
-<div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-<div class="accordion-body">
-Yes. All tools are fully responsive and work on desktop, tablet, and mobile browsers.
-</div>
-</div>
-</div>
-
-
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq8">
-Do I need to install any software?
-</button>
-</h2>
-<div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-<div class="accordion-body">
-No installation is required. All tools work directly in your web browser.
-</div>
-</div>
-</div>
-
-</div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section class="why-section py-5">
-    <div class="container">
-
-      <div class="text-center mb-5">
-        <h2 class="section-title">Why Choose Our Tools?</h2>
-        <p class="section-subtitle">
-          Our platform offers simple, secure, and efficient online tools designed
-          to help you complete everyday digital tasks with confidence.
-        </p>
-      </div>
-
-      <div class="row">
-
-        <!-- 1 -->
-        <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-          <div class="why-card">
-            <i class="fa fa-desktop why-icon"></i>
-            <h3>Modern Interface</h3>
-            <p>Clean layouts designed for clarity and smooth user experience.</p>
-          </div>
-        </div>
-
-        <!-- 2 -->
-        <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-          <div class="why-card">
-            <i class="fa fa-shield why-icon"></i>
-            <h3>Privacy First</h3>
-            <p>Your files stay in your browser. No unnecessary data storage.</p>
-          </div>
-        </div>
-
-        <!-- 3 -->
-        <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-          <div class="why-card">
-            <i class="fa fa-bolt why-icon"></i>
-            <h3>Fast Processing</h3>
-            <p>Quick results for conversions, formatting, and downloads.</p>
-          </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-          <div class="why-card">
-            <i class="fa fa-user why-icon"></i>
-            <h3>No Login Required</h3>
-            <p>Access most tools instantly without creating an account.</p>
-          </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-          <div class="why-card">
-            <i class="fa fa-users why-icon"></i>
-            <h3>For Everyone</h3>
-            <p>Useful for students, professionals, and everyday users.</p>
-          </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-          <div class="why-card">
-            <i class="fa fa-cloud why-icon"></i>
-            <h3>Online & Accessible</h3>
-            <p>Works directly in your browser on desktop and mobile.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  
 
 	</main>
  
@@ -759,7 +576,18 @@ No installation is required. All tools work directly in your web browser.
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
 <!-- InstanceBeginEditable name="EditRegion5" -->
 <script src="js/bootstrap.bundle.min.js"></script>
- 	
+ 	  <script>
+    const search = document.getElementById('toolSearch');
+    const cards = document.querySelectorAll('.tool-card');
+
+    search.addEventListener('keyup', function(){
+      const val = this.value.toLowerCase(); 
+      cards.forEach(card=>{
+        const txt = card.innerText.toLowerCase();
+        card.style.display = txt.includes(val) ? 'block' : 'none';
+      });
+    });
+  </script>
 <!-- InstanceEndEditable --> 
  
 <!--<script>
