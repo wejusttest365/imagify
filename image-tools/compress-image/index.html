@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
-<head>  
+<html lang="en">
+<!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,18 +12,15 @@ PAGE TITLE (Appears in Google Search Results)
 ====================================================== -->
 <title>Image Compressor Online – Compress JPG, PNG, WEBP Free | WebToolOcean</title>
 
-
 <!-- ======================================================
 META DESCRIPTION (Important for SEO & Click Rate)
 ====================================================== -->
 <meta name="description" content="Compress images online for free. Reduce JPG, PNG and WEBP file size without losing quality. Fast and secure image compression tool for websites by WebToolOcean.">
 
-
 <!-- ======================================================
 META KEYWORDS (Not very important for Google but useful)
 ====================================================== -->
 <meta name="keywords" content="image compressor, compress image online, reduce image size, compress jpg, compress png, webp compressor, image optimizer, reduce jpg size, free image compression tool, optimize images for web">
-
 
 <!-- ======================================================
 AUTHOR & ROBOTS
@@ -30,15 +28,12 @@ Robots tells search engines to index the page
 ====================================================== -->
 <meta name="author" content="WebToolOcean">
 <meta name="robots" content="index, follow">
- 
-
 
 <!-- ======================================================
 CANONICAL URL
 Prevents duplicate SEO issues
 ====================================================== -->
 <link rel="canonical" href="https://webtoolocean.com/image-tools/compress-image/">
-
 
 <!-- ======================================================
 OPEN GRAPH (For Facebook / WhatsApp / LinkedIn sharing)
@@ -50,7 +45,6 @@ OPEN GRAPH (For Facebook / WhatsApp / LinkedIn sharing)
 <meta property="og:image" content="https://webtoolocean.com/images/preview.png">
 <meta property="og:site_name" content="WebToolOcean">
 
-
 <!-- ======================================================
 TWITTER CARD SEO
 ====================================================== -->
@@ -59,100 +53,103 @@ TWITTER CARD SEO
 <meta name="twitter:description" content="Reduce image size online for free. Compress JPG, PNG and WEBP images quickly with WebToolOcean image compressor.">
 <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
 
-
 <!-- ======================================================
 GOOGLE SITE VERIFICATION (Optional - if using Search Console)
 ====================================================== -->
 <!--
 <meta name="google-site-verification" content="your_verification_code">
 -->
-	
+
 <!--CSS for the website-->
- 
-  <!-- Dependencies -->
- <link href="../../css/global.css" rel="stylesheet">
-  <link href="../../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../../css/font-awesome.min.css" rel="stylesheet">
-  <link href="../../css/style.css" rel="stylesheet">
-  <link href="../../css/font-convert.css" rel="stylesheet">
+
+<!-- Dependencies -->
+<link href="../../css/global.css" rel="stylesheet">
+<link href="../../css/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/font-awesome.min.css" rel="stylesheet">
+<link href="../../css/style.css" rel="stylesheet">
+<link href="../../css/font-convert.css" rel="stylesheet">
 <style>
-	#fileInput{
-position:absolute;
-opacity:0;
-width:0;
-height:0;
-pointer-events:none;
+#fileInput {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	pointer-events: none;
 }
-.drop-zone{
-border:2px dashed #0d6efd;
-background:#f8fbff;
-transition:0.3s;
+.drop-zone {
+	border: 2px dashed #0d6efd;
+	background: #fff;
+	transition: 0.3s;
 }
-
-.drop-zone.dragover{
-background:#e7f1ff;
-border-color:#0a58ca;
+.drop-zone.dragover {
+	background: #e7f1ff;
+	border-color: #0a58ca;
 }
-  .nav-item.active-font-converter a {
-    color: #fff;
-    background: blue;
-    border-radius: 4px;
-  }
-
-  #dropArea {
-    border: 2px dashed #6c757d;
-    border-radius: 8px;
-    padding: 40px;
-    text-align: center;
-    color: #6c757d;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background 0.2s;
-  }
-
-  #dropArea.dragover {
-    background: #e9ecef;
-  }
-
-  .file-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #dee2e6;
-    padding: 8px 12px;
-    border-radius: 6px;
-    margin-bottom: 6px;
-  }
-
-  .file-item span {
-    word-break: break-all;
-  }
-
-  .previewBox {
-    border: 2px dashed #6c757d;
-    border-radius: 8px;
-    padding: 20px;
-    font-size: 2rem;
-    margin-top: 10px;
-    min-height: 100px;
-  }
-
-  pre {
-    background: #f8f9fa;
-    border-radius: 6px;
-    padding: 10px;
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
-
-  .text-left {
-    text-align: left !important;
-  }
-</style>	  
+.nav-item.active-font-converter a {
+	color: #fff;
+	background: blue;
+	border-radius: 4px;
+}
+#dropArea {
+	border: 2px dashed #6c757d;
+	border-radius: 8px;
+	padding: 40px;
+	text-align: center;
+	color: #6c757d;
+	cursor: pointer;
+	margin-bottom: 20px;
+	transition: background 0.2s;
+}
+#dropArea.dragover {
+	background: #e9ecef;
+}
+.file-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #dee2e6;
+	padding: 8px 12px;
+	border-radius: 6px;
+	margin-bottom: 6px;
+}
+.file-item span {
+	word-break: break-all;
+}
+.previewBox {
+	border: 2px dashed #6c757d;
+	border-radius: 8px;
+	padding: 20px;
+	font-size: 2rem;
+	margin-top: 10px;
+	min-height: 100px;
+}
+pre {
+	background: #f8f9fa;
+	border-radius: 6px;
+	padding: 10px;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+.text-left {
+	text-align: left !important;
+}
+.simple-box h3 {
+    font-size: 21px!important;
+    font-weight: normal !important;
+    margin-bottom: 16px;
+    color: #000!important;
+}
+button.accordion-button {
+    margin: 0;
+}
+#dropZone {
+    background: #ffffff; 
+}
+</style>
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
-	============================================= --> 
-   
+	============================================= -->
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
 
@@ -162,8 +159,8 @@ border-color:#0a58ca;
 <!-- InstanceEndEditable -->
 <link href="../../css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
-<!-- Google tag (gtag.js) --> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -187,56 +184,53 @@ border-color:#0a58ca;
     <div class="container-fluid">
       <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
       <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
-      <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
-      <!-- InstanceEndEditable -->
+        <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="../../images/webtoolocian-logo.png" alt="Web Tool Ocean"></a></div>
+        <!-- InstanceEndEditable -->
         <div class="mainmenubar">
           <nav id="mainmenu" class="">
             <ul>
               <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/">Home</a></li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> Image Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/convert-image/"> Converter Image </a></li> 
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/convert-image/"> Converter Image </a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a></li>
-                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter</a></li> <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG  Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG  Converter</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a></li>
-                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image  </a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image </a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> CSS Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/css-formatter">Beautify / Minify CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/css-formatter">Beautify / Minify CSS</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow Generator</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a></li>
-                  
                 </ul>
               </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> Developer Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/html-formatter">HTML Formatter</a></li>
-        
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/check-css-error">Check CSS Errors</a></li>
-       
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
-				<li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li> 
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li>
                 </ul>
-				  
               </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> PDF Tools <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/merge-pdf">Merge PDF</a></li>
-                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages">Reorder PDF Pages</a></li>  </ul>    </li>
-              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> More <span class="caret"></span> </a> 
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages">Reorder PDF Pages</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="https://webtoolocean.com/" role="button" data-bs-toggle="dropdown"> More <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/resume-maker/">Resume Builder</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
-                  
                   <li><a class="dropdown-item" href="https://webtoolocean.com/banner-maker/">Banner Maker</a></li>
-                   
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a></li>
@@ -247,255 +241,293 @@ border-color:#0a58ca;
     </div>
   </div>
 </header>
-<!-- InstanceBeginEditable name="center" -->
- 
-  <!-- Start dynamic content -->
- <!-- <section id="testimonials">
+<!-- InstanceBeginEditable name="center" --> 
+
+<!-- Start dynamic content --> 
+<!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>-->
-  <!-- End dynamic content -->
-  <div class="clearfix"></div>
-  <!-- End dynamic content --> 
-  
-  <!-- Sevices section -->
-  <main id="content">
-   
-   <section class="py-1">
-  <div class="container py-2">
+  </section>--> 
+<!-- End dynamic content -->
+<div class="clearfix"></div>
+<!-- End dynamic content --> 
 
-    <div class="text-center mb-4">
-      <h1>Free Online Image Compressor</h1>
-      <p class="text-muted">Drag & drop multiple images (JPG, PNG, WebP)</p>
-    </div>
-
-    <!-- DROP ZONE -->
-   <div class="drop-zone mb-3 text-center p-5 border rounded" id="dropZone" style="cursor:pointer;">
-  <p class="mb-0">Drag & Drop Images Here</p>
-  <small class="btn btn-primary mt-2">or Click to Upload</small>
-	   <p>
-<label for="fileInput" class="sr-only">Upload Image</label>
-  <input type="file" id="fileInput" multiple accept="image/*">
-		   </p>
-</div>
-
-    <!-- FILE LIST -->
-    <div class="file-list mb-3">
-      <ul class="list-group" id="fileList"></ul>
-    </div>
-
-    <!-- COMPRESS BUTTON -->
-    <div class="text-center mb-3">
-      <button class="btn btn-primary px-4" id="compressBtn" style="display:none;">
-        Compress Images
-      </button>
-    </div>
-
-    <!-- PROGRESS BAR -->
-    <div id="progressArea" style="display:none;" class="mb-3">
-
-      <div class="progress">
-        <div id="progressBar"
+<!-- Sevices section -->
+<main id="content">
+  <section class="mt-5">
+    <div class="image-conversion">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-sm-8 col-xs-12">
+            <div class="simple-box">
+              <div class="text-center mb-4">
+                <h1>Free Online Image Compressor</h1>
+                <p class="text-muted">Drag & drop multiple images (JPG, PNG, WebP)</p>
+              </div>
+              
+              <!-- DROP ZONE -->
+              <div class="drop-zone mb-3 text-center p-4 border rounded" id="dropZone" style="cursor:pointer;">
+                <p class="mb-0">Drag & drop images here or  </p>
+                <small class="btn btn-primary mt-2">  Click to Upload</small>
+                <p>
+                  <label for="fileInput" class="sr-only">Upload Image</label>
+                  <input type="file" id="fileInput" multiple accept="image/*">
+                </p>
+              </div>
+              
+              <!-- FILE LIST -->
+              <div class="file-list mb-3">
+                <ul class="list-group" id="fileList">
+                </ul>
+              </div>
+              
+              <!-- COMPRESS BUTTON -->
+              <div class="text-center mb-3">
+                <button class="btn btn-primary px-4" id="compressBtn" style="display:none;"> Compress Images </button>
+              </div>
+              
+              <!-- PROGRESS BAR -->
+              <div id="progressArea" style="display:none;" class="mb-3">
+                <div class="progress">
+                  <div id="progressBar"
              class="progress-bar progress-bar-striped progress-bar-animated"
-             style="width:0%">
-          0%
+             style="width:0%"> 0% </div>
+                </div>
+                <p class="text-center mt-2 text-muted"> Optimizing images for best compression. Please wait... </p>
+              </div>
+              
+              <!-- RESULT -->
+              <div class="mt-4 text-center">
+                <h2 id="resultText"><span style="display: none">Result will be shown here</span></h2>
+                <button class="btn btn-success mt-2"
+              id="downloadZip"
+              style="display:none;"> Download ZIP </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="simple-box">
+              <h3>Similar Tools:</h3>
+              <ul class="wto-list">
+                <li> <a href="https://webtoolocean.com/image-tools/convert-image/"
+                    >Converter Image <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/image-to-text-ocr/"
+                    >Image to Text (OCR) <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a href="https://webtoolocean.com/image-tools/compress-image/"
+                    >Compress Images <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/svg-to-image-converter/"
+                    >SVG to Image Converter <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/image-to-svg-converter/"
+                    >Image to SVG Converter <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/favicon-generator/"
+                    >Favicon Generator <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/image-to-base64/"
+                    >Image to Base64 <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/base64-to-image/"
+                    >Base64 to Image <span class="wto-arrow">›</span></a
+                  > </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-0 seo-content">
+    <div class="container">
+      <div>
+        <h2 class="main-title"> Compress Images Online Without Losing Quality</h2>
+        <p> Our free online image compressor allows you to reduce the file size of your images without sacrificing quality. Large image files can slow down websites, increase storage usage and make sharing images difficult. This tool helps you compress JPG, PNG and WEBP images instantly. </p>
+        <p>Whether you are a web developer, designer, blogger or student, optimizing images is important for improving website performance and loading speed. With this tool you can quickly compress multiple images at once directly in your browser without uploading them to any server. </p>
+        
+        <!-- Steps -->
+        <div class="simple-box">
+          <h3>How to Compress Images</h3>
+          <div class="step-grid">
+            <div class="step-card">1. Upload or drag and drop your images.</div>
+            <div class="step-card">2. Click the compress button.</div>
+            <div class="step-card">3. The tool will reduce image size automatically.</div>
+            <div class="step-card">4. Download the compressed images individually or as a ZIP file.</div>
+          </div>
+        </div>
+        
+        <!-- Supported -->
+        <div class="simple-box">
+          <h3>Supported Conversions</h3>
+          <div class="tag-grid"> <span>JPG → PNG → GIF - WEBP → All formats are supported</span> </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-12"> 
+            <!-- FAQ -->
+            <div class="simple-box">
+              <h2>Frequently Asked Questions</h2>
+               <!-- 1 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#imgFaq1">
+            Is this image compressor free?
+          </button>
+        </h3>
+        <div id="imgFaq1" class="accordion-collapse collapse show" data-bs-parent="#imageFaq">
+          <div class="accordion-body">
+            Yes, this tool is completely free to use. You can compress as many images as you want without any limitations.
+          </div>
         </div>
       </div>
 
-      <p class="text-center mt-2 text-muted">
-        Optimizing images for best compression. Please wait...
-      </p>
-
-    </div>
-
-    <!-- RESULT -->
-    <div class="mt-4 text-center">
-      <h2 id="resultText"><span style="display: none">Result will be shown here</span></h2>
-
-      <button class="btn btn-success mt-2"
-              id="downloadZip"
-              style="display:none;">
-        Download ZIP
-      </button>
-    </div>
-
-  </div>
-</section>
-  <section class="why-section py-5 bg-light">
-    <div class="container">
-
-      <div class="mb-5">
-        <h2>Compress Images Online Without Losing Quality</h2>
-
-        <p>
-          Our free online image compressor allows you to reduce the file size of your images without sacrificing
-          quality. Large image files can slow down websites, increase storage usage and make sharing images difficult.
-          This tool helps you compress JPG, PNG and WEBP images instantly.
-        </p>
-
-        <p>
-          Whether you are a web developer, designer, blogger or student, optimizing images is important for improving
-          website performance and loading speed. With this tool you can quickly compress multiple images at once
-          directly in your browser without uploading them to any server.
-        </p>
-
-        <h2>Why Use Our Image Compressor?</h2>
-
-        <ul>
-          <li>Reduce image size without losing quality</li>
-          <li>Supports JPG, PNG and WEBP formats</li>
-          <li>Fast browser-based compression</li>
-          <li>No file upload required – 100% secure</li>
-          <li>Compress multiple images at once</li>
-          <li>Download compressed images instantly</li>
-        </ul>
-
-        <h2>How to Compress Images</h2>
-
-        <ol>
-          <li>Upload or drag and drop your images.</li>
-          <li>Click the compress button.</li>
-          <li>The tool will reduce image size automatically.</li>
-          <li>Download the compressed images individually or as a ZIP file.</li>
-        </ol>
-        <hr />
-        <h2>Frequently Asked Questions</h2>
-
-        <h3>Is this image compressor free?</h3>
-        <p>Yes, this tool is completely free to use. You can compress as many images as you want without any
-          limitations.</p>
-
-        <h3>Does image compression reduce quality?</h3>
-        <p>Our tool uses advanced compression techniques to reduce file size while maintaining the best possible image
-          quality.</p>
-
-        <h3>Which image formats are supported?</h3>
-        <p>This image compressor supports popular formats including JPG, PNG and WEBP.</p>
-
-        <h3>Are my images uploaded to a server?</h3>
-        <p>No. All image compression happens directly in your browser, ensuring your files remain private and secure.
-        </p>
-
-        <h3>Can I compress multiple images at once?</h3>
-        <p>Yes, you can upload multiple images and compress them together. After compression you can download them
-          individually or as a ZIP file.</p>
-
-        <hr />
-        <h2>Optimize Images for Faster Websites</h2>
-
-        <p>
-          Image optimization is one of the most important steps in improving website performance. Large images increase
-          page load time which can negatively impact SEO rankings and user experience. Compressing images reduces file
-          size while maintaining visual quality, helping websites load faster and perform better in search engines.
-        </p>
-        <p>compress image online,
-          reduce image size,
-          jpg compressor,
-          png compressor,
-          webp compressor,
-          optimize images for web,
-          free image compression tool,
-          bulk image compressor</p>
+      <!-- 2 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#imgFaq2">
+            Does image compression reduce quality?
+          </button>
+        </h3>
+        <div id="imgFaq2" class="accordion-collapse collapse" data-bs-parent="#imageFaq">
+          <div class="accordion-body">
+            Our tool uses advanced compression techniques to reduce file size while maintaining the best possible image quality.
+          </div>
+        </div>
       </div>
+
+      <!-- 3 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#imgFaq3">
+            Which image formats are supported?
+          </button>
+        </h3>
+        <div id="imgFaq3" class="accordion-collapse collapse" data-bs-parent="#imageFaq">
+          <div class="accordion-body">
+            This image compressor supports popular formats including JPG, PNG and WEBP.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#imgFaq4">
+            Are my images uploaded to a server?
+          </button>
+        </h3>
+        <div id="imgFaq4" class="accordion-collapse collapse" data-bs-parent="#imageFaq">
+          <div class="accordion-body">
+            No. All image compression happens directly in your browser, ensuring your files remain private and secure.
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#imgFaq5">
+            Can I compress multiple images at once?
+          </button>
+        </h3>
+        <div id="imgFaq5" class="accordion-collapse collapse" data-bs-parent="#imageFaq">
+          <div class="accordion-body">
+            Yes, you can upload multiple images and compress them together. After compression you can download them individually or as a ZIP file.
+          </div>
+        </div>
+      </div>
+             
+            </div>
+          </div>
+        
+        <div class="col-md-6 col-xs-12"> 
+          <!-- Why -->
+          <div class="simple-box">
+            <h3>Why Use Our Image Compressor?</h3>
+            <ul>
+              <li>Reduce image size without losing quality</li>
+              <li>Supports JPG, PNG and WEBP formats</li>
+              <li>Fast browser-based compression</li>
+              <li>No file upload required – 100% secure</li>
+              <li>Compress multiple images at once</li>
+              <li>Download compressed images instantly</li>
+            </ul>
+            <hr />
+             <h3>Optimize Images for Faster Websites</h3>
+              <p> Image optimization is one of the most important steps in improving website performance. Large images increase
+                page load time which can negatively impact SEO rankings and user experience. Compressing images reduces file
+                size while maintaining visual quality, helping websites load faster and perform better in search engines. </p>
+              <p>compress image online,
+                reduce image size,
+                jpg compressor,
+                png compressor,
+                webp compressor,
+                optimize images for web,
+                free image compression tool,
+                bulk image compressor</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </section>
-	</main>
-     
- 
-
-  <!-- InstanceEndEditable -->
+</main>
+<!-- InstanceEndEditable -->
 <div class="clearfix"></div>
- <footer role="contentinfo" class="footer light newfooter">
-
+<footer role="contentinfo" class="footer light newfooter">
   <article class="footer-top">
     <div class="container">
-      <div class="row align-items-center">
-
+      <div class="row align-items-center"> 
+        
         <!-- Brand -->
         <div class="col-md-6 col-sm-12 mb-3">
           <h3 class="footer-logo">Web Tool Ocean</h3>
-          <p class="footer-text">
-            Free online tools for PDF, images, coding, productivity and more.
-            Fast, secure and easy to use on desktop & mobile.
-          </p>
+          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
+            Fast, secure and easy to use on desktop & mobile. </p>
         </div>
-
+        
         <!-- Contact -->
         <div class="col-md-3 col-sm-6 mb-3">
           <h4 class="footer-heading">Contact</h4>
-          <p class="footer-text mb-1">
-            <i class="fa fa-envelope"></i>
-            <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a>
-          </p>
+          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
         </div>
-
+        
         <!-- Social -->
         <div class="col-md-3 col-sm-6 mb-3">
           <h4 class="footer-heading">Follow Us</h4>
-
-          <div class="social-icons">
-
-            <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-
-            <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
-              <i class="fa fa-instagram"></i>
-            </a>
-
-            <a href="https://wa.me/?text=https://webtoolocean.com/" target="_blank" aria-label="WhatsApp">
-              <i class="fa fa-whatsapp"></i>
-            </a>
-
-          </div>
+          <div class="social-icons"> <a href="https://facebook.com/" target="_blank" aria-label="Facebook"> <i class="fa fa-facebook"></i> </a> <a href="https://instagram.com/" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a> <a href="https://wa.me/?text=https://webtoolocean.com/" target="_blank" aria-label="WhatsApp"> <i class="fa fa-whatsapp"></i> </a> </div>
         </div>
-
       </div>
     </div>
   </article>
-
-
+  
   <!-- Bottom Menu -->
   <article id="copyrights">
     <div class="container text-center">
-
-      <p class="copy-text">
-        © Copyright <span id="spanYear">2026</span> Web Tool Ocean | Made With Love
-      </p>
-
-      <p class="footer-links">
-        <a href="https://webtoolocean.com/about/">About Us</a>
-        <span>|</span>
-
-        <a href="https://webtoolocean.com/contact/">Contact Us</a>
-        <span>|</span>
-
-        <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a>
-        <span>|</span>
-
-        <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a>
-        <span>|</span>
-
-        <a href="https://webtoolocean.com/terms-conditions/">Terms & Conditions</a>
-      </p>
-
+      <p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | Made With Love </p>
+      <p class="footer-links"> <a href="https://webtoolocean.com/about/">About Us</a> <span>|</span> <a href="https://webtoolocean.com/contact/">Contact Us</a> <span>|</span> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a> <span>|</span> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a> <span>|</span> <a href="https://webtoolocean.com/terms-conditions/">Terms & Conditions</a> </p>
     </div>
   </article>
-
 </footer>
-  
-<div class="clearfix"></div> 
-<script src="https://webtoolocean.com/js/jquery.js"></script>  
-<!-- InstanceBeginEditable name="EditRegion5" -->
-<script src="js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div class="clearfix"></div>
+<script src="https://webtoolocean.com/js/jquery.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion5" --> 
+<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
+<script src="https://webtoolocean.com/jquery.js"></script> 
 
-  <!-- JSZip -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-
-     
- <script>
+<!-- JSZip --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script> 
+<script>
 let files = [];
 let compressedFiles = [];
 let totalOriginalSize = 0;
@@ -805,9 +837,9 @@ function showResults(zip) {
     }, 1000);
   };
 }
-</script>
+</script> 
 <!-- InstanceEndEditable --> 
- 
+
 <!--<script>
 		const btn = document.getElementById("togglemeu");
 const menu = document.querySelector(".mainmenubar");
@@ -878,7 +910,7 @@ document.addEventListener("keydown", function(e) {
     e.preventDefault();
   }
 });
-</script>-->
+</script>--> 
 
 <script>
  $(document).ready(function(){
@@ -889,7 +921,6 @@ $(".mainmenubar").slideToggle();
 });
 	document.getElementById("spanYear").textContent = new Date().getFullYear();
 </script>
-	 
-
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
