@@ -44,13 +44,13 @@
 <style>
 .main-card {
 	background: #fff;
-	padding: 30px;
+	padding: 15px;
 	border-radius: 14px;
 	box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 .drop-area {
 	border: 2px dashed #0d6efd;
-	padding: 50px;
+	padding: 15px;
 	text-align: center;
 	cursor: pointer;
 	background: #f8fbff;
@@ -81,6 +81,13 @@
 	background: #f8f9fa;
 	padding: 15px;
 	border-radius: 10px;
+}
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -196,9 +203,14 @@
   
   <!-- Sevices section -->
    <main id="content">
-  <section class="py-5">
-    <div class="container">
-      <div class="main-card">
+   <section class="mt-5">
+    <div class="image-conversion">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-sm-8 col-xs-12">
+               <div class="simple-box">
+               
+               <div class="main-card">
         <h1 class="text-center fw-bold">Merge PDF</h1>
         <p class="text-center text-muted">Combine PDFs easily</p>
         <div class="drop-area" id="dropArea">
@@ -214,45 +226,200 @@
           </div>
         </div>
         <div id="fileList"></div>
-        <p id="emptyText" class="text-center text-muted mt-3">No files selected</p>
-        <div class="text-center mt-3">
-          <button class="btn btn-primary" onclick="fileInput.click()">➕ Add More</button>
+        <div class="actions  mt-3"> 
+        <div class="text-center">
+          <button class="btn btn-primary" onclick="fileInput.click()"><span class="fa fa-plus"></span> Add More</button>
           <button class="btn btn-success" id="mergeBtn" style="display:none;">Merge PDF</button>
           <button class="btn btn-primary" id="downloadBtn" style="display:none;">Download</button>
           <button class="btn btn-danger" id="clearBtn" style="display:none;">Clear All</button>
         </div>
+         <p id="emptyText" class="text-center text-muted mt-3">No files selected</p>
+        </div>
+      </div>
+          </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="simple-box">
+              <h3>Similar Tools:</h3>
+
+              <ul class="wto-list">
+               <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/pdf-tools/split-pdf/">Split PDF <span class="wto-arrow">›</span></a></li>
+      <li><a href="https://webtoolocean.com/pdf-tools/compress-pdf/">Compress PDF <span class="wto-arrow">›</span></a></li>
+        </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section class="py-5">
+ 
+ 
+  <!-- How To Use + Why Use Merge PDF Tool -->
+<section class="py-4">
   <div class="container">
-    <h2 class="h2">Frequently Asked Questions (FAQ) - Merge PDF Tool</h2>
-    <hr />
-    <div class="faq-item">
-      <h3>1. How do I merge PDF files online?</h3>
-      <p>Upload your PDF files, arrange them in order, and click the “Merge PDF” button. Your combined file will be ready for download instantly.</p>
+<div class="simple-box">
+    <h2 class="mb-4 fw-bold text-center">How to Use Merge PDF Tool</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h4>1. Upload PDF Files</h4>
+          <p>Select one or multiple PDF files from your device using the upload button.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h4>2. Arrange in Order</h4>
+          <p>Drag and reorder files the way you want pages to appear in the final merged PDF.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h4>3. Merge & Download</h4>
+          <p>Click the Merge PDF button and instantly download your combined PDF file.</p>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <h3>2. Is this PDF merge tool free to use?</h3>
-      <p>Yes, WebToolOcean PDF Merge tool is completely free. No signup or subscription is required.</p>
+
+    <h2 class="mt-5 mb-4 fw-bold text-center">Why Use Our Merge PDF Tool?</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h4>Fast & Easy</h4>
+          <p>Combine PDF files in seconds with a simple user-friendly interface.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h4>100% Free</h4>
+          <p>No signup, no hidden fees, and no software installation required.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h4>Secure Processing</h4>
+          <p>Your files stay private and are processed safely in your browser.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 shadow-sm rounded bg-white h-100">
+          <h4>Keep Original Quality</h4>
+          <p>Merged PDFs keep original formatting, layout, and quality intact.</p>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <h3>3. Is it safe to upload my files?</h3>
-      <p>Yes, your files are processed securely in the browser and are not stored on our servers.</p>
+
+  </div>
+  </div>
+</section>
+ 
+  <!-- FAQ Accordion -->
+<section class="faq-section py-0">
+  <div class="container">
+     <div class="simple-box">
+    <h2 class="text-center mb-4 fw-bold">Frequently Asked Questions</h2>
+
+    <div class="accordion" id="faqAccordion">
+
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            How do I merge PDF files online?
+          </button>
+        </h3>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Upload your PDF files, arrange them in order, and click the <strong>Merge PDF</strong> button. Your combined file will be ready for download instantly.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Is this PDF merge tool free to use?
+          </button>
+        </h3>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, WebToolOcean PDF Merge tool is completely free. No signup or subscription is required.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Is it safe to upload my files?
+          </button>
+        </h3>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, your files are processed securely in the browser and are not stored on our servers.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            Can I merge more than two PDF files?
+          </button>
+        </h3>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, you can merge multiple PDF files at once and rearrange their order before merging.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+            Will the quality of my PDF change after merging?
+          </button>
+        </h3>
+        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            No, the tool preserves original quality, formatting, and resolution of all PDF files.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+            Do I need to install any software?
+          </button>
+        </h3>
+        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            No installation is required. The tool works directly in your browser.
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="faq-item">
-      <h3>4. Can I merge more than two PDF files?</h3>
-      <p>Yes, you can merge multiple PDF files at once and rearrange their order before merging.</p>
-    </div>
-    <div class="faq-item">
-      <h3>5. Will the quality of my PDF change after merging?</h3>
-      <p>No, the tool preserves original quality, formatting, and resolution of all PDF files.</p>
-    </div>
-    <div class="faq-item">
-      <h3>6. Do I need to install any software?</h3>
-      <p>No installation is required. The tool works directly in your browser.</p>
-    </div></div>
-  </section>
+  </div>
+  </div>
+</section>
+ 
+    
+ 
 </main>
  
   <!-- InstanceEndEditable -->
@@ -339,6 +506,8 @@
 <div class="clearfix"></div> 
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
 <!-- InstanceBeginEditable name="EditRegion5" -->
+<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
+ 
  <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script> 
