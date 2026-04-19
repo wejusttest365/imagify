@@ -902,11 +902,11 @@ border-radius:16px;
 border:1px solid #e5e7eb;
 }
 
-.simple-box h3{
-font-size:24px;
-font-weight:800;
-margin-bottom:16px;
-color:#1e73ff;
+.simple-box h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 16px;
+    color: #000;
 }
 .simple-box li a {
     text-decoration: none;
@@ -1166,3 +1166,20 @@ h3.accordion-header {
       gap:15px;
       margin:28px 0 38px;
     }
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.accordion-button::after {
+    background-image: url(../images/up.png) !important;
+    width: 20px;
+    height: 32px;
+    background-size: 100%;
+    transform: rotate(180deg);
+}
+  .accordion-button:not(.collapsed)::after {
+    background-image: url(../images/up.png) !important; 
+    width: 20px;
+    height: 32px;
+    background-size: 100%;
+}
