@@ -238,11 +238,15 @@
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
+  
   <main id="content">
-   
-    <section class="py-5">
-    <h1 class="mb-4 text-center">Convert Image to Text</h1>
-    <div class="container">
+  <section class="mt-5">
+    <div class="image-conversion">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-sm-8 col-xs-12">
+             <div class="simple-box">
+             <h1 class="mb-4 text-center">Convert Image to Text</h1>
       <div id="dropZone">
         <p>Drag & drop an image here, or <br /> <span class="btn btn-primary text-uppercase mt-2"> Click to Select</span></p>
        <label for="imageUpload"  class="sr-only">Upload Image</label><input type="file" id="imageUpload" accept="image/*">
@@ -256,8 +260,189 @@
       <button class="convert" id="convertBtn">Convert</button>
       <button class="reset" id="resetBtn" disabled>Reset</button>
       <button class="convert" id="copyBtn" disabled>Copy Text</button>
+             </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="simple-box">
+              <h2>Similar Tools:</h2>
+              <ul class="wto-list">
+                <li> <a href="https://webtoolocean.com/image-tools/convert-image/"
+                    >Converter Image <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/image-to-text-ocr/"
+                    >Image to Text (OCR) <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a href="https://webtoolocean.com/image-tools/compress-image/"
+                    >Compress Images <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/svg-to-image-converter/"
+                    >SVG to Image Converter <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/image-to-svg-converter/"
+                    >Image to SVG Converter <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/favicon-generator/"
+                    >Favicon Generator <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/image-to-base64/"
+                    >Image to Base64 <span class="wto-arrow">›</span></a
+                  > </li>
+                <li> <a
+                    href="https://webtoolocean.com/image-tools/base64-to-image/"
+                    >Base64 to Image <span class="wto-arrow">›</span></a
+                  > </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+  <section class="mt-0">
+    <div class="container">
+      <div>
+       <!-- <h2 class="main-title"> Compress Images Online Without Losing Quality</h2>
+        <p> Our free online image compressor allows you to reduce the file size of your images without sacrificing quality. Large image files can slow down websites, increase storage usage and make sharing images difficult. This tool helps you compress JPG, PNG and WEBP images instantly. </p>
+        <p>Whether you are a web developer, designer, blogger or student, optimizing images is important for improving website performance and loading speed. With this tool you can quickly compress multiple images at once directly in your browser without uploading them to any server. </p>-->
+        
+        <!-- Steps -->
+        <div class="simple-box">
+         <div class="text-center mb-3"> <h3>How It Works</h3>
+          Upload your image and click "Convert" to extract text. The process is fully interactive and controlled by you.
+          </div>
+          <div class="step-grid">
+            <div class="step-card"> 
+          <h3>Upload Image</h3>
+          <p>Drag and drop or select an image containing text.</p>
+        </div> 
+            <div class="step-card"><h3>Click Convert</h3>
+<p>Start OCR processing manually at your convenience.</p></div>
+            <div class="step-card"><h3>Copy & Use</h3>
+<p>Extracted text can be copied or used in your documents.</p></div>
+            
+          </div>
+        </div>
+     
+        <div class="row">
+          <div class="col-md-6 col-xs-12"> 
+            <!-- FAQ -->
+            <div class="simple-box">
+              <h2>Frequently Asked Questions</h2>
+              <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ocrFaq1">
+            What is Image to Text OCR?
+          </button>
+        </h3>
+        <div id="ocrFaq1" class="accordion-collapse collapse show" data-bs-parent="#ocrFaq">
+          <div class="accordion-body">
+            Image to Text OCR is a tool that extracts editable text from images using Optical Character Recognition technology.
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ocrFaq2">
+            Is this OCR tool free to use?
+          </button>
+        </h3>
+        <div id="ocrFaq2" class="accordion-collapse collapse" data-bs-parent="#ocrFaq">
+          <div class="accordion-body">
+            Yes, this Image to Text OCR tool is completely free and works directly in your browser.
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ocrFaq3">
+            Which image formats are supported?
+          </button>
+        </h3>
+        <div id="ocrFaq3" class="accordion-collapse collapse" data-bs-parent="#ocrFaq">
+          <div class="accordion-body">
+            Most popular image formats are supported, including JPG, PNG, WEBP, BMP, and GIF.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ocrFaq4">
+            Are my images uploaded to a server?
+          </button>
+        </h3>
+        <div id="ocrFaq4" class="accordion-collapse collapse" data-bs-parent="#ocrFaq">
+          <div class="accordion-body">
+            No. All OCR processing happens in your browser whenever supported, helping keep your files private and secure.
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ocrFaq5">
+            Can I copy extracted text?
+          </button>
+        </h3>
+        <div id="ocrFaq5" class="accordion-collapse collapse" data-bs-parent="#ocrFaq">
+          <div class="accordion-body">
+            Yes, after text is extracted you can copy, edit, or download the recognized text instantly.
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ocrFaq6">
+            Does OCR work with handwritten text?
+          </button>
+        </h3>
+        <div id="ocrFaq6" class="accordion-collapse collapse" data-bs-parent="#ocrFaq">
+          <div class="accordion-body">
+            OCR works best with clear printed text. Handwritten text may work depending on image quality and handwriting style.
+          </div>
+        </div>
+      </div>
+            </div>
+          </div>
+        
+        <div class="col-md-6 col-xs-12"> 
+          <!-- Why -->
+          <div class="simple-box">
+           <h3 class="fw-bold mb-3">Why Use Our Image to Text OCR Tool?</h2>
+
+    <ul>
+      <li>Extract text from images instantly</li>
+      <li>Supports JPG, PNG, WEBP and more</li>
+      <li>Fast browser-based OCR processing</li>
+      <li>No file upload required – 100% secure</li>
+      <li>Copy and edit extracted text easily</li>
+      <li>Works on mobile, tablet and desktop</li>
+    </ul>
+          
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+  <main id="content">
+   
+ 
   <section class="why-section py-5 text-center bg-light">
     <div class="container">
 		 
@@ -456,7 +641,7 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.1.1/dist/tesseract.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
      
    
 <!-- InstanceEndEditable --> 

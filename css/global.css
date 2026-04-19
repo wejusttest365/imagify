@@ -904,7 +904,7 @@ border:1px solid #e5e7eb;
 
 .simple-box h3 {
     font-size: 20px;
-    font-weight: normal;
+    font-weight: 600;
     margin-bottom: 16px;
     color: #000;
 }
@@ -959,12 +959,7 @@ margin:0;
 
 .simple-box li{margin-bottom: 0;font-size:16px;color:#475569;}
 
-.simple-box p{
-margin-bottom:12px;
-font-size:16px;
-color:#475569;
-line-height:1.8;
-}
+.simple-box p{margin-bottom:12px;font-size:16px;color: #000000;line-height:1.8;}
 
 @media(max-width:768px){
 
@@ -1182,4 +1177,10 @@ button:disabled {
     width: 20px;
     height: 32px;
     background-size: 100%;
+}
+.accordion-item button {
+    margin: 0;
+}
+.step-card h3 {
+    color: #0034ad;
 }
