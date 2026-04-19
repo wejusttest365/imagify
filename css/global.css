@@ -957,11 +957,7 @@ box-shadow:0 6px 14px rgba(30,115,255,.08);
 margin:0; 
 }
 
-.simple-box li{
-margin-bottom:10px;
-font-size:16px;
-color:#475569;
-}
+.simple-box li{margin-bottom: 0;font-size:16px;color:#475569;}
 
 .simple-box p{
 margin-bottom:12px;
@@ -1115,7 +1111,7 @@ h3.accordion-header {
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:13px 0;
+      padding: 6px 0;
       color:var(--text);
       text-decoration:none;
       font-size:15px;
