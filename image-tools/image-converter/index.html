@@ -13,13 +13,12 @@
 <meta name="author" content="WebToolOcean">
 <meta name="robots" content="index, follow">
 	
-<link rel="canonical" href="https://webtoolocean.com/image-converter.html">
-	
+ 	
 <!--Open Graph (Facebook / LinkedIn Sharing)-->
 <meta property="og:title" content="Free Image Converter Online – JPG, PNG, WEBP, GIF">
 <meta property="og:description" content="Convert images online between JPG, PNG, WEBP and GIF formats instantly. Free and secure image converter tool by WebToolOcean.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://webtoolocean.com/image-tools/image-converter/index.html">
+<meta property="og:url" content="">
 <meta property="og:site_name" content="WebToolOcean">
 <meta property="og:image" content="https://webtoolocean.com/images/preview.png">	
 <!--Twitter SEO Tags-->
@@ -28,7 +27,7 @@
 <meta name="twitter:description" content="Convert JPG, PNG, WEBP, GIF and other image formats instantly with WebToolOcean free image converter.">
 <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
 <!--Extra SEO Tag (Recommended)-->	
-<link rel="canonical" href="https://webtoolocean.com/image-tools/image-converter/index.html">
+<link rel="canonical" href="https://webtoolocean.com/image-tools/image-convert/">
 <meta name="theme-color" content="#0f172a">
 	
 <!--CSS for the website-->
@@ -38,23 +37,8 @@
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
   <link href="../../css/style.css" rel="stylesheet">
-  <link href="../../css/font-convert.css" rel="stylesheet">
 	  <link href="../../css/image-convertor.css" rel="stylesheet">
-	  <style>
-	  .simple-box ul {
-    padding: 0;
-}
-
-.simple-box ul li a {
-    text-decoration: none;
-}
-
-.simple-box ul li a span {
-    float: left;
-    margin-right: 8px;
-    font-size: 16px;
-}
-</style>
+	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
@@ -129,6 +113,7 @@
        
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
 				<li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li> 
+                <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
                 </ul>
 				  
               </li>
@@ -136,15 +121,15 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/merge-pdf">Merge PDF</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages">Reorder PDF Pages</a></li>  </ul>    </li>
-              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> More <span class="caret"></span> </a> 
+             <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> More <span class="caret"></span> </a> 
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/resume-maker/">Resume Builder</a></li>
-                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
+                  
                   
                   <li><a class="dropdown-item" href="https://webtoolocean.com/banner-maker/">Banner Maker</a></li>
                    
                 </ul>
-              </li>
+              </li>-->
               <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a></li>
             </ul>
           </nav>
@@ -167,143 +152,269 @@
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
-     <main id="content">
-   
-   <section class="my-5">
+      <main id="content">
+  <section class="mt-5">
     <div class="image-conversion">
       <div class="container">
-      <div class="row">
-      <div class="col-md-9  col-sm-8 col-xs-12">
-      <div class="simple-box">
-        <h1>Select the format for Conversion</h1> 
-        <div class="sub-tabs" role="tablist" aria-label="Conversion types">
-          <button role="jpg to png" class="sub-tab active" data-conversion="jpg2png">JPG → PNG</button>
-          <button role="png to jpg" class="sub-tab" data-conversion="png2jpg">PNG → JPG</button>
-          <button role="webp to png" class="sub-tab" data-conversion="webp2png">WEBP → PNG</button>
-            <button class="sub-tab" data-conversion="png2webp">PNG → WEBP</button>
-          <button role="webp to jpg" class="sub-tab" data-conversion="webp2jpg">WEBP → JPG</button>
-          <button class="sub-tab" data-conversion="jpg2webp">JPG → WEBP</button>
+        <div class="row">
+          <div class="col-md-9 col-sm-8 col-xs-12">
+            <div class="simple-box">
+              <h1>Select the format for Conversion</h1>
+              <div
+                class="sub-tabs"
+                role="tablist"
+                aria-label="Conversion types"
+              >
+                <button
+                  role="jpg to png"
+                  class="sub-tab active"
+                  data-conversion="jpg2png"
+                >
+                  JPG → PNG
+                </button>
+                <button
+                  role="png to jpg"
+                  class="sub-tab"
+                  data-conversion="png2jpg"
+                >
+                  PNG → JPG
+                </button>
+                <button
+                  role="webp to png"
+                  class="sub-tab"
+                  data-conversion="webp2png"
+                >
+                  WEBP → PNG
+                </button>
+                <button class="sub-tab" data-conversion="png2webp">
+                  PNG → WEBP
+                </button>
+                <button
+                  role="webp to jpg"
+                  class="sub-tab"
+                  data-conversion="webp2jpg"
+                >
+                  WEBP → JPG
+                </button>
+                <button class="sub-tab" data-conversion="jpg2webp">
+                  JPG → WEBP
+                </button>
 
-          <button role="gif tp jpg" class="sub-tab" data-conversion="gif2jpg">GIF → JPG</button>
+                <button
+                  role="gif tp jpg"
+                  class="sub-tab"
+                  data-conversion="gif2jpg"
+                >
+                  GIF → JPG
+                </button>
+              </div>
+
+              <div id="drop-area" class="drop-area">
+                <p>
+                  <strong>Drag & drop</strong> images here or
+                  <button id="add-files">Choose files</button>
+                </p>
+                <label for="upload" class="sr-only">Upload Image</label
+                ><input
+                  id="upload"
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  style="display: none"
+                />
+                <div class="hint">
+                  Only files matching the selected conversion are accepted.
+                  Invalid files will be shown with ❌ and won't be converted.
+                </div>
+              </div>
+
+              <ul id="file-list" aria-live="polite"></ul>
+
+              <div class="controls">
+                <button id="convert-btn">
+                  Convert Files <span id="spinner">⏳</span>
+                </button>
+
+                <button id="download-zip">Download ZIP</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="simple-box">
+             <h2>Similar Tools:</h2>
+
+              <ul class="wto-list">
+                <li>
+                  <a href="https://webtoolocean.com/image-tools/convert-image/"
+                    >Converter Image <span class="wto-arrow">›</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://webtoolocean.com/image-tools/image-to-text-ocr/"
+                    >Image to Text (OCR) <span class="wto-arrow">›</span></a
+                  >
+                </li>
+                <li>
+                  <a href="https://webtoolocean.com/image-tools/compress-image/"
+                    >Compress Images <span class="wto-arrow">›</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://webtoolocean.com/image-tools/svg-to-image-converter/"
+                    >SVG to Image Converter <span class="wto-arrow">›</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://webtoolocean.com/image-tools/image-to-svg-converter/"
+                    >Image to SVG Converter <span class="wto-arrow">›</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://webtoolocean.com/image-tools/favicon-generator/"
+                    >Favicon Generator <span class="wto-arrow">›</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://webtoolocean.com/image-tools/image-to-base64/"
+                    >Image to Base64 <span class="wto-arrow">›</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://webtoolocean.com/image-tools/base64-to-image/"
+                    >Base64 to Image <span class="wto-arrow">›</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-
-        <div id="drop-area" class="drop-area">
-          <p><strong>Drag & drop</strong> images here or <button id="add-files">Choose files</button></p>
-          <label for="upload" class="sr-only">Upload Image</label><input id="upload" type="file" accept="image/*" multiple style="display:none" />
-          <div class="hint">Only files matching the selected conversion are accepted. Invalid files will be shown with ❌
-            and won't be converted.</div>
-        </div>
-
-        <ul id="file-list" aria-live="polite"></ul>
-
-        <div class="controls">
-          <button id="convert-btn">Convert Files <span id="spinner">⏳</span></button>
-
-
-          <button id="download-zip">Download ZIP</button>
-        </div> 
       </div>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-12"><div class="simple-box">
-<h3>You may like this</h3>
-
-<ul class="wto-list">
-          <li><a href="https://webtoolocean.com/image-tools/convert-image/">Converter Image <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR) <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress Images <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG Converter <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64 <span class="wto-arrow">›</span></a></li>
-      <li><a href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image <span class="wto-arrow">›</span></a></li>
-    </ul>
-</div></div>
-      </div>
-       
     </div>
   </section>
- <section class="seo-content mt-5">
+  <section class="mt-0 seo-content">
+    <div class="container">
+    <div>
+      <h2 class="main-title">Free Image Converter – JPG, PNG, WEBP & GIF</h2>
 
-<div class="container">
+      <p class="top-text">
+        Convert images online in seconds. Fast, free and easy to use with high
+        quality output.
+      </p>
 
-<h2 class="main-title">Free Image Converter – JPG, PNG, WEBP & GIF</h2>
+      <!-- Steps -->
+      <div class="simple-box">
+        <h3>How to Use</h3>
 
-<p class="top-text">
-Convert images online in seconds. Fast, free and easy to use with high quality output.
-</p>
+        <div class="step-grid">
+          <div class="step-card">1. Upload Image</div>
+          <div class="step-card">2. Select Format</div>
+          <div class="step-card">3. Click Convert</div>
+          <div class="step-card">4. Download File</div>
+        </div>
+      </div>
 
+      <!-- Supported -->
+      <div class="simple-box">
+        <h3>Supported Conversions</h3>
 
-<!-- Steps -->
-<div class="simple-box">
-<h3>How to Use</h3>
+        <div class="tag-grid">
+          <span>JPG → PNG</span>
+          <span>PNG → JPG</span>
+          <span>WEBP → PNG</span>
+          <span>WEBP → JPG</span>
+          <span>PNG → WEBP</span>
+          <span>JPG → WEBP</span>
+          <span>GIF → JPG</span>
+        </div>
+      </div>
 
-<div class="step-grid">
-<div class="step-card">1. Upload Image</div>
-<div class="step-card">2. Select Format</div>
-<div class="step-card">3. Click Convert</div>
-<div class="step-card">4. Download File</div>
-</div>
-</div>
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <!-- FAQ -->
+          <div class="simple-box">
+            <h3>FAQ</h3>
 
+            <!-- 1 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq1">
+            What is an Image Converter?
+          </button>
+        </h3>
+        <div id="convFaq1" class="accordion-collapse collapse show" data-bs-parent="#converterFaq">
+          <div class="accordion-body">
+            An image converter is a tool that allows you to change an image from one file format to another, such as converting JPG to PNG or WEBP to JPG.
+          </div>
+        </div>
+      </div>
 
-<!-- Supported -->
-<div class="simple-box">
-<h3>Supported Conversions</h3>
+      <!-- 2 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq2">
+            Is this image converter free?
+          </button>
+        </h3>
+        <div id="convFaq2" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+          <div class="accordion-body">
+            Yes, this online image converter is completely free and works directly in your browser without installing any software.
+          </div>
+        </div>
+      </div>
 
-<div class="tag-grid">
-<span>JPG → PNG</span>
-<span>PNG → JPG</span>
-<span>WEBP → PNG</span>
-<span>WEBP → JPG</span>
-<span>PNG → WEBP</span>
-<span>JPG → WEBP</span>
-<span>GIF → JPG</span>
-</div>
-</div>
+      <!-- 3 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq3">
+            Will my images be uploaded to a server?
+          </button>
+        </h3>
+        <div id="convFaq3" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+          <div class="accordion-body">
+            No. All image conversions are processed in your browser to ensure privacy and security.
+          </div>
+        </div>
+      </div>
 
+      <!-- 4 -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq4">
+            Can I convert many files?
+          </button>
+        </h3>
+        <div id="convFaq4" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+          <div class="accordion-body">
+            Yes, batch conversion is supported, allowing you to convert multiple image files at once.
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <!-- Why -->
+          <div class="simple-box">
+            <h3>Why Use This Tool?</h3>
 
-<div class="row">
-<div class="col-md-6 col-xs-12">
-
-<!-- FAQ -->
-<div class="simple-box">
-<h3>FAQ</h3>
- 
-
-<p><strong>What is an Image Converter?</strong><br />
-An image converter is a tool that allows you to change an image from one file format to another, such as converting JPG to PNG or WEBP to JPG.</p>
-
-<p><strong>Is this image converter free?</strong><br />
-Yes, this online image converter is completely free and works directly in your browser without installing any software.</p>
-
-<p><strong>Will my images be uploaded to a server?</strong><br />
-No. All image conversions are processed in your browser to ensure privacy and security.</p>
-
-<p><strong>Can I convert many files?</strong><br />
- Yes, batch conversion supported.</p>
-
-</div>
-</div>
-<div class="col-md-6 col-xs-12">
-<!-- Why -->
-<div class="simple-box">
-<h3>Why Use This Tool?</h3>
-
-<ul>
-<li>Free forever</li>
-<li>High quality conversion</li>
-<li>Multiple files supported</li>
-<li>Fast processing</li>
-<li>No signup needed</li>
-</ul>
-</div>
-</div>
-
-</div>
-</div>
-</section>
- 
- 
+            <ul>
+              <li>Free forever</li>
+              <li>High quality conversion</li>
+              <li>Multiple files supported</li>
+              <li>Fast processing</li>
+              <li>No signup needed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 </main>
    
 
@@ -392,10 +503,9 @@ No. All image conversions are processed in your browser to ensure privacy and se
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
 <!-- InstanceBeginEditable name="EditRegion5" -->
  
-<script src="../image-converter/js/bootstrap.bundle.min.js"></script> 	
+<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
-
- <script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
   const subTabs = document.querySelectorAll('.sub-tab');
   const uploadInput = document.getElementById('upload');
@@ -691,8 +801,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 });
- 
- </script>	
+</script>
   
 
 

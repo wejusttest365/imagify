@@ -80,6 +80,7 @@
        
                   <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder">Base64 Encoder-Decoder</a></li>
 				<li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li> 
+                <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
                 </ul>
 				  
               </li>
@@ -87,15 +88,15 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/merge-pdf">Merge PDF</a></li>
                   <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages">Reorder PDF Pages</a></li>  </ul>    </li>
-              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> More <span class="caret"></span> </a> 
+             <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> More <span class="caret"></span> </a> 
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://webtoolocean.com/resume-maker/">Resume Builder</a></li>
-                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
+                  
                   
                   <li><a class="dropdown-item" href="https://webtoolocean.com/banner-maker/">Banner Maker</a></li>
                    
                 </ul>
-              </li>
+              </li>-->
               <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a></li>
             </ul>
           </nav>
@@ -190,7 +191,7 @@
 <div class="clearfix"></div> 
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
 <!-- TemplateBeginEditable name="EditRegion5" --> 
-<script src="js/bootstrap.bundle.min.js"></script> 
+<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
 <!-- TemplateEndEditable --> 
  
 <!--<script>
