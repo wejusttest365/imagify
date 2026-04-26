@@ -41,8 +41,7 @@
   <link href="../../css/global.css" rel="stylesheet">
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
-  <link href="../../css/style.css" rel="stylesheet">
-  <link href="../../css/font-convert.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet"> 
  <style>
 
 body{
@@ -109,7 +108,23 @@ padding:30px;
 border-radius:10px;
 box-shadow:0 3px 10px rgba(0,0,0,0.05);
 }
+.visiblearea .preview.text-center {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: start; 
+    margin: 10px 0; 
+    border-radius: 10px;
+}
 
+ .visiblearea .preview.text-center  img {
+    max-width: 100px;
+    margin: 0 !important;
+}
+
+ .visiblearea .preview.text-center p {
+    margin: 0;
+}
 </style> 	  
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
@@ -238,7 +253,7 @@ box-shadow:0 3px 10px rgba(0,0,0,0.05);
 <!-- Upload Area -->
 <div id="dropArea" class="drop-area">
 <p class="mb-2">Drag & Drop Image Here</p>
-<p>or Click to Upload</p>
+<p> <span class="btn btn-primary">Click to Upload</span></p>
 	     <label for="fileInput"  class="sr-only">Upload Image</label>
 <input type="file" id="fileInput" accept="image/*" hidden>
 </div>
@@ -249,13 +264,14 @@ box-shadow:0 3px 10px rgba(0,0,0,0.05);
 </div>
 
 <!-- Image Preview -->
+<div class="visiblearea">
 <div class="preview text-center"></div>
+</div>
 
-<!-- Base64 Output -->
 <div class="mt-4">
   <label for="base64Output"  class="sr-only">For Output</label>
 <textarea id="base64Output" class="form-control" readonly></textarea>
-	 <h2 class="text-center mt-3">Base64 Output</h2> 
+	
 </div>
 
 <!-- Buttons -->
@@ -351,8 +367,9 @@ This tool allows you to convert images into Base64 format instantly in your brow
           <div class="step-card">1. Upload Image</div> 
           <div class="step-card">2. Click Convert</div>
           <div class="step-card">3. Copy the Base64 code.</div>
-          <div class="step-card">4. Use it in HTML, CSS, or APIs.</div>
+          <div class="step-card">4. Use it in HTML, CSS</div>
         </div>
+        <hr />
         
         <h3>Example Usage in HTML</h3>
 
@@ -566,7 +583,8 @@ Yes, Base64 encoded images are usually larger than the original file, but they c
      
   <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
      
-   <script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
 const dropArea = document.getElementById("dropArea");
 const fileInput = document.getElementById("fileInput");
@@ -576,100 +594,177 @@ const output = document.getElementById("base64Output");
 const progress = document.querySelector(".progress");
 const progressBar = document.querySelector(".progress-bar");
 
-dropArea.addEventListener("click", () => fileInput.click());
+/* EXISTING 2 BUTTONS */
+const copyBtn = document.querySelector(".btn.btn-primary.me-2");
+const downloadBtn = document.querySelector(".btn.btn-success");
 
-fileInput.addEventListener("change", handleFile);
+/* CREATE CONVERT BUTTON */
+const convertBtn = document.createElement("button");
+convertBtn.className = "btn btn-warning me-2";
+convertBtn.innerText = "Convert Image";
 
-dropArea.addEventListener("dragover", (e)=>{
-e.preventDefault();
+document.querySelector(".mt-3.text-center").prepend(convertBtn);
+
+let selectedFile = null;
+
+/* DEFAULT */
+progress.style.display = "none";
+output.style.display = "none";
+
+convertBtn.disabled = true;
+copyBtn.disabled = true;
+downloadBtn.disabled = true;
+
+/* CLICK TO UPLOAD */
+dropArea.addEventListener("click", function(){
+fileInput.click();
 });
 
-dropArea.addEventListener("drop", (e)=>{
-e.preventDefault();
-const file = e.dataTransfer.files[0];
-convertToBase64(file);
-});
+/* FILE SELECT */
+fileInput.addEventListener("change", function(e){
 
-function handleFile(){
-const file = fileInput.files[0];
-convertToBase64(file);
+if(e.target.files.length){
+loadFile(e.target.files[0]);
 }
 
-function convertToBase64(file){
+});
 
-if(!file) return;
+/* DRAG */
+dropArea.addEventListener("dragover", function(e){
+e.preventDefault();
+});
 
-progress.style.display="block";
-progressBar.style.width="0%";
+/* DROP */
+dropArea.addEventListener("drop", function(e){
+
+e.preventDefault();
+
+if(e.dataTransfer.files.length){
+loadFile(e.dataTransfer.files[0]);
+}
+
+});
+
+/* LOAD FILE */
+function loadFile(file){
+
+selectedFile = file;
+
+preview.innerHTML = `
+<img src="${URL.createObjectURL(file)}" class="img-fluid rounded mb-2" style="max-height:180px;">
+<p><strong>${file.name}</strong></p>
+`;
+
+convertBtn.disabled = false;
+copyBtn.disabled = true;
+downloadBtn.disabled = true;
+
+output.value = "";
+output.style.display = "none";
+
+}
+
+/* PROGRESS */
+function runProgress(callback){
+
+progress.style.display = "block";
 
 let percent = 0;
 
-const fakeProgress = setInterval(()=>{
+progressBar.style.width = "0%";
+progressBar.innerText = "0%";
+
+const timer = setInterval(function(){
 
 percent += 10;
 
 progressBar.style.width = percent + "%";
+progressBar.innerText = percent + "%";
 
-if(percent >= 90){
-clearInterval(fakeProgress);
+if(percent >= 100){
+
+clearInterval(timer);
+
+setTimeout(function(){
+
+progress.style.display = "none";
+callback();
+
+},300);
+
 }
 
-},300); // smooth progress
+},1000); /* 10 sec */
+
+}
+
+/* CONVERT */
+convertBtn.addEventListener("click", function(){
+
+if(!selectedFile) return;
+
+convertBtn.disabled = true;
+
+runProgress(function(){
 
 const reader = new FileReader();
 
 reader.onload = function(e){
 
-setTimeout(()=>{
+output.value = e.target.result;
+output.style.display = "block";
 
-progressBar.style.width="100%";
-
-const base64 = e.target.result;
-
-output.value = base64;
-
-preview.innerHTML = `<img src="${base64}" class="img-fluid">`;
-
-setTimeout(()=>{
-progress.style.display="none";
-progressBar.style.width="0%";
-},1000);
-
-},3500); // show progress for 3.5 seconds
+copyBtn.disabled = false;
+downloadBtn.disabled = false;
+convertBtn.disabled = false;
 
 };
 
-reader.readAsDataURL(file);
+reader.readAsDataURL(selectedFile);
 
-}
+});
 
-function copyBase64(){
+});
+
+/* COPY FUNCTION */
+window.copyBase64 = function(){
 
 output.select();
+output.setSelectionRange(0,99999);
 document.execCommand("copy");
 
 const msg = document.getElementById("copyMsg");
 
-msg.style.display="block";
+msg.style.display = "block";
 
-setTimeout(()=>{
-msg.style.display="none";
+setTimeout(function(){
+msg.style.display = "none";
 },2000);
 
-}
+};
 
-function downloadBase64(){
+/* DOWNLOAD FUNCTION */
+window.downloadBase64 = function(){
 
-const blob = new Blob([output.value],{type:"text/plain"});
+downloadBtn.disabled = true;
+
+runProgress(function(){
+
+const blob = new Blob([output.value], {type:"text/plain"});
 const a = document.createElement("a");
 
 a.href = URL.createObjectURL(blob);
-a.download="base64.txt";
+a.download = "base64.txt";
 a.click();
 
-}
+downloadBtn.disabled = false;
 
-</script>
+});
+
+};
+
+});
+</script>     
 <!-- InstanceEndEditable --> 
  
 <!--<script>
