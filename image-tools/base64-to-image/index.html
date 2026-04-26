@@ -264,28 +264,40 @@ height:150px;
     <div class="image-conversion">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="simple-box">
-            <h1 class="text-center mb-3">Base64 to Image Converter</h1>
+           <div class="col-md-6 col-sm-6 col-xs-12">
+<div class="simple-box">
+
+<h1 class="text-center mb-3">Base64 to Image Converter</h1>
 
 <p class="text-center text-muted">
 Paste your Base64 code and convert it into an image instantly.
 </p>
 
 <div class="tool-box">
- <label for="base64Input"  class="sr-only">Paste Base64 string here</label>
+
+<label for="base64Input" class="sr-only">Paste Base64 string here</label>
+
 <textarea id="base64Input" class="form-control" placeholder="Paste Base64 string here..."></textarea>
 
-<button class="btn btn-primary mt-3" onclick="convertImage()">Convert to Image</button>
+<button id="convertBtn" class="btn btn-primary mt-3" onclick="convertImage()">
+Convert to Image
+</button>
 
-<div class="progress">
-<div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">0%</div>
+<!-- Spinner -->
+<div id="loaderBox" class="text-center mt-4" style="display:none;">
+
+<div class="spinner-border text-primary" role="status"></div>
+
+<div class="mt-2 fw-semibold" id="loaderText">
+Converting...
 </div>
- 
 
 </div>
-            </div>
-          </div>
+
+</div>
+
+</div>
+</div>
           <div class="col-md-6 col-sm-6 col-xs-12">
                <div class="simple-box">
                
@@ -530,13 +542,15 @@ Yes, after conversion you can download the generated image file to your device i
      
   <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
      
-     <script>
-
-const progress = document.querySelector(".progress");
-const progressBar = document.getElementById("progressBar");
+       
+<script>
 const preview = document.getElementById("preview");
 const downloadBtn = document.getElementById("downloadBtn");
 const successMsg = document.getElementById("successMsg");
+
+const loaderBox = document.getElementById("loaderBox");
+const loaderText = document.getElementById("loaderText");
+const convertBtn = document.getElementById("convertBtn");
 
 function convertImage(){
 
@@ -547,35 +561,28 @@ alert("Please paste Base64 code");
 return;
 }
 
-/* SHOW PROGRESS */
-progress.style.display = "block";
-progressBar.style.width = "0%";
-progressBar.innerText = "Converting... 0%";
+/* START LOADER */
+loaderBox.style.display = "block";
+loaderText.innerText = "Converting...";
 
+convertBtn.disabled = true;
 downloadBtn.style.display = "none";
 successMsg.style.display = "none";
 
-let percent = 0;
+let seconds = 10;
 
-let fakeProgress = setInterval(()=>{
+/* OPTIONAL COUNTDOWN */
+const timer = setInterval(function(){
 
-percent += 10;
+seconds--;
 
-progressBar.style.width = percent + "%";
-progressBar.innerText = "Converting... " + percent + "%";
+loaderText.innerText = "Converting... " + seconds + "s";
 
-if(percent >= 90){
-clearInterval(fakeProgress);
-}
+if(seconds <= 0){
 
-},300);
+clearInterval(timer);
 
-/* FINAL RESULT */
-setTimeout(()=>{
-
-progressBar.style.width = "100%";
-progressBar.innerText = "Converting... 100%";
-
+/* RESULT */
 preview.innerHTML = `<img src="${base64}" class="img-fluid rounded shadow">`;
 
 downloadBtn.style.display = "inline-block";
@@ -590,18 +597,14 @@ link.click();
 };
 
 successMsg.style.display = "block";
-
-setTimeout(()=>{
-
-progress.style.display = "none";
-progressBar.innerText = "0%";
-
-},1000);
-
-},3500);
+loaderBox.style.display = "none";
+convertBtn.disabled = false;
 
 }
 
+},1000);
+
+}
 </script>
 <!-- InstanceEndEditable --> 
  
