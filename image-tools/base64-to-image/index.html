@@ -114,13 +114,23 @@ margin-top:20px;
 text-align:center;
 }
 
+
 .progress{
 display:none;
-height:18px;
+height:18px; /* bigger height */
 margin-top:20px;
+background:#e9ecef;
 border-radius:10px;
 overflow:hidden;
 }
+
+.progress-bar{
+height:100%;
+font-size:12px;
+font-weight:600;
+line-height:18px;
+}
+
 
 .success-msg{
 display:none;
@@ -246,13 +256,17 @@ height:150px;
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
-  <main id="content">
-   
-   <section class="py-5"> 
-
- <div class="container py-1">
-
-<h1 class="text-center mb-3">Base64 to Image Converter</h1>
+  
+     
+ 
+<main id="content">
+  <section class="mt-5">
+    <div class="image-conversion">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="simple-box">
+            <h1 class="text-center mb-3">Base64 to Image Converter</h1>
 
 <p class="text-center text-muted">
 Paste your Base64 code and convert it into an image instantly.
@@ -267,7 +281,14 @@ Paste your Base64 code and convert it into an image instantly.
 <div class="progress">
 <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">0%</div>
 </div>
+ 
 
+</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+               <div class="simple-box">
+               
 <div class="preview-area" id="preview"></div>
 
 <button id="downloadBtn" class="btn btn-success mt-3" style="display:none">Download Image</button>
@@ -275,23 +296,27 @@ Paste your Base64 code and convert it into an image instantly.
 <div class="success-msg" id="successMsg">
 ✔ Image generated successfully
 </div>
+               </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-0 seo-content">
+    <div class="container">
+    <div>
+      <h2 class="main-title">What is Base64 to Image Converter?</h2>
 
-</div>
-
-</div>
-
-
-<!-- SEO CONTENT SECTION -->
-<div class="seo-section">
-  <div class="container mt-1">
-
-<h2>What is Base64 to Image Converter?</h2>
+ 
 
 <p>
 Base64 to Image Converter is a free online tool that allows you to convert Base64 encoded strings into images instantly. Developers often use Base64 encoding to embed images directly inside HTML, CSS, or JSON files.
 </p>
 
-<h2>How to Convert Base64 to Image?</h2>
+      <!-- Steps -->
+      <div class="simple-box">
+      
+ <h3>How to Convert Base64 to Image?</h3>
 
 <ol>
 <li>Paste the Base64 string into the input field.</li>
@@ -299,8 +324,110 @@ Base64 to Image Converter is a free online tool that allows you to convert Base6
 <li>The tool will generate the image preview.</li>
 <li>You can download the image instantly.</li>
 </ol>
+     
+      </div> 
+      <div class="row">
+         <div class="col-md-6 col-xs-12">
 
-<h2>Features of This Tool</h2>
+<!-- FAQ -->
+<div class="simple-box">
+<h3>FAQ</h3>
+
+<div class="accordion" id="converterFaq">
+
+<!-- 1 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq1">
+What is a Base64 to Image Converter?
+</button>
+</h3>
+<div id="convFaq1" class="accordion-collapse collapse show" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+A Base64 to Image Converter is a tool that converts Base64 encoded text back into image files such as JPG, PNG, WEBP, and GIF.
+</div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq2">
+Is this Base64 to Image Converter free?
+</button>
+</h3>
+<div id="convFaq2" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+Yes, this online Base64 to Image Converter is completely free and works directly in your browser without installing any software.
+</div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq3">
+Will my Base64 data be uploaded to a server?
+</button>
+</h3>
+<div id="convFaq3" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+No. All conversions are processed inside your browser to help keep your data private and secure.
+</div>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq4">
+What is Base64 used for?
+</button>
+</h3>
+<div id="convFaq4" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+Base64 is commonly used to store or transfer images inside HTML, CSS, JSON, emails, and web applications.
+</div>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq5">
+Can I preview the converted image?
+</button>
+</h3>
+<div id="convFaq5" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+Yes, most Base64 to Image tools allow you to instantly preview the converted image before downloading it.
+</div>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq6">
+Can I download the converted image?
+</button>
+</h3>
+<div id="convFaq6" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+Yes, after conversion you can download the generated image file to your device in supported formats.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+        <div class="col-md-6 col-xs-12">
+          <!-- Why -->
+          <div class="simple-box">
+           
+<h3>Features of This Tool</h3>
 
 <ul>
 <li>100% free and browser based</li>
@@ -309,15 +436,13 @@ Base64 to Image Converter is a free online tool that allows you to convert Base6
 <li>No upload required</li>
 <li>Secure and private</li>
 </ul>
-
-</div>
-
-</div>
-  </section> 
-	</main>
-     
- 
-
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
   <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
  <footer role="contentinfo" class="footer light newfooter">
@@ -405,67 +530,75 @@ Base64 to Image Converter is a free online tool that allows you to convert Base6
      
   <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
      
-    <script>
+     <script>
 
-const progress = document.querySelector(".progress")
-const progressBar = document.getElementById("progressBar")
-const preview = document.getElementById("preview")
-const downloadBtn = document.getElementById("downloadBtn")
-const successMsg = document.getElementById("successMsg")
+const progress = document.querySelector(".progress");
+const progressBar = document.getElementById("progressBar");
+const preview = document.getElementById("preview");
+const downloadBtn = document.getElementById("downloadBtn");
+const successMsg = document.getElementById("successMsg");
 
 function convertImage(){
 
-let base64 = document.getElementById("base64Input").value.trim()
+let base64 = document.getElementById("base64Input").value.trim();
 
 if(!base64){
-alert("Please paste Base64 code")
-return
+alert("Please paste Base64 code");
+return;
 }
 
-progress.style.display="block"
-progressBar.style.width="0%"
-progressBar.innerText="0%"
+/* SHOW PROGRESS */
+progress.style.display = "block";
+progressBar.style.width = "0%";
+progressBar.innerText = "Converting... 0%";
 
-let percent = 0
+downloadBtn.style.display = "none";
+successMsg.style.display = "none";
+
+let percent = 0;
 
 let fakeProgress = setInterval(()=>{
 
-percent += 10
+percent += 10;
 
-progressBar.style.width = percent + "%"
-progressBar.innerText = percent + "%"
+progressBar.style.width = percent + "%";
+progressBar.innerText = "Converting... " + percent + "%";
 
 if(percent >= 90){
-clearInterval(fakeProgress)
+clearInterval(fakeProgress);
 }
 
-},300)
+},300);
 
+/* FINAL RESULT */
 setTimeout(()=>{
 
-progressBar.style.width="100%"
-progressBar.innerText="100%"
+progressBar.style.width = "100%";
+progressBar.innerText = "Converting... 100%";
 
-preview.innerHTML = `<img src="${base64}" class="img-fluid rounded shadow">`
+preview.innerHTML = `<img src="${base64}" class="img-fluid rounded shadow">`;
 
-downloadBtn.style.display="inline-block"
+downloadBtn.style.display = "inline-block";
 
 downloadBtn.onclick = function(){
 
-let link = document.createElement("a")
-link.href = base64
-link.download = "image.png"
-link.click()
+let link = document.createElement("a");
+link.href = base64;
+link.download = "image.png";
+link.click();
 
-}
+};
 
-successMsg.style.display="block"
+successMsg.style.display = "block";
 
 setTimeout(()=>{
-progress.style.display="none"
-},1000)
 
-},3500)
+progress.style.display = "none";
+progressBar.innerText = "0%";
+
+},1000);
+
+},3500);
 
 }
 
