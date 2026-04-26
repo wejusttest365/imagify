@@ -25,131 +25,14 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Favicon Generator – Create favicon.ico Online">
-<meta name="twitter:description" content="Generate favicon.ico and all favicon sizes instantly.">
-<meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
-
-<!-- Schema --> 
-
-  
+<meta name="twitter:description" content="Generate favicon.ico and all favicon sizes instantly.">  
  <link href="../../css/global.css" rel="stylesheet">
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
   <link href="../../css/font-awesome.min.css" rel="stylesheet">
   <link href="../../css/style.css" rel="stylesheet">
-  <link href="../../css/font-convert.css" rel="stylesheet">	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<style>
-
-.controls{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-.dropzone{
-border:2px dashed #cbd5e1;
-padding:40px;
-cursor:pointer;
-border-radius:8px;
-margin-bottom:20px;
-}
-
-.tool-options{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-margin-bottom:20px;
-}
-
-.preview-row{
-display:flex;
-gap:25px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:15px;
-}
-
-.preview-box{
-background:white;
-padding:15px;
-border-radius:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.06);
-text-align:center;
-}
-
-.preview-box img{
-width:32px;
-height:32px;
-}
-
-.codebox{
-background:#111;
-color:#00ff9c;
-padding:18px;
-border-radius:8px;
-position:relative;
-overflow:auto;
-}
-
-.copybtn{
-position:absolute;
-right:10px;
-top:10px;
-background:#6366f1;
-border:none;
-color:white;
-padding:5px 10px;
-border-radius:6px;
-cursor:pointer;
-width:100px;
-}
-
-button{
-background:#6366f1;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:8px;
-cursor:pointer;
-}
-
-button:disabled{
-background:#9ca3af;
-cursor:not-allowed;
-}
-
-.toast{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#111827;
-color:white;
-padding:14px 18px;
-border-radius:8px;
-display:none;
-align-items:center;
-gap:10px;
-}
-
-.spinner{
-width:18px;
-height:18px;
-border:3px solid rgba(255,255,255,.3);
-border-top:3px solid white;
-border-radius:50%;
-animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-to{transform:rotate(360deg);}
-}
-.favicon-preview {
-    padding: 10px;
-    text-align: center;
-}
-</style>
+  <link href="../../css/font-convert.css" rel="stylesheet">	 
+  
+ 
 
 <!--CSS for the website--> 
  
@@ -266,53 +149,178 @@ to{transform:rotate(360deg);}
 <!-- End dynamic content --> 
 
 <!-- Sevices section -->
- <main id="content">
 
+<main id="content">
+       
+
+<style>
+body{
+background:#f8fafc;
+}
+
+.simple-box{
+background:#fff;
+padding:25px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+margin-bottom:20px;
+}
+
+.dropzone{
+border:2px dashed #cbd5e1;
+padding:24px;
+text-align:center;
+cursor:pointer;
+border-radius:12px;
+background:#fff;
+font-weight:600;
+}
+
+#thumbWrap{
+display:none;
+margin-top:15px;
+padding:10px;
+border:1px solid #eee;
+border-radius:10px;
+background:#fafafa;
+}
+
+.thumb-flex{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+#thumbPreview{
+width:65px;
+height:65px;
+object-fit:contain;
+border:1px solid #ddd;
+border-radius:8px;
+padding:4px;
+background:#fff;
+}
+
+#fileName{
+font-size:14px;
+font-weight:600;
+word-break:break-word;
+}
+
+.preview-row{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.preview-box{
+text-align:center;
+}
+
+.preview-box img{
+width:48px;
+height:48px;
+object-fit:contain;
+border:1px solid #ddd;
+border-radius:8px;
+padding:4px;
+background:#fff;
+}
+
+pre{
+background:#f8fafc;
+border:1px solid #e5e7eb;
+padding:12px;
+border-radius:10px;
+font-size:13px;
+white-space:pre-wrap;
+word-break:break-word;
+}
+
+.btn-space{
+margin-right:8px;
+margin-top:10px;
+}
+</style>
+ 
 <section class="py-5">
 <div class="container">
+<div class="row">
 
-<h1>Favicon Generator</h1>
+<!-- LEFT -->
+<div class="col-md-6">
+<div class="simple-box">
 
-<div class="controls">
+<h1 class="h3 mb-4">Favicon Generator</h1>
 
 <div class="dropzone" id="dropzone">
-Upload Logo (PNG / JPG / SVG)
-	
-<label for="fileInput" class="sr-only">Upload</label>	
+Click or Drop Logo Here
 <input type="file" id="fileInput" hidden accept="image/*,.svg">
 </div>
 
-<div class="tool-options">
-
-<label for="paddingRange" >Padding</label>
-	 
-<input type="range" id="paddingRange" min="0" max="30" value="10">
-
-<label for="bgColor">Background</label>
-<select id="bgColor">
-<option value="transparent">Transparent</option>
-<option value="#ffffff">White</option>
-<option value="#00000">Black</option>
-<option value="#f1f5f9">Light Gray</option>
-</select>
-
+<div id="thumbWrap">
+<div class="thumb-flex">
+<img id="thumbPreview">
+<div id="fileName"></div>
+</div>
 </div>
 
-<button id="downloadZip" disabled>
-Download Favicon Pack
+<div class="mt-3">
+<label class="form-label">Padding</label>
+<input type="range" id="paddingRange" min="0" max="30" value="10" class="form-range">
+
+<label class="form-label mt-3">Background</label>
+<select id="bgColor" class="form-select">
+<option value="transparent">Transparent</option>
+<option value="#ffffff">White</option>
+<option value="#000000">Black</option>
+<option value="#f1f5f9">Light Gray</option>
+</select>
+</div>
+
+<!-- Progress -->
+<div id="progressWrap" style="display:none;" class="mt-4">
+<div id="progressText" class="fw-semibold mb-2">Processing...</div>
+
+<div class="progress">
+<div id="progressBar"
+class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+style="width:0%">
+0%
+</div>
+</div>
+</div>
+
+<div class="mt-3">
+
+<button id="convertBtn" class="btn btn-primary btn-space" disabled>
+Convert Now
+</button>
+
+<button id="downloadZip" class="btn btn-success btn-space" disabled>
+Download Pack
+</button>
+
+<button id="clearBtn" class="btn btn-danger btn-space" style="display:none;">
+Clear
 </button>
 
 </div>
 
+</div>
+</div>
 
-<div class="favicon-preview" id="faviconPreview" style="display:none">
+<!-- RIGHT -->
+<div class="col-md-6">
+<div class="simple-box">
 
-<h3>Preview</h3>
+<div id="faviconPreview" style="display:none;">
+<h3 class="h5 mb-3">Preview</h3>
 
 <div class="preview-row">
 
 <div class="preview-box">
-<p>Browser Tab</p>
+<p>Browser</p>
 <img id="tabPreview">
 </div>
 
@@ -327,53 +335,213 @@ Download Favicon Pack
 </div>
 
 </div>
-
 </div>
 
+<div id="preview" style="display:none;margin-top:25px;">
 
-<div class="preview" id="preview" style="display:none">
+<h3 class="h5">HTML Code</h3>
 
-<h3>HTML Code</h3>
+<button class="btn btn-sm btn-primary mb-2" onclick="copyCode('htmlCode')">
+Copy HTML Code
+</button>
 
-<div class="codebox">
-<button class="copybtn" onclick="copyCode('htmlCode')">Copy</button>
 <pre id="htmlCode"></pre>
-</div>
 
-<h3 style="margin-top:25px;">manifest.json</h3>
+<h3 class="h5 mt-4">manifest.json</h3>
 
-<div class="codebox">
-<button class="copybtn" onclick="copyCode('manifestCode')">Copy</button>
+<button class="btn btn-sm btn-success mb-2" onclick="copyCode('manifestCode')">
+Copy Manifest
+</button>
+
 <pre id="manifestCode"></pre>
-</div>
 
 </div>
 
 </div>
-
-
-<div class="toast" id="toast">
-<div class="spinner"></div>
-<span id="toastText">Processing...</span>
 </div>
 
+</div>
+</div>
 </section>
+  <section class="mt-0 seo-content">
+    <div class="container">
+    <div>
+      <h2 class="main-title">Favicon Generator – Create favicon.ico & App Icons Online</h2>
 
-
-<section class="seo-content bg-light py-5">
-<div class="container">
-
-<h1>Favicon Generator – Create favicon.ico & App Icons Online</h1>
+ 
 
 <p>
 WebToolOcean’s <strong>Favicon Generator</strong> lets you convert any image (PNG, JPG, SVG)
 into a complete set of favicon files required for modern websites and applications.
 </p>
 
-</div>
-</section>
+      <!-- Steps -->
+      <div class="simple-box">
+        <h3>How to Use</h3>
 
+        <div class="step-grid">
+          <div class="step-card">1. Upload your image</div> 
+          <div class="step-card">2. Select padding optional</div>
+          <div class="step-card">3. Click Convert</div>
+          <div class="step-card">4. Download Converted</div>
+        </div>
+      </div> 
+
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <!-- FAQ -->
+           <div class="simple-box">
+<h3>FAQ</h3>
+
+<div class="accordion" id="converterFaq">
+
+<!-- 1 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq1">
+What is a Favicon Generator?
+</button>
+</h3>
+<div id="convFaq1" class="accordion-collapse collapse show" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+A favicon generator is an online tool that converts your logo or image into favicon icons for websites, browser tabs, bookmarks, and mobile devices.
+</div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq2">
+Is this favicon generator free?
+</button>
+</h3>
+<div id="convFaq2" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+Yes, this online favicon generator is completely free and works directly in your browser without installing any software.
+</div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq3">
+Will my image be uploaded to a server?
+</button>
+</h3>
+<div id="convFaq3" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+No. All favicon creation is processed inside your browser to keep your files private and secure.
+</div>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq4">
+Which image formats are supported?
+</button>
+</h3>
+<div id="convFaq4" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+You can upload PNG, JPG, JPEG, SVG, and most common image formats supported by modern browsers.
+</div>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq5">
+What favicon sizes are included?
+</button>
+</h3>
+<div id="convFaq5" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+The tool generates popular favicon sizes like 16x16, 32x32, 48x48, 180x180, 192x192, 512x512, and more.
+</div>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq6">
+Does it create favicon.ico file?
+</button>
+</h3>
+<div id="convFaq6" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+Yes, the generated ZIP pack includes favicon.ico, PNG icon files, and manifest.json for websites.
+</div>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq7">
+Can I use transparent background?
+</button>
+</h3>
+<div id="convFaq7" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+Yes, you can choose transparent background or select a custom background color before generating icons.
+</div>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq8">
+How do I add favicon to my website?
+</button>
+</h3>
+<div id="convFaq8" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
+<div class="accordion-body">
+Download the favicon pack, upload files to your website, and paste the generated HTML code inside your website header section.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <!-- Why -->
+          <div class="simple-box">
+      <h3>Why Use a Favicon Generator?</h3>
+
+<p>
+A favicon generator helps you create professional website icons in multiple sizes for browsers, bookmarks, mobile devices, and app shortcuts. Instead of manually designing each icon size, this tool automatically generates all required favicon files in seconds.
+</p>
+
+<p>
+Favicons improve your website branding and make your site look more trustworthy. When users open multiple tabs, a favicon helps them quickly recognize your website.
+</p>
+
+<p>
+This online favicon generator is simple to use. Upload your logo or image, customize padding and background color, then download a complete favicon pack including PNG icons, favicon.ico, and manifest.json.
+</p>
+
+<p>
+It works directly in your browser, so no software installation is needed. Your uploaded images stay private because processing happens locally on your device.
+</p>
+
+<p>
+Whether you use WordPress, Shopify, Blogger, or a custom HTML website, this tool makes favicon creation fast, easy, and free.
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 </main>
+ 
 <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
  <footer role="contentinfo" class="footer light newfooter">
@@ -459,153 +627,189 @@ into a complete set of favicon files required for modern websites and applicatio
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
 <!-- InstanceBeginEditable name="EditRegion5" --> 
 <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
-    
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+ 
 <script>
+document.addEventListener("DOMContentLoaded",function(){
 
-const sizes=[16,32,48,64,96,128,144,180,192,256,384,512]
+const sizes=[16,32,48,64,96,128,144,180,192,256,384,512];
 
-let image=null
-let generatedIcons=[]
+let image=null;
+let generatedIcons=[];
 
-const paddingRange=document.getElementById("paddingRange")
-const bgColor=document.getElementById("bgColor")
+/* Elements */
+const fileInput=document.getElementById("fileInput");
+const dropzone=document.getElementById("dropzone");
 
-const drop=document.getElementById("dropzone")
-const input=document.getElementById("fileInput")
+const thumbWrap=document.getElementById("thumbWrap");
+const thumbPreview=document.getElementById("thumbPreview");
+const fileName=document.getElementById("fileName");
 
-const preview=document.getElementById("preview")
-const previewUI=document.getElementById("faviconPreview")
+const convertBtn=document.getElementById("convertBtn");
+const downloadBtn=document.getElementById("downloadZip");
+const clearBtn=document.getElementById("clearBtn");
 
-const tabPreview=document.getElementById("tabPreview")
-const bookmarkPreview=document.getElementById("bookmarkPreview")
-const mobilePreview=document.getElementById("mobilePreview")
+const paddingRange=document.getElementById("paddingRange");
+const bgColor=document.getElementById("bgColor");
 
-const downloadBtn=document.getElementById("downloadZip")
+const progressWrap=document.getElementById("progressWrap");
+const progressBar=document.getElementById("progressBar");
+const progressText=document.getElementById("progressText");
 
-const toast=document.getElementById("toast")
-const toastText=document.getElementById("toastText")
+const faviconPreview=document.getElementById("faviconPreview");
+const preview=document.getElementById("preview");
 
+const tabPreview=document.getElementById("tabPreview");
+const bookmarkPreview=document.getElementById("bookmarkPreview");
+const mobilePreview=document.getElementById("mobilePreview");
 
-drop.onclick=()=>input.click()
+/* Upload */
+dropzone.onclick=()=>fileInput.click();
 
-input.onchange=e=>loadImage(e.target.files[0])
+fileInput.onchange=function(e){
+if(e.target.files[0]) loadImage(e.target.files[0]);
+};
 
-drop.ondragover=e=>e.preventDefault()
+dropzone.ondragover=e=>e.preventDefault();
 
-drop.ondrop=e=>{
-e.preventDefault()
-loadImage(e.dataTransfer.files[0])
-}
+dropzone.ondrop=function(e){
+e.preventDefault();
+if(e.dataTransfer.files[0]) loadImage(e.dataTransfer.files[0]);
+};
 
-
-function showToast(msg){
-toast.style.display="flex"
-toastText.textContent=msg
-}
-
-function hideToast(){
-setTimeout(()=>toast.style.display="none",1500)
-}
-
-
+/* Load Image */
 function loadImage(file){
 
-showToast("Loading image...")
+const reader=new FileReader();
 
-let reader=new FileReader()
+reader.onload=function(e){
 
-reader.onload=e=>{
+thumbWrap.style.display="block";
+thumbPreview.src=e.target.result;
+fileName.innerText=file.name;
 
-image=new Image()
+image=new Image();
 
-image.onload=()=>{
+image.onload=function(){
+convertBtn.disabled=false;
+};
 
-generateIcons()
+image.src=e.target.result;
+
+};
+
+reader.readAsDataURL(file);
+}
+
+/* Progress */
+function runProgress(text,callback){
+
+progressWrap.style.display="block";
+progressText.innerText=text;
+
+let width=0;
+
+progressBar.style.width="0%";
+progressBar.innerText="0%";
+
+const timer=setInterval(function(){
+
+width+=10;
+
+progressBar.style.width=width+"%";
+progressBar.innerText=width+"%";
+
+if(width>=100){
+
+clearInterval(timer);
+
+setTimeout(function(){
+
+progressWrap.style.display="none";
+callback();
+
+},300);
 
 }
 
-image.src=e.target.result
-}
-
-reader.readAsDataURL(file)
+},350);
 
 }
 
+/* Convert */
+convertBtn.onclick=function(){
 
+if(!image) return;
+
+convertBtn.disabled=true;
+downloadBtn.disabled=true;
+
+runProgress("Converting...",function(){
+
+generateIcons();
+
+faviconPreview.style.display="block";
+preview.style.display="block";
+
+downloadBtn.disabled=false;
+clearBtn.style.display="inline-block";
+
+});
+
+};
+
+/* Draw Icon */
 function drawIcon(size){
 
-let padding=size*(paddingRange.value/100)
+const padding=size*(paddingRange.value/100);
 
-let canvas=document.createElement("canvas")
-canvas.width=size
-canvas.height=size
+const canvas=document.createElement("canvas");
+canvas.width=size;
+canvas.height=size;
 
-let ctx=canvas.getContext("2d")
+const ctx=canvas.getContext("2d");
 
 if(bgColor.value!=="transparent"){
-ctx.fillStyle=bgColor.value
-ctx.fillRect(0,0,size,size)
+ctx.fillStyle=bgColor.value;
+ctx.fillRect(0,0,size,size);
 }
 
-let drawSize=size-(padding*2)
+const drawSize=size-(padding*2);
 
-ctx.drawImage(image,padding,padding,drawSize,drawSize)
+ctx.drawImage(image,padding,padding,drawSize,drawSize);
 
-return canvas.toDataURL()
-
+return canvas.toDataURL("image/png");
 }
 
-
+/* Generate Icons */
 function generateIcons(){
 
-generatedIcons=[]
+generatedIcons=[];
 
-sizes.forEach(size=>{
-
-let data=drawIcon(size)
+sizes.forEach(function(size){
 
 generatedIcons.push({
 size:size,
-data:data
-})
+data:drawIcon(size)
+});
 
-})
+});
 
-updatePreview()
-generateCode()
+const icon=generatedIcons.find(i=>i.size==32);
 
-downloadBtn.disabled=false
-
-preview.style.display="block"
-previewUI.style.display="block"
-
-showToast("Icons generated!")
-
-hideToast()
-
-}
-
-
-function updatePreview(){
-
-let icon=generatedIcons.find(i=>i.size==32)
-
-tabPreview.src=icon.data
-bookmarkPreview.src=icon.data
-mobilePreview.src=icon.data
-
-}
-
-
-function generateCode(){
+tabPreview.src=icon.data;
+bookmarkPreview.src=icon.data;
+mobilePreview.src=icon.data;
 
 document.getElementById("htmlCode").textContent=
 `<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-<link rel="manifest" href="/manifest.json">`
+<link rel="manifest" href="/manifest.json">`;
 
-let manifest={
+document.getElementById("manifestCode").textContent=
+JSON.stringify({
 name:"Website",
 short_name:"Site",
 icons:[
@@ -615,77 +819,82 @@ icons:[
 theme_color:"#ffffff",
 background_color:"#ffffff",
 display:"standalone"
-}
-
-document.getElementById("manifestCode").textContent=
-JSON.stringify(manifest,null,2)
+},null,2);
 
 }
 
-
+/* Download */
 downloadBtn.onclick=function(){
 
-showToast("Generating ZIP...")
+downloadBtn.disabled=true;
 
-let zip=new JSZip()
+runProgress("Preparing Download...",function(){
 
-generatedIcons.forEach(icon=>{
-zip.file(`favicon-${icon.size}.png`,
+let zip=new JSZip();
+
+generatedIcons.forEach(function(icon){
+
+zip.file(
+"favicon-"+icon.size+".png",
 icon.data.split(",")[1],
-{base64:true})
-})
+{base64:true}
+);
 
-let icoIcon=generatedIcons.find(i=>i.size==32)
+});
 
-zip.file("favicon.ico",
-icoIcon.data.split(",")[1],
-{base64:true})
+zip.generateAsync({type:"blob"}).then(function(content){
 
-let manifest=JSON.parse(
-document.getElementById("manifestCode").textContent
-)
+let a=document.createElement("a");
+a.href=URL.createObjectURL(content);
+a.download="favicon-pack.zip";
+a.click();
 
-zip.file("manifest.json",
-JSON.stringify(manifest,null,2)
-)
+downloadBtn.disabled=false;
 
-zip.generateAsync({type:"blob"}).then(content=>{
+});
 
-let link=document.createElement("a")
+});
 
-link.href=URL.createObjectURL(content)
+};
 
-link.download="favicon-pack.zip"
+/* Clear */
+clearBtn.onclick=function(){
 
-link.click()
+image=null;
+generatedIcons=[];
 
-showToast("Download ready!")
+thumbWrap.style.display="none";
+faviconPreview.style.display="none";
+preview.style.display="none";
+progressWrap.style.display="none";
 
-hideToast()
+fileInput.value="";
 
-})
+convertBtn.disabled=true;
+downloadBtn.disabled=true;
+clearBtn.style.display="none";
 
-}
+};
 
+/* Copy */
+window.copyCode=function(id){
 
-function copyCode(id){
+navigator.clipboard.writeText(
+document.getElementById(id).textContent
+);
 
-let text=document.getElementById(id).textContent
+};
 
-navigator.clipboard.writeText(text)
+/* Changes need reconvert */
+paddingRange.oninput=function(){
+downloadBtn.disabled=true;
+};
 
-showToast("Copied!")
+bgColor.onchange=function(){
+downloadBtn.disabled=true;
+};
 
-hideToast()
-
-}
-paddingRange.addEventListener("input",()=>{
-if(image) generateIcons()
-})
-
-bgColor.addEventListener("change",()=>{
-if(image) generateIcons()
-})
+});
 </script>
  
 <!-- InstanceEndEditable --> 
