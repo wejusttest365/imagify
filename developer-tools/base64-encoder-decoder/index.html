@@ -39,6 +39,9 @@ body {
     border-radius: 12px;
     box-shadow: 0 6px 25px rgba(0,0,0,0.08);
 }
+.form-control { 
+    border: 2px solid #ccc; 
+}
 textarea {
     height: 160px;
     resize: none;
@@ -52,7 +55,7 @@ textarea {
 }
 .success-msg {
     display: none;
-    color: green;
+    color: rgb(0, 82, 0);
     font-weight: 600;
     margin-top: 10px;
 }
@@ -192,7 +195,7 @@ textarea {
 <!-- End dynamic content --> 
 
 <!-- Sevices section -->
-<section id="content">
+<main id="content">
   <section class="py-5">
     <div class="container py-5">
       <h1 class="text-center mb-3">Base64 Encoder / Decoder</h1>
@@ -203,7 +206,7 @@ textarea {
           <!-- INPUT SIDE -->
           
           <div class="col-md-6">
-            <label class="form-label">Input</label>
+            <label for="inputText" class="form-label">Input</label>
             <textarea id="inputText" class="form-control" placeholder="Enter text or Base64 string"></textarea>
             <div class="mt-3">
               <div class="form-check form-check-inline">
@@ -224,7 +227,7 @@ textarea {
           <!-- OUTPUT SIDE -->
           
           <div class="col-md-6">
-            <label class="form-label">Output</label>
+            <label for="outputText" class="form-label">Output</label>
             <textarea id="outputText" class="form-control" readonly></textarea>
             <button class="btn btn-success mt-3" onclick="copyText()"> Copy Result </button>
             <div class="success-msg" id="successMsg"> ✔ Copied successfully </div>
@@ -248,7 +251,7 @@ textarea {
       </div>
     </div>
   </section>
-</section>
+</main>
 <!-- InstanceEndEditable -->
 <div class="clearfix"></div>
  <footer role="contentinfo" class="footer light newfooter">

@@ -147,6 +147,12 @@ margin-bottom:20px;
 </head>
 <style>
 	body {overflow-x: hidden}
+  button#formatBtn.btn.btn-primary {
+    background: #001589 !important;
+}
+ button#formatBtn.btn.btn-success {
+    background: #004e2a !important;
+}
 	</style>
 <body class="">
 <!--ACCESSIBILITY CONTROLS   --> 
@@ -234,7 +240,7 @@ margin-bottom:20px;
   <!-- End dynamic content --> 
   
   <!-- Sevices section -->
-  <section id="content">
+  <main id="content">
    
    <section class="py-5">
       <div class="container">
@@ -250,12 +256,12 @@ Format, beautify and validate JSON data instantly.
 <div class="row">
 
 <!-- INPUT -->
-<div class="col-md-6">
+<div class="col-md-6 col-xs-12">
 
-<label class="form-label">Input JSON</label>
+<label for="inputJSON" class="form-label">Input JSON</label>
 
 <div class="editor">
-<div class="line-numbers" id="lineNumbersInput">1</div>
+<div class="line-numbers" id="lineNumbersInput">1</div> 
 <textarea id="inputJSON"
 oninput="updateLines('inputJSON','lineNumbersInput'); updateStats(); toggleActionButtons(); validateJSONLive();"
 placeholder="Paste JSON here..."></textarea>
@@ -282,9 +288,9 @@ Minify
 </div>
 
 <!-- OUTPUT -->
-<div class="col-md-6">
+<div class="col-md-6 col-xs-12">
 
-<label class="form-label">Formatted JSON</label>
+<label for="outputJSON" class="form-label">Formatted JSON</label>
 
 <div class="editor">
 <div class="line-numbers" id="lineNumbersOutput">1</div>
@@ -344,7 +350,7 @@ JSON Formatter is a tool used to beautify and structure JSON data so it becomes 
 
 </div>
   </section> 
-	</section>
+</main>
      
  
 
