@@ -277,6 +277,23 @@ button#togglemeu {
     margin-right: 6px;
     vertical-align: top;
 }
+
+#mainmenu ul li button.nav-link.dropdown-toggle {
+    padding: 0;
+    height: auto;
+    line-height: normal;
+    display: block;
+    line-height: normal;
+    padding: 10px 8px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: var(--fontOpenSans);
+    border-radius: 4px;
+    position: relative;
+    transition: 0.5s;
+}
 #mainmenu ul ul li {
     border-bottom: 1px solid #eee;
 }
