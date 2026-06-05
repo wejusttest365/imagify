@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+<!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<title>HTML5 interview Questions | WebToolOcean</title>
+
+<!-- Meta Description -->
+<meta name="description" content="Prepare for your HTML5 interview with 60+ commonly asked questions and answers covering HTML5 fundamentals, Semantic Elements, Forms, Accessibility, Canvas, APIs, and more — from beginner to advanced level.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="HTML5 interview questions, HTML interview questions and answers, HTML5 beginner interview questions, HTML5 advanced interview questions, HTML5 semantic elements interview questions, HTML5 forms interview questions, HTML5 accessibility interview questions, HTML5 canvas interview questions, HTML5 APIs interview questions, HTML5 web storage interview questions, HTML5 interview preparation, frontend interview questions">
+<meta name="author" content="WebToolOcean">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="http://webtoolocean.com/resources/html-interview-questions">
+
+<!-- ===================================================== --> 
+
+<!--CSS for the website--> 
+
+<!-- Dependencies -->
+<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
+<style>
+.faq {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.faq .q {
+    padding: 18px 50px 18px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    transition: .3s;
+}
+.faq .a {
+    padding: 0 16px 16px;
+    display: none;
+}
+.faq .q:after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+    font-size: 14px;
+}
+.faq.active .q:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+.faq.active .a {
+    display: block
+}
+</style>
+<!-- InstanceEndEditable -->
+<!-- Stylesheets     
+	============================================= --> 
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+<!-- Document Title   
+	============================================= -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4C1PP726EZ');
+</script>
+<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+     crossorigin="anonymous"></script>
+</head>
+<style>
+	body {overflow-x: hidden}
+	</style>
+<body class="">
+<!--ACCESSIBILITY CONTROLS   --> 
+
+<!--END ACCESSIBILITY CONTROLS   --> 
+<!-- Document Wrapper	  
+	============================================= -->
+<header role="banner"  id="header" class="full-header">
+  <div id="header-wrap">
+    <div class="container-fluid">
+      <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
+      <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
+        <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
+        <!-- InstanceEndEditable -->
+        <div class="mainmenubar">
+          <nav id="mainmenu" class="">
+            <ul>
+              <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/">Home</a> </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> Image Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-converter/">All Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> CSS Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> Developer Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/check-css-error/">Check CSS Errors</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder-Decoder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> PDF Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a> </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- InstanceBeginEditable name="center" --> 
+
+<!-- Start dynamic content --> 
+<!-- <section id="testimonials">
+    <div class="container aniboxes animate__animated text-center">
+      <div id="contentwidget1"></div>
+      <br>
+    </div>
+  </section>--> 
+<!-- End dynamic content -->
+<div class="clearfix"></div>
+<!-- End dynamic content --> 
+
+<!-- Sevices section -->
+<main id="content"> 
+  
+  <!-- SEO Text Section -->
+  <section class="section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-xs-12"> 
+          <!-- HTML5 Interview Questions -->
+          <h1 class="pt-4">Beginner HTML5 Interview Questions</h1>
+          Below are some of the most commonly asked HTML interview questions that help aspiring web developers understand the fundamentals of creating structured and accessible web pages.
+          <div class="faq">
+            <div class="q">What is HTML?</div>
+            <div class="a">
+              <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web using a system of elements and tags.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is HTML5?</div>
+            <div class="a">
+              <p>HTML5 is the fifth and latest version of HTML, introducing semantic elements, multimedia support, new form controls, and powerful browser APIs.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between HTML and HTML5?</div>
+            <div class="a">
+              <p>HTML5 adds semantic elements, native audio/video support, Canvas, Web Storage, Geolocation APIs, and improved form inputs that were not available in older HTML versions.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a DOCTYPE declaration?</div>
+            <div class="a">
+              <p>The DOCTYPE declaration instructs the browser which version of HTML is being used. In HTML5 it is simply written as &lt;!DOCTYPE html&gt;.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is an HTML Element?</div>
+            <div class="a">
+              <p>An HTML element consists of an opening tag, content, and a closing tag that together define a piece of structured content on a webpage.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is an HTML Attribute?</div>
+            <div class="a">
+              <p>Attributes provide additional information about an HTML element, placed inside the opening tag as name-value pairs such as class, id, and href.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between block-level and inline elements?</div>
+            <div class="a">
+              <p>Block-level elements (div, p, h1) start on a new line and take full width; inline elements (span, a, strong) flow within text without breaking the line.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are Semantic Elements in HTML5?</div>
+            <div class="a">
+              <p>Semantic elements like header, footer, article, section, nav, and aside clearly describe their meaning to both browsers and developers.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between div and section?</div>
+            <div class="a">
+              <p>div is a generic non-semantic container; section is a semantic element representing a thematically grouped block of content with a heading.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between article and section?</div>
+            <div class="a">
+              <p>article represents self-contained content that makes sense independently (like a blog post); section groups related content that is part of a larger whole.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the purpose of the alt attribute in images?</div>
+            <div class="a">
+              <p>The alt attribute provides alternative text for an image, displayed when the image fails to load and read by screen readers for accessibility.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between id and class attributes?</div>
+            <div class="a">
+              <p>An id is a unique identifier for a single element on a page; a class can be applied to multiple elements to share styling or behavior.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are void elements in HTML?</div>
+            <div class="a">
+              <p>Void elements are self-closing tags that do not have a closing tag or content, such as &lt;br&gt;, &lt;img&gt;, &lt;input&gt;, &lt;hr&gt;, and &lt;meta&gt;.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the purpose of the meta charset tag?</div>
+            <div class="a">
+              <p>The meta charset tag specifies the character encoding for the HTML document, with UTF-8 being the recommended standard for supporting all characters.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the purpose of the viewport meta tag?</div>
+            <div class="a">
+              <p>The viewport meta tag controls how a webpage is displayed on mobile devices, enabling responsive design by setting the width and initial scale.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is an Anchor tag?</div>
+            <div class="a">
+              <p>The anchor tag &lt;a&gt; creates hyperlinks to other pages, files, email addresses, or locations within the same page using the href attribute.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between relative and absolute URLs?</div>
+            <div class="a">
+              <p>Absolute URLs contain the full path including the domain; relative URLs specify a path relative to the current page's location.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are HTML Lists?</div>
+            <div class="a">
+              <p>HTML provides ordered lists (ol) with numbered items, unordered lists (ul) with bullet points, and description lists (dl) for term-definition pairs.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is an HTML Table?</div>
+            <div class="a">
+              <p>An HTML table organizes data in rows and columns using the table, tr, th, and td elements for structured tabular information.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is an HTML Form?</div>
+            <div class="a">
+              <p>An HTML form collects user input through elements like text fields, checkboxes, radio buttons, and submit buttons, sending data to a server.</p>
+            </div>
+          </div>
+          <h2 class="pt-4">Intermediate HTML5 Interview Questions</h2>
+          <div class="faq">
+            <div class="q">What are the new input types in HTML5?</div>
+            <div class="a">
+              <p>HTML5 introduced new input types including email, url, tel, number, range, date, time, color, search, and month for better form validation and UX.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between GET and POST methods in forms?</div>
+            <div class="a">
+              <p>GET appends form data to the URL and is used for retrieving data; POST sends data in the request body and is used for submitting or modifying data.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is HTML5 Web Storage?</div>
+            <div class="a">
+              <p>Web Storage provides localStorage (persistent storage) and sessionStorage (session-only storage) to store key-value data in the browser without cookies.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Canvas element?</div>
+            <div class="a">
+              <p>The Canvas element provides a drawing surface for rendering 2D graphics, animations, and game visuals dynamically using JavaScript.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between Canvas and SVG?</div>
+            <div class="a">
+              <p>Canvas is pixel-based and rendered via JavaScript, best for dynamic graphics; SVG is vector-based, resolution-independent, and part of the DOM.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the HTML5 audio element?</div>
+            <div class="a">
+              <p>The audio element embeds sound content directly in a webpage without plugins, supporting formats like MP3, OGG, and WAV with built-in controls.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the HTML5 video element?</div>
+            <div class="a">
+              <p>The video element embeds video content natively in a webpage, supporting MP4, WebM, and OGG formats with built-in playback controls.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Geolocation API?</div>
+            <div class="a">
+              <p>The Geolocation API allows a web application to access the user's geographic location (latitude and longitude) with the user's permission.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Drag and Drop API?</div>
+            <div class="a">
+              <p>The Drag and Drop API enables native browser support for dragging elements and dropping them into target areas using drag events.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are data attributes in HTML5?</div>
+            <div class="a">
+              <p>Data attributes (data-*) allow storing custom data directly on HTML elements, accessible via JavaScript using the dataset property.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between script placement in head vs body?</div>
+            <div class="a">
+              <p>Scripts in the head block rendering until loaded; scripts at the end of the body allow the page to render first, improving perceived load performance.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are the defer and async attributes on script tags?</div>
+            <div class="a">
+              <p>defer loads the script without blocking rendering and executes after the HTML is parsed; async loads and executes the script as soon as it is downloaded.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the picture element in HTML5?</div>
+            <div class="a">
+              <p>The picture element provides multiple source images for different screen sizes and resolutions, enabling responsive and art-directed images.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the srcset attribute?</div>
+            <div class="a">
+              <p>The srcset attribute specifies multiple image sources at different resolutions, allowing the browser to choose the most appropriate image for the device.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Accessibility in HTML5?</div>
+            <div class="a">
+              <p>Accessibility in HTML5 means writing markup that is usable by people with disabilities, using semantic elements, ARIA attributes, alt text, and proper heading structure.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are ARIA attributes?</div>
+            <div class="a">
+              <p>ARIA (Accessible Rich Internet Applications) attributes provide additional semantic information to assistive technologies for dynamic and interactive content.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between link and script tags?</div>
+            <div class="a">
+              <p>The link tag is used to include external CSS stylesheets; the script tag is used to include or embed JavaScript code.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the iframe element?</div>
+            <div class="a">
+              <p>The iframe element embeds another HTML document or external webpage within the current page inside an inline frame.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the figure and figcaption element?</div>
+            <div class="a">
+              <p>The figure element wraps self-contained media like images or diagrams; figcaption provides an optional caption or description for that media.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between strong and b tags?</div>
+            <div class="a">
+              <p>The strong tag indicates semantic importance and is announced by screen readers; the b tag is purely visual bold styling with no semantic meaning.</p>
+            </div>
+          </div>
+          <h2 class="pt-4">Advanced HTML5 Interview Questions</h2>
+          <div class="faq">
+            <div class="q">What is the Shadow DOM?</div>
+            <div class="a">
+              <p>The Shadow DOM is a browser technology that encapsulates a separate DOM tree with its own scoped styles and markup, used in Web Components.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are Web Components?</div>
+            <div class="a">
+              <p>Web Components are a set of browser APIs (Custom Elements, Shadow DOM, HTML Templates) that allow creating reusable, encapsulated custom HTML elements.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the template element?</div>
+            <div class="a">
+              <p>The template element holds HTML markup that is not rendered on page load but can be cloned and inserted into the DOM dynamically via JavaScript.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are Web Workers?</div>
+            <div class="a">
+              <p>Web Workers run JavaScript in a background thread separate from the main thread, enabling heavy computations without blocking the UI.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a Service Worker?</div>
+            <div class="a">
+              <p>A Service Worker is a script that runs in the background, enabling features like offline caching, push notifications, and background sync for Progressive Web Apps.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a Progressive Web App (PWA)?</div>
+            <div class="a">
+              <p>A PWA is a web application that uses modern HTML5 and browser APIs to deliver app-like experiences including offline support, installability, and push notifications.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the WebSocket API?</div>
+            <div class="a">
+              <p>The WebSocket API enables full-duplex, real-time communication between a browser and server over a persistent connection, ideal for chat and live data apps.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Fetch API?</div>
+            <div class="a">
+              <p>The Fetch API is a modern interface for making HTTP requests in the browser, returning Promises and replacing the older XMLHttpRequest approach.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Intersection Observer API?</div>
+            <div class="a">
+              <p>The Intersection Observer API detects when an element enters or exits the viewport, enabling efficient lazy loading, infinite scrolling, and animations.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the MutationObserver API?</div>
+            <div class="a">
+              <p>The MutationObserver API watches for changes to the DOM tree such as added nodes, removed nodes, or attribute changes and triggers a callback.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is IndexedDB?</div>
+            <div class="a">
+              <p>IndexedDB is a low-level browser API for storing large amounts of structured data including files and blobs client-side with transactional support.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between cookies, localStorage, and sessionStorage?</div>
+            <div class="a">
+              <p>Cookies are sent with HTTP requests and have expiry dates; localStorage persists indefinitely; sessionStorage clears when the browser tab is closed.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Critical Rendering Path?</div>
+            <div class="a">
+              <p>The Critical Rendering Path is the sequence of steps the browser takes to convert HTML, CSS, and JavaScript into pixels on screen, affecting page load performance.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Content Security Policy (CSP)?</div>
+            <div class="a">
+              <p>CSP is a security feature implemented via HTTP headers or meta tags that restricts which resources (scripts, styles, images) a browser can load to prevent XSS attacks.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between preload, prefetch, and preconnect?</div>
+            <div class="a">
+              <p>Preload loads critical resources for the current page immediately; prefetch loads resources for future navigation; preconnect establishes early network connections to origins.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Open Graph Protocol?</div>
+            <div class="a">
+              <p>Open Graph is a meta tag protocol that controls how a webpage appears when shared on social media platforms by defining title, description, and image.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are structured data and Schema markup?</div>
+            <div class="a">
+              <p>Structured data uses Schema.org vocabulary in JSON-LD, Microdata, or RDFa format to help search engines understand page content and display rich results.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the History API?</div>
+            <div class="a">
+              <p>The History API allows manipulation of the browser session history using pushState and replaceState, enabling single-page apps to update URLs without full page reloads.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between repaint and reflow?</div>
+            <div class="a">
+              <p>Reflow recalculates the layout of elements when geometry changes; repaint redraws visual styles like color without layout changes. Reflow is more performance-costly.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">How do you optimize HTML5 for SEO?</div>
+            <div class="a">
+              <p>Use semantic elements, proper heading hierarchy, descriptive alt text, canonical tags, structured data, fast load times, and mobile-friendly responsive design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div id="sidebar"></div>
+        </div>
+		</div>
+ 
+    </div>
+  </section>
+  <!-- SEO Text Section -->
+  <section class="section py-5 bg-light">
+    <div class="container">
+      <p>HTML5 is the latest and most powerful version of HyperText Markup Language, the standard language used to structure and present content on the web. Introduced in 2014 by the W3C, HTML5 brought a major leap forward with native support for multimedia, powerful new APIs, semantic markup, and improved form controls — reducing the dependency on third-party plugins like Flash. Today, HTML5 is the backbone of every website and web application, making it an essential skill for every frontend and full-stack developer.</p>
+      <p><strong>Key HTML5 topics covered in interviews include:</strong></p>
+      <ul>
+        <li>HTML5 Fundamentals and Document Structure</li>
+        <li>Semantic Elements and Accessibility</li>
+        <li>HTML5 Forms and Input Types</li>
+        <li>Canvas and SVG Graphics</li>
+        <li>Web Storage (localStorage and sessionStorage)</li>
+        <li>HTML5 Multimedia (Audio and Video)</li>
+        <li>Geolocation, Drag and Drop, and Web APIs</li>
+        <li>SEO Best Practices with HTML5</li>
+      </ul>
+      <p>From foundational concepts like document structure, tags, and attributes to advanced topics like Web Workers, Service Workers, Shadow DOM, and WebSockets, this guide covers everything you need to confidently answer HTML5 interview questions at any level. Whether you are preparing for a frontend developer, UI developer, or full-stack engineer role, these questions and answers will help you stand out in your next interview.</p>
+    </div>
+  </section>
+</main>
+<!-- InstanceEndEditable -->
+<div class="clearfix"></div>
+<footer role="contentinfo" class="footer light newfooter">
+  <article class="footer-top">
+    <div class="container">
+      <div class="row align-items-center"> 
+        
+        <!-- Brand -->
+        <div class="col-md-6 col-sm-12 mb-3">
+          <h3 class="footer-logo">Web Tool Ocean</h3>
+          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
+            Fast, secure and easy to use on desktop & mobile. </p>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-md-3 col-sm-6 mb-3">
+          <h4 class="footer-heading">Contact</h4>
+          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
+        </div>
+        
+        <!-- Social -->
+        <div class="col-md-3 col-sm-6 mb-3">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="social-icons"> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a> <a href="https://www.linkedin.com/in/web-tool-ocean-a78866412/" target="_blank" aria-label="Linkedin"> <i class="fa fa-linkedin"></i> </a> 
+            
+            <!--  <a href="https://wa.me/?text=https://webtoolocean.com/" target="_blank" aria-label="WhatsApp">
+              <i class="fa fa-whatsapp"></i>
+            </a>--> 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  
+  <!-- Bottom Menu -->
+  <article id="copyrights">
+    <div class="container text-center">
+      <p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | Made With Love </p>
+      <p class="footer-links"> <a href="https://webtoolocean.com/about/">About Us</a> <span>|</span> <a href="https://webtoolocean.com/contact/">Contact Us</a> <span>|</span> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a> <span>|</span> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a> <span>|</span> <a href="https://webtoolocean.com/terms-conditions/">Terms & Conditions</a> | <a href="https://webtoolocean.com/blog/">Blog</a> | <a href="https://webtoolocean.com/resources/">Resources</a> </p>
+    </div>
+  </article>
+</footer>
+<div class="clearfix"></div>
+<script src="https://webtoolocean.com/js/jquery.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion5" --> 
+<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
+<script>
+document.querySelectorAll('.q').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('active'));
+</script> 
+<script>
+fetch('/resources/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+    });
+</script> 
+<!-- InstanceEndEditable --> 
+
+<!--<script>
+		const btn = document.getElementById("togglemeu");
+const menu = document.querySelector(".mainmenubar");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+	</script> 
+<script id="3q6qk9">
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+</script> 
+<script id="7c7b4s">
+document.addEventListener("keydown", function(e){
+
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.key === "U") {
+        e.preventDefault();
+    }
+
+});
+</script> 
+<script id="5h2r0p">
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", function(e){
+
+if(e.key=="F12"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
+
+if(e.ctrlKey && e.key=="U"){e.preventDefault();}
+
+});
+
+setInterval(function(){
+
+if(window.outerWidth - window.innerWidth > 160){
+document.body.innerHTML="Access Restricted";
+}
+
+},1000);
+</script> 
+<script>
+document.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && e.key === "u") {
+    e.preventDefault();
+  }
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
+    e.preventDefault();
+  }
+});
+</script>--> 
+
+<script>
+ $(document).ready(function(){
+$("#togglemeu").click(function(){
+$(".mainmenubar").slideToggle();
+
+});
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+</script>
+</body>
+<!-- InstanceEnd -->
+</html>

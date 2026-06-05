@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="en">
+<!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<title>CSS3 interview Questions | WebToolOcean</title>
+
+<!-- Meta Description -->
+<meta name="description" content="Prepare for your CSS3 interview with 60+ commonly asked questions and answers covering CSS fundamentals, Flexbox, Grid, Animations, Responsive Design, and more — from beginner to advanced level with code examples.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="CSS3 interview questions, CSS interview questions and answers, CSS3 beginner interview questions, CSS3 advanced interview questions, CSS flexbox interview questions, CSS grid interview questions, CSS animation interview questions, CSS responsive design interview questions, CSS selectors interview questions, CSS specificity interview questions, CSS3 interview preparation, frontend interview questions">
+<meta name="author" content="WebToolOcean">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="http://webtoolocean.com/resources/css-interview-questions">
+
+<!-- ===================================================== --> 
+
+<!--CSS for the website--> 
+
+<!-- Dependencies -->
+<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
+<style>
+.faq {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.faq .q {
+    padding: 18px 50px 18px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    transition: .3s;
+}
+.faq .a {
+    padding: 0 16px 16px;
+    display: none;
+}
+.faq .q:after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+    font-size: 14px;
+}
+.faq.active .q:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+.faq.active .a {
+    display: block
+}
+</style>
+<!-- InstanceEndEditable -->
+<!-- Stylesheets     
+	============================================= --> 
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+<!-- Document Title   
+	============================================= -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4C1PP726EZ');
+</script>
+<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+     crossorigin="anonymous"></script>
+</head>
+<style>
+	body {overflow-x: hidden}
+	</style>
+<body class="">
+<!--ACCESSIBILITY CONTROLS   --> 
+
+<!--END ACCESSIBILITY CONTROLS   --> 
+<!-- Document Wrapper	  
+	============================================= -->
+<header role="banner"  id="header" class="full-header">
+  <div id="header-wrap">
+    <div class="container-fluid">
+      <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
+      <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
+        <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
+        <!-- InstanceEndEditable -->
+        <div class="mainmenubar">
+          <nav id="mainmenu" class="">
+            <ul>
+              <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/">Home</a> </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> Image Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-converter/">All Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> CSS Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> Developer Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/check-css-error/">Check CSS Errors</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder-Decoder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> PDF Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a> </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- InstanceBeginEditable name="center" --> 
+
+<!-- Start dynamic content --> 
+<!-- <section id="testimonials">
+    <div class="container aniboxes animate__animated text-center">
+      <div id="contentwidget1"></div>
+      <br>
+    </div>
+  </section>--> 
+<!-- End dynamic content -->
+<div class="clearfix"></div>
+<!-- End dynamic content --> 
+
+<!-- Sevices section -->
+<main id="content"> 
+  
+  <!-- SEO Text Section -->
+  <section class="section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-xs-12"> 
+          
+          <!-- CSS3 Interview Questions -->
+          <h1 class="pt-4">Beginner CSS3 Interview Questions</h1>
+          <p> Prepare for your next web development interview with these frequently asked CSS questions and detailed answers</p>
+          <div class="faq">
+            <div class="q">What is CSS?</div>
+            <div class="a">
+              <p>CSS (Cascading Style Sheets) is a stylesheet language used to control the visual presentation of HTML elements including layout, colors, fonts, and spacing.</p>
+              <pre><code>p {
+  color: navy;
+  font-size: 16px;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS3?</div>
+            <div class="a">
+              <p>CSS3 is the latest version of CSS, introducing modules like Flexbox, Grid, animations, transitions, custom properties, and media queries for modern web design.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are the ways to apply CSS to a webpage?</div>
+            <div class="a">
+              <p>CSS can be applied inline (style attribute), internally (style tag in head), or externally (linked .css file). External stylesheets are the recommended approach.</p>
+              <pre><code>/* Inline */
+&lt;p style="color: red;"&gt;
+
+/* Internal */
+&lt;style&gt; p { color: red; } &lt;/style&gt;
+
+/* External */
+&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS Box Model?</div>
+            <div class="a">
+              <p>The box model describes the rectangular box wrapping every element, consisting of content, padding, border, and margin from inside to outside.</p>
+              <pre><code>.box {
+  width: 200px;
+  padding: 20px;
+  border: 2px solid #333;
+  margin: 10px;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between margin and padding?</div>
+            <div class="a">
+              <p>Padding is the space between the content and the border inside an element; margin is the space outside the border between the element and others.</p>
+              <pre><code>.card {
+  padding: 20px; /* inner space */
+  margin: 10px;  /* outer space */
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Specificity?</div>
+            <div class="a">
+              <p>Specificity determines which CSS rule is applied when multiple rules target the same element. It is calculated as inline styles > IDs > classes > elements.</p>
+              <pre><code>#header { color: blue; }    /* specificity: 0,1,0,0 */
+.title  { color: green; }   /* specificity: 0,0,1,0 */
+h1      { color: red; }     /* specificity: 0,0,0,1 */</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between class and ID selectors?</div>
+            <div class="a">
+              <p>An ID selector (#id) targets a unique element on the page and has higher specificity; a class selector (.class) can be reused on multiple elements.</p>
+              <pre><code>#hero { background: black; }
+.card { background: white; }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the display property?</div>
+            <div class="a">
+              <p>The display property controls how an element is rendered in the layout, with common values being block, inline, inline-block, flex, grid, and none.</p>
+              <pre><code>.hidden  { display: none; }
+.inline  { display: inline; }
+.block   { display: block; }
+.flex    { display: flex; }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between display none and visibility hidden?</div>
+            <div class="a">
+              <p>display: none removes the element from the layout entirely; visibility: hidden hides it visually but it still occupies its original space.</p>
+              <pre><code>.gone   { display: none; }       /* no space */
+.hidden { visibility: hidden; }  /* space preserved */</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the position property?</div>
+            <div class="a">
+              <p>The position property controls element placement with values: static (default), relative, absolute, fixed, and sticky.</p>
+              <pre><code>.sticky-nav {
+  position: sticky;
+  top: 0;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between relative and absolute positioning?</div>
+            <div class="a">
+              <p>Relative positions an element relative to its normal position; absolute removes it from the flow and positions it relative to the nearest positioned ancestor.</p>
+              <pre><code>.parent { position: relative; }
+.child  {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the z-index property?</div>
+            <div class="a">
+              <p>z-index controls the stacking order of positioned elements. Higher values appear on top of lower ones along the z-axis.</p>
+              <pre><code>.modal   { z-index: 1000; }
+.overlay { z-index: 999; }
+.content { z-index: 1; }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the float property?</div>
+            <div class="a">
+              <p>Float places an element to the left or right of its container, allowing text and inline elements to wrap around it.</p>
+              <pre><code>img {
+  float: left;
+  margin-right: 16px;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS color property?</div>
+            <div class="a">
+              <p>The color property sets the text color using named colors, HEX, RGB, RGBA, HSL, or HSLA values.</p>
+              <pre><code>h1 { color: #333333; }
+p  { color: rgba(0, 0, 0, 0.7); }
+a  { color: hsl(210, 100%, 50%); }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between em, rem, px, and %?</div>
+            <div class="a">
+              <p>px is absolute; em is relative to the parent element font size; rem is relative to the root font size; % is relative to the parent element's size.</p>
+              <pre><code>:root { font-size: 16px; }
+.box {
+  font-size: 1rem;   /* 16px */
+  padding: 1em;      /* relative to parent */
+  width: 50%;        /* half of parent */
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is box-sizing?</div>
+            <div class="a">
+              <p>box-sizing controls whether padding and border are included in an element's total width and height. border-box is the modern preferred setting.</p>
+              <pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the overflow property?</div>
+            <div class="a">
+              <p>The overflow property controls what happens when content exceeds its container, with values: visible, hidden, scroll, and auto.</p>
+              <pre><code>.container {
+  height: 200px;
+  overflow: auto;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS cursor property?</div>
+            <div class="a">
+              <p>The cursor property sets the mouse cursor style when hovering over an element, such as pointer, default, crosshair, or not-allowed.</p>
+              <pre><code>button { cursor: pointer; }
+.disabled { cursor: not-allowed; }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the opacity property?</div>
+            <div class="a">
+              <p>The opacity property sets the transparency level of an element from 0 (fully transparent) to 1 (fully opaque), affecting the element and all its children.</p>
+              <pre><code>.ghost {
+  opacity: 0.5;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS border property?</div>
+            <div class="a">
+              <p>The border property is a shorthand for setting border-width, border-style, and border-color on all four sides of an element.</p>
+              <pre><code>.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}</code></pre>
+            </div>
+          </div>
+          <h2 class="pt-4">Intermediate CSS3 Interview Questions</h2>
+          <div class="faq">
+            <div class="q">What is Flexbox?</div>
+            <div class="a">
+              <p>Flexbox is a one-dimensional layout model that distributes space and aligns items within a container along a row or column axis.</p>
+              <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Grid?</div>
+            <div class="a">
+              <p>CSS Grid is a two-dimensional layout system that arranges content into rows and columns simultaneously, ideal for complex page layouts.</p>
+              <pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between Flexbox and Grid?</div>
+            <div class="a">
+              <p>Flexbox handles layout in one dimension (row or column); Grid handles layout in two dimensions (rows and columns) simultaneously.</p>
+              <pre><code>/* Flexbox: one direction */
+.nav { display: flex; gap: 8px; }
+
+/* Grid: two directions */
+.page { display: grid; grid-template-columns: 1fr 3fr; }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are Media Queries?</div>
+            <div class="a">
+              <p>Media queries apply CSS rules conditionally based on screen size, resolution, or device characteristics for responsive design.</p>
+              <pre><code>@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are CSS Custom Properties (Variables)?</div>
+            <div class="a">
+              <p>CSS custom properties store reusable values defined with -- prefix and accessed via var(), making theming and maintenance easier.</p>
+              <pre><code>:root {
+  --primary: #6200ea;
+  --spacing: 16px;
+}
+.button {
+  background: var(--primary);
+  padding: var(--spacing);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are CSS Pseudo-classes?</div>
+            <div class="a">
+              <p>Pseudo-classes select elements based on their state or position, such as :hover, :focus, :nth-child, :first-child, and :not.</p>
+              <pre><code>a:hover { color: blue; }
+input:focus { border-color: #6200ea; }
+li:nth-child(odd) { background: #f5f5f5; }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are CSS Pseudo-elements?</div>
+            <div class="a">
+              <p>Pseudo-elements style specific parts of an element using :: syntax, such as ::before, ::after, ::first-line, and ::placeholder.</p>
+              <pre><code>.card::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: var(--primary);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Transition?</div>
+            <div class="a">
+              <p>CSS transitions smoothly animate property changes over a specified duration when triggered by state changes like hover or focus.</p>
+              <pre><code>.button {
+  background: #6200ea;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+  background: #3700b3;
+  transform: translateY(-2px);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Animation?</div>
+            <div class="a">
+              <p>CSS animations use @keyframes to define animation steps and the animation property to control duration, timing, and iteration on elements.</p>
+              <pre><code>@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero {
+  animation: fadeIn 0.5s ease forwards;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS transform property?</div>
+            <div class="a">
+              <p>The transform property applies 2D or 3D transformations like translate, rotate, scale, and skew to elements without affecting document flow.</p>
+              <pre><code>.card:hover {
+  transform: scale(1.05) translateY(-4px);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between transition and animation?</div>
+            <div class="a">
+              <p>Transitions require a trigger (like hover) and animate between two states; animations use @keyframes for complex multi-step sequences that can run automatically.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS calc() function?</div>
+            <div class="a">
+              <p>The calc() function performs mathematical calculations mixing different units directly in CSS property values.</p>
+              <pre><code>.sidebar {
+  width: calc(100% - 320px);
+  height: calc(100vh - 64px);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS object-fit property?</div>
+            <div class="a">
+              <p>object-fit controls how a replaced element like img or video fits its container, with values: fill, contain, cover, none, and scale-down.</p>
+              <pre><code>img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS backdrop-filter property?</div>
+            <div class="a">
+              <p>backdrop-filter applies graphical effects like blur or brightness to the area behind an element, commonly used for glassmorphism effects.</p>
+              <pre><code>.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS clip-path property?</div>
+            <div class="a">
+              <p>clip-path defines a clipping region that determines which part of an element is visible, supporting shapes like circle, ellipse, and polygon.</p>
+              <pre><code>.avatar {
+  clip-path: circle(50%);
+}
+.banner {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is BEM methodology?</div>
+            <div class="a">
+              <p>BEM (Block Element Modifier) is a CSS naming convention that structures class names as block__element--modifier for better readability and maintainability.</p>
+              <pre><code>.card { }                  /* Block */
+.card__title { }           /* Element */
+.card__title--large { }    /* Modifier */</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS filter property?</div>
+            <div class="a">
+              <p>The filter property applies visual effects like blur, brightness, contrast, grayscale, and drop-shadow to elements.</p>
+              <pre><code>img:hover {
+  filter: brightness(1.1) saturate(1.2);
+}
+.dimmed {
+  filter: grayscale(100%);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Specificity hierarchy?</div>
+            <div class="a">
+              <p>Specificity is calculated as: inline styles (1000) > IDs (100) > classes, attributes, pseudo-classes (10) > elements, pseudo-elements (1).</p>
+              <pre><code>/* Specificity: 0,0,0,1 */
+p { color: black; }
+/* Specificity: 0,0,1,0 */
+.text { color: gray; }
+/* Specificity: 0,1,0,0 */
+#intro { color: navy; }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS will-change property?</div>
+            <div class="a">
+              <p>will-change hints to the browser about which properties will change, allowing it to optimize rendering in advance for smoother animations.</p>
+              <pre><code>.animated {
+  will-change: transform, opacity;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are CSS Combinators?</div>
+            <div class="a">
+              <p>Combinators define relationships between selectors: descendant (space), child (&gt;), adjacent sibling (+), and general sibling (~).</p>
+              <pre><code>div p      { }   /* descendant */
+div > p    { }   /* direct child */
+h2 + p     { }   /* adjacent sibling */
+h2 ~ p     { }   /* general sibling */</code></pre>
+            </div>
+          </div>
+          <h2 class="pt-4">Advanced CSS3 Interview Questions</h2>
+          <div class="faq">
+            <div class="q">What is the CSS Cascade?</div>
+            <div class="a">
+              <p>The cascade is the algorithm CSS uses to resolve conflicting rules by evaluating origin, importance, specificity, and source order.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Containment?</div>
+            <div class="a">
+              <p>CSS containment (contain property) isolates a subtree from the rest of the document for layout, style, paint, or size, improving rendering performance.</p>
+              <pre><code>.widget {
+  contain: layout paint;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are CSS Logical Properties?</div>
+            <div class="a">
+              <p>Logical properties use flow-relative terms (inline, block, start, end) instead of physical directions, supporting internationalization and RTL layouts.</p>
+              <pre><code>.text {
+  margin-inline-start: 16px;
+  padding-block: 8px;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS Grid subgrid?</div>
+            <div class="a">
+              <p>Subgrid allows a nested grid to inherit and align to the parent grid's tracks, enabling consistent alignment across nested components.</p>
+              <pre><code>.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.child {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: subgrid;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are CSS Container Queries?</div>
+            <div class="a">
+              <p>Container queries allow styling an element based on its parent container's size rather than the viewport size, enabling truly component-level responsiveness.</p>
+              <pre><code>.card-wrapper {
+  container-type: inline-size;
+}
+@container (min-width: 400px) {
+  .card { flex-direction: row; }
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS :has() selector?</div>
+            <div class="a">
+              <p>The :has() relational pseudo-class selects a parent element based on whether it contains a specific child, acting as a "parent selector".</p>
+              <pre><code>/* Style form group if input is invalid */
+.form-group:has(input:invalid) {
+  border-color: red;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS @layer rule?</div>
+            <div class="a">
+              <p>The @layer rule defines cascade layers to explicitly control the order of specificity, making large-scale CSS architecture more manageable.</p>
+              <pre><code>@layer base, components, utilities;
+
+@layer base {
+  p { font-size: 1rem; }
+}
+@layer utilities {
+  .mt-4 { margin-top: 16px; }
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Stacking Context?</div>
+            <div class="a">
+              <p>A stacking context is a three-dimensional conceptual space in which elements are stacked along the z-axis, created by properties like position + z-index, opacity, or transform.</p>
+              <pre><code>.context {
+  position: relative;
+  z-index: 1;
+  /* creates new stacking context */
+  transform: translateZ(0);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS aspect-ratio property?</div>
+            <div class="a">
+              <p>The aspect-ratio property maintains a consistent width-to-height ratio for an element regardless of the available space.</p>
+              <pre><code>.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.avatar {
+  width: 48px;
+  aspect-ratio: 1;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS scroll-snap property?</div>
+            <div class="a">
+              <p>Scroll snap creates controlled scrolling experiences where the scroll position snaps to defined points within a container.</p>
+              <pre><code>.slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.slide {
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Paint API (Houdini)?</div>
+            <div class="a">
+              <p>The CSS Paint API (part of Houdini) allows writing JavaScript worklets that programmatically draw custom backgrounds and borders directly in CSS.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between em and rem for responsive typography?</div>
+            <div class="a">
+              <p>rem scales relative to the root font size making it predictable globally; em compounds based on parent font size making it useful for component-level scaling.</p>
+              <pre><code>:root { font-size: clamp(14px, 2vw, 18px); }
+h1 { font-size: 2.5rem; }
+.badge { font-size: 0.75em; padding: 0.25em 0.5em; }</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS clamp() function?</div>
+            <div class="a">
+              <p>clamp() sets a value that scales fluidly between a minimum and maximum, ideal for responsive typography and spacing without media queries.</p>
+              <pre><code>h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+.section {
+  padding: clamp(16px, 5vw, 80px);
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Performance Optimization?</div>
+            <div class="a">
+              <p>CSS performance is improved by minimizing reflows, using transform and opacity for animations, avoiding deep selectors, leveraging contain, and using will-change sparingly.</p>
+              <pre><code>/* Prefer transform over top/left */
+.animate {
+  transition: transform 0.3s ease;
+}
+.animate:hover {
+  transform: translateY(-4px); /* GPU composited */
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS content-visibility property?</div>
+            <div class="a">
+              <p>content-visibility skips rendering of off-screen content until it is needed, dramatically improving initial page load performance for long pages.</p>
+              <pre><code>.section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is CSS Inheritance?</div>
+            <div class="a">
+              <p>Some CSS properties like color, font-family, and line-height are inherited from parent to child automatically; others like margin and padding are not.</p>
+              <pre><code>body {
+  font-family: 'Inter', sans-serif; /* inherited by all children */
+  color: #333;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS initial, inherit, and unset keyword?</div>
+            <div class="a">
+              <p>initial resets a property to its default browser value; inherit forces a property to inherit from its parent; unset resets to inherited value if inheritable, otherwise to initial.</p>
+              <pre><code>.reset {
+  color: unset;
+  margin: initial;
+  font-size: inherit;
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a CSS Preprocessor?</div>
+            <div class="a">
+              <p>CSS preprocessors like SCSS, SASS, and LESS extend CSS with variables, nesting, mixins, and functions that compile down to standard CSS.</p>
+              <pre><code>$primary: #6200ea;
+
+.button {
+  background: $primary;
+  &:hover {
+    background: darken($primary, 10%);
+  }
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the CSS @supports rule?</div>
+            <div class="a">
+              <p>@supports applies CSS rules conditionally based on whether the browser supports a specific CSS feature, enabling progressive enhancement.</p>
+              <pre><code>@supports (display: grid) {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}</code></pre>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Dark Mode in CSS?</div>
+            <div class="a">
+              <p>Dark mode is implemented using the prefers-color-scheme media query to detect the user's system preference and apply alternate color schemes.</p>
+              <pre><code>:root {
+  --bg: #ffffff;
+  --text: #111111;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111111;
+    --text: #ffffff;
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div id="sidebar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SEO Text Section -->
+  <section class="section py-5 bg-light">
+    <div class="container">
+      <p>CSS3 (Cascading Style Sheets, Level 3) is the latest evolution of the styling language that controls the visual presentation of HTML documents. From basic text styling to complex animations, responsive layouts, and 3D transforms, CSS3 has transformed the way developers build modern web interfaces. Every frontend developer, UI engineer, and full-stack developer is expected to have a solid understanding of CSS3 in today's job market.</p>
+      <p><strong>Key CSS3 topics covered in interviews include:</strong></p>
+      <ul>
+        <li>CSS Fundamentals, Selectors, and Specificity</li>
+        <li>Box Model and Layout Techniques</li>
+        <li>Flexbox and CSS Grid</li>
+        <li>Responsive Design and Media Queries</li>
+        <li>CSS Animations and Transitions</li>
+        <li>CSS Variables and Custom Properties</li>
+        <li>Pseudo-classes and Pseudo-elements</li>
+        <li>CSS Architecture and Performance Optimization</li>
+      </ul>
+      <p>From foundational concepts like the box model, selectors, and specificity to advanced topics like CSS custom properties, animations, clipping, masking, and CSS architecture methodologies like BEM, this guide covers everything you need to confidently answer CSS3 interview questions at any level. Whether you are preparing for a frontend developer, UI developer, or full-stack engineer role, these questions and answers will help you stand out in your next interview.</p>
+    </div>
+  </section>
+</main>
+<!-- InstanceEndEditable -->
+<div class="clearfix"></div>
+<footer role="contentinfo" class="footer light newfooter">
+  <article class="footer-top">
+    <div class="container">
+      <div class="row align-items-center"> 
+        
+        <!-- Brand -->
+        <div class="col-md-6 col-sm-12 mb-3">
+          <h3 class="footer-logo">Web Tool Ocean</h3>
+          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
+            Fast, secure and easy to use on desktop & mobile. </p>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-md-3 col-sm-6 mb-3">
+          <h4 class="footer-heading">Contact</h4>
+          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
+        </div>
+        
+        <!-- Social -->
+        <div class="col-md-3 col-sm-6 mb-3">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="social-icons"> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a> <a href="https://www.linkedin.com/in/web-tool-ocean-a78866412/" target="_blank" aria-label="Linkedin"> <i class="fa fa-linkedin"></i> </a> 
+            
+            <!--  <a href="https://wa.me/?text=https://webtoolocean.com/" target="_blank" aria-label="WhatsApp">
+              <i class="fa fa-whatsapp"></i>
+            </a>--> 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  
+  <!-- Bottom Menu -->
+  <article id="copyrights">
+    <div class="container text-center">
+      <p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | Made With Love </p>
+      <p class="footer-links"> <a href="https://webtoolocean.com/about/">About Us</a> <span>|</span> <a href="https://webtoolocean.com/contact/">Contact Us</a> <span>|</span> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a> <span>|</span> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a> <span>|</span> <a href="https://webtoolocean.com/terms-conditions/">Terms & Conditions</a> | <a href="https://webtoolocean.com/blog/">Blog</a> | <a href="https://webtoolocean.com/resources/">Resources</a> </p>
+    </div>
+  </article>
+</footer>
+<div class="clearfix"></div>
+<script src="https://webtoolocean.com/js/jquery.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion5" --> 
+<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
+<script>
+document.querySelectorAll('.q').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('active'));
+</script> 
+<script>
+fetch('/resources/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+    });
+</script> 
+<!-- InstanceEndEditable --> 
+
+<!--<script>
+		const btn = document.getElementById("togglemeu");
+const menu = document.querySelector(".mainmenubar");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+	</script> 
+<script id="3q6qk9">
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+</script> 
+<script id="7c7b4s">
+document.addEventListener("keydown", function(e){
+
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.key === "U") {
+        e.preventDefault();
+    }
+
+});
+</script> 
+<script id="5h2r0p">
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", function(e){
+
+if(e.key=="F12"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
+
+if(e.ctrlKey && e.key=="U"){e.preventDefault();}
+
+});
+
+setInterval(function(){
+
+if(window.outerWidth - window.innerWidth > 160){
+document.body.innerHTML="Access Restricted";
+}
+
+},1000);
+</script> 
+<script>
+document.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && e.key === "u") {
+    e.preventDefault();
+  }
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
+    e.preventDefault();
+  }
+});
+</script>--> 
+
+<script>
+ $(document).ready(function(){
+$("#togglemeu").click(function(){
+$(".mainmenubar").slideToggle();
+
+});
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+</script>
+</body>
+<!-- InstanceEnd -->
+</html>

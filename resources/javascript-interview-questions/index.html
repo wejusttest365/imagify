@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+<!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<title>JavaScript interview Questions | WebToolOcean</title>
+ 
+<!-- Meta Description -->
+<meta name="description" content="Prepare for your JavaScript interview with 60+ commonly asked questions and answers covering JS fundamentals, ES6+, Closures, Promises, Async/Await, DOM manipulation, and more — from beginner to advanced level.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="JavaScript interview questions, JS interview questions and answers, JavaScript beginner interview questions, JavaScript advanced interview questions, ES6 interview questions, JavaScript closures interview questions, JavaScript promises interview questions, async await interview questions, JavaScript DOM interview questions, JavaScript hoisting interview questions, JavaScript scope interview questions, JavaScript interview preparation">
+	
+	
+<meta name="author" content="WebToolOcean">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="http://webtoolocean.com/resources/javascript-interview-questions">
+
+<!-- ===================================================== --> 
+
+<!--CSS for the website--> 
+
+<!-- Dependencies -->
+<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
+<style>
+.faq {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.faq .q {
+    padding: 18px 50px 18px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    transition: .3s;
+}
+.faq .a {
+    padding: 0 16px 16px;
+    display: none;
+}
+.faq .q:after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+    font-size: 14px;
+}
+.faq.active .q:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+.faq.active .a {
+    display: block
+}
+</style>
+<!-- InstanceEndEditable -->
+<!-- Stylesheets     
+	============================================= --> 
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+<!-- Document Title   
+	============================================= -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4C1PP726EZ');
+</script>
+<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+     crossorigin="anonymous"></script>
+</head>
+<style>
+	body {overflow-x: hidden}
+	</style>
+<body class="">
+<!--ACCESSIBILITY CONTROLS   --> 
+
+<!--END ACCESSIBILITY CONTROLS   --> 
+<!-- Document Wrapper	  
+	============================================= -->
+<header role="banner"  id="header" class="full-header">
+  <div id="header-wrap">
+    <div class="container-fluid">
+      <button title="Click to open menu" id="togglemeu"><span class="fa fa-bars"></span></button>
+      <div class="flexmenu"><!-- InstanceBeginEditable name="EditRegion6_logo" -->
+        <div id="brand" class=""> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
+        <!-- InstanceEndEditable -->
+        <div class="mainmenubar">
+          <nav id="mainmenu" class="">
+            <ul>
+              <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/">Home</a> </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> Image Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-converter/">All Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG Converter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> CSS Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow Generator</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> Developer Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/check-css-error/">Check CSS Errors</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder-Decoder</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/font-converter/">Web Font Converter</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown"> PDF Tools <span class="caret"></span> </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
+                  <li><a class="dropdown-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a> </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- InstanceBeginEditable name="center" --> 
+
+<!-- Start dynamic content --> 
+<!-- <section id="testimonials">
+    <div class="container aniboxes animate__animated text-center">
+      <div id="contentwidget1"></div>
+      <br>
+    </div>
+  </section>--> 
+<!-- End dynamic content -->
+<div class="clearfix"></div>
+<!-- End dynamic content --> 
+
+<!-- Sevices section -->
+<main id="content">
+ 
+
+
+<section class="section py-5">
+  <div class="container">
+	    <div class="row">
+		  <div class="col-sm-8 col-xs-12">
+<!-- JavaScript Interview Questions -->
+<h1 class="pt-4">Beginner JavaScript Interview Questions</h1>
+<div class="faq">
+  <div class="q">What is JavaScript?</div>
+  <div class="a">
+    <p>JavaScript is a lightweight, interpreted, high-level programming language used to create dynamic and interactive behavior on websites and web applications.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What are the data types in JavaScript?</div>
+  <div class="a">
+    <p>JavaScript has eight data types: String, Number, BigInt, Boolean, Undefined, Null, Symbol, and Object (which includes Arrays and Functions).</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the difference between var, let, and const?</div>
+  <div class="a">
+    <p>var is function-scoped and hoisted; let is block-scoped and can be reassigned; const is block-scoped and cannot be reassigned after declaration.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Hoisting?</div>
+  <div class="a">
+    <p>Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their scope before code execution.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the difference between == and ===?</div>
+  <div class="a">
+    <p>== checks for value equality with type coercion, while === checks for both value and type equality without coercion (strict equality).</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is undefined in JavaScript?</div>
+  <div class="a">
+    <p>Undefined is the default value of a variable that has been declared but not yet assigned a value.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is null in JavaScript?</div>
+  <div class="a">
+    <p>Null is an intentional assignment representing the absence of a value or object, explicitly set by the developer.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Function in JavaScript?</div>
+  <div class="a">
+    <p>A function is a reusable block of code designed to perform a specific task, defined using the function keyword or arrow function syntax.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is an Arrow Function?</div>
+  <div class="a">
+    <p>An arrow function is a concise ES6 syntax for writing functions using =>, which also lexically binds the this keyword from the surrounding scope.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Template Literal?</div>
+  <div class="a">
+    <p>Template literals are string literals enclosed in backticks (`) that support multi-line strings and embedded expressions using ${} syntax.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is an Array in JavaScript?</div>
+  <div class="a">
+    <p>An array is an ordered collection of values stored in a single variable, accessible via zero-based index positions.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is an Object in JavaScript?</div>
+  <div class="a">
+    <p>An object is a collection of key-value pairs where keys are strings (or Symbols) and values can be any data type.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is typeof operator?</div>
+  <div class="a">
+    <p>The typeof operator returns a string indicating the data type of a given value or expression.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is NaN in JavaScript?</div>
+  <div class="a">
+    <p>NaN (Not a Number) is a value returned when a mathematical operation fails to produce a valid number result.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Type Coercion?</div>
+  <div class="a">
+    <p>Type coercion is the automatic conversion of a value from one data type to another during operations or comparisons.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What are Truthy and Falsy values?</div>
+  <div class="a">
+    <p>Falsy values are false, 0, "", null, undefined, and NaN. All other values are truthy and evaluate to true in boolean contexts.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the DOM?</div>
+  <div class="a">
+    <p>The DOM (Document Object Model) is a programming interface that represents an HTML document as a tree of objects that JavaScript can manipulate.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is an Event Listener?</div>
+  <div class="a">
+    <p>An event listener is a function attached to an element that waits for a specific event (like click or keypress) and executes when it occurs.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the difference between innerHTML and textContent?</div>
+  <div class="a">
+    <p>innerHTML sets or gets HTML markup including tags, while textContent sets or gets only the plain text content without parsing HTML.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Loop in JavaScript?</div>
+  <div class="a">
+    <p>A loop repeatedly executes a block of code as long as a condition is true, with common types being for, while, do...while, for...of, and for...in.</p>
+  </div>
+</div>
+
+<h2 class="pt-4">Intermediate JavaScript Interview Questions</h2>
+<div class="faq">
+  <div class="q">What is a Closure?</div>
+  <div class="a">
+    <p>A closure is a function that retains access to its outer scope variables even after the outer function has finished executing.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Scope in JavaScript?</div>
+  <div class="a">
+    <p>Scope determines the visibility and accessibility of variables. JavaScript has global scope, function scope, and block scope (with let and const).</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the this keyword?</div>
+  <div class="a">
+    <p>this refers to the object that is currently executing the function. Its value depends on how and where the function is called.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Promise?</div>
+  <div class="a">
+    <p>A Promise is an object representing the eventual completion or failure of an asynchronous operation, with states: pending, fulfilled, or rejected.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Async/Await?</div>
+  <div class="a">
+    <p>Async/Await is syntactic sugar over Promises that allows writing asynchronous code in a synchronous-looking style for better readability.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the Event Loop?</div>
+  <div class="a">
+    <p>The Event Loop is a mechanism that continuously checks the call stack and callback queue, pushing queued callbacks to the stack when it is empty.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Destructuring?</div>
+  <div class="a">
+    <p>Destructuring is an ES6 syntax that extracts values from arrays or properties from objects into distinct variables in a single statement.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the Spread Operator?</div>
+  <div class="a">
+    <p>The spread operator (...) expands an iterable (like an array or object) into individual elements, useful for copying or merging data.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the Rest Parameter?</div>
+  <div class="a">
+    <p>The rest parameter (...) collects all remaining function arguments into a single array, allowing functions to accept an indefinite number of arguments.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Higher-Order Function?</div>
+  <div class="a">
+    <p>A higher-order function is a function that takes another function as an argument or returns a function as its result, such as map, filter, and reduce.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the difference between map, filter, and reduce?</div>
+  <div class="a">
+    <p>map transforms each array element; filter returns elements matching a condition; reduce accumulates array elements into a single output value.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Prototypal Inheritance?</div>
+  <div class="a">
+    <p>Prototypal inheritance allows objects to inherit properties and methods from other objects through the prototype chain.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the prototype chain?</div>
+  <div class="a">
+    <p>The prototype chain is a series of linked objects where JavaScript looks up properties and methods if they are not found on the current object.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Event Bubbling?</div>
+  <div class="a">
+    <p>Event bubbling is when an event triggered on a child element propagates upward through its parent elements in the DOM tree.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Event Delegation?</div>
+  <div class="a">
+    <p>Event delegation attaches a single event listener to a parent element to handle events from its child elements using bubbling.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Callback Function?</div>
+  <div class="a">
+    <p>A callback is a function passed as an argument to another function, executed after that function completes its operation.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Callback Hell?</div>
+  <div class="a">
+    <p>Callback hell is deeply nested callbacks that make code difficult to read and maintain, solved by using Promises or Async/Await.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What are ES6 Modules?</div>
+  <div class="a">
+    <p>ES6 modules allow splitting JavaScript code into reusable files using import and export statements for better organization and maintainability.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the difference between call, apply, and bind?</div>
+  <div class="a">
+    <p>call invokes a function with a given this and arguments individually; apply uses an array of arguments; bind returns a new function with a bound this.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is localStorage and sessionStorage?</div>
+  <div class="a">
+    <p>localStorage stores data with no expiration across sessions; sessionStorage stores data only for the duration of the browser tab session.</p>
+  </div>
+</div>
+
+<h2 class="pt-4">Advanced JavaScript Interview Questions</h2>
+<div class="faq">
+  <div class="q">What is the difference between the Call Stack and the Heap?</div>
+  <div class="a">
+    <p>The call stack manages execution contexts and function calls in LIFO order; the heap is unstructured memory used for dynamic object storage.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Microtask and Macrotask?</div>
+  <div class="a">
+    <p>Microtasks (Promises, queueMicrotask) execute before the next macrotask (setTimeout, setInterval), giving them higher priority in the event loop.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a WeakMap and WeakSet?</div>
+  <div class="a">
+    <p>WeakMap and WeakSet hold weak references to objects, allowing garbage collection of keys or values when no other references exist.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Proxy in JavaScript?</div>
+  <div class="a">
+    <p>A Proxy wraps an object and intercepts fundamental operations like property access, assignment, and function invocation using handler traps.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Generator Function?</div>
+  <div class="a">
+    <p>A generator function (function*) returns an iterator that produces values lazily using the yield keyword, pausing execution between each value.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Memoization?</div>
+  <div class="a">
+    <p>Memoization is an optimization technique that caches the results of expensive function calls and returns the cached result for the same inputs.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Currying?</div>
+  <div class="a">
+    <p>Currying transforms a function with multiple arguments into a sequence of functions each taking a single argument, enabling partial application.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Debouncing?</div>
+  <div class="a">
+    <p>Debouncing delays executing a function until after a specified time has passed since the last time it was invoked, reducing unnecessary calls.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Throttling?</div>
+  <div class="a">
+    <p>Throttling limits a function to execute at most once within a specified time interval, regardless of how many times it is triggered.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Garbage Collection in JavaScript?</div>
+  <div class="a">
+    <p>Garbage collection is the automatic process of freeing memory occupied by objects that are no longer reachable or referenced in the program.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Memory Leak?</div>
+  <div class="a">
+    <p>A memory leak occurs when allocated memory is not released after use, often caused by global variables, detached DOM nodes, or lingering event listeners.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the Module Pattern?</div>
+  <div class="a">
+    <p>The module pattern encapsulates code using closures to create private and public members, avoiding global namespace pollution.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the Observer Pattern?</div>
+  <div class="a">
+    <p>The observer pattern defines a one-to-many relationship where multiple observers are notified automatically when a subject's state changes.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Immutability in JavaScript?</div>
+  <div class="a">
+    <p>Immutability means data cannot be changed after creation. It is enforced using Object.freeze(), const, or immutable data patterns to prevent side effects.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the difference between shallow copy and deep copy?</div>
+  <div class="a">
+    <p>A shallow copy duplicates only the top-level properties; a deep copy recursively duplicates all nested objects, creating fully independent copies.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is a Symbol in JavaScript?</div>
+  <div class="a">
+    <p>A Symbol is a unique and immutable primitive value used as object property keys to avoid naming conflicts.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the Reflect API?</div>
+  <div class="a">
+    <p>The Reflect API provides methods for interceptable JavaScript operations, complementing the Proxy API with a standardized set of object manipulation methods.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is Tail Call Optimization?</div>
+  <div class="a">
+    <p>Tail call optimization allows recursive functions whose last action is a function call to reuse the current stack frame, preventing stack overflow.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What are Design Patterns in JavaScript?</div>
+  <div class="a">
+    <p>Design patterns are reusable solutions to common programming problems, including creational (Singleton, Factory), structural (Decorator), and behavioral (Observer) patterns.</p>
+  </div>
+</div>
+<div class="faq">
+  <div class="q">What is the difference between CommonJS and ES Modules?</div>
+  <div class="a">
+    <p>CommonJS uses require() and module.exports and loads synchronously (used in Node.js); ES Modules use import/export and load asynchronously (used in browsers and modern Node.js).</p>
+  </div>
+</div>
+			   </div>
+	    <div class="col-sm-4 col-xs-12">
+				  <div id="sidebar"></div>
+			  
+			  </div>
+	</div>
+ </div>
+</section>
+<!-- SEO Text Section -->
+<section class="section py-5 bg-light">
+  <div class="container">
+    <p>JavaScript is the world's most widely used programming language, powering the interactive and dynamic behavior of virtually every website and web application. Originally created in 1995 for client-side scripting, JavaScript has evolved into a full-stack language used in browsers, servers (Node.js), mobile apps, and even desktop applications. Whether you are a frontend developer, backend developer, or full-stack engineer, JavaScript proficiency is a core requirement in today's tech industry.</p>
+
+    <p><strong>Key JavaScript topics covered in interviews include:</strong></p>
+    <ul>
+      <li>JavaScript Fundamentals and Data Types</li>
+      <li>ES6+ Features (Arrow Functions, Destructuring, Spread/Rest)</li>
+      <li>Scope, Hoisting, and Closures</li>
+      <li>Promises, Async/Await, and Asynchronous Programming</li>
+      <li>DOM Manipulation and Browser Events</li>
+      <li>Prototypes and Object-Oriented JavaScript</li>
+      <li>Error Handling and Debugging</li>
+      <li>JavaScript Performance and Memory Management</li>
+    </ul>
+
+    <p>From foundational concepts like data types, variables, and functions to advanced topics like event loops, prototypal inheritance, memory leaks, and design patterns, this guide covers everything you need to confidently answer JavaScript interview questions at any level. Whether you are preparing for a frontend developer, backend developer, or full-stack engineer role, these questions and answers will help you stand out in your next interview.</p>
+  </div>
+</section>
+</main>
+<!-- InstanceEndEditable -->
+<div class="clearfix"></div>
+<footer role="contentinfo" class="footer light newfooter">
+  <article class="footer-top">
+    <div class="container">
+      <div class="row align-items-center"> 
+        
+        <!-- Brand -->
+        <div class="col-md-6 col-sm-12 mb-3">
+          <h3 class="footer-logo">Web Tool Ocean</h3>
+          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
+            Fast, secure and easy to use on desktop & mobile. </p>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-md-3 col-sm-6 mb-3">
+          <h4 class="footer-heading">Contact</h4>
+          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
+        </div>
+        
+        <!-- Social -->
+        <div class="col-md-3 col-sm-6 mb-3">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="social-icons"> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a> <a href="https://www.linkedin.com/in/web-tool-ocean-a78866412/" target="_blank" aria-label="Linkedin"> <i class="fa fa-linkedin"></i> </a> 
+            
+            <!--  <a href="https://wa.me/?text=https://webtoolocean.com/" target="_blank" aria-label="WhatsApp">
+              <i class="fa fa-whatsapp"></i>
+            </a>--> 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  
+  <!-- Bottom Menu -->
+  <article id="copyrights">
+    <div class="container text-center">
+      <p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | Made With Love </p>
+      <p class="footer-links"> <a href="https://webtoolocean.com/about/">About Us</a> <span>|</span> <a href="https://webtoolocean.com/contact/">Contact Us</a> <span>|</span> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a> <span>|</span> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a> <span>|</span> <a href="https://webtoolocean.com/terms-conditions/">Terms & Conditions</a> | <a href="https://webtoolocean.com/blog/">Blog</a> | <a href="https://webtoolocean.com/resources/">Resources</a> </p>
+    </div>
+  </article>
+</footer>
+<div class="clearfix"></div>
+<script src="https://webtoolocean.com/js/jquery.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion5" --> 
+<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
+<script>
+document.querySelectorAll('.q').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('active'));
+</script> 
+	<script>
+fetch('/resources/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+    });
+</script> 
+<!-- InstanceEndEditable --> 
+
+<!--<script>
+		const btn = document.getElementById("togglemeu");
+const menu = document.querySelector(".mainmenubar");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+	</script> 
+<script id="3q6qk9">
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+</script> 
+<script id="7c7b4s">
+document.addEventListener("keydown", function(e){
+
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.key === "U") {
+        e.preventDefault();
+    }
+
+});
+</script> 
+<script id="5h2r0p">
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", function(e){
+
+if(e.key=="F12"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
+
+if(e.ctrlKey && e.key=="U"){e.preventDefault();}
+
+});
+
+setInterval(function(){
+
+if(window.outerWidth - window.innerWidth > 160){
+document.body.innerHTML="Access Restricted";
+}
+
+},1000);
+</script> 
+<script>
+document.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && e.key === "u") {
+    e.preventDefault();
+  }
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
+    e.preventDefault();
+  }
+});
+</script>--> 
+
+<script>
+ $(document).ready(function(){
+$("#togglemeu").click(function(){
+$(".mainmenubar").slideToggle();
+
+});
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+</script>
+</body>
+<!-- InstanceEnd -->
+</html>
