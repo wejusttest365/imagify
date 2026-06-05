@@ -1,124 +1,207 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-	<loc>https://webtoolocean.com/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://webtoolocean.com/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/image-tools/image-to-text-ocr/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/image-tools/image-converter/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/image-tools/compress-image/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/image-tools/image-to-text-ocr/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/image-tools/svg-to-image-converter/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/image-tools/compress-image/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/image-tools/image-to-svg-converter/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/image-tools/svg-to-image-converter/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/image-tools/favicon-generator/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/image-tools/image-to-svg-converter/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/image-tools/image-to-base64/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/image-tools/favicon-generator/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/image-tools/base64-to-image/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/image-tools/image-to-base64/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/css-tools/card-builder/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/image-tools/base64-to-image/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/developer-tools/json-formatter/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/css-tools/css-formatter/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/contact/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://webtoolocean.com/css-tools/box-shadow-generator/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/all-tools/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://webtoolocean.com/css-tools/mult-box-shadow-generator/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/pdf-tools/merge-pdf/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/css-tools/clip-image/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/about/</loc>
-	<lastmod>2026-05-31T11:37:35+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://webtoolocean.com/css-tools/card-builder/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/developer-tools/css-formatter/index.html</loc>
-	<lastmod>2026-05-31T11:37:38+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/css-tools/gradient-generator/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/css-tools/clip-image/index.html</loc>
-	<lastmod>2026-05-31T11:37:39+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/developer-tools/html-formatter/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/css-tools/mult-box-shadow-generator/index.html</loc>
-	<lastmod>2026-05-31T11:37:39+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/developer-tools/check-css-error/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/css-tools/box-shadow-generator/index.html</loc>
-	<lastmod>2026-05-31T11:37:39+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/developer-tools/base64-encoder-decoder/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/css-tools/gradient-generator/index.html</loc>
-	<lastmod>2026-05-31T11:37:40+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/developer-tools/json-formatter/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/developer-tools/base64-encoder-decoder/</loc>
-	<lastmod>2026-05-31T11:37:41+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/font-converter/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/developer-tools/check-css-error/index.html</loc>
-	<lastmod>2026-05-31T11:37:41+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/pdf-tools/merge-pdf/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/pdf-tools/reorder-pdf-pages/</loc>
-	<lastmod>2026-05-31T11:37:43+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/pdf-tools/reorder-pdf-pages/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/blog/how-to-merge-pdf-files/</loc>
-	<lastmod>2026-05-31T11:37:44+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://webtoolocean.com/contact/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://webtoolocean.com/disclaimer/index.html</loc>
-	<lastmod>2026-05-31T11:37:46+01:00</lastmod>
-	<priority>0.8</priority>
+  <loc>https://webtoolocean.com/all-tools/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://webtoolocean.com/blog/how-to-merge-pdf-files/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/blog/how-to-compress-image/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/blog/how-to-reorder-pdf-pages/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/blog/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/resources/figma-interview-questions/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/resources/AI-interview-questions/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/resources/html-interview-questions/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/resources/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/about/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/disclaimer/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/privacy-policy/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/terms-conditions/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/resources/javascript-interview-questions/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/resources/react-interview-questions/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://webtoolocean.com/resources/css-interview-questions/</loc>
+  <lastmod>2026-06-05T12:46:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
