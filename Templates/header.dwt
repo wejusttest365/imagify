@@ -112,6 +112,12 @@
     <li class="nav-item">
       <a class="nav-link" href="https://webtoolocean.com/contact/">Contact Us</a>
     </li>
+	  <li class="nav-item visible-xs">
+      <a class="nav-link" href="https://webtoolocean.com/blog/">Blog</a>
+    </li>
+	  <li class="nav-item visible-xs">
+      <a class="nav-link" href="https://webtoolocean.com/resources/">Resources</a>
+    </li>
   </ul>
 </nav>
 
@@ -206,13 +212,39 @@
   </article>
  
 </footer>
-  
+  <a href="#" id="backToTop" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5L5 12H9V19H15V12H19L12 5Z"
+              fill="currentColor"/>
+    </svg>
+</a>
 <div class="clearfix"></div> 
 <script src="https://webtoolocean.com/js/jquery.js"></script>  
 <!-- TemplateBeginEditable name="EditRegion5" --> 
 <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
 <!-- TemplateEndEditable --> 
- 
+ <script>
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', function() {
+
+    if (window.scrollY > 300) {
+        backToTop.classList.add('show');
+    } else {
+        backToTop.classList.remove('show');
+    }
+
+});
+
+backToTop.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+</script>
 <!--<script>
 		const btn = document.getElementById("togglemeu");
 const menu = document.querySelector(".mainmenubar");

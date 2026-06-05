@@ -1202,3 +1202,46 @@ button:disabled {
 .step-card h3 {
     color: #0034ad;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+#backToTop{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#0d6efd;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(20px);
+    transition:all .3s ease;
+    z-index:9999;
+}
+
+#backToTop.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+#backToTop:hover{
+    transform:translateY(-5px);
+}
+
+#backToTop svg{
+    transition:.3s;
+}
+
+#backToTop:hover svg{
+    transform:translateY(-3px);
+}
