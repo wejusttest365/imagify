@@ -1245,3 +1245,37 @@ html{
 #backToTop:hover svg{
     transform:translateY(-3px);
 }
+.topnav {
+    width: 100%;
+    display: flex;
+    background: #000000;
+    text-align: right;
+}
+
+.topnav ul {
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li {
+    display: inline-block;
+}
+
+.topnav ul li a {
+    color: #fff;
+    padding: 5px 10px;
+    /* text-transform: uppercase; */
+    line-height: 22px;
+    font-weight: 600;
+}
+@media (min-width:768px) {
+.visible-xs {display:none !important}
+}
+@media (max-width:767px) {
+	.visible-xs {display:block !important}
+}
+
+.topnav ul li a:hover {
+    background: orange;
+}
