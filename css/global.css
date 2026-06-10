@@ -1330,3 +1330,8 @@ html{
         width: 100%;
     }
 }
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
