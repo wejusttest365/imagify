@@ -249,7 +249,7 @@
 <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= --> 
-     
+      
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet"> 
 
@@ -590,7 +590,7 @@
       <p class="copy-text">
         © Copyright <span id="spanYear">2026</span> Web Tool Ocean | Made With Love
       </p>
-
+ 
       <p class="footer-links">
         <a href="https://webtoolocean.com/about/">About Us</a>
         <span>|</span>
@@ -603,12 +603,14 @@
 
         <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a>
         <span>|</span>
-
+ <a href="https://webtoolocean.com/cookie-policy/">Coockie Policy</a>
+        <span>|</span>
         <a href="https://webtoolocean.com/terms-conditions/">Terms & Conditions</a>
-		  |
+		   <span>|</span>
 		    <a href="https://webtoolocean.com/blog/">Blog</a>
-		  |  
+		  <span>|</span>
 		  <a href="https://webtoolocean.com/resources/">Resources</a> 
+		  
       </p>
  
     </div>
@@ -731,6 +733,116 @@ $(".mainmenubar").slideToggle();
 	document.getElementById("spanYear").textContent = new Date().getFullYear();
 </script>
 	 
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsent" class="cookie-banner shadow-lg">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        🍪 We use cookies to improve your experience, analyze traffic, and display relevant ads. By continuing to
+        browse, you agree to our use of cookies.
+        <a href="https://webtoolocean.com/cookie-policy" target="_blank">Learn More</a>
+      </div>
 
+      <div class="cookie-actions">
+        <button id="acceptCookies" class="btn btn-primary btn-sm">
+          Accept
+        </button>
+
+        <button id="declineCookies" class="btn btn-outline-secondary btn-sm">
+          Decline
+        </button>
+      </div>
+    </div>
+  </div>
+ 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const cookieBanner = document.getElementById("cookieConsent");
+      const acceptBtn = document.getElementById("acceptCookies");
+      const declineBtn = document.getElementById("declineCookies");
+
+      // Check if user has already made a choice
+      const consent = localStorage.getItem("cookieConsent");
+
+      if (consent) {
+        cookieBanner.style.display = "none";
+      }
+
+      // Accept Cookies
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "accepted");
+        cookieBanner.style.display = "none";
+
+        console.log("Cookies Accepted");
+
+        // Load Analytics / Ad Scripts here if needed
+        // Example:
+        // loadGoogleAnalytics();
+      });
+
+      // Decline Cookies
+      declineBtn.addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "declined");
+        cookieBanner.style.display = "none";
+
+        console.log("Cookies Declined");
+
+        // Do NOT load analytics or marketing scripts
+      });
+
+    });
+  </script>
+  <style>
+    .cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px;
+      z-index: 99999;
+      border: 1px solid #e5e7eb;
+    }
+
+    .cookie-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .cookie-text {
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .cookie-text a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cookie-actions {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .cookie-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cookie-actions {
+        width: 100%;
+      }
+
+      .cookie-actions button {
+        width: 100%;
+      }
+    }
+  </style>
 </body>
 <!-- InstanceEnd --></html>
