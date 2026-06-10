@@ -1323,11 +1323,13 @@ html{
     }
 
     .cookie-actions {
-        width: 100%;
+        width: 100%; white-space: normal;
     }
+ 
 
     .cookie-actions button {
         width: 100%;
+		  margin-bottom: 10px;
     }
 }
 
