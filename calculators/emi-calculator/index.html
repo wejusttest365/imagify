@@ -1,26 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+<!-- InstanceBeginEditable name="EditRegion4" -->
   <title>EMI Calculator – Calculate Loan EMI Online Free | Web Tool Ocean</title>
-  <meta name="description" content="Calculate your monthly EMI for home loan, car loan, or personal loan instantly. Free online EMI calculator by Web Tool Ocean. Get amortization schedule." />
-  <meta name="keywords" content="EMI calculator, loan EMI calculator, home loan EMI, car loan EMI, personal loan EMI, amortization schedule, webtoolocean" />
-  <meta name="author" content="Web Tool Ocean" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0d6efd" />
-  <link rel="canonical" href="https://webtoolocean.com/calculators/emi-calculator/" />
-  <meta property="og:title" content="EMI Calculator – Calculate Loan EMI Online Free" />
-  <meta property="og:description" content="Calculate monthly EMI for any loan. Get full amortization schedule instantly. Free tool by Web Tool Ocean." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://webtoolocean.com/calculators/emi-calculator/" />
-  <meta property="og:site_name" content="Web Tool Ocean" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EMI Calculator – Web Tool Ocean" />
-  <meta name="twitter:description" content="Calculate your monthly EMI for any loan instantly. Free online tool." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Meta Description -->
+<meta name="description" content="Calculate your EMI instantly with our free online EMI Calculator. Find your monthly loan installment for home loan, car loan, or personal loan with accurate results. No signup required.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="EMI calculator, EMI calculator online, loan EMI calculator, home loan EMI calculator, car loan EMI calculator, personal loan EMI calculator, monthly installment calculator, loan repayment calculator, interest calculator, webtoolocean">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://webtoolocean.com/calculators/emi-calculator/" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="EMI Calculator – Calculate Loan EMI Online Free" />
+<meta property="og:description" content="Calculate your exact monthly EMI for any loan instantly. Free, accurate, and no signup required." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://webtoolocean.com/calculators/emi-calculator/" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="EMI Calculator – Web Tool Ocean" />
+	
+	
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <style>
+
+
+  <!-- ===================================================== -->
+
+  <!--CSS for the website-->
+
+  <!-- Dependencies -->
+  <link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+  <link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
+  <link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
+ <style>
     :root {
       --wto-primary: #0d6efd;
       --wto-dark: #0f172a;
@@ -32,21 +52,12 @@
       --wto-text: #1e293b;
       --wto-muted: #64748b;
       --wto-success: #10b981;
-      --wto-warning: #f59e0b;
-      --wto-danger: #ef4444;
       --wto-gradient: linear-gradient(135deg, #0d6efd 0%, #0ea5e9 100%);
     }
-    * { box-sizing: border-box; }
-    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--wto-text); background: var(--wto-light-bg); }
-
-    /* NAV */
-    .navbar { background: var(--wto-dark) !important; padding: 12px 0; }
-    .navbar-brand span { color: #fff; font-weight: 700; font-size: 1.1rem; }
-    .nav-link { color: rgba(255,255,255,0.85) !important; font-size: 0.9rem; }
-    .nav-link:hover { color: #fff !important; }
-    .navbar-toggler { border-color: rgba(255,255,255,0.3); }
-    .navbar-toggler-icon { filter: invert(1); }
-
+    .benefit-icon {
+    display: none;
+}
+  
     /* HERO */
     .tool-hero { background: var(--wto-gradient); padding: 48px 0 40px; color: #fff; }
     .tool-hero .badge-pill { background: rgba(255,255,255,0.2); color: #fff; border-radius: 50px; padding: 4px 14px; font-size: 0.78rem; display: inline-block; margin-bottom: 12px; }
@@ -153,16 +164,7 @@
     /* FORMULA BOX */
     .formula-box { background: var(--wto-dark); color: #e2e8f0; border-radius: 12px; padding: 20px; font-family: 'Courier New', monospace; font-size: 0.9rem; margin-top: 16px; }
     .formula-box .formula-title { color: #60a5fa; font-weight: 700; margin-bottom: 8px; font-family: inherit; }
-
-    footer { background: var(--wto-dark); color: rgba(255,255,255,0.75); padding: 40px 0 20px; }
-    footer h6 { color: #fff; font-weight: 700; margin-bottom: 14px; }
-    footer a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; display: block; margin-bottom: 6px; }
-    footer a:hover { color: #fff; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 28px; padding-top: 16px; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
-    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 10px; max-width: 280px; }
-    .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: rgba(255,255,255,0.1); border-radius: 8px; color: rgba(255,255,255,0.7); font-size: 1rem; margin-right: 8px; transition: background 0.2s; }
-    .social-links a:hover { background: var(--wto-primary); color: #fff; }
-
+ 
     /* LOAN TYPE TABS */
     .loan-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
     .loan-tab { padding: 7px 16px; border-radius: 50px; border: 1.5px solid var(--wto-border); background: #fff; color: var(--wto-muted); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
@@ -179,49 +181,283 @@
       .donut-container { width: 120px; height: 120px; }
     }
   </style>
-</head>
-<body>
+  <!-- InstanceEndEditable -->
+<!-- Stylesheets     
+	============================================= -->
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="https://webtoolocean.com/">
-      <span style="font-size:1.4rem;">🌊</span>
-      <span>Web Tool Ocean</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMain">
-      <ul class="navbar-nav ms-auto gap-1">
-        <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Calculators</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/blog/">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://webtoolocean.com/contact/">Contact</a></li>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+<!-- Document Title   
+	============================================= -->
+<!-- InstanceBeginEditable name="doctitle" -->
+  <!-- InstanceEndEditable -->
+<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4C1PP726EZ');
+</script>
+<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+     crossorigin="anonymous"></script>
+</head>
+<style>
+body {
+	overflow-x: hidden
+}
+</style>
+<body class="">
+<!--ACCESSIBILITY CONTROLS   --> 
+
+<!--END ACCESSIBILITY CONTROLS   --> 
+<!-- Document Wrapper	  
+	============================================= --> 
+<!--	 <div class="topnav">
+    <div class="container">
+      <ul>
+        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/blog/">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/resources/">Resources</a> </li>
+        <li> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a></li>
+    
       </ul>
     </div>
-  </div>
-</nav>
+  </div>-->
 
-<!-- BREADCRUMB -->
-<div style="background:#fff; border-bottom:1px solid var(--wto-border); padding:8px 0;">
-  <div class="container">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb mb-0" style="font-size:0.82rem;">
-        <li class="breadcrumb-item"><a href="https://webtoolocean.com/" style="color:var(--wto-primary);">Home</a></li>
-        <li class="breadcrumb-item"><a href="#" style="color:var(--wto-primary);">Calculators</a></li>
-        <li class="breadcrumb-item active">EMI Calculator</li>
-      </ol>
+<header id="site-header">
+  <div class="header-inner"> <a class="logo" href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a>
+    <nav class="desktop-nav"> 
+      
+      <!-- Home -->
+      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/"> <i class="ti ti-home" aria-hidden="true" style="font-size:14px;color:#9ca3af"></i> Home </a> </div>
+      
+      <!-- Tools mega -->
+      <div class="nav-item" id="toolsItem">
+        <button class="nav-btn" id="toolsBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-apps" aria-hidden="true"></i> Tools <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
+        <div class="mega-dropdown" id="toolsMenu" role="menu">
+          <div class="mega-inner"> 
+            
+            <!-- Image Tools -->
+            <div class="mega-col col-purple">
+              <div class="mega-col-header"><i class="ti ti-photo" aria-hidden="true"></i> Image tools</div>
+              <a class="mega-link" href="https://webtoolocean.com/image-tools/image-converter/">
+              <div class="mega-link-icon icon-purple"><i class="ti ti-refresh" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">All Image Converter</span><span class="mega-link-desc">Convert between formats</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">
+              <div class="mega-link-icon icon-purple"><i class="ti ti-scan" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Image to Text (OCR)</span><span class="mega-link-desc">Extract text from images</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/image-tools/compress-image/">
+              <div class="mega-link-icon icon-purple"><i class="ti ti-file-zip" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Compress Images</span><span class="mega-link-desc">Reduce file size</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
+              <div class="mega-link-icon icon-purple"><i class="ti ti-vector" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">SVG to Image</span><span class="mega-link-desc">SVG → raster formats</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
+              <div class="mega-link-icon icon-purple"><i class="ti ti-vector-bezier" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Image to SVG</span><span class="mega-link-desc">Raster → vector SVG</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/image-tools/favicon-generator/">
+              <div class="mega-link-icon icon-purple"><i class="ti ti-star" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Favicon Generator</span><span class="mega-link-desc">Create .ico & PNG favicons</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/image-tools/image-to-base64/">
+              <div class="mega-link-icon icon-purple"><i class="ti ti-code" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Image to Base64</span><span class="mega-link-desc">Encode images to Base64</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/image-tools/base64-to-image/">
+              <div class="mega-link-icon icon-purple"><i class="ti ti-photo-up" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Base64 to Image</span><span class="mega-link-desc">Decode Base64 to image</span></div>
+              </a> </div>
+            
+            <!-- PDF Tools -->
+            <div class="mega-col col-red">
+              <div class="mega-col-header"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF tools</div>
+              <a class="mega-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">
+              <div class="mega-link-icon icon-red"><i class="ti ti-files" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Merge PDF</span><span class="mega-link-desc">Combine multiple PDFs</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">
+              <div class="mega-link-icon icon-red"><i class="ti ti-reorder" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Reorder PDF Pages</span><span class="mega-link-desc">Drag to rearrange</span></div>
+              </a> </div>
+            
+            <!-- CSS Tools -->
+            <div class="mega-col col-blue">
+              <div class="mega-col-header"><i class="ti ti-brush" aria-hidden="true"></i> CSS tools</div>
+              <a class="mega-link" href="https://webtoolocean.com/css-tools/css-formatter/">
+              <div class="mega-link-icon icon-blue"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Beautify / Minify CSS</span><span class="mega-link-desc">Format or compress CSS</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">
+              <div class="mega-link-icon icon-blue"><i class="ti ti-shadow" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Box Shadow Generator</span><span class="mega-link-desc">Visual shadow editor</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">
+              <div class="mega-link-icon icon-blue"><i class="ti ti-layers-subtract" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Multi Box Shadow</span><span class="mega-link-desc">Layered shadows</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/css-tools/clip-image/">
+              <div class="mega-link-icon icon-blue"><i class="ti ti-crop" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Clip Image CSS</span><span class="mega-link-desc">Clip-path made easy</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/css-tools/card-builder/">
+              <div class="mega-link-icon icon-blue"><i class="ti ti-layout-board" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">CSS Card Builder</span><span class="mega-link-desc">Design CSS cards</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/css-tools/gradient-generator/">
+              <div class="mega-link-icon icon-blue"><i class="ti ti-palette" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Gradient Generator</span><span class="mega-link-desc">Build CSS gradients</span></div>
+              </a> </div>
+            
+            <!-- Developer Tools -->
+            <div class="mega-col col-green">
+              <div class="mega-col-header"><i class="ti ti-terminal-2" aria-hidden="true"></i> Developer tools</div>
+              <a class="mega-link" href="https://webtoolocean.com/developer-tools/html-formatter/">
+              <div class="mega-link-icon icon-green"><i class="ti ti-brand-html5" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">HTML Formatter</span><span class="mega-link-desc">Beautify HTML markup</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/developer-tools/check-css-error/">
+              <div class="mega-link-icon icon-green"><i class="ti ti-bug" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Check CSS Errors</span><span class="mega-link-desc">Lint & validate CSS</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">
+              <div class="mega-link-icon icon-green"><i class="ti ti-lock" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Base64 Encoder-Decoder</span><span class="mega-link-desc">Encode & decode text</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/developer-tools/json-formatter/">
+              <div class="mega-link-icon icon-green"><i class="ti ti-braces" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">JSON Formatter</span><span class="mega-link-desc">Format & validate JSON</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/font-converter/">
+              <div class="mega-link-icon icon-green"><i class="ti ti-typography" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Web Font Converter</span><span class="mega-link-desc">Convert font formats</span></div>
+              </a> </div>
+            
+            <!-- Calculators (placeholder — add your real URLs when ready) -->
+            <div class="mega-col col-amber">
+              <div class="mega-col-header"><i class="ti ti-calculator" aria-hidden="true"></i> Calculators</div>
+              <a class="mega-link" href="https://webtoolocean.com/">
+              <div class="mega-link-icon icon-amber"><i class="ti ti-math" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Unit Converter</span><span class="mega-link-desc">px, em, rem, %</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/">
+              <div class="mega-link-icon icon-amber"><i class="ti ti-aspect-ratio" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Aspect Ratio</span><span class="mega-link-desc">Scale any dimension</span></div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/">
+              <div class="mega-link-icon icon-amber"><i class="ti ti-color-swatch" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Color Converter</span><span class="mega-link-desc">HEX, RGB, HSL</span></div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Plain nav links -->
+      <div class="nav-item"><a class="plain-link" href="https://webtoolocean.com/resources/"><i class="ti ti-books" aria-hidden="true" style="font-size:14px;color:#9ca3af"></i> Resources</a></div>
+      <div class="nav-item"><a class="plain-link" href="https://webtoolocean.com/blog/"><i class="ti ti-writing" aria-hidden="true" style="font-size:14px;color:#9ca3af"></i> Blog</a></div>
+      <div class="nav-item"><a class="plain-link" href="https://webtoolocean.com/about/"><i class="ti ti-users" aria-hidden="true" style="font-size:14px;color:#9ca3af"></i> About us</a></div>
+      <div class="nav-item"><a class="plain-link" href="https://webtoolocean.com/contact/"><i class="ti ti-mail" aria-hidden="true" style="font-size:14px;color:#9ca3af"></i> Contact</a></div>
     </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"> <span></span><span></span><span></span> </button>
   </div>
-</div>
+</header>
 
-<!-- HERO -->
-<section class="tool-hero">
-  <div class="container">
+<!-- Mobile Drawer -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Navigation menu">
+  <div class="drawer-header"> <a class="logo" href="https://webtoolocean.com/">
+    <div class="logo-icon" style="width:30px;height:30px;border-radius:7px;font-size:15px"><i class="ti ti-ripple" aria-hidden="true"></i></div>
+    <span class="logo-text" style="font-size:15px">Web<span>Tool</span>Ocean</span> </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="ti ti-x" aria-hidden="true"></i></button>
+  </div>
+  <nav class="drawer-nav"> <a class="drawer-plain-link" href="https://webtoolocean.com/"><i class="ti ti-home" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> Home</a>
+    <div class="drawer-divider"></div>
+    <div class="drawer-section">
+      <button class="drawer-section-btn" data-target="dr-image"><span style="display:flex;align-items:center;gap:8px"><i class="ti ti-photo" style="color:#7c3aed;font-size:16px" aria-hidden="true"></i> Image tools</span><i class="ti ti-chevron-down di" aria-hidden="true"></i></button>
+      <div class="drawer-items" id="dr-image"> <a class="drawer-item" href="https://webtoolocean.com/image-tools/image-converter/">
+        <div class="drawer-item-icon icon-purple"><i class="ti ti-refresh" aria-hidden="true"></i></div>
+        All Image Converter</a> <a class="drawer-item" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">
+        <div class="drawer-item-icon icon-purple"><i class="ti ti-scan" aria-hidden="true"></i></div>
+        Image to Text (OCR)</a> <a class="drawer-item" href="https://webtoolocean.com/image-tools/compress-image/">
+        <div class="drawer-item-icon icon-purple"><i class="ti ti-file-zip" aria-hidden="true"></i></div>
+        Compress Images</a> <a class="drawer-item" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
+        <div class="drawer-item-icon icon-purple"><i class="ti ti-vector" aria-hidden="true"></i></div>
+        SVG to Image Converter</a> <a class="drawer-item" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
+        <div class="drawer-item-icon icon-purple"><i class="ti ti-vector-bezier" aria-hidden="true"></i></div>
+        Image to SVG Converter</a> <a class="drawer-item" href="https://webtoolocean.com/image-tools/favicon-generator/">
+        <div class="drawer-item-icon icon-purple"><i class="ti ti-star" aria-hidden="true"></i></div>
+        Favicon Generator</a> <a class="drawer-item" href="https://webtoolocean.com/image-tools/image-to-base64/">
+        <div class="drawer-item-icon icon-purple"><i class="ti ti-code" aria-hidden="true"></i></div>
+        Image to Base64</a> <a class="drawer-item" href="https://webtoolocean.com/image-tools/base64-to-image/">
+        <div class="drawer-item-icon icon-purple"><i class="ti ti-photo-up" aria-hidden="true"></i></div>
+        Base64 to Image</a> </div>
+    </div>
+    <div class="drawer-section">
+      <button class="drawer-section-btn" data-target="dr-pdf"><span style="display:flex;align-items:center;gap:8px"><i class="ti ti-file-type-pdf" style="color:#dc2626;font-size:16px" aria-hidden="true"></i> PDF tools</span><i class="ti ti-chevron-down di" aria-hidden="true"></i></button>
+      <div class="drawer-items" id="dr-pdf"> <a class="drawer-item" href="https://webtoolocean.com/pdf-tools/merge-pdf/">
+        <div class="drawer-item-icon icon-red"><i class="ti ti-files" aria-hidden="true"></i></div>
+        Merge PDF</a> <a class="drawer-item" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">
+        <div class="drawer-item-icon icon-red"><i class="ti ti-reorder" aria-hidden="true"></i></div>
+        Reorder PDF Pages</a> </div>
+    </div>
+    <div class="drawer-section">
+      <button class="drawer-section-btn" data-target="dr-css"><span style="display:flex;align-items:center;gap:8px"><i class="ti ti-brush" style="color:#2563eb;font-size:16px" aria-hidden="true"></i> CSS tools</span><i class="ti ti-chevron-down di" aria-hidden="true"></i></button>
+      <div class="drawer-items" id="dr-css"> <a class="drawer-item" href="https://webtoolocean.com/css-tools/css-formatter/">
+        <div class="drawer-item-icon icon-blue"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+        Beautify / Minify CSS</a> <a class="drawer-item" href="https://webtoolocean.com/css-tools/box-shadow-generator/">
+        <div class="drawer-item-icon icon-blue"><i class="ti ti-shadow" aria-hidden="true"></i></div>
+        Box Shadow Generator</a> <a class="drawer-item" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">
+        <div class="drawer-item-icon icon-blue"><i class="ti ti-layers-subtract" aria-hidden="true"></i></div>
+        Multi Box Shadow Generator</a> <a class="drawer-item" href="https://webtoolocean.com/css-tools/clip-image/">
+        <div class="drawer-item-icon icon-blue"><i class="ti ti-crop" aria-hidden="true"></i></div>
+        Clip Image CSS</a> <a class="drawer-item" href="https://webtoolocean.com/css-tools/card-builder/">
+        <div class="drawer-item-icon icon-blue"><i class="ti ti-layout-board" aria-hidden="true"></i></div>
+        CSS Card Builder</a> <a class="drawer-item" href="https://webtoolocean.com/css-tools/gradient-generator/">
+        <div class="drawer-item-icon icon-blue"><i class="ti ti-palette" aria-hidden="true"></i></div>
+        Gradient Generator</a> </div>
+    </div>
+    <div class="drawer-section">
+      <button class="drawer-section-btn" data-target="dr-dev"><span style="display:flex;align-items:center;gap:8px"><i class="ti ti-terminal-2" style="color:#16a34a;font-size:16px" aria-hidden="true"></i> Developer tools</span><i class="ti ti-chevron-down di" aria-hidden="true"></i></button>
+      <div class="drawer-items" id="dr-dev"> <a class="drawer-item" href="https://webtoolocean.com/developer-tools/html-formatter/">
+        <div class="drawer-item-icon icon-green"><i class="ti ti-brand-html5" aria-hidden="true"></i></div>
+        HTML Formatter</a> <a class="drawer-item" href="https://webtoolocean.com/developer-tools/check-css-error/">
+        <div class="drawer-item-icon icon-green"><i class="ti ti-bug" aria-hidden="true"></i></div>
+        Check CSS Errors</a> <a class="drawer-item" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">
+        <div class="drawer-item-icon icon-green"><i class="ti ti-lock" aria-hidden="true"></i></div>
+        Base64 Encoder-Decoder</a> <a class="drawer-item" href="https://webtoolocean.com/developer-tools/json-formatter/">
+        <div class="drawer-item-icon icon-green"><i class="ti ti-braces" aria-hidden="true"></i></div>
+        JSON Formatter</a> <a class="drawer-item" href="https://webtoolocean.com/font-converter/">
+        <div class="drawer-item-icon icon-green"><i class="ti ti-typography" aria-hidden="true"></i></div>
+        Web Font Converter</a> </div>
+    </div>
+    <div class="drawer-section">
+      <button class="drawer-section-btn" data-target="dr-calc"><span style="display:flex;align-items:center;gap:8px"><i class="ti ti-calculator" style="color:#d97706;font-size:16px" aria-hidden="true"></i> Calculators</span><i class="ti ti-chevron-down di" aria-hidden="true"></i></button>
+      <div class="drawer-items" id="dr-calc"> <a class="drawer-item" href="https://webtoolocean.com/">
+        <div class="drawer-item-icon icon-amber"><i class="ti ti-math" aria-hidden="true"></i></div>
+        Unit Converter</a> <a class="drawer-item" href="https://webtoolocean.com/">
+        <div class="drawer-item-icon icon-amber"><i class="ti ti-aspect-ratio" aria-hidden="true"></i></div>
+        Aspect Ratio</a> <a class="drawer-item" href="https://webtoolocean.com/">
+        <div class="drawer-item-icon icon-amber"><i class="ti ti-color-swatch" aria-hidden="true"></i></div>
+        Color Converter</a> </div>
+    </div>
+    <div class="drawer-divider"></div>
+    <a class="drawer-plain-link" href="https://webtoolocean.com/resources/"><i class="ti ti-books" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> Resources</a> <a class="drawer-plain-link" href="https://webtoolocean.com/blog/"><i class="ti ti-writing" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> Blog</a> <a class="drawer-plain-link" href="https://webtoolocean.com/about/"><i class="ti ti-users" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> About us</a> <a class="drawer-plain-link" href="https://webtoolocean.com/contact/"><i class="ti ti-mail" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> Contact</a>
+    <div style="padding:14px 0 8px"></div>
+  </nav>
+</div>
+<!-- InstanceBeginEditable name="center" -->
+
+  <!-- Start dynamic content -->
+  <!-- <section id="testimonials">
+    <div class="container aniboxes animate__animated text-center">
+      <div id="contentwidget1"></div>
+      <br>
+    </div>
+  </section>-->
+  <!-- End dynamic content -->
+  <div class="clearfix"></div>
+  <!-- End dynamic content -->
+
+  <!-- Sevices section -->
+  <main id="content">
+
+    <!-- HERO -->
+    <section class="tool-hero" aria-labelledby="tool-heading">
+      <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-8">
-        <span class="badge-pill">💳 Free Calculator Tool</span>
+        
         <h1>EMI Calculator</h1>
         <p>Calculate your monthly loan EMI instantly for home, car, or personal loans. Get full amortization schedule and interest breakdown.</p>
         <div class="tool-features-pills">
@@ -233,11 +469,11 @@
       </div>
     </div>
   </div>
-</section>
+    </section>
 
-<!-- TOOL -->
-<section class="tool-section">
-  <div class="container">
+    <!-- TOOL -->
+    <section class="tool-section" aria-label="Age Calculator Tool">
+       <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="tool-card">
@@ -442,11 +678,11 @@
       </div>
     </div>
   </div>
-</section>
+    </section>
 
-<!-- HOW TO USE -->
-<section class="content-section bg-white-section">
-  <div class="container">
+    <!-- HOW TO USE -->
+    <section class="content-section bg-white-section" aria-labelledby="how-to-use">
+       <div class="container">
     <div class="row">
       <div class="col-lg-6">
         <h2 class="section-title">How to Use the EMI Calculator</h2>
@@ -488,11 +724,11 @@
       </div>
     </div>
   </div>
-</section>
+    </section>
 
-<!-- BENEFITS -->
-<section class="content-section">
-  <div class="container">
+    <!-- BENEFITS -->
+    <section class="content-section" aria-labelledby="benefits-heading">
+       <div class="container">
     <h2 class="section-title text-center">Key Benefits</h2>
     <p class="section-subtitle text-center">Why our EMI Calculator stands out</p>
     <div class="row g-4">
@@ -540,13 +776,13 @@
       </div>
     </div>
   </div>
-</section>
+    </section>
 
-<!-- FAQ -->
-<section class="faq-section">
-  <div class="container">
+    <!-- FAQ -->
+    <section class="faq-section" aria-labelledby="faq-heading">
+       <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-8">
+      <div class="col-lg-12">
         <h2 class="section-title text-center">Frequently Asked Questions</h2>
         <p class="section-subtitle text-center">Everything you need to know about EMI calculation</p>
         <div class="accordion" id="faqAccordion">
@@ -594,106 +830,98 @@
       </div>
     </div>
   </div>
-</section>
+    </section>
+ 
+     
+  </main>
 
-<!-- RELATED TOOLS -->
-<section class="related-tools">
-  <div class="container">
-    <h2 class="section-title text-center">More Free Calculator Tools</h2>
-    <p class="section-subtitle text-center">Explore other helpful calculators on Web Tool Ocean</p>
-    <div class="row g-3">
-      <div class="col-6 col-md-4 col-lg-2">
-        <a href="../calculator/gst-calculator.html" class="related-card">
-          <span class="ri">🧾</span>
-          <h6>GST Calculator</h6>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <a href="../calculator/sip-calculator.html" class="related-card">
-          <span class="ri">📈</span>
-          <h6>SIP Calculator</h6>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <a href="age-calculator.html" class="related-card">
-          <span class="ri">🎂</span>
-          <h6>Age Calculator</h6>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <a href="../calculator/bmi-calculator.html" class="related-card">
-          <span class="ri">⚖️</span>
-          <h6>BMI Calculator</h6>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <a href="../calculator/percentage-calculator.html" class="related-card">
-          <span class="ri">🔢</span>
-          <h6>Percentage</h6>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <a href="../calculator/loan-calculator.html" class="related-card">
-          <span class="ri">🏦</span>
-          <h6>Loan Calculator</h6>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-4 footer-brand">
-        <h6>🌊 Web Tool Ocean</h6>
-        <p>Free online tools for PDF, images, calculators, coding, and productivity. Fast, secure and mobile friendly.</p>
-        <div class="social-links mt-3">
-          <a href="https://www.instagram.com/webtoolocean" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/web-tool-ocean-a78866412/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+
+  <!-- InstanceEndEditable -->
+<div class="clearfix"></div>
+<footer role="contentinfo" class="footer light newfooter">
+  <article class="footer-top">
+    <div class="container">
+      <div class="row">  
+        
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="footer-links">
+            <h4 class="footer-heading">Popular Tools</h4>
+            <ul>
+              <li><a href="https://webtoolocean.com/image-tools/image-converter/">Image
+                Converter</a></li>
+              <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to
+                Text (OCR)</a></li>
+              <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress
+                Images</a></li>
+              <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
+              <li><a href="https://webtoolocean.com/css-tools/clip-image/">Clip Image </a></li>
+              <li><a href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
+              <li><a href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="footer-links">
+            <h4 class="footer-heading">Support</h4>
+            <ul>
+              <li> <a href="https://webtoolocean.com/about/">About Us</a></li>
+              <li> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a></li>
+              <li> <a href="https://webtoolocean.com/cookie-policy/">Cookie Policy</a></li>
+              <li> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a></li>
+              <li> <a href="https://webtoolocean.com/terms-conditions/">Terms &amp; Conditions</a></li>
+              <li> <a href="https://webtoolocean.com/blog/">Blog</a></li>
+              <li> <a href="https://webtoolocean.com/resources/">Resources</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <div class="footer-links">
+            <h4 class="footer-heading">Calculator Tools</h4>
+            <ul>
+              <li><a href="https://webtoolocean.com/calculators/age-calculator/"><span class="fa fa-caret-right"></span>Age Calculator</a></li>
+    <li><a href="https://webtoolocean.com/calculators/emi-calculator/"><span class="fa fa-caret-right"></span>EMI  Calculator</a></li>
+             <!-- <li><a href="https://webtoolocean.com/calculators/basic-calculator">Basic Calculator</a></li>
+              <li><a href="https://webtoolocean.com/calculators/percentage-calculator">Percentage Calculator</a></li>
+              <li><a href="https://webtoolocean.com/calculators/currency-calculator">Currency Converter</a></li>
+              <li><a href="https://webtoolocean.com/calculators/unit-calculator">Unit Converter</a></li>
+              <li><a href="https://webtoolocean.com/calculators/date-calculator">Date Difference</a></li>
+              <li><a href="https://webtoolocean.com/calculators/bmi-calculator">BMI Calculator</a></li>-->
+            </ul>
+          </div>
+        </div>
+		  <div class="col-md-3 col-sm-12 mb-3">
+          <div class="mb-3"> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
+          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
+            Fast, secure and easy to use on desktop &amp; mobile. </p>
+          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
+          <p class="footer-text mb-1"> <i class="fa fa-instagram"></i> <a href="https://www.instagram.com/webtoolocean">Follow us</a> </p>
         </div>
       </div>
-      <div class="col-6 col-lg-2">
-        <h6>Calculators</h6>
-        <a href="age-calculator.html">Age Calculator</a>
-        <a href="emi-calculator.html">EMI Calculator</a>
-        <a href="../calculator/gst-calculator.html">GST Calculator</a>
-        <a href="../calculator/sip-calculator.html">SIP Calculator</a>
-        <a href="../calculator/bmi-calculator.html">BMI Calculator</a>
-      </div>
-      <div class="col-6 col-lg-2">
-        <h6>More Tools</h6>
-        <a href="../calculator/currency-converter.html">Currency Converter</a>
-        <a href="../calculator/unit-converter.html">Unit Converter</a>
-        <a href="../calculator/percentage-calculator.html">Percentage</a>
-        <a href="../calculator/discount-calculator.html">Discount</a>
-        <a href="../calculator/loan-calculator.html">Loan Calculator</a>
-      </div>
-      <div class="col-6 col-lg-2">
-        <h6>Web Tools</h6>
-        <a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a>
-        <a href="https://webtoolocean.com/image-tools/compress-image/">Compress Image</a>
-        <a href="https://webtoolocean.com/css-tools/css-formatter/">CSS Formatter</a>
-        <a href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a>
-      </div>
-      <div class="col-6 col-lg-2">
-        <h6>Company</h6>
-        <a href="https://webtoolocean.com/about/">About Us</a>
-        <a href="https://webtoolocean.com/contact/">Contact</a>
-        <a href="https://webtoolocean.com/blog/">Blog</a>
-        <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a>
-        <a href="https://webtoolocean.com/terms-conditions/">Terms</a>
+    </div>
+  </article>
+  
+  <!-- Bottom Menu -->
+  <article id="copyrights">
+    <div class="container text-center">
+		   <div class="row">  <div class="col-md-7 col-xs-12 md-text-left text-center"><p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | All Rights Reserved </p></div>
+		<div class="col-md-5 col-xs-12 md-text-right text-center"><a href="https://webtoolocean.com/sitemap">Sitemap</a></div>
       </div>
     </div>
-    <div class="footer-bottom text-center">
-      © 2026 Web Tool Ocean | Made With ❤️ | <a href="https://webtoolocean.com/" style="color:rgba(255,255,255,0.45);">webtoolocean.com</a>
-    </div>
-  </div>
+  </article>
 </footer>
+<a href="#" id="backToTop" aria-label="Back to Top">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+  <path d="M12 5L5 12H9V19H15V12H19L12 5Z"
+              fill="currentColor"/>
+</svg>
+</a>
+<div class="clearfix"></div>
+<script src="https://webtoolocean.com/js/jquery.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion5" -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
+  <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
+ <script>
   const CIRCUMFERENCE = 2 * Math.PI * 48; // 301.59
 
   const loanPresets = {
@@ -862,5 +1090,214 @@
   updateSliderVals();
   document.addEventListener('keydown', e => { if (e.key === 'Enter') calculateEMI(); });
 </script>
+	<script>
+fetch('/calculators/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+    });
+</script> 
+  <!-- InstanceEndEditable --> 
+<script>
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', function() {
+
+    if (window.scrollY > 300) {
+        backToTop.classList.add('show');
+    } else {
+        backToTop.classList.remove('show');
+    }
+
+});
+
+backToTop.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+</script> 
+<!--<script>
+		const btn = document.getElementById("togglemeu");
+const menu = document.querySelector(".mainmenubar");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+	</script> 
+<script id="3q6qk9">
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+</script> 
+<script id="7c7b4s">
+document.addEventListener("keydown", function(e){
+
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && e.key === "U") {
+        e.preventDefault();
+    }
+
+});
+</script> 
+<script id="5h2r0p">
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", function(e){
+
+if(e.key=="F12"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
+
+if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
+
+if(e.ctrlKey && e.key=="U"){e.preventDefault();}
+
+});
+
+setInterval(function(){
+
+if(window.outerWidth - window.innerWidth > 160){
+document.body.innerHTML="Access Restricted";
+}
+
+},1000);
+</script> 
+<script>
+document.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && e.key === "u") {
+    e.preventDefault();
+  }
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
+    e.preventDefault();
+  }
+});
+</script>--> 
+
+<script>
+ $(document).ready(function(){
+$("#togglemeu").click(function(){
+$(".mainmenubar").slideToggle();
+
+});
+});
+	document.getElementById("spanYear").textContent = new Date().getFullYear();
+</script> 
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="cookie-banner shadow-lg">
+  <div class="cookie-content">
+    <div class="cookie-text"> 🍪 We use cookies to improve your experience, analyze traffic, and display relevant ads. By continuing to
+      browse, you agree to our use of cookies. <a href="https://webtoolocean.com/cookie-policy" target="_blank">Learn More</a> </div>
+    <div class="cookie-actions">
+      <button id="acceptCookies" class="btn btn-primary btn-sm"> Accept </button>
+      <button id="declineCookies" class="btn btn-outline-secondary btn-sm"> Decline </button>
+    </div>
+  </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const cookieBanner = document.getElementById("cookieConsent");
+      const acceptBtn = document.getElementById("acceptCookies");
+      const declineBtn = document.getElementById("declineCookies");
+
+      // Check if user has already made a choice
+      const consent = localStorage.getItem("cookieConsent");
+
+      if (consent) {
+        cookieBanner.style.display = "none";
+      }
+
+      // Accept Cookies
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "accepted");
+        cookieBanner.style.display = "none";
+
+        console.log("Cookies Accepted");
+
+        // Load Analytics / Ad Scripts here if needed
+        // Example:
+        // loadGoogleAnalytics();
+      });
+
+      // Decline Cookies
+      declineBtn.addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "declined");
+        cookieBanner.style.display = "none";
+
+        console.log("Cookies Declined");
+
+        // Do NOT load analytics or marketing scripts
+      });
+
+    });
+  </script> 
+
+<!--mega menu js below--> 
+
+<script>
+  const header = document.getElementById('site-header');
+  const toolsItem = document.getElementById('toolsItem');
+  const toolsBtn = document.getElementById('toolsBtn');
+  const hamburger = document.getElementById('hamburger');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const drawerClose = document.getElementById('drawerClose');
+
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  toolsBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const isOpen = toolsItem.classList.toggle('open');
+    toolsBtn.setAttribute('aria-expanded', isOpen);
+  });
+
+  document.addEventListener('click', e => {
+    if (!toolsItem.contains(e.target)) {
+      toolsItem.classList.remove('open');
+      toolsBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  function openDrawer(){mobileDrawer.classList.add('open');mobileOverlay.classList.add('active');hamburger.classList.add('open');hamburger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}
+  function closeDrawer(){mobileDrawer.classList.remove('open');mobileOverlay.classList.remove('active');hamburger.classList.remove('open');hamburger.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+
+  hamburger.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+  mobileOverlay.addEventListener('click', closeDrawer);
+
+  document.querySelectorAll('.drawer-section-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.dataset.target);
+      const isOpen = target.classList.toggle('show');
+      btn.classList.toggle('open', isOpen);
+    });
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape'){toolsItem.classList.remove('open');closeDrawer()}
+  });
+</script>
 </body>
-</html>
+<!-- InstanceEnd --></html>
