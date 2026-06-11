@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
 <!-- InstanceBeginEditable name="EditRegion4" -->
-  <title>EMI Calculator – Calculate Loan EMI Online Free | Web Tool Ocean</title>
-  <!-- Meta Description -->
+<title>EMI Calculator – Calculate Loan EMI Online Free | Web Tool Ocean</title>
+<!-- Meta Description -->
 <meta name="description" content="Calculate your EMI instantly with our free online EMI Calculator. Find your monthly loan installment for home loan, car loan, or personal loan with accurate results. No signup required.">
 
 <!-- Meta Keywords -->
@@ -25,163 +26,585 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="EMI Calculator – Web Tool Ocean" />
-	
-	
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
+<!-- ===================================================== -->
 
-  <!-- ===================================================== -->
+<!--CSS for the website-->
 
-  <!--CSS for the website-->
-
-  <!-- Dependencies -->
-  <link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
- <style>
-    :root {
-      --wto-primary: #0d6efd;
-      --wto-dark: #0f172a;
-      --wto-darker: #0a1020;
-      --wto-accent: #3b82f6;
-      --wto-light-bg: #f8faff;
-      --wto-card-bg: #ffffff;
-      --wto-border: #e2e8f0;
-      --wto-text: #1e293b;
-      --wto-muted: #64748b;
-      --wto-success: #10b981;
-      --wto-gradient: linear-gradient(135deg, #0d6efd 0%, #0ea5e9 100%);
-    }
-    .benefit-icon {
-    display: none;
+<!-- Dependencies -->
+<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
+<link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
+<style>
+:root {
+ --wto-primary: #0d6efd;
+ --wto-dark: #0f172a;
+ --wto-darker: #0a1020;
+ --wto-accent: #3b82f6;
+ --wto-light-bg: #f8faff;
+ --wto-card-bg: #ffffff;
+ --wto-border: #e2e8f0;
+ --wto-text: #1e293b;
+ --wto-muted: #64748b;
+ --wto-success: #10b981;
+ --wto-gradient: linear-gradient(135deg, #0d6efd 0%, #0ea5e9 100%);
 }
-  
-    /* HERO */
-    .tool-hero { background: var(--wto-gradient); padding: 48px 0 40px; color: #fff; }
-    .tool-hero .badge-pill { background: rgba(255,255,255,0.2); color: #fff; border-radius: 50px; padding: 4px 14px; font-size: 0.78rem; display: inline-block; margin-bottom: 12px; }
-    .tool-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
-    .tool-hero p { font-size: 1rem; opacity: 0.9; max-width: 560px; }
-    .tool-features-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-    .tool-features-pills span { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 50px; padding: 4px 12px; font-size: 0.8rem; }
-
-    /* TOOL CARD */
-    .tool-section { padding: 48px 0; }
-    .tool-card { background: var(--wto-card-bg); border: 1px solid var(--wto-border); border-radius: 16px; box-shadow: 0 4px 24px rgba(13,110,253,0.07); overflow: hidden; }
-    .tool-card-header { background: var(--wto-gradient); padding: 18px 24px; }
-    .tool-card-header h2 { color: #fff; font-size: 1.1rem; font-weight: 700; margin: 0; }
-    .tool-card-header p { color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 4px 0 0; }
-    .tool-card-body { padding: 28px 24px; }
-
-    .form-label { font-weight: 600; font-size: 0.88rem; color: var(--wto-text); margin-bottom: 6px; }
-    .form-control, .form-select { border: 1.5px solid var(--wto-border); border-radius: 10px; padding: 10px 14px; font-size: 0.95rem; transition: border-color 0.2s; }
-    .form-control:focus, .form-select:focus { border-color: var(--wto-primary); box-shadow: 0 0 0 3px rgba(13,110,253,0.1); }
-
-    /* RANGE SLIDER */
-    .range-wrap { position: relative; }
-    .range-val { position: absolute; right: 0; top: -22px; font-size: 0.82rem; font-weight: 700; color: var(--wto-primary); }
-    input[type="range"] { width: 100%; height: 6px; border-radius: 6px; outline: none; border: none; accent-color: var(--wto-primary); cursor: pointer; }
-
-    .btn-calculate { background: var(--wto-gradient); border: none; color: #fff; font-weight: 700; padding: 12px 32px; border-radius: 10px; font-size: 0.95rem; width: 100%; transition: opacity 0.2s, transform 0.1s; }
-    .btn-calculate:hover { opacity: 0.92; transform: translateY(-1px); color: #fff; }
-    .btn-reset { background: #f1f5f9; border: 1.5px solid var(--wto-border); color: var(--wto-muted); font-weight: 600; padding: 12px 24px; border-radius: 10px; font-size: 0.95rem; width: 100%; }
-    .btn-reset:hover { background: #e2e8f0; color: var(--wto-text); }
-
-    /* RESULT */
-    .result-section { display: none; margin-top: 24px; }
-    .result-section.show { display: block; }
-    .result-main { background: var(--wto-gradient); border-radius: 14px; padding: 24px; color: #fff; text-align: center; margin-bottom: 16px; }
-    .result-main .emi-big { font-size: 2.8rem; font-weight: 900; line-height: 1; }
-    .result-main .emi-label { font-size: 1rem; opacity: 0.85; margin-top: 4px; }
-    .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .result-item { background: var(--wto-light-bg); border: 1.5px solid var(--wto-border); border-radius: 12px; padding: 16px; text-align: center; }
-    .result-item .val { font-size: 1.3rem; font-weight: 800; color: var(--wto-primary); }
-    .result-item .lbl { font-size: 0.75rem; color: var(--wto-muted); margin-top: 2px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
-    .result-item.danger .val { color: var(--wto-danger); }
-    .result-item.success .val { color: var(--wto-success); }
-
-    /* DONUT CHART */
-    .chart-wrap { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 16px; }
-    .donut-container { position: relative; width: 160px; height: 160px; flex-shrink: 0; }
-    .donut-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-    .donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--wto-muted); text-align: center; }
-    .donut-center strong { font-size: 1rem; color: var(--wto-text); }
-    .chart-legend { flex: 1; min-width: 140px; }
-    .legend-item { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-    .legend-dot { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; }
-    .legend-item .legend-info .lbl { font-size: 0.8rem; color: var(--wto-muted); }
-    .legend-item .legend-info .val { font-size: 1rem; font-weight: 700; color: var(--wto-text); }
-
-    /* AMORTIZATION TABLE */
-    .amort-section { margin-top: 20px; }
-    .amort-toggle { background: var(--wto-light-bg); border: 1.5px solid var(--wto-border); color: var(--wto-primary); font-weight: 600; padding: 10px 20px; border-radius: 10px; font-size: 0.88rem; width: 100%; cursor: pointer; }
-    .amort-toggle:hover { background: #e8f0fe; }
-    .amort-table-wrap { display: none; margin-top: 14px; border: 1.5px solid var(--wto-border); border-radius: 12px; overflow: hidden; max-height: 340px; overflow-y: auto; }
-    .amort-table-wrap.show { display: block; }
-    .amort-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
-    .amort-table thead { background: var(--wto-gradient); color: #fff; position: sticky; top: 0; z-index: 1; }
-    .amort-table th { padding: 10px 12px; text-align: right; font-weight: 600; white-space: nowrap; }
-    .amort-table th:first-child { text-align: center; }
-    .amort-table td { padding: 9px 12px; text-align: right; border-bottom: 1px solid var(--wto-border); }
-    .amort-table td:first-child { text-align: center; font-weight: 600; color: var(--wto-muted); }
-    .amort-table tbody tr:hover { background: #eff6ff; }
-    .amort-table tbody tr:last-child td { border-bottom: none; }
-    .amort-table .principal-col { color: var(--wto-primary); font-weight: 600; }
-    .amort-table .interest-col { color: var(--wto-danger); }
-    .amort-table .balance-col { color: var(--wto-muted); }
-
-    /* CONTENT */
-    .content-section { padding: 48px 0; }
-    .content-section.bg-white-section { background: #fff; border-top: 1px solid var(--wto-border); border-bottom: 1px solid var(--wto-border); }
-    .section-title { font-size: 1.5rem; font-weight: 800; color: var(--wto-text); margin-bottom: 8px; }
-    .section-subtitle { color: var(--wto-muted); font-size: 0.95rem; margin-bottom: 28px; }
-
-    .how-step { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
-    .step-num { background: var(--wto-gradient); color: #fff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; }
-    .step-content h5 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
-    .step-content p { font-size: 0.88rem; color: var(--wto-muted); margin: 0; }
-
-    .benefit-card { background: #fff; border: 1.5px solid var(--wto-border); border-radius: 14px; padding: 20px; height: 100%; transition: box-shadow 0.2s, border-color 0.2s; }
-    .benefit-card:hover { box-shadow: 0 4px 20px rgba(13,110,253,0.1); border-color: var(--wto-primary); }
-    .benefit-icon { width: 44px; height: 44px; background: var(--wto-light-bg); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; font-size: 1.3rem; color: var(--wto-primary); }
-    .benefit-card h5 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
-    .benefit-card p { font-size: 0.85rem; color: var(--wto-muted); margin: 0; }
-
-    .faq-section { padding: 48px 0; background: #fff; border-top: 1px solid var(--wto-border); }
-    .accordion-button { font-weight: 600; font-size: 0.93rem; color: var(--wto-text); }
-    .accordion-button:not(.collapsed) { color: var(--wto-primary); background: #eff6ff; box-shadow: none; }
-    .accordion-button:focus { box-shadow: 0 0 0 3px rgba(13,110,253,0.1); }
-    .accordion-item { border: 1.5px solid var(--wto-border); border-radius: 10px !important; margin-bottom: 10px; overflow: hidden; }
-    .accordion-body { font-size: 0.9rem; color: var(--wto-muted); line-height: 1.7; }
-
-    .related-tools { padding: 48px 0; }
-    .related-card { background: #fff; border: 1.5px solid var(--wto-border); border-radius: 14px; padding: 20px; text-align: center; transition: all 0.2s; text-decoration: none; color: var(--wto-text); display: block; height: 100%; }
-    .related-card:hover { box-shadow: 0 4px 20px rgba(13,110,253,0.12); border-color: var(--wto-primary); color: var(--wto-primary); transform: translateY(-2px); }
-    .related-card .ri { font-size: 2rem; margin-bottom: 10px; color: var(--wto-primary); display: block; }
-    .related-card h6 { font-weight: 700; font-size: 0.88rem; margin: 0; }
-
-    /* FORMULA BOX */
-    .formula-box { background: var(--wto-dark); color: #e2e8f0; border-radius: 12px; padding: 20px; font-family: 'Courier New', monospace; font-size: 0.9rem; margin-top: 16px; }
-    .formula-box .formula-title { color: #60a5fa; font-weight: 700; margin-bottom: 8px; font-family: inherit; }
- 
-    /* LOAN TYPE TABS */
-    .loan-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
-    .loan-tab { padding: 7px 16px; border-radius: 50px; border: 1.5px solid var(--wto-border); background: #fff; color: var(--wto-muted); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
-    .loan-tab.active, .loan-tab:hover { background: var(--wto-gradient); color: #fff; border-color: transparent; }
-
-    .input-group-text { background: var(--wto-light-bg); border: 1.5px solid var(--wto-border); border-radius: 10px 0 0 10px; font-weight: 700; color: var(--wto-primary); }
-    .input-group .form-control { border-radius: 0 10px 10px 0; border-left: none; }
-    .input-group .form-control:focus { z-index: 1; }
-
-    @media (max-width: 576px) {
-      .tool-hero h1 { font-size: 1.5rem; }
-      .result-grid { grid-template-columns: repeat(2, 1fr); }
-      .emi-big { font-size: 2rem !important; }
-      .donut-container { width: 120px; height: 120px; }
-    }
-  </style>
-  <!-- InstanceEndEditable -->
+.benefit-icon {
+	display: none;
+}
+/* HERO */
+.tool-hero {
+	background: var(--wto-gradient);
+	padding: 48px 0 40px;
+	color: #fff;
+}
+.tool-hero .badge-pill {
+	background: rgba(255,255,255,0.2);
+	color: #fff;
+	border-radius: 50px;
+	padding: 4px 14px;
+	font-size: 0.78rem;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+.tool-hero h1 {
+	font-size: 2rem;
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+.tool-hero p {
+	font-size: 1rem;
+	opacity: 0.9;
+	max-width: 560px;
+}
+.tool-features-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 16px;
+}
+.tool-features-pills span {
+	background: rgba(255,255,255,0.15);
+	border: 1px solid rgba(255,255,255,0.25);
+	color: #fff;
+	border-radius: 50px;
+	padding: 4px 12px;
+	font-size: 0.8rem;
+}
+/* TOOL CARD */
+.tool-section {
+	padding: 30px 0;
+}
+.tool-card {
+	background: var(--wto-card-bg);
+	border: 1px solid var(--wto-border);
+	border-radius: 16px;
+	box-shadow: 0 4px 24px rgba(13,110,253,0.07);
+	overflow: hidden;
+}
+.tool-card-header {
+	background: var(--wto-gradient);
+	padding: 18px 24px;
+}
+.tool-card-header h2 {
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin: 0;
+}
+.tool-card-header p {
+	color: rgba(255,255,255,0.85);
+	font-size: 0.85rem;
+	margin: 4px 0 0;
+}
+.tool-card-body {
+	padding: 10px
+}
+.form-label {
+	font-weight: 600;
+	font-size: 0.88rem;
+	color: var(--wto-text);
+	margin-bottom: 6px;
+}
+.form-control, .form-select {
+	border: 1.5px solid var(--wto-border);
+	border-radius: 10px;
+	padding: 10px 14px;
+	font-size: 0.95rem;
+	transition: border-color 0.2s;
+}
+.form-control:focus, .form-select:focus {
+	border-color: var(--wto-primary);
+	box-shadow: 0 0 0 3px rgba(13,110,253,0.1);
+}
+/* RANGE SLIDER */
+.range-wrap {
+	position: relative;
+}
+.range-val {
+	position: absolute;
+	right: 0;
+	top: -22px;
+	font-size: 0.82rem;
+	font-weight: 700;
+	color: var(--wto-primary);
+}
+input[type="range"] {
+	width: 100%;
+	height: 6px;
+	border-radius: 6px;
+	outline: none;
+	border: none;
+	accent-color: var(--wto-primary);
+	cursor: pointer;
+}
+.btn-calculate {
+	background: var(--wto-gradient);
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	padding: 12px 32px;
+	border-radius: 10px;
+	font-size: 0.95rem;
+	width: 100%;
+	transition: opacity 0.2s, transform 0.1s;
+}
+.btn-calculate:hover {
+	opacity: 0.92;
+	transform: translateY(-1px);
+	color: #fff;
+}
+.btn-reset {
+	background: #f1f5f9;
+	border: 1.5px solid var(--wto-border);
+	color: var(--wto-muted);
+	font-weight: 600;
+	padding: 12px 24px;
+	border-radius: 10px;
+	font-size: 0.95rem;
+	width: 100%;
+}
+.btn-reset:hover {
+	background: #e2e8f0;
+	color: var(--wto-text);
+}
+/* RESULT */
+.result-section {
+	display: none;
+	margin-top: 24px;
+}
+.result-section.show {
+	display: block;
+}
+.result-main {
+	background: var(--wto-gradient);
+	border-radius: 14px;
+	padding: 24px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 16px;
+}
+.result-main .emi-big {
+	font-size: 2.8rem;
+	font-weight: 900;
+	line-height: 1;
+}
+.result-main .emi-label {
+	font-size: 1rem;
+	opacity: 0.85;
+	margin-top: 4px;
+}
+.result-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+.result-item {
+	background: var(--wto-light-bg);
+	border: 1.5px solid var(--wto-border);
+	border-radius: 12px;
+	padding: 16px;
+	text-align: center;
+}
+.result-item .val {
+	font-size: 1.3rem;
+	font-weight: 800;
+	color: var(--wto-primary);
+}
+.result-item .lbl {
+	font-size: 0.75rem;
+	color: var(--wto-muted);
+	margin-top: 2px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+.result-item.danger .val {
+	color: var(--wto-danger);
+}
+.result-item.success .val {
+	color: var(--wto-success);
+}
+/* DONUT CHART */
+.chart-wrap {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	flex-wrap: wrap;
+	margin-top: 16px;
+}
+.donut-container {
+	position: relative;
+	width: 160px;
+	height: 160px;
+	flex-shrink: 0;
+}
+.donut-svg {
+	width: 100%;
+	height: 100%;
+	transform: rotate(-90deg);
+}
+.donut-center {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.75rem;
+	color: var(--wto-muted);
+	text-align: center;
+}
+.donut-center strong {
+	font-size: 1rem;
+	color: var(--wto-text);
+}
+.chart-legend {
+	flex: 1;
+	min-width: 140px;
+}
+.legend-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+.legend-dot {
+	width: 14px;
+	height: 14px;
+	border-radius: 4px;
+	flex-shrink: 0;
+}
+.legend-item .legend-info .lbl {
+	font-size: 0.8rem;
+	color: var(--wto-muted);
+}
+.legend-item .legend-info .val {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--wto-text);
+}
+/* AMORTIZATION TABLE */
+.amort-section {
+	margin-top: 20px;
+}
+.amort-toggle {
+	background: var(--wto-light-bg);
+	border: 1.5px solid var(--wto-border);
+	color: var(--wto-primary);
+	font-weight: 600;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 0.88rem;
+	width: 100%;
+	cursor: pointer;
+}
+.amort-toggle:hover {
+	background: #e8f0fe;
+}
+.amort-table-wrap {
+	display: none;
+	margin-top: 14px;
+	border: 1.5px solid var(--wto-border);
+	border-radius: 12px;
+	overflow: hidden;
+	max-height: 340px;
+	overflow-y: auto;
+}
+.amort-table-wrap.show {
+	display: block;
+}
+.amort-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.82rem;
+}
+.amort-table thead {
+	background: var(--wto-gradient);
+	color: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+.amort-table th {
+	padding: 10px 12px;
+	text-align: right;
+	font-weight: 600;
+	white-space: nowrap;
+}
+.amort-table th:first-child {
+	text-align: center;
+}
+.amort-table td {
+	padding: 9px 12px;
+	text-align: right;
+	border-bottom: 1px solid var(--wto-border);
+}
+.amort-table td:first-child {
+	text-align: center;
+	font-weight: 600;
+	color: var(--wto-muted);
+}
+.amort-table tbody tr:hover {
+	background: #eff6ff;
+}
+.amort-table tbody tr:last-child td {
+	border-bottom: none;
+}
+.amort-table .principal-col {
+	color: var(--wto-primary);
+	font-weight: 600;
+}
+.amort-table .interest-col {
+	color: var(--wto-danger);
+}
+.amort-table .balance-col {
+	color: var(--wto-muted);
+}
+/* CONTENT */
+.content-section {
+	padding: 48px 0;
+}
+.content-section.bg-white-section {
+	background: #fff;
+	border-top: 1px solid var(--wto-border);
+	border-bottom: 1px solid var(--wto-border);
+}
+.section-title {
+	font-size: 1.5rem;
+	font-weight: 800;
+	color: var(--wto-text);
+	margin-bottom: 8px;
+}
+.section-subtitle {
+	color: var(--wto-muted);
+	font-size: 0.95rem;
+	margin-bottom: 28px;
+}
+.how-step {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 20px;
+	align-items: flex-start;
+}
+.step-num {
+	background: var(--wto-gradient);
+	color: #fff;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 800;
+	font-size: 0.9rem;
+	flex-shrink: 0;
+}
+.step-content h5 {
+	font-size: 0.95rem;
+	font-weight: 700;
+	margin-bottom: 4px;
+}
+.step-content p {
+	font-size: 0.88rem;
+	color: var(--wto-muted);
+	margin: 0;
+}
+.benefit-card {
+	background: #fff;
+	border: 1.5px solid var(--wto-border);
+	border-radius: 14px;
+	padding: 20px;
+	height: 100%;
+	transition: box-shadow 0.2s, border-color 0.2s;
+}
+.benefit-card:hover {
+	box-shadow: 0 4px 20px rgba(13,110,253,0.1);
+	border-color: var(--wto-primary);
+}
+.benefit-icon {
+	width: 44px;
+	height: 44px;
+	background: var(--wto-light-bg);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 12px;
+	font-size: 1.3rem;
+	color: var(--wto-primary);
+}
+.benefit-card h5 {
+	font-size: 0.95rem;
+	font-weight: 700;
+	margin-bottom: 6px;
+}
+.benefit-card p {
+	font-size: 0.85rem;
+	color: var(--wto-muted);
+	margin: 0;
+}
+.faq-section {
+	padding: 48px 0;
+	background: #fff;
+	border-top: 1px solid var(--wto-border);
+}
+.accordion-button {
+	font-weight: 600;
+	font-size: 0.93rem;
+	color: var(--wto-text);
+}
+.accordion-button:not(.collapsed) {
+	color: var(--wto-primary);
+	background: #eff6ff;
+	box-shadow: none;
+}
+.accordion-button:focus {
+	box-shadow: 0 0 0 3px rgba(13,110,253,0.1);
+}
+.accordion-item {
+	border: 1.5px solid var(--wto-border);
+	border-radius: 10px !important;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.accordion-body {
+	font-size: 0.9rem;
+	color: var(--wto-muted);
+	line-height: 1.7;
+}
+.related-tools {
+	padding: 48px 0;
+}
+.related-card {
+	background: #fff;
+	border: 1.5px solid var(--wto-border);
+	border-radius: 14px;
+	padding: 20px;
+	text-align: center;
+	transition: all 0.2s;
+	text-decoration: none;
+	color: var(--wto-text);
+	display: block;
+	height: 100%;
+}
+.related-card:hover {
+	box-shadow: 0 4px 20px rgba(13,110,253,0.12);
+	border-color: var(--wto-primary);
+	color: var(--wto-primary);
+	transform: translateY(-2px);
+}
+.related-card .ri {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	color: var(--wto-primary);
+	display: block;
+}
+.related-card h6 {
+	font-weight: 700;
+	font-size: 0.88rem;
+	margin: 0;
+}
+/* FORMULA BOX */
+.formula-box {
+	background: var(--wto-dark);
+	color: #e2e8f0;
+	border-radius: 12px;
+	padding: 20px;
+	font-family: 'Courier New', monospace;
+	font-size: 0.9rem;
+	margin-top: 16px;
+}
+.formula-box .formula-title {
+	color: #60a5fa;
+	font-weight: 700;
+	margin-bottom: 8px;
+	font-family: inherit;
+}
+/* LOAN TYPE TABS */
+.loan-tabs {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.loan-tab {
+	padding: 7px 16px;
+	border-radius: 50px;
+	border: 1.5px solid var(--wto-border);
+	background: #fff;
+	color: var(--wto-muted);
+	font-size: 0.82rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+.loan-tab.active, .loan-tab:hover {
+	background: var(--wto-gradient);
+	color: #fff;
+	border-color: transparent;
+}
+.input-group-text {
+	background: var(--wto-light-bg);
+	border: 1.5px solid var(--wto-border);
+	border-radius: 10px 0 0 10px;
+	font-weight: 700;
+	color: var(--wto-primary);
+}
+.input-group .form-control {
+	border-radius: 0 10px 10px 0;
+	border-left: none;
+}
+.input-group .form-control:focus {
+	z-index: 1;
+}
+	.tool-card {padding: 0;}
+@media (max-width: 576px) {
+	.loan-tab {
+    padding: 7px 10px; 
+}
+	.loan-tabs { 
+    gap: 0px; 
+}
+.tool-hero h1 {
+	font-size: 1.5rem;
+}
+.result-grid {
+	grid-template-columns: repeat(2, 1fr);
+}
+.emi-big {
+	font-size: 2rem !important;
+}
+.donut-container {
+	width: 120px;
+	height: 120px;
+}
+}
+</style>
+<!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= -->
 
@@ -192,7 +615,7 @@
 <!-- Document Title   
 	============================================= -->
 <!-- InstanceBeginEditable name="doctitle" -->
-  <!-- InstanceEndEditable -->
+<!-- InstanceEndEditable -->
 <link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
 <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
 <!-- Google tag (gtag.js) -->
@@ -329,15 +752,14 @@ body {
             <!-- Calculators (placeholder — add your real URLs when ready) -->
             <div class="mega-col col-amber">
               <div class="mega-col-header"><i class="ti ti-calculator" aria-hidden="true"></i> Calculators</div>
-              <a class="mega-link" href="https://webtoolocean.com/">
-              <div class="mega-link-icon icon-amber"><i class="ti ti-math" aria-hidden="true"></i></div>
-              <div class="mega-link-body"><span class="mega-link-title">Unit Converter</span><span class="mega-link-desc">px, em, rem, %</span></div>
-              </a> <a class="mega-link" href="https://webtoolocean.com/">
-              <div class="mega-link-icon icon-amber"><i class="ti ti-aspect-ratio" aria-hidden="true"></i></div>
-              <div class="mega-link-body"><span class="mega-link-title">Aspect Ratio</span><span class="mega-link-desc">Scale any dimension</span></div>
-              </a> <a class="mega-link" href="https://webtoolocean.com/">
-              <div class="mega-link-icon icon-amber"><i class="ti ti-color-swatch" aria-hidden="true"></i></div>
-              <div class="mega-link-body"><span class="mega-link-title">Color Converter</span><span class="mega-link-desc">HEX, RGB, HSL</span></div>
+              <a class="drawer-item" href="https://webtoolocean.com/calculators/age-calculator/">
+              <div class="drawer-item-icon icon-amber"><i class="ti ti-calculator" aria-hidden="true"></i></div>
+              Age Calculator</a> <a class="mega-link" href="https://webtoolocean.com/calculators/age-calculator/">
+              <div class="mega-link-icon icon-amber"><i class="ti ti-calculator" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">Age Calculator </span> </div>
+              </a> <a class="mega-link" href="https://webtoolocean.com/calculators/emi-calculator/">
+              <div class="mega-link-icon icon-amber"><i class="ti ti-calculator" aria-hidden="true"></i></div>
+              <div class="mega-link-body"><span class="mega-link-title">EMI  Calculator </span> </div>
               </a> </div>
           </div>
         </div>
@@ -423,427 +845,401 @@ body {
     </div>
     <div class="drawer-section">
       <button class="drawer-section-btn" data-target="dr-calc"><span style="display:flex;align-items:center;gap:8px"><i class="ti ti-calculator" style="color:#d97706;font-size:16px" aria-hidden="true"></i> Calculators</span><i class="ti ti-chevron-down di" aria-hidden="true"></i></button>
-      <div class="drawer-items" id="dr-calc"> <a class="drawer-item" href="https://webtoolocean.com/">
-        <div class="drawer-item-icon icon-amber"><i class="ti ti-math" aria-hidden="true"></i></div>
-        Unit Converter</a> <a class="drawer-item" href="https://webtoolocean.com/">
-        <div class="drawer-item-icon icon-amber"><i class="ti ti-aspect-ratio" aria-hidden="true"></i></div>
-        Aspect Ratio</a> <a class="drawer-item" href="https://webtoolocean.com/">
-        <div class="drawer-item-icon icon-amber"><i class="ti ti-color-swatch" aria-hidden="true"></i></div>
-        Color Converter</a> </div>
+      <div class="drawer-items" id="dr-calc"> <a href="https://webtoolocean.com/calculators/age-calculator/"> Age Calculator</a> <a href="https://webtoolocean.com/calculators/emi-calculator/"> EMI  Calculator</a> <a class="drawer-item" href="https://webtoolocean.com/calculators/age-calculator/">
+        <div class="drawer-item-icon icon-amber"><i class="ti ti-calculator" aria-hidden="true"></i></div>
+        Age Calculator</a> <a class="drawer-item" href="https://webtoolocean.com/calculators/emi-calculator/">
+        <div class="drawer-item-icon icon-amber"><i class="ti ti-calculator" aria-hidden="true"></i></div>
+        EMI  Calculator</a> </div>
     </div>
     <div class="drawer-divider"></div>
     <a class="drawer-plain-link" href="https://webtoolocean.com/resources/"><i class="ti ti-books" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> Resources</a> <a class="drawer-plain-link" href="https://webtoolocean.com/blog/"><i class="ti ti-writing" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> Blog</a> <a class="drawer-plain-link" href="https://webtoolocean.com/about/"><i class="ti ti-users" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> About us</a> <a class="drawer-plain-link" href="https://webtoolocean.com/contact/"><i class="ti ti-mail" style="font-size:16px;color:#9ca3af" aria-hidden="true"></i> Contact</a>
     <div style="padding:14px 0 8px"></div>
   </nav>
 </div>
-<!-- InstanceBeginEditable name="center" -->
+<!-- InstanceBeginEditable name="center" --> 
 
-  <!-- Start dynamic content -->
-  <!-- <section id="testimonials">
+<!-- Start dynamic content --> 
+<!-- <section id="testimonials">
     <div class="container aniboxes animate__animated text-center">
       <div id="contentwidget1"></div>
       <br>
     </div>
-  </section>-->
-  <!-- End dynamic content -->
-  <div class="clearfix"></div>
-  <!-- End dynamic content -->
+  </section>--> 
+<!-- End dynamic content -->
+<div class="clearfix"></div>
+<!-- End dynamic content --> 
 
-  <!-- Sevices section -->
-  <main id="content">
-
-    <!-- HERO -->
-    <section class="tool-hero" aria-labelledby="tool-heading">
-      <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        
-        <h1>EMI Calculator</h1>
-        <p>Calculate your monthly loan EMI instantly for home, car, or personal loans. Get full amortization schedule and interest breakdown.</p>
-        <div class="tool-features-pills">
-          <span>✓ Amortization Schedule</span>
-          <span>✓ Visual Breakdown</span>
-          <span>✓ All Loan Types</span>
-          <span>✓ 100% Free</span>
+<!-- Sevices section -->
+<main id="content"> 
+  
+  <!-- HERO -->
+  <section class="tool-hero hidden-xs" aria-labelledby="tool-heading">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="text-white">EMI Calculator</h1>
+          <p>Calculate your monthly loan EMI instantly for home, car, or personal loans. Get full amortization schedule and interest breakdown.</p>
+          <div class="tool-features-pills"> <span>✓ Amortization Schedule</span> <span>✓ Visual Breakdown</span> <span>✓ All Loan Types</span> <span>✓ 100% Free</span> </div>
         </div>
       </div>
     </div>
-  </div>
-    </section>
-
-    <!-- TOOL -->
-    <section class="tool-section" aria-label="Age Calculator Tool">
-       <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="tool-card">
-          <div class="tool-card-header">
-            <h2><i class="bi bi-credit-card me-2"></i>EMI Calculator</h2>
-            <p>Enter your loan details to calculate monthly EMI and total interest payable</p>
-          </div>
-          <div class="tool-card-body">
-
-            <!-- LOAN TYPE TABS -->
-            <div class="loan-tabs" id="loanTabs">
-              <button class="loan-tab active" onclick="setLoanType('home',this)">🏠 Home Loan</button>
-              <button class="loan-tab" onclick="setLoanType('car',this)">🚗 Car Loan</button>
-              <button class="loan-tab" onclick="setLoanType('personal',this)">💼 Personal Loan</button>
-              <button class="loan-tab" onclick="setLoanType('education',this)">🎓 Education Loan</button>
-              <button class="loan-tab" onclick="setLoanType('custom',this)">⚙️ Custom</button>
+  </section>
+  
+  <!-- TOOL -->
+  <section class="tool-section" aria-label="Age Calculator Tool">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="tool-card">
+            <div class="tool-card-header">
+              <h2><i class="bi bi-credit-card me-2"></i>EMI Calculator</h2>
+              <p>Enter your loan details to calculate monthly EMI and total interest payable</p>
             </div>
-
-            <div class="row g-3">
-              <!-- LOAN AMOUNT -->
-              <div class="col-12">
-                <label class="form-label" for="loanAmount">Loan Amount (₹) <span style="color:red">*</span></label>
-                <div class="input-group mb-1">
-                  <span class="input-group-text">₹</span>
-                  <input type="number" class="form-control" id="loanAmount" value="1000000" min="1000" max="100000000" step="1000" oninput="syncSlider('loanAmount','loanAmountSlider')" />
-                </div>
-                <div class="range-wrap mt-2">
-                  <span class="range-val" id="loanAmountSliderVal">₹10,00,000</span>
-                  <input type="range" id="loanAmountSlider" min="10000" max="10000000" step="10000" value="1000000" oninput="syncInput('loanAmountSlider','loanAmount','loanAmountSliderVal','currency')" />
-                </div>
+            <div class="tool-card-body"> 
+              
+              <!-- LOAN TYPE TABS -->
+              <div class="loan-tabs" id="loanTabs">
+                <button class="loan-tab active" onclick="setLoanType('home',this)">🏠 Home Loan</button>
+                <button class="loan-tab" onclick="setLoanType('car',this)">🚗 Car Loan</button>
+                <button class="loan-tab" onclick="setLoanType('personal',this)">💼 Personal Loan</button>
+                <button class="loan-tab" onclick="setLoanType('education',this)">🎓 Education Loan</button>
+                <button class="loan-tab" onclick="setLoanType('custom',this)">⚙️ Custom</button>
               </div>
-
-              <!-- INTEREST RATE -->
-              <div class="col-md-6">
-                <label class="form-label" for="interestRate">Annual Interest Rate (%) <span style="color:red">*</span></label>
-                <div class="input-group mb-1">
-                  <span class="input-group-text">%</span>
-                  <input type="number" class="form-control" id="interestRate" value="8.5" min="1" max="36" step="0.1" oninput="syncSlider('interestRate','rateSlider')" />
+              <div class="row g-3"> 
+                <!-- LOAN AMOUNT -->
+                <div class="col-12">
+                  <label class="form-label" for="loanAmount">Loan Amount (₹) <span style="color:red">*</span></label>
+                  <div class="input-group mb-1"> <span class="input-group-text">₹</span>
+                    <input type="number" class="form-control" id="loanAmount" value="1000000" min="1000" max="100000000" step="1000" oninput="syncSlider('loanAmount','loanAmountSlider')" />
+                  </div>
+                  <div class="range-wrap mt-2"> <span class="range-val" id="loanAmountSliderVal">₹10,00,000</span>
+                    <input type="range" id="loanAmountSlider" min="10000" max="10000000" step="10000" value="1000000" oninput="syncInput('loanAmountSlider','loanAmount','loanAmountSliderVal','currency')" />
+                  </div>
                 </div>
-                <div class="range-wrap mt-2">
-                  <span class="range-val" id="rateSliderVal">8.5%</span>
-                  <input type="range" id="rateSlider" min="1" max="36" step="0.1" value="8.5" oninput="syncInput('rateSlider','interestRate','rateSliderVal','percent')" />
+                
+                <!-- INTEREST RATE -->
+                <div class="col-md-6">
+                  <label class="form-label" for="interestRate">Annual Interest Rate (%) <span style="color:red">*</span></label>
+                  <div class="input-group mb-1"> <span class="input-group-text">%</span>
+                    <input type="number" class="form-control" id="interestRate" value="8.5" min="1" max="36" step="0.1" oninput="syncSlider('interestRate','rateSlider')" />
+                  </div>
+                  <div class="range-wrap mt-2"> <span class="range-val" id="rateSliderVal">8.5%</span>
+                    <input type="range" id="rateSlider" min="1" max="36" step="0.1" value="8.5" oninput="syncInput('rateSlider','interestRate','rateSliderVal','percent')" />
+                  </div>
                 </div>
-              </div>
-
-              <!-- TENURE -->
-              <div class="col-md-6">
-                <label class="form-label" for="tenure">Loan Tenure</label>
-                <div class="input-group mb-1">
-                  <input type="number" class="form-control" id="tenure" value="20" min="1" max="30" step="1" oninput="syncSlider('tenure','tenureSlider')" style="border-radius:10px 0 0 10px; border-right:none;" />
-                  <select class="form-select" id="tenureType" style="border-radius:0 10px 10px 0; max-width:110px;" onchange="syncSlider('tenure','tenureSlider')">
-                    <option value="years" selected>Years</option>
-                    <option value="months">Months</option>
-                  </select>
+                
+                <!-- TENURE -->
+                <div class="col-md-6">
+                  <label class="form-label" for="tenure">Loan Tenure</label>
+                  <div class="input-group mb-1">
+                    <input type="number" class="form-control" id="tenure" value="20" min="1" max="30" step="1" oninput="syncSlider('tenure','tenureSlider')" style="border-radius:10px 0 0 10px; border-right:none;" />
+                    <select class="form-select" id="tenureType" style="border-radius:0 10px 10px 0; max-width:110px;" onchange="syncSlider('tenure','tenureSlider')">
+                      <option value="years" selected>Years</option>
+                      <option value="months">Months</option>
+                    </select>
+                  </div>
+                  <div class="range-wrap mt-2"> <span class="range-val" id="tenureSliderVal">20 yrs</span>
+                    <input type="range" id="tenureSlider" min="1" max="30" step="1" value="20" oninput="syncInput('tenureSlider','tenure','tenureSliderVal','years')" />
+                  </div>
                 </div>
-                <div class="range-wrap mt-2">
-                  <span class="range-val" id="tenureSliderVal">20 yrs</span>
-                  <input type="range" id="tenureSlider" min="1" max="30" step="1" value="20" oninput="syncInput('tenureSlider','tenure','tenureSliderVal','years')" />
-                </div>
-              </div>
-
-              <!-- PREPAYMENT (ADVANCED) -->
-              <div class="col-12">
-                <div class="d-flex align-items-center gap-2 mb-2">
-                  <input type="checkbox" id="prepayToggle" class="form-check-input" onchange="document.getElementById('prepaySection').style.display=this.checked?'block':'none'" />
-                  <label for="prepayToggle" class="form-label mb-0" style="cursor:pointer;">Add Annual Prepayment / Partial Payment</label>
-                </div>
-                <div id="prepaySection" style="display:none; background:var(--wto-light-bg); border-radius:10px; padding:14px; border:1.5px solid var(--wto-border);">
-                  <div class="row g-2">
-                    <div class="col-md-6">
-                      <label class="form-label" for="prepayAmt">Annual Prepayment (₹)</label>
-                      <div class="input-group">
-                        <span class="input-group-text">₹</span>
-                        <input type="number" class="form-control" id="prepayAmt" value="0" min="0" step="1000" />
+                
+                <!-- PREPAYMENT (ADVANCED) -->
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <input type="checkbox" id="prepayToggle" class="form-check-input" onchange="document.getElementById('prepaySection').style.display=this.checked?'block':'none'" />
+                    <label for="prepayToggle" class="form-label mb-0" style="cursor:pointer;">Add Annual Prepayment / Partial Payment</label>
+                  </div>
+                  <div id="prepaySection" style="display:none; background:var(--wto-light-bg); border-radius:10px; padding:14px; border:1.5px solid var(--wto-border);">
+                    <div class="row g-2">
+                      <div class="col-md-6">
+                        <label class="form-label" for="prepayAmt">Annual Prepayment (₹)</label>
+                        <div class="input-group"> <span class="input-group-text">₹</span>
+                          <input type="number" class="form-control" id="prepayAmt" value="0" min="0" step="1000" />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="prepayStart">Starting from Year</label>
+                        <input type="number" class="form-control" id="prepayStart" value="1" min="1" max="30" />
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <label class="form-label" for="prepayStart">Starting from Year</label>
-                      <input type="number" class="form-control" id="prepayStart" value="1" min="1" max="30" />
+                  </div>
+                </div>
+				  <div class="row">
+                <div class="col-sm-6  col-xs-12">
+                  <button class="btn-calculate btn" onclick="calculateEMI()"> <i class="bi bi-calculator me-2"></i>Calculate EMI </button>
+                </div>
+                <div class="col-sm-6  col-xs-12">
+                  <button class="btn-reset btn" onclick="resetForm()"> <i class="bi bi-arrow-counterclockwise me-2"></i>Reset </button>
+                </div>
+              </div>
+              </div>
+              <!-- RESULTS -->
+              <div class="result-section" id="resultSection">
+                <div class="result-main">
+                  <div style="font-size:0.85rem; opacity:0.8; margin-bottom:4px;">Monthly EMI</div>
+                  <div class="emi-big" id="emiAmount">₹0</div>
+                  <div class="emi-label" id="emiSubtitle">for 20 years</div>
+                </div>
+                <div class="result-grid mb-3">
+                  <div class="result-item">
+                    <div class="val" id="principalAmt">₹0</div>
+                    <div class="lbl">Principal</div>
+                  </div>
+                  <div class="result-item danger">
+                    <div class="val" id="totalInterest">₹0</div>
+                    <div class="lbl">Total Interest</div>
+                  </div>
+                  <div class="result-item success">
+                    <div class="val" id="totalPayable">₹0</div>
+                    <div class="lbl">Total Payable</div>
+                  </div>
+                </div>
+                
+                <!-- DONUT CHART -->
+                <div class="chart-wrap p-3" style="background:var(--wto-light-bg); border-radius:12px; border:1.5px solid var(--wto-border);">
+                  <div class="donut-container">
+                    <svg class="donut-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="60" cy="60" r="48" fill="none" stroke="#e2e8f0" stroke-width="20"/>
+                      <circle cx="60" cy="60" r="48" fill="none" stroke="#ef4444" stroke-width="20" id="interestArc" stroke-dasharray="0 301.6" stroke-linecap="butt"/>
+                      <circle cx="60" cy="60" r="48" fill="none" stroke="#0d6efd" stroke-width="20" id="principalArc" stroke-dasharray="0 301.6" stroke-linecap="butt"/>
+                    </svg>
+                    <div class="donut-center">
+                      <div style="font-size:0.65rem; color:var(--wto-muted);">Interest</div>
+                      <strong id="interestPct">0%</strong> </div>
+                  </div>
+                  <div class="chart-legend">
+                    <div class="legend-item">
+                      <div class="legend-dot" style="background:#0d6efd;"></div>
+                      <div class="legend-info">
+                        <div class="lbl">Principal Amount</div>
+                        <div class="val" id="legendPrincipal">₹0</div>
+                      </div>
+                    </div>
+                    <div class="legend-item">
+                      <div class="legend-dot" style="background:#ef4444;"></div>
+                      <div class="legend-info">
+                        <div class="lbl">Total Interest</div>
+                        <div class="val" id="legendInterest">₹0</div>
+                      </div>
+                    </div>
+                    <div class="legend-item">
+                      <div class="legend-dot" style="background:#10b981;"></div>
+                      <div class="legend-info">
+                        <div class="lbl">Total Payable</div>
+                        <div class="val" id="legendTotal">₹0</div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                
+                <!-- PREPAY SAVINGS -->
+                <div id="prepaySavingsBox" style="display:none; margin-top:12px; background:#ecfdf5; border:1.5px solid #6ee7b7; border-radius:12px; padding:16px;">
+                  <div style="font-size:0.78rem; color:#064e3b; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">💡 Prepayment Savings</div>
+                  <div class="row g-2 text-center">
+                    <div class="col-4">
+                      <div style="font-size:1.1rem; font-weight:800; color:#059669;" id="interestSaved">₹0</div>
+                      <div style="font-size:0.72rem; color:#065f46;">Interest Saved</div>
+                    </div>
+                    <div class="col-4">
+                      <div style="font-size:1.1rem; font-weight:800; color:#059669;" id="tenureSaved">0 mo</div>
+                      <div style="font-size:0.72rem; color:#065f46;">Tenure Saved</div>
+                    </div>
+                    <div class="col-4">
+                      <div style="font-size:1.1rem; font-weight:800; color:#059669;" id="newTenure">0 mo</div>
+                      <div style="font-size:0.72rem; color:#065f46;">New Tenure</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- AMORTIZATION -->
+                <div class="amort-section">
+                  <button class="amort-toggle" onclick="toggleAmort()"> <i class="bi bi-table me-2"></i>View Year-wise Amortization Schedule <i class="bi bi-chevron-down ms-1" id="amortChevron"></i> </button>
+                  <div class="amort-table-wrap" id="amortTable">
+                    <table class="amort-table">
+                      <thead>
+                        <tr>
+                          <th>Year</th>
+                          <th>Principal Paid</th>
+                          <th>Interest Paid</th>
+                          <th>Total Paid</th>
+                          <th>Balance</th>
+                        </tr>
+                      </thead>
+                      <tbody id="amortBody">
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
-
-              <div class="col-6">
-                <button class="btn-calculate btn" onclick="calculateEMI()">
-                  <i class="bi bi-calculator me-2"></i>Calculate EMI
-                </button>
-              </div>
-              <div class="col-6">
-                <button class="btn-reset btn" onclick="resetForm()">
-                  <i class="bi bi-arrow-counterclockwise me-2"></i>Reset
-                </button>
-              </div>
+              <div id="errorMsg" class="alert alert-danger mt-3 d-none" role="alert"></div>
             </div>
-
-            <!-- RESULTS -->
-            <div class="result-section" id="resultSection">
-              <div class="result-main">
-                <div style="font-size:0.85rem; opacity:0.8; margin-bottom:4px;">Monthly EMI</div>
-                <div class="emi-big" id="emiAmount">₹0</div>
-                <div class="emi-label" id="emiSubtitle">for 20 years</div>
-              </div>
-
-              <div class="result-grid mb-3">
-                <div class="result-item">
-                  <div class="val" id="principalAmt">₹0</div>
-                  <div class="lbl">Principal</div>
-                </div>
-                <div class="result-item danger">
-                  <div class="val" id="totalInterest">₹0</div>
-                  <div class="lbl">Total Interest</div>
-                </div>
-                <div class="result-item success">
-                  <div class="val" id="totalPayable">₹0</div>
-                  <div class="lbl">Total Payable</div>
-                </div>
-              </div>
-
-              <!-- DONUT CHART -->
-              <div class="chart-wrap p-3" style="background:var(--wto-light-bg); border-radius:12px; border:1.5px solid var(--wto-border);">
-                <div class="donut-container">
-                  <svg class="donut-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="60" cy="60" r="48" fill="none" stroke="#e2e8f0" stroke-width="20"/>
-                    <circle cx="60" cy="60" r="48" fill="none" stroke="#ef4444" stroke-width="20" id="interestArc" stroke-dasharray="0 301.6" stroke-linecap="butt"/>
-                    <circle cx="60" cy="60" r="48" fill="none" stroke="#0d6efd" stroke-width="20" id="principalArc" stroke-dasharray="0 301.6" stroke-linecap="butt"/>
-                  </svg>
-                  <div class="donut-center">
-                    <div style="font-size:0.65rem; color:var(--wto-muted);">Interest</div>
-                    <strong id="interestPct">0%</strong>
-                  </div>
-                </div>
-                <div class="chart-legend">
-                  <div class="legend-item">
-                    <div class="legend-dot" style="background:#0d6efd;"></div>
-                    <div class="legend-info">
-                      <div class="lbl">Principal Amount</div>
-                      <div class="val" id="legendPrincipal">₹0</div>
-                    </div>
-                  </div>
-                  <div class="legend-item">
-                    <div class="legend-dot" style="background:#ef4444;"></div>
-                    <div class="legend-info">
-                      <div class="lbl">Total Interest</div>
-                      <div class="val" id="legendInterest">₹0</div>
-                    </div>
-                  </div>
-                  <div class="legend-item">
-                    <div class="legend-dot" style="background:#10b981;"></div>
-                    <div class="legend-info">
-                      <div class="lbl">Total Payable</div>
-                      <div class="val" id="legendTotal">₹0</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PREPAY SAVINGS -->
-              <div id="prepaySavingsBox" style="display:none; margin-top:12px; background:#ecfdf5; border:1.5px solid #6ee7b7; border-radius:12px; padding:16px;">
-                <div style="font-size:0.78rem; color:#064e3b; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">💡 Prepayment Savings</div>
-                <div class="row g-2 text-center">
-                  <div class="col-4">
-                    <div style="font-size:1.1rem; font-weight:800; color:#059669;" id="interestSaved">₹0</div>
-                    <div style="font-size:0.72rem; color:#065f46;">Interest Saved</div>
-                  </div>
-                  <div class="col-4">
-                    <div style="font-size:1.1rem; font-weight:800; color:#059669;" id="tenureSaved">0 mo</div>
-                    <div style="font-size:0.72rem; color:#065f46;">Tenure Saved</div>
-                  </div>
-                  <div class="col-4">
-                    <div style="font-size:1.1rem; font-weight:800; color:#059669;" id="newTenure">0 mo</div>
-                    <div style="font-size:0.72rem; color:#065f46;">New Tenure</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- AMORTIZATION -->
-              <div class="amort-section">
-                <button class="amort-toggle" onclick="toggleAmort()">
-                  <i class="bi bi-table me-2"></i>View Year-wise Amortization Schedule <i class="bi bi-chevron-down ms-1" id="amortChevron"></i>
-                </button>
-                <div class="amort-table-wrap" id="amortTable">
-                  <table class="amort-table">
-                    <thead>
-                      <tr>
-                        <th>Year</th>
-                        <th>Principal Paid</th>
-                        <th>Interest Paid</th>
-                        <th>Total Paid</th>
-                        <th>Balance</th>
-                      </tr>
-                    </thead>
-                    <tbody id="amortBody"></tbody>
-                  </table>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div id="sidebar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- HOW TO USE -->
+  <section class="content-section bg-white-section" aria-labelledby="how-to-use">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="section-title">How to Use the EMI Calculator</h2>
+          <p class="section-subtitle">Get your loan EMI in just 3 simple steps</p>
+          <div class="how-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h5>Choose Loan Type & Enter Amount</h5>
+              <p>Select your loan type (Home, Car, Personal, Education) and enter the principal amount using the input field or slider.</p>
             </div>
-
-            <div id="errorMsg" class="alert alert-danger mt-3 d-none" role="alert"></div>
+          </div>
+          <div class="how-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h5>Set Interest Rate & Tenure</h5>
+              <p>Enter the annual interest rate offered by your bank and choose the repayment tenure in years or months.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h5>Click Calculate & Review</h5>
+              <p>Get your monthly EMI, total interest, full payment breakdown, and year-wise amortization schedule instantly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <h2 class="section-title">EMI Formula</h2>
+          <p class="section-subtitle">How EMI is mathematically calculated</p>
+          <div class="formula-box">
+            <div class="formula-title">// EMI Formula</div>
+            EMI = P × r × (1 + r)ⁿ / ((1 + r)ⁿ − 1)<br>
+            <br>
+            Where:<br>
+            P = Principal loan amount<br>
+            r = Monthly interest rate (Annual rate ÷ 12 ÷ 100)<br>
+            n = Number of monthly installments </div>
+          <p class="mt-3" style="font-size:0.88rem; color:var(--wto-muted);">For example, on a ₹10 lakh loan at 8.5% p.a. for 20 years: monthly rate = 8.5/12/100 = 0.00708, n = 240 months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- BENEFITS -->
+  <section class="content-section" aria-labelledby="benefits-heading">
+    <div class="container">
+      <h2 class="section-title text-center">Key Benefits</h2>
+      <p class="section-subtitle text-center">Why our EMI Calculator stands out</p>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-bar-chart-fill"></i></div>
+            <h5>Visual Breakdown</h5>
+            <p>See principal vs. interest split through an interactive donut chart for clear understanding.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-table"></i></div>
+            <h5>Amortization Schedule</h5>
+            <p>Get a complete year-wise payment schedule showing how your loan reduces over time.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-fast-forward-fill"></i></div>
+            <h5>Prepayment Simulation</h5>
+            <p>Calculate how much interest you save with annual prepayments and reduce your loan tenure.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-sliders"></i></div>
+            <h5>Interactive Sliders</h5>
+            <p>Adjust loan amount, interest rate, and tenure with smooth sliders for instant comparison.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-shield-check-fill"></i></div>
+            <h5>100% Accurate</h5>
+            <p>Uses the standard reducing balance EMI formula used by all Indian banks and NBFCs.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-phone-fill"></i></div>
+            <h5>Mobile Friendly</h5>
+            <p>Fully responsive — works seamlessly on smartphones, tablets, and desktop computers.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-    </section>
-
-    <!-- HOW TO USE -->
-    <section class="content-section bg-white-section" aria-labelledby="how-to-use">
-       <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <h2 class="section-title">How to Use the EMI Calculator</h2>
-        <p class="section-subtitle">Get your loan EMI in just 3 simple steps</p>
-        <div class="how-step">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h5>Choose Loan Type & Enter Amount</h5>
-            <p>Select your loan type (Home, Car, Personal, Education) and enter the principal amount using the input field or slider.</p>
-          </div>
-        </div>
-        <div class="how-step">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h5>Set Interest Rate & Tenure</h5>
-            <p>Enter the annual interest rate offered by your bank and choose the repayment tenure in years or months.</p>
-          </div>
-        </div>
-        <div class="how-step">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h5>Click Calculate & Review</h5>
-            <p>Get your monthly EMI, total interest, full payment breakdown, and year-wise amortization schedule instantly.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mt-4 mt-lg-0">
-        <h2 class="section-title">EMI Formula</h2>
-        <p class="section-subtitle">How EMI is mathematically calculated</p>
-        <div class="formula-box">
-          <div class="formula-title">// EMI Formula</div>
-          EMI = P × r × (1 + r)ⁿ / ((1 + r)ⁿ − 1)<br><br>
-          Where:<br>
-          P = Principal loan amount<br>
-          r = Monthly interest rate (Annual rate ÷ 12 ÷ 100)<br>
-          n = Number of monthly installments
-        </div>
-        <p class="mt-3" style="font-size:0.88rem; color:var(--wto-muted);">For example, on a ₹10 lakh loan at 8.5% p.a. for 20 years: monthly rate = 8.5/12/100 = 0.00708, n = 240 months.</p>
-      </div>
-    </div>
-  </div>
-    </section>
-
-    <!-- BENEFITS -->
-    <section class="content-section" aria-labelledby="benefits-heading">
-       <div class="container">
-    <h2 class="section-title text-center">Key Benefits</h2>
-    <p class="section-subtitle text-center">Why our EMI Calculator stands out</p>
-    <div class="row g-4">
-      <div class="col-sm-6 col-lg-4">
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="bi bi-bar-chart-fill"></i></div>
-          <h5>Visual Breakdown</h5>
-          <p>See principal vs. interest split through an interactive donut chart for clear understanding.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="bi bi-table"></i></div>
-          <h5>Amortization Schedule</h5>
-          <p>Get a complete year-wise payment schedule showing how your loan reduces over time.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="bi bi-fast-forward-fill"></i></div>
-          <h5>Prepayment Simulation</h5>
-          <p>Calculate how much interest you save with annual prepayments and reduce your loan tenure.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="bi bi-sliders"></i></div>
-          <h5>Interactive Sliders</h5>
-          <p>Adjust loan amount, interest rate, and tenure with smooth sliders for instant comparison.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="bi bi-shield-check-fill"></i></div>
-          <h5>100% Accurate</h5>
-          <p>Uses the standard reducing balance EMI formula used by all Indian banks and NBFCs.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="benefit-card">
-          <div class="benefit-icon"><i class="bi bi-phone-fill"></i></div>
-          <h5>Mobile Friendly</h5>
-          <p>Fully responsive — works seamlessly on smartphones, tablets, and desktop computers.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section" aria-labelledby="faq-heading">
-       <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-12">
-        <h2 class="section-title text-center">Frequently Asked Questions</h2>
-        <p class="section-subtitle text-center">Everything you need to know about EMI calculation</p>
-        <div class="accordion" id="faqAccordion">
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">What is EMI?</button>
-            </h3>
-            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">EMI stands for Equated Monthly Installment. It is a fixed monthly payment made by a borrower to a lender on a specified date each month. EMIs are used to pay off both interest and principal every month so that the loan is fully paid off within a set number of years.</div>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <h2 class="section-title text-center">Frequently Asked Questions</h2>
+          <p class="section-subtitle text-center">Everything you need to know about EMI calculation</p>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">What is EMI?</button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">EMI stands for Equated Monthly Installment. It is a fixed monthly payment made by a borrower to a lender on a specified date each month. EMIs are used to pay off both interest and principal every month so that the loan is fully paid off within a set number of years.</div>
+              </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Does a higher tenure mean lower EMI?</button>
-            </h3>
-            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">Yes. A longer tenure reduces your monthly EMI because the principal is spread over more installments. However, you end up paying significantly more total interest. A shorter tenure means higher EMI but lower total interest payout.</div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Does a higher tenure mean lower EMI?</button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes. A longer tenure reduces your monthly EMI because the principal is spread over more installments. However, you end up paying significantly more total interest. A shorter tenure means higher EMI but lower total interest payout.</div>
+              </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What is a prepayment and how does it help?</button>
-            </h3>
-            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A prepayment is an extra payment made over and above your regular EMI. It directly reduces the outstanding principal, which reduces future interest and can shorten your loan tenure significantly. Use our prepayment feature to see how much you save.</div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What is a prepayment and how does it help?</button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">A prepayment is an extra payment made over and above your regular EMI. It directly reduces the outstanding principal, which reduces future interest and can shorten your loan tenure significantly. Use our prepayment feature to see how much you save.</div>
+              </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Is the EMI calculated on a flat or reducing balance rate?</button>
-            </h3>
-            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">Our calculator uses the reducing balance method (also called diminishing balance), which is the standard used by all banks in India. Interest is charged only on the remaining outstanding balance, making it more fair compared to flat rate loans.</div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Is the EMI calculated on a flat or reducing balance rate?</button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Our calculator uses the reducing balance method (also called diminishing balance), which is the standard used by all banks in India. Interest is charged only on the remaining outstanding balance, making it more fair compared to flat rate loans.</div>
+              </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Does this calculator include processing fees or GST?</button>
-            </h3>
-            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">No. This calculator focuses on pure EMI calculation based on principal, rate, and tenure. For the actual cost of your loan, factor in processing fees (typically 0.5%–2%), insurance, and GST on fees charged by the lender.</div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Does this calculator include processing fees or GST?</button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">No. This calculator focuses on pure EMI calculation based on principal, rate, and tenure. For the actual cost of your loan, factor in processing fees (typically 0.5%–2%), insurance, and GST on fees charged by the lender.</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-    </section>
- 
-     
-  </main>
-
-
-
-  <!-- InstanceEndEditable -->
+  </section>
+</main>
+<!-- InstanceEndEditable -->
 <div class="clearfix"></div>
 <footer role="contentinfo" class="footer light newfooter">
   <article class="footer-top">
     <div class="container">
-      <div class="row">  
-        
+      <div class="row">
         <div class="col-md-3 col-sm-6 mb-3">
           <div class="footer-links">
             <h4 class="footer-heading">Popular Tools</h4>
@@ -879,9 +1275,9 @@ body {
           <div class="footer-links">
             <h4 class="footer-heading">Calculator Tools</h4>
             <ul>
-              <li><a href="https://webtoolocean.com/calculators/age-calculator/"><span class="fa fa-caret-right"></span>Age Calculator</a></li>
-    <li><a href="https://webtoolocean.com/calculators/emi-calculator/"><span class="fa fa-caret-right"></span>EMI  Calculator</a></li>
-             <!-- <li><a href="https://webtoolocean.com/calculators/basic-calculator">Basic Calculator</a></li>
+              <li><a href="https://webtoolocean.com/calculators/age-calculator/"> Age Calculator</a></li>
+              <li><a href="https://webtoolocean.com/calculators/emi-calculator/"> EMI  Calculator</a></li>
+              <!-- <li><a href="https://webtoolocean.com/calculators/basic-calculator">Basic Calculator</a></li>
               <li><a href="https://webtoolocean.com/calculators/percentage-calculator">Percentage Calculator</a></li>
               <li><a href="https://webtoolocean.com/calculators/currency-calculator">Currency Converter</a></li>
               <li><a href="https://webtoolocean.com/calculators/unit-calculator">Unit Converter</a></li>
@@ -890,7 +1286,7 @@ body {
             </ul>
           </div>
         </div>
-		  <div class="col-md-3 col-sm-12 mb-3">
+        <div class="col-md-3 col-sm-12 mb-3">
           <div class="mb-3"> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
           <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
             Fast, secure and easy to use on desktop &amp; mobile. </p>
@@ -904,8 +1300,11 @@ body {
   <!-- Bottom Menu -->
   <article id="copyrights">
     <div class="container text-center">
-		   <div class="row">  <div class="col-md-7 col-xs-12 md-text-left text-center"><p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | All Rights Reserved </p></div>
-		<div class="col-md-5 col-xs-12 md-text-right text-center"><a href="https://webtoolocean.com/sitemap">Sitemap</a></div>
+      <div class="row">
+        <div class="col-md-7 col-xs-12 md-text-left text-center">
+          <p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | All Rights Reserved </p>
+        </div>
+        <div class="col-md-5 col-xs-12 md-text-right text-center"><a href="https://webtoolocean.com/sitemap">Sitemap</a></div>
       </div>
     </div>
   </article>
@@ -918,10 +1317,9 @@ body {
 </a>
 <div class="clearfix"></div>
 <script src="https://webtoolocean.com/js/jquery.js"></script> 
-<!-- InstanceBeginEditable name="EditRegion5" -->
-
-  <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
- <script>
+<!-- InstanceBeginEditable name="EditRegion5" --> 
+<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
+<script>
   const CIRCUMFERENCE = 2 * Math.PI * 48; // 301.59
 
   const loanPresets = {
@@ -1089,15 +1487,15 @@ body {
 
   updateSliderVals();
   document.addEventListener('keydown', e => { if (e.key === 'Enter') calculateEMI(); });
-</script>
-	<script>
+</script> 
+<script>
 fetch('/calculators/sidebar.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('sidebar').innerHTML = data;
     });
 </script> 
-  <!-- InstanceEndEditable --> 
+<!-- InstanceEndEditable --> 
 <script>
 const backToTop = document.getElementById('backToTop');
 
@@ -1300,4 +1698,5 @@ $(".mainmenubar").slideToggle();
   });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
