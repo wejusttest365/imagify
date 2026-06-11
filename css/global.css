@@ -10,6 +10,7 @@
   --fontOpenSans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --fontRobotoSans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --fontPoppinSans: "Poppins", sans-serif;
+--googlesans: "Google Sans", sans-serif; 
 }
  .text-muted { 
     color: #000;
@@ -256,7 +257,7 @@ button#togglemeu {
     font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
-    font-family: var(--fontOpenSans);
+    font-family: var(--googlesans);
     border-radius: 4px;
     position: relative;
     transition: 0.5s;
@@ -291,7 +292,7 @@ button#togglemeu {
     font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
-    font-family: var(--fontOpenSans);
+    font-family: var(--googlesans);
     border-radius: 4px;
     position: relative;
     transition: 0.5s;
@@ -386,8 +387,8 @@ article#copyrights a {
 .footer p, 
 .footer a, 
 .footer ul li a {
-    font-family: var(--fontOpenSans);
-    font-size: 16px;
+    font-family: var(--googlesans);
+    font-size: 14px;
     font-weight: 500;
     color: rgb(255 255 255) !important;
     transition: 0.5s;
@@ -403,7 +404,7 @@ footer img {
 }
 
 footer .h3 {
-    font-family: var(--fontOpenSans);
+    font-family: var(--googlesans);
     font-size: 25px !important;
     font-weight: 600 !important;
     margin-bottom: 20px;
@@ -544,6 +545,12 @@ footer .h3 {
    2. DESKTOP & TABLET LANDSCAPE (992px and Up)
    ========================================================================== */
 @media (min-width: 992px) {
+	.md-text-left {
+    text-align: left !important;
+}
+	.md-text-right {
+    text-align: right !important;
+}
 	#togglemeu {display: none}
     #header {
         z-index: 999;
