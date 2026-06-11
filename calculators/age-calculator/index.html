@@ -40,8 +40,21 @@
   <link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
   <link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
-<style>
-
+ <style>
+    :root {
+      --wto-primary: #0d6efd;
+      --wto-dark: #0f172a;
+      --wto-darker: #0a1020;
+      --wto-accent: #3b82f6;
+      --wto-light-bg: #f8faff;
+      --wto-card-bg: #ffffff;
+      --wto-border: #e2e8f0;
+      --wto-text: #1e293b;
+      --wto-muted: #64748b;
+      --wto-success: #10b981;
+      --wto-gradient: linear-gradient(135deg, #0d6efd 0%, #0ea5e9 100%);
+    }
+    
     /* HERO */
     .tool-hero { background: var(--wto-gradient); padding: 48px 0 40px; color: #fff; }
     .tool-hero .badge-pill { background: rgba(255,255,255,0.2); color: #fff; border-radius: 50px; padding: 4px 14px; font-size: 0.78rem; display: inline-block; margin-bottom: 12px; }
@@ -105,8 +118,22 @@
     .accordion-button:focus { box-shadow: 0 0 0 3px rgba(13,110,253,0.1); }
     .accordion-item { border: 1.5px solid var(--wto-border); border-radius: 10px !important; margin-bottom: 10px; overflow: hidden; }
     .accordion-body { font-size: 0.9rem; color: var(--wto-muted); line-height: 1.7; }
-	
-</style>
+
+    /* RELATED TOOLS */
+    .related-tools { padding: 48px 0; }
+    .related-card { background: #fff; border: 1.5px solid var(--wto-border); border-radius: 14px; padding: 20px; text-align: center; transition: all 0.2s; text-decoration: none; color: var(--wto-text); display: block; height: 100%; }
+    .related-card:hover { box-shadow: 0 4px 20px rgba(13,110,253,0.12); border-color: var(--wto-primary); color: var(--wto-primary); transform: translateY(-2px); }
+    .related-card .ri { font-size: 2rem; margin-bottom: 10px; color: var(--wto-primary); display: block; }
+    .related-card h6 { font-weight: 700; font-size: 0.88rem; margin: 0; }
+
+     
+
+    @media (max-width: 576px) {
+      .tool-hero h1 { font-size: 1.5rem; }
+      .result-grid { grid-template-columns: repeat(2, 1fr); }
+      .result-main .age-big { font-size: 2.2rem; }
+    }
+  </style>
   <!-- InstanceEndEditable -->
 <!-- Stylesheets     
 	============================================= -->
@@ -849,7 +876,13 @@ body {
   // Allow Enter key
   document.addEventListener('keydown', (e) => { if (e.key === 'Enter') calculateAge(); });
 </script>
-
+	<script>
+fetch('/calculators/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+    });
+</script> 
   <!-- InstanceEndEditable --> 
 <script>
 const backToTop = document.getElementById('backToTop');
