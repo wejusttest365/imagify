@@ -7,117 +7,91 @@ $(window).on('scroll', function () {
     }
 });
 
-//=============================== mega menu js below 
-document.addEventListener("click", function (e) {
+//=============================== unified nav menu
+var isMobile = function () { return window.innerWidth <= 900; };
 
-  const toolsBtn = e.target.closest("#toolsBtn");
-  const blogBtn = e.target.closest("#blogBtn");
+var dropConfigs = [
+  { btnId: "toolsBtn",     itemId: "toolsItem",     menuId: "toolsMenu"     },
+  { btnId: "blogBtn",      itemId: "blogItem",      menuId: "blogMenu"      },
+  { btnId: "resourcesBtn", itemId: "resourcesItem", menuId: "resourcesMenu" }
+];
 
-  const toolsItem = document.getElementById("toolsItem");
-  const blogItem = document.getElementById("blogItem");
+function closeAll() {
+  dropConfigs.forEach(function (c) {
+    var item = document.getElementById(c.itemId);
+    var menu = document.getElementById(c.menuId);
+    if (item) item.classList.remove("open");
+    if (menu) menu.classList.remove("open");
+  });
+}
 
-  const toolsMenu = document.getElementById("toolsMenu");
-  const blogMenu = document.getElementById("blogMenu");
+function openDrop(itemId, menuId) {
+  closeAll();
+  var item = document.getElementById(itemId);
+  var menu = document.getElementById(menuId);
+  if (item) item.classList.add("open");
+  if (menu) menu.classList.add("open");
+}
 
-  if (toolsBtn) {
-
-    e.preventDefault();
-
-    const open = toolsMenu.classList.contains("open");
-
-    toolsMenu.classList.remove("open");
-    blogMenu.classList.remove("open");
-
-    toolsItem.classList.remove("open");
-    blogItem.classList.remove("open");
-
-    if (!open) {
-      toolsMenu.classList.add("open");
-      toolsItem.classList.add("open");
+function initNavMenu() {
+  // Click: toggle on mobile, toggle on desktop
+  document.addEventListener("click", function (e) {
+    // hamburger toggles the nav
+    var hamburger = e.target.closest("#hamburger");
+    if (hamburger) {
+      hamburger.classList.toggle("open");
+      var nav = document.getElementById("mainNav");
+      if (nav) nav.classList.toggle("open");
+      return;
     }
 
-    return;
-  }
-
-  if (blogBtn) {
-
-    e.preventDefault();
-
-    const open = blogMenu.classList.contains("open");
-
-    toolsMenu.classList.remove("open");
-    blogMenu.classList.remove("open");
-
-    toolsItem.classList.remove("open");
-    blogItem.classList.remove("open");
-
-    if (!open) {
-      blogMenu.classList.add("open");
-      blogItem.classList.add("open");
+    // dropdown buttons
+    for (var i = 0; i < dropConfigs.length; i++) {
+      var c = dropConfigs[i];
+      if (e.target.closest("#" + c.btnId)) {
+        e.preventDefault();
+        var menu = document.getElementById(c.menuId);
+        var isOpen = menu && menu.classList.contains("open");
+        closeAll();
+        if (!isOpen) openDrop(c.itemId, c.menuId);
+        return;
+      }
     }
 
-    return;
-  }
+    // click outside closes all (desktop only)
+    if (!isMobile()) {
+      var insideAny = dropConfigs.some(function (c) {
+        return e.target.closest("#" + c.menuId);
+      });
+      if (!insideAny) closeAll();
+    }
+  });
 
-  if (
-    !e.target.closest("#toolsBtn") &&
-    !e.target.closest("#blogBtn") &&
-    !e.target.closest("#toolsMenu") &&
-    !e.target.closest("#blogMenu")
-  ) {
-    toolsMenu.classList.remove("open");
-    blogMenu.classList.remove("open");
+  // Hover: desktop only
+  dropConfigs.forEach(function (c) {
+    var itemEl = document.getElementById(c.itemId);
+    var menuEl = document.getElementById(c.menuId);
+    if (!itemEl || !menuEl) return;
 
-    toolsItem.classList.remove("open");
-    blogItem.classList.remove("open");
-  }
-});
+    function openThis() {
+      if (isMobile()) return;
+      openDrop(c.itemId, c.menuId);
+    }
 
+    function tryClose() {
+      if (isMobile()) return;
+      setTimeout(function () {
+        if (!menuEl.matches(":hover") && !itemEl.matches(":hover")) closeAll();
+      }, 100);
+    }
 
-document.addEventListener("click", function (e) {
-
-  const hamburger = e.target.closest("#hamburger");
-
-  if (hamburger) {
-
-    hamburger.classList.toggle("open");
-
-    document
-      .getElementById("mobileMenu")
-      ?.classList.toggle("open");
-
-    return;
-  }
-
-  if (e.target.closest("#mToolsTitle")) {
-
-    e.target
-      .closest("#mToolsTitle")
-      .classList.toggle("expanded");
-
-    document
-      .getElementById("mToolsBody")
-      ?.classList.toggle("open");
-
-    return;
-  }
-
-  if (e.target.closest("#mBlogTitle")) {
-
-    e.target
-      .closest("#mBlogTitle")
-      .classList.toggle("expanded");
-
-    document
-      .getElementById("mBlogBody")
-      ?.classList.toggle("open");
-
-    return;
-  }
-
-});
-
-// End mega menu
+    itemEl.addEventListener("mouseenter", openThis);
+    menuEl.addEventListener("mouseenter", openThis);
+    itemEl.addEventListener("mouseleave", tryClose);
+    menuEl.addEventListener("mouseleave", tryClose);
+  });
+}
+// End nav menu
 
 
 // ==================back to tp started
@@ -185,7 +159,9 @@ function cookieConsentFunction() {
 // End Cooclies JS
 
 $(document).ready(function () {
-  $("#header").load("/master/header.html", function () { });
+  $("#header").load("/master/header.html", function () {
+    initNavMenu();
+  });
   $("#footer").load("/master/footer.html", function () {
 
     backToTopFunction();
