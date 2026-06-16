@@ -5,10 +5,10 @@
  }
 
  body {
-    font-family: "Google Sans", sans-serif; 
+   font-family: "Google Sans", sans-serif;
    color: #000;
  }
- 
+
  #dropZone {
    background: #f0f8ff;
    border: 3px solid #005893;
@@ -90,7 +90,7 @@
  }
 
  button {
-   margin: 10px 5px 0 5px;
+   /* margin: 10px 5px 0 5px; */
    padding: 12px 25px;
    border: none;
    border-radius: 12px;
@@ -123,7 +123,7 @@
  }
 
  section {
-   padding: 0px  0px;
+   padding: 0px 0px;
    /* text-align: center; */
    width: 100%;
  }
@@ -134,11 +134,11 @@
    margin-bottom: 20px;
  }
 
-section ul {
-    padding: 0;
-    list-style-position: inside;
-}
- 
+ section ul {
+   padding: 0;
+   list-style-position: inside;
+ }
+
 
  .features {
    display: flex;

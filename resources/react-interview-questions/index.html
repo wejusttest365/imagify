@@ -1,1042 +1,1183 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
-<!-- InstanceBeginEditable name="EditRegion4" -->
-<title>React JS interview Questions | WebToolOcean</title>
- 
- <!-- Meta Description -->
-<meta name="description" content="Prepare for your React interview with 60+ commonly asked questions and answers covering React fundamentals, Hooks, State Management, Performance Optimization, and more — from beginner to advanced level.">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>React Interview Questions – Master React & Component Development</title>
 
-<!-- Meta Keywords -->
-<meta name="keywords" content="React interview questions, React JS interview questions, React hooks interview questions, React interview questions and answers, React beginner interview questions, React advanced interview questions, React state management interview questions, React performance interview questions, ReactJS concepts, React component interview questions, React Redux interview questions, React Next.js interview questions">
-<meta name="author" content="WebToolOcean">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="http://webtoolocean.com/resources/react-interview-questions">
+  <meta name="description"
+    content="Prepare for React interviews with comprehensive React interview questions and answers. Master React hooks, state management, JSX, components, lifecycle, and modern React patterns.">
+  <meta name="keywords"
+    content="React interview questions, React hooks, Redux, state management, component design, React lifecycle, functional components, web development interview">
+  <meta name="author" content="WebToolOcean">
+  <meta name="robots" content="index, follow">
 
-<!-- ===================================================== --> 
+  <link rel="canonical" href="https://webtoolocean.com/resources/react-interview-questions/">
 
-<!--CSS for the website--> 
+  <!--Open Graph Tags-->
+  <meta property="og:title" content="React Interview Questions – WebToolOcean">
+  <meta property="og:description"
+    content="Master React for interviews with comprehensive React interview questions covering hooks, components, state management, and advanced patterns.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webtoolocean.com/resources/react-interview-questions/">
+  <meta property="og:image" content="https://webtoolocean.com/images/webtoolocean-og.png">
+  <meta property="og:site_name" content="WebToolOcean">
 
-<!-- Dependencies -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
-<style>
-.faq {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-.faq .q {
-    padding: 18px 50px 18px 20px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    font-size: 18px;
-    transition: .3s;
-}
-.faq .a {
-    padding: 0 16px 16px;
-    display: none;
-}
-.faq .q:after {
-    content: "▼";
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .3s;
-    font-size: 14px;
-}
-.faq.active .q:after {
-    transform: translateY(-50%) rotate(180deg);
-}
-.faq.active .a {
-    display: block
-}
-</style>
-<!-- InstanceEndEditable -->
-<!-- Stylesheets     
+  <!--Twitter Tags-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="React Interview Questions – WebToolOcean">
+  <meta name="twitter:description"
+    content="Prepare for React interviews with our comprehensive React interview questions and expert answers.">
+  <!--  Stylesheets     
 	============================================= -->
 
-<!-- Google Fonts --> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-
-<!-- Document Title   
+  <!--  Stylesheets     
 	============================================= -->
-<!-- InstanceBeginEditable name="doctitle" -->
-<!-- InstanceEndEditable -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4C1PP726EZ');
-</script>
-<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
-     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/menu.css" rel="stylesheet">
+
+
+  <!-- site verification and google tag -->
+
+  <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+
+  <!--  Google Ads verification code -->
+  <meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebToolOcean",
+    "url": "https://webtoolocean.com",
+    "logo": "https://webtoolocean.com/images/logo.png",
+    "description": "WebToolOcean offers 100+ free online tools for developers, designers, and creators",
+    "sameAs": [
+      "https://www.facebook.com/webtoolocean",
+      "https://www.twitter.com/webtoolocean",
+      "https://www.instagram.com/webtoolocean"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "url": "https://webtoolocean.com/contact/"
+    }
+  }
+  </script>
+
+  <!-- WebPage Schema for React Interview Questions -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "React Interview Questions – WebToolOcean",
+    "description": "Prepare for React interviews with comprehensive React interview questions and answers. Master React hooks, state management, JSX, components, lifecycle, and modern React patterns.",
+    "url": "https://webtoolocean.com/resources/react-interview-questions/",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "WebToolOcean",
+      "url": "https://webtoolocean.com"
+    }
+  }
+  </script>
 </head>
-<style>
-body {
-	overflow-x: hidden
-}
-	 
-</style>
+
+
 <body class="">
-<!--ACCESSIBILITY CONTROLS   --> 
-
-<!--END ACCESSIBILITY CONTROLS   --> 
-<!-- Document Wrapper	  
-	============================================= --> 
-<!--	 <div class="topnav">
-    <div class="container">
-      <ul>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/blog/">Blog</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/resources/">Resources</a> </li>
-        <li> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a></li>
-    
-      </ul>
-    </div>
-  </div>-->
-
- 
- <header class="site-header">
-  <div class="header-inner"> <a class="logo" href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a>
-    <nav class="main-nav">
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/"><i class="ti ti-home" aria-hidden="true"></i> Home</a> </div>
-      <div class="nav-item has-drop" id="toolsItem">
-        <button class="nav-btn" id="toolsBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-apps" aria-hidden="true"></i> Tools <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item has-drop" id="blogItem">
-        <button class="nav-btn" id="blogBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-writing" aria-hidden="true"></i> Blog <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/resources/"><i class="ti ti-books" aria-hidden="true"></i> Resources</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/about/"><i class="ti ti-users" aria-hidden="true"></i> About Us</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/contact/"><i class="ti ti-mail" aria-hidden="true"></i> Contact</a> </div>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"> <span></span><span></span><span></span> </button>
-  </div>
-  
-  <!-- TOOLS MEGA — anchored full width -->
-  <div class="mega-wrap" id="toolsWrap">
-    <div class="mega">
-      <div class="mega-inner">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/image-tools/image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-refresh" aria-hidden="true"></i></div>
-          <div><span class="link-title">All Image Converter</span><span class="link-desc">Convert between formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">
-          <div class="link-icon icon-purple"><i class="ti ti-scan" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Text (OCR)</span><span class="link-desc">Extract text from images</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/compress-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-file-zip" aria-hidden="true"></i></div>
-          <div><span class="link-title">Compress Images</span><span class="link-desc">Reduce file size</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector" aria-hidden="true"></i></div>
-          <div><span class="link-title">SVG to Image</span><span class="link-desc">SVG → raster formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector-bezier" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to SVG</span><span class="link-desc">Raster → vector SVG</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/favicon-generator/">
-          <div class="link-icon icon-purple"><i class="ti ti-star" aria-hidden="true"></i></div>
-          <div><span class="link-title">Favicon Generator</span><span class="link-desc">Create .ico &amp; PNG favicons</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-base64/">
-          <div class="link-icon icon-purple"><i class="ti ti-code" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Base64</span><span class="link-desc">Encode images to Base64</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/base64-to-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-photo-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 to Image</span><span class="link-desc">Decode Base64 to image</span></div>
-          </a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">
-          <div class="link-icon icon-red"><i class="ti ti-files" aria-hidden="true"></i></div>
-          <div><span class="link-title">Merge PDF</span><span class="link-desc">Combine multiple PDFs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">
-          <div class="link-icon icon-red"><i class="ti ti-reorder" aria-hidden="true"></i></div>
-          <div><span class="link-title">Reorder PDF Pages</span><span class="link-desc">Drag to rearrange</span></div>
-          </a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-brush" aria-hidden="true"></i> CSS Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/css-tools/css-formatter/">
-          <div class="link-icon icon-blue"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
-          <div><span class="link-title">Beautify / Minify CSS</span><span class="link-desc">Format or compress CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-shadow" aria-hidden="true"></i></div>
-          <div><span class="link-title">Box Shadow Generator</span><span class="link-desc">Visual shadow editor</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-layers-subtract" aria-hidden="true"></i></div>
-          <div><span class="link-title">Multi Box Shadow</span><span class="link-desc">Layered shadows</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/clip-image/">
-          <div class="link-icon icon-blue"><i class="ti ti-crop" aria-hidden="true"></i></div>
-          <div><span class="link-title">Clip Image CSS</span><span class="link-desc">Clip-path made easy</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/card-builder/">
-          <div class="link-icon icon-blue"><i class="ti ti-layout-board" aria-hidden="true"></i></div>
-          <div><span class="link-title">CSS Card Builder</span><span class="link-desc">Design CSS cards</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/gradient-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-palette" aria-hidden="true"></i></div>
-          <div><span class="link-title">Gradient Generator</span><span class="link-desc">Build CSS gradients</span></div>
-          </a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-terminal-2" aria-hidden="true"></i> Developer Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/developer-tools/html-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-brand-html5" aria-hidden="true"></i></div>
-          <div><span class="link-title">HTML Formatter</span><span class="link-desc">Beautify HTML markup</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/check-css-error/">
-          <div class="link-icon icon-green"><i class="ti ti-bug" aria-hidden="true"></i></div>
-          <div><span class="link-title">Check CSS Errors</span><span class="link-desc">Lint &amp; validate CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">
-          <div class="link-icon icon-green"><i class="ti ti-lock" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 Encoder-Decoder</span><span class="link-desc">Encode &amp; decode text</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/json-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-braces" aria-hidden="true"></i></div>
-          <div><span class="link-title">JSON Formatter</span><span class="link-desc">Format &amp; validate JSON</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/font-converter/">
-          <div class="link-icon icon-green"><i class="ti ti-typography" aria-hidden="true"></i></div>
-          <div><span class="link-title">Web Font Converter</span><span class="link-desc">Convert font formats</span></div>
-          </a> </div>
-        <div class="mega-col col-amber">
-          <div class="col-head"><i class="ti ti-calculator" aria-hidden="true"></i> Calculators</div>
-          <a class="m-link" href="https://webtoolocean.com/calculators/age-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cake" aria-hidden="true"></i></div>
-          <div><span class="link-title">Age Calculator</span><span class="link-desc">Find your exact age</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/emi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-credit-card" aria-hidden="true"></i></div>
-          <div><span class="link-title">EMI Calculator</span><span class="link-desc">Calculate loan EMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/gst-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-receipt-tax" aria-hidden="true"></i></div>
-          <div><span class="link-title">GST Calculator</span><span class="link-desc">Add or remove GST</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/sip-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-trending-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">SIP Calculator</span><span class="link-desc">Plan mutual fund SIPs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/bmi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i></div>
-          <div><span class="link-title">BMI Calculator</span><span class="link-desc">Check your BMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/percentage-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-percentage" aria-hidden="true"></i></div>
-          <div><span class="link-title">Percentage Calculator</span><span class="link-desc">Calculate percentages</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/discount-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-tag" aria-hidden="true"></i></div>
-          <div><span class="link-title">Discount Calculator</span><span class="link-desc">Find sale price</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/loan-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cash" aria-hidden="true"></i></div>
-          <div><span class="link-title">Loan Calculator</span><span class="link-desc">Compare loan options</span></div>
-          </a> </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- BLOG MEGA — anchored full width -->
-  <div class="mega-wrap" id="blogWrap">
-    <div class="mega">
-      <div class="blog-grid">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-robot" aria-hidden="true"></i> AI Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="blog-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="blog-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="blog-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="blog-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="blog-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="blog-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="blog-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-code" aria-hidden="true"></i> Web Development</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="blog-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="blog-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a> </div>
-        <div class="mega-col col-pink">
-          <div class="col-head"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> UI/UX Design</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="blog-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="blog-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a> </div>
-        <div class="mega-col col-teal">
-          <div class="col-head"><i class="ti ti-search" aria-hidden="true"></i> SEO</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="blog-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="blog-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="blog-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a> </div>
-        <div class="mega-col col-indigo">
-          <div class="col-head"><i class="ti ti-briefcase" aria-hidden="true"></i> Career &amp; Interview</div>
-          <a class="blog-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> </div>
-      </div>
-      <div class="mega-footer"> <a class="footer-link" href="https://webtoolocean.com/blog/"><i class="ti ti-writing" aria-hidden="true"></i> View all blog articles <i class="ti ti-arrow-right" aria-hidden="true"></i></a> </div>
-    </div>
-  </div>
-  
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/"><i class="ti ti-home"></i> Home</a> </div>
-    <div>
-      <div class="m-section-title" id="mToolsTitle"><span><i class="ti ti-apps" style="margin-right:6px;color:#818cf8"></i>Tools</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mToolsBody">
-        <div class="m-cat-head">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/image-tools/image-converter/">All Image Converter</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a> <a class="mob-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages</a>
-        <div class="m-cat-head blue">CSS Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a>
-        <div class="m-cat-head green">Developer Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/check-css-error/">Check CSS Errors</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder-Decoder</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a> <a class="mob-link" href="https://webtoolocean.com/font-converter/">Web Font Converter</a>
-        <div class="m-cat-head amber">Calculators</div>
-        <a class="mob-link" href="https://webtoolocean.com/calculators/age-calculator/">Age Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/emi-calculator/">EMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/gst-calculator/">GST Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/sip-calculator/">SIP Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/bmi-calculator/">BMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/percentage-calculator/">Percentage Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/discount-calculator/">Discount Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/loan-calculator/">Loan Calculator</a> </div>
-    </div>
-    <div>
-      <div class="m-section-title" id="mBlogTitle"><span><i class="ti ti-writing" style="margin-right:6px;color:#818cf8"></i>Blog</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mBlogBody">
-        <div class="m-cat-head">AI Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="mob-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="mob-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="mob-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a>
-        <div class="m-cat-head blue">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="mob-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="mob-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a>
-        <div class="m-cat-head green">Web Development</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="mob-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="mob-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a>
-        <div class="m-cat-head pink">UI/UX Design</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="mob-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="mob-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a>
-        <div class="m-cat-head teal">SEO</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="mob-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="mob-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="mob-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a>
-        <div class="m-cat-head indigo">Career &amp; Interview</div>
-        <a class="mob-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> <a class="mob-link" style="color:#818cf8;font-weight:600;margin-top:8px;display:block" href="https://webtoolocean.com/blog/">View all blog articles →</a> </div>
-    </div>
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/resources/"><i class="ti ti-books"></i> Resources</a> <a class="m-top-link" href="https://webtoolocean.com/about/"><i class="ti ti-users"></i> About Us</a> <a class="m-top-link" href="https://webtoolocean.com/contact/"><i class="ti ti-mail"></i> Contact</a> </div>
-  </div>
-</header>
- 
-<!-- InstanceBeginEditable name="center" --> 
-
-<!-- Start dynamic content --> 
-<!-- <section id="testimonials">
-    <div class="container aniboxes animate__animated text-center">
-      <div id="contentwidget1"></div>
-      <br>
-    </div>
-  </section>--> 
-<!-- End dynamic content -->
-<div class="clearfix"></div>
-<!-- End dynamic content --> 
-
-<!-- Sevices section -->
-<main id="content">
-
-<section class="section py-4">
-<div class="container"> 
-	  <div class="row">
-		  <div class="col-sm-8 col-xs-12">
-<!-- React Interview Questions -->
-<h1 class="pt-4">Beginner React Interview Questions</h1>
-	<p>Here are some professional introductory lines you can place below the "Beginner React Interview</p>
-<div class="faq">
-  <div class="q">What is React?</div>
-  <div class="a">
-    <p>React is an open-source JavaScript library for building user interfaces, maintained by Meta, using a component-based architecture.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is JSX?</div>
-  <div class="a">
-    <p>JSX (JavaScript XML) is a syntax extension that allows you to write HTML-like code inside JavaScript files.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Component?</div>
-  <div class="a">
-    <p>A component is a reusable, independent piece of UI that can accept inputs and return React elements describing what should appear on screen.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between a Functional and Class Component?</div>
-  <div class="a">
-    <p>Functional components are plain JavaScript functions that return JSX, while class components extend React.Component and use lifecycle methods. Functional components are now preferred with Hooks.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are Props?</div>
-  <div class="a">
-    <p>Props (properties) are read-only inputs passed from a parent component to a child component to share data.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is State?</div>
-  <div class="a">
-    <p>State is a built-in object that stores dynamic data within a component and triggers a re-render when updated.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Virtual DOM?</div>
-  <div class="a">
-    <p>The Virtual DOM is a lightweight in-memory representation of the real DOM that React uses to calculate and apply minimal updates efficiently.</p>
-  </div>
-
-</div>
-<div class="faq">
-  <div class="q">What is the difference between State and Props?</div>
-  <div class="a">
-    <p>Props are passed from parent to child and are immutable, while state is managed within the component and can be updated.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is useState?</div>
-  <div class="a">
-    <p>useState is a React Hook that allows functional components to declare and manage local state variables.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is useEffect?</div>
-  <div class="a">
-    <p>useEffect is a React Hook used to perform side effects such as data fetching, subscriptions, or DOM manipulation after rendering.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is an Event in React?</div>
-  <div class="a">
-    <p>React events are synthetic wrappers around native browser events, providing a consistent cross-browser interface for handling user interactions.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Conditional Rendering?</div>
-  <div class="a">
-    <p>Conditional rendering displays different UI elements based on a condition using JavaScript operators like if, ternary, or logical AND.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are Lists and Keys in React?</div>
-  <div class="a">
-    <p>Lists render arrays of elements using map(), and keys are unique identifiers that help React efficiently update and re-render list items.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Fragment?</div>
-  <div class="a">
-    <p>A React Fragment (&lt;&gt;&lt;/&gt;) lets you group multiple elements without adding an extra DOM node.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is one-way data binding?</div>
-  <div class="a">
-    <p>One-way data binding means data flows in a single direction from parent to child via props, making the application easier to debug.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a React Root?</div>
-  <div class="a">
-    <p>The React root is the entry point where the React component tree is mounted into the actual DOM, typically using ReactDOM.createRoot().</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is PropTypes?</div>
-  <div class="a">
-    <p>PropTypes is a runtime type-checking library that validates the types of props passed to a component during development.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are Default Props?</div>
-  <div class="a">
-    <p>Default props define fallback values for props when no value is provided by the parent component.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the purpose of the key prop?</div>
-  <div class="a">
-    <p>The key prop helps React identify which items in a list have changed, been added, or removed for efficient DOM updates.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is create-react-app?</div>
-  <div class="a">
-    <p>create-react-app is a CLI tool that sets up a new React project with a pre-configured build environment and development server.</p>
-  </div>
-</div>
-
-<h2 class="pt-4">Intermediate React Interview Questions</h2>
-<div class="faq">
-  <div class="q">What are React Hooks?</div>
-  <div class="a">
-    <p>Hooks are functions introduced in React 16.8 that let functional components use state, lifecycle features, and other React capabilities.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is useContext?</div>
-  <div class="a">
-    <p>useContext is a Hook that allows components to consume values from a React Context without prop drilling.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is useRef?</div>
-  <div class="a">
-    <p>useRef returns a mutable ref object that persists across renders, commonly used to access DOM elements or store mutable values without causing re-renders.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is useReducer?</div>
-  <div class="a">
-    <p>useReducer is a Hook for managing complex state logic using a reducer function, similar to Redux but built into React.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is useMemo?</div>
-  <div class="a">
-    <p>useMemo memoizes the result of an expensive computation and recalculates it only when its dependencies change.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is useCallback?</div>
-  <div class="a">
-    <p>useCallback memoizes a function reference so it is not recreated on every render, useful when passing callbacks to optimized child components.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Context API?</div>
-  <div class="a">
-    <p>The Context API provides a way to pass data through the component tree without manually passing props at every level.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Prop Drilling?</div>
-  <div class="a">
-    <p>Prop drilling is the process of passing data through multiple nested components that do not need it, just to reach a deeply nested child.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is React Router?</div>
-  <div class="a">
-    <p>React Router is a library for declarative client-side routing in React applications, enabling navigation between views without full page reloads.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Higher-Order Component (HOC)?</div>
-  <div class="a">
-    <p>A HOC is a function that takes a component and returns a new enhanced component, used to reuse component logic.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are Controlled Components?</div>
-  <div class="a">
-    <p>Controlled components have their form data managed by React state, making the component the single source of truth for input values.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are Uncontrolled Components?</div>
-  <div class="a">
-    <p>Uncontrolled components manage their own form data internally via the DOM, accessed using refs instead of React state.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Reconciliation?</div>
-  <div class="a">
-    <p>Reconciliation is the process React uses to compare the previous and new Virtual DOM trees and apply only the necessary changes to the real DOM.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Lifting State Up?</div>
-  <div class="a">
-    <p>Lifting state up means moving shared state to the closest common ancestor so multiple child components can access and update it.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is React.memo?</div>
-  <div class="a">
-    <p>React.memo is a higher-order component that prevents a functional component from re-rendering if its props have not changed.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Lazy Loading in React?</div>
-  <div class="a">
-    <p>Lazy loading defers the loading of components until they are needed, using React.lazy() and Suspense to improve initial load performance.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Code Splitting?</div>
-  <div class="a">
-    <p>Code splitting breaks a large bundle into smaller chunks that are loaded on demand, reducing initial load time.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are Custom Hooks?</div>
-  <div class="a">
-    <p>Custom Hooks are JavaScript functions prefixed with "use" that encapsulate reusable stateful logic and can be shared across components.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the useLayoutEffect Hook?</div>
-  <div class="a">
-    <p>useLayoutEffect runs synchronously after DOM mutations but before the browser paints, useful for measuring DOM elements or preventing visual flicker.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Redux?</div>
-  <div class="a">
-    <p>Redux is a predictable state management library for JavaScript apps that centralizes application state in a single store.</p>
-  </div>
-</div>
-
-<h2 class="pt-4">Advanced React Interview Questions</h2>
-<div class="faq">
-  <div class="q">What is Concurrent Mode in React?</div>
-  <div class="a">
-    <p>Concurrent Mode allows React to interrupt, pause, and resume rendering work to keep the UI responsive during heavy updates.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the useTransition Hook?</div>
-  <div class="a">
-    <p>useTransition marks state updates as non-urgent transitions, allowing React to keep the UI responsive while processing them in the background.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is useDeferredValue?</div>
-  <div class="a">
-    <p>useDeferredValue defers updating a part of the UI by accepting a lower-priority version of a value, helping avoid blocking urgent updates.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are React Server Components?</div>
-  <div class="a">
-    <p>React Server Components render exclusively on the server, reducing client-side JavaScript bundle size and enabling direct server-side data access.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Server-Side Rendering (SSR) in React?</div>
-  <div class="a">
-    <p>SSR renders React components on the server and sends the HTML to the client, improving initial load time and SEO performance.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Static Site Generation (SSG)?</div>
-  <div class="a">
-    <p>SSG pre-renders pages at build time into static HTML files, delivering fast load times commonly used with Next.js.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Hydration in React?</div>
-  <div class="a">
-    <p>Hydration is the process of attaching React event listeners to server-rendered HTML so it becomes a fully interactive client-side app.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is an Error Boundary?</div>
-  <div class="a">
-    <p>An Error Boundary is a class component that catches JavaScript errors in its child component tree and displays a fallback UI instead of crashing.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Render Props pattern?</div>
-  <div class="a">
-    <p>Render Props is a pattern where a component receives a function as a prop and calls it to render dynamic content, enabling logic sharing.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is React Suspense?</div>
-  <div class="a">
-    <p>Suspense lets components wait for asynchronous operations like data fetching or lazy loading by displaying a fallback UI until they resolve.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Compound Component pattern?</div>
-  <div class="a">
-    <p>The Compound Component pattern allows multiple components to share implicit state by working together, providing a flexible and expressive API.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">How does React handle performance optimization?</div>
-  <div class="a">
-    <p>React optimizes performance through memoization (React.memo, useMemo, useCallback), code splitting, lazy loading, virtualization, and concurrent rendering.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is React Fiber?</div>
-  <div class="a">
-    <p>React Fiber is the internal reconciliation engine rewritten in React 16 that enables incremental rendering and better scheduling of work.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Zustand?</div>
-  <div class="a">
-    <p>Zustand is a lightweight state management library for React that uses a simple hook-based API without boilerplate, as an alternative to Redux.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is React Query?</div>
-  <div class="a">
-    <p>React Query is a data-fetching and server state management library that handles caching, synchronization, and background updates automatically.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between CSR, SSR, and SSG?</div>
-  <div class="a">
-    <p>CSR renders on the client after JavaScript loads; SSR renders on the server per request; SSG pre-renders at build time. Each suits different performance and SEO needs.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Next.js and how does it relate to React?</div>
-  <div class="a">
-    <p>Next.js is a React framework that adds SSR, SSG, file-based routing, API routes, and performance optimizations on top of React.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is tree shaking in React projects?</div>
-  <div class="a">
-    <p>Tree shaking is a build optimization that removes unused code from the final bundle, reducing its size by only including what is actually imported.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">How do you handle accessibility in React?</div>
-  <div class="a">
-    <p>Use semantic HTML, ARIA attributes, keyboard navigation support, focus management, and tools like axe or Lighthouse to audit accessibility.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the useImperativeHandle Hook?</div>
-  <div class="a">
-    <p>useImperativeHandle customizes the instance value exposed to parent components when using forwardRef, controlling which methods are accessible externally.</p>
-  </div>
-</div>
-	 </div>
-	    <div class="col-sm-4 col-xs-12">
-				  <div id="sidebar"></div>
-			  
-			  </div>
-	</div>
-</div>
-</section>	
-	
-	
-<!-- SEO Text Section -->
-<section class="section py-5 bg-light">
-  <div class="container">
-    <p>React is an open-source JavaScript library developed by Meta (formerly Facebook) for building fast, interactive, and scalable user interfaces. Since its release in 2013, React has become one of the most popular front-end technologies in the world, used by companies like Meta, Netflix, Airbnb, and thousands of startups. Its component-based architecture and declarative programming model make it a go-to choice for modern web development.</p>
-
-    <p><strong>Key React topics covered in interviews include:</strong></p>
-    <ul>
-      <li>React Components and JSX</li>
-      <li>State and Props Management</li>
-      <li>React Hooks (useState, useEffect, useContext, and more)</li>
-      <li>Virtual DOM and Reconciliation</li>
-      <li>React Router and Navigation</li>
-      <li>State Management with Redux and Context API</li>
-      <li>Performance Optimization Techniques</li>
-      <li>Server-Side Rendering with Next.js</li>
-    </ul>
-
-    <p>From foundational concepts like components, props, and state to advanced topics like custom hooks, code splitting, concurrent rendering, and server components, this guide covers everything you need to confidently answer React interview questions at any level. Whether you are preparing for a frontend developer, full-stack developer, or React engineer role, these questions and answers will help you stand out in your next interview.</p>
-  </div>
-</section>
-
-</main>
-<!-- InstanceEndEditable -->
-<div class="clearfix"></div>
-<footer role="contentinfo" class="footer light newfooter">
-  <article class="footer-top">
-    <div class="container">
-      <div class="row">  
-        
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Popular Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/image-tools/image-converter/">Image
-                Converter</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to
-                Text (OCR)</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress
-                Images</a></li>
-              <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/clip-image/">Clip Image </a></li>
-              <li><a href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Support</h4>
-            <ul>
-              <li> <a href="https://webtoolocean.com/about/">About Us</a></li>
-              <li> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a></li>
-              <li> <a href="https://webtoolocean.com/cookie-policy/">Cookie Policy</a></li>
-              <li> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a></li>
-              <li> <a href="https://webtoolocean.com/terms-conditions/">Terms &amp; Conditions</a></li>
-              <li> <a href="https://webtoolocean.com/blog/">Blog</a></li>
-              <li> <a href="https://webtoolocean.com/resources/">Resources</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Calculator Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/calculators/age-calculator/"> Age Calculator</a></li>
-    <li><a href="https://webtoolocean.com/calculators/emi-calculator/"> EMI  Calculator</a></li>
-             <!-- <li><a href="https://webtoolocean.com/calculators/basic-calculator">Basic Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/percentage-calculator">Percentage Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/currency-calculator">Currency Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/unit-calculator">Unit Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/date-calculator">Date Difference</a></li>
-              <li><a href="https://webtoolocean.com/calculators/bmi-calculator">BMI Calculator</a></li>-->
-            </ul>
-          </div>
-        </div>
-		  <div class="col-md-3 col-sm-12 mb-3">
-          <div class="mb-3"> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
-          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
-            Fast, secure and easy to use on desktop &amp; mobile. </p>
-          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
-          <p class="footer-text mb-1"> <i class="fa fa-instagram"></i> <a href="https://www.instagram.com/webtoolocean">Follow us</a> </p>
-        </div>
-      </div>
-    </div>
-  </article>
-  
-  <!-- Bottom Menu -->
-  <article id="copyrights">
-    <div class="container text-center">
-		   <div class="row">  <div class="col-md-7 col-xs-12 md-text-left text-center"><p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | All Rights Reserved </p></div>
-		<div class="col-md-5 col-xs-12 md-text-right text-center"><a href="https://webtoolocean.com/sitemap">Sitemap</a></div>
-      </div>
-    </div>
-  </article>
-</footer>
-<a href="#" id="backToTop" aria-label="Back to Top">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-  <path d="M12 5L5 12H9V19H15V12H19L12 5Z"
-              fill="currentColor"/>
-</svg>
-</a>
-<div class="clearfix"></div>
-<script src="https://webtoolocean.com/js/jquery.js"></script> 
-<!-- InstanceBeginEditable name="EditRegion5" --> 
-<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
-<script>
-document.querySelectorAll('.q').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('active'));
-</script> 
-	<script>
-fetch('/resources/sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-    });
-</script> 
-<!-- InstanceEndEditable --> 
-<script>
-const backToTop = document.getElementById('backToTop');
-
-window.addEventListener('scroll', function() {
-
-    if (window.scrollY > 300) {
-        backToTop.classList.add('show');
-    } else {
-        backToTop.classList.remove('show');
+  <style>
+    body {
+      overflow-x: hidden;
     }
 
-});
-
-backToTop.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-</script> 
-<!--<script>
-		const btn = document.getElementById("togglemeu");
-const menu = document.querySelector(".mainmenubar");
-
-btn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-	</script> 
-<script id="3q6qk9">
-document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-});
-</script> 
-<script id="7c7b4s">
-document.addEventListener("keydown", function(e){
-
-    if (e.key === "F12") {
-        e.preventDefault();
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
     }
 
-    if (e.ctrlKey && e.shiftKey && e.key === "I") {
-        e.preventDefault();
+    /* Enhanced Hero Banner */
+    .wto-hero-about {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, var(--brand-dark) 100%);
+      padding: 60px 0 50px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(59, 130, 246, .2);
     }
 
-    if (e.ctrlKey && e.shiftKey && e.key === "J") {
-        e.preventDefault();
+    .wto-hero-about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    if (e.ctrlKey && e.key === "U") {
-        e.preventDefault();
+    .wto-hero-about .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-});
-</script> 
-<script id="5h2r0p">
-document.addEventListener("contextmenu", e => e.preventDefault());
+    .wto-hero-about h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
 
-document.addEventListener("keydown", function(e){
+    .wto-hero-about h1 span {
+      background: linear-gradient(135deg, #60a5fa 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-if(e.key=="F12"){e.preventDefault();}
+    .wto-hero-about .hero-description {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 32px;
+      line-height: 1.6;
+      max-width: 700px;
+    }
 
-if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
+    .wto-hero-about .hero-stats {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
 
-if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
+    .wto-hero-about .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
 
-if(e.ctrlKey && e.key=="U"){e.preventDefault();}
+    .wto-hero-about .hero-stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #60a5fa;
+    }
 
-});
+    .wto-hero-about .hero-stat-label {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
 
-setInterval(function(){
+    .wto-hero-about .btn-primary-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #3b82f6;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid #3b82f6;
+    }
 
-if(window.outerWidth - window.innerWidth > 160){
-document.body.innerHTML="Access Restricted";
-}
+    .wto-hero-about .btn-primary-hero:hover {
+      background: #2563eb;
+      border-color: #2563eb;
+      transform: translateY(-2px);
+    }
 
-},1000);
-</script> 
-<script>
-document.addEventListener("keydown", function(e) {
-  if (e.ctrlKey && e.key === "u") {
-    e.preventDefault();
-  }
-  if (e.key === "F12") {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
-    e.preventDefault();
-  }
-});
-</script>--> 
+    .wto-hero-about .btn-outline-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #cbd5e1;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid #475569;
+      margin-left: 12px;
+    }
 
-<script>
- $(document).ready(function(){
-$("#togglemeu").click(function(){
-$(".mainmenubar").slideToggle();
+    .wto-hero-about .btn-outline-hero:hover {
+      border-color: #94a3b8;
+      color: #f1f5f9;
+    }
 
-});
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-</script> 
+    /* About Us Section */
+    .about-section {
+      padding: 60px 0;
+    }
 
-<!-- Cookie Consent Banner -->
-<div id="cookieConsent" class="cookie-banner shadow-lg">
-  <div class="cookie-content">
-    <div class="cookie-text"> 🍪 We use cookies to improve your experience, analyze traffic, and display relevant ads. By continuing to
-      browse, you agree to our use of cookies. <a href="https://webtoolocean.com/cookie-policy" target="_blank">Learn More</a> </div>
-    <div class="cookie-actions">
-      <button id="acceptCookies" class="btn btn-primary btn-sm"> Accept </button>
-      <button id="declineCookies" class="btn btn-outline-secondary btn-sm"> Decline </button>
-    </div>
-  </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
+    .about-section .section-head {
+      margin-bottom: 40px;
+    }
 
-      const cookieBanner = document.getElementById("cookieConsent");
-      const acceptBtn = document.getElementById("acceptCookies");
-      const declineBtn = document.getElementById("declineCookies");
+    .about-section .sec-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .1);
+      border: 1px solid rgba(59, 130, 246, .2);
+      border-radius: 100px;
+      color: #3b82f6;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
-      // Check if user has already made a choice
-      const consent = localStorage.getItem("cookieConsent");
+    .about-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
 
-      if (consent) {
-        cookieBanner.style.display = "none";
+    .about-section .lead-text {
+      font-size: 1.1rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
-
-      // Accept Cookies
-      acceptBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "accepted");
-        cookieBanner.style.display = "none";
-
-        console.log("Cookies Accepted");
-
-        // Load Analytics / Ad Scripts here if needed
-        // Example:
-        // loadGoogleAnalytics();
-      });
-
-      // Decline Cookies
-      declineBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "declined");
-        cookieBanner.style.display = "none";
-
-        console.log("Cookies Declined");
-
-        // Do NOT load analytics or marketing scripts
-      });
-
-    });
-  </script> 
-
-<!--mega menu js below--> 
-
- <script>
-(function(){
-  const pairs=[
-    {btn:document.getElementById('toolsBtn'),wrap:document.getElementById('toolsWrap'),item:document.getElementById('toolsItem')},
-    {btn:document.getElementById('blogBtn'),wrap:document.getElementById('blogWrap'),item:document.getElementById('blogItem')}
-  ];
-
-  function closeAll(){
-    pairs.forEach(({btn,wrap,item})=>{
-      wrap.classList.remove('open');
-      item.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    });
-  }
-
-  pairs.forEach(({btn,wrap,item})=>{
-    let t;
-    function open(){
-      clearTimeout(t);
-      closeAll();
-      wrap.classList.add('open');
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
     }
-    function sched(){t=setTimeout(()=>{wrap.classList.remove('open');item.classList.remove('open');btn.setAttribute('aria-expanded','false');},160);}
-    btn.addEventListener('click',e=>{e.stopPropagation();wrap.classList.contains('open')?closeAll():open();});
-    item.addEventListener('mouseenter',open);
-    item.addEventListener('mouseleave',sched);
-    wrap.addEventListener('mouseenter',()=>clearTimeout(t));
-    wrap.addEventListener('mouseleave',sched);
-  });
 
-  document.addEventListener('click',closeAll);
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){
-      closeAll();
-      mob.classList.remove('open');
-      ham.classList.remove('open');
-      ham.setAttribute('aria-expanded','false');
+    .about-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 12px;
     }
-  });
 
-  const ham=document.getElementById('hamburger');
-  const mob=document.getElementById('mobileMenu');
-  ham.addEventListener('click',()=>{
-    const o=mob.classList.toggle('open');
-    ham.classList.toggle('open',o);
-    ham.setAttribute('aria-expanded',String(o));
-  });
+    .about-content p {
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
 
-  [['mToolsTitle','mToolsBody'],['mBlogTitle','mBlogBody']].forEach(([tid,bid])=>{
-    document.getElementById(tid).addEventListener('click',function(){
-      const b=document.getElementById(bid);
-      const isOpen=b.classList.toggle('open');
-      this.classList.toggle('expanded',isOpen);
-    });
-  });
-})();
-</script>
+    .about-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 24px;
+    }
+
+    .about-content li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .about-content li::before {
+      content: '✓';
+      flex-shrink: 0;
+      color: #06b6d4;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-top: -2px;
+    }
+
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      border-color: #3b82f6;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .value-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(59, 130, 246, .1);
+      border-radius: 10px;
+      color: #3b82f6;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .value-card h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 8px;
+    }
+
+    .value-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Breadcrumb */
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: #3b82f6;
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    /* FAQ Styling */
+    .faq {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+    }
+
+    .faq .q {
+      background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+      padding: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .faq .q::before {
+      content: '▶';
+      color: #3b82f6;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .faq:hover .q {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+      border-bottom-color: #3b82f6;
+    }
+
+    .faq .a {
+      padding: 18px;
+      color: #334155;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .faq .a p {
+      margin: 0;
+    }
+  </style>
+
+  <div id="header"></div>
+  <main role="main" id="content">
+    <!-- ═══════════════════════════════════════════════════════
+     BREADCRUMB
+     ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">React Interview Questions</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+     HERO BANNER
+     ═══════════════════════════════════════════════════════ -->
+    <section class="wto-hero-about">
+      <div class="container">
+        <div class="hero-tag">
+          <i class="fa-brands fa-react"></i>
+          Interview Prep
+        </div>
+        <h1>
+          Master <span>React Interview</span><br>Questions & Concepts
+        </h1>
+        <p class="hero-description">
+          Comprehensive React interview questions covering JSX, hooks, state management, component lifecycle, functional
+          components, advanced patterns, and modern React development. Prepare confidently for frontend developer roles.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">90+</div>
+            <div class="hero-stat-label">Questions</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">Expert</div>
+            <div class="hero-stat-label">Answers</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">Always</div>
+            <div class="hero-stat-label">Free</div>
+          </div>
+        </div>
+        <div>
+          <a href="#react-content" class="btn-primary-hero" style="text-decoration: none;">
+            <i class="fa-solid fa-graduation-cap"></i> Start Learning
+          </a>
+          <a href="/resources/" class="btn-outline-hero">
+            <i class="fa-solid fa-book"></i> All Resources
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+     REACT INTERVIEW QUESTIONS SECTION
+     ═══════════════════════════════════════════════════════ -->
+
+    <section class="section section py-5" id="react-content" style="background: #f8fafc;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-xs-12">
+
+            <!-- Introduction Section -->
+            <div style="margin-bottom: 50px;">
+              <div
+                style="background: white; border-radius: 12px; padding: 30px; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Why React
+                  Interview Questions Matter</h2>
+                <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 0;">
+                  React has become the industry-standard JavaScript library for building modern web applications.
+                  Whether you're applying for a junior frontend developer, senior React engineer, or full-stack
+                  developer role, deep React knowledge is essential. Understanding React hooks, functional components,
+                  state management, performance optimization, and best practices demonstrates you can build scalable,
+                  maintainable applications. Employers value developers who understand both React fundamentals and
+                  advanced patterns, as it directly impacts code quality, application performance, and team
+                  productivity.
+                </p>
+              </div>
+            </div>
+
+            <!-- Key Topics Section -->
+            <div style="margin-bottom: 50px;">
+              <h3 style="font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 24px;"><i
+                  class="fa-solid fa-list-check" style="color: #3b82f6; margin-right: 10px;"></i>Key React Topics
+                Covered in Interviews</h3>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">React Fundamentals & JSX</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Components & Props</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Hooks & State Management</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Context API & Redux</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Lifecycle & Side Effects</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Performance Optimization</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Routing & Navigation</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Testing & Best Practices</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div style="margin-bottom: 50px;">
+              <div
+                style="background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%); border-radius: 12px; padding: 30px; border: 1px solid #c7d2fe;">
+                <p style="font-size: 1rem; color: #3730a3; line-height: 1.8; margin: 0;">
+                  <strong>From foundational concepts</strong> like components and JSX to <strong>advanced
+                    topics</strong> like hooks, context API, performance optimization, and testing, this guide covers
+                  everything you need to master React interview questions at any level. Whether preparing for a
+                  <strong>junior frontend developer, senior React engineer, or tech lead</strong> role, these
+                  comprehensive questions and answers will help you ace your technical interview.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interview Questions Header -->
+            <h2 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 24px; margin-top: 40px;"><i
+                class="fa-brands fa-react" style="color: #3b82f6; margin-right: 10px;"></i>Beginner React Interview
+              Questions</h2>
+            <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 30px;">Master these fundamental
+              React concepts and common interview questions that test your understanding of core library features.</p>
+            <div class="faq">
+              <div class="q">What is React?</div>
+              <div class="a">
+                <p>React is an open-source JavaScript library for building user interfaces, maintained by Meta, using a
+                  component-based architecture.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is JSX?</div>
+              <div class="a">
+                <p>JSX (JavaScript XML) is a syntax extension that allows you to write HTML-like code inside JavaScript
+                  files.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Component?</div>
+              <div class="a">
+                <p>A component is a reusable, independent piece of UI that can accept inputs and return React elements
+                  describing what should appear on screen.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the difference between a Functional and Class Component?</div>
+              <div class="a">
+                <p>Functional components are plain JavaScript functions that return JSX, while class components extend
+                  React.Component and use lifecycle methods. Functional components are now preferred with Hooks.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are Props?</div>
+              <div class="a">
+                <p>Props (properties) are read-only inputs passed from a parent component to a child component to share
+                  data.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is State?</div>
+              <div class="a">
+                <p>State is a built-in object that stores dynamic data within a component and triggers a re-render when
+                  updated.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the Virtual DOM?</div>
+              <div class="a">
+                <p>The Virtual DOM is a lightweight in-memory representation of the real DOM that React uses to
+                  calculate and apply minimal updates efficiently.</p>
+              </div>
+
+            </div>
+            <div class="faq">
+              <div class="q">What is the difference between State and Props?</div>
+              <div class="a">
+                <p>Props are passed from parent to child and are immutable, while state is managed within the component
+                  and can be updated.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is useState?</div>
+              <div class="a">
+                <p>useState is a React Hook that allows functional components to declare and manage local state
+                  variables.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is useEffect?</div>
+              <div class="a">
+                <p>useEffect is a React Hook used to perform side effects such as data fetching, subscriptions, or DOM
+                  manipulation after rendering.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is an Event in React?</div>
+              <div class="a">
+                <p>React events are synthetic wrappers around native browser events, providing a consistent
+                  cross-browser interface for handling user interactions.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Conditional Rendering?</div>
+              <div class="a">
+                <p>Conditional rendering displays different UI elements based on a condition using JavaScript operators
+                  like if, ternary, or logical AND.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are Lists and Keys in React?</div>
+              <div class="a">
+                <p>Lists render arrays of elements using map(), and keys are unique identifiers that help React
+                  efficiently update and re-render list items.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Fragment?</div>
+              <div class="a">
+                <p>A React Fragment (&lt;&gt;&lt;/&gt;) lets you group multiple elements without adding an extra DOM
+                  node.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is one-way data binding?</div>
+              <div class="a">
+                <p>One-way data binding means data flows in a single direction from parent to child via props, making
+                  the application easier to debug.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a React Root?</div>
+              <div class="a">
+                <p>The React root is the entry point where the React component tree is mounted into the actual DOM,
+                  typically using ReactDOM.createRoot().</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is PropTypes?</div>
+              <div class="a">
+                <p>PropTypes is a runtime type-checking library that validates the types of props passed to a component
+                  during development.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are Default Props?</div>
+              <div class="a">
+                <p>Default props define fallback values for props when no value is provided by the parent component.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the purpose of the key prop?</div>
+              <div class="a">
+                <p>The key prop helps React identify which items in a list have changed, been added, or removed for
+                  efficient DOM updates.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is create-react-app?</div>
+              <div class="a">
+                <p>create-react-app is a CLI tool that sets up a new React project with a pre-configured build
+                  environment and development server.</p>
+              </div>
+            </div>
+
+            <h2 class="pt-4">Intermediate React Interview Questions</h2>
+            <div class="faq">
+              <div class="q">What are React Hooks?</div>
+              <div class="a">
+                <p>Hooks are functions introduced in React 16.8 that let functional components use state, lifecycle
+                  features, and other React capabilities.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is useContext?</div>
+              <div class="a">
+                <p>useContext is a Hook that allows components to consume values from a React Context without prop
+                  drilling.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is useRef?</div>
+              <div class="a">
+                <p>useRef returns a mutable ref object that persists across renders, commonly used to access DOM
+                  elements or store mutable values without causing re-renders.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is useReducer?</div>
+              <div class="a">
+                <p>useReducer is a Hook for managing complex state logic using a reducer function, similar to Redux but
+                  built into React.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is useMemo?</div>
+              <div class="a">
+                <p>useMemo memoizes the result of an expensive computation and recalculates it only when its
+                  dependencies change.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is useCallback?</div>
+              <div class="a">
+                <p>useCallback memoizes a function reference so it is not recreated on every render, useful when passing
+                  callbacks to optimized child components.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the Context API?</div>
+              <div class="a">
+                <p>The Context API provides a way to pass data through the component tree without manually passing props
+                  at every level.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Prop Drilling?</div>
+              <div class="a">
+                <p>Prop drilling is the process of passing data through multiple nested components that do not need it,
+                  just to reach a deeply nested child.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is React Router?</div>
+              <div class="a">
+                <p>React Router is a library for declarative client-side routing in React applications, enabling
+                  navigation between views without full page reloads.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Higher-Order Component (HOC)?</div>
+              <div class="a">
+                <p>A HOC is a function that takes a component and returns a new enhanced component, used to reuse
+                  component logic.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are Controlled Components?</div>
+              <div class="a">
+                <p>Controlled components have their form data managed by React state, making the component the single
+                  source of truth for input values.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are Uncontrolled Components?</div>
+              <div class="a">
+                <p>Uncontrolled components manage their own form data internally via the DOM, accessed using refs
+                  instead of React state.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Reconciliation?</div>
+              <div class="a">
+                <p>Reconciliation is the process React uses to compare the previous and new Virtual DOM trees and apply
+                  only the necessary changes to the real DOM.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Lifting State Up?</div>
+              <div class="a">
+                <p>Lifting state up means moving shared state to the closest common ancestor so multiple child
+                  components can access and update it.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is React.memo?</div>
+              <div class="a">
+                <p>React.memo is a higher-order component that prevents a functional component from re-rendering if its
+                  props have not changed.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Lazy Loading in React?</div>
+              <div class="a">
+                <p>Lazy loading defers the loading of components until they are needed, using React.lazy() and Suspense
+                  to improve initial load performance.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Code Splitting?</div>
+              <div class="a">
+                <p>Code splitting breaks a large bundle into smaller chunks that are loaded on demand, reducing initial
+                  load time.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are Custom Hooks?</div>
+              <div class="a">
+                <p>Custom Hooks are JavaScript functions prefixed with "use" that encapsulate reusable stateful logic
+                  and can be shared across components.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the useLayoutEffect Hook?</div>
+              <div class="a">
+                <p>useLayoutEffect runs synchronously after DOM mutations but before the browser paints, useful for
+                  measuring DOM elements or preventing visual flicker.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Redux?</div>
+              <div class="a">
+                <p>Redux is a predictable state management library for JavaScript apps that centralizes application
+                  state in a single store.</p>
+              </div>
+            </div>
+
+            <!-- Advanced Section Header -->
+            <h2
+              style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 24px; margin-top: 40px; padding-top: 30px; border-top: 2px solid #e2e8f0;">
+              <i class="fa-solid fa-rocket" style="color: #3b82f6; margin-right: 10px;"></i>Advanced React Interview
+              Questions</h2>
+            <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 30px;">Dive deeper into complex
+              React concepts that advanced professionals should master.</p>
+
+            <div class="faq">
+              <div class="q">What is Concurrent Mode in React?</div>
+              <div class="a">
+                <p>Concurrent Mode allows React to interrupt, pause, and resume rendering work to keep the UI responsive
+                  during heavy updates.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the useTransition Hook?</div>
+              <div class="a">
+                <p>useTransition marks state updates as non-urgent transitions, allowing React to keep the UI responsive
+                  while processing them in the background.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is useDeferredValue?</div>
+              <div class="a">
+                <p>useDeferredValue defers updating a part of the UI by accepting a lower-priority version of a value,
+                  helping avoid blocking urgent updates.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are React Server Components?</div>
+              <div class="a">
+                <p>React Server Components render exclusively on the server, reducing client-side JavaScript bundle size
+                  and enabling direct server-side data access.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Server-Side Rendering (SSR) in React?</div>
+              <div class="a">
+                <p>SSR renders React components on the server and sends the HTML to the client, improving initial load
+                  time and SEO performance.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Static Site Generation (SSG)?</div>
+              <div class="a">
+                <p>SSG pre-renders pages at build time into static HTML files, delivering fast load times commonly used
+                  with Next.js.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Hydration in React?</div>
+              <div class="a">
+                <p>Hydration is the process of attaching React event listeners to server-rendered HTML so it becomes a
+                  fully interactive client-side app.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is an Error Boundary?</div>
+              <div class="a">
+                <p>An Error Boundary is a class component that catches JavaScript errors in its child component tree and
+                  displays a fallback UI instead of crashing.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the Render Props pattern?</div>
+              <div class="a">
+                <p>Render Props is a pattern where a component receives a function as a prop and calls it to render
+                  dynamic content, enabling logic sharing.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is React Suspense?</div>
+              <div class="a">
+                <p>Suspense lets components wait for asynchronous operations like data fetching or lazy loading by
+                  displaying a fallback UI until they resolve.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the Compound Component pattern?</div>
+              <div class="a">
+                <p>The Compound Component pattern allows multiple components to share implicit state by working
+                  together, providing a flexible and expressive API.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">How does React handle performance optimization?</div>
+              <div class="a">
+                <p>React optimizes performance through memoization (React.memo, useMemo, useCallback), code splitting,
+                  lazy loading, virtualization, and concurrent rendering.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is React Fiber?</div>
+              <div class="a">
+                <p>React Fiber is the internal reconciliation engine rewritten in React 16 that enables incremental
+                  rendering and better scheduling of work.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Zustand?</div>
+              <div class="a">
+                <p>Zustand is a lightweight state management library for React that uses a simple hook-based API without
+                  boilerplate, as an alternative to Redux.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is React Query?</div>
+              <div class="a">
+                <p>React Query is a data-fetching and server state management library that handles caching,
+                  synchronization, and background updates automatically.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the difference between CSR, SSR, and SSG?</div>
+              <div class="a">
+                <p>CSR renders on the client after JavaScript loads; SSR renders on the server per request; SSG
+                  pre-renders at build time. Each suits different performance and SEO needs.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Next.js and how does it relate to React?</div>
+              <div class="a">
+                <p>Next.js is a React framework that adds SSR, SSG, file-based routing, API routes, and performance
+                  optimizations on top of React.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is tree shaking in React projects?</div>
+              <div class="a">
+                <p>Tree shaking is a build optimization that removes unused code from the final bundle, reducing its
+                  size by only including what is actually imported.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">How do you handle accessibility in React?</div>
+              <div class="a">
+                <p>Use semantic HTML, ARIA attributes, keyboard navigation support, focus management, and tools like axe
+                  or Lighthouse to audit accessibility.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the useImperativeHandle Hook?</div>
+              <div class="a">
+                <p>useImperativeHandle customizes the instance value exposed to parent components when using forwardRef,
+                  controlling which methods are accessible externally.</p>
+              </div>
+            </div>
+
+            <!-- Next Steps Section -->
+            <div
+              style="background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%); border-radius: 12px; padding: 30px; border: 1px solid #93c5fd; margin-top: 50px; margin-bottom: 20px;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #1e40af; margin-bottom: 12px;"><i
+                  class="fa-solid fa-check-circle" style="margin-right: 8px;"></i>Ready to Ace Your React Interview?
+              </h3>
+              <p style="color: #1e3a8a; margin: 0; line-height: 1.6;">
+                Master these React fundamentals, understand hooks and state management deeply, practice building
+                real-world components, and approach your next interview with confidence. Remember, React mastery is
+                about understanding not just syntax but the underlying concepts like component lifecycle, rendering
+                optimization, and data flow. Demonstrate your expertise and stand out as a skilled React developer.
+              </p>
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div id="sidebar">
+              <div class="sidebar-wrapper">
+                <h3>Related Tools</h3>
+                <ul class="sidebar-menu">
+                  <li><a href="https://webtoolocean.com/resources/figma-interview-questions/"><span
+                        class="fa fa-caret-right"></span> Figma Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/ui-ux-interview-questions/"><span
+                        class="fa fa-caret-right"></span> UI/UX Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/AI-interview-questions/"><span
+                        class="fa fa-caret-right"></span> AI Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/react-interview-questions/"><span
+                        class="fa fa-caret-right"></span> React Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/html-interview-questions/"><span
+                        class="fa fa-caret-right"></span> HTML Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/css-interview-questions/"><span
+                        class="fa fa-caret-right"></span> CSS Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/javascript-interview-questions/"><span
+                        class="fa fa-caret-right"></span> JavaScript Interview Questions</a></li>
+                </ul>
+              </div>
+              <style>
+                @import url("https://webtoolocean.com/css/sidebar.css");
+              </style>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SEO Text Section -->
+
+
+
+
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .faq {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .faq .q {
+      padding: 18px 50px 18px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      font-size: 18px;
+      transition: .3s;
+    }
+
+    .faq .a {
+      padding: 16px 16px;
+      display: none;
+    }
+
+    .faq .q:after {
+      content: "▼";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: .3s;
+      font-size: 14px;
+    }
+
+    .faq.active .q:after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .faq.active .a {
+      display: block
+    }
+  </style>
+  <script>
+    document.querySelectorAll('.q').forEach(x => x.onclick = () => x.parentElement.classList.toggle('active'));
+  </script>
+  <script>
+    fetch('/resources/sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
+  </script>
 </body>
-<!-- InstanceEnd --></html>
+
+</html>

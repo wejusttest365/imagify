@@ -1,1041 +1,1184 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
-<!-- InstanceBeginEditable name="EditRegion4" -->
-<title>JavaScript interview Questions | WebToolOcean</title>
- 
-<!-- Meta Description -->
-<meta name="description" content="Prepare for your JavaScript interview with 60+ commonly asked questions and answers covering JS fundamentals, ES6+, Closures, Promises, Async/Await, DOM manipulation, and more — from beginner to advanced level.">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>JavaScript Interview Questions – Master JavaScript for Web Development</title>
 
-<!-- Meta Keywords -->
-<meta name="keywords" content="JavaScript interview questions, JS interview questions and answers, JavaScript beginner interview questions, JavaScript advanced interview questions, ES6 interview questions, JavaScript closures interview questions, JavaScript promises interview questions, async await interview questions, JavaScript DOM interview questions, JavaScript hoisting interview questions, JavaScript scope interview questions, JavaScript interview preparation">
-	
-	
-<meta name="author" content="WebToolOcean">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="http://webtoolocean.com/resources/javascript-interview-questions">
+  <meta name="description"
+    content="Prepare for JavaScript interviews with comprehensive JavaScript interview questions and answers. Master ES6, async/await, closures, promises, events, and modern JavaScript concepts.">
+  <meta name="keywords"
+    content="JavaScript interview questions, JS interview, ES6, async await, promises, closures, event handling, web development interview">
+  <meta name="author" content="WebToolOcean">
+  <meta name="robots" content="index, follow">
 
-<!-- ===================================================== --> 
+  <link rel="canonical" href="https://webtoolocean.com/resources/javascript-interview-questions/">
 
-<!--CSS for the website--> 
+  <!--Open Graph Tags-->
+  <meta property="og:title" content="JavaScript Interview Questions – WebToolOcean">
+  <meta property="og:description"
+    content="Master JavaScript for interviews with comprehensive JavaScript interview questions covering ES6, async/await, promises, closures, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webtoolocean.com/resources/javascript-interview-questions/">
+  <meta property="og:image" content="https://webtoolocean.com/images/webtoolocean-og.png">
+  <meta property="og:site_name" content="WebToolOcean">
 
-<!-- Dependencies -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
-<style>
-.faq {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-.faq .q {
-    padding: 18px 50px 18px 20px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    font-size: 18px;
-    transition: .3s;
-}
-.faq .a {
-    padding: 0 16px 16px;
-    display: none;
-}
-.faq .q:after {
-    content: "▼";
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .3s;
-    font-size: 14px;
-}
-.faq.active .q:after {
-    transform: translateY(-50%) rotate(180deg);
-}
-.faq.active .a {
-    display: block
-}
-</style>
-<!-- InstanceEndEditable -->
-<!-- Stylesheets     
+  <!--Twitter Tags-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JavaScript Interview Questions – WebToolOcean">
+  <meta name="twitter:description"
+    content="Prepare for JavaScript interviews with our comprehensive JavaScript interview questions and expert answers.">
+  <!--  Stylesheets     
 	============================================= -->
 
-<!-- Google Fonts --> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-
-<!-- Document Title   
+  <!--  Stylesheets     
 	============================================= -->
-<!-- InstanceBeginEditable name="doctitle" -->
-<!-- InstanceEndEditable -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4C1PP726EZ');
-</script>
-<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
-     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/menu.css" rel="stylesheet">
+
+
+  <!-- site verification and google tag -->
+
+  <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+
+  <!--  Google Ads verification code -->
+  <meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebToolOcean",
+    "url": "https://webtoolocean.com",
+    "logo": "https://webtoolocean.com/images/logo.png",
+    "description": "WebToolOcean offers 100+ free online tools for developers, designers, and creators",
+    "sameAs": [
+      "https://www.facebook.com/webtoolocean",
+      "https://www.twitter.com/webtoolocean",
+      "https://www.instagram.com/webtoolocean"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "url": "https://webtoolocean.com/contact/"
+    }
+  }
+  </script>
+
+  <!-- WebPage Schema for JavaScript Interview Questions -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "JavaScript Interview Questions – WebToolOcean",
+    "description": "Prepare for JavaScript interviews with comprehensive JavaScript interview questions and answers. Master ES6, async/await, closures, promises, events, and modern JavaScript concepts.",
+    "url": "https://webtoolocean.com/resources/javascript-interview-questions/",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "WebToolOcean",
+      "url": "https://webtoolocean.com"
+    }
+  }
+  </script>
 </head>
-<style>
-body {
-	overflow-x: hidden
-}
-	 
-</style>
+
+
 <body class="">
-<!--ACCESSIBILITY CONTROLS   --> 
-
-<!--END ACCESSIBILITY CONTROLS   --> 
-<!-- Document Wrapper	  
-	============================================= --> 
-<!--	 <div class="topnav">
-    <div class="container">
-      <ul>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/blog/">Blog</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/resources/">Resources</a> </li>
-        <li> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a></li>
-    
-      </ul>
-    </div>
-  </div>-->
-
- 
- <header class="site-header">
-  <div class="header-inner"> <a class="logo" href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a>
-    <nav class="main-nav">
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/"><i class="ti ti-home" aria-hidden="true"></i> Home</a> </div>
-      <div class="nav-item has-drop" id="toolsItem">
-        <button class="nav-btn" id="toolsBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-apps" aria-hidden="true"></i> Tools <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item has-drop" id="blogItem">
-        <button class="nav-btn" id="blogBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-writing" aria-hidden="true"></i> Blog <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/resources/"><i class="ti ti-books" aria-hidden="true"></i> Resources</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/about/"><i class="ti ti-users" aria-hidden="true"></i> About Us</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/contact/"><i class="ti ti-mail" aria-hidden="true"></i> Contact</a> </div>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"> <span></span><span></span><span></span> </button>
-  </div>
-  
-  <!-- TOOLS MEGA — anchored full width -->
-  <div class="mega-wrap" id="toolsWrap">
-    <div class="mega">
-      <div class="mega-inner">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/image-tools/image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-refresh" aria-hidden="true"></i></div>
-          <div><span class="link-title">All Image Converter</span><span class="link-desc">Convert between formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">
-          <div class="link-icon icon-purple"><i class="ti ti-scan" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Text (OCR)</span><span class="link-desc">Extract text from images</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/compress-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-file-zip" aria-hidden="true"></i></div>
-          <div><span class="link-title">Compress Images</span><span class="link-desc">Reduce file size</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector" aria-hidden="true"></i></div>
-          <div><span class="link-title">SVG to Image</span><span class="link-desc">SVG → raster formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector-bezier" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to SVG</span><span class="link-desc">Raster → vector SVG</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/favicon-generator/">
-          <div class="link-icon icon-purple"><i class="ti ti-star" aria-hidden="true"></i></div>
-          <div><span class="link-title">Favicon Generator</span><span class="link-desc">Create .ico &amp; PNG favicons</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-base64/">
-          <div class="link-icon icon-purple"><i class="ti ti-code" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Base64</span><span class="link-desc">Encode images to Base64</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/base64-to-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-photo-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 to Image</span><span class="link-desc">Decode Base64 to image</span></div>
-          </a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">
-          <div class="link-icon icon-red"><i class="ti ti-files" aria-hidden="true"></i></div>
-          <div><span class="link-title">Merge PDF</span><span class="link-desc">Combine multiple PDFs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">
-          <div class="link-icon icon-red"><i class="ti ti-reorder" aria-hidden="true"></i></div>
-          <div><span class="link-title">Reorder PDF Pages</span><span class="link-desc">Drag to rearrange</span></div>
-          </a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-brush" aria-hidden="true"></i> CSS Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/css-tools/css-formatter/">
-          <div class="link-icon icon-blue"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
-          <div><span class="link-title">Beautify / Minify CSS</span><span class="link-desc">Format or compress CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-shadow" aria-hidden="true"></i></div>
-          <div><span class="link-title">Box Shadow Generator</span><span class="link-desc">Visual shadow editor</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-layers-subtract" aria-hidden="true"></i></div>
-          <div><span class="link-title">Multi Box Shadow</span><span class="link-desc">Layered shadows</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/clip-image/">
-          <div class="link-icon icon-blue"><i class="ti ti-crop" aria-hidden="true"></i></div>
-          <div><span class="link-title">Clip Image CSS</span><span class="link-desc">Clip-path made easy</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/card-builder/">
-          <div class="link-icon icon-blue"><i class="ti ti-layout-board" aria-hidden="true"></i></div>
-          <div><span class="link-title">CSS Card Builder</span><span class="link-desc">Design CSS cards</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/gradient-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-palette" aria-hidden="true"></i></div>
-          <div><span class="link-title">Gradient Generator</span><span class="link-desc">Build CSS gradients</span></div>
-          </a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-terminal-2" aria-hidden="true"></i> Developer Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/developer-tools/html-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-brand-html5" aria-hidden="true"></i></div>
-          <div><span class="link-title">HTML Formatter</span><span class="link-desc">Beautify HTML markup</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/check-css-error/">
-          <div class="link-icon icon-green"><i class="ti ti-bug" aria-hidden="true"></i></div>
-          <div><span class="link-title">Check CSS Errors</span><span class="link-desc">Lint &amp; validate CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">
-          <div class="link-icon icon-green"><i class="ti ti-lock" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 Encoder-Decoder</span><span class="link-desc">Encode &amp; decode text</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/json-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-braces" aria-hidden="true"></i></div>
-          <div><span class="link-title">JSON Formatter</span><span class="link-desc">Format &amp; validate JSON</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/font-converter/">
-          <div class="link-icon icon-green"><i class="ti ti-typography" aria-hidden="true"></i></div>
-          <div><span class="link-title">Web Font Converter</span><span class="link-desc">Convert font formats</span></div>
-          </a> </div>
-        <div class="mega-col col-amber">
-          <div class="col-head"><i class="ti ti-calculator" aria-hidden="true"></i> Calculators</div>
-          <a class="m-link" href="https://webtoolocean.com/calculators/age-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cake" aria-hidden="true"></i></div>
-          <div><span class="link-title">Age Calculator</span><span class="link-desc">Find your exact age</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/emi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-credit-card" aria-hidden="true"></i></div>
-          <div><span class="link-title">EMI Calculator</span><span class="link-desc">Calculate loan EMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/gst-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-receipt-tax" aria-hidden="true"></i></div>
-          <div><span class="link-title">GST Calculator</span><span class="link-desc">Add or remove GST</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/sip-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-trending-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">SIP Calculator</span><span class="link-desc">Plan mutual fund SIPs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/bmi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i></div>
-          <div><span class="link-title">BMI Calculator</span><span class="link-desc">Check your BMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/percentage-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-percentage" aria-hidden="true"></i></div>
-          <div><span class="link-title">Percentage Calculator</span><span class="link-desc">Calculate percentages</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/discount-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-tag" aria-hidden="true"></i></div>
-          <div><span class="link-title">Discount Calculator</span><span class="link-desc">Find sale price</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/loan-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cash" aria-hidden="true"></i></div>
-          <div><span class="link-title">Loan Calculator</span><span class="link-desc">Compare loan options</span></div>
-          </a> </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- BLOG MEGA — anchored full width -->
-  <div class="mega-wrap" id="blogWrap">
-    <div class="mega">
-      <div class="blog-grid">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-robot" aria-hidden="true"></i> AI Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="blog-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="blog-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="blog-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="blog-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="blog-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="blog-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="blog-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-code" aria-hidden="true"></i> Web Development</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="blog-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="blog-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a> </div>
-        <div class="mega-col col-pink">
-          <div class="col-head"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> UI/UX Design</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="blog-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="blog-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a> </div>
-        <div class="mega-col col-teal">
-          <div class="col-head"><i class="ti ti-search" aria-hidden="true"></i> SEO</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="blog-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="blog-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="blog-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a> </div>
-        <div class="mega-col col-indigo">
-          <div class="col-head"><i class="ti ti-briefcase" aria-hidden="true"></i> Career &amp; Interview</div>
-          <a class="blog-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> </div>
-      </div>
-      <div class="mega-footer"> <a class="footer-link" href="https://webtoolocean.com/blog/"><i class="ti ti-writing" aria-hidden="true"></i> View all blog articles <i class="ti ti-arrow-right" aria-hidden="true"></i></a> </div>
-    </div>
-  </div>
-  
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/"><i class="ti ti-home"></i> Home</a> </div>
-    <div>
-      <div class="m-section-title" id="mToolsTitle"><span><i class="ti ti-apps" style="margin-right:6px;color:#818cf8"></i>Tools</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mToolsBody">
-        <div class="m-cat-head">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/image-tools/image-converter/">All Image Converter</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a> <a class="mob-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages</a>
-        <div class="m-cat-head blue">CSS Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a>
-        <div class="m-cat-head green">Developer Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/check-css-error/">Check CSS Errors</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder-Decoder</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a> <a class="mob-link" href="https://webtoolocean.com/font-converter/">Web Font Converter</a>
-        <div class="m-cat-head amber">Calculators</div>
-        <a class="mob-link" href="https://webtoolocean.com/calculators/age-calculator/">Age Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/emi-calculator/">EMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/gst-calculator/">GST Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/sip-calculator/">SIP Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/bmi-calculator/">BMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/percentage-calculator/">Percentage Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/discount-calculator/">Discount Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/loan-calculator/">Loan Calculator</a> </div>
-    </div>
-    <div>
-      <div class="m-section-title" id="mBlogTitle"><span><i class="ti ti-writing" style="margin-right:6px;color:#818cf8"></i>Blog</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mBlogBody">
-        <div class="m-cat-head">AI Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="mob-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="mob-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="mob-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a>
-        <div class="m-cat-head blue">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="mob-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="mob-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a>
-        <div class="m-cat-head green">Web Development</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="mob-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="mob-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a>
-        <div class="m-cat-head pink">UI/UX Design</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="mob-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="mob-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a>
-        <div class="m-cat-head teal">SEO</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="mob-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="mob-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="mob-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a>
-        <div class="m-cat-head indigo">Career &amp; Interview</div>
-        <a class="mob-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> <a class="mob-link" style="color:#818cf8;font-weight:600;margin-top:8px;display:block" href="https://webtoolocean.com/blog/">View all blog articles →</a> </div>
-    </div>
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/resources/"><i class="ti ti-books"></i> Resources</a> <a class="m-top-link" href="https://webtoolocean.com/about/"><i class="ti ti-users"></i> About Us</a> <a class="m-top-link" href="https://webtoolocean.com/contact/"><i class="ti ti-mail"></i> Contact</a> </div>
-  </div>
-</header>
- 
-<!-- InstanceBeginEditable name="center" --> 
-
-<!-- Start dynamic content --> 
-<!-- <section id="testimonials">
-    <div class="container aniboxes animate__animated text-center">
-      <div id="contentwidget1"></div>
-      <br>
-    </div>
-  </section>--> 
-<!-- End dynamic content -->
-<div class="clearfix"></div>
-<!-- End dynamic content --> 
-
-<!-- Sevices section -->
-<main id="content">
- 
-
-
-<section class="section py-5">
-  <div class="container">
-	    <div class="row">
-		  <div class="col-sm-8 col-xs-12">
-<!-- JavaScript Interview Questions -->
-<h1 class="pt-4">Beginner JavaScript Interview Questions</h1>
-<div class="faq">
-  <div class="q">What is JavaScript?</div>
-  <div class="a">
-    <p>JavaScript is a lightweight, interpreted, high-level programming language used to create dynamic and interactive behavior on websites and web applications.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are the data types in JavaScript?</div>
-  <div class="a">
-    <p>JavaScript has eight data types: String, Number, BigInt, Boolean, Undefined, Null, Symbol, and Object (which includes Arrays and Functions).</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between var, let, and const?</div>
-  <div class="a">
-    <p>var is function-scoped and hoisted; let is block-scoped and can be reassigned; const is block-scoped and cannot be reassigned after declaration.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Hoisting?</div>
-  <div class="a">
-    <p>Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their scope before code execution.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between == and ===?</div>
-  <div class="a">
-    <p>== checks for value equality with type coercion, while === checks for both value and type equality without coercion (strict equality).</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is undefined in JavaScript?</div>
-  <div class="a">
-    <p>Undefined is the default value of a variable that has been declared but not yet assigned a value.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is null in JavaScript?</div>
-  <div class="a">
-    <p>Null is an intentional assignment representing the absence of a value or object, explicitly set by the developer.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Function in JavaScript?</div>
-  <div class="a">
-    <p>A function is a reusable block of code designed to perform a specific task, defined using the function keyword or arrow function syntax.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is an Arrow Function?</div>
-  <div class="a">
-    <p>An arrow function is a concise ES6 syntax for writing functions using =>, which also lexically binds the this keyword from the surrounding scope.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Template Literal?</div>
-  <div class="a">
-    <p>Template literals are string literals enclosed in backticks (`) that support multi-line strings and embedded expressions using ${} syntax.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is an Array in JavaScript?</div>
-  <div class="a">
-    <p>An array is an ordered collection of values stored in a single variable, accessible via zero-based index positions.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is an Object in JavaScript?</div>
-  <div class="a">
-    <p>An object is a collection of key-value pairs where keys are strings (or Symbols) and values can be any data type.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is typeof operator?</div>
-  <div class="a">
-    <p>The typeof operator returns a string indicating the data type of a given value or expression.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is NaN in JavaScript?</div>
-  <div class="a">
-    <p>NaN (Not a Number) is a value returned when a mathematical operation fails to produce a valid number result.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Type Coercion?</div>
-  <div class="a">
-    <p>Type coercion is the automatic conversion of a value from one data type to another during operations or comparisons.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are Truthy and Falsy values?</div>
-  <div class="a">
-    <p>Falsy values are false, 0, "", null, undefined, and NaN. All other values are truthy and evaluate to true in boolean contexts.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the DOM?</div>
-  <div class="a">
-    <p>The DOM (Document Object Model) is a programming interface that represents an HTML document as a tree of objects that JavaScript can manipulate.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is an Event Listener?</div>
-  <div class="a">
-    <p>An event listener is a function attached to an element that waits for a specific event (like click or keypress) and executes when it occurs.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between innerHTML and textContent?</div>
-  <div class="a">
-    <p>innerHTML sets or gets HTML markup including tags, while textContent sets or gets only the plain text content without parsing HTML.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Loop in JavaScript?</div>
-  <div class="a">
-    <p>A loop repeatedly executes a block of code as long as a condition is true, with common types being for, while, do...while, for...of, and for...in.</p>
-  </div>
-</div>
-
-<h2 class="pt-4">Intermediate JavaScript Interview Questions</h2>
-<div class="faq">
-  <div class="q">What is a Closure?</div>
-  <div class="a">
-    <p>A closure is a function that retains access to its outer scope variables even after the outer function has finished executing.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Scope in JavaScript?</div>
-  <div class="a">
-    <p>Scope determines the visibility and accessibility of variables. JavaScript has global scope, function scope, and block scope (with let and const).</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the this keyword?</div>
-  <div class="a">
-    <p>this refers to the object that is currently executing the function. Its value depends on how and where the function is called.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Promise?</div>
-  <div class="a">
-    <p>A Promise is an object representing the eventual completion or failure of an asynchronous operation, with states: pending, fulfilled, or rejected.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Async/Await?</div>
-  <div class="a">
-    <p>Async/Await is syntactic sugar over Promises that allows writing asynchronous code in a synchronous-looking style for better readability.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Event Loop?</div>
-  <div class="a">
-    <p>The Event Loop is a mechanism that continuously checks the call stack and callback queue, pushing queued callbacks to the stack when it is empty.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Destructuring?</div>
-  <div class="a">
-    <p>Destructuring is an ES6 syntax that extracts values from arrays or properties from objects into distinct variables in a single statement.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Spread Operator?</div>
-  <div class="a">
-    <p>The spread operator (...) expands an iterable (like an array or object) into individual elements, useful for copying or merging data.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Rest Parameter?</div>
-  <div class="a">
-    <p>The rest parameter (...) collects all remaining function arguments into a single array, allowing functions to accept an indefinite number of arguments.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Higher-Order Function?</div>
-  <div class="a">
-    <p>A higher-order function is a function that takes another function as an argument or returns a function as its result, such as map, filter, and reduce.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between map, filter, and reduce?</div>
-  <div class="a">
-    <p>map transforms each array element; filter returns elements matching a condition; reduce accumulates array elements into a single output value.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Prototypal Inheritance?</div>
-  <div class="a">
-    <p>Prototypal inheritance allows objects to inherit properties and methods from other objects through the prototype chain.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the prototype chain?</div>
-  <div class="a">
-    <p>The prototype chain is a series of linked objects where JavaScript looks up properties and methods if they are not found on the current object.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Event Bubbling?</div>
-  <div class="a">
-    <p>Event bubbling is when an event triggered on a child element propagates upward through its parent elements in the DOM tree.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Event Delegation?</div>
-  <div class="a">
-    <p>Event delegation attaches a single event listener to a parent element to handle events from its child elements using bubbling.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Callback Function?</div>
-  <div class="a">
-    <p>A callback is a function passed as an argument to another function, executed after that function completes its operation.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Callback Hell?</div>
-  <div class="a">
-    <p>Callback hell is deeply nested callbacks that make code difficult to read and maintain, solved by using Promises or Async/Await.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are ES6 Modules?</div>
-  <div class="a">
-    <p>ES6 modules allow splitting JavaScript code into reusable files using import and export statements for better organization and maintainability.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between call, apply, and bind?</div>
-  <div class="a">
-    <p>call invokes a function with a given this and arguments individually; apply uses an array of arguments; bind returns a new function with a bound this.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is localStorage and sessionStorage?</div>
-  <div class="a">
-    <p>localStorage stores data with no expiration across sessions; sessionStorage stores data only for the duration of the browser tab session.</p>
-  </div>
-</div>
-
-<h2 class="pt-4">Advanced JavaScript Interview Questions</h2>
-<div class="faq">
-  <div class="q">What is the difference between the Call Stack and the Heap?</div>
-  <div class="a">
-    <p>The call stack manages execution contexts and function calls in LIFO order; the heap is unstructured memory used for dynamic object storage.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Microtask and Macrotask?</div>
-  <div class="a">
-    <p>Microtasks (Promises, queueMicrotask) execute before the next macrotask (setTimeout, setInterval), giving them higher priority in the event loop.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a WeakMap and WeakSet?</div>
-  <div class="a">
-    <p>WeakMap and WeakSet hold weak references to objects, allowing garbage collection of keys or values when no other references exist.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Proxy in JavaScript?</div>
-  <div class="a">
-    <p>A Proxy wraps an object and intercepts fundamental operations like property access, assignment, and function invocation using handler traps.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Generator Function?</div>
-  <div class="a">
-    <p>A generator function (function*) returns an iterator that produces values lazily using the yield keyword, pausing execution between each value.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Memoization?</div>
-  <div class="a">
-    <p>Memoization is an optimization technique that caches the results of expensive function calls and returns the cached result for the same inputs.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Currying?</div>
-  <div class="a">
-    <p>Currying transforms a function with multiple arguments into a sequence of functions each taking a single argument, enabling partial application.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Debouncing?</div>
-  <div class="a">
-    <p>Debouncing delays executing a function until after a specified time has passed since the last time it was invoked, reducing unnecessary calls.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Throttling?</div>
-  <div class="a">
-    <p>Throttling limits a function to execute at most once within a specified time interval, regardless of how many times it is triggered.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Garbage Collection in JavaScript?</div>
-  <div class="a">
-    <p>Garbage collection is the automatic process of freeing memory occupied by objects that are no longer reachable or referenced in the program.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Memory Leak?</div>
-  <div class="a">
-    <p>A memory leak occurs when allocated memory is not released after use, often caused by global variables, detached DOM nodes, or lingering event listeners.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Module Pattern?</div>
-  <div class="a">
-    <p>The module pattern encapsulates code using closures to create private and public members, avoiding global namespace pollution.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Observer Pattern?</div>
-  <div class="a">
-    <p>The observer pattern defines a one-to-many relationship where multiple observers are notified automatically when a subject's state changes.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Immutability in JavaScript?</div>
-  <div class="a">
-    <p>Immutability means data cannot be changed after creation. It is enforced using Object.freeze(), const, or immutable data patterns to prevent side effects.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between shallow copy and deep copy?</div>
-  <div class="a">
-    <p>A shallow copy duplicates only the top-level properties; a deep copy recursively duplicates all nested objects, creating fully independent copies.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is a Symbol in JavaScript?</div>
-  <div class="a">
-    <p>A Symbol is a unique and immutable primitive value used as object property keys to avoid naming conflicts.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the Reflect API?</div>
-  <div class="a">
-    <p>The Reflect API provides methods for interceptable JavaScript operations, complementing the Proxy API with a standardized set of object manipulation methods.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is Tail Call Optimization?</div>
-  <div class="a">
-    <p>Tail call optimization allows recursive functions whose last action is a function call to reuse the current stack frame, preventing stack overflow.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What are Design Patterns in JavaScript?</div>
-  <div class="a">
-    <p>Design patterns are reusable solutions to common programming problems, including creational (Singleton, Factory), structural (Decorator), and behavioral (Observer) patterns.</p>
-  </div>
-</div>
-<div class="faq">
-  <div class="q">What is the difference between CommonJS and ES Modules?</div>
-  <div class="a">
-    <p>CommonJS uses require() and module.exports and loads synchronously (used in Node.js); ES Modules use import/export and load asynchronously (used in browsers and modern Node.js).</p>
-  </div>
-</div>
-			   </div>
-	    <div class="col-sm-4 col-xs-12">
-				  <div id="sidebar"></div>
-			  
-			  </div>
-	</div>
- </div>
-</section>
-<!-- SEO Text Section -->
-<section class="section py-5 bg-light">
-  <div class="container">
-    <p>JavaScript is the world's most widely used programming language, powering the interactive and dynamic behavior of virtually every website and web application. Originally created in 1995 for client-side scripting, JavaScript has evolved into a full-stack language used in browsers, servers (Node.js), mobile apps, and even desktop applications. Whether you are a frontend developer, backend developer, or full-stack engineer, JavaScript proficiency is a core requirement in today's tech industry.</p>
-
-    <p><strong>Key JavaScript topics covered in interviews include:</strong></p>
-    <ul>
-      <li>JavaScript Fundamentals and Data Types</li>
-      <li>ES6+ Features (Arrow Functions, Destructuring, Spread/Rest)</li>
-      <li>Scope, Hoisting, and Closures</li>
-      <li>Promises, Async/Await, and Asynchronous Programming</li>
-      <li>DOM Manipulation and Browser Events</li>
-      <li>Prototypes and Object-Oriented JavaScript</li>
-      <li>Error Handling and Debugging</li>
-      <li>JavaScript Performance and Memory Management</li>
-    </ul>
-
-    <p>From foundational concepts like data types, variables, and functions to advanced topics like event loops, prototypal inheritance, memory leaks, and design patterns, this guide covers everything you need to confidently answer JavaScript interview questions at any level. Whether you are preparing for a frontend developer, backend developer, or full-stack engineer role, these questions and answers will help you stand out in your next interview.</p>
-  </div>
-</section>
-</main>
-<!-- InstanceEndEditable -->
-<div class="clearfix"></div>
-<footer role="contentinfo" class="footer light newfooter">
-  <article class="footer-top">
-    <div class="container">
-      <div class="row">  
-        
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Popular Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/image-tools/image-converter/">Image
-                Converter</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to
-                Text (OCR)</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress
-                Images</a></li>
-              <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/clip-image/">Clip Image </a></li>
-              <li><a href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Support</h4>
-            <ul>
-              <li> <a href="https://webtoolocean.com/about/">About Us</a></li>
-              <li> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a></li>
-              <li> <a href="https://webtoolocean.com/cookie-policy/">Cookie Policy</a></li>
-              <li> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a></li>
-              <li> <a href="https://webtoolocean.com/terms-conditions/">Terms &amp; Conditions</a></li>
-              <li> <a href="https://webtoolocean.com/blog/">Blog</a></li>
-              <li> <a href="https://webtoolocean.com/resources/">Resources</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Calculator Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/calculators/age-calculator/"> Age Calculator</a></li>
-    <li><a href="https://webtoolocean.com/calculators/emi-calculator/"> EMI  Calculator</a></li>
-             <!-- <li><a href="https://webtoolocean.com/calculators/basic-calculator">Basic Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/percentage-calculator">Percentage Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/currency-calculator">Currency Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/unit-calculator">Unit Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/date-calculator">Date Difference</a></li>
-              <li><a href="https://webtoolocean.com/calculators/bmi-calculator">BMI Calculator</a></li>-->
-            </ul>
-          </div>
-        </div>
-		  <div class="col-md-3 col-sm-12 mb-3">
-          <div class="mb-3"> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
-          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
-            Fast, secure and easy to use on desktop &amp; mobile. </p>
-          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
-          <p class="footer-text mb-1"> <i class="fa fa-instagram"></i> <a href="https://www.instagram.com/webtoolocean">Follow us</a> </p>
-        </div>
-      </div>
-    </div>
-  </article>
-  
-  <!-- Bottom Menu -->
-  <article id="copyrights">
-    <div class="container text-center">
-		   <div class="row">  <div class="col-md-7 col-xs-12 md-text-left text-center"><p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | All Rights Reserved </p></div>
-		<div class="col-md-5 col-xs-12 md-text-right text-center"><a href="https://webtoolocean.com/sitemap">Sitemap</a></div>
-      </div>
-    </div>
-  </article>
-</footer>
-<a href="#" id="backToTop" aria-label="Back to Top">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-  <path d="M12 5L5 12H9V19H15V12H19L12 5Z"
-              fill="currentColor"/>
-</svg>
-</a>
-<div class="clearfix"></div>
-<script src="https://webtoolocean.com/js/jquery.js"></script> 
-<!-- InstanceBeginEditable name="EditRegion5" --> 
-<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
-<script>
-document.querySelectorAll('.q').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('active'));
-</script> 
-	<script>
-fetch('/resources/sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-    });
-</script> 
-<!-- InstanceEndEditable --> 
-<script>
-const backToTop = document.getElementById('backToTop');
-
-window.addEventListener('scroll', function() {
-
-    if (window.scrollY > 300) {
-        backToTop.classList.add('show');
-    } else {
-        backToTop.classList.remove('show');
+  <style>
+    body {
+      overflow-x: hidden;
     }
 
-});
-
-backToTop.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-</script> 
-<!--<script>
-		const btn = document.getElementById("togglemeu");
-const menu = document.querySelector(".mainmenubar");
-
-btn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-	</script> 
-<script id="3q6qk9">
-document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-});
-</script> 
-<script id="7c7b4s">
-document.addEventListener("keydown", function(e){
-
-    if (e.key === "F12") {
-        e.preventDefault();
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
     }
 
-    if (e.ctrlKey && e.shiftKey && e.key === "I") {
-        e.preventDefault();
+    /* Enhanced Hero Banner */
+    .wto-hero-about {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, var(--brand-dark) 100%);
+      padding: 60px 0 50px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(59, 130, 246, .2);
     }
 
-    if (e.ctrlKey && e.shiftKey && e.key === "J") {
-        e.preventDefault();
+    .wto-hero-about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    if (e.ctrlKey && e.key === "U") {
-        e.preventDefault();
+    .wto-hero-about .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-});
-</script> 
-<script id="5h2r0p">
-document.addEventListener("contextmenu", e => e.preventDefault());
+    .wto-hero-about h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
 
-document.addEventListener("keydown", function(e){
+    .wto-hero-about h1 span {
+      background: linear-gradient(135deg, #60a5fa 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-if(e.key=="F12"){e.preventDefault();}
+    .wto-hero-about .hero-description {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 32px;
+      line-height: 1.6;
+      max-width: 700px;
+    }
 
-if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
+    .wto-hero-about .hero-stats {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
 
-if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
+    .wto-hero-about .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
 
-if(e.ctrlKey && e.key=="U"){e.preventDefault();}
+    .wto-hero-about .hero-stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #60a5fa;
+    }
 
-});
+    .wto-hero-about .hero-stat-label {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
 
-setInterval(function(){
+    .wto-hero-about .btn-primary-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #3b82f6;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid #3b82f6;
+    }
 
-if(window.outerWidth - window.innerWidth > 160){
-document.body.innerHTML="Access Restricted";
-}
+    .wto-hero-about .btn-primary-hero:hover {
+      background: #2563eb;
+      border-color: #2563eb;
+      transform: translateY(-2px);
+    }
 
-},1000);
-</script> 
-<script>
-document.addEventListener("keydown", function(e) {
-  if (e.ctrlKey && e.key === "u") {
-    e.preventDefault();
-  }
-  if (e.key === "F12") {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
-    e.preventDefault();
-  }
-});
-</script>--> 
+    .wto-hero-about .btn-outline-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #cbd5e1;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid #475569;
+      margin-left: 12px;
+    }
 
-<script>
- $(document).ready(function(){
-$("#togglemeu").click(function(){
-$(".mainmenubar").slideToggle();
+    .wto-hero-about .btn-outline-hero:hover {
+      border-color: #94a3b8;
+      color: #f1f5f9;
+    }
 
-});
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-</script> 
+    /* About Us Section */
+    .about-section {
+      padding: 60px 0;
+    }
 
-<!-- Cookie Consent Banner -->
-<div id="cookieConsent" class="cookie-banner shadow-lg">
-  <div class="cookie-content">
-    <div class="cookie-text"> 🍪 We use cookies to improve your experience, analyze traffic, and display relevant ads. By continuing to
-      browse, you agree to our use of cookies. <a href="https://webtoolocean.com/cookie-policy" target="_blank">Learn More</a> </div>
-    <div class="cookie-actions">
-      <button id="acceptCookies" class="btn btn-primary btn-sm"> Accept </button>
-      <button id="declineCookies" class="btn btn-outline-secondary btn-sm"> Decline </button>
-    </div>
-  </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
+    .about-section .section-head {
+      margin-bottom: 40px;
+    }
 
-      const cookieBanner = document.getElementById("cookieConsent");
-      const acceptBtn = document.getElementById("acceptCookies");
-      const declineBtn = document.getElementById("declineCookies");
+    .about-section .sec-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .1);
+      border: 1px solid rgba(59, 130, 246, .2);
+      border-radius: 100px;
+      color: #3b82f6;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
-      // Check if user has already made a choice
-      const consent = localStorage.getItem("cookieConsent");
+    .about-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
 
-      if (consent) {
-        cookieBanner.style.display = "none";
+    .about-section .lead-text {
+      font-size: 1.1rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
-
-      // Accept Cookies
-      acceptBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "accepted");
-        cookieBanner.style.display = "none";
-
-        console.log("Cookies Accepted");
-
-        // Load Analytics / Ad Scripts here if needed
-        // Example:
-        // loadGoogleAnalytics();
-      });
-
-      // Decline Cookies
-      declineBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "declined");
-        cookieBanner.style.display = "none";
-
-        console.log("Cookies Declined");
-
-        // Do NOT load analytics or marketing scripts
-      });
-
-    });
-  </script> 
-
-<!--mega menu js below--> 
-
- <script>
-(function(){
-  const pairs=[
-    {btn:document.getElementById('toolsBtn'),wrap:document.getElementById('toolsWrap'),item:document.getElementById('toolsItem')},
-    {btn:document.getElementById('blogBtn'),wrap:document.getElementById('blogWrap'),item:document.getElementById('blogItem')}
-  ];
-
-  function closeAll(){
-    pairs.forEach(({btn,wrap,item})=>{
-      wrap.classList.remove('open');
-      item.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    });
-  }
-
-  pairs.forEach(({btn,wrap,item})=>{
-    let t;
-    function open(){
-      clearTimeout(t);
-      closeAll();
-      wrap.classList.add('open');
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
     }
-    function sched(){t=setTimeout(()=>{wrap.classList.remove('open');item.classList.remove('open');btn.setAttribute('aria-expanded','false');},160);}
-    btn.addEventListener('click',e=>{e.stopPropagation();wrap.classList.contains('open')?closeAll():open();});
-    item.addEventListener('mouseenter',open);
-    item.addEventListener('mouseleave',sched);
-    wrap.addEventListener('mouseenter',()=>clearTimeout(t));
-    wrap.addEventListener('mouseleave',sched);
-  });
 
-  document.addEventListener('click',closeAll);
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){
-      closeAll();
-      mob.classList.remove('open');
-      ham.classList.remove('open');
-      ham.setAttribute('aria-expanded','false');
+    .about-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 12px;
     }
-  });
 
-  const ham=document.getElementById('hamburger');
-  const mob=document.getElementById('mobileMenu');
-  ham.addEventListener('click',()=>{
-    const o=mob.classList.toggle('open');
-    ham.classList.toggle('open',o);
-    ham.setAttribute('aria-expanded',String(o));
-  });
+    .about-content p {
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
 
-  [['mToolsTitle','mToolsBody'],['mBlogTitle','mBlogBody']].forEach(([tid,bid])=>{
-    document.getElementById(tid).addEventListener('click',function(){
-      const b=document.getElementById(bid);
-      const isOpen=b.classList.toggle('open');
-      this.classList.toggle('expanded',isOpen);
-    });
-  });
-})();
-</script>
+    .about-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 24px;
+    }
+
+    .about-content li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .about-content li::before {
+      content: '✓';
+      flex-shrink: 0;
+      color: #06b6d4;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-top: -2px;
+    }
+
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      border-color: #3b82f6;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .value-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(59, 130, 246, .1);
+      border-radius: 10px;
+      color: #3b82f6;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .value-card h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 8px;
+    }
+
+    .value-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Breadcrumb */
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: #3b82f6;
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    /* FAQ Styling */
+    .faq {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+    }
+
+    .faq .q {
+      background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+      padding: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .faq .q::before {
+      content: '▶';
+      color: #3b82f6;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .faq:hover .q {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+      border-bottom-color: #3b82f6;
+    }
+
+    .faq .a {
+      padding: 18px;
+      color: #334155;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .faq .a p {
+      margin: 0;
+    }
+  </style>
+
+  <div id="header"></div>
+  <main role="main" id="content">
+    <!-- ═══════════════════════════════════════════════════════
+     BREADCRUMB
+     ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">JavaScript Interview Questions</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+     HERO BANNER
+     ═══════════════════════════════════════════════════════ -->
+    <section class="wto-hero-about">
+      <div class="container">
+        <div class="hero-tag">
+          <i class="fa-solid fa-js"></i>
+          Interview Prep
+        </div>
+        <h1>
+          Master <span>JavaScript Interview</span><br>Questions & Concepts
+        </h1>
+        <p class="hero-description">
+          Comprehensive JavaScript interview questions covering ES6+, async/await, promises, closures, prototypes,
+          events, DOM manipulation, and modern JavaScript patterns. Prepare confidently for web development roles.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">80+</div>
+            <div class="hero-stat-label">Questions</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">Expert</div>
+            <div class="hero-stat-label">Answers</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">Always</div>
+            <div class="hero-stat-label">Free</div>
+          </div>
+        </div>
+        <div>
+          <a href="#javascript-content" class="btn-primary-hero" style="text-decoration: none;">
+            <i class="fa-solid fa-graduation-cap"></i> Start Learning
+          </a>
+          <a href="/resources/" class="btn-outline-hero">
+            <i class="fa-solid fa-book"></i> All Resources
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+     JAVASCRIPT INTERVIEW QUESTIONS SECTION
+     ═══════════════════════════════════════════════════════ -->
+
+    <section class="section section py-5" id="javascript-content" style="background: #f8fafc;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+
+            <!-- Introduction Section -->
+            <div style="margin-bottom: 50px;">
+              <div
+                style="background: white; border-radius: 12px; padding: 30px; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Why JavaScript
+                  Interview Questions Matter</h2>
+                <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 0;">
+                  JavaScript is the programming language of the web, powering interactive web applications, modern
+                  frameworks, and backend services. Whether you're applying for a front-end developer, full-stack
+                  developer, or JavaScript engineer role, deep JavaScript knowledge is critical. Understanding ES6+,
+                  asynchronous programming, closures, prototypes, the event loop, and functional programming concepts
+                  demonstrates you can write efficient, maintainable code. Employers value developers who understand
+                  both the "what" and the "why" behind JavaScript behavior, as it directly impacts application
+                  performance, reliability, and scalability.
+                </p>
+              </div>
+            </div>
+
+            <!-- Key Topics Section -->
+            <div style="margin-bottom: 50px;">
+              <h3 style="font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 24px;"><i
+                  class="fa-solid fa-list-check" style="color: #3b82f6; margin-right: 10px;"></i>Key JavaScript Topics
+                Covered in Interviews</h3>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">JavaScript Fundamentals & Syntax</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">ES6+ Features & Modern JavaScript</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Closures, Scope & Context</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Asynchronous Programming & Promises</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Prototypes & Inheritance</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">DOM Manipulation & Events</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Array & Object Methods</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Performance & Best Practices</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div style="margin-bottom: 50px;">
+              <div
+                style="background: linear-gradient(135deg, #fef08a 0%, #fef3c7 100%); border-radius: 12px; padding: 30px; border: 1px solid #fde047;">
+                <p style="font-size: 1rem; color: #713f12; line-height: 1.8; margin: 0;">
+                  <strong>From foundational concepts</strong> like data types, operators, and control flow to
+                  <strong>advanced topics</strong> like async/await, closures, prototypes, and functional programming,
+                  this guide covers everything you need to master JavaScript interview questions at any level. Whether
+                  preparing for a <strong>junior front-end developer, full-stack engineer, or senior JavaScript
+                    architect</strong> role, these comprehensive questions and answers will help you ace your technical
+                  interview.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interview Questions Header -->
+            <h2 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 24px; margin-top: 40px;"><i
+                class="fa-solid fa-js" style="color: #3b82f6; margin-right: 10px;"></i>Beginner JavaScript Interview
+              Questions</h2>
+            <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 30px;">Master these fundamental
+              JavaScript concepts and common interview questions that test your understanding of core language features.
+            </p>
+            <div class="faq">
+              <div class="q">What is JavaScript?</div>
+              <div class="a">
+                <p>JavaScript is a lightweight, interpreted, high-level programming language used to create dynamic and
+                  interactive behavior on websites and web applications.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are the data types in JavaScript?</div>
+              <div class="a">
+                <p>JavaScript has eight data types: String, Number, BigInt, Boolean, Undefined, Null, Symbol, and Object
+                  (which includes Arrays and Functions).</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the difference between var, let, and const?</div>
+              <div class="a">
+                <p>var is function-scoped and hoisted; let is block-scoped and can be reassigned; const is block-scoped
+                  and cannot be reassigned after declaration.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Hoisting?</div>
+              <div class="a">
+                <p>Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their
+                  scope before code execution.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the difference between == and ===?</div>
+              <div class="a">
+                <p>== checks for value equality with type coercion, while === checks for both value and type equality
+                  without coercion (strict equality).</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is undefined in JavaScript?</div>
+              <div class="a">
+                <p>Undefined is the default value of a variable that has been declared but not yet assigned a value.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is null in JavaScript?</div>
+              <div class="a">
+                <p>Null is an intentional assignment representing the absence of a value or object, explicitly set by
+                  the developer.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Function in JavaScript?</div>
+              <div class="a">
+                <p>A function is a reusable block of code designed to perform a specific task, defined using the
+                  function keyword or arrow function syntax.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is an Arrow Function?</div>
+              <div class="a">
+                <p>An arrow function is a concise ES6 syntax for writing functions using =&gt;, which also lexically
+                  binds the this keyword from the surrounding scope.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Template Literal?</div>
+              <div class="a">
+                <p>Template literals are string literals enclosed in backticks (`) that support multi-line strings and
+                  embedded expressions using ${} syntax.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is an Array in JavaScript?</div>
+              <div class="a">
+                <p>An array is an ordered collection of values stored in a single variable, accessible via zero-based
+                  index positions.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is an Object in JavaScript?</div>
+              <div class="a">
+                <p>An object is a collection of key-value pairs where keys are strings (or Symbols) and values can be
+                  any data type.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is typeof operator?</div>
+              <div class="a">
+                <p>The typeof operator returns a string indicating the data type of a given value or expression.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is NaN in JavaScript?</div>
+              <div class="a">
+                <p>NaN (Not a Number) is a value returned when a mathematical operation fails to produce a valid number
+                  result.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Type Coercion?</div>
+              <div class="a">
+                <p>Type coercion is the automatic conversion of a value from one data type to another during operations
+                  or comparisons.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are Truthy and Falsy values?</div>
+              <div class="a">
+                <p>Falsy values are false, 0, "", null, undefined, and NaN. All other values are truthy and evaluate to
+                  true in boolean contexts.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the DOM?</div>
+              <div class="a">
+                <p>The DOM (Document Object Model) is a programming interface that represents an HTML document as a tree
+                  of objects that JavaScript can manipulate.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is an Event Listener?</div>
+              <div class="a">
+                <p>An event listener is a function attached to an element that waits for a specific event (like click or
+                  keypress) and executes when it occurs.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the difference between innerHTML and textContent?</div>
+              <div class="a">
+                <p>innerHTML sets or gets HTML markup including tags, while textContent sets or gets only the plain text
+                  content without parsing HTML.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Loop in JavaScript?</div>
+              <div class="a">
+                <p>A loop repeatedly executes a block of code as long as a condition is true, with common types being
+                  for, while, do...while, for...of, and for...in.</p>
+              </div>
+            </div>
+
+            <h2 class="pt-4">Intermediate JavaScript Interview Questions</h2>
+            <div class="faq">
+              <div class="q">What is a Closure?</div>
+              <div class="a">
+                <p>A closure is a function that retains access to its outer scope variables even after the outer
+                  function has finished executing.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Scope in JavaScript?</div>
+              <div class="a">
+                <p>Scope determines the visibility and accessibility of variables. JavaScript has global scope, function
+                  scope, and block scope (with let and const).</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the this keyword?</div>
+              <div class="a">
+                <p>this refers to the object that is currently executing the function. Its value depends on how and
+                  where the function is called.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Promise?</div>
+              <div class="a">
+                <p>A Promise is an object representing the eventual completion or failure of an asynchronous operation,
+                  with states: pending, fulfilled, or rejected.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Async/Await?</div>
+              <div class="a">
+                <p>Async/Await is syntactic sugar over Promises that allows writing asynchronous code in a
+                  synchronous-looking style for better readability.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the Event Loop?</div>
+              <div class="a">
+                <p>The Event Loop is a mechanism that continuously checks the call stack and callback queue, pushing
+                  queued callbacks to the stack when it is empty.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Destructuring?</div>
+              <div class="a">
+                <p>Destructuring is an ES6 syntax that extracts values from arrays or properties from objects into
+                  distinct variables in a single statement.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the Spread Operator?</div>
+              <div class="a">
+                <p>The spread operator (...) expands an iterable (like an array or object) into individual elements,
+                  useful for copying or merging data.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the Rest Parameter?</div>
+              <div class="a">
+                <p>The rest parameter (...) collects all remaining function arguments into a single array, allowing
+                  functions to accept an indefinite number of arguments.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Higher-Order Function?</div>
+              <div class="a">
+                <p>A higher-order function is a function that takes another function as an argument or returns a
+                  function as its result, such as map, filter, and reduce.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the difference between map, filter, and reduce?</div>
+              <div class="a">
+                <p>map transforms each array element; filter returns elements matching a condition; reduce accumulates
+                  array elements into a single output value.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Prototypal Inheritance?</div>
+              <div class="a">
+                <p>Prototypal inheritance allows objects to inherit properties and methods from other objects through
+                  the prototype chain.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the prototype chain?</div>
+              <div class="a">
+                <p>The prototype chain is a series of linked objects where JavaScript looks up properties and methods if
+                  they are not found on the current object.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Event Bubbling?</div>
+              <div class="a">
+                <p>Event bubbling is when an event triggered on a child element propagates upward through its parent
+                  elements in the DOM tree.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Event Delegation?</div>
+              <div class="a">
+                <p>Event delegation attaches a single event listener to a parent element to handle events from its child
+                  elements using bubbling.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is a Callback Function?</div>
+              <div class="a">
+                <p>A callback is a function passed as an argument to another function, executed after that function
+                  completes its operation.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is Callback Hell?</div>
+              <div class="a">
+                <p>Callback hell is deeply nested callbacks that make code difficult to read and maintain, solved by
+                  using Promises or Async/Await.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What are ES6 Modules?</div>
+              <div class="a">
+                <p>ES6 modules allow splitting JavaScript code into reusable files using import and export statements
+                  for better organization and maintainability.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is the difference between call, apply, and bind?</div>
+              <div class="a">
+                <p>call invokes a function with a given this and arguments individually; apply uses an array of
+                  arguments; bind returns a new function with a bound this.</p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="q">What is localStorage and sessionStorage?</div>
+              <div class="a">
+                <p>localStorage stores data with no expiration across sessions; sessionStorage stores data only for the
+                  duration of the browser tab session.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Section Header -->
+          <h2
+            style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 24px; margin-top: 40px; padding-top: 30px; border-top: 2px solid #e2e8f0;">
+            <i class="fa-solid fa-rocket" style="color: #3b82f6; margin-right: 10px;"></i>Advanced JavaScript Interview
+            Questions</h2>
+          <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 30px;">Dive deeper into complex
+            JavaScript concepts that advanced professionals should master.</p>
+
+          <div class="faq">
+            <div class="q">What is the difference between the Call Stack and the Heap?</div>
+            <div class="a">
+              <p>The call stack manages execution contexts and function calls in LIFO order; the heap is unstructured
+                memory used for dynamic object storage.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a Microtask and Macrotask?</div>
+            <div class="a">
+              <p>Microtasks (Promises, queueMicrotask) execute before the next macrotask (setTimeout, setInterval),
+                giving them higher priority in the event loop.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a WeakMap and WeakSet?</div>
+            <div class="a">
+              <p>WeakMap and WeakSet hold weak references to objects, allowing garbage collection of keys or values when
+                no other references exist.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a Proxy in JavaScript?</div>
+            <div class="a">
+              <p>A Proxy wraps an object and intercepts fundamental operations like property access, assignment, and
+                function invocation using handler traps.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a Generator Function?</div>
+            <div class="a">
+              <p>A generator function (function*) returns an iterator that produces values lazily using the yield
+                keyword, pausing execution between each value.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Memoization?</div>
+            <div class="a">
+              <p>Memoization is an optimization technique that caches the results of expensive function calls and
+                returns the cached result for the same inputs.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Currying?</div>
+            <div class="a">
+              <p>Currying transforms a function with multiple arguments into a sequence of functions each taking a
+                single argument, enabling partial application.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Debouncing?</div>
+            <div class="a">
+              <p>Debouncing delays executing a function until after a specified time has passed since the last time it
+                was invoked, reducing unnecessary calls.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Throttling?</div>
+            <div class="a">
+              <p>Throttling limits a function to execute at most once within a specified time interval, regardless of
+                how many times it is triggered.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Garbage Collection in JavaScript?</div>
+            <div class="a">
+              <p>Garbage collection is the automatic process of freeing memory occupied by objects that are no longer
+                reachable or referenced in the program.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a Memory Leak?</div>
+            <div class="a">
+              <p>A memory leak occurs when allocated memory is not released after use, often caused by global variables,
+                detached DOM nodes, or lingering event listeners.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Module Pattern?</div>
+            <div class="a">
+              <p>The module pattern encapsulates code using closures to create private and public members, avoiding
+                global namespace pollution.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Observer Pattern?</div>
+            <div class="a">
+              <p>The observer pattern defines a one-to-many relationship where multiple observers are notified
+                automatically when a subject's state changes.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Immutability in JavaScript?</div>
+            <div class="a">
+              <p>Immutability means data cannot be changed after creation. It is enforced using Object.freeze(), const,
+                or immutable data patterns to prevent side effects.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between shallow copy and deep copy?</div>
+            <div class="a">
+              <p>A shallow copy duplicates only the top-level properties; a deep copy recursively duplicates all nested
+                objects, creating fully independent copies.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is a Symbol in JavaScript?</div>
+            <div class="a">
+              <p>A Symbol is a unique and immutable primitive value used as object property keys to avoid naming
+                conflicts.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the Reflect API?</div>
+            <div class="a">
+              <p>The Reflect API provides methods for interceptable JavaScript operations, complementing the Proxy API
+                with a standardized set of object manipulation methods.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is Tail Call Optimization?</div>
+            <div class="a">
+              <p>Tail call optimization allows recursive functions whose last action is a function call to reuse the
+                current stack frame, preventing stack overflow.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What are Design Patterns in JavaScript?</div>
+            <div class="a">
+              <p>Design patterns are reusable solutions to common programming problems, including creational (Singleton,
+                Factory), structural (Decorator), and behavioral (Observer) patterns.</p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="q">What is the difference between CommonJS and ES Modules?</div>
+            <div class="a">
+              <p>CommonJS uses require() and module.exports and loads synchronously (used in Node.js); ES Modules use
+                import/export and load asynchronously (used in browsers and modern Node.js).</p>
+            </div>
+          </div>
+
+          <!-- Next Steps Section -->
+          <div
+            style="background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%); border-radius: 12px; padding: 30px; border: 1px solid #93c5fd; margin-top: 50px; margin-bottom: 20px;">
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: #1e40af; margin-bottom: 12px;"><i
+                class="fa-solid fa-check-circle" style="margin-right: 8px;"></i>Ready to Ace Your JavaScript Interview?
+            </h3>
+            <p style="color: #1e3a8a; margin: 0; line-height: 1.6;">
+              Master these JavaScript fundamentals, understand async/await and promises deeply, practice with real-world
+              coding challenges, and approach your next interview with confidence. Remember, JavaScript mastery is about
+              understanding not just syntax but the underlying mechanisms like the event loop, closures, and
+              prototypical inheritance. Demonstrate your deep knowledge and stand out as a skilled JavaScript developer.
+            </p>
+          </div>
+
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div id="sidebar">
+            <div class="sidebar-wrapper">
+              <h3>Related Tools</h3>
+              <ul class="sidebar-menu">
+                <li><a href="https://webtoolocean.com/resources/figma-interview-questions/"><span
+                      class="fa fa-caret-right"></span> Figma Interview Questions</a></li>
+                <li><a href="https://webtoolocean.com/resources/ui-ux-interview-questions/"><span
+                      class="fa fa-caret-right"></span> UI/UX Interview Questions</a></li>
+                <li><a href="https://webtoolocean.com/resources/AI-interview-questions/"><span
+                      class="fa fa-caret-right"></span> AI Interview Questions</a></li>
+                <li><a href="https://webtoolocean.com/resources/react-interview-questions/"><span
+                      class="fa fa-caret-right"></span> React Interview Questions</a></li>
+                <li><a href="https://webtoolocean.com/resources/html-interview-questions/"><span
+                      class="fa fa-caret-right"></span> HTML Interview Questions</a></li>
+                <li><a href="https://webtoolocean.com/resources/css-interview-questions/"><span
+                      class="fa fa-caret-right"></span> CSS Interview Questions</a></li>
+                <li><a href="https://webtoolocean.com/resources/javascript-interview-questions/"><span
+                      class="fa fa-caret-right"></span> JavaScript Interview Questions</a></li>
+              </ul>
+            </div>
+            <style>
+              @import url("https://webtoolocean.com/css/sidebar.css");
+            </style>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- SEO Text Section -->
+
+
+
+
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .faq {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .faq .q {
+      padding: 18px 50px 18px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      font-size: 18px;
+      transition: .3s;
+    }
+
+    .faq .a {
+      padding: 16px 16px;
+      display: none;
+    }
+
+    .faq .q:after {
+      content: "▼";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: .3s;
+      font-size: 14px;
+    }
+
+    .faq.active .q:after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .faq.active .a {
+      display: block
+    }
+  </style>
+  <script>
+    document.querySelectorAll('.q').forEach(x => x.onclick = () => x.parentElement.classList.toggle('active'));
+  </script>
+  <script>
+    fetch('/resources/sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
+  </script>
 </body>
-<!-- InstanceEnd --></html>
+
+</html>

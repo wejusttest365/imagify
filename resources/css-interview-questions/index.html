@@ -1,360 +1,666 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
-<!-- InstanceBeginEditable name="EditRegion4" -->
-<title>CSS3 interview Questions | WebToolOcean</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>CSS Interview Questions – Master CSS & Styling for Web Developers</title>
 
-<!-- Meta Description -->
-<meta name="description" content="Prepare for your CSS3 interview with 60+ commonly asked questions and answers covering CSS fundamentals, Flexbox, Grid, Animations, Responsive Design, and more — from beginner to advanced level with code examples.">
+  <meta name="description"
+    content="Ace your CSS interview with comprehensive CSS interview questions and answers. Master CSS3, Flexbox, Grid, selectors, animations, and responsive design concepts.">
+  <meta name="keywords"
+    content="CSS interview questions, CSS3 questions, flexbox interview, grid layout, CSS selectors, styling interview, responsive design, web development interview">
+  <meta name="author" content="WebToolOcean">
+  <meta name="robots" content="index, follow">
 
-<!-- Meta Keywords -->
-<meta name="keywords" content="CSS3 interview questions, CSS interview questions and answers, CSS3 beginner interview questions, CSS3 advanced interview questions, CSS flexbox interview questions, CSS grid interview questions, CSS animation interview questions, CSS responsive design interview questions, CSS selectors interview questions, CSS specificity interview questions, CSS3 interview preparation, frontend interview questions">
-<meta name="author" content="WebToolOcean">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="http://webtoolocean.com/resources/css-interview-questions">
+  <link rel="canonical" href="https://webtoolocean.com/resources/css-interview-questions/">
 
-<!-- ===================================================== --> 
+  <!--Open Graph Tags-->
+  <meta property="og:title" content="CSS Interview Questions – WebToolOcean">
+  <meta property="og:description"
+    content="Master CSS for interviews with comprehensive CSS interview questions covering Flexbox, Grid, selectors, animations, and responsive design.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webtoolocean.com/resources/css-interview-questions/">
+  <meta property="og:image" content="https://webtoolocean.com/images/webtoolocean-og.png">
+  <meta property="og:site_name" content="WebToolOcean">
 
-<!--CSS for the website--> 
-
-<!-- Dependencies -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
-<link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
-<style>
-.faq {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-.faq .q {
-    padding: 18px 50px 18px 20px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    font-size: 18px;
-    transition: .3s;
-}
-.faq .a {
-    padding: 0 16px 16px;
-    display: none;
-}
-.faq .q:after {
-    content: "▼";
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .3s;
-    font-size: 14px;
-}
-.faq.active .q:after {
-    transform: translateY(-50%) rotate(180deg);
-}
-.faq.active .a {
-    display: block
-}
-</style>
-<!-- InstanceEndEditable -->
-<!-- Stylesheets     
+  <!--Twitter Tags-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSS Interview Questions – WebToolOcean">
+  <meta name="twitter:description"
+    content="Prepare for CSS interviews with our comprehensive CSS interview questions and expert answers.">
+  <!--  Stylesheets     
 	============================================= -->
 
-<!-- Google Fonts --> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-
-<!-- Document Title   
+  <!--  Stylesheets     
 	============================================= -->
-<!-- InstanceBeginEditable name="doctitle" -->
-<!-- InstanceEndEditable -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4C1PP726EZ');
-</script>
-<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
-     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/menu.css" rel="stylesheet">
+
+
+  <!-- site verification and google tag -->
+
+  <meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+
+  <!--  Google Ads verification code -->
+  <meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebToolOcean",
+    "url": "https://webtoolocean.com",
+    "logo": "https://webtoolocean.com/images/logo.png",
+    "description": "WebToolOcean offers 100+ free online tools for developers, designers, and creators",
+    "sameAs": [
+      "https://www.facebook.com/webtoolocean",
+      "https://www.twitter.com/webtoolocean",
+      "https://www.instagram.com/webtoolocean"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "url": "https://webtoolocean.com/contact/"
+    }
+  }
+  </script>
+
+  <!-- WebPage Schema for CSS Interview Questions -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "CSS Interview Questions – WebToolOcean",
+    "description": "Ace your CSS interview with comprehensive CSS interview questions and answers. Master CSS3, Flexbox, Grid, selectors, animations, and responsive design concepts.",
+    "url": "https://webtoolocean.com/resources/css-interview-questions/",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "WebToolOcean",
+      "url": "https://webtoolocean.com"
+    }
+  }
+  </script>
 </head>
-<style>
-body {
-	overflow-x: hidden
-}
-	 
-</style>
+
+
 <body class="">
-<!--ACCESSIBILITY CONTROLS   --> 
+  <style>
+    body {
+      overflow-x: hidden;
+    }
 
-<!--END ACCESSIBILITY CONTROLS   --> 
-<!-- Document Wrapper	  
-	============================================= --> 
-<!--	 <div class="topnav">
-    <div class="container">
-      <ul>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/blog/">Blog</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/resources/">Resources</a> </li>
-        <li> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a></li>
-    
-      </ul>
-    </div>
-  </div>-->
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
+    }
 
- 
- <header class="site-header">
-  <div class="header-inner"> <a class="logo" href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a>
-    <nav class="main-nav">
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/"><i class="ti ti-home" aria-hidden="true"></i> Home</a> </div>
-      <div class="nav-item has-drop" id="toolsItem">
-        <button class="nav-btn" id="toolsBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-apps" aria-hidden="true"></i> Tools <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
+    /* Enhanced Hero Banner */
+    .wto-hero-about {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, var(--brand-dark) 100%);
+      padding: 60px 0 50px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(59, 130, 246, .2);
+    }
+
+    .wto-hero-about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .wto-hero-about .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .wto-hero-about h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .wto-hero-about h1 span {
+      background: linear-gradient(135deg, #60a5fa 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .wto-hero-about .hero-description {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 32px;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+
+    .wto-hero-about .hero-stats {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .wto-hero-about .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wto-hero-about .hero-stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #60a5fa;
+    }
+
+    .wto-hero-about .hero-stat-label {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    .wto-hero-about .btn-primary-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #3b82f6;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid #3b82f6;
+    }
+
+    .wto-hero-about .btn-primary-hero:hover {
+      background: #2563eb;
+      border-color: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .wto-hero-about .btn-outline-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #cbd5e1;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid #475569;
+      margin-left: 12px;
+    }
+
+    .wto-hero-about .btn-outline-hero:hover {
+      border-color: #94a3b8;
+      color: #f1f5f9;
+    }
+
+    /* About Us Section */
+    .about-section {
+      padding: 60px 0;
+    }
+
+    .about-section .section-head {
+      margin-bottom: 40px;
+    }
+
+    .about-section .sec-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .1);
+      border: 1px solid rgba(59, 130, 246, .2);
+      border-radius: 100px;
+      color: #3b82f6;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .about-section .lead-text {
+      font-size: 1.1rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    .about-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 12px;
+    }
+
+    .about-content p {
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .about-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 24px;
+    }
+
+    .about-content li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .about-content li::before {
+      content: '✓';
+      flex-shrink: 0;
+      color: #06b6d4;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-top: -2px;
+    }
+
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      border-color: #3b82f6;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .value-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(59, 130, 246, .1);
+      border-radius: 10px;
+      color: #3b82f6;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .value-card h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 8px;
+    }
+
+    .value-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Breadcrumb */
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: #3b82f6;
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    /* FAQ Styling */
+    .faq {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+    }
+
+    .faq .q {
+      background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+      padding: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .faq .q::before {
+      content: '▶';
+      color: #3b82f6;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .faq:hover .q {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+      border-bottom-color: #3b82f6;
+    }
+
+    .faq .a {
+      padding: 18px;
+      color: #334155;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .faq .a p {
+      margin: 0;
+    }
+  </style>
+
+  <div id="header"></div>
+  <main role="main" id="content">
+    <!-- ═══════════════════════════════════════════════════════
+     BREADCRUMB
+     ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">CSS Interview Questions</li>
+        </ol>
       </div>
-      <div class="nav-item has-drop" id="blogItem">
-        <button class="nav-btn" id="blogBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-writing" aria-hidden="true"></i> Blog <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/resources/"><i class="ti ti-books" aria-hidden="true"></i> Resources</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/about/"><i class="ti ti-users" aria-hidden="true"></i> About Us</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/contact/"><i class="ti ti-mail" aria-hidden="true"></i> Contact</a> </div>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"> <span></span><span></span><span></span> </button>
-  </div>
-  
-  <!-- TOOLS MEGA — anchored full width -->
-  <div class="mega-wrap" id="toolsWrap">
-    <div class="mega">
-      <div class="mega-inner">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/image-tools/image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-refresh" aria-hidden="true"></i></div>
-          <div><span class="link-title">All Image Converter</span><span class="link-desc">Convert between formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">
-          <div class="link-icon icon-purple"><i class="ti ti-scan" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Text (OCR)</span><span class="link-desc">Extract text from images</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/compress-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-file-zip" aria-hidden="true"></i></div>
-          <div><span class="link-title">Compress Images</span><span class="link-desc">Reduce file size</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector" aria-hidden="true"></i></div>
-          <div><span class="link-title">SVG to Image</span><span class="link-desc">SVG → raster formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector-bezier" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to SVG</span><span class="link-desc">Raster → vector SVG</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/favicon-generator/">
-          <div class="link-icon icon-purple"><i class="ti ti-star" aria-hidden="true"></i></div>
-          <div><span class="link-title">Favicon Generator</span><span class="link-desc">Create .ico &amp; PNG favicons</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-base64/">
-          <div class="link-icon icon-purple"><i class="ti ti-code" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Base64</span><span class="link-desc">Encode images to Base64</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/base64-to-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-photo-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 to Image</span><span class="link-desc">Decode Base64 to image</span></div>
-          </a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">
-          <div class="link-icon icon-red"><i class="ti ti-files" aria-hidden="true"></i></div>
-          <div><span class="link-title">Merge PDF</span><span class="link-desc">Combine multiple PDFs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">
-          <div class="link-icon icon-red"><i class="ti ti-reorder" aria-hidden="true"></i></div>
-          <div><span class="link-title">Reorder PDF Pages</span><span class="link-desc">Drag to rearrange</span></div>
-          </a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-brush" aria-hidden="true"></i> CSS Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/css-tools/css-formatter/">
-          <div class="link-icon icon-blue"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
-          <div><span class="link-title">Beautify / Minify CSS</span><span class="link-desc">Format or compress CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-shadow" aria-hidden="true"></i></div>
-          <div><span class="link-title">Box Shadow Generator</span><span class="link-desc">Visual shadow editor</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-layers-subtract" aria-hidden="true"></i></div>
-          <div><span class="link-title">Multi Box Shadow</span><span class="link-desc">Layered shadows</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/clip-image/">
-          <div class="link-icon icon-blue"><i class="ti ti-crop" aria-hidden="true"></i></div>
-          <div><span class="link-title">Clip Image CSS</span><span class="link-desc">Clip-path made easy</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/card-builder/">
-          <div class="link-icon icon-blue"><i class="ti ti-layout-board" aria-hidden="true"></i></div>
-          <div><span class="link-title">CSS Card Builder</span><span class="link-desc">Design CSS cards</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/gradient-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-palette" aria-hidden="true"></i></div>
-          <div><span class="link-title">Gradient Generator</span><span class="link-desc">Build CSS gradients</span></div>
-          </a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-terminal-2" aria-hidden="true"></i> Developer Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/developer-tools/html-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-brand-html5" aria-hidden="true"></i></div>
-          <div><span class="link-title">HTML Formatter</span><span class="link-desc">Beautify HTML markup</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/check-css-error/">
-          <div class="link-icon icon-green"><i class="ti ti-bug" aria-hidden="true"></i></div>
-          <div><span class="link-title">Check CSS Errors</span><span class="link-desc">Lint &amp; validate CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">
-          <div class="link-icon icon-green"><i class="ti ti-lock" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 Encoder-Decoder</span><span class="link-desc">Encode &amp; decode text</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/json-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-braces" aria-hidden="true"></i></div>
-          <div><span class="link-title">JSON Formatter</span><span class="link-desc">Format &amp; validate JSON</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/font-converter/">
-          <div class="link-icon icon-green"><i class="ti ti-typography" aria-hidden="true"></i></div>
-          <div><span class="link-title">Web Font Converter</span><span class="link-desc">Convert font formats</span></div>
-          </a> </div>
-        <div class="mega-col col-amber">
-          <div class="col-head"><i class="ti ti-calculator" aria-hidden="true"></i> Calculators</div>
-          <a class="m-link" href="https://webtoolocean.com/calculators/age-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cake" aria-hidden="true"></i></div>
-          <div><span class="link-title">Age Calculator</span><span class="link-desc">Find your exact age</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/emi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-credit-card" aria-hidden="true"></i></div>
-          <div><span class="link-title">EMI Calculator</span><span class="link-desc">Calculate loan EMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/gst-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-receipt-tax" aria-hidden="true"></i></div>
-          <div><span class="link-title">GST Calculator</span><span class="link-desc">Add or remove GST</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/sip-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-trending-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">SIP Calculator</span><span class="link-desc">Plan mutual fund SIPs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/bmi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i></div>
-          <div><span class="link-title">BMI Calculator</span><span class="link-desc">Check your BMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/percentage-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-percentage" aria-hidden="true"></i></div>
-          <div><span class="link-title">Percentage Calculator</span><span class="link-desc">Calculate percentages</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/discount-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-tag" aria-hidden="true"></i></div>
-          <div><span class="link-title">Discount Calculator</span><span class="link-desc">Find sale price</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/loan-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cash" aria-hidden="true"></i></div>
-          <div><span class="link-title">Loan Calculator</span><span class="link-desc">Compare loan options</span></div>
-          </a> </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- BLOG MEGA — anchored full width -->
-  <div class="mega-wrap" id="blogWrap">
-    <div class="mega">
-      <div class="blog-grid">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-robot" aria-hidden="true"></i> AI Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="blog-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="blog-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="blog-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="blog-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="blog-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="blog-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="blog-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-code" aria-hidden="true"></i> Web Development</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="blog-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="blog-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a> </div>
-        <div class="mega-col col-pink">
-          <div class="col-head"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> UI/UX Design</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="blog-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="blog-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a> </div>
-        <div class="mega-col col-teal">
-          <div class="col-head"><i class="ti ti-search" aria-hidden="true"></i> SEO</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="blog-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="blog-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="blog-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a> </div>
-        <div class="mega-col col-indigo">
-          <div class="col-head"><i class="ti ti-briefcase" aria-hidden="true"></i> Career &amp; Interview</div>
-          <a class="blog-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> </div>
-      </div>
-      <div class="mega-footer"> <a class="footer-link" href="https://webtoolocean.com/blog/"><i class="ti ti-writing" aria-hidden="true"></i> View all blog articles <i class="ti ti-arrow-right" aria-hidden="true"></i></a> </div>
-    </div>
-  </div>
-  
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/"><i class="ti ti-home"></i> Home</a> </div>
-    <div>
-      <div class="m-section-title" id="mToolsTitle"><span><i class="ti ti-apps" style="margin-right:6px;color:#818cf8"></i>Tools</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mToolsBody">
-        <div class="m-cat-head">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/image-tools/image-converter/">All Image Converter</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a> <a class="mob-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages</a>
-        <div class="m-cat-head blue">CSS Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a>
-        <div class="m-cat-head green">Developer Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/check-css-error/">Check CSS Errors</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder-Decoder</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a> <a class="mob-link" href="https://webtoolocean.com/font-converter/">Web Font Converter</a>
-        <div class="m-cat-head amber">Calculators</div>
-        <a class="mob-link" href="https://webtoolocean.com/calculators/age-calculator/">Age Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/emi-calculator/">EMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/gst-calculator/">GST Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/sip-calculator/">SIP Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/bmi-calculator/">BMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/percentage-calculator/">Percentage Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/discount-calculator/">Discount Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/loan-calculator/">Loan Calculator</a> </div>
-    </div>
-    <div>
-      <div class="m-section-title" id="mBlogTitle"><span><i class="ti ti-writing" style="margin-right:6px;color:#818cf8"></i>Blog</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mBlogBody">
-        <div class="m-cat-head">AI Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="mob-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="mob-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="mob-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a>
-        <div class="m-cat-head blue">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="mob-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="mob-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a>
-        <div class="m-cat-head green">Web Development</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="mob-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="mob-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a>
-        <div class="m-cat-head pink">UI/UX Design</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="mob-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="mob-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a>
-        <div class="m-cat-head teal">SEO</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="mob-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="mob-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="mob-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a>
-        <div class="m-cat-head indigo">Career &amp; Interview</div>
-        <a class="mob-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> <a class="mob-link" style="color:#818cf8;font-weight:600;margin-top:8px;display:block" href="https://webtoolocean.com/blog/">View all blog articles →</a> </div>
-    </div>
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/resources/"><i class="ti ti-books"></i> Resources</a> <a class="m-top-link" href="https://webtoolocean.com/about/"><i class="ti ti-users"></i> About Us</a> <a class="m-top-link" href="https://webtoolocean.com/contact/"><i class="ti ti-mail"></i> Contact</a> </div>
-  </div>
-</header>
- 
-<!-- InstanceBeginEditable name="center" --> 
 
-<!-- Start dynamic content --> 
-<!-- <section id="testimonials">
-    <div class="container aniboxes animate__animated text-center">
-      <div id="contentwidget1"></div>
-      <br>
-    </div>
-  </section>--> 
-<!-- End dynamic content -->
-<div class="clearfix"></div>
-<!-- End dynamic content --> 
+    <!-- ═══════════════════════════════════════════════════════
+     HERO BANNER
+     ═══════════════════════════════════════════════════════ -->
+    <section class="wto-hero-about">
+      <div class="container">
+        <div class="hero-tag">
+          <i class="fa-solid fa-palette"></i>
+          Interview Prep
+        </div>
+        <h1>
+          Master <span>CSS Interview</span><br>Questions & Concepts
+        </h1>
+        <p class="hero-description">
+          Comprehensive CSS interview questions covering Flexbox, CSS Grid, selectors, animations, transitions,
+          responsive design, and modern styling techniques. Prepare confidently for web development roles.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">60+</div>
+            <div class="hero-stat-label">Questions</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">Expert</div>
+            <div class="hero-stat-label">Answers</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">Always</div>
+            <div class="hero-stat-label">Free</div>
+          </div>
+        </div>
+        <div>
+          <a href="#css-content" class="btn-primary-hero" style="text-decoration: none;">
+            <i class="fa-solid fa-graduation-cap"></i> Start Learning
+          </a>
+          <a href="/resources/" class="btn-outline-hero">
+            <i class="fa-solid fa-book"></i> All Resources
+          </a>
+        </div>
+      </div>
+    </section>
 
-<!-- Sevices section -->
-<main id="content"> 
-  
-  <!-- SEO Text Section -->
-  <section class="section py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-xs-12"> 
-          
-          <!-- CSS3 Interview Questions -->
-          <h1 class="pt-4">Beginner CSS3 Interview Questions</h1>
-          <p> Prepare for your next web development interview with these frequently asked CSS questions and detailed answers</p>
-          <div class="faq">
-            <div class="q">What is CSS?</div>
-            <div class="a">
-              <p>CSS (Cascading Style Sheets) is a stylesheet language used to control the visual presentation of HTML elements including layout, colors, fonts, and spacing.</p>
-              <pre><code>p {
+    <!-- ═══════════════════════════════════════════════════════
+     CSS INTERVIEW QUESTIONS SECTION
+     ═══════════════════════════════════════════════════════ -->
+
+    <section class="section section py-5" id="css-content" style="background: #f8fafc;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-xs-12">
+
+            <!-- Introduction Section -->
+            <div style="margin-bottom: 50px;">
+              <div
+                style="background: white; border-radius: 12px; padding: 30px; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Why CSS Interview
+                  Questions Matter</h2>
+                <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 0;">
+                  CSS is the backbone of modern web design and user experience. Whether you're applying for a frontend
+                  developer, web designer, or full-stack developer position, mastering CSS concepts is essential. From
+                  responsive design and layout techniques to animations and performance optimization, CSS skills
+                  directly impact your ability to create beautiful, functional, and accessible web applications. A
+                  strong understanding of CSS demonstrates your proficiency in turning design mockups into pixel-perfect
+                  implementations.
+                </p>
+              </div>
+            </div>
+
+            <!-- Key Topics Section -->
+            <div style="margin-bottom: 50px;">
+              <h3 style="font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 24px;"><i
+                  class="fa-solid fa-list-check" style="color: #3b82f6; margin-right: 10px;"></i>Key CSS Topics Covered
+                in Interviews</h3>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">CSS Fundamentals & Box Model</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Flexbox & CSS Grid Layouts</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Selectors & CSS Specificity</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Positioning & Stacking Context</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Animations, Transitions & Transforms</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Responsive Design & Media Queries</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">CSS Variables & Preprocessors</strong></div>
+                </div>
+                <div
+                  style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: start; gap: 12px;">
+                  <div style="color: #3b82f6; font-size: 1.2rem; flex-shrink: 0;">✓</div>
+                  <div><strong style="color: #0f172a;">Accessibility & Performance Optimization</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div style="margin-bottom: 50px;">
+              <div
+                style="background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%); border-radius: 12px; padding: 30px; border: 1px solid #fde68a;">
+                <p style="font-size: 1rem; color: #92400e; line-height: 1.8; margin: 0;">
+                  <strong>From foundational concepts</strong> like the CSS box model and selectors to <strong>modern
+                    techniques</strong> like CSS Grid, Flexbox, custom properties, and performance optimization, this
+                  guide covers everything you need to confidently answer CSS interview questions at any level. Whether
+                  you are preparing for a <strong>frontend developer, UI developer, web designer, or full-stack
+                    developer</strong> role, these questions and answers will help you stand out in your next interview.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interview Questions Header -->
+            <h2 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 24px; margin-top: 40px;"><i
+                class="fa-solid fa-palette" style="color: #3b82f6; margin-right: 10px;"></i>Beginner CSS Interview
+              Questions</h2>
+            <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 30px;">Prepare for your next web
+              development interview with these essential CSS questions and detailed answers covering fundamental
+              concepts and best practices.</p>
+            <div class="faq">
+              <div class="q">What is CSS?</div>
+              <div class="a">
+                <p>CSS (Cascading Style Sheets) is a stylesheet language used to control the visual presentation of HTML
+                  elements including layout, colors, fonts, and spacing.</p>
+                <pre><code>p {
   color: navy;
   font-size: 16px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS3?</div>
-            <div class="a">
-              <p>CSS3 is the latest version of CSS, introducing modules like Flexbox, Grid, animations, transitions, custom properties, and media queries for modern web design.</p>
+            <div class="faq">
+              <div class="q">What is CSS3?</div>
+              <div class="a">
+                <p>CSS3 is the latest version of CSS, introducing modules like Flexbox, Grid, animations, transitions,
+                  custom properties, and media queries for modern web design.</p>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What are the ways to apply CSS to a webpage?</div>
-            <div class="a">
-              <p>CSS can be applied inline (style attribute), internally (style tag in head), or externally (linked .css file). External stylesheets are the recommended approach.</p>
-              <pre><code>/* Inline */
+            <div class="faq">
+              <div class="q">What are the ways to apply CSS to a webpage?</div>
+              <div class="a">
+                <p>CSS can be applied inline (style attribute), internally (style tag in head), or externally (linked
+                  .css file). External stylesheets are the recommended approach.</p>
+                <pre><code>/* Inline */
 &lt;p style="color: red;"&gt;
 
 /* Internal */
@@ -362,70 +668,77 @@ body {
 
 /* External */
 &lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS Box Model?</div>
-            <div class="a">
-              <p>The box model describes the rectangular box wrapping every element, consisting of content, padding, border, and margin from inside to outside.</p>
-              <pre><code>.box {
+            <div class="faq">
+              <div class="q">What is the CSS Box Model?</div>
+              <div class="a">
+                <p>The box model describes the rectangular box wrapping every element, consisting of content, padding,
+                  border, and margin from inside to outside.</p>
+                <pre><code>.box {
   width: 200px;
   padding: 20px;
   border: 2px solid #333;
   margin: 10px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the difference between margin and padding?</div>
-            <div class="a">
-              <p>Padding is the space between the content and the border inside an element; margin is the space outside the border between the element and others.</p>
-              <pre><code>.card {
+            <div class="faq">
+              <div class="q">What is the difference between margin and padding?</div>
+              <div class="a">
+                <p>Padding is the space between the content and the border inside an element; margin is the space
+                  outside the border between the element and others.</p>
+                <pre><code>.card {
   padding: 20px; /* inner space */
   margin: 10px;  /* outer space */
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Specificity?</div>
-            <div class="a">
-              <p>Specificity determines which CSS rule is applied when multiple rules target the same element. It is calculated as inline styles > IDs > classes > elements.</p>
-              <pre><code>#header { color: blue; }    /* specificity: 0,1,0,0 */
+            <div class="faq">
+              <div class="q">What is CSS Specificity?</div>
+              <div class="a">
+                <p>Specificity determines which CSS rule is applied when multiple rules target the same element. It is
+                  calculated as inline styles &gt; IDs &gt; classes &gt; elements.</p>
+                <pre><code>#header { color: blue; }    /* specificity: 0,1,0,0 */
 .title  { color: green; }   /* specificity: 0,0,1,0 */
 h1      { color: red; }     /* specificity: 0,0,0,1 */</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the difference between class and ID selectors?</div>
-            <div class="a">
-              <p>An ID selector (#id) targets a unique element on the page and has higher specificity; a class selector (.class) can be reused on multiple elements.</p>
-              <pre><code>#hero { background: black; }
+            <div class="faq">
+              <div class="q">What is the difference between class and ID selectors?</div>
+              <div class="a">
+                <p>An ID selector (#id) targets a unique element on the page and has higher specificity; a class
+                  selector (.class) can be reused on multiple elements.</p>
+                <pre><code>#hero { background: black; }
 .card { background: white; }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the display property?</div>
-            <div class="a">
-              <p>The display property controls how an element is rendered in the layout, with common values being block, inline, inline-block, flex, grid, and none.</p>
-              <pre><code>.hidden  { display: none; }
+            <div class="faq">
+              <div class="q">What is the display property?</div>
+              <div class="a">
+                <p>The display property controls how an element is rendered in the layout, with common values being
+                  block, inline, inline-block, flex, grid, and none.</p>
+                <pre><code>.hidden  { display: none; }
 .inline  { display: inline; }
 .block   { display: block; }
 .flex    { display: flex; }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the difference between display none and visibility hidden?</div>
-            <div class="a">
-              <p>display: none removes the element from the layout entirely; visibility: hidden hides it visually but it still occupies its original space.</p>
-              <pre><code>.gone   { display: none; }       /* no space */
+            <div class="faq">
+              <div class="q">What is the difference between display none and visibility hidden?</div>
+              <div class="a">
+                <p>display: none removes the element from the layout entirely; visibility: hidden hides it visually but
+                  it still occupies its original space.</p>
+                <pre><code>.gone   { display: none; }       /* no space */
 .hidden { visibility: hidden; }  /* space preserved */</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the position property?</div>
-            <div class="a">
-              <p>The position property controls element placement with values: static (default), relative, absolute, fixed, and sticky.</p>
-              <pre><code>.sticky-nav {
+            <div class="faq">
+              <div class="q">What is the position property?</div>
+              <div class="a">
+                <p>The position property controls element placement with values: static (default), relative, absolute,
+                  fixed, and sticky.</p>
+                <pre><code>.sticky-nav {
   position: sticky;
   top: 0;
 }
@@ -434,157 +747,171 @@ h1      { color: red; }     /* specificity: 0,0,0,1 */</code></pre>
   top: 0;
   left: 0;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the difference between relative and absolute positioning?</div>
-            <div class="a">
-              <p>Relative positions an element relative to its normal position; absolute removes it from the flow and positions it relative to the nearest positioned ancestor.</p>
-              <pre><code>.parent { position: relative; }
+            <div class="faq">
+              <div class="q">What is the difference between relative and absolute positioning?</div>
+              <div class="a">
+                <p>Relative positions an element relative to its normal position; absolute removes it from the flow and
+                  positions it relative to the nearest positioned ancestor.</p>
+                <pre><code>.parent { position: relative; }
 .child  {
   position: absolute;
   top: 10px;
   right: 10px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the z-index property?</div>
-            <div class="a">
-              <p>z-index controls the stacking order of positioned elements. Higher values appear on top of lower ones along the z-axis.</p>
-              <pre><code>.modal   { z-index: 1000; }
+            <div class="faq">
+              <div class="q">What is the z-index property?</div>
+              <div class="a">
+                <p>z-index controls the stacking order of positioned elements. Higher values appear on top of lower ones
+                  along the z-axis.</p>
+                <pre><code>.modal   { z-index: 1000; }
 .overlay { z-index: 999; }
 .content { z-index: 1; }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the float property?</div>
-            <div class="a">
-              <p>Float places an element to the left or right of its container, allowing text and inline elements to wrap around it.</p>
-              <pre><code>img {
+            <div class="faq">
+              <div class="q">What is the float property?</div>
+              <div class="a">
+                <p>Float places an element to the left or right of its container, allowing text and inline elements to
+                  wrap around it.</p>
+                <pre><code>img {
   float: left;
   margin-right: 16px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS color property?</div>
-            <div class="a">
-              <p>The color property sets the text color using named colors, HEX, RGB, RGBA, HSL, or HSLA values.</p>
-              <pre><code>h1 { color: #333333; }
+            <div class="faq">
+              <div class="q">What is the CSS color property?</div>
+              <div class="a">
+                <p>The color property sets the text color using named colors, HEX, RGB, RGBA, HSL, or HSLA values.</p>
+                <pre><code>h1 { color: #333333; }
 p  { color: rgba(0, 0, 0, 0.7); }
 a  { color: hsl(210, 100%, 50%); }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the difference between em, rem, px, and %?</div>
-            <div class="a">
-              <p>px is absolute; em is relative to the parent element font size; rem is relative to the root font size; % is relative to the parent element's size.</p>
-              <pre><code>:root { font-size: 16px; }
+            <div class="faq">
+              <div class="q">What is the difference between em, rem, px, and %?</div>
+              <div class="a">
+                <p>px is absolute; em is relative to the parent element font size; rem is relative to the root font
+                  size; % is relative to the parent element's size.</p>
+                <pre><code>:root { font-size: 16px; }
 .box {
   font-size: 1rem;   /* 16px */
   padding: 1em;      /* relative to parent */
   width: 50%;        /* half of parent */
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is box-sizing?</div>
-            <div class="a">
-              <p>box-sizing controls whether padding and border are included in an element's total width and height. border-box is the modern preferred setting.</p>
-              <pre><code>* {
+            <div class="faq">
+              <div class="q">What is box-sizing?</div>
+              <div class="a">
+                <p>box-sizing controls whether padding and border are included in an element's total width and height.
+                  border-box is the modern preferred setting.</p>
+                <pre><code>* {
   box-sizing: border-box;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the overflow property?</div>
-            <div class="a">
-              <p>The overflow property controls what happens when content exceeds its container, with values: visible, hidden, scroll, and auto.</p>
-              <pre><code>.container {
+            <div class="faq">
+              <div class="q">What is the overflow property?</div>
+              <div class="a">
+                <p>The overflow property controls what happens when content exceeds its container, with values: visible,
+                  hidden, scroll, and auto.</p>
+                <pre><code>.container {
   height: 200px;
   overflow: auto;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS cursor property?</div>
-            <div class="a">
-              <p>The cursor property sets the mouse cursor style when hovering over an element, such as pointer, default, crosshair, or not-allowed.</p>
-              <pre><code>button { cursor: pointer; }
+            <div class="faq">
+              <div class="q">What is the CSS cursor property?</div>
+              <div class="a">
+                <p>The cursor property sets the mouse cursor style when hovering over an element, such as pointer,
+                  default, crosshair, or not-allowed.</p>
+                <pre><code>button { cursor: pointer; }
 .disabled { cursor: not-allowed; }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the opacity property?</div>
-            <div class="a">
-              <p>The opacity property sets the transparency level of an element from 0 (fully transparent) to 1 (fully opaque), affecting the element and all its children.</p>
-              <pre><code>.ghost {
+            <div class="faq">
+              <div class="q">What is the opacity property?</div>
+              <div class="a">
+                <p>The opacity property sets the transparency level of an element from 0 (fully transparent) to 1 (fully
+                  opaque), affecting the element and all its children.</p>
+                <pre><code>.ghost {
   opacity: 0.5;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS border property?</div>
-            <div class="a">
-              <p>The border property is a shorthand for setting border-width, border-style, and border-color on all four sides of an element.</p>
-              <pre><code>.card {
+            <div class="faq">
+              <div class="q">What is the CSS border property?</div>
+              <div class="a">
+                <p>The border property is a shorthand for setting border-width, border-style, and border-color on all
+                  four sides of an element.</p>
+                <pre><code>.card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <h2 class="pt-4">Intermediate CSS3 Interview Questions</h2>
-          <div class="faq">
-            <div class="q">What is Flexbox?</div>
-            <div class="a">
-              <p>Flexbox is a one-dimensional layout model that distributes space and aligns items within a container along a row or column axis.</p>
-              <pre><code>.container {
+            <h2 class="pt-4">Intermediate CSS3 Interview Questions</h2>
+            <div class="faq">
+              <div class="q">What is Flexbox?</div>
+              <div class="a">
+                <p>Flexbox is a one-dimensional layout model that distributes space and aligns items within a container
+                  along a row or column axis.</p>
+                <pre><code>.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Grid?</div>
-            <div class="a">
-              <p>CSS Grid is a two-dimensional layout system that arranges content into rows and columns simultaneously, ideal for complex page layouts.</p>
-              <pre><code>.grid {
+            <div class="faq">
+              <div class="q">What is CSS Grid?</div>
+              <div class="a">
+                <p>CSS Grid is a two-dimensional layout system that arranges content into rows and columns
+                  simultaneously, ideal for complex page layouts.</p>
+                <pre><code>.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the difference between Flexbox and Grid?</div>
-            <div class="a">
-              <p>Flexbox handles layout in one dimension (row or column); Grid handles layout in two dimensions (rows and columns) simultaneously.</p>
-              <pre><code>/* Flexbox: one direction */
+            <div class="faq">
+              <div class="q">What is the difference between Flexbox and Grid?</div>
+              <div class="a">
+                <p>Flexbox handles layout in one dimension (row or column); Grid handles layout in two dimensions (rows
+                  and columns) simultaneously.</p>
+                <pre><code>/* Flexbox: one direction */
 .nav { display: flex; gap: 8px; }
 
 /* Grid: two directions */
 .page { display: grid; grid-template-columns: 1fr 3fr; }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What are Media Queries?</div>
-            <div class="a">
-              <p>Media queries apply CSS rules conditionally based on screen size, resolution, or device characteristics for responsive design.</p>
-              <pre><code>@media (max-width: 768px) {
+            <div class="faq">
+              <div class="q">What are Media Queries?</div>
+              <div class="a">
+                <p>Media queries apply CSS rules conditionally based on screen size, resolution, or device
+                  characteristics for responsive design.</p>
+                <pre><code>@media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What are CSS Custom Properties (Variables)?</div>
-            <div class="a">
-              <p>CSS custom properties store reusable values defined with -- prefix and accessed via var(), making theming and maintenance easier.</p>
-              <pre><code>:root {
+            <div class="faq">
+              <div class="q">What are CSS Custom Properties (Variables)?</div>
+              <div class="a">
+                <p>CSS custom properties store reusable values defined with -- prefix and accessed via var(), making
+                  theming and maintenance easier.</p>
+                <pre><code>:root {
   --primary: #6200ea;
   --spacing: 16px;
 }
@@ -592,34 +919,37 @@ a  { color: hsl(210, 100%, 50%); }</code></pre>
   background: var(--primary);
   padding: var(--spacing);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What are CSS Pseudo-classes?</div>
-            <div class="a">
-              <p>Pseudo-classes select elements based on their state or position, such as :hover, :focus, :nth-child, :first-child, and :not.</p>
-              <pre><code>a:hover { color: blue; }
+            <div class="faq">
+              <div class="q">What are CSS Pseudo-classes?</div>
+              <div class="a">
+                <p>Pseudo-classes select elements based on their state or position, such as :hover, :focus, :nth-child,
+                  :first-child, and :not.</p>
+                <pre><code>a:hover { color: blue; }
 input:focus { border-color: #6200ea; }
 li:nth-child(odd) { background: #f5f5f5; }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What are CSS Pseudo-elements?</div>
-            <div class="a">
-              <p>Pseudo-elements style specific parts of an element using :: syntax, such as ::before, ::after, ::first-line, and ::placeholder.</p>
-              <pre><code>.card::before {
+            <div class="faq">
+              <div class="q">What are CSS Pseudo-elements?</div>
+              <div class="a">
+                <p>Pseudo-elements style specific parts of an element using :: syntax, such as ::before, ::after,
+                  ::first-line, and ::placeholder.</p>
+                <pre><code>.card::before {
   content: "";
   display: block;
   height: 4px;
   background: var(--primary);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Transition?</div>
-            <div class="a">
-              <p>CSS transitions smoothly animate property changes over a specified duration when triggered by state changes like hover or focus.</p>
-              <pre><code>.button {
+            <div class="faq">
+              <div class="q">What is CSS Transition?</div>
+              <div class="a">
+                <p>CSS transitions smoothly animate property changes over a specified duration when triggered by state
+                  changes like hover or focus.</p>
+                <pre><code>.button {
   background: #6200ea;
   transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -627,164 +957,188 @@ li:nth-child(odd) { background: #f5f5f5; }</code></pre>
   background: #3700b3;
   transform: translateY(-2px);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Animation?</div>
-            <div class="a">
-              <p>CSS animations use @keyframes to define animation steps and the animation property to control duration, timing, and iteration on elements.</p>
-              <pre><code>@keyframes fadeIn {
+            <div class="faq">
+              <div class="q">What is CSS Animation?</div>
+              <div class="a">
+                <p>CSS animations use @keyframes to define animation steps and the animation property to control
+                  duration, timing, and iteration on elements.</p>
+                <pre><code>@keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .hero {
   animation: fadeIn 0.5s ease forwards;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS transform property?</div>
-            <div class="a">
-              <p>The transform property applies 2D or 3D transformations like translate, rotate, scale, and skew to elements without affecting document flow.</p>
-              <pre><code>.card:hover {
+            <div class="faq">
+              <div class="q">What is the CSS transform property?</div>
+              <div class="a">
+                <p>The transform property applies 2D or 3D transformations like translate, rotate, scale, and skew to
+                  elements without affecting document flow.</p>
+                <pre><code>.card:hover {
   transform: scale(1.05) translateY(-4px);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the difference between transition and animation?</div>
-            <div class="a">
-              <p>Transitions require a trigger (like hover) and animate between two states; animations use @keyframes for complex multi-step sequences that can run automatically.</p>
+            <div class="faq">
+              <div class="q">What is the difference between transition and animation?</div>
+              <div class="a">
+                <p>Transitions require a trigger (like hover) and animate between two states; animations use @keyframes
+                  for complex multi-step sequences that can run automatically.</p>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS calc() function?</div>
-            <div class="a">
-              <p>The calc() function performs mathematical calculations mixing different units directly in CSS property values.</p>
-              <pre><code>.sidebar {
+            <div class="faq">
+              <div class="q">What is the CSS calc() function?</div>
+              <div class="a">
+                <p>The calc() function performs mathematical calculations mixing different units directly in CSS
+                  property values.</p>
+                <pre><code>.sidebar {
   width: calc(100% - 320px);
   height: calc(100vh - 64px);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS object-fit property?</div>
-            <div class="a">
-              <p>object-fit controls how a replaced element like img or video fits its container, with values: fill, contain, cover, none, and scale-down.</p>
-              <pre><code>img {
+            <div class="faq">
+              <div class="q">What is the CSS object-fit property?</div>
+              <div class="a">
+                <p>object-fit controls how a replaced element like img or video fits its container, with values: fill,
+                  contain, cover, none, and scale-down.</p>
+                <pre><code>img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   object-position: center;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS backdrop-filter property?</div>
-            <div class="a">
-              <p>backdrop-filter applies graphical effects like blur or brightness to the area behind an element, commonly used for glassmorphism effects.</p>
-              <pre><code>.glass {
+            <div class="faq">
+              <div class="q">What is the CSS backdrop-filter property?</div>
+              <div class="a">
+                <p>backdrop-filter applies graphical effects like blur or brightness to the area behind an element,
+                  commonly used for glassmorphism effects.</p>
+                <pre><code>.glass {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS clip-path property?</div>
-            <div class="a">
-              <p>clip-path defines a clipping region that determines which part of an element is visible, supporting shapes like circle, ellipse, and polygon.</p>
-              <pre><code>.avatar {
+            <div class="faq">
+              <div class="q">What is the CSS clip-path property?</div>
+              <div class="a">
+                <p>clip-path defines a clipping region that determines which part of an element is visible, supporting
+                  shapes like circle, ellipse, and polygon.</p>
+                <pre><code>.avatar {
   clip-path: circle(50%);
 }
 .banner {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is BEM methodology?</div>
-            <div class="a">
-              <p>BEM (Block Element Modifier) is a CSS naming convention that structures class names as block__element--modifier for better readability and maintainability.</p>
-              <pre><code>.card { }                  /* Block */
+            <div class="faq">
+              <div class="q">What is BEM methodology?</div>
+              <div class="a">
+                <p>BEM (Block Element Modifier) is a CSS naming convention that structures class names as
+                  block__element--modifier for better readability and maintainability.</p>
+                <pre><code>.card { }                  /* Block */
 .card__title { }           /* Element */
 .card__title--large { }    /* Modifier */</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS filter property?</div>
-            <div class="a">
-              <p>The filter property applies visual effects like blur, brightness, contrast, grayscale, and drop-shadow to elements.</p>
-              <pre><code>img:hover {
+            <div class="faq">
+              <div class="q">What is the CSS filter property?</div>
+              <div class="a">
+                <p>The filter property applies visual effects like blur, brightness, contrast, grayscale, and
+                  drop-shadow to elements.</p>
+                <pre><code>img:hover {
   filter: brightness(1.1) saturate(1.2);
 }
 .dimmed {
   filter: grayscale(100%);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Specificity hierarchy?</div>
-            <div class="a">
-              <p>Specificity is calculated as: inline styles (1000) > IDs (100) > classes, attributes, pseudo-classes (10) > elements, pseudo-elements (1).</p>
-              <pre><code>/* Specificity: 0,0,0,1 */
+            <div class="faq">
+              <div class="q">What is CSS Specificity hierarchy?</div>
+              <div class="a">
+                <p>Specificity is calculated as: inline styles (1000) &gt; IDs (100) &gt; classes, attributes,
+                  pseudo-classes (10) &gt; elements, pseudo-elements (1).</p>
+                <pre><code>/* Specificity: 0,0,0,1 */
 p { color: black; }
 /* Specificity: 0,0,1,0 */
 .text { color: gray; }
 /* Specificity: 0,1,0,0 */
 #intro { color: navy; }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS will-change property?</div>
-            <div class="a">
-              <p>will-change hints to the browser about which properties will change, allowing it to optimize rendering in advance for smoother animations.</p>
-              <pre><code>.animated {
+            <div class="faq">
+              <div class="q">What is the CSS will-change property?</div>
+              <div class="a">
+                <p>will-change hints to the browser about which properties will change, allowing it to optimize
+                  rendering in advance for smoother animations.</p>
+                <pre><code>.animated {
   will-change: transform, opacity;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What are CSS Combinators?</div>
-            <div class="a">
-              <p>Combinators define relationships between selectors: descendant (space), child (&gt;), adjacent sibling (+), and general sibling (~).</p>
-              <pre><code>div p      { }   /* descendant */
-div > p    { }   /* direct child */
+            <div class="faq">
+              <div class="q">What are CSS Combinators?</div>
+              <div class="a">
+                <p>Combinators define relationships between selectors: descendant (space), child (&gt;), adjacent
+                  sibling (+), and general sibling (~).</p>
+                <pre><code>div p      { }   /* descendant */
+div &gt; p    { }   /* direct child */
 h2 + p     { }   /* adjacent sibling */
 h2 ~ p     { }   /* general sibling */</code></pre>
+              </div>
             </div>
-          </div>
-          <h2 class="pt-4">Advanced CSS3 Interview Questions</h2>
-          <div class="faq">
-            <div class="q">What is the CSS Cascade?</div>
-            <div class="a">
-              <p>The cascade is the algorithm CSS uses to resolve conflicting rules by evaluating origin, importance, specificity, and source order.</p>
+
+            <!-- Advanced Section -->
+            <h2
+              style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 24px; margin-top: 50px; padding-top: 40px; border-top: 2px solid #e2e8f0;">
+              <i class="fa-solid fa-rocket" style="color: #3b82f6; margin-right: 10px;"></i>Advanced CSS Interview
+              Questions
+            </h2>
+            <p style="font-size: 1rem; color: #334155; line-height: 1.8; margin-bottom: 30px;">Explore advanced CSS
+              techniques and concepts that experienced developers and frontend engineers should master.</p>
+            <div class="faq">
+              <div class="q">What is the CSS Cascade?</div>
+              <div class="a">
+                <p>The cascade is the algorithm CSS uses to resolve conflicting rules by evaluating origin, importance,
+                  specificity, and source order.</p>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Containment?</div>
-            <div class="a">
-              <p>CSS containment (contain property) isolates a subtree from the rest of the document for layout, style, paint, or size, improving rendering performance.</p>
-              <pre><code>.widget {
+            <div class="faq">
+              <div class="q">What is CSS Containment?</div>
+              <div class="a">
+                <p>CSS containment (contain property) isolates a subtree from the rest of the document for layout,
+                  style, paint, or size, improving rendering performance.</p>
+                <pre><code>.widget {
   contain: layout paint;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What are CSS Logical Properties?</div>
-            <div class="a">
-              <p>Logical properties use flow-relative terms (inline, block, start, end) instead of physical directions, supporting internationalization and RTL layouts.</p>
-              <pre><code>.text {
+            <div class="faq">
+              <div class="q">What are CSS Logical Properties?</div>
+              <div class="a">
+                <p>Logical properties use flow-relative terms (inline, block, start, end) instead of physical
+                  directions, supporting internationalization and RTL layouts.</p>
+                <pre><code>.text {
   margin-inline-start: 16px;
   padding-block: 8px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS Grid subgrid?</div>
-            <div class="a">
-              <p>Subgrid allows a nested grid to inherit and align to the parent grid's tracks, enabling consistent alignment across nested components.</p>
-              <pre><code>.parent {
+            <div class="faq">
+              <div class="q">What is the CSS Grid subgrid?</div>
+              <div class="a">
+                <p>Subgrid allows a nested grid to inherit and align to the parent grid's tracks, enabling consistent
+                  alignment across nested components.</p>
+                <pre><code>.parent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -793,35 +1147,38 @@ h2 ~ p     { }   /* general sibling */</code></pre>
   display: grid;
   grid-template-columns: subgrid;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What are CSS Container Queries?</div>
-            <div class="a">
-              <p>Container queries allow styling an element based on its parent container's size rather than the viewport size, enabling truly component-level responsiveness.</p>
-              <pre><code>.card-wrapper {
+            <div class="faq">
+              <div class="q">What are CSS Container Queries?</div>
+              <div class="a">
+                <p>Container queries allow styling an element based on its parent container's size rather than the
+                  viewport size, enabling truly component-level responsiveness.</p>
+                <pre><code>.card-wrapper {
   container-type: inline-size;
 }
 @container (min-width: 400px) {
   .card { flex-direction: row; }
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS :has() selector?</div>
-            <div class="a">
-              <p>The :has() relational pseudo-class selects a parent element based on whether it contains a specific child, acting as a "parent selector".</p>
-              <pre><code>/* Style form group if input is invalid */
+            <div class="faq">
+              <div class="q">What is the CSS :has() selector?</div>
+              <div class="a">
+                <p>The :has() relational pseudo-class selects a parent element based on whether it contains a specific
+                  child, acting as a "parent selector".</p>
+                <pre><code>/* Style form group if input is invalid */
 .form-group:has(input:invalid) {
   border-color: red;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS @layer rule?</div>
-            <div class="a">
-              <p>The @layer rule defines cascade layers to explicitly control the order of specificity, making large-scale CSS architecture more manageable.</p>
-              <pre><code>@layer base, components, utilities;
+            <div class="faq">
+              <div class="q">What is the CSS @layer rule?</div>
+              <div class="a">
+                <p>The @layer rule defines cascade layers to explicitly control the order of specificity, making
+                  large-scale CSS architecture more manageable.</p>
+                <pre><code>@layer base, components, utilities;
 
 @layer base {
   p { font-size: 1rem; }
@@ -829,25 +1186,27 @@ h2 ~ p     { }   /* general sibling */</code></pre>
 @layer utilities {
   .mt-4 { margin-top: 16px; }
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Stacking Context?</div>
-            <div class="a">
-              <p>A stacking context is a three-dimensional conceptual space in which elements are stacked along the z-axis, created by properties like position + z-index, opacity, or transform.</p>
-              <pre><code>.context {
+            <div class="faq">
+              <div class="q">What is CSS Stacking Context?</div>
+              <div class="a">
+                <p>A stacking context is a three-dimensional conceptual space in which elements are stacked along the
+                  z-axis, created by properties like position + z-index, opacity, or transform.</p>
+                <pre><code>.context {
   position: relative;
   z-index: 1;
   /* creates new stacking context */
   transform: translateZ(0);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS aspect-ratio property?</div>
-            <div class="a">
-              <p>The aspect-ratio property maintains a consistent width-to-height ratio for an element regardless of the available space.</p>
-              <pre><code>.video-wrapper {
+            <div class="faq">
+              <div class="q">What is the CSS aspect-ratio property?</div>
+              <div class="a">
+                <p>The aspect-ratio property maintains a consistent width-to-height ratio for an element regardless of
+                  the available space.</p>
+                <pre><code>.video-wrapper {
   width: 100%;
   aspect-ratio: 16 / 9;
 }
@@ -855,13 +1214,14 @@ h2 ~ p     { }   /* general sibling */</code></pre>
   width: 48px;
   aspect-ratio: 1;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS scroll-snap property?</div>
-            <div class="a">
-              <p>Scroll snap creates controlled scrolling experiences where the scroll position snaps to defined points within a container.</p>
-              <pre><code>.slider {
+            <div class="faq">
+              <div class="q">What is the CSS scroll-snap property?</div>
+              <div class="a">
+                <p>Scroll snap creates controlled scrolling experiences where the scroll position snaps to defined
+                  points within a container.</p>
+                <pre><code>.slider {
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
@@ -870,110 +1230,120 @@ h2 ~ p     { }   /* general sibling */</code></pre>
   scroll-snap-align: start;
   flex: 0 0 100%;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Paint API (Houdini)?</div>
-            <div class="a">
-              <p>The CSS Paint API (part of Houdini) allows writing JavaScript worklets that programmatically draw custom backgrounds and borders directly in CSS.</p>
+            <div class="faq">
+              <div class="q">What is CSS Paint API (Houdini)?</div>
+              <div class="a">
+                <p>The CSS Paint API (part of Houdini) allows writing JavaScript worklets that programmatically draw
+                  custom backgrounds and borders directly in CSS.</p>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the difference between em and rem for responsive typography?</div>
-            <div class="a">
-              <p>rem scales relative to the root font size making it predictable globally; em compounds based on parent font size making it useful for component-level scaling.</p>
-              <pre><code>:root { font-size: clamp(14px, 2vw, 18px); }
+            <div class="faq">
+              <div class="q">What is the difference between em and rem for responsive typography?</div>
+              <div class="a">
+                <p>rem scales relative to the root font size making it predictable globally; em compounds based on
+                  parent font size making it useful for component-level scaling.</p>
+                <pre><code>:root { font-size: clamp(14px, 2vw, 18px); }
 h1 { font-size: 2.5rem; }
 .badge { font-size: 0.75em; padding: 0.25em 0.5em; }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS clamp() function?</div>
-            <div class="a">
-              <p>clamp() sets a value that scales fluidly between a minimum and maximum, ideal for responsive typography and spacing without media queries.</p>
-              <pre><code>h1 {
+            <div class="faq">
+              <div class="q">What is the CSS clamp() function?</div>
+              <div class="a">
+                <p>clamp() sets a value that scales fluidly between a minimum and maximum, ideal for responsive
+                  typography and spacing without media queries.</p>
+                <pre><code>h1 {
   font-size: clamp(1.5rem, 4vw, 3rem);
 }
 .section {
   padding: clamp(16px, 5vw, 80px);
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Performance Optimization?</div>
-            <div class="a">
-              <p>CSS performance is improved by minimizing reflows, using transform and opacity for animations, avoiding deep selectors, leveraging contain, and using will-change sparingly.</p>
-              <pre><code>/* Prefer transform over top/left */
+            <div class="faq">
+              <div class="q">What is CSS Performance Optimization?</div>
+              <div class="a">
+                <p>CSS performance is improved by minimizing reflows, using transform and opacity for animations,
+                  avoiding deep selectors, leveraging contain, and using will-change sparingly.</p>
+                <pre><code>/* Prefer transform over top/left */
 .animate {
   transition: transform 0.3s ease;
 }
 .animate:hover {
   transform: translateY(-4px); /* GPU composited */
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS content-visibility property?</div>
-            <div class="a">
-              <p>content-visibility skips rendering of off-screen content until it is needed, dramatically improving initial page load performance for long pages.</p>
-              <pre><code>.section {
+            <div class="faq">
+              <div class="q">What is the CSS content-visibility property?</div>
+              <div class="a">
+                <p>content-visibility skips rendering of off-screen content until it is needed, dramatically improving
+                  initial page load performance for long pages.</p>
+                <pre><code>.section {
   content-visibility: auto;
   contain-intrinsic-size: 0 500px;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is CSS Inheritance?</div>
-            <div class="a">
-              <p>Some CSS properties like color, font-family, and line-height are inherited from parent to child automatically; others like margin and padding are not.</p>
-              <pre><code>body {
+            <div class="faq">
+              <div class="q">What is CSS Inheritance?</div>
+              <div class="a">
+                <p>Some CSS properties like color, font-family, and line-height are inherited from parent to child
+                  automatically; others like margin and padding are not.</p>
+                <pre><code>body {
   font-family: 'Inter', sans-serif; /* inherited by all children */
   color: #333;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS initial, inherit, and unset keyword?</div>
-            <div class="a">
-              <p>initial resets a property to its default browser value; inherit forces a property to inherit from its parent; unset resets to inherited value if inheritable, otherwise to initial.</p>
-              <pre><code>.reset {
+            <div class="faq">
+              <div class="q">What is the CSS initial, inherit, and unset keyword?</div>
+              <div class="a">
+                <p>initial resets a property to its default browser value; inherit forces a property to inherit from its
+                  parent; unset resets to inherited value if inheritable, otherwise to initial.</p>
+                <pre><code>.reset {
   color: unset;
   margin: initial;
   font-size: inherit;
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is a CSS Preprocessor?</div>
-            <div class="a">
-              <p>CSS preprocessors like SCSS, SASS, and LESS extend CSS with variables, nesting, mixins, and functions that compile down to standard CSS.</p>
-              <pre><code>$primary: #6200ea;
+            <div class="faq">
+              <div class="q">What is a CSS Preprocessor?</div>
+              <div class="a">
+                <p>CSS preprocessors like SCSS, SASS, and LESS extend CSS with variables, nesting, mixins, and functions
+                  that compile down to standard CSS.</p>
+                <pre><code>$primary: #6200ea;
 
 .button {
   background: $primary;
-  &:hover {
+  &amp;:hover {
     background: darken($primary, 10%);
   }
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is the CSS @supports rule?</div>
-            <div class="a">
-              <p>@supports applies CSS rules conditionally based on whether the browser supports a specific CSS feature, enabling progressive enhancement.</p>
-              <pre><code>@supports (display: grid) {
+            <div class="faq">
+              <div class="q">What is the CSS @supports rule?</div>
+              <div class="a">
+                <p>@supports applies CSS rules conditionally based on whether the browser supports a specific CSS
+                  feature, enabling progressive enhancement.</p>
+                <pre><code>@supports (display: grid) {
   .layout {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }</code></pre>
+              </div>
             </div>
-          </div>
-          <div class="faq">
-            <div class="q">What is Dark Mode in CSS?</div>
-            <div class="a">
-              <p>Dark mode is implemented using the prefers-color-scheme media query to detect the user's system preference and apply alternate color schemes.</p>
-              <pre><code>:root {
+            <div class="faq">
+              <div class="q">What is Dark Mode in CSS?</div>
+              <div class="a">
+                <p>Dark mode is implemented using the prefers-color-scheme media query to detect the user's system
+                  preference and apply alternate color schemes.</p>
+                <pre><code>:root {
   --bg: #ffffff;
   --text: #111111;
 }
@@ -983,343 +1353,116 @@ h1 { font-size: 2.5rem; }
     --text: #ffffff;
   }
 }</code></pre>
+              </div>
             </div>
+
+            <!-- Next Steps Section -->
+            <div
+              style="background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%); border-radius: 12px; padding: 30px; border: 1px solid #93c5fd; margin-top: 50px; margin-bottom: 20px;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #1e40af; margin-bottom: 12px;"><i
+                  class="fa-solid fa-check-circle" style="margin-right: 8px;"></i>Ready to Ace Your CSS Interview?</h3>
+              <p style="color: #1e3a8a; margin: 0; line-height: 1.6;">
+                Master these CSS concepts, practice with real-world examples, and approach your next interview with
+                confidence. Remember, CSS mastery is about understanding not just the "what" but the "why" behind each
+                property and technique.
+              </p>
+            </div>
+
           </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-          <div id="sidebar"></div>
+          <div class="col-sm-4 col-xs-12">
+            <div id="sidebar">
+              <div class="sidebar-wrapper">
+                <h3>Related Tools</h3>
+                <ul class="sidebar-menu">
+                  <li><a href="https://webtoolocean.com/resources/figma-interview-questions/"><span
+                        class="fa fa-caret-right"></span> Figma Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/ui-ux-interview-questions/"><span
+                        class="fa fa-caret-right"></span> UI/UX Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/AI-interview-questions/"><span
+                        class="fa fa-caret-right"></span> AI Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/react-interview-questions/"><span
+                        class="fa fa-caret-right"></span> React Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/html-interview-questions/"><span
+                        class="fa fa-caret-right"></span> HTML Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/css-interview-questions/"><span
+                        class="fa fa-caret-right"></span> CSS Interview Questions</a></li>
+                  <li><a href="https://webtoolocean.com/resources/javascript-interview-questions/"><span
+                        class="fa fa-caret-right"></span> JavaScript Interview Questions</a></li>
+                </ul>
+              </div>
+              <style>
+                @import url("https://webtoolocean.com/css/sidebar.css");
+              </style>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- SEO Text Section -->
-  <section class="section py-5 bg-light">
-    <div class="container">
-      <p>CSS3 (Cascading Style Sheets, Level 3) is the latest evolution of the styling language that controls the visual presentation of HTML documents. From basic text styling to complex animations, responsive layouts, and 3D transforms, CSS3 has transformed the way developers build modern web interfaces. Every frontend developer, UI engineer, and full-stack developer is expected to have a solid understanding of CSS3 in today's job market.</p>
-      <p><strong>Key CSS3 topics covered in interviews include:</strong></p>
-      <ul>
-        <li>CSS Fundamentals, Selectors, and Specificity</li>
-        <li>Box Model and Layout Techniques</li>
-        <li>Flexbox and CSS Grid</li>
-        <li>Responsive Design and Media Queries</li>
-        <li>CSS Animations and Transitions</li>
-        <li>CSS Variables and Custom Properties</li>
-        <li>Pseudo-classes and Pseudo-elements</li>
-        <li>CSS Architecture and Performance Optimization</li>
-      </ul>
-      <p>From foundational concepts like the box model, selectors, and specificity to advanced topics like CSS custom properties, animations, clipping, masking, and CSS architecture methodologies like BEM, this guide covers everything you need to confidently answer CSS3 interview questions at any level. Whether you are preparing for a frontend developer, UI developer, or full-stack engineer role, these questions and answers will help you stand out in your next interview.</p>
-    </div>
-  </section>
-</main>
-<!-- InstanceEndEditable -->
-<div class="clearfix"></div>
-<footer role="contentinfo" class="footer light newfooter">
-  <article class="footer-top">
-    <div class="container">
-      <div class="row">  
-        
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Popular Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/image-tools/image-converter/">Image
-                Converter</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to
-                Text (OCR)</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress
-                Images</a></li>
-              <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/clip-image/">Clip Image </a></li>
-              <li><a href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Support</h4>
-            <ul>
-              <li> <a href="https://webtoolocean.com/about/">About Us</a></li>
-              <li> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a></li>
-              <li> <a href="https://webtoolocean.com/cookie-policy/">Cookie Policy</a></li>
-              <li> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a></li>
-              <li> <a href="https://webtoolocean.com/terms-conditions/">Terms &amp; Conditions</a></li>
-              <li> <a href="https://webtoolocean.com/blog/">Blog</a></li>
-              <li> <a href="https://webtoolocean.com/resources/">Resources</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Calculator Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/calculators/age-calculator/"> Age Calculator</a></li>
-    <li><a href="https://webtoolocean.com/calculators/emi-calculator/"> EMI  Calculator</a></li>
-             <!-- <li><a href="https://webtoolocean.com/calculators/basic-calculator">Basic Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/percentage-calculator">Percentage Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/currency-calculator">Currency Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/unit-calculator">Unit Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/date-calculator">Date Difference</a></li>
-              <li><a href="https://webtoolocean.com/calculators/bmi-calculator">BMI Calculator</a></li>-->
-            </ul>
-          </div>
-        </div>
-		  <div class="col-md-3 col-sm-12 mb-3">
-          <div class="mb-3"> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
-          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
-            Fast, secure and easy to use on desktop &amp; mobile. </p>
-          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
-          <p class="footer-text mb-1"> <i class="fa fa-instagram"></i> <a href="https://www.instagram.com/webtoolocean">Follow us</a> </p>
-        </div>
-      </div>
-    </div>
-  </article>
-  
-  <!-- Bottom Menu -->
-  <article id="copyrights">
-    <div class="container text-center">
-		   <div class="row">  <div class="col-md-7 col-xs-12 md-text-left text-center"><p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | All Rights Reserved </p></div>
-		<div class="col-md-5 col-xs-12 md-text-right text-center"><a href="https://webtoolocean.com/sitemap">Sitemap</a></div>
-      </div>
-    </div>
-  </article>
-</footer>
-<a href="#" id="backToTop" aria-label="Back to Top">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-  <path d="M12 5L5 12H9V19H15V12H19L12 5Z"
-              fill="currentColor"/>
-</svg>
-</a>
-<div class="clearfix"></div>
-<script src="https://webtoolocean.com/js/jquery.js"></script> 
-<!-- InstanceBeginEditable name="EditRegion5" --> 
-<script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script> 
-<script>
-document.querySelectorAll('.q').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('active'));
-</script> 
-<script>
-fetch('/resources/sidebar.html')
-    .then(response => response.text())
-    .then(data => {
+    </section>
+    <!-- SEO Text Section -->
+
+
+
+
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .faq {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .faq .q {
+      padding: 18px 50px 18px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      font-size: 18px;
+      transition: .3s;
+    }
+
+    .faq .a {
+      padding: 16px 16px;
+      display: none;
+    }
+
+    .faq .q:after {
+      content: "▼";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: .3s;
+      font-size: 14px;
+    }
+
+    .faq.active .q:after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .faq.active .a {
+      display: block
+    }
+  </style>
+  <script>
+    document.querySelectorAll('.q').forEach(x => x.onclick = () => x.parentElement.classList.toggle('active'));
+  </script>
+  <script>
+    fetch('/resources/sidebar.html')
+      .then(response => response.text())
+      .then(data => {
         document.getElementById('sidebar').innerHTML = data;
-    });
-</script> 
-<!-- InstanceEndEditable --> 
-<script>
-const backToTop = document.getElementById('backToTop');
-
-window.addEventListener('scroll', function() {
-
-    if (window.scrollY > 300) {
-        backToTop.classList.add('show');
-    } else {
-        backToTop.classList.remove('show');
-    }
-
-});
-
-backToTop.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-</script> 
-<!--<script>
-		const btn = document.getElementById("togglemeu");
-const menu = document.querySelector(".mainmenubar");
-
-btn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-	</script> 
-<script id="3q6qk9">
-document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-});
-</script> 
-<script id="7c7b4s">
-document.addEventListener("keydown", function(e){
-
-    if (e.key === "F12") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.key === "I") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.key === "J") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.key === "U") {
-        e.preventDefault();
-    }
-
-});
-</script> 
-<script id="5h2r0p">
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-document.addEventListener("keydown", function(e){
-
-if(e.key=="F12"){e.preventDefault();}
-
-if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
-
-if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
-
-if(e.ctrlKey && e.key=="U"){e.preventDefault();}
-
-});
-
-setInterval(function(){
-
-if(window.outerWidth - window.innerWidth > 160){
-document.body.innerHTML="Access Restricted";
-}
-
-},1000);
-</script> 
-<script>
-document.addEventListener("keydown", function(e) {
-  if (e.ctrlKey && e.key === "u") {
-    e.preventDefault();
-  }
-  if (e.key === "F12") {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
-    e.preventDefault();
-  }
-});
-</script>--> 
-
-<script>
- $(document).ready(function(){
-$("#togglemeu").click(function(){
-$(".mainmenubar").slideToggle();
-
-});
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-</script> 
-
-<!-- Cookie Consent Banner -->
-<div id="cookieConsent" class="cookie-banner shadow-lg">
-  <div class="cookie-content">
-    <div class="cookie-text"> 🍪 We use cookies to improve your experience, analyze traffic, and display relevant ads. By continuing to
-      browse, you agree to our use of cookies. <a href="https://webtoolocean.com/cookie-policy" target="_blank">Learn More</a> </div>
-    <div class="cookie-actions">
-      <button id="acceptCookies" class="btn btn-primary btn-sm"> Accept </button>
-      <button id="declineCookies" class="btn btn-outline-secondary btn-sm"> Decline </button>
-    </div>
-  </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      const cookieBanner = document.getElementById("cookieConsent");
-      const acceptBtn = document.getElementById("acceptCookies");
-      const declineBtn = document.getElementById("declineCookies");
-
-      // Check if user has already made a choice
-      const consent = localStorage.getItem("cookieConsent");
-
-      if (consent) {
-        cookieBanner.style.display = "none";
-      }
-
-      // Accept Cookies
-      acceptBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "accepted");
-        cookieBanner.style.display = "none";
-
-        console.log("Cookies Accepted");
-
-        // Load Analytics / Ad Scripts here if needed
-        // Example:
-        // loadGoogleAnalytics();
       });
-
-      // Decline Cookies
-      declineBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "declined");
-        cookieBanner.style.display = "none";
-
-        console.log("Cookies Declined");
-
-        // Do NOT load analytics or marketing scripts
-      });
-
-    });
-  </script> 
-
-<!--mega menu js below--> 
-
- <script>
-(function(){
-  const pairs=[
-    {btn:document.getElementById('toolsBtn'),wrap:document.getElementById('toolsWrap'),item:document.getElementById('toolsItem')},
-    {btn:document.getElementById('blogBtn'),wrap:document.getElementById('blogWrap'),item:document.getElementById('blogItem')}
-  ];
-
-  function closeAll(){
-    pairs.forEach(({btn,wrap,item})=>{
-      wrap.classList.remove('open');
-      item.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    });
-  }
-
-  pairs.forEach(({btn,wrap,item})=>{
-    let t;
-    function open(){
-      clearTimeout(t);
-      closeAll();
-      wrap.classList.add('open');
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
-    }
-    function sched(){t=setTimeout(()=>{wrap.classList.remove('open');item.classList.remove('open');btn.setAttribute('aria-expanded','false');},160);}
-    btn.addEventListener('click',e=>{e.stopPropagation();wrap.classList.contains('open')?closeAll():open();});
-    item.addEventListener('mouseenter',open);
-    item.addEventListener('mouseleave',sched);
-    wrap.addEventListener('mouseenter',()=>clearTimeout(t));
-    wrap.addEventListener('mouseleave',sched);
-  });
-
-  document.addEventListener('click',closeAll);
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){
-      closeAll();
-      mob.classList.remove('open');
-      ham.classList.remove('open');
-      ham.setAttribute('aria-expanded','false');
-    }
-  });
-
-  const ham=document.getElementById('hamburger');
-  const mob=document.getElementById('mobileMenu');
-  ham.addEventListener('click',()=>{
-    const o=mob.classList.toggle('open');
-    ham.classList.toggle('open',o);
-    ham.setAttribute('aria-expanded',String(o));
-  });
-
-  [['mToolsTitle','mToolsBody'],['mBlogTitle','mBlogBody']].forEach(([tid,bid])=>{
-    document.getElementById(tid).addEventListener('click',function(){
-      const b=document.getElementById(bid);
-      const isOpen=b.classList.toggle('open');
-      this.classList.toggle('expanded',isOpen);
-    });
-  });
-})();
-</script>
+  </script>
 </body>
-<!-- InstanceEnd --></html>
+
+</html>

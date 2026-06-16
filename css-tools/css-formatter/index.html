@@ -1,19 +1,16 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
-<!-- InstanceBeginEditable name="EditRegion4" -->
-<!-- ===================================================== -->
- 
-<!-- PAGE TITLE (Important for Google Ranking) -->
-<title>Free CSS Formatter & Beautifier Online – Format and Organize CSS - Web Tool Ocean</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>Free CSS Formatter & Beautifier Online – Organize, Beautify & Minify CSS - Web Tool Ocean</title>
 
 <!-- ===================================================== -->
 <!-- META DESCRIPTION (150–160 characters recommended) -->
-<meta name="description" content="Format and beautify your CSS code instantly with our free CSS Formatter tool. Clean, organize and optimize CSS code online for better readability and development.">
+<meta name="description" content="Format, beautify, and optimize CSS code instantly with our free online CSS Formatter. Organize stylesheets, improve readability, and download clean CSS.">
 
 <!-- ===================================================== -->
 <!-- SEO KEYWORDS (Optional but useful for other search engines) -->
@@ -33,13 +30,13 @@
 
 <!-- ===================================================== -->
 <!-- CANONICAL URL -->
-<link rel="canonical" href="https://webtoolocean.com/developer-tools/css-formatter/">
+<link rel="canonical" href="https://webtoolocean.com/css-tools/css-formatter/">
 
 <!-- ===================================================== -->
 <!-- OPEN GRAPH (FACEBOOK / LINKEDIN SHARING) -->
 <meta property="og:title" content="Free CSS Formatter & Beautifier Online">
-<meta property="og:description" content="Beautify and format CSS code instantly with our free online CSS Formatter. Improve readability and organize your stylesheets easily.">
-<meta property="og:url" content="https://webtoolocean.com/developer-tools/css-formatter/index.html">
+<meta property="og:description" content="Beautify, organize, and minify CSS code instantly with our free online CSS Formatter. Improve readability and optimize stylesheets for the web.">
+<meta property="og:url" content="https://webtoolocean.com/css-tools/css-formatter/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Web Tool Ocean">
 <meta property="og:image" content="https://webtoolocean.com/images/preview.png">
@@ -48,55 +45,1860 @@
 <!-- TWITTER SEO -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free CSS Formatter & Beautifier Tool">
-<meta name="twitter:description" content="Format and beautify CSS code online instantly. Clean and organize your stylesheets using our free CSS Formatter tool.">
+<meta name="twitter:description" content="Format, beautify, and minify CSS online instantly. Clean and organize your stylesheets with our free CSS Formatter tool.">
 <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
 
 <!-- ===================================================== -->
-<!-- THEME COLOR -->
-<meta name="theme-color" content="#0d6efd">
-
-<!-- ===================================================== -->
-<!-- STRUCTURED DATA (SCHEMA MARKUP FOR GOOGLE) -->
 <script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@type": "SoftwareApplication",
-"name": "CSS Formatter Tool",
-"operatingSystem": "All",
-"applicationCategory": "DeveloperApplication",
-"description": "Free online CSS Formatter tool to beautify and organize CSS code for better readability and development.",
-"url": "https://webtoolocean.com/developer-tools/css-formatter/",
-"offers": {
-"@type": "Offer",
-"price": "0",
-"priceCurrency": "USD"
-}
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a CSS Formatter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CSS formatter restructures CSS code into clean, readable formatting by adding indentation, line breaks, and logical grouping for easier editing and maintenance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between CSS beautify and CSS minify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSS beautify improves code readability by adding spaces and line breaks, while CSS minify reduces file size by removing unnecessary whitespace and comments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this CSS formatter free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This online CSS formatter is completely free to use in your browser, with no installation or signup required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool store my CSS code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All CSS processing happens locally in your browser. Your code is not uploaded or stored on any external server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I upload a CSS file to this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can upload a .css file, and the tool will format, organize, or minify the stylesheet directly in the browser."
+      }
+    }
+  ]
 }
 </script>
-<!-- ===================================================== -->
-<!-- ===================================================== -->
-	
-<!--CSS for the website-->
-   <!-- CSS for the page -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
- <style>
-.CodeMirror { 
-    height: 350px !important;
-    color: #000; 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <!-- SoftwareApplication schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Free CSS Formatter & Beautifier",
+    "description": "Format, beautify, and minify CSS code instantly in your browser. Organize stylesheets, improve readability, and download clean CSS.",
+    "url": "https://webtoolocean.com/css-tools/css-formatter/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    "author": { "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" },
+    "publisher": { "@type": "Organization", "name": "WebToolOcean" },
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "featureList": ["Beautify CSS","Minify CSS","Upload .css files","Live preview","Download formatted CSS"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" }
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <main role="main" id="content">
+
+    <!-- ═══════════════════════════════════════════════════════
+    1. BREADCRUMB
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/all-tools/">Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/css-tools/">CSS Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">CSS Formatter</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+    2. PAGE HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="ic-hero">
+      <div class="container">
+        <div class="hero-tag"><i class="fa-solid fa-code"></i> CSS Tools</div>
+        <h1>Free CSS Formatter &amp; Beautifier –<br><span>Organize, Beautify, and Minify CSS Instantly</span></h1>
+        <p class="hero-desc">Clean up messy stylesheets, organize selectors into logical sections, and reduce CSS file size with our browser-based CSS Formatter. No signup, no upload, and no software required.</p>
+        <div class="ic-trust-badges">
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> 100% Free</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> No Signup</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Browser-Based</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Fast Results</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Private &amp; Secure</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ic-content">
+      <div class="container">
+
+        <!-- ═══════════════════════════════════════════════════════
+        MAIN WIDGET
+        ═══════════════════════════════════════════════════════ -->
+      <section class="mt-5">
+    <div class="container mt-2">
+ <div class="text-center">
+<h1>Advanced CSS Formatter</h1>
+<p><b>Organize, Beautify, Minify and Analyze CSS</b></p>
+</div>
+ 
+<div class="row">
+<div class="col-lg-6">
+
+<label class="small-header">Input CSS</label>
+<textarea id="cssInput" class="form-control" placeholder="Input CSS code and see magic"></textarea>
+
+<div class="file-upload-wrapper mt-3">
+  <label for="fileUpload" class="file-upload-label">
+    <i class="fa-solid fa-file-arrow-up"></i> Upload CSS file
+  </label>
+  <input type="file" id="fileUpload" class="form-control file-upload-input" accept=".css">
+</div>
+<div id="cssErrors" style="margin-top:15px;"></div>
+<div class="mt-3">
+
+<!-- <button class="btn btn-primary btn-main" id="organizeBtn">Organize CSS</button> -->
+<button class="btn btn-success btn-main" id="beautifyBtn">Beautify</button>
+<button class="btn btn-warning btn-main" id="minifyBtn">Minify</button> 
+<button class="btn btn-danger btn-main" id="clearBtn">Clear</button>
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+<label  class="small-header">Output CSS</label>
+
+<textarea id="cssOutput" class="form-control" readonly placeholder="Formatted CSS output"></textarea>
+
+<div class="form-check form-switch mt-3">
+  <input class="form-check-input" type="checkbox" id="sortProperties">
+  <label class="form-check-label" for="sortProperties">Sort CSS properties alphabetically</label>
+</div>
+<div class="form-check form-switch mt-2">
+  <input class="form-check-input" type="checkbox" id="removeComments">
+  <label class="form-check-label" for="removeComments">Remove CSS comments</label>
+</div>
+<div class="form-check form-switch mt-2">
+  <input class="form-check-input" type="checkbox" id="autoFormatPaste" checked>
+  <label class="form-check-label" for="autoFormatPaste">Auto format on paste</label>
+</div>
+
+<button class="btn btn-info mt-3" id="downloadBtn">Download CSS</button>
+<button class="btn btn-info mt-3" id="copyBtn">Copy CSS</button>
+<div id="copyToast" class="toast-message" aria-live="polite" aria-atomic="true"></div>
+
+<div class="stats" id="stats">
+
+<p><strong>CSS Statistics</strong></p>
+
+<div>Total Selectors: <span id="selectors">0</span></div>
+<div>Total Rules: <span id="rules">0</span></div>
+<div>Original Size: <span id="originalSize">0</span> bytes</div>
+<div>Formatted Size: <span id="newSize">0</span> bytes</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+  </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+        KEY FEATURES
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Features</span>
+            <h2>Powerful CSS Formatting and Optimization</h2>
+            <p>Clean, organize, and optimize your stylesheet with instant formatting, grouping, and size reduction for better readability and faster loading.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue"><i class="fa-solid fa-layer-group" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Automatic CSS Organization</div>
+                <p class="fmt-desc">Group styles into logical sections like Header, Navigation, Footer, Layout, Typography, and Utilities for easier maintenance.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald"><i class="fa-solid fa-magic" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">CSS Beautifier</div>
+                <p class="fmt-desc">Turn compact or messy CSS into readable code with consistent indentation, spacing, and structure.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet"><i class="fa-solid fa-compress" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">CSS Minifier</div>
+                <p class="fmt-desc">Remove whitespace and unnecessary characters to reduce stylesheet size and improve page load performance.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-amber"><i class="fa-solid fa-chart-simple" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">CSS Statistics</div>
+                <p class="fmt-desc">View selector counts, rule totals, and size changes to better understand stylesheet complexity and optimization gains.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        HOW TO USE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">How to Use</span>
+            <h2>How to Use the CSS Formatter</h2>
+            <p>Paste your CSS or upload a file, choose the action you need, and download polished, production-ready CSS.</p>
+          </div>
+          <div class="ic-steps-wrap">
+            <div class="ic-steps">
+              <div class="ic-step-card">
+                <div class="step-num">1</div>
+                <span class="step-icon">📋</span>
+                <h4>Paste or Upload CSS</h4>
+                <p>Insert your CSS directly into the editor or upload a .css file to load your stylesheet automatically.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">2</div>
+                <span class="step-icon">⚙️</span>
+                <h4>Choose Your Action</h4>
+                <p>Select Organize, Beautify, or Minify to transform your CSS in seconds.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">3</div>
+                <span class="step-icon">👁️</span>
+                <h4>Review the Output</h4>
+                <p>Inspect the formatted code and verify the selector counts, rule totals, and file size changes.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">4</div>
+                <span class="step-icon">💾</span>
+                <h4>Download or Copy</h4>
+                <p>Download the refined CSS or copy it directly to your clipboard for immediate use in your project.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FORMAT COMPARISON TABLE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Compare Actions</span>
+            <h2>Beautify vs Minify vs Organize</h2>
+            <p>Choose the right CSS transformation depending on whether you need readability, performance, or structure.</p>
+          </div>
+          <div class="ic-info-table-wrap">
+            <table class="ic-info-table">
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Purpose</th>
+                  <th>Best For</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="fmt-tag">Beautify</span></td>
+                  <td>Improve readability</td>
+                  <td>Editing, reviewing, and debugging CSS</td>
+                  <td>Formatted, easy-to-read code</td>
+                </tr>
+                <tr>
+                  <td><span class="fmt-tag">Minify</span></td>
+                  <td>Reduce file size</td>
+                  <td>Production deployment and performance optimization</td>
+                  <td>Compressed CSS with no extra whitespace</td>
+                </tr>
+                <tr>
+                  <td><span class="fmt-tag">Organize</span></td>
+                  <td>Group related styles</td>
+                  <td>Large stylesheets and team handoffs</td>
+                  <td>Structured sections for headers, navigation, layouts, and utilities</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        BENEFITS
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Benefits</span>
+            <h2>Why Use a CSS Formatter?</h2>
+            <p>Improve your development workflow with cleaner, faster, and simpler CSS.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue"><i class="fa-solid fa-eye" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Improved Readability</div>
+                <p class="fmt-desc">Well-formatted CSS is easier to scan and maintain, reducing errors and speeding up development.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald"><i class="fa-solid fa-sitemap" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Organized Stylesheets</div>
+                <p class="fmt-desc">Group similar rules together so you can quickly find and update styles across your project.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet"><i class="fa-solid fa-rocket" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Faster Load Times</div>
+                <p class="fmt-desc">Minified CSS improves website performance by reducing download size and speeding up rendering.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-amber"><i class="fa-solid fa-bug" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Easier Debugging</div>
+                <p class="fmt-desc">Clean code lets you spot broken selectors, duplicate rules, and layout issues faster.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-cyan"><i class="fa-solid fa-clock" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Save Time</div>
+                <p class="fmt-desc">Automated formatting eliminates manual cleanup so you can focus on design and logic instead of spacing.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-rose"><i class="fa-solid fa-lock" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Private and Secure</div>
+                <p class="fmt-desc">All processing happens locally in your browser, so your CSS never leaves your device.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FAQ
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about using the CSS Formatter on Web Tool Ocean.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+                <div class="ic-faq-item open" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">What is a CSS Formatter?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">A CSS formatter restructures stylesheets into clean, readable code by adding proper indentation, spacing, and section grouping.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">What is the difference between CSS beautify and CSS minify?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Beautify makes CSS easier to read by formatting it, while minify removes spaces and comments to reduce file size for production.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Is this CSS formatter free to use?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. This tool is free to use in your browser with no signup, no downloads, and no hidden fees.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Does this tool store my CSS code?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">No. Your CSS is processed locally in the browser and is not uploaded or stored on a server.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I upload a CSS file?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. Upload a .css file and the tool will load it into the editor so you can format, organize, or minify it instantly.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">How does automatic CSS organization work?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">The tool analyzes selectors and groups rules into categories like header, navigation, layout, typography, utilities, and footer styles to make large stylesheets easier to manage.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Will formatting affect CSS behavior?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">No. Formatting changes only whitespace and indentation. The resulting CSS is functionally equivalent to the original code.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Does this tool work on mobile?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. The interface is responsive and works on desktop, tablet, and mobile devices.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I copy the formatted CSS?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Absolutely. Use the Copy button to copy formatted CSS to your clipboard, or click Download to save it as a file.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">What if my stylesheet uses custom properties?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">The formatter preserves custom properties and advanced CSS syntax while improving readability and structure.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        WHY WEBTOOLOCEAN
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Why Web Tool Ocean</span>
+            <h2>Why Use Our CSS Formatter?</h2>
+            <p>Trusted by developers for fast, secure, and browser-based CSS formatting without the need for installs or accounts.</p>
+          </div>
+          <div class="ic-why-grid">
+            <div class="ic-why-card">
+              <div class="why-icon bg-blue"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Instant Formatting</h4>
+              <p>Format and optimize CSS in seconds using your browser without any server round-trips.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-emerald"><i class="fa-solid fa-lock"></i></div>
+              <h4>100% Private &amp; Secure</h4>
+              <p>Your CSS stays on your device. Nothing is uploaded or stored on external servers.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-violet"><i class="fa-solid fa-download"></i></div>
+              <h4>Download Ready CSS</h4>
+              <p>Save formatted CSS immediately with a single click for integration into your project.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-orange"><i class="fa-solid fa-mobile-screen"></i></div>
+              <h4>Works on Any Device</h4>
+              <p>The tool is fully responsive and works beautifully on desktop, tablet, and mobile devices.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-cyan"><i class="fa-solid fa-file-lines"></i></div>
+              <h4>Supports Large Stylesheets</h4>
+              <p>Easily process large CSS files and keep your styles organized as your project grows.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-rose"><i class="fa-solid fa-circle-check"></i></div>
+              <h4>Free Forever</h4>
+              <p>No subscriptions, no trials, and no limits — just a free tool for developers and designers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        RELATED TOOLS
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section pb-5">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">More Tools</span>
+            <h2>Related CSS Tools You Might Need</h2>
+            <p>Explore more free CSS utilities from Web Tool Ocean — all browser-based and easy to use.</p>
+          </div>
+          <div class="ic-related-grid">
+            <a href="/css-tools/box-shadow-generator/" class="ic-related-card">
+              <div class="rel-icon bg-indigo"><i class="fa-solid fa-square-shadow"></i></div>
+              <div>
+                <div class="rel-name">Box Shadow Generator</div>
+                <div class="rel-desc">Create custom CSS shadows with live preview.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/card-builder/" class="ic-related-card">
+              <div class="rel-icon bg-emerald"><i class="fa-solid fa-id-card"></i></div>
+              <div>
+                <div class="rel-name">Card Builder</div>
+                <div class="rel-desc">Generate modern card layouts with CSS styles.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/clip-image/" class="ic-related-card">
+              <div class="rel-icon bg-violet"><i class="fa-solid fa-crop"></i></div>
+              <div>
+                <div class="rel-name">Clip Image</div>
+                <div class="rel-desc">Create CSS-based image clipping and shapes.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/gradient-generator/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-droplet"></i></div>
+              <div>
+                <div class="rel-name">Gradient Generator</div>
+                <div class="rel-desc">Build beautiful CSS gradients with live controls.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/mult-box-shadow-generator/" class="ic-related-card">
+              <div class="rel-icon bg-amber"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <div class="rel-name">Multi Box Shadow</div>
+                <div class="rel-desc">Generate multi-layer box shadows quickly.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/all-tools/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-grid-2"></i></div>
+              <div>
+                <div class="rel-name">All Tools</div>
+                <div class="rel-desc">Browse every free tool on Web Tool Ocean.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div><!-- /container -->
+    </div><!-- /ic-content -->
+
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+ 
+ <script>
+
+/* ================================
+INITIALIZE CODEMIRROR EDITOR
+================================ */
+
+let editor = CodeMirror.fromTextArea(
+document.getElementById("cssInput"),
+{
+lineNumbers:true,
+mode:"css",
+theme:"default",
+lineWrapping:true
+});
+
+let outputEditor = CodeMirror.fromTextArea(
+document.getElementById("cssOutput"),
+{
+lineNumbers:true,
+mode:"css",
+theme:"default",
+lineWrapping:true,
+readOnly:true
+});
+
+editor.on('change', function(cm, change){
+  if(change.origin === 'paste' && document.getElementById('autoFormatPaste').checked){
+    processCSS('beautify');
+  }
+});
+
+function showErrors(messages){
+  if(!messages.length){
+    document.getElementById('cssErrors').innerHTML = '';
+    return;
+  }
+  document.getElementById('cssErrors').innerHTML = messages.map(function(message){
+    return '<div>• ' + message + '</div>';
+  }).join('');
+}
+
+function validateCSS(css){
+  let errors = [];
+  let braceCount = 0;
+  for(let i = 0; i < css.length; i++){
+    if(css[i] === '{') braceCount++;
+    if(css[i] === '}') braceCount--;
+    if(braceCount < 0){
+      errors.push('Extra closing brace found.');
+      break;
+    }
+  }
+  if(braceCount > 0){
+    errors.push('Missing closing brace.');
+  }
+  let openComments = (css.match(/\/\*/g) || []).length;
+  let closeComments = (css.match(/\*\//g) || []).length;
+  if(openComments !== closeComments){
+    errors.push('Unmatched CSS comment markers.');
+  }
+  return errors;
+}
+
+function removeComments(css){
+  return css.replace(/\/\*[\s\S]*?\*\//g, '');
+}
+
+function splitTopLevelBlocks(css){
+  let blocks = [];
+  let current = '';
+  let depth = 0;
+  let inComment = false;
+  for(let i = 0; i < css.length; i++){
+    let char = css[i];
+    let next = css[i+1];
+    current += char;
+    if(!inComment && char === '/' && next === '*'){
+      inComment = true;
+    } else if(inComment && char === '*' && next === '/'){
+      inComment = false;
+    }
+    if(!inComment){
+      if(char === '{') depth++;
+      if(char === '}') depth--;
+      if(depth === 0 && current.trim()){
+        blocks.push(current.trim());
+        current = '';
+      }
+    }
+  }
+  if(current.trim()) blocks.push(current.trim());
+  return blocks;
+}
+
+function indentLines(text, prefix){
+  return text.split('\n').map(function(line){
+    return line ? prefix + line : line;
+  }).join('\n');
+}
+
+function formatCssBlock(block){
+  let open = block.indexOf('{');
+  let close = block.lastIndexOf('}');
+  if(open === -1 || close === -1){
+    return block.trim();
+  }
+  let selector = block.substring(0, open).trim();
+  let body = block.substring(open + 1, close).trim();
+  let lines = body.split(/;\s*/).map(function(line){ return line.trim(); }).filter(Boolean);
+  return selector + ' {\n  ' + lines.join(';\n  ') + (lines.length ? ';\n}' : '\n}');
+}
+
+function sortRuleProperties(css){
+  let blocks = splitTopLevelBlocks(css);
+  return blocks.map(function(block){
+    let trimmed = block.trim();
+    if(trimmed.startsWith('@media')){
+      let header = trimmed.substring(0, trimmed.indexOf('{')).trim();
+      let inner = trimmed.substring(trimmed.indexOf('{') + 1, trimmed.lastIndexOf('}'));
+      let sortedInner = sortRuleProperties(inner);
+      return header + ' {\n' + indentLines(sortedInner.trim(), '  ') + '\n}';
+    }
+    let start = trimmed.indexOf('{');
+    let end = trimmed.lastIndexOf('}');
+    if(start === -1 || end === -1){
+      return trimmed;
+    }
+    let selector = trimmed.substring(0, start).trim();
+    let body = trimmed.substring(start + 1, end).trim();
+    let lines = body.split(/;\s*/).map(function(line){ return line.trim(); }).filter(Boolean);
+    lines.sort(function(a,b){ return a.localeCompare(b); });
+    if(lines.length){
+      return selector + ' {\n  ' + lines.join(';\n  ') + ';\n}';
+    }
+    return selector + ' {\n}';
+  }).join('\n\n');
+}
+
+/* ================================
+GROUP / ORGANIZE CSS
+================================ */
+
+function groupCSS(css, sortProperties){
+  let header = [], nav = [], footer = [], layout = [], typography = [], utility = [], other = [];
+  let blocks = splitTopLevelBlocks(css);
+
+  blocks.forEach(function(block){
+    let trimmed = block.trim();
+    if(!trimmed) return;
+
+    if(trimmed.startsWith('@media')){
+      let headerText = trimmed.substring(0, trimmed.indexOf('{')).trim();
+      let inner = trimmed.substring(trimmed.indexOf('{') + 1, trimmed.lastIndexOf('}'));
+      let groupedInner = groupCSS(inner, sortProperties);
+      other.push(headerText + ' {\n' + indentLines(groupedInner.trim(), '  ') + '\n}');
+      return;
+    }
+
+    if(trimmed.startsWith('/*') && trimmed.endsWith('*/')){
+      other.push(trimmed);
+      return;
+    }
+
+    let rule = trimmed;
+    let l = rule.toLowerCase();
+
+    if(sortProperties){
+      rule = sortRuleProperties(rule);
+    }
+
+    rule = formatCssBlock(rule);
+
+    if(l.includes('header')) header.push(rule);
+    else if(l.includes('nav')) nav.push(rule);
+    else if(l.includes('footer')) footer.push(rule);
+    else if(l.includes('container') || l.includes('row') || l.includes('grid') || l.includes('flex')) layout.push(rule);
+    else if(l.includes('font') || l.includes('text') || l.includes('line-height')) typography.push(rule);
+    else if(l.includes('btn') || l.includes('margin') || l.includes('padding')) utility.push(rule);
+    else other.push(rule);
+  });
+
+  let result = '';
+  function addSection(title, arr){
+    if(arr.length){
+      result += '\n/* ===== ' + title + ' ===== */\n\n';
+      arr.forEach(function(r){ result += r.trim() + '\n\n'; });
+    }
+  }
+
+  addSection('HEADER', header);
+  addSection('NAVIGATION', nav);
+  addSection('FOOTER', footer);
+  addSection('LAYOUT', layout);
+  addSection('TYPOGRAPHY', typography);
+  addSection('UTILITIES', utility);
+  addSection('OTHER STYLES', other);
+
+  return result.trim() + '\n';
+}
+
+/* ================================
+BEAUTIFY CSS
+================================ */
+
+function beautify(css, sortProperties){
+
+let formatted = css
+.replace(/\s+/g," ")
+.replace(/\s*{\s*/g," {\n  ")
+.replace(/;\s*/g,";\n  ")
+.replace(/\s*}\s*/g,"\n}\n\n")
+.replace(/\n\s+\n/g,"\n");
+
+if(sortProperties){
+  formatted = sortRuleProperties(formatted);
+}
+
+return formatted.trim() + "\n";
+
+}
+
+
+/* ================================
+MINIFY CSS
+================================ */
+
+function minify(css){
+
+return css.replace(/\s+/g," ")
+.replace(/\s*{\s*/g,"{")
+.replace(/\s*}\s*/g,"}")
+.replace(/\s*;\s*/g,";")
+.replace(/\s*:\s*/g,":")
+.trim();
+
+}
+
+
+/* ================================
+CSS STATS
+================================ */
+
+function stats(original,formatted){
+
+let selectorCount = (formatted.match(/{/g)||[]).length;
+
+$("#selectors").text(selectorCount);
+$("#rules").text(selectorCount);
+
+$("#originalSize").text(original.length);
+$("#newSize").text(formatted.length);
+
+}
+
+function processCSS(action){
+  let css = editor.getValue();
+  let options = {
+    sortProperties: $("#sortProperties").is(":checked"),
+    removeComments: $("#removeComments").is(":checked")
+  };
+
+  showErrors([]);
+
+  if(!css.trim()){
+    showErrors(['Please enter CSS to format.']);
+    return;
+  }
+
+  let errors = validateCSS(css);
+  if(errors.length){
+    showErrors(errors);
+    return;
+  }
+
+  if(options.removeComments){
+    css = removeComments(css);
+  }
+
+  let formatted = '';
+  if(action === 'organize'){
+    formatted = groupCSS(css, options.sortProperties);
+  } else if(action === 'beautify'){
+    formatted = beautify(css, options.sortProperties);
+  } else if(action === 'minify'){
+    formatted = minify(css);
+  }
+
+  outputEditor.setValue(formatted);
+  stats(css,formatted);
+}
+
+
+/* ================================
+ORGANIZE BUTTON
+================================ */
+
+// Organize functionality removed; beautify is the preferred default.
+// $("#organizeBtn").click(function(){
+//   processCSS('organize');
+// });
+
+
+/* ================================
+BEAUTIFY BUTTON
+================================ */
+
+$("#beautifyBtn").click(function(){
+  processCSS('beautify');
+});
+
+
+/* ================================
+MINIFY BUTTON
+================================ */
+
+$("#minifyBtn").click(function(){
+  processCSS('minify');
+});
+
+
+/* ================================
+CLEAR BUTTON
+================================ */
+
+$("#clearBtn").click(function(){
+
+  editor.setValue("");
+  outputEditor.setValue("");
+  $("#fileUpload").val("");
+
+  $("#selectors").text("0");
+  $("#rules").text("0");
+  $("#originalSize").text("0");
+  $("#newSize").text("0");
+  showErrors([]);
+
+});
+
+
+/* ================================
+DOWNLOAD CSS
+================================ */
+
+$("#downloadBtn").click(function(){
+
+let text = outputEditor.getValue();
+
+let blob = new Blob([text], {type:"text/css"});
+
+let url = URL.createObjectURL(blob);
+
+let a = document.createElement("a");
+
+a.href = url;
+a.download = "formatted.css";
+
+a.click();
+
+});
+
+
+/* ================================
+COPY CSS
+================================ */
+
+$("#copyBtn").click(function(){
+  let text = outputEditor.getValue();
+  navigator.clipboard.writeText(text).then(function(){
+    showToast('CSS copied to clipboard');
+    $("#copyBtn").text("Copied!");
+    setTimeout(function(){
+      $("#copyBtn").text("Copy CSS");
+    },2000);
+  }).catch(function(){
+    showToast('Unable to copy CSS. Please try again.');
+  });
+});
+
+function showToast(message){
+  let toast = document.getElementById('copyToast');
+  if(!toast) return;
+  toast.textContent = message;
+  toast.classList.add('toast-visible');
+  setTimeout(function(){
+    toast.classList.remove('toast-visible');
+  }, 2600);
+}
+
+
+/* ================================
+UPLOAD CSS FILE (FIXED)
+================================ */
+
+$("#fileUpload").on("change",function(e){
+
+let file = e.target.files[0];
+
+if(!file) return;
+
+if(!file.name.endsWith(".css")){
+
+alert("Please upload a CSS file");
+
+return;
+
+}
+
+let reader = new FileReader();
+
+reader.onload = function(ev){
+  editor.setValue(ev.target.result);
+  editor.setCursor({line:0,ch:0});
+  processCSS('beautify');
+};
+
+reader.readAsText(file);
+
+});
+
+</script>
+  <!-- FAQ ACCORDION -->
+  <script>
+    document.querySelectorAll('.ic-faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.ic-faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.ic-faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <style>
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
+    }
+
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: var(--brand-accent);
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .ic-hero {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, #0f172a 100%);
+      padding: 44px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ic-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ic-hero .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+
+    .ic-hero h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: #f1f5f9;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .ic-hero h1 span {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ic-hero p.hero-desc {
+      color: #94a3b8;
+      font-size: .93rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 22px;
+    }
+
+    .ic-trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 100px;
+      color: #cbd5e1;
+      font-size: .76rem;
+      font-weight: 500;
+      padding: 5px 13px;
+    }
+
+    .ic-badge i {
+      color: #34d399;
+      font-size: .7rem;
+    }
+
+    .ic-content {
+      background: var(--brand-light);
+      padding: 0 0 64px;
+    }
+
+    .ic-section {
+      padding: 52px 0 0;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-section-head {
+      margin-bottom: 28px;
+    }
+
+    .ic-section-head .sec-eyebrow {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head p {
+      color: var(--text-muted);
+      font-size: .88rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0;
+    }
+
+    .ic-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ic-step-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .ic-step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--brand-accent);
+    }
+
+    .ic-step-card .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .ic-step-card .step-icon {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .ic-step-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-step-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .ic-steps-wrap {
+      position: relative;
+    }
+
+    .ic-steps-wrap::before {
+      content: '';
+      position: absolute;
+      top: 54px;
+      left: calc(12.5% + 10px);
+      right: calc(12.5% + 10px);
+      height: 2px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      opacity: .25;
+      z-index: 0;
+    }
+
+    .ic-format-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-format-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-format-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ic-format-card .fmt-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-format-card .fmt-from {
+      font-size: .65rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 600;
+    }
+
+    .ic-format-card .fmt-title {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 4px;
+    }
+
+    .ic-format-card .fmt-desc {
+      font-size: .76rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .bg-blue {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    .bg-cyan {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+    }
+
+    .bg-violet {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    }
+
+    .bg-emerald {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .bg-orange {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+    }
+
+    .bg-rose {
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+    }
+
+    .bg-amber {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .bg-indigo {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+    }
+
+    .ic-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .83rem;
+    }
+
+    .ic-info-table thead th {
+      background: var(--brand-dark);
+      color: #e2e8f0;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .ic-info-table thead th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+
+    .ic-info-table thead th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+
+    .ic-info-table tbody tr {
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ic-info-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .ic-info-table tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    .ic-info-table tbody td {
+      padding: 12px 16px;
+      color: var(--text-body);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .ic-info-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--brand-dark);
+    }
+
+    .ic-info-table-wrap {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .fmt-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: var(--brand-accent);
+      border-radius: 4px;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      margin-right: 4px;
+    }
+
+    .ic-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ic-faq-item {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open {
+      border-color: var(--brand-accent);
+    }
+
+    .ic-faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      cursor: pointer;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .ic-faq-q h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin: 0;
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .ic-faq-q .faq-toggle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open .faq-toggle {
+      background: var(--brand-accent);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .ic-faq-a {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: .85rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    .ic-faq-item.open .ic-faq-a {
+      display: block;
+    }
+
+    .ic-faq-a code {
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: .82rem;
+    }
+
+    .ic-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-why-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-why-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .ic-why-card .why-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .ic-why-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-why-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .ic-related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .ic-related-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      color: inherit;
+    }
+
+    .ic-related-card .rel-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-related-card .rel-name {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 2px;
+    }
+
+    .ic-related-card .rel-desc {
+      font-size: .72rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .ic-related-card .rel-arrow {
+      margin-left: auto;
+      color: var(--brand-accent);
+      font-size: .72rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover .rel-arrow {
+      opacity: 1;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* DROP AREA */
+    #drop-area {
+      border: 2px dashed #cbd5e1;
+      padding: 40px;
+      text-align: center;
+      border-radius: 12px;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    #drop-area.dragover {
+      border-color: #16a34a;
+      background: #ecfdf5;
+    }
+
+    /* BUTTONS */
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .btn-green {
+      background: #065f46;
+      color: white;
+    }
+
+    .btn-red {
+      background: #dc2626;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    /* PROGRESS */
+    #progress-container {
+      display: none;
+      margin: 20px 0;
+    }
+
+    .progress-bar-bg {
+      background: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #progress-bar {
+      height: 14px;
+      width: 0%;
+      background: linear-gradient(90deg, #16a34a, #065f46);
+      transition: width 0.2s;
+    }
+
+    #progress-text {
+      text-align: right;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* FILE CARDS */
+    .file-card {
+      background: #fff;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .file-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .file-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .file-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 0;
+      padding: 8px;
+      min-height: 169px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .ic-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-format-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-steps-wrap::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .ic-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-format-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-related-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+  
+  <style>
+.CodeMirror {
+    min-height: 360px !important;
+    max-height: 520px;
+    color: #000;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.06);
 }
 
 .header-box{
-background:#0d6efd;
-color:white;
-padding:25px;
-border-radius:8px;
-margin-bottom:20px;
+  background:#0d6efd;
+  color:white;
+  padding:25px;
+  border-radius:8px;
+  margin-bottom:20px;
 }
 
  
@@ -105,6 +1907,64 @@ textarea{
 width:100%;
 height:350px;
 font-family:monospace;
+}
+
+.file-upload-wrapper{
+  position: relative;
+}
+
+.file-upload-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-label{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px dashed #0d6efd;
+  background: rgba(59, 130, 246, 0.1);
+  color: #0d6efd;
+  font-weight: 600;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease, border-color .2s ease;
+}
+
+.file-upload-label:hover{
+  background: rgba(59, 130, 246, 0.18);
+  transform: translateY(-1px);
+  border-color: #2563eb;
+}
+
+.toast-message{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: inline-block;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.95);
+  color: #fff;
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .25s ease, transform .25s ease;
+  pointer-events: none;
+}
+
+.toast-visible{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .result-box{
@@ -162,1018 +2022,7 @@ cursor:pointer;
 border-left:4px solid #ff9800;
 font-size:14px;
 }
-</style>   
-<!-- InstanceEndEditable -->
-<!-- Stylesheets     
-	============================================= -->
-
-<!-- Google Fonts --> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-
-<!-- Document Title   
-	============================================= -->
-<!-- InstanceBeginEditable name="doctitle" -->
-<!-- InstanceEndEditable -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4C1PP726EZ');
-</script>
-<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
-     crossorigin="anonymous"></script>
-</head>
-<style>
-body {
-	overflow-x: hidden
-}
-	 
-</style>
-<body class="">
-<!--ACCESSIBILITY CONTROLS   --> 
-
-<!--END ACCESSIBILITY CONTROLS   --> 
-<!-- Document Wrapper	  
-	============================================= --> 
-<!--	 <div class="topnav">
-    <div class="container">
-      <ul>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/blog/">Blog</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/resources/">Resources</a> </li>
-        <li> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a></li>
-    
-      </ul>
-    </div>
-  </div>-->
-
- 
- <header class="site-header">
-  <div class="header-inner"> <a class="logo" href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a>
-    <nav class="main-nav">
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/"><i class="ti ti-home" aria-hidden="true"></i> Home</a> </div>
-      <div class="nav-item has-drop" id="toolsItem">
-        <button class="nav-btn" id="toolsBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-apps" aria-hidden="true"></i> Tools <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item has-drop" id="blogItem">
-        <button class="nav-btn" id="blogBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-writing" aria-hidden="true"></i> Blog <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/resources/"><i class="ti ti-books" aria-hidden="true"></i> Resources</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/about/"><i class="ti ti-users" aria-hidden="true"></i> About Us</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/contact/"><i class="ti ti-mail" aria-hidden="true"></i> Contact</a> </div>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"> <span></span><span></span><span></span> </button>
-  </div>
-  
-  <!-- TOOLS MEGA — anchored full width -->
-  <div class="mega-wrap" id="toolsWrap">
-    <div class="mega">
-      <div class="mega-inner">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/image-tools/image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-refresh" aria-hidden="true"></i></div>
-          <div><span class="link-title">All Image Converter</span><span class="link-desc">Convert between formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">
-          <div class="link-icon icon-purple"><i class="ti ti-scan" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Text (OCR)</span><span class="link-desc">Extract text from images</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/compress-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-file-zip" aria-hidden="true"></i></div>
-          <div><span class="link-title">Compress Images</span><span class="link-desc">Reduce file size</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector" aria-hidden="true"></i></div>
-          <div><span class="link-title">SVG to Image</span><span class="link-desc">SVG → raster formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector-bezier" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to SVG</span><span class="link-desc">Raster → vector SVG</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/favicon-generator/">
-          <div class="link-icon icon-purple"><i class="ti ti-star" aria-hidden="true"></i></div>
-          <div><span class="link-title">Favicon Generator</span><span class="link-desc">Create .ico &amp; PNG favicons</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-base64/">
-          <div class="link-icon icon-purple"><i class="ti ti-code" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Base64</span><span class="link-desc">Encode images to Base64</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/base64-to-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-photo-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 to Image</span><span class="link-desc">Decode Base64 to image</span></div>
-          </a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">
-          <div class="link-icon icon-red"><i class="ti ti-files" aria-hidden="true"></i></div>
-          <div><span class="link-title">Merge PDF</span><span class="link-desc">Combine multiple PDFs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">
-          <div class="link-icon icon-red"><i class="ti ti-reorder" aria-hidden="true"></i></div>
-          <div><span class="link-title">Reorder PDF Pages</span><span class="link-desc">Drag to rearrange</span></div>
-          </a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-brush" aria-hidden="true"></i> CSS Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/css-tools/css-formatter/">
-          <div class="link-icon icon-blue"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
-          <div><span class="link-title">Beautify / Minify CSS</span><span class="link-desc">Format or compress CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-shadow" aria-hidden="true"></i></div>
-          <div><span class="link-title">Box Shadow Generator</span><span class="link-desc">Visual shadow editor</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-layers-subtract" aria-hidden="true"></i></div>
-          <div><span class="link-title">Multi Box Shadow</span><span class="link-desc">Layered shadows</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/clip-image/">
-          <div class="link-icon icon-blue"><i class="ti ti-crop" aria-hidden="true"></i></div>
-          <div><span class="link-title">Clip Image CSS</span><span class="link-desc">Clip-path made easy</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/card-builder/">
-          <div class="link-icon icon-blue"><i class="ti ti-layout-board" aria-hidden="true"></i></div>
-          <div><span class="link-title">CSS Card Builder</span><span class="link-desc">Design CSS cards</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/gradient-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-palette" aria-hidden="true"></i></div>
-          <div><span class="link-title">Gradient Generator</span><span class="link-desc">Build CSS gradients</span></div>
-          </a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-terminal-2" aria-hidden="true"></i> Developer Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/developer-tools/html-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-brand-html5" aria-hidden="true"></i></div>
-          <div><span class="link-title">HTML Formatter</span><span class="link-desc">Beautify HTML markup</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/check-css-error/">
-          <div class="link-icon icon-green"><i class="ti ti-bug" aria-hidden="true"></i></div>
-          <div><span class="link-title">Check CSS Errors</span><span class="link-desc">Lint &amp; validate CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">
-          <div class="link-icon icon-green"><i class="ti ti-lock" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 Encoder-Decoder</span><span class="link-desc">Encode &amp; decode text</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/json-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-braces" aria-hidden="true"></i></div>
-          <div><span class="link-title">JSON Formatter</span><span class="link-desc">Format &amp; validate JSON</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/font-converter/">
-          <div class="link-icon icon-green"><i class="ti ti-typography" aria-hidden="true"></i></div>
-          <div><span class="link-title">Web Font Converter</span><span class="link-desc">Convert font formats</span></div>
-          </a> </div>
-        <div class="mega-col col-amber">
-          <div class="col-head"><i class="ti ti-calculator" aria-hidden="true"></i> Calculators</div>
-          <a class="m-link" href="https://webtoolocean.com/calculators/age-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cake" aria-hidden="true"></i></div>
-          <div><span class="link-title">Age Calculator</span><span class="link-desc">Find your exact age</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/emi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-credit-card" aria-hidden="true"></i></div>
-          <div><span class="link-title">EMI Calculator</span><span class="link-desc">Calculate loan EMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/gst-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-receipt-tax" aria-hidden="true"></i></div>
-          <div><span class="link-title">GST Calculator</span><span class="link-desc">Add or remove GST</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/sip-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-trending-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">SIP Calculator</span><span class="link-desc">Plan mutual fund SIPs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/bmi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i></div>
-          <div><span class="link-title">BMI Calculator</span><span class="link-desc">Check your BMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/percentage-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-percentage" aria-hidden="true"></i></div>
-          <div><span class="link-title">Percentage Calculator</span><span class="link-desc">Calculate percentages</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/discount-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-tag" aria-hidden="true"></i></div>
-          <div><span class="link-title">Discount Calculator</span><span class="link-desc">Find sale price</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/loan-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cash" aria-hidden="true"></i></div>
-          <div><span class="link-title">Loan Calculator</span><span class="link-desc">Compare loan options</span></div>
-          </a> </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- BLOG MEGA — anchored full width -->
-  <div class="mega-wrap" id="blogWrap">
-    <div class="mega">
-      <div class="blog-grid">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-robot" aria-hidden="true"></i> AI Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="blog-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="blog-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="blog-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="blog-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="blog-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="blog-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="blog-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-code" aria-hidden="true"></i> Web Development</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="blog-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="blog-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a> </div>
-        <div class="mega-col col-pink">
-          <div class="col-head"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> UI/UX Design</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="blog-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="blog-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a> </div>
-        <div class="mega-col col-teal">
-          <div class="col-head"><i class="ti ti-search" aria-hidden="true"></i> SEO</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="blog-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="blog-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="blog-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a> </div>
-        <div class="mega-col col-indigo">
-          <div class="col-head"><i class="ti ti-briefcase" aria-hidden="true"></i> Career &amp; Interview</div>
-          <a class="blog-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> </div>
-      </div>
-      <div class="mega-footer"> <a class="footer-link" href="https://webtoolocean.com/blog/"><i class="ti ti-writing" aria-hidden="true"></i> View all blog articles <i class="ti ti-arrow-right" aria-hidden="true"></i></a> </div>
-    </div>
-  </div>
-  
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/"><i class="ti ti-home"></i> Home</a> </div>
-    <div>
-      <div class="m-section-title" id="mToolsTitle"><span><i class="ti ti-apps" style="margin-right:6px;color:#818cf8"></i>Tools</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mToolsBody">
-        <div class="m-cat-head">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/image-tools/image-converter/">All Image Converter</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a> <a class="mob-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages</a>
-        <div class="m-cat-head blue">CSS Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a>
-        <div class="m-cat-head green">Developer Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/check-css-error/">Check CSS Errors</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder-Decoder</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a> <a class="mob-link" href="https://webtoolocean.com/font-converter/">Web Font Converter</a>
-        <div class="m-cat-head amber">Calculators</div>
-        <a class="mob-link" href="https://webtoolocean.com/calculators/age-calculator/">Age Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/emi-calculator/">EMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/gst-calculator/">GST Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/sip-calculator/">SIP Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/bmi-calculator/">BMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/percentage-calculator/">Percentage Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/discount-calculator/">Discount Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/loan-calculator/">Loan Calculator</a> </div>
-    </div>
-    <div>
-      <div class="m-section-title" id="mBlogTitle"><span><i class="ti ti-writing" style="margin-right:6px;color:#818cf8"></i>Blog</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mBlogBody">
-        <div class="m-cat-head">AI Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="mob-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="mob-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="mob-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a>
-        <div class="m-cat-head blue">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="mob-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="mob-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a>
-        <div class="m-cat-head green">Web Development</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="mob-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="mob-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a>
-        <div class="m-cat-head pink">UI/UX Design</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="mob-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="mob-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a>
-        <div class="m-cat-head teal">SEO</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="mob-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="mob-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="mob-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a>
-        <div class="m-cat-head indigo">Career &amp; Interview</div>
-        <a class="mob-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> <a class="mob-link" style="color:#818cf8;font-weight:600;margin-top:8px;display:block" href="https://webtoolocean.com/blog/">View all blog articles →</a> </div>
-    </div>
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/resources/"><i class="ti ti-books"></i> Resources</a> <a class="m-top-link" href="https://webtoolocean.com/about/"><i class="ti ti-users"></i> About Us</a> <a class="m-top-link" href="https://webtoolocean.com/contact/"><i class="ti ti-mail"></i> Contact</a> </div>
-  </div>
-</header>
- 
-<!-- InstanceBeginEditable name="center" -->
- 
-  <!-- Start dynamic content -->
- <!-- <section id="testimonials">
-    <div class="container aniboxes animate__animated text-center">
-      <div id="contentwidget1"></div>
-      <br>
-    </div>
-  </section>-->
-  <!-- End dynamic content -->
-  <div class="clearfix"></div>
-  <!-- End dynamic content --> 
-  
-  <!-- Sevices section -->
-  <section id="content">
-   
-   <section class="py-2">
-    <div class="container mt-2">
- <div class="text-center">
-<h1>Advanced CSS Formatter</h1>
-<p><b>Organize, Beautify, Minify and Analyze CSS</b></p>
-</div>
- 
-<div class="row">
-<div class="col-lg-6">
-
-<label class="small-header">Input CSS</label>
-<textarea id="cssInput" class="form-control" placeholder="Input CSS code and see magic"></textarea>
-
-<input type="file" id="fileUpload" class="form-control mt-3">
-<div id="cssErrors" style="margin-top:15px;"></div>
-<div class="mt-3">
-
-<button class="btn btn-primary btn-main" id="organizeBtn">Organize CSS</button>
-<button class="btn btn-success btn-main" id="beautifyBtn">Beautify</button>
-<button class="btn btn-warning btn-main" id="minifyBtn">Minify</button> 
-<button class="btn btn-danger btn-main" id="clearBtn">Clear</button>
-
-</div>
-
-</div>
-
-<div class="col-lg-6">
-
-<label  class="small-header">Output</label>
-
-<div class="result-box" id="output"></div>
-
-<button class="btn btn-info mt-3" id="downloadBtn">Download CSS</button>
-<button class="btn btn-info mt-3" id="copyBtn">Copy CSS</button>
-
-<div class="stats" id="stats">
-
-<p><strong>CSS Statistics</strong></p>
-
-<div>Total Selectors: <span id="selectors">0</span></div>
-<div>Total Rules: <span id="rules">0</span></div>
-<div>Original Size: <span id="originalSize">0</span> bytes</div>
-<div>Formatted Size: <span id="newSize">0</span> bytes</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-  </section>
-  <section class="seo-content mt-5">
-
-<div class="container">
-
-<h1 class="mb-4">Advanced CSS Formatter  </h1>
-<p><b>Organize, Beautify, Minify & Analyze CSS</b></p>
-<p>
-Managing large CSS files can quickly become messy and difficult to maintain. Our <strong>Advanced CSS Formatter</strong> helps developers automatically organize, beautify, and optimize CSS code in seconds. Whether you're cleaning up existing styles or working on a large project, this tool restructures your CSS into clear and readable sections.
-</p>
-
-<p>
-The tool intelligently groups CSS into logical categories such as <strong>Header, Navigation, Footer, Layout, Typography, Utilities, and Other Styles</strong>, making it easier to maintain and debug your code.
-</p>
-
-
-<h2 class="mt-4">Key Features</h2>
-
-<div class="row mt-3">
-
-<div class="col-md-6 mb-3">
-<h2>Automatic CSS Organization</h2>
-<p>
-Automatically organize CSS rules into structured sections including header styles, navigation styles, footer styles, layout components, typography rules, and utility classes.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h2>CSS Beautifier</h2>
-<p>
-Convert messy or compressed CSS into clean and readable code with proper spacing and formatting. This makes editing and reviewing stylesheets much easier.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h2>CSS Minifier</h2>
-<p>
-Reduce CSS file size by removing unnecessary whitespace and formatting. Smaller files improve website performance and loading speed.
-</p>
-</div>
-
-<div class="col-md-6 mb-3">
-<h22>CSS Statistics Analyzer</h2>
-<p>
-Analyze your CSS file with built-in statistics including selector count, rule count, original size, and optimized size.
-</p>
-</div>
-
-</div>
-
-
-<h2 class="mt-4">How to Use the Tool</h2>
-
-<ol>
-<li>Paste your CSS code into the editor or upload a <code>.css</code> file.</li>
-<li>Select an action such as <strong>Organize CSS</strong>, <strong>Beautify CSS</strong>, or <strong>Minify CSS</strong>.</li>
-<li>Review the formatted CSS output.</li>
-<li>Check the statistics to analyze your stylesheet.</li>
-<li>Download the optimized CSS file for use in your project.</li>
-</ol>
-
-
-<h2 class="mt-4">Benefits of Using a CSS Formatter</h2>
-
-<ul>
-<li>Improves code readability</li>
-<li>Organizes stylesheets into logical sections</li>
-<li>Reduces CSS file size</li>
-<li>Improves website loading speed</li>
-<li>Makes debugging easier</li>
-<li>Helps maintain cleaner code structure</li>
-</ul>
-
-
-<h2 class="mt-4">Frequently Asked Questions</h2>
-
-<div class="faq-item mb-3">
-<h2>What is a CSS Formatter?</h2>
-<p>
-A CSS formatter is a tool that restructures CSS code into a clean and readable format. It helps developers organize stylesheets and improve maintainability.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h2>What is the difference between CSS beautify and CSS minify?</h2>
-<p>
-CSS beautify formats code with proper indentation and spacing to make it easier to read. CSS minify removes unnecessary spaces and characters to reduce file size and improve website performance.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h2>Is this CSS formatter free to use?</h2>
-<p>
-Yes, this online CSS formatter is completely free to use and works directly in your browser without requiring any installation.
-</p>
-</div>
-
-<div class="faq-item mb-3">
-<h2>Does this tool store my CSS code?</h2>
-<p>
-No. The tool processes your CSS directly in your browser and does not store or upload your code to any server.
-</p>
-</div>
-
-
-</div>
-
-</section> 
-	</section>
-     
- 
-
-  <!-- InstanceEndEditable -->
-<div class="clearfix"></div>
-<footer role="contentinfo" class="footer light newfooter">
-  <article class="footer-top">
-    <div class="container">
-      <div class="row">  
-        
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Popular Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/image-tools/image-converter/">Image
-                Converter</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to
-                Text (OCR)</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress
-                Images</a></li>
-              <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/clip-image/">Clip Image </a></li>
-              <li><a href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Support</h4>
-            <ul>
-              <li> <a href="https://webtoolocean.com/about/">About Us</a></li>
-              <li> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a></li>
-              <li> <a href="https://webtoolocean.com/cookie-policy/">Cookie Policy</a></li>
-              <li> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a></li>
-              <li> <a href="https://webtoolocean.com/terms-conditions/">Terms &amp; Conditions</a></li>
-              <li> <a href="https://webtoolocean.com/blog/">Blog</a></li>
-              <li> <a href="https://webtoolocean.com/resources/">Resources</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Calculator Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/calculators/age-calculator/"> Age Calculator</a></li>
-    <li><a href="https://webtoolocean.com/calculators/emi-calculator/"> EMI  Calculator</a></li>
-             <!-- <li><a href="https://webtoolocean.com/calculators/basic-calculator">Basic Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/percentage-calculator">Percentage Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/currency-calculator">Currency Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/unit-calculator">Unit Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/date-calculator">Date Difference</a></li>
-              <li><a href="https://webtoolocean.com/calculators/bmi-calculator">BMI Calculator</a></li>-->
-            </ul>
-          </div>
-        </div>
-		  <div class="col-md-3 col-sm-12 mb-3">
-          <div class="mb-3"> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
-          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
-            Fast, secure and easy to use on desktop &amp; mobile. </p>
-          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
-          <p class="footer-text mb-1"> <i class="fa fa-instagram"></i> <a href="https://www.instagram.com/webtoolocean">Follow us</a> </p>
-        </div>
-      </div>
-    </div>
-  </article>
-  
-  <!-- Bottom Menu -->
-  <article id="copyrights">
-    <div class="container text-center">
-		   <div class="row">  <div class="col-md-7 col-xs-12 md-text-left text-center"><p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | All Rights Reserved </p></div>
-		<div class="col-md-5 col-xs-12 md-text-right text-center"><a href="https://webtoolocean.com/sitemap">Sitemap</a></div>
-      </div>
-    </div>
-  </article>
-</footer>
-<a href="#" id="backToTop" aria-label="Back to Top">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-  <path d="M12 5L5 12H9V19H15V12H19L12 5Z"
-              fill="currentColor"/>
-</svg>
-</a>
-<div class="clearfix"></div>
-<script src="https://webtoolocean.com/js/jquery.js"></script> 
-<!-- InstanceBeginEditable name="EditRegion5" -->
-  <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
- 
- <script>
-
-/* ================================
-INITIALIZE CODEMIRROR EDITOR
-================================ */
-
-let editor = CodeMirror.fromTextArea(
-document.getElementById("cssInput"),
-{
-lineNumbers:true,
-mode:"css",
-theme:"default",
-lineWrapping:true
-});
-
-
-/* ================================
-GROUP / ORGANIZE CSS
-================================ */
-
-function groupCSS(css){
-
-let header=[],nav=[],footer=[],layout=[],typography=[],utility=[],other=[];
-
-let rules = css.match(/[^{}]+\{[^{}]*\}/g) || [];
-
-rules.forEach(function(rule){
-
-let l = rule.toLowerCase();
-
-rule = rule
-.replace(/\s+/g," ")
-.replace(/\s*{\s*/g," {\n  ")
-.replace(/;\s*/g,";\n  ")
-.replace(/\s*}\s*/g,"\n}");
-
-if(l.includes("header")) header.push(rule);
-
-else if(l.includes("nav")) nav.push(rule);
-
-else if(l.includes("footer")) footer.push(rule);
-
-else if(l.includes("container") || l.includes("row") || l.includes("grid") || l.includes("flex"))
-layout.push(rule);
-
-else if(l.includes("font") || l.includes("text") || l.includes("line-height"))
-typography.push(rule);
-
-else if(l.includes("btn") || l.includes("margin") || l.includes("padding"))
-utility.push(rule);
-
-else other.push(rule);
-
-});
-
-let result="";
-
-function block(title,arr){
-
-if(arr.length){
-
-result+="\n/* ===== "+title+" ===== */\n\n";
-
-arr.forEach(r=>result+=r+"\n\n");
-
-}
-
-}
-
-block("HEADER",header);
-block("NAVIGATION",nav);
-block("FOOTER",footer);
-block("LAYOUT",layout);
-block("TYPOGRAPHY",typography);
-block("UTILITIES",utility);
-block("OTHER STYLES",other);
-
-return result;
-
-}
-
-
-/* ================================
-BEAUTIFY CSS
-================================ */
-
-function beautify(css){
-
-return css
-.replace(/\s+/g," ")
-.replace(/\s*{\s*/g," {\n  ")
-.replace(/;\s*/g,";\n  ")
-.replace(/\s*}\s*/g,"\n}\n\n")
-.replace(/\n\s+\n/g,"\n");
-
-}
-
-
-/* ================================
-MINIFY CSS
-================================ */
-
-function minify(css){
-
-return css.replace(/\s+/g," ")
-.replace(/\s*{\s*/g,"{")
-.replace(/\s*}\s*/g,"}")
-.replace(/\s*;\s*/g,";")
-.replace(/\s*:\s*/g,":");
-
-}
-
-
-/* ================================
-CSS STATS
-================================ */
-
-function stats(original,formatted){
-
-let selectorCount = (formatted.match(/{/g)||[]).length;
-
-$("#selectors").text(selectorCount);
-$("#rules").text(selectorCount);
-
-$("#originalSize").text(original.length);
-$("#newSize").text(formatted.length);
-
-}
-
-
-/* ================================
-ORGANIZE BUTTON
-================================ */
-
-$("#organizeBtn").click(function(){
-
-let css = editor.getValue();
-
-let formatted = groupCSS(css);
-
-$("#output").text(formatted);
-
-stats(css,formatted);
-
-});
-
-
-/* ================================
-BEAUTIFY BUTTON
-================================ */
-
-$("#beautifyBtn").click(function(){
-
-let css = editor.getValue();
-
-let formatted = beautify(css);
-
-$("#output").text(formatted);
-
-stats(css,formatted);
-
-});
-
-
-/* ================================
-MINIFY BUTTON
-================================ */
-
-$("#minifyBtn").click(function(){
-
-let css = editor.getValue();
-
-let formatted = minify(css);
-
-$("#output").text(formatted);
-
-stats(css,formatted);
-
-});
-
-
-/* ================================
-CLEAR BUTTON
-================================ */
-
-$("#clearBtn").click(function(){
-
-editor.setValue("");
-
-$("#output").text("");
-
-$("#selectors").text("0");
-$("#rules").text("0");
-$("#originalSize").text("0");
-$("#newSize").text("0");
-
-});
-
-
-/* ================================
-DOWNLOAD CSS
-================================ */
-
-$("#downloadBtn").click(function(){
-
-let text = $("#output").text();
-
-let blob = new Blob([text], {type:"text/css"});
-
-let url = URL.createObjectURL(blob);
-
-let a = document.createElement("a");
-
-a.href = url;
-a.download = "formatted.css";
-
-a.click();
-
-});
-
-
-/* ================================
-COPY CSS
-================================ */
-
-$("#copyBtn").click(function(){
-
-let text = $("#output").text();
-
-navigator.clipboard.writeText(text).then(function(){
-
-$("#copyBtn").text("Copied!");
-
-setTimeout(function(){
-$("#copyBtn").text("Copy CSS");
-},2000);
-
-});
-
-});
-
-
-/* ================================
-UPLOAD CSS FILE (FIXED)
-================================ */
-
-$("#fileUpload").on("change",function(e){
-
-let file = e.target.files[0];
-
-if(!file) return;
-
-if(!file.name.endsWith(".css")){
-
-alert("Please upload a CSS file");
-
-return;
-
-}
-
-let reader = new FileReader();
-
-reader.onload = function(ev){
-
-editor.setValue(ev.target.result);
-editor.setCursor({line:0,ch:0});
-
-};
-
-reader.readAsText(file);
-
-});
-
-</script>
-
- 
-
-
-   
-<!-- InstanceEndEditable --> 
-<script>
-const backToTop = document.getElementById('backToTop');
-
-window.addEventListener('scroll', function() {
-
-    if (window.scrollY > 300) {
-        backToTop.classList.add('show');
-    } else {
-        backToTop.classList.remove('show');
-    }
-
-});
-
-backToTop.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-</script> 
-<!--<script>
-		const btn = document.getElementById("togglemeu");
-const menu = document.querySelector(".mainmenubar");
-
-btn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-	</script> 
-<script id="3q6qk9">
-document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-});
-</script> 
-<script id="7c7b4s">
-document.addEventListener("keydown", function(e){
-
-    if (e.key === "F12") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.key === "I") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.key === "J") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.key === "U") {
-        e.preventDefault();
-    }
-
-});
-</script> 
-<script id="5h2r0p">
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-document.addEventListener("keydown", function(e){
-
-if(e.key=="F12"){e.preventDefault();}
-
-if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
-
-if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
-
-if(e.ctrlKey && e.key=="U"){e.preventDefault();}
-
-});
-
-setInterval(function(){
-
-if(window.outerWidth - window.innerWidth > 160){
-document.body.innerHTML="Access Restricted";
-}
-
-},1000);
-</script> 
-<script>
-document.addEventListener("keydown", function(e) {
-  if (e.ctrlKey && e.key === "u") {
-    e.preventDefault();
-  }
-  if (e.key === "F12") {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
-    e.preventDefault();
-  }
-});
-</script>--> 
-
-<script>
- $(document).ready(function(){
-$("#togglemeu").click(function(){
-$(".mainmenubar").slideToggle();
-
-});
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-</script> 
-
-<!-- Cookie Consent Banner -->
-<div id="cookieConsent" class="cookie-banner shadow-lg">
-  <div class="cookie-content">
-    <div class="cookie-text"> 🍪 We use cookies to improve your experience, analyze traffic, and display relevant ads. By continuing to
-      browse, you agree to our use of cookies. <a href="https://webtoolocean.com/cookie-policy" target="_blank">Learn More</a> </div>
-    <div class="cookie-actions">
-      <button id="acceptCookies" class="btn btn-primary btn-sm"> Accept </button>
-      <button id="declineCookies" class="btn btn-outline-secondary btn-sm"> Decline </button>
-    </div>
-  </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      const cookieBanner = document.getElementById("cookieConsent");
-      const acceptBtn = document.getElementById("acceptCookies");
-      const declineBtn = document.getElementById("declineCookies");
-
-      // Check if user has already made a choice
-      const consent = localStorage.getItem("cookieConsent");
-
-      if (consent) {
-        cookieBanner.style.display = "none";
-      }
-
-      // Accept Cookies
-      acceptBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "accepted");
-        cookieBanner.style.display = "none";
-
-        console.log("Cookies Accepted");
-
-        // Load Analytics / Ad Scripts here if needed
-        // Example:
-        // loadGoogleAnalytics();
-      });
-
-      // Decline Cookies
-      declineBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "declined");
-        cookieBanner.style.display = "none";
-
-        console.log("Cookies Declined");
-
-        // Do NOT load analytics or marketing scripts
-      });
-
-    });
-  </script> 
-
-<!--mega menu js below--> 
-
- <script>
-(function(){
-  const pairs=[
-    {btn:document.getElementById('toolsBtn'),wrap:document.getElementById('toolsWrap'),item:document.getElementById('toolsItem')},
-    {btn:document.getElementById('blogBtn'),wrap:document.getElementById('blogWrap'),item:document.getElementById('blogItem')}
-  ];
-
-  function closeAll(){
-    pairs.forEach(({btn,wrap,item})=>{
-      wrap.classList.remove('open');
-      item.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    });
-  }
-
-  pairs.forEach(({btn,wrap,item})=>{
-    let t;
-    function open(){
-      clearTimeout(t);
-      closeAll();
-      wrap.classList.add('open');
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
-    }
-    function sched(){t=setTimeout(()=>{wrap.classList.remove('open');item.classList.remove('open');btn.setAttribute('aria-expanded','false');},160);}
-    btn.addEventListener('click',e=>{e.stopPropagation();wrap.classList.contains('open')?closeAll():open();});
-    item.addEventListener('mouseenter',open);
-    item.addEventListener('mouseleave',sched);
-    wrap.addEventListener('mouseenter',()=>clearTimeout(t));
-    wrap.addEventListener('mouseleave',sched);
-  });
-
-  document.addEventListener('click',closeAll);
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){
-      closeAll();
-      mob.classList.remove('open');
-      ham.classList.remove('open');
-      ham.setAttribute('aria-expanded','false');
-    }
-  });
-
-  const ham=document.getElementById('hamburger');
-  const mob=document.getElementById('mobileMenu');
-  ham.addEventListener('click',()=>{
-    const o=mob.classList.toggle('open');
-    ham.classList.toggle('open',o);
-    ham.setAttribute('aria-expanded',String(o));
-  });
-
-  [['mToolsTitle','mToolsBody'],['mBlogTitle','mBlogBody']].forEach(([tid,bid])=>{
-    document.getElementById(tid).addEventListener('click',function(){
-      const b=document.getElementById(bid);
-      const isOpen=b.classList.toggle('open');
-      this.classList.toggle('expanded',isOpen);
-    });
-  });
-})();
-</script>
+</style> 
 </body>
-<!-- InstanceEnd --></html>
+
+</html>

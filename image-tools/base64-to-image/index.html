@@ -1,972 +1,1658 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/header.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
-<!-- InstanceBeginEditable name="EditRegion4" -->
-<!-- ===================================================== -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>Base64 to Image Converter Online | WebToolOcean</title>
 
-<!-- Basic SEO Meta Tags -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Convert Base64 string to image instantly. Free online Base64 to Image converter tool by WebToolOcean. Supports PNG, JPG and WebP.">
 
-<title>Base64 to Image Converter Online | WebToolOcean</title>
+  <meta name="keywords" content="base64 to image, convert base64 to image, base64 decoder, base64 image converter">
 
-<meta name="description" content="Convert Base64 string to image instantly. Free online Base64 to Image converter tool by WebToolOcean. Supports PNG, JPG and WebP.">
+  <meta name="author" content="WebToolOcean">
 
-<meta name="keywords" content="base64 to image, convert base64 to image, base64 decoder, base64 image converter">
-
-<meta name="author" content="WebToolOcean">
-
-<!-- Open Graph for social sharing -->
-<meta property="og:title" content="Base64 to Image Converter">
-<meta property="og:description" content="Convert Base64 string into image instantly online.">
-<meta property="og:url" content="https://webtoolocean.com/image-tools/base64-to-image/index.html">
- 
-<!-- ===================================================== -->
-	
-<!--CSS for the website-->
- 
-  <!-- Dependencies -->
- <link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/style.css" rel="stylesheet">
-  <link href="https://webtoolocean.com/css/font-convert.css" rel="stylesheet">
- <style>
-
-body{
-background:#f4f7fb;
-font-family:Arial;
-}
-
-.tool-box{
-background:#fff;
-border-radius:12px;
-padding:30px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.drop-area{
-border:2px dashed #0d6efd;
-border-radius:10px;
-padding:40px;
-text-align:center;
-cursor:pointer;
-transition:.3s;
-}
-
-.drop-area:hover{
-background:#f1f7ff;
-}
-
-.preview img{
-max-width:220px;
-margin-top:15px;
-}
-
-textarea{
-height:160px;
-font-size:13px;
-}
-
-#copyMsg{
-display:none;
-color:green;
-font-weight:600;
-}
-
-.progress{
-display:none;
-height:18px; /* bigger height */
-margin-top:20px;
-background:#e9ecef;
-border-radius:10px;
-overflow:hidden;
-}
-
-.progress-bar{
-height:100%;
-font-size:12px;
-font-weight:600;
-line-height:18px;
-}
-
-.seo-section{
-background:#fff;
-margin-top:40px;
-padding:30px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.05);
-}
-
-.tool-box{
-background:#fff;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.preview-area{
-margin-top:20px;
-text-align:center;
-}
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Base64 to Image Converter">
+  <meta property="og:description" content="Convert Base64 string into image instantly online.">
+  <meta property="og:url" content="https://webtoolocean.com/image-tools/base64-to-image/">
 
 
-.progress{
-display:none;
-height:18px; /* bigger height */
-margin-top:20px;
-background:#e9ecef;
-border-radius:10px;
-overflow:hidden;
-}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
 
-.progress-bar{
-height:100%;
-font-size:12px;
-font-weight:600;
-line-height:18px;
-}
-
-
-.success-msg{
-display:none;
-color:green;
-font-weight:600;
-margin-top:10px;
-}
-
-textarea{
-height:150px;
-}
-</style> 	  
-<!-- InstanceEndEditable -->
-<!-- Stylesheets     
-	============================================= -->
-
-<!-- Google Fonts --> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-
-<!-- Document Title   
-	============================================= -->
-<!-- InstanceBeginEditable name="doctitle" -->
-<!-- InstanceEndEditable -->
-<link href="https://webtoolocean.com/css/global.css" rel="stylesheet">
-<meta name="google-site-verification" content="Y4ZO2trgDXbKzMA1yC5bmxoSYw3063IMwh9C3Mk6roA" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4C1PP726EZ');
-</script>
-<meta name="msvalidate.01" content="F6CC90631F88A250A756F9F1DE579CBE" />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
-     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
 </head>
-<style>
-body {
-	overflow-x: hidden
-}
-	 
-</style>
-<body class="">
-<!--ACCESSIBILITY CONTROLS   --> 
 
-<!--END ACCESSIBILITY CONTROLS   --> 
-<!-- Document Wrapper	  
-	============================================= --> 
-<!--	 <div class="topnav">
-    <div class="container">
-      <ul>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/blog/">Blog</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="https://webtoolocean.com/resources/">Resources</a> </li>
-        <li> <a href="https://www.instagram.com/webtoolocean" target="_blank" aria-label="Instagram"> <i class="fa fa-instagram"></i> </a></li>
-    
-      </ul>
-    </div>
-  </div>-->
+<body>
+  <div id="header"></div>
+  <main role="main" id="content">
 
- 
- <header class="site-header">
-  <div class="header-inner"> <a class="logo" href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a>
-    <nav class="main-nav">
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/"><i class="ti ti-home" aria-hidden="true"></i> Home</a> </div>
-      <div class="nav-item has-drop" id="toolsItem">
-        <button class="nav-btn" id="toolsBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-apps" aria-hidden="true"></i> Tools <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item has-drop" id="blogItem">
-        <button class="nav-btn" id="blogBtn" aria-expanded="false" aria-haspopup="true"> <i class="ti ti-writing" aria-hidden="true"></i> Blog <i class="ti ti-chevron-down chevron" aria-hidden="true"></i> </button>
-      </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/resources/"><i class="ti ti-books" aria-hidden="true"></i> Resources</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/about/"><i class="ti ti-users" aria-hidden="true"></i> About Us</a> </div>
-      <div class="nav-item"> <a class="nav-btn" href="https://webtoolocean.com/contact/"><i class="ti ti-mail" aria-hidden="true"></i> Contact</a> </div>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"> <span></span><span></span><span></span> </button>
-  </div>
-  
-  <!-- TOOLS MEGA — anchored full width -->
-  <div class="mega-wrap" id="toolsWrap">
-    <div class="mega">
-      <div class="mega-inner">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/image-tools/image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-refresh" aria-hidden="true"></i></div>
-          <div><span class="link-title">All Image Converter</span><span class="link-desc">Convert between formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">
-          <div class="link-icon icon-purple"><i class="ti ti-scan" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Text (OCR)</span><span class="link-desc">Extract text from images</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/compress-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-file-zip" aria-hidden="true"></i></div>
-          <div><span class="link-title">Compress Images</span><span class="link-desc">Reduce file size</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector" aria-hidden="true"></i></div>
-          <div><span class="link-title">SVG to Image</span><span class="link-desc">SVG → raster formats</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">
-          <div class="link-icon icon-purple"><i class="ti ti-vector-bezier" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to SVG</span><span class="link-desc">Raster → vector SVG</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/favicon-generator/">
-          <div class="link-icon icon-purple"><i class="ti ti-star" aria-hidden="true"></i></div>
-          <div><span class="link-title">Favicon Generator</span><span class="link-desc">Create .ico &amp; PNG favicons</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/image-to-base64/">
-          <div class="link-icon icon-purple"><i class="ti ti-code" aria-hidden="true"></i></div>
-          <div><span class="link-title">Image to Base64</span><span class="link-desc">Encode images to Base64</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/image-tools/base64-to-image/">
-          <div class="link-icon icon-purple"><i class="ti ti-photo-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 to Image</span><span class="link-desc">Decode Base64 to image</span></div>
-          </a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">
-          <div class="link-icon icon-red"><i class="ti ti-files" aria-hidden="true"></i></div>
-          <div><span class="link-title">Merge PDF</span><span class="link-desc">Combine multiple PDFs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">
-          <div class="link-icon icon-red"><i class="ti ti-reorder" aria-hidden="true"></i></div>
-          <div><span class="link-title">Reorder PDF Pages</span><span class="link-desc">Drag to rearrange</span></div>
-          </a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-brush" aria-hidden="true"></i> CSS Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/css-tools/css-formatter/">
-          <div class="link-icon icon-blue"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
-          <div><span class="link-title">Beautify / Minify CSS</span><span class="link-desc">Format or compress CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-shadow" aria-hidden="true"></i></div>
-          <div><span class="link-title">Box Shadow Generator</span><span class="link-desc">Visual shadow editor</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-layers-subtract" aria-hidden="true"></i></div>
-          <div><span class="link-title">Multi Box Shadow</span><span class="link-desc">Layered shadows</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/clip-image/">
-          <div class="link-icon icon-blue"><i class="ti ti-crop" aria-hidden="true"></i></div>
-          <div><span class="link-title">Clip Image CSS</span><span class="link-desc">Clip-path made easy</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/card-builder/">
-          <div class="link-icon icon-blue"><i class="ti ti-layout-board" aria-hidden="true"></i></div>
-          <div><span class="link-title">CSS Card Builder</span><span class="link-desc">Design CSS cards</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/css-tools/gradient-generator/">
-          <div class="link-icon icon-blue"><i class="ti ti-palette" aria-hidden="true"></i></div>
-          <div><span class="link-title">Gradient Generator</span><span class="link-desc">Build CSS gradients</span></div>
-          </a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-terminal-2" aria-hidden="true"></i> Developer Tools</div>
-          <a class="m-link" href="https://webtoolocean.com/developer-tools/html-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-brand-html5" aria-hidden="true"></i></div>
-          <div><span class="link-title">HTML Formatter</span><span class="link-desc">Beautify HTML markup</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/check-css-error/">
-          <div class="link-icon icon-green"><i class="ti ti-bug" aria-hidden="true"></i></div>
-          <div><span class="link-title">Check CSS Errors</span><span class="link-desc">Lint &amp; validate CSS</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">
-          <div class="link-icon icon-green"><i class="ti ti-lock" aria-hidden="true"></i></div>
-          <div><span class="link-title">Base64 Encoder-Decoder</span><span class="link-desc">Encode &amp; decode text</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/developer-tools/json-formatter/">
-          <div class="link-icon icon-green"><i class="ti ti-braces" aria-hidden="true"></i></div>
-          <div><span class="link-title">JSON Formatter</span><span class="link-desc">Format &amp; validate JSON</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/font-converter/">
-          <div class="link-icon icon-green"><i class="ti ti-typography" aria-hidden="true"></i></div>
-          <div><span class="link-title">Web Font Converter</span><span class="link-desc">Convert font formats</span></div>
-          </a> </div>
-        <div class="mega-col col-amber">
-          <div class="col-head"><i class="ti ti-calculator" aria-hidden="true"></i> Calculators</div>
-          <a class="m-link" href="https://webtoolocean.com/calculators/age-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cake" aria-hidden="true"></i></div>
-          <div><span class="link-title">Age Calculator</span><span class="link-desc">Find your exact age</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/emi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-credit-card" aria-hidden="true"></i></div>
-          <div><span class="link-title">EMI Calculator</span><span class="link-desc">Calculate loan EMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/gst-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-receipt-tax" aria-hidden="true"></i></div>
-          <div><span class="link-title">GST Calculator</span><span class="link-desc">Add or remove GST</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/sip-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-trending-up" aria-hidden="true"></i></div>
-          <div><span class="link-title">SIP Calculator</span><span class="link-desc">Plan mutual fund SIPs</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/bmi-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i></div>
-          <div><span class="link-title">BMI Calculator</span><span class="link-desc">Check your BMI</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/percentage-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-percentage" aria-hidden="true"></i></div>
-          <div><span class="link-title">Percentage Calculator</span><span class="link-desc">Calculate percentages</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/discount-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-tag" aria-hidden="true"></i></div>
-          <div><span class="link-title">Discount Calculator</span><span class="link-desc">Find sale price</span></div>
-          </a> <a class="m-link" href="https://webtoolocean.com/calculators/loan-calculator/">
-          <div class="link-icon icon-amber"><i class="ti ti-cash" aria-hidden="true"></i></div>
-          <div><span class="link-title">Loan Calculator</span><span class="link-desc">Compare loan options</span></div>
-          </a> </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- BLOG MEGA — anchored full width -->
-  <div class="mega-wrap" id="blogWrap">
-    <div class="mega">
-      <div class="blog-grid">
-        <div class="mega-col col-purple">
-          <div class="col-head"><i class="ti ti-robot" aria-hidden="true"></i> AI Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="blog-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a> </div>
-        <div class="mega-col col-red">
-          <div class="col-head"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="blog-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="blog-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a> </div>
-        <div class="mega-col col-blue">
-          <div class="col-head"><i class="ti ti-photo" aria-hidden="true"></i> Image Tools</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="blog-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="blog-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="blog-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="blog-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a> </div>
-        <div class="mega-col col-green">
-          <div class="col-head"><i class="ti ti-code" aria-hidden="true"></i> Web Development</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="blog-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="blog-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="blog-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a> </div>
-        <div class="mega-col col-pink">
-          <div class="col-head"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> UI/UX Design</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="blog-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="blog-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="blog-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="blog-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a> </div>
-        <div class="mega-col col-teal">
-          <div class="col-head"><i class="ti ti-search" aria-hidden="true"></i> SEO</div>
-          <a class="blog-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="blog-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="blog-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="blog-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="blog-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="blog-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a> </div>
-        <div class="mega-col col-indigo">
-          <div class="col-head"><i class="ti ti-briefcase" aria-hidden="true"></i> Career &amp; Interview</div>
-          <a class="blog-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="blog-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> </div>
-      </div>
-      <div class="mega-footer"> <a class="footer-link" href="https://webtoolocean.com/blog/"><i class="ti ti-writing" aria-hidden="true"></i> View all blog articles <i class="ti ti-arrow-right" aria-hidden="true"></i></a> </div>
-    </div>
-  </div>
-  
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/"><i class="ti ti-home"></i> Home</a> </div>
-    <div>
-      <div class="m-section-title" id="mToolsTitle"><span><i class="ti ti-apps" style="margin-right:6px;color:#818cf8"></i>Tools</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mToolsBody">
-        <div class="m-cat-head">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/image-tools/image-converter/">All Image Converter</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to Text (OCR)</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/compress-image/">Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/svg-to-image-converter/">SVG to Image</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-svg-converter/">Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/favicon-generator/">Favicon Generator</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/image-to-base64/">Image to Base64</a> <a class="mob-link" href="https://webtoolocean.com/image-tools/base64-to-image/">Base64 to Image</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a> <a class="mob-link" href="https://webtoolocean.com/pdf-tools/reorder-pdf-pages/">Reorder PDF Pages</a>
-        <div class="m-cat-head blue">CSS Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/mult-box-shadow-generator/">Multi Box Shadow</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/clip-image/">Clip Image CSS</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/card-builder/">CSS Card Builder</a> <a class="mob-link" href="https://webtoolocean.com/css-tools/gradient-generator/">Gradient Generator</a>
-        <div class="m-cat-head green">Developer Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/developer-tools/html-formatter/">HTML Formatter</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/check-css-error/">Check CSS Errors</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/base64-encoder-decoder/">Base64 Encoder-Decoder</a> <a class="mob-link" href="https://webtoolocean.com/developer-tools/json-formatter/">JSON Formatter</a> <a class="mob-link" href="https://webtoolocean.com/font-converter/">Web Font Converter</a>
-        <div class="m-cat-head amber">Calculators</div>
-        <a class="mob-link" href="https://webtoolocean.com/calculators/age-calculator/">Age Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/emi-calculator/">EMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/gst-calculator/">GST Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/sip-calculator/">SIP Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/bmi-calculator/">BMI Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/percentage-calculator/">Percentage Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/discount-calculator/">Discount Calculator</a> <a class="mob-link" href="https://webtoolocean.com/calculators/loan-calculator/">Loan Calculator</a> </div>
-    </div>
-    <div>
-      <div class="m-section-title" id="mBlogTitle"><span><i class="ti ti-writing" style="margin-right:6px;color:#818cf8"></i>Blog</span><i class="ti ti-chevron-down"></i></div>
-      <div class="m-section-body" id="mBlogBody">
-        <div class="m-cat-head">AI Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/best-ai-tools-for-designers/">Best AI Tools for Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/chatgpt-prompts-for-developers/">ChatGPT Prompts for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-image-generators-comparison/">AI Image Generators Compared</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-use-ai-for-ux-research/">Use AI for UX Research</a> <a class="mob-link" href="https://webtoolocean.com/blog/generative-ai-web-design/">Generative AI in Web Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/ai-coding-assistants-review/">AI Coding Assistants Reviewed</a>
-        <div class="m-cat-head red">PDF Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-merge-pdf-files/">How to Merge PDF Files</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-reorder-pdf-pages/">How to Reorder PDF Pages</a> <a class="mob-link" href="https://webtoolocean.com/blog/compress-pdf-without-losing-quality/">Compress PDF Without Losing Quality</a> <a class="mob-link" href="https://webtoolocean.com/blog/pdf-to-word-converter-guide/">PDF to Word Converter Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/best-free-pdf-editors-online/">Best Free PDF Editors Online</a>
-        <div class="m-cat-head blue">Image Tools</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/how-to-compress-image/">How to Compress Images</a> <a class="mob-link" href="https://webtoolocean.com/blog/jpg-vs-png-vs-webp/">JPG vs PNG vs WebP</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-convert-image-to-svg/">How to Convert Image to SVG</a> <a class="mob-link" href="https://webtoolocean.com/blog/what-is-ocr-image-to-text/">What is OCR Image to Text</a> <a class="mob-link" href="https://webtoolocean.com/blog/optimize-images-for-web/">Optimize Images for Web</a> <a class="mob-link" href="https://webtoolocean.com/blog/create-favicon-for-website/">Create a Favicon for Your Website</a>
-        <div class="m-cat-head green">Web Development</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/css-flexbox-complete-guide/">CSS Flexbox Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-grid-layout-guide/">CSS Grid Layout Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/javascript-es6-features/">JavaScript ES6+ Features</a> <a class="mob-link" href="https://webtoolocean.com/blog/responsive-web-design-tips/">Responsive Web Design Tips</a> <a class="mob-link" href="https://webtoolocean.com/blog/html5-semantic-elements-guide/">HTML5 Semantic Elements Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/web-performance-optimization/">Web Performance Optimization</a> <a class="mob-link" href="https://webtoolocean.com/blog/css-animations-guide/">CSS Animations &amp; Transitions</a>
-        <div class="m-cat-head pink">UI/UX Design</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/figma-tips-for-beginners/">Figma Tips for Beginners</a> <a class="mob-link" href="https://webtoolocean.com/blog/ux-design-principles/">10 Core UX Design Principles</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-design-system/">How to Build a Design System</a> <a class="mob-link" href="https://webtoolocean.com/blog/ui-color-theory-for-designers/">Color Theory for UI Designers</a> <a class="mob-link" href="https://webtoolocean.com/blog/typography-in-ui-design/">Typography in UI Design</a> <a class="mob-link" href="https://webtoolocean.com/blog/mobile-first-design-guide/">Mobile-First Design Guide</a>
-        <div class="m-cat-head teal">SEO</div>
-        <a class="mob-link" href="https://webtoolocean.com/blog/on-page-seo-checklist/">On-Page SEO Checklist</a> <a class="mob-link" href="https://webtoolocean.com/blog/technical-seo-for-developers/">Technical SEO for Developers</a> <a class="mob-link" href="https://webtoolocean.com/blog/schema-markup-guide/">Schema Markup Complete Guide</a> <a class="mob-link" href="https://webtoolocean.com/blog/core-web-vitals-guide/">Core Web Vitals Explained</a> <a class="mob-link" href="https://webtoolocean.com/blog/keyword-research-for-tools/">Keyword Research for Tool Sites</a> <a class="mob-link" href="https://webtoolocean.com/blog/image-seo-optimization/">Image SEO Optimization Guide</a>
-        <div class="m-cat-head indigo">Career &amp; Interview</div>
-        <a class="mob-link" href="https://webtoolocean.com/resources/figma-interview-questions/">Figma Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/ai-interview-questions/">AI Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/html-interview-questions/">HTML5 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/css-interview-questions/">CSS3 Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/javascript-interview-questions/">JavaScript Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/resources/react-interview-questions/">React Interview Questions</a> <a class="mob-link" href="https://webtoolocean.com/blog/how-to-build-ux-portfolio/">How to Build a UX Portfolio</a> <a class="mob-link" style="color:#818cf8;font-weight:600;margin-top:8px;display:block" href="https://webtoolocean.com/blog/">View all blog articles →</a> </div>
-    </div>
-    <div class="m-top-links"> <a class="m-top-link" href="https://webtoolocean.com/resources/"><i class="ti ti-books"></i> Resources</a> <a class="m-top-link" href="https://webtoolocean.com/about/"><i class="ti ti-users"></i> About Us</a> <a class="m-top-link" href="https://webtoolocean.com/contact/"><i class="ti ti-mail"></i> Contact</a> </div>
-  </div>
-</header>
- 
-<!-- InstanceBeginEditable name="center" -->
- 
-  <!-- Start dynamic content -->
- <!-- <section id="testimonials">
-    <div class="container aniboxes animate__animated text-center">
-      <div id="contentwidget1"></div>
-      <br>
-    </div>
-  </section>-->
-  <!-- End dynamic content -->
-  <div class="clearfix"></div>
-  <!-- End dynamic content --> 
-  
-  <!-- Sevices section -->
-  
-     
- 
-<main id="content">
-  <section class="mt-5">
-    <div class="image-conversion">
+    <!-- ═══════════════════════════════════════════════════════
+    1. BREADCRUMB
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
       <div class="container">
-        <div class="row">
-           <div class="col-md-6 col-sm-6 col-xs-12">
-<div class="simple-box">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/all-tools/">Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/image-tools/base64-to-image/">Image Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">Base64 to Image Converter</li>
+        </ol>
+      </div>
+    </nav>
 
-<h1 class="text-center mb-3">Base64 to Image Converter</h1>
-
-<p class="text-center text-muted">
-Paste your Base64 code and convert it into an image instantly.
-</p>
-
-<div class="tool-box">
-
-<label for="base64Input" class="sr-only">Paste Base64 string here</label>
-
-<textarea id="base64Input" class="form-control" placeholder="Paste Base64 string here..."></textarea>
-
-<button id="convertBtn" class="btn btn-primary mt-3" onclick="convertImage()">
-Convert to Image
-</button>
-
-<!-- Spinner -->
-<div id="loaderBox" class="text-center mt-4" style="display:none;">
-
-<div class="spinner-border text-primary" role="status"></div>
-
-<div class="mt-2 fw-semibold" id="loaderText">
-Converting...
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-               <div class="simple-box">
-               
-<div class="preview-area" id="preview"></div>
-
-<button id="downloadBtn" class="btn btn-success mt-3" style="display:none">Download Image</button>
-
-<div class="success-msg" id="successMsg">
-✔ Image generated successfully
-</div>
-               </div>
-          </div>
+    <!-- ═══════════════════════════════════════════════════════
+    2. PAGE HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="ic-hero">
+      <div class="container">
+        <div class="hero-tag"><i class="fa-solid fa-code"></i> Image Tools</div>
+        <h1>Free Base64 to Image Converter –<br><span>Decode Base64 Strings to Images Online</span></h1>
+        <p class="hero-desc">Convert Base64 encoded strings back into PNG, JPG, or WEBP images instantly — right in your
+          browser. No uploads to any server. No signup required. Download or preview your decoded image
+          immediately.</p>
+        <div class="ic-trust-badges">
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> 100% Free</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> No Signup</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Browser-Based</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> All Formats Supported</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Private &amp; Secure</span>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="mt-0 seo-content">
-    <div class="container">
-    <div>
-      <h2 class="main-title">What is Base64 to Image Converter?</h2>
+    </section>
 
- 
+    <div class="ic-content">
+      <div class="container">
 
-<p>
-Base64 to Image Converter is a free online tool that allows you to convert Base64 encoded strings into images instantly. Developers often use Base64 encoding to embed images directly inside HTML, CSS, or JSON files.
-</p>
+        <!-- ═══════════════════════════════════════════════════════
+        MAIN WIDGET
+        ═══════════════════════════════════════════════════════ -->
+        <section class="mt-5">
+          <div class="image-conversion">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="simple-box">
+                    <h1 class="text-center mb-3">Base64 to Image Converter</h1>
 
-      <!-- Steps -->
-      <div class="simple-box">
-      
- <h3>How to Convert Base64 to Image?</h3>
+                    <p class="text-center text-muted">
+                      Paste your Base64 code and convert it into an image instantly.
+                    </p>
 
-<ol>
-<li>Paste the Base64 string into the input field.</li>
-<li>Click the Convert button.</li>
-<li>The tool will generate the image preview.</li>
-<li>You can download the image instantly.</li>
-</ol>
-     
-      </div> 
-      <div class="row">
-         <div class="col-md-6 col-xs-12">
+                    <div class="tool-box">
 
-<!-- FAQ -->
-<div class="simple-box">
-<h3>FAQ</h3>
+                      <label for="base64Input" class="sr-only">Paste Base64 string here</label>
 
-<div class="accordion" id="converterFaq">
+                      <textarea id="base64Input" class="form-control"
+                        placeholder="Paste Base64 string here..."></textarea>
 
-<!-- 1 -->
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq1">
-What is a Base64 to Image Converter?
-</button>
-</h3>
-<div id="convFaq1" class="accordion-collapse collapse show" data-bs-parent="#converterFaq">
-<div class="accordion-body">
-A Base64 to Image Converter is a tool that converts Base64 encoded text back into image files such as JPG, PNG, WEBP, and GIF.
-</div>
-</div>
-</div>
+                      <button id="convertBtn" class="btn btn-primary mt-3" onclick="convertImage()">
+                        Convert to Image
+                      </button>
 
-<!-- 2 -->
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq2">
-Is this Base64 to Image Converter free?
-</button>
-</h3>
-<div id="convFaq2" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
-<div class="accordion-body">
-Yes, this online Base64 to Image Converter is completely free and works directly in your browser without installing any software.
-</div>
-</div>
-</div>
+                      <!-- Spinner -->
+                      <div id="loaderBox" class="text-center mt-4" style="display:none;">
 
-<!-- 3 -->
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq3">
-Will my Base64 data be uploaded to a server?
-</button>
-</h3>
-<div id="convFaq3" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
-<div class="accordion-body">
-No. All conversions are processed inside your browser to help keep your data private and secure.
-</div>
-</div>
-</div>
+                        <div class="spinner-border text-primary" role="status"></div>
 
-<!-- 4 -->
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq4">
-What is Base64 used for?
-</button>
-</h3>
-<div id="convFaq4" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
-<div class="accordion-body">
-Base64 is commonly used to store or transfer images inside HTML, CSS, JSON, emails, and web applications.
-</div>
-</div>
-</div>
+                        <div class="mt-2 fw-semibold" id="loaderText">
+                          Converting...
+                        </div>
 
-<!-- 5 -->
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq5">
-Can I preview the converted image?
-</button>
-</h3>
-<div id="convFaq5" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
-<div class="accordion-body">
-Yes, most Base64 to Image tools allow you to instantly preview the converted image before downloading it.
-</div>
-</div>
-</div>
+                      </div>
 
-<!-- 6 -->
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#convFaq6">
-Can I download the converted image?
-</button>
-</h3>
-<div id="convFaq6" class="accordion-collapse collapse" data-bs-parent="#converterFaq">
-<div class="accordion-body">
-Yes, after conversion you can download the generated image file to your device in supported formats.
-</div>
-</div>
-</div>
+                    </div>
 
-</div>
-</div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="simple-box">
 
-</div>
-        <div class="col-md-6 col-xs-12">
-          <!-- Why -->
-          <div class="simple-box">
-           
-<h3>Features of This Tool</h3>
+                    <div class="preview-area" id="preview"></div>
 
-<ul>
-<li>100% free and browser based</li>
-<li>Fast Base64 decoding</li>
-<li>Supports PNG, JPG, GIF and WebP</li>
-<li>No upload required</li>
-<li>Secure and private</li>
-</ul>
+                    <button id="downloadBtn" class="btn btn-success mt-3" style="display:none">Download Image</button>
+
+                    <div class="success-msg" id="successMsg">
+                      ✔ Image generated successfully
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+        HOW TO USE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Step by Step</span>
+            <h2>How to Convert Base64 to Image</h2>
+            <p>Converting Base64 encoded strings back to images takes less than 5 seconds — no software or account
+              needed.</p>
+          </div>
+          <div class="ic-steps-wrap">
+            <div class="ic-steps">
+              <div class="ic-step-card">
+                <div class="step-num">1</div>
+                <span class="step-icon">📋</span>
+                <h4>Paste Your Base64 String</h4>
+                <p>Copy your Base64 encoded string from your email, document, database, or code editor, and paste it
+                  into
+                  the text area.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">2</div>
+                <span class="step-icon">⚙️</span>
+                <h4>Click Convert to Image</h4>
+                <p>Hit the "Convert to Image" button. The tool decodes your Base64 string instantly in the browser — no
+                  server
+                  processing, no waiting.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">3</div>
+                <span class="step-icon">👁️</span>
+                <h4>Preview Your Image</h4>
+                <p>Your decoded image appears instantly in the preview area. Verify it looks correct before downloading.
+                </p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">4</div>
+                <span class="step-icon">💾</span>
+                <h4>Download Your Image</h4>
+                <p>Click "Download Image" to save the decoded image to your device as a PNG, JPG, or WEBP file.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    </div>
-  </section>
-</main>
-  <!-- InstanceEndEditable -->
-<div class="clearfix"></div>
-<footer role="contentinfo" class="footer light newfooter">
-  <article class="footer-top">
-    <div class="container">
-      <div class="row">  
-        
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Popular Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/image-tools/image-converter/">Image
-                Converter</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/image-to-text-ocr/">Image to
-                Text (OCR)</a></li>
-              <li><a href="https://webtoolocean.com/image-tools/compress-image/">Compress
-                Images</a></li>
-              <li><a href="https://webtoolocean.com/pdf-tools/merge-pdf/">Merge PDF</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/clip-image/">Clip Image </a></li>
-              <li><a href="https://webtoolocean.com/css-tools/css-formatter/">Beautify / Minify CSS</a></li>
-              <li><a href="https://webtoolocean.com/css-tools/box-shadow-generator/">Box Shadow Generator</a></li>
-            </ul>
+
+        <!-- ═══════════════════════════════════════════════════════
+        WHY USE SVG
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">About SVG</span>
+            <h2>Why Convert Images to SVG?</h2>
+            <p>SVG (Scalable Vector Graphics) is the gold standard for logos, icons, and web graphics. Here's why
+              converting matters.</p>
+          </div>
+          <div class="ic-format-grid">
+
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue"><i class="fa-solid fa-expand" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Infinite Scalability</div>
+                <p class="fmt-desc">SVG files scale to any resolution without pixelation or quality loss — from a tiny
+                  favicon to a massive billboard. Unlike JPG or PNG, they are resolution-independent.</p>
+              </div>
+            </div>
+
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald"><i class="fa-solid fa-feather" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Lightweight File Size</div>
+                <p class="fmt-desc">SVG files are text-based XML, meaning they are often much smaller than their raster
+                  equivalents — especially for simple logos, icons, and illustrations.</p>
+              </div>
+            </div>
+
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet"><i class="fa-solid fa-globe" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Perfect for the Web</div>
+                <p class="fmt-desc">SVG is natively supported in all modern browsers and can be embedded directly in
+                  HTML. It's the recommended format for logos, UI icons, and illustrations on websites.</p>
+              </div>
+            </div>
+
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-amber"><i class="fa-solid fa-magnifying-glass" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">SEO-Friendly</div>
+                <p class="fmt-desc">SVG code embedded in a page can be indexed by search engines. Alt text, titles, and
+                  descriptions inside SVG files make them more accessible and discoverable.</p>
+              </div>
+            </div>
+
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-cyan"><i class="fa-solid fa-wand-magic-sparkles" style="font-size:.9rem;"></i>
+              </div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Editable &amp; Animatable</div>
+                <p class="fmt-desc">Unlike raster images, SVG markup can be edited in a text editor or design tool. You
+                  can apply CSS styles, animations, and JavaScript interactions directly to SVG elements.</p>
+              </div>
+            </div>
+
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-rose"><i class="fa-solid fa-chess-board" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Transparent Backgrounds</div>
+                <p class="fmt-desc">SVG supports full transparency, making converted images easy to place on any
+                  background colour in web layouts, presentations, and printed materials.</p>
+              </div>
+            </div>
+
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-orange"><i class="fa-solid fa-print" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Print-Ready Quality</div>
+                <p class="fmt-desc">Designers and print studios prefer SVG for marketing materials because the output is
+                  always sharp — no matter the output size or DPI of the printer.</p>
+              </div>
+            </div>
+
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Support</h4>
-            <ul>
-              <li> <a href="https://webtoolocean.com/about/">About Us</a></li>
-              <li> <a href="https://webtoolocean.com/disclaimer/">Disclaimer</a></li>
-              <li> <a href="https://webtoolocean.com/cookie-policy/">Cookie Policy</a></li>
-              <li> <a href="https://webtoolocean.com/privacy-policy/">Privacy Policy</a></li>
-              <li> <a href="https://webtoolocean.com/terms-conditions/">Terms &amp; Conditions</a></li>
-              <li> <a href="https://webtoolocean.com/blog/">Blog</a></li>
-              <li> <a href="https://webtoolocean.com/resources/">Resources</a></li>
-            </ul>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FORMAT COMPARISON TABLE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Format Guide</span>
+            <h2>Base64 vs Direct Image URLs – When to Use Each</h2>
+            <p>Deciding between Base64 encoded images and direct URLs? Here's a quick comparison to help you choose.</p>
+          </div>
+          <div class="ic-info-table-wrap">
+            <table class="ic-info-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>File Size</th>
+                  <th>HTTP Requests</th>
+                  <th>Browser Cache</th>
+                  <th>Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="fmt-tag">Base64 String</span></td>
+                  <td>~33% larger than original</td>
+                  <td>✅ None — embedded in HTML/CSS/JSON</td>
+                  <td>❌ Not cached separately</td>
+                  <td>Small icons, thumbnails, inline graphics, email, APIs, databases</td>
+                </tr>
+                <tr>
+                  <td><span class="fmt-tag">Direct URL (PNG)</span></td>
+                  <td>Original file size</td>
+                  <td>❌ One HTTP request per image</td>
+                  <td>✅ Yes — cached by browser</td>
+                  <td>Large photos, frequently accessed images, logo assets</td>
+                </tr>
+                <tr>
+                  <td><span class="fmt-tag">Direct URL (JPG)</span></td>
+                  <td>Small (lossy compressed)</td>
+                  <td>❌ One HTTP request per image</td>
+                  <td>✅ Yes — cached by browser</td>
+                  <td>Photographs, complex raster images, social media</td>
+                </tr>
+                <tr>
+                  <td><span class="fmt-tag">Direct URL (WebP)</span></td>
+                  <td>Smallest (~30% less than PNG/JPG)</td>
+                  <td>❌ One HTTP request per image</td>
+                  <td>✅ Yes — cached by browser</td>
+                  <td>Web pages, high-volume image sites, performance optimization</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 mb-3">
-          <div class="footer-links">
-            <h4 class="footer-heading">Calculator Tools</h4>
-            <ul>
-              <li><a href="https://webtoolocean.com/calculators/age-calculator/"> Age Calculator</a></li>
-    <li><a href="https://webtoolocean.com/calculators/emi-calculator/"> EMI  Calculator</a></li>
-             <!-- <li><a href="https://webtoolocean.com/calculators/basic-calculator">Basic Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/percentage-calculator">Percentage Calculator</a></li>
-              <li><a href="https://webtoolocean.com/calculators/currency-calculator">Currency Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/unit-calculator">Unit Converter</a></li>
-              <li><a href="https://webtoolocean.com/calculators/date-calculator">Date Difference</a></li>
-              <li><a href="https://webtoolocean.com/calculators/bmi-calculator">BMI Calculator</a></li>-->
-            </ul>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FAQ
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about decoding Base64 images online with WebToolOcean.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+
+                <div class="ic-faq-item open">
+                  <div class="ic-faq-q">
+                    <h4>What is Base64 encoding?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Base64 is a text-based encoding system that converts binary image data (PNG, JPG, etc.) into a
+                    string of ASCII characters. This allows images to be transmitted through text-only systems like
+                    email, JSON APIs, and databases without losing data. Every 3 bytes of binary data becomes 4
+                    characters in Base64.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>Is this Base64 to Image Converter free?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Yes — 100% free with no hidden charges, no usage limits, no watermarks, and no account required.
+                    Just paste your Base64 string, click convert, and download or preview your image immediately.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>Will my Base64 strings be sent to any server?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    No. All decoding happens entirely inside your browser using JavaScript. Your Base64 strings are
+                    never sent
+                    to or stored on any external server — everything stays on your device, completely private and
+                    secure.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>What Base64 image formats can I decode?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    This tool supports all common image formats encoded in Base64: PNG, JPG, JPEG, GIF, WebP, BMP, SVG,
+                    and more.
+                    The tool will automatically detect the image type from the Base64 data and convert it to the
+                    original format for preview and download.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>Can I convert multiple Base64 strings at once?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    The current tool converts one Base64 string at a time. Simply paste another Base64 string and click
+                    convert
+                    to decode multiple images in a single session. Each decoded image can be individually previewed or
+                    downloaded.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>Does Base64 decoding lose image quality?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    No quality is lost. Base64 is a lossless encoding — it converts binary image data into text and
+                    back.
+                    The decoded image will be pixel-perfect identical to the original, with no degradation in quality or
+                    color fidelity.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>Where do I use Base64 encoded images?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Base64 images are used in HTML (data URIs in img tags), CSS (background-image properties), JSON
+                    APIs,
+                    email messages, HTML emails, database storage, configuration files, and anywhere you need to embed
+                    image data as text rather than as a separate file.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>How do I use Base64 images in HTML?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Use Base64 images as data URIs directly in the src attribute:
+                    <code>&lt;img src="data:image/png;base64,iVBORw0KG..."&gt;</code>.
+                    Or in CSS: <code>background-image: url('data:image/png;base64,...')</code>. This embeds the image
+                    directly,
+                    reducing HTTP requests and external file dependencies.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>Does this tool work on mobile?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Yes. The tool is fully responsive and works on iOS and Android devices. You can paste Base64 strings
+                    from
+                    your email, notes app, or clipboard and download or preview the decoded image directly on your
+                    device.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>What can I do with the decoded image?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Once decoded, the image is a standard file (PNG, JPG, etc.) that you can use anywhere. Download it
+                    to your device,
+                    share it via email, upload it to social media, edit it in an image editor, embed it in web pages, or
+                    use it in documents and presentations.
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
-		  <div class="col-md-3 col-sm-12 mb-3">
-          <div class="mb-3"> <a href="https://webtoolocean.com/"><img width="300" height="166" src="https://webtoolocean.com/images/webtoolocean-logo.png" alt="Web Tool Ocean"></a></div>
-          <p class="footer-text"> Free online tools for PDF, images, coding, productivity and more.
-            Fast, secure and easy to use on desktop &amp; mobile. </p>
-          <p class="footer-text mb-1"> <i class="fa fa-envelope"></i> <a href="mailto:webtoolocean@gmail.com">webtoolocean@gmail.com</a> </p>
-          <p class="footer-text mb-1"> <i class="fa fa-instagram"></i> <a href="https://www.instagram.com/webtoolocean">Follow us</a> </p>
+
+        <!-- ═══════════════════════════════════════════════════════
+        WHY USE THIS TOOL
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Why WebToolOcean</span>
+            <h2>Why Use Our Base64 to Image Converter?</h2>
+            <p>Thousands of developers and technical professionals trust WebToolOcean to decode Base64 strings and
+              retrieve their images fast and securely.</p>
+          </div>
+          <div class="ic-why-grid">
+            <div class="ic-why-card">
+              <div class="why-icon bg-blue"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Instant Decoding</h4>
+              <p>Base64 strings are decoded in milliseconds using your browser's built-in engine — no server round-trip,
+                no processing delays.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-emerald"><i class="fa-solid fa-lock"></i></div>
+              <h4>100% Private &amp; Secure</h4>
+              <p>Your Base64 data never leaves your device. All decoding happens locally in the browser — no cloud
+                processing, no data collection, ever.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-violet"><i class="fa-solid fa-code"></i></div>
+              <h4>Preview or Download</h4>
+              <p>Preview the decoded image instantly or download it to your device as a standard PNG, JPG, or other
+                image file format.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-orange"><i class="fa-solid fa-mobile-screen"></i></div>
+              <h4>Works on Any Device</h4>
+              <p>Fully optimized for desktop, tablet, and mobile. No app download or installation required — just open
+                and paste.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-cyan"><i class="fa-solid fa-layer-group"></i></div>
+              <h4>All Image Formats</h4>
+              <p>Supports Base64-encoded PNG, JPG, JPEG, GIF, WebP, BMP, SVG, and more. Automatically detects the image
+                type.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-rose"><i class="fa-solid fa-circle-check"></i></div>
+              <h4>Free Forever</h4>
+              <p>No trials, no subscriptions, no credit card. Every feature of this Base64 to Image converter is
+                permanently free for everyone.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </article>
-  
-  <!-- Bottom Menu -->
-  <article id="copyrights">
-    <div class="container text-center">
-		   <div class="row">  <div class="col-md-7 col-xs-12 md-text-left text-center"><p class="copy-text"> © Copyright <span id="spanYear">2026</span> Web Tool Ocean | All Rights Reserved </p></div>
-		<div class="col-md-5 col-xs-12 md-text-right text-center"><a href="https://webtoolocean.com/sitemap">Sitemap</a></div>
-      </div>
-    </div>
-  </article>
-</footer>
-<a href="#" id="backToTop" aria-label="Back to Top">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-  <path d="M12 5L5 12H9V19H15V12H19L12 5Z"
-              fill="currentColor"/>
-</svg>
-</a>
-<div class="clearfix"></div>
-<script src="https://webtoolocean.com/js/jquery.js"></script> 
-<!-- InstanceBeginEditable name="EditRegion5" -->
-     
-  <script src="https://webtoolocean.com/js/bootstrap.bundle.min.js"></script>
-     
-       
-<script>
-const preview = document.getElementById("preview");
-const downloadBtn = document.getElementById("downloadBtn");
-const successMsg = document.getElementById("successMsg");
 
-const loaderBox = document.getElementById("loaderBox");
-const loaderText = document.getElementById("loaderText");
-const convertBtn = document.getElementById("convertBtn");
+        <!-- ═══════════════════════════════════════════════════════
+        RELATED TOOLS
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section pb-5">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">More Tools</span>
+            <h2>Related Image Tools You Might Need</h2>
+            <p>Explore more free image tools from WebToolOcean — all free, all browser-based.</p>
+          </div>
+          <div class="ic-related-grid">
 
-function convertImage(){
+            <a href="/image-tools/svg-to-image-converter/" class="ic-related-card">
+              <div class="rel-icon bg-indigo"><i class="fa-solid fa-vector-square"></i></div>
+              <div>
+                <div class="rel-name">SVG to Image</div>
+                <div class="rel-desc">Convert SVG to PNG, JPG, WEBP &amp; ICO</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
 
-let base64 = document.getElementById("base64Input").value.trim();
+            <a href="/image-tools/compress-image/" class="ic-related-card">
+              <div class="rel-icon bg-emerald"><i class="fa-solid fa-compress"></i></div>
+              <div>
+                <div class="rel-name">Compress Images</div>
+                <div class="rel-desc">Reduce file size without losing quality</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
 
-if(!base64){
-alert("Please paste Base64 code");
-return;
-}
+            <a href="/image-tools/image-to-text-ocr/" class="ic-related-card">
+              <div class="rel-icon bg-violet"><i class="fa-solid fa-font"></i></div>
+              <div>
+                <div class="rel-name">Image to Text (OCR)</div>
+                <div class="rel-desc">Extract text from any image</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
 
-/* START LOADER */
-loaderBox.style.display = "block";
-loaderText.innerText = "Converting...";
+            <a href="/image-tools/image-converter/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-repeat"></i></div>
+              <div>
+                <div class="rel-name">Image Converter</div>
+                <div class="rel-desc">Convert JPG, PNG, WEBP and GIF</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
 
-convertBtn.disabled = true;
-downloadBtn.style.display = "none";
-successMsg.style.display = "none";
+            <a href="/image-tools/favicon-generator/" class="ic-related-card">
+              <div class="rel-icon bg-amber"><i class="fa-solid fa-star"></i></div>
+              <div>
+                <div class="rel-name">Favicon Generator</div>
+                <div class="rel-desc">Create .ico and PNG favicons</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
 
-let seconds = 10;
+            <a href="/image-tools/image-to-base64/" class="ic-related-card">
+              <div class="rel-icon bg-rose"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <div class="rel-name">Image to Base64</div>
+                <div class="rel-desc">Encode images to Base64 string</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
 
-/* OPTIONAL COUNTDOWN */
-const timer = setInterval(function(){
+            <a href="/image-tools/base64-to-image/" class="ic-related-card">
+              <div class="rel-icon bg-orange"><i class="fa-solid fa-file-image"></i></div>
+              <div>
+                <div class="rel-name">Base64 to Image</div>
+                <div class="rel-desc">Decode Base64 back to image</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
 
-seconds--;
+            <a href="/all-tools/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-grid-2"></i></div>
+              <div>
+                <div class="rel-name">All Tools</div>
+                <div class="rel-desc">Browse all 25+ free tools</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
 
-loaderText.innerText = "Converting... " + seconds + "s";
+          </div>
+        </div>
 
-if(seconds <= 0){
+      </div><!-- /container -->
+    </div><!-- /ic-content -->
 
-clearInterval(timer);
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
 
-/* RESULT */
-preview.innerHTML = `<img src="${base64}" class="img-fluid rounded shadow">`;
 
-downloadBtn.style.display = "inline-block";
+  <script>
+    const preview = document.getElementById("preview");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const successMsg = document.getElementById("successMsg");
 
-downloadBtn.onclick = function(){
+    const loaderBox = document.getElementById("loaderBox");
+    const loaderText = document.getElementById("loaderText");
+    const convertBtn = document.getElementById("convertBtn");
 
-let link = document.createElement("a");
-link.href = base64;
-link.download = "image.png";
-link.click();
+    function convertImage() {
 
-};
+      let base64 = document.getElementById("base64Input").value.trim();
 
-successMsg.style.display = "block";
-loaderBox.style.display = "none";
-convertBtn.disabled = false;
-
-}
-
-},1000);
-
-}
-</script>
-<!-- InstanceEndEditable --> 
-<script>
-const backToTop = document.getElementById('backToTop');
-
-window.addEventListener('scroll', function() {
-
-    if (window.scrollY > 300) {
-        backToTop.classList.add('show');
-    } else {
-        backToTop.classList.remove('show');
-    }
-
-});
-
-backToTop.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-</script> 
-<!--<script>
-		const btn = document.getElementById("togglemeu");
-const menu = document.querySelector(".mainmenubar");
-
-btn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-	</script> 
-<script id="3q6qk9">
-document.addEventListener("contextmenu", function(e){
-    e.preventDefault();
-});
-</script> 
-<script id="7c7b4s">
-document.addEventListener("keydown", function(e){
-
-    if (e.key === "F12") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.key === "I") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.key === "J") {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.key === "U") {
-        e.preventDefault();
-    }
-
-});
-</script> 
-<script id="5h2r0p">
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-document.addEventListener("keydown", function(e){
-
-if(e.key=="F12"){e.preventDefault();}
-
-if(e.ctrlKey && e.shiftKey && e.key=="I"){e.preventDefault();}
-
-if(e.ctrlKey && e.shiftKey && e.key=="J"){e.preventDefault();}
-
-if(e.ctrlKey && e.key=="U"){e.preventDefault();}
-
-});
-
-setInterval(function(){
-
-if(window.outerWidth - window.innerWidth > 160){
-document.body.innerHTML="Access Restricted";
-}
-
-},1000);
-</script> 
-<script>
-document.addEventListener("keydown", function(e) {
-  if (e.ctrlKey && e.key === "u") {
-    e.preventDefault();
-  }
-  if (e.key === "F12") {
-    e.preventDefault();
-  }
-  if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) {
-    e.preventDefault();
-  }
-});
-</script>--> 
-
-<script>
- $(document).ready(function(){
-$("#togglemeu").click(function(){
-$(".mainmenubar").slideToggle();
-
-});
-});
-	document.getElementById("spanYear").textContent = new Date().getFullYear();
-</script> 
-
-<!-- Cookie Consent Banner -->
-<div id="cookieConsent" class="cookie-banner shadow-lg">
-  <div class="cookie-content">
-    <div class="cookie-text"> 🍪 We use cookies to improve your experience, analyze traffic, and display relevant ads. By continuing to
-      browse, you agree to our use of cookies. <a href="https://webtoolocean.com/cookie-policy" target="_blank">Learn More</a> </div>
-    <div class="cookie-actions">
-      <button id="acceptCookies" class="btn btn-primary btn-sm"> Accept </button>
-      <button id="declineCookies" class="btn btn-outline-secondary btn-sm"> Decline </button>
-    </div>
-  </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      const cookieBanner = document.getElementById("cookieConsent");
-      const acceptBtn = document.getElementById("acceptCookies");
-      const declineBtn = document.getElementById("declineCookies");
-
-      // Check if user has already made a choice
-      const consent = localStorage.getItem("cookieConsent");
-
-      if (consent) {
-        cookieBanner.style.display = "none";
+      if (!base64) {
+        alert("Please paste Base64 code");
+        return;
       }
 
-      // Accept Cookies
-      acceptBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "accepted");
-        cookieBanner.style.display = "none";
+      /* START LOADER */
+      loaderBox.style.display = "block";
+      loaderText.innerText = "Converting...";
 
-        console.log("Cookies Accepted");
+      convertBtn.disabled = true;
+      downloadBtn.style.display = "none";
+      successMsg.style.display = "none";
 
-        // Load Analytics / Ad Scripts here if needed
-        // Example:
-        // loadGoogleAnalytics();
-      });
+      let seconds = 10;
 
-      // Decline Cookies
-      declineBtn.addEventListener("click", function () {
-        localStorage.setItem("cookieConsent", "declined");
-        cookieBanner.style.display = "none";
+      /* OPTIONAL COUNTDOWN */
+      const timer = setInterval(function () {
 
-        console.log("Cookies Declined");
+        seconds--;
 
-        // Do NOT load analytics or marketing scripts
-      });
+        loaderText.innerText = "Converting... " + seconds + "s";
 
-    });
-  </script> 
+        if (seconds <= 0) {
 
-<!--mega menu js below--> 
+          clearInterval(timer);
 
- <script>
-(function(){
-  const pairs=[
-    {btn:document.getElementById('toolsBtn'),wrap:document.getElementById('toolsWrap'),item:document.getElementById('toolsItem')},
-    {btn:document.getElementById('blogBtn'),wrap:document.getElementById('blogWrap'),item:document.getElementById('blogItem')}
-  ];
+          /* RESULT */
+          preview.innerHTML = `<img src="${base64}" class="img-fluid rounded shadow">`;
 
-  function closeAll(){
-    pairs.forEach(({btn,wrap,item})=>{
-      wrap.classList.remove('open');
-      item.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    });
-  }
+          downloadBtn.style.display = "inline-block";
 
-  pairs.forEach(({btn,wrap,item})=>{
-    let t;
-    function open(){
-      clearTimeout(t);
-      closeAll();
-      wrap.classList.add('open');
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded','true');
+          downloadBtn.onclick = function () {
+
+            let link = document.createElement("a");
+            link.href = base64;
+            link.download = "image.png";
+            link.click();
+
+          };
+
+          successMsg.style.display = "block";
+          loaderBox.style.display = "none";
+          convertBtn.disabled = false;
+
+        }
+
+      }, 1000);
+
     }
-    function sched(){t=setTimeout(()=>{wrap.classList.remove('open');item.classList.remove('open');btn.setAttribute('aria-expanded','false');},160);}
-    btn.addEventListener('click',e=>{e.stopPropagation();wrap.classList.contains('open')?closeAll():open();});
-    item.addEventListener('mouseenter',open);
-    item.addEventListener('mouseleave',sched);
-    wrap.addEventListener('mouseenter',()=>clearTimeout(t));
-    wrap.addEventListener('mouseleave',sched);
-  });
+  </script>
 
-  document.addEventListener('click',closeAll);
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){
-      closeAll();
-      mob.classList.remove('open');
-      ham.classList.remove('open');
-      ham.setAttribute('aria-expanded','false');
-    }
-  });
-
-  const ham=document.getElementById('hamburger');
-  const mob=document.getElementById('mobileMenu');
-  ham.addEventListener('click',()=>{
-    const o=mob.classList.toggle('open');
-    ham.classList.toggle('open',o);
-    ham.setAttribute('aria-expanded',String(o));
-  });
-
-  [['mToolsTitle','mToolsBody'],['mBlogTitle','mBlogBody']].forEach(([tid,bid])=>{
-    document.getElementById(tid).addEventListener('click',function(){
-      const b=document.getElementById(bid);
-      const isOpen=b.classList.toggle('open');
-      this.classList.toggle('expanded',isOpen);
+  <!-- FAQ ACCORDION -->
+  <script>
+    document.querySelectorAll('.ic-faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.ic-faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.ic-faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
     });
-  });
-})();
-</script>
+  </script>
+
+  <style>
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
+    }
+
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: var(--brand-accent);
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .ic-hero {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, #0f172a 100%);
+      padding: 44px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ic-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ic-hero .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+
+    .ic-hero h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: #f1f5f9;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .ic-hero h1 span {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ic-hero p.hero-desc {
+      color: #94a3b8;
+      font-size: .93rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 22px;
+    }
+
+    .ic-trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 100px;
+      color: #cbd5e1;
+      font-size: .76rem;
+      font-weight: 500;
+      padding: 5px 13px;
+    }
+
+    .ic-badge i {
+      color: #34d399;
+      font-size: .7rem;
+    }
+
+    .ic-content {
+      background: var(--brand-light);
+      padding: 0 0 64px;
+    }
+
+    .ic-section {
+      padding: 52px 0 0;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-section-head {
+      margin-bottom: 28px;
+    }
+
+    .ic-section-head .sec-eyebrow {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head p {
+      color: var(--text-muted);
+      font-size: .88rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0;
+    }
+
+    .ic-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ic-step-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .ic-step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--brand-accent);
+    }
+
+    .ic-step-card .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .ic-step-card .step-icon {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .ic-step-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-step-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .ic-steps-wrap {
+      position: relative;
+    }
+
+    .ic-steps-wrap::before {
+      content: '';
+      position: absolute;
+      top: 54px;
+      left: calc(12.5% + 10px);
+      right: calc(12.5% + 10px);
+      height: 2px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      opacity: .25;
+      z-index: 0;
+    }
+
+    .ic-format-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-format-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-format-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ic-format-card .fmt-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-format-card .fmt-from {
+      font-size: .65rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 600;
+    }
+
+    .ic-format-card .fmt-title {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 4px;
+    }
+
+    .ic-format-card .fmt-desc {
+      font-size: .76rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .bg-blue {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    .bg-cyan {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+    }
+
+    .bg-violet {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    }
+
+    .bg-emerald {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .bg-orange {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+    }
+
+    .bg-rose {
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+    }
+
+    .bg-amber {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .bg-indigo {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+    }
+
+    .ic-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .83rem;
+    }
+
+    .ic-info-table thead th {
+      background: var(--brand-dark);
+      color: #e2e8f0;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .ic-info-table thead th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+
+    .ic-info-table thead th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+
+    .ic-info-table tbody tr {
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ic-info-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .ic-info-table tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    .ic-info-table tbody td {
+      padding: 12px 16px;
+      color: var(--text-body);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .ic-info-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--brand-dark);
+    }
+
+    .ic-info-table-wrap {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .fmt-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: var(--brand-accent);
+      border-radius: 4px;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      margin-right: 4px;
+    }
+
+    .ic-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ic-faq-item {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open {
+      border-color: var(--brand-accent);
+    }
+
+    .ic-faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      cursor: pointer;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .ic-faq-q h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin: 0;
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .ic-faq-q .faq-toggle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open .faq-toggle {
+      background: var(--brand-accent);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .ic-faq-a {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: .85rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    .ic-faq-item.open .ic-faq-a {
+      display: block;
+    }
+
+    .ic-faq-a code {
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: .82rem;
+    }
+
+    .ic-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-why-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-why-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .ic-why-card .why-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .ic-why-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-why-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .ic-related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .ic-related-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      color: inherit;
+    }
+
+    .ic-related-card .rel-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-related-card .rel-name {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 2px;
+    }
+
+    .ic-related-card .rel-desc {
+      font-size: .72rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .ic-related-card .rel-arrow {
+      margin-left: auto;
+      color: var(--brand-accent);
+      font-size: .72rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover .rel-arrow {
+      opacity: 1;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* DROP AREA */
+    #drop-area {
+      border: 2px dashed #cbd5e1;
+      padding: 40px;
+      text-align: center;
+      border-radius: 12px;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    #drop-area.dragover {
+      border-color: #16a34a;
+      background: #ecfdf5;
+    }
+
+    /* BUTTONS */
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .btn-green {
+      background: #065f46;
+      color: white;
+    }
+
+    .btn-red {
+      background: #dc2626;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    /* PROGRESS */
+    #progress-container {
+      display: none;
+      margin: 20px 0;
+    }
+
+    .progress-bar-bg {
+      background: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #progress-bar {
+      height: 14px;
+      width: 0%;
+      background: linear-gradient(90deg, #16a34a, #065f46);
+      transition: width 0.2s;
+    }
+
+    #progress-text {
+      text-align: right;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* FILE CARDS */
+    .file-card {
+      background: #fff;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .file-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .file-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .file-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 0;
+      padding: 8px;
+      min-height: 169px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .ic-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-format-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-steps-wrap::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .ic-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-format-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-related-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+  <style>
+   
+
+    .tool-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .drop-area {
+      border: 2px dashed #0d6efd;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .drop-area:hover {
+      background: #f1f7ff;
+    }
+
+    .preview img {
+      max-width: 220px;
+      margin-top: 15px;
+    }
+
+    textarea {
+      height: 160px;
+      font-size: 13px;
+    }
+
+    #copyMsg {
+      display: none;
+      color: green;
+      font-weight: 600;
+    }
+
+    .progress {
+      display: none;
+      height: 18px;
+      /* bigger height */
+      margin-top: 20px;
+      background: #e9ecef;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+    .seo-section {
+      background: #fff;
+      margin-top: 40px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .visiblearea .preview.text-center {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: start;
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+
+    .visiblearea .preview.text-center img {
+      max-width: 100px;
+      margin: 0 !important;
+    }
+
+    .visiblearea .preview.text-center p {
+      margin: 0;
+    }
+  </style>
+  <style>
+    .tool-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .drop-area {
+      border: 2px dashed #0d6efd;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .drop-area:hover {
+      background: #f1f7ff;
+    }
+
+    .preview img {
+      max-width: 220px;
+      margin-top: 15px;
+    }
+
+    textarea {
+      height: 160px;
+      font-size: 13px;
+    }
+
+    #copyMsg {
+      display: none;
+      color: green;
+      font-weight: 600;
+    }
+
+    .progress {
+      display: none;
+      height: 18px;
+      /* bigger height */
+      margin-top: 20px;
+      background: #e9ecef;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+    .seo-section {
+      background: #fff;
+      margin-top: 40px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .tool-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .preview-area {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+
+    .progress {
+      display: none;
+      height: 18px;
+      /* bigger height */
+      margin-top: 20px;
+      background: #e9ecef;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+
+    .success-msg {
+      display: none;
+      color: green;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    textarea {
+      height: 150px;
+    }
+  </style>
 </body>
-<!-- InstanceEnd --></html>
+
+</html>
