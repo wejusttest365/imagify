@@ -1,18 +1,18 @@
 
 $(window).on('scroll', function () {
-    if ($(this).scrollTop() > 100) {
-        $('#header').addClass('fixed');
-    } else {
-        $('#header').removeClass('fixed');
-    }
+  if ($(this).scrollTop() > 100) {
+    $('#header').addClass('fixed');
+  } else {
+    $('#header').removeClass('fixed');
+  }
 });
 
 //=============================== unified nav menu
 var isMobile = function () { return window.innerWidth <= 900; };
 
 var dropConfigs = [
-  { btnId: "toolsBtn",     itemId: "toolsItem",     menuId: "toolsMenu"     },
-  { btnId: "blogBtn",      itemId: "blogItem",      menuId: "blogMenu"      },
+  { btnId: "toolsBtn", itemId: "toolsItem", menuId: "toolsMenu" },
+  { btnId: "blogBtn", itemId: "blogItem", menuId: "blogMenu" },
   { btnId: "resourcesBtn", itemId: "resourcesItem", menuId: "resourcesMenu" }
 ];
 
@@ -159,10 +159,10 @@ function cookieConsentFunction() {
 // End Cooclies JS
 
 $(document).ready(function () {
-  $("#header").load("/master/header.html", function () {
+  $("#header").load("https://webtoolocean.com/master/header.html", function () {
     initNavMenu();
   });
-  $("#footer").load("/master/footer.html", function () {
+  $("#footer").load("https://webtoolocean.com/master/footer.html", function () {
 
     backToTopFunction();
     cookieConsentFunction();
@@ -171,4 +171,4 @@ $(document).ready(function () {
 });
 
 
- 
+
