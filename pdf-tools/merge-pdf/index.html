@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-<link rel="manifest" href="https://webtoolocean.com/manifest.json">
-<meta name="theme-color" content="#0f172a">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="ToolOcean">
-<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
+  <link rel="manifest" href="https://webtoolocean.com/manifest.json">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ToolOcean">
+  <link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="language" content="English">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -198,6 +198,14 @@
                       <p>or click to upload</p>
                       <input type="file" id="fileInput" multiple hidden accept=".pdf,application/pdf">
                     </div>
+
+                    <div id="fileList"></div>
+                    <div id="selectionBar" style="display:none;" class="selection-bar">
+                      <span id="selLabel">0 selected</span>
+                      <button class="btn btn-sm btn-outline-primary" onclick="moveSelectedTo('top')"><i class="fas fa-angle-double-up"></i> Move to Top</button>
+                      <button class="btn btn-sm btn-outline-primary" onclick="moveSelectedTo('bottom')"><i class="fas fa-angle-double-down"></i> Move to Bottom</button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="clearSelection()"><i class="fas fa-times"></i> Deselect All</button>
+                    </div>
                     <!-- Progress -->
                     <div id="progressWrapper" style="display:none;" class="mt-3">
                       <div id="progressText"></div>
@@ -205,11 +213,11 @@
                         <div class="progress-bar bg-success" id="bar" style="width:0%">0%</div>
                       </div>
                     </div>
-                    <div id="fileList"></div>
                     <div class="actions  mt-3">
                       <div class="text-center">
                         <button class="btn btn-primary" onclick="fileInput.click()"><span class="fa fa-plus"></span> Add
                           More</button>
+                        <button class="btn btn-outline-secondary" id="sortBtn" style="display:none;" onclick="sortByName()"><i class="fas fa-sort-alpha-down"></i> Sort A–Z</button>
                         <button class="btn btn-success" id="mergeBtn" style="display:none;">Merge PDF</button>
                         <button class="btn btn-primary" id="downloadBtn" style="display:none;">Download</button>
                         <button class="btn btn-danger" id="clearBtn" style="display:none;">Clear All</button>
@@ -683,7 +691,12 @@
     const dropArea = document.getElementById('dropArea');
     const fileInput = document.getElementById('fileInput');
     const fileList = document.getElementById('fileList');
+    const selectionBar = document.getElementById('selectionBar');
+    const selLabel = document.getElementById('selLabel');
+    let selectedIndices = new Set();
+
     const mergeBtn = document.getElementById('mergeBtn');
+    const sortBtn = document.getElementById('sortBtn');
     const clearBtn = document.getElementById('clearBtn');
     const downloadBtn = document.getElementById('downloadBtn');
     const emptyText = document.getElementById('emptyText');
@@ -733,6 +746,7 @@
 
         div.innerHTML = `
       <div class="d-flex align-items-center">
+        <input type="checkbox" class="file-checkbox me-2" data-index="${i}" onchange="toggleFileSelect(${i}, this.checked)" ${selectedIndices.has(i) ? 'checked' : ''}>
         <span class="drag-handle">☰</span>
         <canvas class="thumb" id="thumb-${i}"></canvas>
         <div>${f.name}<br><small>${formatSize(f.size)}</small></div>
@@ -746,9 +760,49 @@
 
       emptyText.style.display = files.length ? "none" : "block";
       mergeBtn.style.display = files.length ? "inline-block" : "none";
+      sortBtn.style.display = files.length > 1 ? "inline-block" : "none";
       clearBtn.style.display = files.length ? "inline-block" : "none";
+      updateSelectionBar();
 
       initSortable();
+    }
+
+    function toggleFileSelect(index, checked) {
+      if (checked) selectedIndices.add(index);
+      else selectedIndices.delete(index);
+      updateSelectionBar();
+    }
+
+    function updateSelectionBar() {
+      const n = selectedIndices.size;
+      selectionBar.style.display = n > 0 ? 'flex' : 'none';
+      selLabel.textContent = n + ' file' + (n !== 1 ? 's' : '') + ' selected';
+    }
+
+    function clearSelection() {
+      selectedIndices.clear();
+      updateUI();
+    }
+
+    function moveSelectedTo(position) {
+      if (selectedIndices.size === 0) return;
+      // Build selected and unselected arrays preserving current file order
+      const selected = files.filter((_, i) => selectedIndices.has(i));
+      const rest = files.filter((_, i) => !selectedIndices.has(i));
+      files = position === 'top' ? [...selected, ...rest] : [...rest, ...selected];
+      // Re-map selectedIndices to new positions
+      const newSelected = position === 'top'
+        ? new Set(selected.map((_, i) => i))
+        : new Set(rest.map((_, i) => rest.length + i));
+      selectedIndices = newSelected;
+      resetMergeState();
+      updateUI();
+    }
+
+    function sortByName() {
+      files.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+      resetMergeState();
+      updateUI();
     }
 
     function removeFile(i) {
@@ -761,6 +815,7 @@
       files = [];
       mergedBytes = null;
       isMerged = false;
+      selectedIndices.clear();
       downloadBtn.style.display = "none";
       updateUI();
     };
@@ -1568,6 +1623,29 @@
       border-radius: 12px;
     }
 
+    .file-checkbox {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      accent-color: #0d6efd;
+      flex-shrink: 0;
+    }
+
+    .selection-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1d4ed8;
+    }
+
     .file-card {
       display: flex;
       justify-content: space-between;
@@ -1606,15 +1684,15 @@
       justify-content: center;
     }
   </style>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(reg => console.log('SW registered:', reg.scope))
-        .catch(err => console.error('SW failed:', err));
-    });
-  }
-</script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.error('SW failed:', err));
+      });
+    }
+  </script>
 </body>
 
 </html>
