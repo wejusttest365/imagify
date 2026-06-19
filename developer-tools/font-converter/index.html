@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<link rel="manifest" href="https://webtoolocean.com/manifest.json">
+
 <meta name="theme-color" content="#0f172a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -799,20 +799,12 @@
             }
 
             const sampleHtml = `<!doctype html><html><head>
-<link rel="manifest" href="https://webtoolocean.com/manifest.json">
+
 <meta name="theme-color" content="#0f172a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="ToolOcean">
-<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png"><meta charset="utf-8"><title>Preview ${baseName}</title><link rel="stylesheet" href="fonts.css"><style>body{font-family:${baseName},sans-serif;padding:20px;font-size:28px}</style></head><body><h1>Font Preview — ${baseName}</h1><p>The quick brown fox jumps over the lazy dog — 0123456789</p><script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(reg => console.log('SW registered:', reg.scope))
-        .catch(err => console.error('SW failed:', err));
-    });
-  }
-</script>
+<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png"><meta charset="utf-8"><title>Preview ${baseName}</title><link rel="stylesheet" href="fonts.css"><style>body{font-family:${baseName},sans-serif;padding:20px;font-size:28px}</style></head><body><h1>Font Preview — ${baseName}</h1><p>The quick brown fox jumps over the lazy dog — 0123456789</p>
 </body></html>`;
             fontsFolder.file('preview.html', sampleHtml);
 
@@ -1661,15 +1653,7 @@
       text-align: left !important;
     }
   </style>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(reg => console.log('SW registered:', reg.scope))
-        .catch(err => console.error('SW failed:', err));
-    });
-  }
-</script>
+
 </body>
 
 </html>

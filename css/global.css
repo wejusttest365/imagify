@@ -3691,3 +3691,4 @@ p.hero-desc {
     flex-wrap: wrap;
     gap: 10px;
 }
+.benefit-icon {display:none !important}
