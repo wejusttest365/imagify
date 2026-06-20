@@ -94,7 +94,7 @@ button.lines-button.x.close {
 }
 
 button.lines-button.x.close:focus {
-    background: #00000;
+    background-color: #00000;
 }
 
 /* Hide helper text */
@@ -499,8 +499,8 @@ img {
 
 .blog-link {
     text-decoration: none;
-    color: inherit;
-    display: block;
+    /* color: inherit; */
+    /* display: block; */
 }
 
 .blog-card {

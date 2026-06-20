@@ -159,10 +159,10 @@ function cookieConsentFunction() {
 // End Cooclies JS
 
 $(document).ready(function () {
-  $("#header").load("https://webtoolocean.com/master/header.html", function () {
+  $("#header").load("/master/header.html", function () {
     initNavMenu();
   });
-  $("#footer").load("https://webtoolocean.com/master/footer.html", function () {
+  $("#footer").load("/master/footer.html", function () {
 
     backToTopFunction();
     cookieConsentFunction();
