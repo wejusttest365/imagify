@@ -12,7 +12,7 @@ var isMobile = function () { return window.innerWidth <= 900; };
 
 var dropConfigs = [
   { btnId: "toolsBtn", itemId: "toolsItem", menuId: "toolsMenu" },
-  { btnId: "blogBtn", itemId: "blogItem", menuId: "blogMenu" },
+  { btnId: "utilityBtn", itemId: "utilityItem", menuId: "utilityMenu" },
   { btnId: "resourcesBtn", itemId: "resourcesItem", menuId: "resourcesMenu" }
 ];
 
@@ -159,10 +159,10 @@ function cookieConsentFunction() {
 // End Cooclies JS
 
 $(document).ready(function () {
-  $("#header").load("https://webtoolocean.com/master/header.html", function () {
+  $("#header").load("/master/header.html", function () {
     initNavMenu();
   });
-  $("#footer").load("https://webtoolocean.com/master/footer.html", function () {
+  $("#footer").load("/master/footer.html", function () {
 
     backToTopFunction();
     cookieConsentFunction();

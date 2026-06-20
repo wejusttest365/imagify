@@ -112,15 +112,6 @@ button.lines-button.x.close:focus {
     --maxwidth: 100%;
 }
 
-* {
-    box-sizing: border-box
-}
-
-body {
-    font-size: 16px;
-    font-family: var(--googlesans);
-}
-
 .hero {
     background: linear-gradient(135deg, #000000, #001897);
     color: #fff;
@@ -1542,9 +1533,7 @@ h1 {
     transform: translateY(-3px);
 }
 
-#copyrights {
-    /* padding:20px 0 30px; */
-}
+  
 
 .copy-text {
     margin: 0 0 10px;
@@ -1575,11 +1564,24 @@ h1 {
 @media(max-width:768px) {
 
     .footer-top {
-        text-align: center;
+        text-align: left !important;
     }
 
-    .social-icons {
-        justify-content: center;
+    .footer-top .row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .footer-top .col-md-3,
+    .footer-top .col-sm-6 {
+        width: 100%;
+    }
+
+    .footer-links,
+    .footer-links ul,
+    .footer-links li {
+        text-align: left;
     }
 
     .footer-links span {
@@ -1587,11 +1589,16 @@ h1 {
     }
 
     .footer-links a {
-        display: inline-block;
-        margin: 4px 6px;
+        display: block;
+        margin: 6px 0;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 
 }
+
 
 
 
@@ -3692,3 +3699,21 @@ p.hero-desc {
     gap: 10px;
 }
 .benefit-icon {display:none !important}
+
+@media(max-width:480px) {
+    .footer-top .row {
+        grid-template-columns: 1fr 50%;
+    }
+    .wto-hero-about h1 {
+    font-size: 24px!important;
+    font-weight: 800;
+    line-height: 34px!important;
+    color: #ffffff;
+    margin-bottom: 10px!important;
+}
+section.wto-hero-about a {
+    padding: 10px !important;
+    margin: 0 !important;
+    display: inline-block !important;
+}
+}
