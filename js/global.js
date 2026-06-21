@@ -170,5 +170,76 @@ $(document).ready(function () {
   });
 });
 
+// my active menu js
+(function () {
+  'use strict';
+
+  function normalizePath(path) {
+    if (!path) return '/';
+    try { path = decodeURIComponent(path); } catch (e) {}
+    if (path.length > 1 && path.endsWith('/')) path = path.slice(0, -1);
+    return path === '' ? '/' : path;
+  }
+
+  function clearActive() {
+    document.querySelectorAll('.main-nav .active').forEach(function (el) {
+      el.classList.remove('active');
+    });
+  }
+
+  function activateLink(link) {
+    if (!link) return;
+    link.classList.add('active');
+    var navItem = link.closest('.nav-item');
+    if (navItem) {
+      navItem.classList.add('active');
+      var trigger = navItem.querySelector(':scope > .nav-btn');
+      if (trigger && trigger !== link) trigger.classList.add('active');
+    }
+  }
+
+  function findMatchingLink(currentPath) {
+    var links = document.querySelectorAll('.main-nav a[href]');
+    var exactMatch = null;
+    var bestPrefixMatch = null;
+    var bestPrefixLength = 0;
+
+    links.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (!href || href.charAt(0) === '#' || /^https?:\/\//i.test(href)) return;
+      var linkPath = normalizePath(href.split('?')[0].split('#')[0]);
+
+      if (linkPath === currentPath) { exactMatch = link; return; }
+
+      if (linkPath !== '/' && currentPath.indexOf(linkPath + '/') === 0) {
+        if (linkPath.length > bestPrefixLength) {
+          bestPrefixMatch = link;
+          bestPrefixLength = linkPath.length;
+        }
+      }
+    });
+
+    return exactMatch || bestPrefixMatch;
+  }
+
+  function setActiveMenu() {
+    clearActive();
+    var currentPath = normalizePath(window.location.pathname);
+    activateLink(findMatchingLink(currentPath));
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('.main-nav a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (!href || href.charAt(0) === '#' || /^https?:\/\//i.test(href)) return;
+    clearActive();
+    activateLink(link);
+  });
+
+  document.addEventListener('DOMContentLoaded', setActiveMenu);
+  window.addEventListener('popstate', setActiveMenu);
+  window.addEventListener('pageshow', setActiveMenu);
+})();
 
 
