@@ -3717,3 +3717,15 @@ section.wto-hero-about a {
     display: inline-block !important;
 }
 }
+.wto-why-section .why-card .why-icon { 
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+.wto-why-section .why-card:hover h4 {
+    color: #fff;
+}
+
+.wto-why-section .why-card:hover p {
+    color: #fff;
+}

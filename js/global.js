@@ -68,28 +68,28 @@ function initNavMenu() {
   });
 
   // Hover: desktop only
-  dropConfigs.forEach(function (c) {
-    var itemEl = document.getElementById(c.itemId);
-    var menuEl = document.getElementById(c.menuId);
-    if (!itemEl || !menuEl) return;
+  // dropConfigs.forEach(function (c) {
+  //   var itemEl = document.getElementById(c.itemId);
+  //   var menuEl = document.getElementById(c.menuId);
+  //   if (!itemEl || !menuEl) return;
 
-    function openThis() {
-      if (isMobile()) return;
-      openDrop(c.itemId, c.menuId);
-    }
+  //   function openThis() {
+  //     if (isMobile()) return;
+  //     openDrop(c.itemId, c.menuId);
+  //   }
 
-    function tryClose() {
-      if (isMobile()) return;
-      setTimeout(function () {
-        if (!menuEl.matches(":hover") && !itemEl.matches(":hover")) closeAll();
-      }, 100);
-    }
+  //   function tryClose() {
+  //     if (isMobile()) return;
+  //     setTimeout(function () {
+  //       if (!menuEl.matches(":hover") && !itemEl.matches(":hover")) closeAll();
+  //     }, 100);
+  //   }
 
-    itemEl.addEventListener("mouseenter", openThis);
-    menuEl.addEventListener("mouseenter", openThis);
-    itemEl.addEventListener("mouseleave", tryClose);
-    menuEl.addEventListener("mouseleave", tryClose);
-  });
+  //   itemEl.addEventListener("mouseenter", openThis);
+  //   menuEl.addEventListener("mouseenter", openThis);
+  //   itemEl.addEventListener("mouseleave", tryClose);
+  //   menuEl.addEventListener("mouseleave", tryClose);
+  // });
 }
 // End nav menu
 
@@ -159,10 +159,10 @@ function cookieConsentFunction() {
 // End Cooclies JS
 
 $(document).ready(function () {
-  $("#header").load("https://webtoolocean.com/master/header.html", function () {
+  $("#header").load("/master/header.html", function () {
     initNavMenu();
   });
-  $("#footer").load("https://webtoolocean.com/master/footer.html", function () {
+  $("#footer").load("/master/footer.html", function () {
 
     backToTopFunction();
     cookieConsentFunction();

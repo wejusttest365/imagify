@@ -29,7 +29,11 @@
   <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+ <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/image-convertor.css" rel="stylesheet">
+  <link href="/css/font-convert.css" rel="stylesheet">
   <!-- Schema: SoftwareApplication -->
   <script type="application/ld+json">
   {
@@ -136,12 +140,9 @@
 
 <style>
 /* ===================== RESET & BASE ===================== */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8fafc;color:#334155;overflow-x:hidden;line-height:1.6}
-.container{max-width:1140px;margin:0 auto;padding:0 20px}
-a{color:#3b82f6;text-decoration:none}
-a:hover{text-decoration:underline}
-
+ .hero { 
+    margin-bottom: 20px;
+}
 /* ===================== TOKENS ===================== */
 :root{
   --dark:#0f172a;
@@ -392,8 +393,9 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border:none;border-
 </head>
 
 <body>
-
-<nav class="bc" aria-label="Breadcrumb">
+  <div id="header"></div>
+  
+<nav class="ic-breadcrumb" aria-label="Breadcrumb">
   <div class="container">
     <ol>
       <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem"></i> Home</a></li>
@@ -421,7 +423,7 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border:none;border-
     </div>
   </div>
 </section>
-
+ <main role="main" id="content"> 
 <div class="tool-outer">
 <div class="container">
 
@@ -872,8 +874,9 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border:none;border-
 
 </div><!-- /container -->
 </div><!-- /tool-outer -->
-
+</main>
 <div class="qr-toast" id="toastEl"></div>
+<div id="footer"></div>
 <div class="clearfix"></div>
 <!-- ===== JAVASCRIPT ===== -->
    <script src="/js/jquery.js"></script>

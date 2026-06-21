@@ -29,7 +29,11 @@
   <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+ <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/image-convertor.css" rel="stylesheet">
+  <link href="/css/font-convert.css" rel="stylesheet">
   <!-- ═══════════════════════════════════════════════════════════
        SCHEMA: SoftwareApplication  (AEO / GEO)
   ════════════════════════════════════════════════════════════════ -->
@@ -437,9 +441,10 @@ a:hover{text-decoration:underline}
 </head>
 
 <body>
-
+  <div id="header"></div>
+ <main role="main" id="content">
 <!-- BREADCRUMB -->
-<nav class="bc" aria-label="Breadcrumb">
+<nav class="ic-breadcrumb" aria-label="Breadcrumb">
   <div class="container">
     <ol>
       <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem"></i> Home</a></li>
@@ -466,8 +471,7 @@ a:hover{text-decoration:underline}
       <span class="tbadge"><i class="fa-solid fa-circle-check"></i> Private &amp; Secure</span>
     </div>
   </div>
-</section>
-
+</section> 
 <!-- ═══ TOOL ═══ -->
 <div class="tool-outer">
 <div class="container">
@@ -965,10 +969,10 @@ a:hover{text-decoration:underline}
 
 </div><!-- /container -->
 </div><!-- /tool-outer -->
-
+</main>
 <div class="wc-toast" id="wcToast"></div>
 <div class="clearfix"></div>
-
+<div id="footer"></div>
 <!-- ═══════════════════════════════════════════════════════════
      JAVASCRIPT
 ════════════════════════════════════════════════════════════════ -->
