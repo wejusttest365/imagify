@@ -94,7 +94,7 @@ button.lines-button.x.close {
 }
 
 button.lines-button.x.close:focus {
-    background-color: #00000;
+    background: #00000;
 }
 
 /* Hide helper text */
@@ -110,6 +110,15 @@ button.lines-button.x.close:focus {
     --panel: #ffffff;
     --radius: 10px;
     --maxwidth: 100%;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--googlesans);
 }
 
 .hero {
@@ -499,8 +508,8 @@ img {
 
 .blog-link {
     text-decoration: none;
-    /* color: inherit; */
-    /* display: block; */
+    color: inherit;
+    display: block;
 }
 
 .blog-card {
@@ -1036,10 +1045,11 @@ article#copyrights a {
 .footer a,
 .footer ul li a {
     font-family: var(--googlesans);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     color: rgb(255 255 255) !important;
     transition: 0.5s;
+    /* border: 1px solid #eee; */
 }
 
 footer .headingfooter {
@@ -1073,7 +1083,7 @@ footer .h3 {
 .footer ul li a:hover,
 .footer a:active,
 .footer ul li a:focus {
-    color: rgb(245 25 5) !important;
+
     /* Your specific red hover */
     text-decoration: none !important;
     background: transparent;
@@ -1533,7 +1543,9 @@ h1 {
     transform: translateY(-3px);
 }
 
-  
+#copyrights {
+    /* padding:20px 0 30px; */
+}
 
 .copy-text {
     margin: 0 0 10px;
@@ -1564,24 +1576,11 @@ h1 {
 @media(max-width:768px) {
 
     .footer-top {
-        text-align: left !important;
+        text-align: center;
     }
 
-    .footer-top .row {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
-    }
-
-    .footer-top .col-md-3,
-    .footer-top .col-sm-6 {
-        width: 100%;
-    }
-
-    .footer-links,
-    .footer-links ul,
-    .footer-links li {
-        text-align: left;
+    .social-icons {
+        justify-content: center;
     }
 
     .footer-links span {
@@ -1589,16 +1588,11 @@ h1 {
     }
 
     .footer-links a {
-        display: block;
-        margin: 6px 0;
-    }
-
-    .social-icons {
-        justify-content: center;
+        display: inline-block;
+        margin: 4px 6px;
     }
 
 }
-
 
 
 
@@ -2289,7 +2283,6 @@ section {
     justify-content: center;
     margin-bottom: 8px;
     font-size: .95rem;
-    color: #fff;
 }
 
 .hero-tool-card .tool-name {
@@ -2391,7 +2384,7 @@ section {
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
-    color: #fff;
+    /* color: #fff; */
     margin-bottom: 14px;
 }
 
@@ -3698,34 +3691,16 @@ p.hero-desc {
     flex-wrap: wrap;
     gap: 10px;
 }
-.benefit-icon {display:none !important}
 
-@media(max-width:480px) {
-    .footer-top .row {
-        grid-template-columns: 1fr 50%;
-    }
-    .wto-hero-about h1 {
-    font-size: 24px!important;
-    font-weight: 800;
-    line-height: 34px!important;
-    color: #ffffff;
-    margin-bottom: 10px!important;
-}
-section.wto-hero-about a {
-    padding: 10px !important;
-    margin: 0 !important;
-    display: inline-block !important;
-}
-}
-.wto-why-section .why-card .why-icon { 
-    text-align: center;
-    align-items: center;
-    width: 100%;
-}
-.wto-why-section .why-card:hover h4 {
-    color: #fff;
+.footer ul li a {
+    padding: 12px 12px 12px 0 !important;
+    display: block;
+    border-radius: 10px !important;
+    margin-bottom: 5px !important;
 }
 
-.wto-why-section .why-card:hover p {
-    color: #fff;
+.footer ul li a:hover {
+    background: #015593;
+    color: #fff !important;
+    padding: 12px !important;
 }
