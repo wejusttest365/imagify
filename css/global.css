@@ -3722,7 +3722,7 @@ p.hero-desc {
 
   /* ===== Merge PDF CTA Banner ===== */
   .merge-cta{
-    padding:64px 16px;
+    /* padding:64px 16px; */
   }
 
   .cta-card{
@@ -3733,7 +3733,7 @@ p.hero-desc {
 
   .cta-left{
     background:linear-gradient(155deg,#ffffff 0%,#eef1f5 100%);
-    padding:44px 48px;
+    padding: 25px;
   }
 
   .cta-heading{
