@@ -3704,3 +3704,104 @@ p.hero-desc {
     color: #fff !important;
     padding: 12px !important;
 }
+
+/* Blog CTA banner css */
+ :root{
+    --navy:#13203f;
+    --navy-2:#1b2a52;
+    --heading:#101a33;
+    --subtext:#69728a;
+    --green:#16a36b;
+    --green-dark:#119057;
+    --icon-line: rgba(255,255,255,.9);
+    --icon-soft: rgba(255,255,255,.45);
+    --icon-accent:#33d690;
+  }
+
+  
+
+  /* ===== Merge PDF CTA Banner ===== */
+  .merge-cta{
+    padding:64px 16px;
+  }
+
+  .cta-card{
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 18px 40px -14px rgba(16,26,51,.22);
+  }
+
+  .cta-left{
+    background:linear-gradient(155deg,#ffffff 0%,#eef1f5 100%);
+    padding:44px 48px;
+  }
+
+  .cta-heading{
+    font-size:clamp(1.4rem,2.4vw,2rem);
+    font-weight:800;
+    color:var(--heading);
+    margin-bottom:10px;
+    letter-spacing:-0.01em;
+  }
+
+  .cta-subtext{
+    color:var(--subtext);
+    font-size:1rem;
+    margin-bottom:0;
+  }
+
+  .cta-right{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+    padding:36px 40px;
+    position:relative;
+    gap:28px;
+  }
+
+  .btn-merge{
+    background:var(--green);
+    color:#fff;
+    border:none;
+    padding:14px 28px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:.95rem;
+    white-space:nowrap;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    box-shadow:0 10px 20px -6px rgba(22,163,107,.55);
+    transition:background .2s ease, transform .2s ease;
+    flex-shrink:0;
+  }
+  .btn-merge:hover{
+    background:var(--green-dark);
+    color:#fff;
+    transform:translateY(-1px);
+  }
+  .btn-merge:focus-visible{
+    outline:3px solid #fff;
+    outline-offset:2px;
+  }
+
+  .cta-icons{
+    width:150px;
+    height:110px;
+    flex-shrink:0;
+  }
+  .cta-icons svg{
+    width:100%;
+    height:100%;
+    display:block;
+  }
+
+  @media (max-width:991.98px){
+    .cta-left{ text-align:center; padding:40px 32px 28px; }
+    .cta-right{ flex-direction:column; padding:32px; gap:22px; }
+    .cta-icons{ order:-1; }
+  }
+
+  @media (max-width:575.98px){
+    .cta-heading{ font-size:1.35rem; }
+    .cta-icons{ width:110px; height:82px; }
+  }
+  /* End Blog CTA banner css */
