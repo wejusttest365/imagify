@@ -827,7 +827,13 @@
   <script src="/js/global.js"></script>
   <script src="/js/bootstrap.bundle.min.js"></script>
 
-
+  <script>
+    fetch('/blog/sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
+  </script>
 </body>
 
 </html> 
