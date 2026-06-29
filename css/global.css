@@ -2407,7 +2407,7 @@ section {
 
 .tool-category-card .tool-link-list a {
     color: var(--text-muted);
-    font-size: .83rem;
+    font-size: .95rem;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -2416,9 +2416,9 @@ section {
 }
 
 .tool-category-card .tool-link-list a i {
-    font-size: .6rem;
+    font-size: .5rem;
     color: var(--brand-accent);
-    opacity: 0;
+    opacity: 1;
     transition: var(--transition);
 }
 
@@ -2715,7 +2715,7 @@ section {
 }
 
 .resource-card-desc {
-    font-size: .83rem;
+    /* font-size: .83rem; */
     color: #000000;
     line-height: 1.6;
     flex: 1;
@@ -2781,7 +2781,7 @@ section {
 }
 
 .why-card p {
-    font-size: .83rem;
+    /* font-size: .83rem; */
     color: #d3d3d3;
     line-height: 1.6;
     margin: 0;
@@ -3693,7 +3693,7 @@ p.hero-desc {
 }
 
 .footer ul li a {
-    padding: 12px 12px 12px 0 !important;
+    padding: 8px 12px 8px 0 !important;
     display: block;
     border-radius: 10px !important;
     margin-bottom: 5px !important;
@@ -3801,6 +3801,10 @@ p.hero-desc {
   }
 
   @media (max-width:575.98px){
+    .footer-links {
+    border-bottom: 1px solid #525252;
+    text-align: left;
+}
     .cta-heading{ font-size:1.35rem; }
     .cta-icons{ width:110px; height:82px; }
   }
