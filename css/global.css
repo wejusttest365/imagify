@@ -1422,6 +1422,9 @@ h1 {
    5. PHONE BREAKPOINT (Under 767px)
    ========================================================================== */
 @media (max-width: 767px) {
+    .hidden-xs {
+    display: none !important;
+}
     #top-header {
         text-align: right !important;
     }
