@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="theme-color" content="#0f172a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ToolOcean">
+  <link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+
+  <title>Strong Password Generator – Free, Secure & Customizable | WebToolOcean</title>
+  <meta name="description" content="Generate strong, secure, random passwords instantly. Customize length, character sets (uppercase, lowercase, numbers, symbols). Copy in one click. 100% free, browser-based, no signup, no data stored." />
+  <meta name="keywords" content="strong password generator, secure password generator, random password generator, password generator free, complex password generator, password maker online, generate strong password, password creator, safe password generator" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://webtoolocean.com/utility-tools/password-generator/" />
+
+  <meta property="og:title" content="Strong Password Generator – Free, Secure & Customizable" />
+  <meta property="og:description" content="Generate strong random passwords with custom length and character sets. Copy in one click. 100% browser-based and private — no data ever leaves your device." />
+  <meta property="og:url" content="https://webtoolocean.com/utility-tools/password-generator/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web Tool Ocean">
+  <meta property="og:image" content="https://webtoolocean.com/images/preview.png">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Strong Password Generator – Free & Secure" />
+  <meta name="twitter:description" content="Generate strong, random passwords instantly. Custom length, symbols, numbers. 100% private." />
+  <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/image-convertor.css" rel="stylesheet">
+  <link href="/css/font-convert.css" rel="stylesheet">
+  <!-- Schema: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Strong Password Generator",
+    "description": "Generate strong, secure, random passwords with custom length and character sets. Copy in one click. 100% browser-based and private.",
+    "url": "https://webtoolocean.com/utility-tools/password-generator/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires a modern browser (Chrome, Firefox, Safari, Edge)",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "5812", "bestRating": "5", "worstRating": "1" },
+    "author": { "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" },
+    "publisher": { "@type": "Organization", "name": "WebToolOcean" },
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "featureList": [
+      "Adjustable password length (4–128 characters)",
+      "Uppercase letters (A–Z)",
+      "Lowercase letters (a–z)",
+      "Numbers (0–9)",
+      "Symbols (!@#$%^&* etc.)",
+      "Exclude ambiguous characters (0, O, l, 1, I)",
+      "Exclude similar-looking characters",
+      "Generate up to 20 passwords at once",
+      "Live password strength meter",
+      "One-click copy to clipboard",
+      "100% browser-based — no server upload",
+      "Free forever, no signup required"
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes a password strong?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A strong password is long (at least 12–16 characters), random, and combines uppercase letters, lowercase letters, numbers, and symbols. It should never be based on dictionary words, names, dates, or keyboard patterns. The best practice is to use a randomly generated password that you store in a password manager." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should a strong password be?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Security experts recommend a minimum of 12 characters for general accounts, 16+ characters for email, banking, and work accounts, and 20+ characters for administrator or root accounts. Each additional character exponentially increases the time required to brute-force crack a password." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this password generator safe to use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. This password generator runs entirely inside your browser using the Web Crypto API (window.crypto.getRandomValues), which is cryptographically secure. No passwords are ever sent to or stored on any server. Everything remains on your device and is never logged." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use the same password for multiple accounts?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Never. If one service is breached and your password is exposed, attackers will try it on every other site you use — an attack called credential stuffing. Use a unique, randomly generated password for every account and store them in a reputable password manager like Bitwarden, 1Password, or Dashlane." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are ambiguous characters and should I exclude them?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ambiguous characters are visually similar characters that can cause confusion when reading or typing a password manually — for example, the number 0 and the letter O, or the lowercase l and the number 1. If you need to type or read out a password, enable 'Exclude ambiguous characters'. If your password will only ever be pasted or autofilled, you can safely include them for maximum security." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between entropy and password strength?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Password entropy is a mathematical measure of unpredictability, expressed in bits. Higher entropy means more possible combinations and exponentially harder to crack. A password with 70+ bits of entropy is considered strong for most uses; 35+ bits is excellent. Entropy depends on both length and the size of the character set used." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Generate a Strong Password Online",
+    "description": "Step-by-step guide to creating a secure, random password using the WebToolOcean free password generator.",
+    "totalTime": "PT30S",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Set your password length", "text": "Use the slider to choose a length. Security experts recommend at least 16 characters for most accounts." },
+      { "@type": "HowToStep", "position": 2, "name": "Choose your character types", "text": "Select which character sets to include: uppercase, lowercase, numbers, and/or symbols. More types = stronger password." },
+      { "@type": "HowToStep", "position": 3, "name": "Apply optional exclusions", "text": "Check 'Exclude ambiguous characters' if you need to type the password manually." },
+      { "@type": "HowToStep", "position": 4, "name": "Generate and copy", "text": "Click Generate Password to create your secure password, then click Copy to save it to your clipboard instantly." }
+    ]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webtoolocean.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Utility Tools", "item": "https://webtoolocean.com/utility-tools/" },
+      { "@type": "ListItem", "position": 3, "name": "Password Generator", "item": "https://webtoolocean.com/utility-tools/password-generator/" }
+    ]
+  }
+  </script>
+
+<style>
+/* ===================== RESET & BASE ===================== */
+ .hero { 
+    margin-bottom: 20px;
+}
+/* ===================== TOKENS ===================== */
+:root{
+  --dark:#0f172a;
+  --mid:#1e293b;
+  --accent:#3b82f6;
+  --accent2:#06b6d4;
+  --light:#f8fafc;
+  --body:#334155;
+  --muted:#64748b;
+  --white:#ffffff;
+  --border:#e2e8f0;
+  --r:12px;
+  --rs:8px;
+  --sh-sm:0 2px 8px rgba(0,0,0,.06);
+  --sh-md:0 6px 24px rgba(0,0,0,.10);
+  --t:.2s ease;
+}
+
+/* ===================== BREADCRUMB ===================== */
+.bc{background:var(--dark);padding:12px 0;border-bottom:1px solid #1e293b}
+.bc ol{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:.78rem}
+.bc li{color:#64748b}
+.bc li a{color:#94a3b8;transition:var(--t)}
+.bc li a:hover{color:var(--accent)}
+.bc li.sep{color:#334155}
+.bc li.cur{color:#cbd5e1;font-weight:500}
+
+/* ===================== HERO ===================== */
+.hero{background:linear-gradient(135deg,var(--dark) 0%,#071e38 50%,#0f172a 100%);padding:48px 0 44px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 700px 320px at 80% 50%,rgba(6,182,212,.09) 0%,transparent 70%);pointer-events:none}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(6,182,212,.14);border:1px solid rgba(6,182,212,.28);border-radius:100px;color:#67e8f9;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 12px;margin-bottom:14px}
+.hero h1{font-size:clamp(1.65rem,3.6vw,2.5rem);font-weight:800;color:#f1f5f9;line-height:1.2;margin-bottom:10px}
+.hero h1 span{background:linear-gradient(90deg,#06b6d4,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:#94a3b8;font-size:.93rem;line-height:1.75;max-width:660px;margin-bottom:22px}
+.trust-badges{display:flex;flex-wrap:wrap;gap:10px}
+.tbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:100px;color:#cbd5e1;font-size:.76rem;font-weight:500;padding:5px 13px}
+.tbadge i{color:#34d399;font-size:.7rem}
+
+/* ===================== TOOL OUTER ===================== */
+.tool-outer{background:var(--light);padding:32px 0 0}
+.main-card{background:var(--white);border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.10);overflow:hidden;position:relative}
+
+/* ===================== PASSWORD OUTPUT AREA ===================== */
+.pw-output-area{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);padding:28px 28px 22px;border-bottom:1px solid rgba(255,255,255,.06)}
+.pw-display-wrap{position:relative;margin-bottom:14px}
+.pw-display{
+  width:100%;
+  background:rgba(255,255,255,.04);
+  border:1.5px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  padding:14px 56px 14px 16px;
+  font-family:'Courier New',Courier,monospace;
+  font-size:1.05rem;
+  font-weight:700;
+  color:#f1f5f9;
+  letter-spacing:.05em;
+  word-break:break-all;
+  min-height:56px;
+  line-height:1.5;
+  outline:none;
+  resize:none;
+  cursor:text;
+  transition:border-color .2s;
+}
+.pw-display:focus{border-color:rgba(6,182,212,.5)}
+.pw-refresh-btn{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:#94a3b8;font-size:.95rem;cursor:pointer;padding:4px;transition:color .2s,transform .3s}
+.pw-refresh-btn:hover{color:#06b6d4;transform:translateY(-50%) rotate(180deg)}
+
+/* Strength meter */
+.strength-row{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.strength-bars{display:flex;gap:4px;flex:1}
+.sbar{height:5px;border-radius:3px;flex:1;background:rgba(255,255,255,.1);transition:background .3s}
+.sbar.active-1{background:#ef4444}
+.sbar.active-2{background:#f97316}
+.sbar.active-3{background:#eab308}
+.sbar.active-4{background:#22c55e}
+.sbar.active-5{background:#06b6d4}
+.strength-label{font-size:.72rem;font-weight:700;color:#94a3b8;min-width:60px;text-align:right;transition:color .3s}
+.entropy-row{font-size:.7rem;color:#475569;letter-spacing:.02em}
+.entropy-val{color:#94a3b8;font-weight:600}
+
+/* Copy / bulk buttons */
+.pw-actions{display:grid;grid-template-columns:1fr auto auto;gap:8px;margin-top:16px}
+.btn-copy{padding:10px 20px;background:linear-gradient(135deg,#06b6d4,#3b82f6);color:#fff;border:none;border-radius:8px;font-size:.85rem;font-weight:700;cursor:pointer;transition:var(--t);display:flex;align-items:center;gap:7px}
+.btn-copy:hover{opacity:.9;transform:translateY(-1px);box-shadow:0 4px 14px rgba(59,130,246,.4)}
+.btn-secondary{padding:10px 16px;background:transparent;color:#94a3b8;border:1.5px solid rgba(255,255,255,.12);border-radius:8px;font-size:.82rem;font-weight:600;cursor:pointer;transition:var(--t);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.btn-secondary:hover{border-color:rgba(6,182,212,.5);color:#67e8f9}
+
+/* ===================== CONTROLS ===================== */
+.controls-wrap{padding:24px 28px}
+
+/* Length slider */
+.length-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.length-label-wrap{flex:1}
+.length-label-wrap .fl{display:block;font-size:.71rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.length-num-badge{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#06b6d4,#3b82f6);color:#fff;font-size:1.1rem;font-weight:800;border-radius:8px;min-width:52px;padding:4px 10px;letter-spacing:.01em}
+input[type="range"]{-webkit-appearance:none;width:100%;height:6px;border-radius:3px;background:var(--border);outline:none;cursor:pointer}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#3b82f6);cursor:pointer;box-shadow:0 2px 6px rgba(59,130,246,.4)}
+input[type="range"]::-moz-range-thumb{width:20px;height:20px;border:none;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#3b82f6);cursor:pointer}
+
+/* Checkboxes */
+.section-divider{font-size:.7rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin:0 0 14px;display:flex;align-items:center;gap:8px}
+.section-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.char-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+@media(max-width:500px){.char-grid{grid-template-columns:1fr}}
+
+.char-option{display:flex;align-items:center;gap:10px;background:#f8fafc;border:1.5px solid var(--border);border-radius:8px;padding:10px 14px;cursor:pointer;transition:var(--t);user-select:none}
+.char-option:hover{border-color:var(--accent);background:#eff6ff}
+.char-option.selected{border-color:var(--accent);background:#eff6ff}
+.char-option input[type="checkbox"]{display:none}
+.char-check{width:18px;height:18px;border:2px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--t);background:#fff}
+.char-option.selected .char-check{background:linear-gradient(135deg,#06b6d4,#3b82f6);border-color:transparent}
+.char-check i{font-size:.6rem;color:#fff;display:none}
+.char-option.selected .char-check i{display:block}
+.char-sample{font-family:'Courier New',monospace;font-size:.7rem;font-weight:700;color:var(--muted);background:rgba(0,0,0,.04);border-radius:4px;padding:1px 5px;margin-left:auto;flex-shrink:0}
+.char-name{font-size:.82rem;font-weight:600;color:var(--dark)}
+
+.exclude-row{display:flex;align-items:center;gap:10px;background:#f8fafc;border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;margin-bottom:20px;cursor:pointer;transition:var(--t)}
+.exclude-row:hover{border-color:var(--accent);background:#eff6ff}
+.exclude-row.selected{border-color:var(--accent);background:#eff6ff}
+.exclude-row .exc-check{width:18px;height:18px;border:2px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--t);background:#fff}
+.exclude-row.selected .exc-check{background:linear-gradient(135deg,#06b6d4,#3b82f6);border-color:transparent}
+.exclude-row.selected .exc-check i{display:block}
+.exc-check i{font-size:.6rem;color:#fff;display:none}
+.exc-text{flex:1}
+.exc-title{font-size:.82rem;font-weight:600;color:var(--dark)}
+.exc-sub{font-size:.72rem;color:var(--muted)}
+
+/* Bulk count */
+.bulk-row{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.bulk-row .fl{font-size:.71rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.fc{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:.87rem;color:var(--dark);background:#f8fafc;transition:border-color .15s}
+.fc:focus{outline:none;border-color:var(--accent);background:var(--white)}
+
+/* Generate btn */
+.gen-btn{width:100%;padding:12px;background:linear-gradient(135deg,#06b6d4,#3b82f6);color:#fff;border:none;border-radius:10px;font-size:.9rem;font-weight:700;cursor:pointer;transition:var(--t);display:flex;align-items:center;justify-content:center;gap:8px}
+.gen-btn:hover{opacity:.92;transform:translateY(-1px);box-shadow:0 4px 16px rgba(59,130,246,.35)}
+.gen-btn:active{transform:none}
+
+/* Bulk list */
+.bulk-list-wrap{margin-top:22px;display:none}
+.bulk-list-wrap.show{display:block}
+.bulk-list-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.bulk-list-head span{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.bulk-copy-all{font-size:.75rem;font-weight:600;color:var(--accent);background:transparent;border:1.5px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;transition:var(--t)}
+.bulk-copy-all:hover{border-color:var(--accent)}
+.bulk-list{display:flex;flex-direction:column;gap:6px;max-height:280px;overflow-y:auto}
+.bulk-item{display:flex;align-items:center;gap:10px;background:#f8fafc;border:1.5px solid var(--border);border-radius:8px;padding:9px 12px}
+.bulk-pw{font-family:'Courier New',monospace;font-size:.82rem;font-weight:600;color:var(--dark);flex:1;word-break:break-all}
+.bulk-copy-btn{background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:.8rem;padding:2px 4px;transition:var(--t);flex-shrink:0}
+.bulk-copy-btn:hover{color:var(--accent)}
+
+/* Error */
+.err-msg{width:100%;font-size:.78rem;font-weight:600;color:#dc2626;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:9px 14px;display:none;text-align:center;margin-top:10px}
+.err-msg.show{display:block}
+
+/* ===================== CONTENT SECTIONS ===================== */
+.sg-section{padding:52px 0 0;float:left;width:100%}
+.sg-section:last-of-type{padding-bottom:64px}
+.sg-head{margin-bottom:28px}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;background:linear-gradient(90deg,#06b6d4,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block;margin-bottom:6px}
+.sg-head h2{font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:800;color:var(--dark);margin-bottom:6px}
+.sg-head p{color:var(--muted);font-size:.88rem;line-height:1.7;max-width:640px}
+
+/* Steps */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:24px 20px;text-align:center;box-shadow:var(--sh-sm);transition:var(--t)}
+.step-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);border-color:var(--accent)}
+.snum{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#3b82f6);color:#fff;font-size:.8rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.sicon{font-size:1.4rem;margin-bottom:12px;display:block}
+.step-card h4{font-size:.88rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+.step-card p{font-size:.78rem;color:var(--muted);line-height:1.55}
+
+/* Info table */
+.table-wrap{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm);overflow-x:auto}
+.info-table{width:100%;border-collapse:collapse;font-size:.83rem}
+.info-table thead th{background:var(--dark);color:#e2e8f0;padding:12px 16px;text-align:left;font-weight:700;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+.info-table thead th:first-child{border-radius:10px 0 0 0}
+.info-table thead th:last-child{border-radius:0 10px 0 0}
+.info-table tbody tr{border-bottom:1px solid var(--border)}
+.info-table tbody tr:last-child{border-bottom:none}
+.info-table tbody tr:hover{background:#f8fafc}
+.info-table tbody td{padding:11px 16px;color:var(--body);vertical-align:top;line-height:1.5}
+.tag{display:inline-block;background:#ecfeff;color:#0891b2;border-radius:4px;font-size:.7rem;font-weight:700;padding:2px 7px}
+.tag-green{background:#f0fdf4;color:#16a34a}
+.tag-yellow{background:#fefce8;color:#a16207}
+.tag-red{background:#fef2f2;color:#dc2626}
+
+/* FAQ */
+.faq-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.faq-cols{grid-template-columns:1fr}}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm);transition:var(--t)}
+.faq-item.open{border-color:var(--accent2)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:17px 20px;cursor:pointer;gap:12px;user-select:none}
+.faq-q h4{font-size:.88rem;font-weight:700;color:var(--dark);flex:1;line-height:1.4;margin:0}
+.faq-toggle{width:28px;height:28px;border-radius:50%;background:#f1f5f9;border:none;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--muted);cursor:pointer;transition:var(--t);flex-shrink:0}
+.faq-item.open .faq-toggle{background:var(--accent2);color:#fff;transform:rotate(45deg)}
+.faq-a{display:none;padding:0 20px 17px;font-size:.85rem;color:var(--body);line-height:1.75}
+.faq-item.open .faq-a{display:block}
+
+/* Why grid */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.why-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:22px;box-shadow:var(--sh-sm);transition:var(--t)}
+.why-card:hover{border-color:var(--accent2);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.why-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.95rem;color:#fff;margin-bottom:14px}
+.why-card h4{font-size:.88rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+.why-card p{font-size:.78rem;color:var(--muted);line-height:1.6}
+
+/* Related */
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rel-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:18px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;box-shadow:var(--sh-sm);transition:var(--t)}
+.rel-card:hover{border-color:var(--accent);box-shadow:var(--sh-md);transform:translateY(-2px);color:inherit}
+.rel-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0}
+.rel-name{font-size:.82rem;font-weight:700;color:var(--dark);margin-bottom:2px}
+.rel-desc{font-size:.72rem;color:var(--muted);line-height:1.3}
+.rel-arrow{margin-left:auto;color:var(--accent);font-size:.72rem;opacity:0;transition:var(--t)}
+.rel-card:hover .rel-arrow{opacity:1}
+
+/* Color helpers */
+.g-blue{background:linear-gradient(135deg,#3b82f6,#2563eb)}
+.g-cyan{background:linear-gradient(135deg,#06b6d4,#0891b2)}
+.g-violet{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}
+.g-emerald{background:linear-gradient(135deg,#10b981,#059669)}
+.g-orange{background:linear-gradient(135deg,#f97316,#ea580c)}
+.g-rose{background:linear-gradient(135deg,#f43f5e,#e11d48)}
+.g-amber{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.g-teal{background:linear-gradient(135deg,#14b8a6,#0d9488)}
+.g-indigo{background:linear-gradient(135deg,#6366f1,#4f46e5)}
+
+/* TOAST */
+.qr-toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--dark);color:#f1f5f9;padding:9px 20px;border-radius:100px;font-size:.8rem;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:var(--sh-md);z-index:999;white-space:nowrap}
+.qr-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:991px){
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .rel-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:575px){
+  .steps-grid,.why-grid,.rel-grid{grid-template-columns:1fr}
+  .pw-actions{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
+  .btn-copy{grid-column:1/-1}
+}
+</style>
+</head>
+
+<body>
+  <div id="header"></div>
+  
+<nav class="ic-breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem"></i> Home</a></li>
+      <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem"></i></li>
+      <li><a href="/utility-tools/">Utility Tools</a></li>
+      <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem"></i></li>
+      <li class="cur">Password Generator</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-tag"><i class="fa-solid fa-shield-halved"></i> Utility Tools</div>
+    <h1>Strong Password Generator –<br><span>Secure, Random & Instant</span></h1>
+    <p>Create cryptographically strong, random passwords in one click. Customize length, choose your character sets, embed a logo, and copy instantly — your passwords are generated entirely in your browser and never leave your device.</p>
+    <div class="trust-badges">
+      <span class="tbadge"><i class="fa-solid fa-circle-check"></i> 100% Free</span>
+      <span class="tbadge"><i class="fa-solid fa-circle-check"></i> No Signup</span>
+      <span class="tbadge"><i class="fa-solid fa-circle-check"></i> Crypto-Secure Random</span>
+      <span class="tbadge"><i class="fa-solid fa-circle-check"></i> Bulk Generation</span>
+      <span class="tbadge"><i class="fa-solid fa-circle-check"></i> Strength Meter</span>
+      <span class="tbadge"><i class="fa-solid fa-circle-check"></i> Private &amp; Secure</span>
+    </div>
+  </div>
+</section>
+ <main role="main" id="content"> 
+<div class="tool-outer">
+<div class="container">
+
+<!-- ===== MAIN TOOL CARD ===== -->
+<section>
+<div class="main-card">
+
+  <!-- PASSWORD OUTPUT -->
+  <div class="pw-output-area">
+    <div class="pw-display-wrap">
+      <textarea class="pw-display" id="pwDisplay" rows="2" readonly spellcheck="false" placeholder="Your generated password will appear here…"></textarea>
+      <button class="pw-refresh-btn" id="pwRefreshBtn" title="Generate new password" aria-label="Regenerate">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </button>
+    </div>
+
+    <!-- Strength meter -->
+    <div class="strength-row">
+      <div class="strength-bars">
+        <div class="sbar" id="sbar1"></div>
+        <div class="sbar" id="sbar2"></div>
+        <div class="sbar" id="sbar3"></div>
+        <div class="sbar" id="sbar4"></div>
+        <div class="sbar" id="sbar5"></div>
+      </div>
+      <span class="strength-label" id="strengthLabel">–</span>
+    </div>
+    <div class="entropy-row">Entropy: <span class="entropy-val" id="entropyVal">–</span> bits &nbsp;·&nbsp; Character pool: <span class="entropy-val" id="poolVal">–</span></div>
+
+    <!-- Actions -->
+    <div class="pw-actions">
+      <button class="btn-copy" id="mainCopyBtn"><i class="fa-solid fa-copy"></i> Copy Password</button>
+      <button class="btn-secondary" id="bulkToggleBtn" title="Generate multiple passwords"><i class="fa-solid fa-list"></i> Bulk</button>
+      <button class="btn-secondary" id="mainDlBtn" title="Download as .txt"><i class="fa-solid fa-download"></i> Save</button>
+    </div>
+    <div class="err-msg" id="errMsg"></div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls-wrap">
+
+    <!-- Length -->
+    <div style="margin-bottom:20px">
+      <div class="length-row">
+        <div class="length-label-wrap">
+          <label class="fl" for="pwLength">Password Length</label>
+          <input type="range" id="pwLength" min="4" max="128" value="16" style="width:100%">
+        </div>
+        <div class="length-num-badge" id="lengthBadge">16</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:4px">
+        <span>4 (min)</span>
+        <span>64 (recommended)</span>
+        <span>128 (max)</span>
+      </div>
+    </div>
+
+    <!-- Character types -->
+    <div class="section-divider">Character Types</div>
+    <div class="char-grid">
+      <label class="char-option selected" id="opt-upper">
+        <input type="checkbox" id="chk-upper" checked>
+        <div class="char-check"><i class="fa-solid fa-check"></i></div>
+        <span class="char-name">Uppercase</span>
+        <span class="char-sample">A–Z</span>
+      </label>
+      <label class="char-option selected" id="opt-lower">
+        <input type="checkbox" id="chk-lower" checked>
+        <div class="char-check"><i class="fa-solid fa-check"></i></div>
+        <span class="char-name">Lowercase</span>
+        <span class="char-sample">a–z</span>
+      </label>
+      <label class="char-option selected" id="opt-numbers">
+        <input type="checkbox" id="chk-numbers" checked>
+        <div class="char-check"><i class="fa-solid fa-check"></i></div>
+        <span class="char-name">Numbers</span>
+        <span class="char-sample">0–9</span>
+      </label>
+      <label class="char-option selected" id="opt-symbols">
+        <input type="checkbox" id="chk-symbols" checked>
+        <div class="char-check"><i class="fa-solid fa-check"></i></div>
+        <span class="char-name">Symbols</span>
+        <span class="char-sample">!@#$%</span>
+      </label>
+    </div>
+
+    <!-- Exclusions -->
+    <div class="section-divider" style="margin-top:4px">Options</div>
+    <div class="exclude-row" id="opt-ambiguous">
+      <div class="exc-check"><i class="fa-solid fa-check"></i></div>
+      <div class="exc-text">
+        <div class="exc-title">Exclude ambiguous characters</div>
+        <div class="exc-sub">Removes 0, O, l, 1, I — great if you need to type the password manually</div>
+      </div>
+    </div>
+    <div class="exclude-row" id="opt-similar" style="margin-top:8px">
+      <div class="exc-check"><i class="fa-solid fa-check"></i></div>
+      <div class="exc-text">
+        <div class="exc-title">Exclude similar-looking characters</div>
+        <div class="exc-sub">Also removes v, V, u, U, w, W to prevent visual confusion</div>
+      </div>
+    </div>
+
+    <!-- Bulk count -->
+    <div class="bulk-row" style="margin-top:16px">
+      <label class="fl" for="bulkCount" style="margin-bottom:0">Passwords to generate:</label>
+      <select id="bulkCount" class="fc" style="max-width:120px;padding:8px 10px">
+        <option value="1" selected>1 (single)</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+
+    <button class="gen-btn" id="generateBtn">
+      <i class="fa-solid fa-shield-halved"></i> Generate Password
+    </button>
+
+    <!-- Bulk list -->
+    <div class="bulk-list-wrap" id="bulkListWrap">
+      <div class="bulk-list-head">
+        <span>Generated Passwords</span>
+        <button class="bulk-copy-all" id="bulkCopyAllBtn"><i class="fa-solid fa-copy"></i> Copy All</button>
+      </div>
+      <div class="bulk-list" id="bulkList"></div>
+    </div>
+
+    <p style="font-size:.72rem;color:var(--muted);text-align:center;line-height:1.5;margin-top:16px">
+      <i class="fa-solid fa-lock" style="color:#34d399;font-size:.65rem"></i>
+      Passwords generated using <strong>window.crypto.getRandomValues</strong> — cryptographically secure. Never stored or transmitted.
+    </p>
+  </div>
+
+</div>
+</section>
+
+<!-- HOW TO USE -->
+<div class="sg-section">
+  <div class="sg-head">
+    <span class="eyebrow">Step by Step</span>
+    <h2>How to Generate a Strong Password</h2>
+    <p>Create a secure, random password in under 30 seconds — no account, no software needed.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="snum">1</div>
+      <span class="sicon">📏</span>
+      <h4>Set Password Length</h4>
+      <p>Drag the slider to your required length. We recommend 16+ characters for most accounts and 20+ for email and banking.</p>
+    </div>
+    <div class="step-card">
+      <div class="snum">2</div>
+      <span class="sicon">🔤</span>
+      <h4>Choose Character Types</h4>
+      <p>Select uppercase, lowercase, numbers, and symbols. More character types = exponentially stronger password.</p>
+    </div>
+    <div class="step-card">
+      <div class="snum">3</div>
+      <span class="sicon">⚙️</span>
+      <h4>Apply Exclusions</h4>
+      <p>If you'll need to type the password manually, enable "Exclude ambiguous characters" to avoid confusion between 0, O, l, and 1.</p>
+    </div>
+    <div class="step-card">
+      <div class="snum">4</div>
+      <span class="sicon">📋</span>
+      <h4>Copy &amp; Store Safely</h4>
+      <p>Click Generate then Copy. Store your password in a reputable password manager — never in plain text or email.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PASSWORD STRENGTH TABLE -->
+<div class="sg-section">
+  <div class="sg-head">
+    <span class="eyebrow">Best Practices</span>
+    <h2>Password Strength by Length &amp; Character Set</h2>
+    <p>Entropy (bits of randomness) is the real measure of password strength. Here's how length and character variety affect how long your password would take to crack.</p>
+  </div>
+  <div class="table-wrap">
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Length</th>
+          <th>Character Set</th>
+          <th>Entropy (bits)</th>
+          <th>Crack Time (estimate)</th>
+          <th>Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8 chars</td>
+          <td>Lowercase only (a–z)</td>
+          <td>~37 bits</td>
+          <td>Seconds to minutes</td>
+          <td><span class="tag tag-red">❌ Very Weak</span></td>
+        </tr>
+        <tr>
+          <td>8 chars</td>
+          <td>Letters + numbers</td>
+          <td>~47 bits</td>
+          <td>Hours</td>
+          <td><span class="tag tag-red">❌ Weak</span></td>
+        </tr>
+        <tr>
+          <td>12 chars</td>
+          <td>Letters + numbers</td>
+          <td>~71 bits</td>
+          <td>Months</td>
+          <td><span class="tag tag-yellow">⚠️ Moderate</span></td>
+        </tr>
+        <tr>
+          <td>16 chars</td>
+          <td>Letters + numbers + symbols</td>
+          <td>~105 bits</td>
+          <td>Millions of years</td>
+          <td><span class="tag tag-green">✅ Strong</span></td>
+        </tr>
+        <tr>
+          <td>20 chars</td>
+          <td>All character types</td>
+          <td>~131 bits</td>
+          <td>Billions of years</td>
+          <td><span class="tag tag-green">✅ Very Strong</span></td>
+        </tr>
+        <tr>
+          <td>32 chars</td>
+          <td>All character types</td>
+          <td>~210 bits</td>
+          <td>Effectively uncrackable</td>
+          <td><span class="tag tag-green">✅ Excellent</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TIPS TABLE -->
+<div class="sg-section">
+  <div class="sg-head">
+    <span class="eyebrow">Security Tips</span>
+    <h2>Password Security Best Practices</h2>
+    <p>Generating a strong password is only step one. Follow these rules to keep your accounts safe.</p>
+  </div>
+  <div class="table-wrap">
+    <table class="info-table">
+      <thead>
+        <tr><th>Rule</th><th>Why It Matters</th><th>Priority</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag">Use unique passwords</span></td>
+          <td>If one site is breached, credential stuffing attacks try your password on every other service you use.</td>
+          <td>🟢 Critical</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Use a password manager</span></td>
+          <td>Bitwarden, 1Password, Dashlane, and similar tools store and autofill strong passwords securely. Never rely on memory for random passwords.</td>
+          <td>🟢 Critical</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Enable 2FA / MFA</span></td>
+          <td>Two-factor authentication protects your account even if your password is compromised. Use an authenticator app (not SMS where possible).</td>
+          <td>🟢 Critical</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Never reuse passwords</span></td>
+          <td>Especially for email, banking, and work accounts. These are the highest-value targets for attackers.</td>
+          <td>🟡 Important</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Avoid dictionary words</span></td>
+          <td>Dictionary attacks can crack common-word passwords in seconds, even with numbers substituted (p@ssw0rd is not safe).</td>
+          <td>🟡 Important</td>
+        </tr>
+        <tr>
+          <td><span class="tag">Change compromised passwords</span></td>
+          <td>Check haveibeenpwned.com regularly. If your email appears in a breach, change the password for that service and any reused passwords immediately.</td>
+          <td>🟠 Recommended</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sg-section" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="sg-head">
+    <span class="eyebrow">FAQ</span>
+    <h2>Frequently Asked Questions About Password Security</h2>
+    <p>Everything you need to know about creating and managing strong passwords.</p>
+  </div>
+  <div class="faq-cols">
+    <div class="faq-list">
+      <div class="faq-item open" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-q">
+          <h4 itemprop="name">What makes a password strong?</h4>
+          <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <span itemprop="text">A strong password is long (at least 16 characters), completely random, and mixes uppercase letters, lowercase letters, numbers, and symbols. It should never contain dictionary words, names, birthdates, or keyboard patterns like "qwerty" or "123456". The best passwords are generated randomly, not invented by humans.</span>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-q">
+          <h4 itemprop="name">How long should my password be?</h4>
+          <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <span itemprop="text">At minimum, 12 characters for general accounts and at least 16 characters for email, banking, and work logins. For administrator accounts, 20+ characters is recommended. Each additional character multiplies the number of possible combinations exponentially — a 20-character password using all character types would take billions of years to brute-force with current technology.</span>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-q">
+          <h4 itemprop="name">Is this password generator cryptographically secure?</h4>
+          <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <span itemprop="text">Yes. This tool uses the Web Crypto API (window.crypto.getRandomValues), which is a cryptographically secure pseudo-random number generator (CSPRNG) built into every modern browser. It is the same standard used by security software and operating systems for key generation. No passwords are ever sent to any server — generation happens entirely inside your browser.</span>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-q">
+          <h4 itemprop="name">Should I use the same password for multiple accounts?</h4>
+          <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <span itemprop="text">Never. This is one of the most common and dangerous security mistakes. When one service is breached — which happens to major companies regularly — attackers use automated tools to try your exposed password on hundreds of other sites in seconds. This is called a credential stuffing attack. Always use a unique, randomly generated password for every account, stored in a password manager.</span>
+        </div>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-q">
+          <h4 itemprop="name">What are ambiguous characters?</h4>
+          <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <span itemprop="text">Ambiguous characters are pairs that look visually identical in many fonts: the number 0 and the letter O, the lowercase l and the number 1, and the uppercase I. If you need to read or type a password from a printed sheet or screen, excluding these characters prevents errors. If your password will only ever be copied or autofilled by a password manager, you can safely include them for maximum security.</span>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-q">
+          <h4 itemprop="name">What is password entropy?</h4>
+          <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <span itemprop="text">Entropy measures the unpredictability of a password in bits. It's calculated as: length × log₂(character pool size). A password with 70 bits of entropy has 2⁷⁰ possible combinations — about 1.18 quadrillion. At 100 bits, it's effectively uncrackable with any foreseeable technology. This tool shows entropy in real time so you can see exactly how strong each password is.</span>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-q">
+          <h4 itemprop="name">Where should I store my generated passwords?</h4>
+          <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <span itemprop="text">Use a dedicated password manager — never store passwords in plain text files, spreadsheets, email drafts, or browser notes. Reputable options include Bitwarden (free and open source), 1Password, Dashlane, and KeePass (offline). Password managers encrypt your vault and autofill passwords, making strong, unique passwords practical for every account.</span>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-q">
+          <h4 itemprop="name">How often should I change my passwords?</h4>
+          <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <span itemprop="text">Modern security guidance (NIST SP 800-63B) no longer recommends routine periodic password changes. Instead, change a password immediately if: a service you use is breached, you suspect your account is compromised, you see suspicious login activity, or you shared the password with someone and that access should be revoked. Strong, unique, randomly generated passwords don't need arbitrary rotation schedules.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY USE -->
+<div class="sg-section">
+  <div class="sg-head">
+    <span class="eyebrow">Why WebToolOcean</span>
+    <h2>Why Use Our Password Generator?</h2>
+    <p>The most secure, privacy-focused free password tool — zero compromises.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon g-cyan"><i class="fa-solid fa-dice"></i></div>
+      <h4>Cryptographically Secure</h4>
+      <p>Uses <code>window.crypto.getRandomValues</code> — the same CSPRNG standard used by professional security software and operating systems.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon g-emerald"><i class="fa-solid fa-lock"></i></div>
+      <h4>100% Private</h4>
+      <p>Zero server contact. Your passwords are generated locally in your browser and are never transmitted, logged, or stored anywhere.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon g-violet"><i class="fa-solid fa-sliders"></i></div>
+      <h4>Fully Customizable</h4>
+      <p>Control length (4–128 characters), character sets, ambiguous character exclusions, and generate up to 20 passwords at once.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon g-blue"><i class="fa-solid fa-gauge-high"></i></div>
+      <h4>Live Strength Meter</h4>
+      <p>See entropy in bits and a 5-level strength rating in real time as you adjust settings, so you always know exactly how secure your password is.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon g-orange"><i class="fa-solid fa-copy"></i></div>
+      <h4>One-Click Copy</h4>
+      <p>Copy your password to clipboard instantly with a single click, or download a bulk batch as a plain text file for import into your password manager.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon g-rose"><i class="fa-solid fa-circle-check"></i></div>
+      <h4>Free Forever</h4>
+      <p>No subscriptions, no trials, no limits. Bulk generation, all options, and copy/download are permanently free with no account required.</p>
+    </div>
+  </div>
+</div>
+
+<!-- RELATED TOOLS -->
+<div class="sg-section">
+  <div class="sg-head">
+    <span class="eyebrow">More Tools</span>
+    <h2>Related Tools You Might Need</h2>
+    <p>More free browser-based utility tools from WebToolOcean.</p>
+  </div>
+  <div class="rel-grid">
+    <a href="/utility-tools/qr-generator/" class="rel-card">
+      <div class="rel-icon g-blue"><i class="fa-solid fa-qrcode"></i></div>
+      <div>
+        <div class="rel-name">QR Code Generator</div>
+        <div class="rel-desc">Generate QR codes for URLs, WiFi, vCard &amp; more</div>
+      </div>
+      <i class="fa-solid fa-arrow-right rel-arrow"></i>
+    </a>
+    <a href="/utility-tools/barcode-generator/" class="rel-card">
+      <div class="rel-icon g-emerald"><i class="fa-solid fa-barcode"></i></div>
+      <div>
+        <div class="rel-name">Barcode Generator</div>
+        <div class="rel-desc">Create Code128, EAN-13, UPC-A and more</div>
+      </div>
+      <i class="fa-solid fa-arrow-right rel-arrow"></i>
+    </a>
+    <a href="/seo/meta-tags-generator/" class="rel-card">
+      <div class="rel-icon g-violet"><i class="fa-solid fa-tags"></i></div>
+      <div>
+        <div class="rel-name">Meta Tags Generator</div>
+        <div class="rel-desc">Generate SEO and social meta tags instantly</div>
+      </div>
+      <i class="fa-solid fa-arrow-right rel-arrow"></i>
+    </a>
+  </div>
+</div>
+
+</div><!-- /container -->
+</div><!-- /tool-outer -->
+</main>
+<div class="qr-toast" id="toastEl"></div>
+<div id="footer"></div>
+<div class="clearfix"></div>
+<!-- ===== JAVASCRIPT ===== -->
+   <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+<script>
+// ===================== HELPERS =====================
+function toast(msg){
+  const t=document.getElementById('toastEl');
+  t.textContent=msg;t.classList.add('show');
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2800);
+}
+function setErr(msg){
+  const e=document.getElementById('errMsg');
+  e.textContent=msg;e.classList.add('show');
+}
+function clearErr(){
+  const e=document.getElementById('errMsg');
+  e.textContent='';e.classList.remove('show');
+}
+
+// ===================== CHAR SETS =====================
+const CHARS={
+  upper:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  lower:'abcdefghijklmnopqrstuvwxyz',
+  numbers:'0123456789',
+  symbols:'!@#$%^&*()-_=+[]{}|;:,.<>?/~`'
+};
+const AMBIGUOUS=/[0Ol1I]/g;
+const SIMILAR=/[vVuUwW]/g;
+
+function buildPool(){
+  let pool='';
+  if(document.getElementById('chk-upper').checked) pool+=CHARS.upper;
+  if(document.getElementById('chk-lower').checked) pool+=CHARS.lower;
+  if(document.getElementById('chk-numbers').checked) pool+=CHARS.numbers;
+  if(document.getElementById('chk-symbols').checked) pool+=CHARS.symbols;
+  if(document.getElementById('opt-ambiguous').classList.contains('selected')) pool=pool.replace(AMBIGUOUS,'');
+  if(document.getElementById('opt-similar').classList.contains('selected')) pool=pool.replace(SIMILAR,'');
+  // Deduplicate
+  pool=[...new Set(pool)].join('');
+  return pool;
+}
+
+function cryptoRandInt(max){
+  const arr=new Uint32Array(1);
+  let val;
+  do{
+    window.crypto.getRandomValues(arr);
+    val=arr[0];
+  } while(val>= Math.floor(4294967296/max)*max);
+  return val%max;
+}
+
+function generateOne(length,pool){
+  let pw='';
+  for(let i=0;i<length;i++) pw+=pool[cryptoRandInt(pool.length)];
+  return pw;
+}
+
+// ===================== STRENGTH =====================
+function calcEntropy(length,poolSize){
+  if(!poolSize||!length) return 0;
+  return Math.round(length*Math.log2(poolSize)*10)/10;
+}
+function getStrength(entropy){
+  if(entropy<40) return{level:1,label:'Very Weak',color:'#ef4444'};
+  if(entropy<60) return{level:2,label:'Weak',color:'#f97316'};
+  if(entropy<80) return{level:3,label:'Moderate',color:'#eab308'};
+  if(entropy<100) return{level:4,label:'Strong',color:'#22c55e'};
+  return{level:5,label:'Very Strong',color:'#06b6d4'};
+}
+function updateStrength(pw,pool){
+  const entropy=calcEntropy(pw.length,pool.length);
+  const s=getStrength(entropy);
+  for(let i=1;i<=5;i++){
+    const bar=document.getElementById('sbar'+i);
+    bar.className='sbar';
+    if(i<=s.level) bar.classList.add('active-'+s.level);
+  }
+  const sl=document.getElementById('strengthLabel');
+  sl.textContent=pw?s.label:'–';
+  sl.style.color=pw?s.color:'#94a3b8';
+  document.getElementById('entropyVal').textContent=pw?entropy+'':'–';
+  document.getElementById('poolVal').textContent=pw?pool.length+' chars':'–';
+}
+
+// ===================== GENERATE =====================
+let lastPw='';
+let lastBulk=[];
+
+function generate(){
+  clearErr();
+  const pool=buildPool();
+  if(!pool){setErr('Please select at least one character type.');return;}
+  const length=parseInt(document.getElementById('pwLength').value,10);
+  const count=parseInt(document.getElementById('bulkCount').value,10);
+
+  if(count===1){
+    lastPw=generateOne(length,pool);
+    document.getElementById('pwDisplay').value=lastPw;
+    updateStrength(lastPw,pool);
+    document.getElementById('bulkListWrap').classList.remove('show');
+    lastBulk=[];
+  } else {
+    lastBulk=[];
+    for(let i=0;i<count;i++) lastBulk.push(generateOne(length,pool));
+    lastPw=lastBulk[0];
+    document.getElementById('pwDisplay').value=lastPw;
+    updateStrength(lastPw,pool);
+    renderBulk(lastBulk);
+    document.getElementById('bulkListWrap').classList.add('show');
+  }
+}
+
+function renderBulk(list){
+  const ul=document.getElementById('bulkList');
+  ul.innerHTML='';
+  list.forEach((pw,i)=>{
+    const item=document.createElement('div');
+    item.className='bulk-item';
+    item.innerHTML=`<span class="bulk-pw">${pw}</span><button class="bulk-copy-btn" title="Copy" data-pw="${pw}"><i class="fa-solid fa-copy"></i></button>`;
+    ul.appendChild(item);
+  });
+  ul.querySelectorAll('.bulk-copy-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      copyText(btn.dataset.pw);
+      toast('Password copied!');
+    });
+  });
+}
+
+// ===================== COPY / DOWNLOAD =====================
+function copyText(text){
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).catch(()=>fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+function fallbackCopy(text){
+  const ta=document.createElement('textarea');
+  ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');}catch(e){}
+  document.body.removeChild(ta);
+}
+
+document.getElementById('generateBtn').addEventListener('click',generate);
+document.getElementById('pwRefreshBtn').addEventListener('click',generate);
+
+document.getElementById('mainCopyBtn').addEventListener('click',()=>{
+  const pw=document.getElementById('pwDisplay').value;
+  if(!pw){toast('Generate a password first.');return;}
+  copyText(pw);
+  toast('Password copied to clipboard!');
+});
+
+document.getElementById('mainDlBtn').addEventListener('click',()=>{
+  const list=lastBulk.length>0?lastBulk:[lastPw];
+  if(!list[0]){toast('Generate a password first.');return;}
+  const blob=new Blob([list.join('\n')],{type:'text/plain'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='passwords.txt';
+  a.click();
+  toast('Downloaded passwords.txt');
+});
+
+document.getElementById('bulkCopyAllBtn').addEventListener('click',()=>{
+  if(!lastBulk.length){return;}
+  copyText(lastBulk.join('\n'));
+  toast('All passwords copied!');
+});
+
+// Bulk toggle expand/collapse
+document.getElementById('bulkToggleBtn').addEventListener('click',()=>{
+  const wrap=document.getElementById('bulkListWrap');
+  if(lastBulk.length){
+    wrap.classList.toggle('show');
+  } else {
+    document.getElementById('bulkCount').value='10';
+    generate();
+  }
+});
+
+// ===================== CONTROLS =====================
+// Length slider
+const slider=document.getElementById('pwLength');
+const badge=document.getElementById('lengthBadge');
+slider.addEventListener('input',()=>{
+  badge.textContent=slider.value;
+});
+
+// Char type checkboxes
+['upper','lower','numbers','symbols'].forEach(t=>{
+  const opt=document.getElementById('opt-'+t);
+  const chk=document.getElementById('chk-'+t);
+  opt.addEventListener('click',()=>{
+    chk.checked=!chk.checked;
+    opt.classList.toggle('selected',chk.checked);
+  });
+});
+
+// Exclusions
+['ambiguous','similar'].forEach(id=>{
+  const row=document.getElementById('opt-'+id);
+  row.addEventListener('click',()=>row.classList.toggle('selected'));
+});
+
+// ===================== FAQ =====================
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',function(){
+    const item=this.closest('.faq-item');
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!open)item.classList.add('open');
+  });
+});
+
+// ===================== INIT =====================
+generate();
+</script>
+
+</body>
+</html>

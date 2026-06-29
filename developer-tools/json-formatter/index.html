@@ -1,0 +1,1660 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta name="theme-color" content="#0f172a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ToolOcean">
+<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+ <title>JSON Formatter & Validator Online | WebToolOcean</title>
+
+<meta name="description" content="Free online JSON Formatter and Validator. Beautify, format and validate JSON instantly with WebToolOcean developer tools.">
+
+<meta name="keywords" content="json formatter, json validator, json beautifier, format json online, validate json">
+
+<meta name="author" content="WebToolOcean">
+
+<meta property="og:title" content="JSON Formatter & Validator">
+<meta property="og:description" content="Beautify and validate JSON instantly online.">
+<meta property="og:url" content="https://webtoolocean.com/developer-tools/json-formatter/index.html">
+<!-- ===================================================== -->
+	
+<!-- ===================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I format JSON?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste your JSON into the editor and click Format to pretty-print it with consistent indentation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I validate JSON with this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The tool checks JSON syntax and shows an error if the input is malformed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my JSON uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All processing happens locally in your browser, so your JSON is not uploaded or stored."
+      }
+    }
+  ]
+}
+</script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <!-- SoftwareApplication schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Free JSON Formatter & Validator",
+    "description": "Format, validate, and minify JSON directly in your browser. All processing happens locally in your browser.",
+    "url": "https://webtoolocean.com/developer-tools/json-formatter/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    "author": { "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" },
+    "publisher": { "@type": "Organization", "name": "WebToolOcean" },
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "featureList": ["Format JSON","Validate JSON","Minify JSON","Copy result","Download formatted JSON"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" }
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <main role="main" id="content">
+
+    <!-- ═══════════════════════════════════════════════════════
+    1. BREADCRUMB
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/all-tools/">Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/developer-tools/">Developer Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">JSON Formatter</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="ic-hero">
+      <div class="container">
+        <div class="hero-tag"><i class="fa-solid fa-code"></i> Developer Tools</div>
+        <h1>JSON Formatter &amp; Validator</h1>
+        <p class="hero-desc">Format, minify, validate, and download JSON instantly in your browser. All processing happens locally.</p>
+      </div>
+    </section>
+
+    <div class="ic-content">
+      <div class="container">
+        <section class="py-5">
+          <div class="container">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="inputJSON" class="form-label">Input JSON</label>
+                <textarea id="inputJSON" class="form-control" rows="18" placeholder="Paste JSON here..." oninput="toggleActionButtons(); validateJSONLive();"></textarea>
+                <div id="jsonStatus" class="mt-2 fw-semibold"></div>
+                <div class="stats" id="inputStats">0 chars</div>
+              </div>
+              <div class="col-md-6">
+                <label for="outputJSON" class="form-label">Formatted JSON</label>
+                <textarea id="outputJSON" class="form-control" rows="18" readonly></textarea>
+                <div class="stats mt-2" id="outputStats">0 chars</div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <button id="formatBtn" class="btn btn-primary me-2" onclick="formatJSON()" disabled>Format</button>
+              <button id="minifyBtn" class="btn btn-warning me-2" onclick="minifyJSON()" disabled>Minify</button>
+              <button class="btn btn-success me-2" onclick="copyJSON()" disabled id="copyBtn">Copy</button>
+              <button class="btn btn-info me-2" onclick="downloadJSON()" disabled id="downloadBtn">Download</button>
+              <button class="btn btn-danger" onclick="clearJSON()">Clear</button>
+            </div>
+            <div class="mt-3">
+              <div class="error-msg" id="errorMsg"></div>
+              <div class="success-msg" id="successMsg">✔ Copied successfully</div>
+            </div>
+            
+          </div>
+        </section> 
+
+        <!-- ═══════════════════════════════════════════════════════
+        KEY FEATURES
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Features</span>
+            <h2>Advanced JSON Formatting and Validation</h2>
+            <p>Format, validate, and minify JSON quickly in your browser so your data is clean, readable, and ready for APIs.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue"><i class="fa-solid fa-file-code" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">JSON Beautifier</div>
+                <p class="fmt-desc">Pretty-print JSON with consistent indentation and spacing for easier reading.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald"><i class="fa-solid fa-check" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">JSON Validation</div>
+                <p class="fmt-desc">Validate JSON syntax instantly and get feedback if the input is malformed.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet"><i class="fa-solid fa-compress" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">JSON Minifier</div>
+                <p class="fmt-desc">Compress JSON by removing whitespace while keeping the structure intact.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-amber"><i class="fa-solid fa-magnifying-glass" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Error Feedback</div>
+                <p class="fmt-desc">See syntax errors clearly so you can fix broken JSON before using it in production.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        HOW TO USE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">How to Use</span>
+            <h2>How to Use the JSON Formatter</h2>
+            <p>Paste your JSON, validate or format it, then copy or download the clean output in seconds.</p>
+          </div>
+          <div class="ic-steps-wrap">
+            <div class="ic-steps">
+              <div class="ic-step-card">
+                <div class="step-num">1</div>
+                <span class="step-icon">📋</span>
+                <h4>Paste JSON Input</h4>
+                <p>Insert raw JSON into the editor. The tool will enable actions once the input is valid.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">2</div>
+                <span class="step-icon">⚙️</span>
+                <h4>Format or Minify</h4>
+                <p>Choose Format to pretty-print or Minify to compress the JSON for data transfer.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">3</div>
+                <span class="step-icon">👁️</span>
+                <h4>Review Validation</h4>
+                <p>Check the validation status and correct any syntax errors before using the result.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">4</div>
+                <span class="step-icon">💾</span>
+                <h4>Copy or Download</h4>
+                <p>Copy the cleaned JSON or download it as a file to use in your API payloads or data files.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FORMAT COMPARISON TABLE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Compare Actions</span>
+            <h2>Format vs Minify vs Validate</h2>
+            <p>Select the correct action based on whether you want readability, compact size, or syntax assurance.</p>
+          </div>
+          <div class="ic-info-table-wrap">
+            <table class="ic-info-table">
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Purpose</th>
+                  <th>Best For</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="fmt-tag">Format</span></td>
+                  <td>Improve readability</td>
+                  <td>Reviewing and editing JSON data</td>
+                  <td>Pretty-printed JSON with consistent indentation</td>
+                </tr>
+                <tr>
+                  <td><span class="fmt-tag">Minify</span></td>
+                  <td>Reduce size</td>
+                  <td>API payloads and storage efficiency</td>
+                  <td>Compact JSON with no extra whitespace</td>
+                </tr>
+                <tr>
+                  <td><span class="fmt-tag">Validate</span></td>
+                  <td>Check syntax</td>
+                  <td>Ensuring JSON is parseable before use</td>
+                  <td>Error-free JSON ready for production</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        BENEFITS
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Benefits</span>
+            <h2>Why Use a JSON Formatter?</h2>
+            <p>Clean JSON is easier to work with, reduces data errors, and improves API integration reliability.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue"><i class="fa-solid fa-eye" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Clear JSON</div>
+                <p class="fmt-desc">Well-formatted JSON is easier to read and debug than compact or malformed data.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald"><i class="fa-solid fa-shield-check" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Reliable Validation</div>
+                <p class="fmt-desc">Catch syntax errors quickly before sending JSON to APIs or saving it to files.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet"><i class="fa-solid fa-rocket" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Faster Data Use</div>
+                <p class="fmt-desc">Minified JSON reduces transfer size and speeds up web requests.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-amber"><i class="fa-solid fa-bug" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Fewer Errors</div>
+                <p class="fmt-desc">Validated JSON helps prevent runtime failures in applications and services.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-cyan"><i class="fa-solid fa-clock" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Save Time</div>
+                <p class="fmt-desc">Quickly format and validate JSON without installing software or writing custom scripts.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-rose"><i class="fa-solid fa-lock" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Benefit</div>
+                <div class="fmt-title">Private and Secure</div>
+                <p class="fmt-desc">All parsing happens in your browser, so your JSON stays local and private.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FAQ
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about using the JSON Formatter on Web Tool Ocean.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+                <div class="ic-faq-item open" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">How do I format JSON?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Paste your JSON into the editor and click Format to pretty-print it with consistent indentation.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I validate JSON with this tool?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. Invalid JSON displays an error message immediately so you can fix the input.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Is my JSON uploaded?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">No. All processing runs locally in your browser. Your data is not uploaded or stored.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I copy the formatted JSON?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. Use the Copy button to copy formatted JSON to your clipboard, or click Download to save it as a file.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">What happens if my JSON is invalid?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">The tool highlights errors and prevents formatting until the JSON is corrected.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Does minifying JSON change its data?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">No. Minifying removes whitespace only; the JSON structure and values remain the same.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Is this tool good for API payloads?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. It is ideal for cleaning JSON before sending it to APIs or saving it in configuration files.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Will this work with large JSON files?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. The browser-based tool handles reasonably large JSON payloads easily.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        WHY WEBTOOLOCEAN
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Why Web Tool Ocean</span>
+            <h2>Why Use Our JSON Formatter?</h2>
+            <p>Trusted by developers for fast, secure, browser-based JSON formatting, validation, and file download.</p>
+          </div>
+          <div class="ic-why-grid">
+            <div class="ic-why-card">
+              <div class="why-icon bg-blue"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Instant Results</h4>
+              <p>Format and validate JSON immediately without waiting for server processing.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-emerald"><i class="fa-solid fa-lock"></i></div>
+              <h4>Private &amp; Local</h4>
+              <p>Your JSON stays on your device — nothing is uploaded or stored externally.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-violet"><i class="fa-solid fa-download"></i></div>
+              <h4>Download Ready JSON</h4>
+              <p>Save formatted or minified JSON instantly with a single click.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-orange"><i class="fa-solid fa-mobile-screen"></i></div>
+              <h4>Responsive Interface</h4>
+              <p>The tool works smoothly on desktop, tablet, and mobile devices.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-cyan"><i class="fa-solid fa-file-lines"></i></div>
+              <h4>Better Data Quality</h4>
+              <p>Clean JSON helps reduce errors in APIs, configs, and data exchanges.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-rose"><i class="fa-solid fa-circle-check"></i></div>
+              <h4>Free Forever</h4>
+              <p>No subscriptions, no trials, and no limits — just a free tool for developers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        RELATED TOOLS
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section pb-5">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">More Tools</span>
+            <h2>Related CSS Tools You Might Need</h2>
+            <p>Explore more free CSS utilities from Web Tool Ocean — all browser-based and easy to use.</p>
+          </div>
+          <div class="ic-related-grid">
+            <a href="/css-tools/box-shadow-generator/" class="ic-related-card">
+              <div class="rel-icon bg-indigo"><i class="fa-solid fa-square-shadow"></i></div>
+              <div>
+                <div class="rel-name">Box Shadow Generator</div>
+                <div class="rel-desc">Create custom CSS shadows with live preview.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/card-builder/" class="ic-related-card">
+              <div class="rel-icon bg-emerald"><i class="fa-solid fa-id-card"></i></div>
+              <div>
+                <div class="rel-name">Card Builder</div>
+                <div class="rel-desc">Generate modern card layouts with CSS styles.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/clip-image/" class="ic-related-card">
+              <div class="rel-icon bg-violet"><i class="fa-solid fa-crop"></i></div>
+              <div>
+                <div class="rel-name">Clip Image</div>
+                <div class="rel-desc">Create CSS-based image clipping and shapes.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/gradient-generator/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-droplet"></i></div>
+              <div>
+                <div class="rel-name">Gradient Generator</div>
+                <div class="rel-desc">Build beautiful CSS gradients with live controls.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/mult-box-shadow-generator/" class="ic-related-card">
+              <div class="rel-icon bg-amber"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <div class="rel-name">Multi Box Shadow</div>
+                <div class="rel-desc">Generate multi-layer box shadows quickly.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/all-tools/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-grid-2"></i></div>
+              <div>
+                <div class="rel-name">All Tools</div>
+                <div class="rel-desc">Browse every free tool on Web Tool Ocean.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div><!-- /container -->
+    </div><!-- /ic-content -->
+
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+const progress = document.querySelector(".progress")
+const progressBar = document.getElementById("progressBar")
+const successMsg = document.getElementById("successMsg")
+const errorMsg = document.getElementById("errorMsg")
+
+ function simulateProgress(callback){
+
+const copyBtn = document.getElementById("copyBtn")
+const downloadBtn = document.getElementById("downloadBtn")
+
+// Disable buttons
+copyBtn.disabled = true
+downloadBtn.disabled = true
+
+progress.style.display="block"
+progressBar.style.width="0%"
+progressBar.innerText="0%"
+
+let percent = 0
+
+let interval = setInterval(()=>{
+percent += 10
+progressBar.style.width = percent + "%"
+progressBar.innerText = percent + "%"
+if(percent >= 90) clearInterval(interval)
+},300)
+
+setTimeout(()=>{
+
+progressBar.style.width="100%"
+progressBar.innerText="100%"
+
+callback()
+
+// Enable buttons ONLY if output exists
+setTimeout(()=>{
+
+let output = document.getElementById("outputJSON").value
+
+if(output.trim() !== ""){
+copyBtn.disabled = false
+downloadBtn.disabled = false
+}
+
+progress.style.display="none"
+
+},800)
+
+},3500)
+
+}
+
+function formatJSON(){
+
+let input = document.getElementById("inputJSON").value
+errorMsg.style.display="none"
+
+simulateProgress(()=>{
+
+try{
+let parsed = JSON.parse(input)
+let formatted = JSON.stringify(parsed, null, 4)
+
+document.getElementById("outputJSON").value = formatted
+
+updateLines('outputJSON','lineNumbersOutput')
+updateStats()
+
+}catch(e){
+errorMsg.style.display="block"
+errorMsg.innerText = "Invalid JSON: " + e.message
+document.getElementById("outputJSON").value = ""
+}
+
+})
+
+}
+
+ function minifyJSON(){
+
+let input = document.getElementById("inputJSON").value
+errorMsg.style.display="none"
+
+simulateProgress(()=>{
+
+try{
+
+let parsed = JSON.parse(input)
+let minified = JSON.stringify(parsed)
+
+document.getElementById("outputJSON").value = minified
+
+updateLines('outputJSON','lineNumbersOutput')
+updateStats()
+
+}catch(e){
+
+errorMsg.style.display="block"
+errorMsg.innerText = "Invalid JSON"
+document.getElementById("outputJSON").value = ""
+
+}
+
+})
+
+}
+
+function clearJSON(){
+
+document.getElementById("inputJSON").value=""
+document.getElementById("outputJSON").value=""
+errorMsg.style.display="none"
+
+document.getElementById("copyBtn").disabled = true
+document.getElementById("downloadBtn").disabled = true
+
+updateLines('inputJSON','lineNumbersInput')
+updateLines('outputJSON','lineNumbersOutput')
+updateStats()
+document.getElementById("formatBtn").disabled = true
+document.getElementById("minifyBtn").disabled = true
+}
+
+function copyJSON(){
+let text = document.getElementById("outputJSON").value
+navigator.clipboard.writeText(text)
+successMsg.style.display="block"
+setTimeout(()=>{ successMsg.style.display="none" },2000)
+}
+
+function downloadJSON(){
+
+let content = document.getElementById("outputJSON").value
+let blob = new Blob([content], {type:"application/json"})
+let a = document.createElement("a")
+
+a.href = URL.createObjectURL(blob)
+a.download = "formatted.json"
+a.click()
+
+}
+
+function updateLines(textareaId, lineId){
+
+let text = document.getElementById(textareaId).value
+let lines = text.split("\n").length
+
+let numbers = ""
+for(let i=1;i<=lines;i++){
+numbers += i + "<br>"
+}
+
+document.getElementById(lineId).innerHTML = numbers
+
+}
+
+function updateStats(){
+
+let input = document.getElementById("inputJSON").value.length
+let output = document.getElementById("outputJSON").value.length
+
+document.getElementById("inputStats").innerText = input + " chars"
+document.getElementById("outputStats").innerText = output + " chars"
+
+}
+
+updateLines('inputJSON','lineNumbersInput')
+updateLines('outputJSON','lineNumbersOutput')
+
+
+function toggleActionButtons(){
+
+let input = document.getElementById("inputJSON").value.trim()
+
+const formatBtn = document.getElementById("formatBtn")
+const minifyBtn = document.getElementById("minifyBtn")
+
+if(input.length > 0){
+formatBtn.disabled = false
+minifyBtn.disabled = false
+}else{
+formatBtn.disabled = true
+minifyBtn.disabled = true
+}
+
+}
+
+function validateJSONLive(){
+
+let input = document.getElementById("inputJSON").value.trim()
+const status = document.getElementById("jsonStatus")
+
+// Empty state
+if(input === ""){
+status.innerHTML = ""
+return
+}
+
+try{
+
+JSON.parse(input)
+
+status.innerHTML = "✔ Valid JSON"
+status.className = "valid"
+
+}catch(e){
+
+// Extract line number
+let match = e.message.match(/position (\d+)/)
+
+let line = 1
+
+if(match){
+let pos = parseInt(match[1])
+line = input.substring(0,pos).split("\n").length
+}
+
+status.innerHTML = "❌ Invalid JSON at line " + line
+status.className = "invalid"
+
+}
+
+}
+</script>  
+   
+  <!-- FAQ ACCORDION -->
+  <script>
+    document.querySelectorAll('.ic-faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.ic-faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.ic-faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <style>
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
+    }
+
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: var(--brand-accent);
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .ic-hero {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, #0f172a 100%);
+      padding: 44px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ic-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ic-hero .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+
+    .ic-hero h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: #f1f5f9;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .ic-hero h1 span {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ic-hero p.hero-desc {
+      color: #94a3b8;
+      font-size: .93rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 22px;
+    }
+
+    .ic-trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 100px;
+      color: #cbd5e1;
+      font-size: .76rem;
+      font-weight: 500;
+      padding: 5px 13px;
+    }
+
+    .ic-badge i {
+      color: #34d399;
+      font-size: .7rem;
+    }
+
+    .ic-content {
+      background: var(--brand-light);
+      padding: 0 0 64px;
+    }
+
+    .ic-section {
+      padding: 52px 0 0;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-section-head {
+      margin-bottom: 28px;
+    }
+
+    .ic-section-head .sec-eyebrow {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head p {
+      color: var(--text-muted);
+      font-size: .88rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0;
+    }
+
+    .ic-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ic-step-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .ic-step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--brand-accent);
+    }
+
+    .ic-step-card .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .ic-step-card .step-icon {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .ic-step-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-step-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .ic-steps-wrap {
+      position: relative;
+    }
+
+    .ic-steps-wrap::before {
+      content: '';
+      position: absolute;
+      top: 54px;
+      left: calc(12.5% + 10px);
+      right: calc(12.5% + 10px);
+      height: 2px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      opacity: .25;
+      z-index: 0;
+    }
+
+    .ic-format-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-format-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-format-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ic-format-card .fmt-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-format-card .fmt-from {
+      font-size: .65rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 600;
+    }
+
+    .ic-format-card .fmt-title {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 4px;
+    }
+
+    .ic-format-card .fmt-desc {
+      font-size: .76rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .bg-blue {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    .bg-cyan {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+    }
+
+    .bg-violet {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    }
+
+    .bg-emerald {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .bg-orange {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+    }
+
+    .bg-rose {
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+    }
+
+    .bg-amber {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .bg-indigo {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+    }
+
+    .ic-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .83rem;
+    }
+
+    .ic-info-table thead th {
+      background: var(--brand-dark);
+      color: #e2e8f0;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .ic-info-table thead th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+
+    .ic-info-table thead th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+
+    .ic-info-table tbody tr {
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ic-info-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .ic-info-table tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    .ic-info-table tbody td {
+      padding: 12px 16px;
+      color: var(--text-body);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .ic-info-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--brand-dark);
+    }
+
+    .ic-info-table-wrap {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .fmt-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: var(--brand-accent);
+      border-radius: 4px;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      margin-right: 4px;
+    }
+
+    .ic-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ic-faq-item {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open {
+      border-color: var(--brand-accent);
+    }
+
+    .ic-faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      cursor: pointer;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .ic-faq-q h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin: 0;
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .ic-faq-q .faq-toggle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open .faq-toggle {
+      background: var(--brand-accent);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .ic-faq-a {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: .85rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    .ic-faq-item.open .ic-faq-a {
+      display: block;
+    }
+
+    .ic-faq-a code {
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: .82rem;
+    }
+
+    .ic-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-why-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-why-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .ic-why-card .why-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .ic-why-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-why-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .ic-related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .ic-related-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      color: inherit;
+    }
+
+    .ic-related-card .rel-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-related-card .rel-name {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 2px;
+    }
+
+    .ic-related-card .rel-desc {
+      font-size: .72rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .ic-related-card .rel-arrow {
+      margin-left: auto;
+      color: var(--brand-accent);
+      font-size: .72rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover .rel-arrow {
+      opacity: 1;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* DROP AREA */
+    #drop-area {
+      border: 2px dashed #cbd5e1;
+      padding: 40px;
+      text-align: center;
+      border-radius: 12px;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    #drop-area.dragover {
+      border-color: #16a34a;
+      background: #ecfdf5;
+    }
+
+    /* BUTTONS */
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .btn-green {
+      background: #065f46;
+      color: white;
+    }
+
+    .btn-red {
+      background: #dc2626;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    /* PROGRESS */
+    #progress-container {
+      display: none;
+      margin: 20px 0;
+    }
+
+    .progress-bar-bg {
+      background: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #progress-bar {
+      height: 14px;
+      width: 0%;
+      background: linear-gradient(90deg, #16a34a, #065f46);
+      transition: width 0.2s;
+    }
+
+    #progress-text {
+      text-align: right;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* FILE CARDS */
+    .file-card {
+      background: #fff;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .file-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .file-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .file-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 0;
+      padding: 8px;
+      min-height: 169px;
+      padding: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .ic-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-format-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-steps-wrap::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .ic-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-format-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-related-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+  
+   <style>
+
+body{
+background:#f5f7fb;
+}
+
+.tool-box{
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+}
+.valid{
+color:green;
+}
+
+.invalid{
+color:red;
+}
+.editor{
+display:flex;
+border-radius:8px;
+overflow:hidden;
+background:#1e1e1e;
+height: 350px;
+}
+
+.line-numbers{
+background:#2b2b2b;
+color:#aaa;
+padding:10px;
+text-align:right;
+user-select:none;
+font-size:13px;
+min-width:40px;
+}
+
+textarea{
+border:none;
+outline:none;
+resize:none;
+padding:10px;
+font-family:monospace;
+font-size:14px;
+background:#1e1e1e;
+color:#fff;
+width:100%;
+height:auto;
+}
+
+.progress{
+display:none;
+height:22px;
+margin-top:20px;
+border-radius:12px;
+overflow:hidden;
+}
+
+.success-msg{
+display:none;
+color:green;
+font-weight:600;
+margin-top:10px;
+}
+
+.error-msg{
+display:none;
+color:red;
+font-weight:600;
+margin-top:10px;
+}
+
+.stats{
+font-size:13px;
+color:#666;
+margin-top:5px;
+}
+
+@media(max-width:768px){
+textarea{
+height:200px;
+}
+.col-md-6{
+margin-bottom:20px;
+}
+}
+
+</style>
+
+</body>
+
+</html>

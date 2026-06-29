@@ -1,0 +1,1758 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta name="theme-color" content="#0f172a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ToolOcean">
+<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title> CSS Gradient Generator – Create Linear, Radial & Conic Gradients | WebToolOcean </title>
+<meta name="description" content="Create beautiful CSS gradients instantly with WebToolOcean's free Gradient Generator. Supports linear, radial, conic gradients, AI gradient generator, Instagram gradients, color palettes, presets and CSS export.">
+<meta name="keywords" content="css gradient generator, gradient generator online, linear gradient generator, radial gradient generator, conic gradient generator, instagram gradient generator, css gradient tool, gradient maker, gradient background generator, color gradient generator">
+<meta name="author" content="WebToolOcean">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://webtoolocean.com/css-tools/gradient-generator/">
+
+<!-- Open Graph (Facebook / LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free CSS Gradient Generator – WebToolOcean">
+<meta property="og:description" content="Create stunning gradients instantly with our advanced CSS Gradient Generator. Supports presets, AI gradients, Instagram gradients and CSS export.">
+<meta property="og:url" content="https://webtoolocean.com/css-tools/gradient-generator/index.html">
+<meta property="og:site_name" content="WebToolOcean">
+<meta property="og:image" content="https://webtoolocean.com/images/preview.png">
+
+<!-- Twitter SEO -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free CSS Gradient Generator Tool">
+<meta name="twitter:description" content="Generate beautiful CSS gradients with presets, palettes, AI generator and export CSS instantly.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+  <!-- SoftwareApplication schema for AI-aware search optimization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Free CSS Gradient Generator",
+    "description": "Create beautiful CSS gradients instantly. Supports linear and radial gradients, AI gradient generator, presets, palettes and CSS export. All processing happens in your browser.",
+    "url": "https://webtoolocean.com/css-tools/gradient-generator/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires modern browser (Chrome, Firefox, Safari, Edge)",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    "author": { "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" },
+    "publisher": { "@type": "Organization", "name": "WebToolOcean" },
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "featureList": ["Linear gradients","Radial gradients","AI Gradient generator","Live preview","Presets & palettes","Export CSS & Tailwind"]
+  }
+  </script>
+
+  <!-- Organization schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebToolOcean",
+    "url": "https://webtoolocean.com"
+  }
+  </script>
+</head>
+
+<body>
+  <div id="toast" class="ic-toast"></div>
+  <div id="header"></div>
+  <main role="main" id="content">
+
+    <!-- ═══════════════════════════════════════════════════════
+    1. BREADCRUMB
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/all-tools/">Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/css-tools/">CSS Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">Gradient Generator</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+    2. PAGE HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="ic-hero">
+      <div class="container">
+        <div class="hero-tag"><i class="fa-solid fa-droplet"></i> CSS Tools</div>
+        <h1>Free CSS Gradient Generator –<br><span>Create Linear & Radial Gradients with Live Preview and Exportable CSS</span></h1>
+        <p class="hero-desc">Design beautiful gradients instantly. Add and edit color stops, change angle or type (linear/radial), preview live and export clean CSS or Tailwind-ready utilities.</p>
+        <div class="ic-trust-badges">
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Live Preview</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Copy CSS Instantly</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Tailwind Support</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Multiple Presets</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Browser-Based</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ic-content">
+      <div class="container">
+
+        <!-- ═══════════════════════════════════════════════════════
+        MAIN WIDGET
+        ═══════════════════════════════════════════════════════ -->
+      <section class="py-5">
+     <div class="container">
+
+<h1>CSS Gradient Generator</h1>
+<p>Create beautiful gradients for websites instantly.</p>
+
+<div class="app">
+
+<!-- CONTROLS -->
+
+<div class="panel">
+
+<label>Gradient Type</label>
+<select id="type">
+<option value="linear">Linear Gradient</option>
+<option value="radial">Radial Gradient</option>
+</select>
+
+<label>Angle</label>
+<input type="range" id="angle" min="0" max="360" value="90">
+
+<div class="stops" id="stops"></div>
+
+<button id="add"><span class="fa fa-plus"></span> Add More Color </button>
+	<button id="ai" style="background: linear-gradient(90deg, #fc4a1a 0%,#f7b733 100%);"><span class="fa fa-magic"></span> AI Gradient</button>
+<hr />
+<!--<button class="secondary" id="reverse">Reverse Colors</button>
+-->
+<button class="success" id="random"><span class="fa fa-delicious"></span>  Random Gradient</button>
+<button id="instagram" style="background: linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);"><span class="fa fa-instagram"></span> Instagram Gradient</button>
+
+<button id="download"><span class="fa fa-download"></span> Download Image</button>
+
+
+</div>
+
+<!-- PREVIEW -->
+
+<div>
+
+<div class="preview" id="preview">
+Gradient Preview
+</div>
+
+<div class="code">
+<span id="css"></span>
+<button class="copy">Copy</button>
+
+</div>
+<div class="extras">
+ 
+<h3>Gradient Presets</h3>
+<div id="presets" class="preset-grid"></div>
+ 
+</div>
+</div>
+
+</div>
+
+  </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+        HOW TO USE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">How to Use</span>
+            <h2>How to Use the CSS Gradient Generator</h2>
+            <p>Add and adjust color stops, pick a gradient type and angle, preview live, then copy the generated CSS or Tailwind utility with one click.</p>
+          </div>
+          <div class="ic-steps-wrap">
+            <div class="ic-steps">
+              <div class="ic-step-card">
+                <div class="step-num">1</div>
+                <span class="step-icon">🎛️</span>
+                <h4>Customize Gradient Stops</h4>
+                <p>Add, remove and position color stops. Pick colors and adjust positions to shape your gradient.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">2</div>
+                <span class="step-icon">👁️</span>
+                <h4>See Real-Time Preview</h4>
+                <p>Your preview updates instantly so you can fine-tune colors, angle and type before exporting CSS.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">3</div>
+                <span class="step-icon">✨</span>
+                <h4>Choose a Preset</h4>
+                <p>Select from curated gradient presets to quickly apply a polished color transition.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">4</div>
+                <span class="step-icon">💾</span>
+                <h4>Copy the Code</h4>
+                <p>Copy the generated CSS or Tailwind output with one click and paste it into your project.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FEATURES
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Features</span>
+            <h2>Essential Gradient Tools for Modern UI Design</h2>
+            <p>Create balanced, professional gradients quickly with controls built for designers and developers.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue"><i class="fa-solid fa-eye" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Live Preview</div>
+                <p class="fmt-desc">See your gradient applied instantly to the preview while adjusting stops, angle and type.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald"><i class="fa-solid fa-palette" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Color &amp; Opacity</div>
+                <p class="fmt-desc">Pick any color and fine-tune opacity for subtle fades or vibrant transitions.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet"><i class="fa-solid fa-code" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Copy-ready Code</div>
+                <p class="fmt-desc">Export clean CSS gradient declarations or Tailwind utilities for immediate use.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-amber"><i class="fa-solid fa-flask" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Gradient Presets</div>
+                <p class="fmt-desc">Use curated gradient presets and palettes to jump-start your designs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FAQ
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about generating CSS gradients with this free tool.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+
+                <div class="ic-faq-item open" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">What is a CSS gradient?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">A CSS gradient is a smooth transition between two or more colors. This tool generates gradient declarations (linear or radial) that you can use as background styles.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">How do I copy the generated CSS?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Click the copy button next to the CSS block. The tool copies the declaration to your clipboard immediately.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I create radial or conic gradients?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. Choose the gradient type (linear or radial) and adjust stops to create radial-style effects. The preview and generated CSS update instantly.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Is this generator free?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. This gradient generator is free to use, requires no signup, and runs entirely in your browser.</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>What is the difference between blur and spread?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Blur softens the shadow edge while spread expands or contracts its size. Use blur for softness and spread for stronger emphasis.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>Should I use CSS or Tailwind?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Use CSS if you prefer traditional stylesheets, or use the Tailwind output for utility-first design systems. Both are generated by the same shadow settings.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>Can I use this on mobile?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Yes. The generator is responsive and works on desktop, tablet, and mobile devices for easy shadow design anywhere.
+                  </div>
+                </div>
+
+                <div class="ic-faq-item">
+                  <div class="ic-faq-q">
+                    <h4>What types of shadows can I create?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a">
+                    Create soft glows, hard drop shadows, floating card effects, and inset inner shadows with full control over offset, blur, spread, and color.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        WHY USE THIS TOOL
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Why Use This Tool</span>
+            <h2>Why Choose Our Gradient Generator?</h2>
+            <p>Create polished gradients fast with intuitive controls and copy-ready CSS for backgrounds, headers, buttons and more.</p>
+          </div>
+          <div class="ic-why-grid">
+            <div class="ic-why-card">
+              <div class="why-icon bg-blue"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Fast &amp; Accurate</h4>
+              <p>Generate exact shadow values instantly without manual CSS calculations.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-emerald"><i class="fa-solid fa-rocket"></i></div>
+              <h4>Easy Integration</h4>
+              <p>Copy CSS or Tailwind output directly into your layout or component styles.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-violet"><i class="fa-solid fa-eye-dropper-empty"></i></div>
+              <h4>Color &amp; Opacity</h4>
+              <p>Choose any shadow color and fine-tune opacity for subtle depth or dramatic highlights.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-orange"><i class="fa-solid fa-flask"></i></div>
+              <h4>Design-Friendly Presets</h4>
+              <p>Use built-in presets to apply polished shadow styles instantly.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-cyan"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <h4>Responsive Ready</h4>
+              <p>Works on desktop and mobile so you can design shadows from any device.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-rose"><i class="fa-solid fa-circle-check"></i></div>
+              <h4>No Signup Needed</h4>
+              <p>Start using the tool immediately with no registration or downloads required.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        RELATED TOOLS
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section pb-5">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">More Tools</span>
+            <h2>Related CSS Tools</h2>
+            <p>Explore more free CSS utilities from WebToolOcean for polished, professional front-end work.</p>
+          </div>
+          <div class="ic-related-grid">
+            <a href="/css-tools/gradient-generator/" class="ic-related-card">
+              <div class="rel-icon bg-indigo"><i class="fa-solid fa-droplet"></i></div>
+              <div>
+                <div class="rel-name">Gradient Generator</div>
+                <div class="rel-desc">Create smooth CSS gradients and export ready-to-use code.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/mult-box-shadow-generator/" class="ic-related-card">
+              <div class="rel-icon bg-emerald"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <div class="rel-name">Multi Box Shadow</div>
+                <div class="rel-desc">Build layered shadow styles for advanced UI design.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/css-formatter/" class="ic-related-card">
+              <div class="rel-icon bg-violet"><i class="fa-solid fa-magic"></i></div>
+              <div>
+                <div class="rel-name">CSS Formatter</div>
+                <div class="rel-desc">Beautify and optimize your CSS code instantly.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/box-shadow-generator/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <div class="rel-name">Box Shadow Generator</div>
+                <div class="rel-desc">Customize shadows with live preview and code export.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/all-tools/" class="ic-related-card">
+              <div class="rel-icon bg-amber"><i class="fa-solid fa-grid-2"></i></div>
+              <div>
+                <div class="rel-name">All Tools</div>
+                <div class="rel-desc">Browse the full WebToolOcean collection.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </div><!-- /ic-content -->
+
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function(){
+
+/* ---------------- COLOR STOPS ---------------- */
+
+let stops=[
+{color:"#ff7e5f",pos:0},
+{color:"#feb47b",pos:100}
+]
+
+/* ---------------- GRADIENT PRESETS ---------------- */
+
+const presets=[
+["#ff7e5f","#feb47b"],
+["#6a11cb","#2575fc"],
+["#ff9966","#ff5e62"],
+["#00c6ff","#0072ff"],
+["#f7971e","#ffd200"],
+["#f953c6","#b91d73"],
+["#43cea2","#185a9d"],
+["#ff4e50","#f9d423"],
+["#667eea","#764ba2"],
+["#89f7fe","#66a6ff"],
+["#f857a6","#ff5858"],
+["#00f260","#0575e6"],
+["#fc466b","#3f5efb"],
+["#30cfd0","#330867"],
+["#c94b4b","#4b134f"],
+["#ee0979","#ff6a00"],
+["#8360c3","#2ebf91"],
+["#ff512f","#dd2476"],
+["#1e3c72","#2a5298"],
+["#fc4a1a","#f7b733"],
+["#bdc3c7","#2c3e50"],
+["#de6262","#ffb88c"],
+["#06beb6","#48b1bf"],
+["#eb3349","#f45c43"],
+["#dd5e89","#f7bb97"],
+["#56ab2f","#a8e063"],
+["#614385","#516395"],
+["#e65c00","#f9d423"],
+["#02aab0","#00cdac"],
+["#4568dc","#b06ab3"]
+]
+
+/* ---------------- COLOR PALETTES ---------------- */
+
+const palettes=[
+["#ff6b6b","#feca57","#48dbfb","#1dd1a1","#5f27cd"],
+["#ee5253","#ff9f43","#feca57","#1dd1a1","#54a0ff"],
+["#5f27cd","#341f97","#ee5253","#ff6b6b","#feca57"],
+["#10ac84","#48dbfb","#ff9f43","#ee5253","#5f27cd"],
+["#222f3e","#576574","#8395a7","#c8d6e5","#f1f2f6"],
+["#ff9ff3","#f368e0","#ff6b6b","#feca57","#48dbfb"],
+["#00d2d3","#54a0ff","#5f27cd","#ee5253","#ff9f43"],
+["#1dd1a1","#10ac84","#00d2d3","#54a0ff","#5f27cd"]
+]
+
+/* ---------------- RENDER STOPS ---------------- */
+
+function renderStops(){
+
+$("#stops").html("")
+
+stops.forEach((s,i)=>{
+
+$("#stops").append(`
+<div class="stop">
+<input type="color" value="${s.color}" data-i="${i}" class="color">
+<input type="range" min="0" max="100" value="${s.pos}" data-i="${i}" class="pos">
+<button class="remove" data-i="${i}">✖</button>
+</div>
+`)
+
+})
+
+updateGradient()
+
+}
+
+/* ---------------- UPDATE GRADIENT ---------------- */
+
+function updateGradient(){
+
+let type=$("#type").val()
+let angle=$("#angle").val()
+
+let list=stops
+.sort((a,b)=>a.pos-b.pos)
+.map(s=>`${s.color} ${s.pos}%`)
+.join(",")
+
+let css= type=="linear"
+? `linear-gradient(${angle}deg, ${list})`
+: `radial-gradient(circle, ${list})`
+
+$("#preview").css("background",css)
+$("#css").text(`background: ${css};`)
+
+}
+
+/* ---------------- ADD STOP ---------------- */
+
+$("#add").click(()=>{
+
+stops.push({
+color:"#"+Math.floor(Math.random()*16777215).toString(16),
+pos:50
+})
+
+renderStops()
+
+})
+
+/* ---------------- COLOR CHANGE ---------------- */
+
+$(document).on("input",".color",function(){
+
+let i=$(this).data("i")
+stops[i].color=$(this).val()
+updateGradient()
+
+})
+
+/* ---------------- POSITION CHANGE ---------------- */
+
+$(document).on("input",".pos",function(){
+
+let i=$(this).data("i")
+stops[i].pos=$(this).val()
+updateGradient()
+
+})
+
+/* ---------------- REMOVE STOP ---------------- */
+
+$(document).on("click",".remove",function(){
+
+stops.splice($(this).data("i"),1)
+renderStops()
+
+})
+
+/* ---------------- REVERSE ---------------- */
+
+$("#reverse").click(()=>{
+
+stops.reverse()
+renderStops()
+
+})
+
+/* ---------------- RANDOM ---------------- */
+
+$("#random").click(()=>{
+
+stops=[
+{color:"#"+Math.floor(Math.random()*16777215).toString(16),pos:0},
+{color:"#"+Math.floor(Math.random()*16777215).toString(16),pos:100}
+]
+
+renderStops()
+
+})
+
+/* ---------------- INSTAGRAM ---------------- */
+
+$("#instagram").click(()=>{
+
+stops=[
+{color:"#f09433",pos:0},
+{color:"#e6683c",pos:25},
+{color:"#dc2743",pos:50},
+{color:"#cc2366",pos:75},
+{color:"#bc1888",pos:100}
+]
+
+renderStops()
+
+})
+
+/* ---------------- AI GRADIENT ---------------- */
+
+$("#ai").click(()=>{
+
+let count=Math.floor(Math.random()*3)+2
+
+let newStops=[]
+
+for(let i=0;i<count;i++){
+
+newStops.push({
+color:"#"+Math.floor(Math.random()*16777215).toString(16),
+pos:Math.round((i/(count-1))*100)
+})
+
+}
+
+stops=newStops
+renderStops()
+
+})
+
+/* ---------------- RENDER PRESETS ---------------- */
+
+function renderPresets(){
+
+$("#presets").html("")
+
+presets.forEach(p=>{
+
+let gradient=`linear-gradient(45deg,${p.join(",")})`
+
+$("#presets").append(`
+<div class="preset"
+style="background:${gradient}"
+data-colors='${JSON.stringify(p)}'>
+</div>
+`)
+
+})
+
+}
+
+/* ---------------- PRESET CLICK ---------------- */
+
+$(document).on("click",".preset",function(){
+
+let colors=JSON.parse($(this).attr("data-colors"))
+
+stops=colors.map((c,i)=>({
+color:c,
+pos:Math.round((i/(colors.length-1))*100)
+}))
+
+renderStops()
+
+})
+
+/* ---------------- RENDER PALETTES ---------------- */
+
+function renderPalettes(){
+
+$("#palettes").html("")
+
+palettes.forEach(p=>{
+
+$("#palettes").append(`
+<div class="palette"
+style="background:linear-gradient(90deg,${p.join(",")})"
+data-colors='${JSON.stringify(p)}'>
+</div>
+`)
+
+})
+
+}
+
+/* ---------------- PALETTE CLICK ---------------- */
+
+$(document).on("click",".palette",function(){
+
+let colors=JSON.parse($(this).attr("data-colors"))
+
+stops=colors.map((c,i)=>({
+color:c,
+pos:Math.round((i/(colors.length-1))*100)
+}))
+
+renderStops()
+
+})
+
+/* ---------------- COPY CSS ---------------- */
+
+$(".copy").click(function(){
+  navigator.clipboard.writeText($("#css").text()).then(function(){
+    showToast("✓ Copied CSS to clipboard!");
+  });
+});
+
+function showToast(msg){
+  var t = $("#toast");
+  if(!t.length) return;
+  t.text(msg).addClass('show');
+  setTimeout(function(){ t.removeClass('show'); }, 2000);
+}
+
+/* ---------------- DOWNLOAD IMAGE ---------------- */
+
+$("#download").click(()=>{
+
+let canvas=document.createElement("canvas")
+canvas.width=1200
+canvas.height=800
+
+let ctx=canvas.getContext("2d")
+
+let g=ctx.createLinearGradient(0,0,canvas.width,canvas.height)
+
+stops.forEach(s=>{
+g.addColorStop(s.pos/100,s.color)
+})
+
+ctx.fillStyle=g
+ctx.fillRect(0,0,canvas.width,canvas.height)
+
+let link=document.createElement("a")
+link.download="gradient.png"
+link.href=canvas.toDataURL()
+link.click()
+
+})
+
+/* ---------------- INIT ---------------- */
+
+renderStops()
+renderPresets()
+renderPalettes()
+
+$("#angle,#type").on("input change",updateGradient)
+
+})
+</script>
+
+  <!-- FAQ ACCORDION -->
+  <script>
+    document.querySelectorAll('.ic-faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.ic-faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.ic-faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <style>
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
+    }
+
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: var(--brand-accent);
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .ic-hero {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, #0f172a 100%);
+      padding: 44px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ic-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ic-hero .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+
+    .ic-hero h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: #f1f5f9;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .ic-hero h1 span {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ic-hero p.hero-desc {
+      color: #94a3b8;
+      font-size: .93rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 22px;
+    }
+
+    .ic-trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 100px;
+      color: #cbd5e1;
+      font-size: .76rem;
+      font-weight: 500;
+      padding: 5px 13px;
+    }
+
+    .ic-badge i {
+      color: #34d399;
+      font-size: .7rem;
+    }
+
+    .ic-content {
+      background: var(--brand-light);
+      padding: 0 0 64px;
+    }
+
+    .ic-section {
+      padding: 52px 0 0;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-section-head {
+      margin-bottom: 28px;
+    }
+
+    .ic-section-head .sec-eyebrow {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head p {
+      color: var(--text-muted);
+      font-size: .88rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0;
+    }
+
+    .ic-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ic-step-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .ic-step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--brand-accent);
+    }
+
+    .ic-step-card .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .ic-step-card .step-icon {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .ic-step-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-step-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .ic-steps-wrap {
+      position: relative;
+    }
+
+    .ic-steps-wrap::before {
+      content: '';
+      position: absolute;
+      top: 54px;
+      left: calc(12.5% + 10px);
+      right: calc(12.5% + 10px);
+      height: 2px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      opacity: .25;
+      z-index: 0;
+    }
+
+    .ic-format-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-format-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-format-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ic-format-card .fmt-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-format-card .fmt-from {
+      font-size: .65rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 600;
+    }
+
+    .ic-format-card .fmt-title {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 4px;
+    }
+
+    .ic-format-card .fmt-desc {
+      font-size: .76rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .bg-blue {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    .bg-cyan {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+    }
+
+    .bg-violet {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    }
+
+    .bg-emerald {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .bg-orange {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+    }
+
+    .bg-rose {
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+    }
+
+    .bg-amber {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .bg-indigo {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+    }
+
+    .ic-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .83rem;
+    }
+
+    .ic-info-table thead th {
+      background: var(--brand-dark);
+      color: #e2e8f0;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .ic-info-table thead th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+
+    .ic-info-table thead th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+
+    .ic-info-table tbody tr {
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ic-info-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .ic-info-table tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    .ic-info-table tbody td {
+      padding: 12px 16px;
+      color: var(--text-body);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .ic-info-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--brand-dark);
+    }
+
+    .ic-info-table-wrap {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .fmt-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: var(--brand-accent);
+      border-radius: 4px;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      margin-right: 4px;
+    }
+
+    .ic-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ic-faq-item {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open {
+      border-color: var(--brand-accent);
+    }
+
+    .ic-faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      cursor: pointer;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .ic-faq-q h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin: 0;
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .ic-faq-q .faq-toggle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open .faq-toggle {
+      background: var(--brand-accent);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .ic-faq-a {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: .85rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    .ic-faq-item.open .ic-faq-a {
+      display: block;
+    }
+
+    .ic-faq-a code {
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: .82rem;
+    }
+
+    .ic-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-why-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-why-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .ic-why-card .why-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .ic-why-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-why-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .ic-related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .ic-related-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      color: inherit;
+    }
+
+    .ic-related-card .rel-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-related-card .rel-name {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 2px;
+    }
+
+    .ic-related-card .rel-desc {
+      font-size: .72rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .ic-related-card .rel-arrow {
+      margin-left: auto;
+      color: var(--brand-accent);
+      font-size: .72rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover .rel-arrow {
+      opacity: 1;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* DROP AREA */
+    #drop-area {
+      border: 2px dashed #cbd5e1;
+      padding: 40px;
+      text-align: center;
+      border-radius: 12px;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    #drop-area.dragover {
+      border-color: #16a34a;
+      background: #ecfdf5;
+    }
+
+    /* BUTTONS */
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .btn-green {
+      background: #065f46;
+      color: white;
+    }
+
+    .btn-red {
+      background: #dc2626;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    /* PROGRESS */
+    #progress-container {
+      display: none;
+      margin: 20px 0;
+    }
+
+    .progress-bar-bg {
+      background: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #progress-bar {
+      height: 14px;
+      width: 0%;
+      background: linear-gradient(90deg, #16a34a, #065f46);
+      transition: width 0.2s;
+    }
+
+    #progress-text {
+      text-align: right;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* FILE CARDS */
+    .file-card {
+      background: #fff;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .file-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .file-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .file-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 0;
+      padding: 8px;
+      min-height: 169px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .ic-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-format-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-steps-wrap::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .ic-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-format-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-related-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+   
+  <style>
+ 
+
+/* Layout */
+.stop  button {
+    padding: 5px 10px;
+}
+
+.stop {
+    display: flex;
+    align-items: center;
+}
+ 
+
+ 
+
+.app{
+display:grid;
+grid-template-columns:320px 1fr;
+gap:25px;
+margin-top:20px;
+}
+
+/* Sidebar */
+
+.panel{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+label{
+display:block;
+font-size:14px;
+margin-top:12px;
+}
+
+input[type="color"],
+input[type="range"],
+select{
+width:100%;
+margin-top:5px;
+}
+
+/* Buttons */
+
+button{
+border:none;
+padding:10px 14px;
+border-radius:6px;
+cursor:pointer;
+background:#2563eb;
+color:white;
+margin-top:10px;
+}
+
+button.secondary{
+background:#6b7280;
+}
+
+button.success{
+background:#10b981;
+}
+
+/* Preview */
+
+.preview{
+height:350px;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:24px;
+font-weight:600;
+}
+
+/* Color stops */
+
+.stops{
+margin-top:15px;
+}
+
+.stop{
+display:flex;
+gap:10px;
+margin-bottom:8px;
+}
+
+.stop input[type="color"]{
+width:60px;
+}
+
+.stop input[type="range"]{
+flex:1;
+}
+
+/* CSS output */
+
+.code {
+    margin-top: 15px;
+    background: #111827;
+    color: #0ef;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copy{
+position:static;
+right:10px;
+top:10px;
+background:#2563eb;
+}
+
+.seo{
+margin-top:40px;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+ 
+.preset-grid, .palette-grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:6px;
+margin-top:10px;
+}
+
+.preset, .palette{
+height:40px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* TOAST NOTIFICATION */
+.ic-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(16,185,129,0.24);
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.28s ease;
+  pointer-events: none;
+}
+
+.ic-toast.show{
+  opacity:1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+</body>
+
+</html>

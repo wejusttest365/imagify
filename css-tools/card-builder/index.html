@@ -1,0 +1,1553 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta name="theme-color" content="#0f172a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ToolOcean">
+<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>CSS Card Builder – Build Custom CSS Cards Online | WebToolOcean</title>
+<meta name="description" content="Create and customize CSS cards online with WebToolOcean’s CSS Card Builder. Download HTML, CSS, React, and Tailwind-ready code instantly.">
+<meta name="keywords" content="CSS Card Builder, CSS Card Generator, HTML Card Code, CSS Card Animation, React Card Component, Tailwind Card Design, Online Card Builder">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="CSS Card Builder – Build Custom CSS Cards Online">
+<meta property="og:description" content="Create and customize CSS cards online with WebToolOcean. Get HTML, CSS, React, and Tailwind-ready code instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webtoolocean.com/css-tools/card-builder/index.html">
+<meta property="og:image" content="https://webtoolocean.com/assets/images/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CSS Card Builder – Build Custom CSS Cards Online">
+<meta name="twitter:description" content="Create and customize CSS cards online with WebToolOcean. Get HTML, CSS, React, and Tailwind-ready code instantly.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I create a custom CSS card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the card builder controls to customize shadows, borders, colors, spacing, and effects. See your changes instantly and export the code in HTML, CSS, React, or Tailwind format."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add animations to my cards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The builder supports hover effects, fade-ins, and smooth transitions. All animations are CSS-based and export-ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What code formats can I export?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export your card design as HTML, plain CSS, React component, or Tailwind utility classes. All formats are production-ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Card Builder free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The builder is completely free, browser-based, and requires no signup. All card design happens locally without uploading."
+      }
+    }
+  ]
+}
+</script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <!-- SoftwareApplication schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CSS Card Builder",
+    "description": "Create and customize CSS cards online. Export HTML, CSS, React components, and Tailwind-ready code with live preview.",
+    "url": "https://webtoolocean.com/css-tools/card-builder/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    "author": { "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" },
+    "publisher": { "@type": "Organization", "name": "WebToolOcean" },
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "featureList": ["Live preview","Export HTML/CSS","Export React","Tailwind-ready","Animations & presets"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" }
+  </script>
+</head>
+
+<body>
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="ic-toast"></div>
+
+  <div id="header"></div>
+  <main role="main" id="content">
+
+    <!-- ═══════════════════════════════════════════════════════
+    1. BREADCRUMB
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/all-tools/">Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/css-tools/">CSS Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">Card Builder</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+    2. PAGE HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="ic-hero">
+      <div class="container">
+        <div class="hero-tag"><i class="fa-solid fa-code"></i> CSS Tools</div>
+        <h1>Free CSS Card Builder –<br><span>Design Beautiful Cards with Live Preview and Instant Code Export</span></h1>
+        <p class="hero-desc">Build responsive, modern CSS cards with live controls for shadows, borders, gradients, spacing, and animations. Export polished HTML, CSS, React, and Tailwind-ready code instantly.</p>
+        <div class="ic-trust-badges">
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Live Preview</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Multiple Format Export</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Responsive Design</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Animation Support</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Browser-Based</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ic-content">
+      <div class="container">
+
+        <!-- ═══════════════════════════════════════════════════════
+        MAIN WIDGET
+        ═══════════════════════════════════════════════════════ -->
+        <section class="py-5">
+          <div class="container">
+
+            <h1 class="text-center mb-4">Card Grid Builder</h1>
+
+            <div class="row g-4">
+
+              <!-- LEFT PANEL -->
+              <div class="col-lg-3">
+                <div class="panel">
+
+                  <h6>Grid Settings</h6>
+                  <label>Columns</label>
+                  <input type="number" id="cols" class="form-control" value="3">
+                  <label class="mt-2">Gap</label>
+                  <input type="range" id="gap" min="0" max="40" value="20" class="form-range">
+
+                  <hr>
+
+                  <h6>Global Styles</h6>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="enableShadow" checked>
+                    <label class="form-check-label" for="enableShadow">Enable Shadow</label>
+                  </div>
+
+                  <label class="mt-2">Border Width (px)</label>
+                  <input type="number" id="borderWidth" class="form-control" value="1">
+
+                  <label class="mt-2">Border Color</label>
+                  <input type="color" id="borderColor" class="form-control" value="#000000">
+
+                  <label class="mt-2">Grid Background</label>
+                  <input type="color" id="gridBg" class="form-control" value="#ffffff">
+
+                  <label class="mt-2">Title Color</label>
+                  <input type="color" id="titleColor" class="form-control" value="#000000">
+
+                  <hr>
+
+                  <button class="btn btn-success w-100" onclick="addCard()">+ Add Card</button>
+                  <button class="btn btn-danger w-100 mt-2" onclick="deleteCard()">Delete Card</button>
+
+                  <hr>
+
+                  <h6>Edit Card</h6>
+                  <input class="form-control mt-2" id="img" placeholder="Image URL">
+                  <input class="form-control mt-2" id="title" placeholder="Title">
+                  <textarea class="form-control mt-2" id="desc" placeholder="Description"></textarea>
+                  <input class="form-control mt-2" id="btnText" placeholder="Button Text">
+                  <input class="form-control mt-2" id="btnLink" placeholder="Button Link">
+
+                </div>
+              </div>
+
+              <!-- PREVIEW PANEL -->
+              <div class="col-lg-9">
+                <div class="panel minH200">
+                  <h6>Preview</h6>
+                  <div id="grid" style="display:grid; gap:20px;"></div>
+                </div>
+
+                <div class="panel copyHTMLPanel mt-3">
+                  <div class="row">
+                    <div class="col-md-6 col-xs-12 mb-3">
+                      <h6>HTML</h6>
+                      <textarea id="htmlCode" class="form-control" rows="6"></textarea>
+                      <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('htmlCode')">Copy HTML</button>
+                    </div>
+                    <div class="col-md-6 col-xs-12 mb-3">
+                      <h6>CSS</h6>
+                      <textarea id="cssCode" class="form-control" rows="6"></textarea>
+                      <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('cssCode')">Copy CSS</button>
+                    </div>
+                    <div class="col-md-6 col-xs-12 mb-3">
+                      <h6>React</h6>
+                      <textarea id="reactCode" class="form-control" rows="6"></textarea>
+                      <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('reactCode')">Copy React</button>
+                    </div>
+                    <div class="col-md-6 col-xs-12 mb-3">
+                      <h6>Tailwind</h6>
+                      <textarea id="tailwindCode" class="form-control" rows="4"></textarea>
+                      <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('tailwindCode')">Copy Tailwind</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- ═══════════════════════════════════════════════════════
+        HOW TO USE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">How to Use</span>
+            <h2>How to Use the CSS Card Builder</h2>
+            <p>Design custom cards with an intuitive builder, preview changes instantly, and export production-ready code in multiple formats.</p>
+          </div>
+          <div class="ic-steps-wrap">
+            <div class="ic-steps">
+              <div class="ic-step-card">
+                <div class="step-num">1</div>
+                <span class="step-icon">🎨</span>
+                <h4>Customize Card Design</h4>
+                <p>Use the controls to adjust shadows, borders, colors, spacing, padding, and border radius to match your design vision.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">2</div>
+                <span class="step-icon">👁️</span>
+                <h4>See Live Preview</h4>
+                <p>Your card updates instantly in the preview panel so you can fine-tune every detail before exporting.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">3</div>
+                <span class="step-icon">✨</span>
+                <h4>Add Effects</h4>
+                <p>Enable shadows, borders, gradients, animations, and hover effects to bring your card design to life.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">4</div>
+                <span class="step-icon">💾</span>
+                <h4>Export Your Code</h4>
+                <p>Copy HTML, CSS, React component, or Tailwind utility code with one click and use it in your project.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FEATURES
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Features</span>
+            <h2>Powerful Card Design Tools for Modern Web Layouts</h2>
+            <p>Build responsive, professional cards with intuitive controls and export-ready code for every framework.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue"><i class="fa-solid fa-eye" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Live Preview</div>
+                <p class="fmt-desc">See your card design update instantly as you adjust colors, shadows, spacing, and effects.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald"><i class="fa-solid fa-palette" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Full Customization</div>
+                <p class="fmt-desc">Control shadows, borders, padding, border radius, gradients, and background colors with precision.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet"><i class="fa-solid fa-code" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Multi-Format Export</div>
+                <p class="fmt-desc">Export as HTML, CSS, React component, or Tailwind classes for seamless integration with any workflow.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-amber"><i class="fa-solid fa-flask" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Animation &amp; Hover Effects</div>
+                <p class="fmt-desc">Add smooth transitions, hover states, and CSS animations to create engaging, interactive cards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FAQ
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about designing and building CSS cards with this free tool.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+
+                <div class="ic-faq-item open" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">What is a CSS card?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">A CSS card is a container element styled with CSS to display content in an attractive, organized way. Cards typically feature shadows, borders, padding, and a clean layout perfect for showcasing products, services, or information.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I customize every aspect of the card?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. Control colors, shadows, borders, padding, border radius, backgrounds, gradients, and hover effects through intuitive controls.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">What formats can I export?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Export as HTML, CSS, React JSX component, or Tailwind utility classes. All formats are production-ready.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Is the Card Builder free?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. The builder is completely free, browser-based, and requires no signup. All design happens locally without uploading.</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I add animations to my cards?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. The builder supports CSS animations, hover effects, transitions, and fade-in effects for interactive card designs.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Are the cards responsive?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. Cards are built with responsive design principles so they look great on desktop, tablet, and mobile devices.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I use this with frameworks?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. Export as React components, Vue templates, or use raw CSS/Tailwind with any framework or vanilla JavaScript.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Does it work on mobile?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. The builder is fully responsive and works on desktop, tablet, and mobile devices for design work anywhere.</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        WHY USE THIS TOOL
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Why Use This Tool</span>
+            <h2>Why Choose Our CSS Card Builder?</h2>
+            <p>Design beautiful, professional cards quickly without manual CSS coding or design software.</p>
+          </div>
+          <div class="ic-why-grid">
+            <div class="ic-why-card">
+              <div class="why-icon bg-blue"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Fast Design</h4>
+              <p>Create production-ready cards in minutes, not hours. No CSS knowledge required.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-emerald"><i class="fa-solid fa-rocket"></i></div>
+              <h4>Multiple Export Formats</h4>
+              <p>Copy HTML, CSS, React, or Tailwind code instantly for any project type.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-violet"><i class="fa-solid fa-eye-dropper-empty"></i></div>
+              <h4>Full Customization</h4>
+              <p>Control every aspect: colors, shadows, spacing, borders, gradients, and animations.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-orange"><i class="fa-solid fa-flask"></i></div>
+              <h4>Live Preview</h4>
+              <p>See changes instantly as you adjust card properties and design elements.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-cyan"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <h4>Responsive Ready</h4>
+              <p>Cards are responsive by default and work on all devices and screen sizes.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-rose"><i class="fa-solid fa-circle-check"></i></div>
+              <h4>No Signup Required</h4>
+              <p>Use the builder instantly, completely free, with no registration or downloads.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        RELATED TOOLS
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section pb-5">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">More Tools</span>
+            <h2>Related CSS Tools</h2>
+            <p>Explore more free CSS utilities from WebToolOcean for building polished, professional designs.</p>
+          </div>
+          <div class="ic-related-grid">
+            <a href="/css-tools/box-shadow-generator/" class="ic-related-card">
+              <div class="rel-icon bg-indigo"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <div class="rel-name">Box Shadow Generator</div>
+                <div class="rel-desc">Create and customize CSS shadows with live preview.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/gradient-generator/" class="ic-related-card">
+              <div class="rel-icon bg-emerald"><i class="fa-solid fa-droplet"></i></div>
+              <div>
+                <div class="rel-name">Gradient Generator</div>
+                <div class="rel-desc">Create smooth CSS gradients and export code instantly.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/css-formatter/" class="ic-related-card">
+              <div class="rel-icon bg-violet"><i class="fa-solid fa-magic"></i></div>
+              <div>
+                <div class="rel-name">CSS Formatter</div>
+                <div class="rel-desc">Beautify and optimize your CSS code instantly.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/clip-image/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-crop"></i></div>
+              <div>
+                <div class="rel-name">Clip Image</div>
+                <div class="rel-desc">Create custom CSS clip-path shapes for images.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/all-tools/" class="ic-related-card">
+              <div class="rel-icon bg-amber"><i class="fa-solid fa-grid-2"></i></div>
+              <div>
+                <div class="rel-name">All Tools</div>
+                <div class="rel-desc">Browse the full WebToolOcean collection.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </div><!-- /ic-content -->
+
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+ 
+<script>
+let grid = document.getElementById("grid");
+let cards = [];
+let activeCard = null;
+
+// ADD CARD
+function addCard() {
+  let card = document.createElement("div");
+  card.className = "card-box";
+  card.innerHTML = `
+    <img src="https://picsum.photos/300/200" alt="">
+    <div class="card-body">
+      <h5>Title</h5>
+      <p>Description</p>
+      <a class="btn btn-primary btn-sm" href="#">Button</a>
+    </div>`;
+  card.onclick = () => selectCard(card);
+  grid.appendChild(card);
+  cards.push(card);
+  selectCard(card);
+  generateCode();
+}
+
+// Add a default card initially
+addCard();
+
+// SELECT CARD
+function selectCard(card) {
+  cards.forEach(c => c.classList.remove("active"));
+  card.classList.add("active");
+  activeCard = card;
+
+  document.getElementById("img").value = card.querySelector("img").src;
+  document.getElementById("title").value = card.querySelector("h5").innerText;
+  document.getElementById("desc").value = card.querySelector("p").innerText;
+  document.getElementById("btnText").value = card.querySelector("a").innerText;
+  document.getElementById("btnLink").value = card.querySelector("a").href;
+}
+
+// DELETE CARD
+function deleteCard() {
+  if (!activeCard) return;
+  activeCard.remove();
+  cards = cards.filter(c => c !== activeCard);
+  activeCard = null;
+  generateCode();
+}
+
+// LIVE EDITS
+["img","title","desc","btnText","btnLink","cols","gap","borderWidth","borderColor","gridBg","titleColor","enableShadow"].forEach(id => {
+  document.getElementById(id).addEventListener("input", generateCode);
+});
+document.getElementById("enableShadow").addEventListener("change", generateCode);
+
+function generateCode() {
+  const cols = document.getElementById("cols").value;
+  const gap = document.getElementById("gap").value;
+  const borderWidth = document.getElementById("borderWidth").value;
+  const borderColor = document.getElementById("borderColor").value;
+  const enableShadow = document.getElementById("enableShadow").checked;
+  const gridBg = document.getElementById("gridBg").value;
+  const titleColor = document.getElementById("titleColor").value;
+
+  // GRID STYLES
+  grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+  grid.style.gap = gap + "px";
+
+  // APPLY TO ALL CARDS
+  cards.forEach(card => {
+    card.style.border = `${borderWidth}px solid ${borderColor}`;
+    card.style.boxShadow = enableShadow ? "0 5px 15px rgba(0,0,0,0.2)" : "none";
+    card.style.backgroundColor = gridBg;
+
+    let img = card.querySelector("img");
+    img.style.transition = "transform 0.3s";
+    img.onmouseover = e => e.target.style.transform = "scale(1.05)";
+    img.onmouseout = e => e.target.style.transform = "scale(1)";
+
+    let title = card.querySelector("h5");
+    title.style.backgroundColor = gridBg;
+    title.style.color = titleColor;
+    title.style.padding = "2px 4px";
+  });
+
+  // HTML CODE
+  document.getElementById("htmlCode").value = `<div class="card-grid">\n${grid.innerHTML}\n</div>`;
+
+  // CSS CODE
+  document.getElementById("cssCode").value = `
+.card-grid { display:grid; grid-template-columns:repeat(${cols},1fr); gap:${gap}px; }
+.card-box { border:${borderWidth}px solid ${borderColor}; background-color:${gridBg}; border-radius:8px; overflow:hidden; ${enableShadow ? 'box-shadow:0 5px 15px rgba(0,0,0,0.2);' : ''} }
+.card-box img { width:100%; height:160px; object-fit:cover; transition:transform 0.3s; }
+.card-box img:hover { transform:scale(1.05); }
+.card-box h5 { color:${titleColor}; background-color:${gridBg}; padding:2px 4px; }
+.card-body { padding:15px; }
+@media(max-width:992px){ .card-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:600px){ .card-grid{ grid-template-columns:1fr; } }`;
+
+  // React CODE
+  let reactCards = Array.from(cards).map(card => {
+    let img = card.querySelector("img").src;
+    let title = card.querySelector("h5").innerText;
+    let desc = card.querySelector("p").innerText;
+    let btnText = card.querySelector("a").innerText;
+    let btnLink = card.querySelector("a").href;
+    return `<div className="card-box" style={{ border: "${borderWidth}px solid ${borderColor}", backgroundColor: "${gridBg}", ${enableShadow ? 'boxShadow:"0 5px 15px rgba(0,0,0,0.2)"' : ''} }}>
+  <img alt="" src="${img}" style={{ transition:"transform 0.3s" }} />
+  <div className="card-body">
+    <h5 style={{ color:"${titleColor}", backgroundColor:"${gridBg}", padding:"2px 4px" }}>${title}</h5>
+    <p>${desc}</p>
+    <a className="btn btn-primary btn-sm" href="${btnLink}">${btnText}</a>
+  </div>
+</div>`;
+  }).join("\n");
+  document.getElementById("reactCode").value = `<div className="card-grid">\n${reactCards}\n</div>`;
+
+  // Tailwind CODE
+  document.getElementById("tailwindCode").value = `<div class="grid grid-cols-${cols} gap-${Math.round(gap/4)} md:grid-cols-2 sm:grid-cols-1"> <!-- cards --> </div>`;
+}
+
+// EDIT CARD FIELDS LIVE
+["img","title","desc","btnText","btnLink"].forEach(id => {
+  document.getElementById(id).addEventListener("input", () => {
+    if (!activeCard) return;
+    activeCard.querySelector("img").src = document.getElementById("img").value;
+    activeCard.querySelector("h5").innerText = document.getElementById("title").value;
+    activeCard.querySelector("p").innerText = document.getElementById("desc").value;
+    activeCard.querySelector("a").innerText = document.getElementById("btnText").value;
+    activeCard.querySelector("a").href = document.getElementById("btnLink").value;
+    generateCode();
+  });
+});
+
+// COPY CODE
+function copyCode(id) {
+  let text = document.getElementById(id);
+  text.select();
+  document.execCommand("copy");
+  showToast("✓ Copied to clipboard!");
+}
+
+// TOAST NOTIFICATION
+function showToast(message) {
+  let toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2000);
+}
+</script>
+
+  <!-- FAQ ACCORDION -->
+  <script>
+    document.querySelectorAll('.ic-faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.ic-faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.ic-faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <style>
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
+    }
+
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: var(--brand-accent);
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .ic-hero {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, #0f172a 100%);
+      padding: 44px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ic-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ic-hero .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+
+    .ic-hero h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: #f1f5f9;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .ic-hero h1 span {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ic-hero p.hero-desc {
+      color: #94a3b8;
+      font-size: .93rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 22px;
+    }
+
+    .ic-trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 100px;
+      color: #cbd5e1;
+      font-size: .76rem;
+      font-weight: 500;
+      padding: 5px 13px;
+    }
+
+    .ic-badge i {
+      color: #34d399;
+      font-size: .7rem;
+    }
+
+    .ic-content {
+      background: var(--brand-light);
+      padding: 0 0 64px;
+    }
+
+    .ic-section {
+      padding: 52px 0 0;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-section-head {
+      margin-bottom: 28px;
+    }
+
+    .ic-section-head .sec-eyebrow {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head p {
+      color: var(--text-muted);
+      font-size: .88rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0;
+    }
+
+    .ic-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ic-step-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .ic-step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--brand-accent);
+    }
+
+    .ic-step-card .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .ic-step-card .step-icon {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .ic-step-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-step-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .ic-steps-wrap {
+      position: relative;
+    }
+
+    .ic-steps-wrap::before {
+      content: '';
+      position: absolute;
+      top: 54px;
+      left: calc(12.5% + 10px);
+      right: calc(12.5% + 10px);
+      height: 2px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      opacity: .25;
+      z-index: 0;
+    }
+
+    .ic-format-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-format-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-format-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ic-format-card .fmt-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-format-card .fmt-from {
+      font-size: .65rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 600;
+    }
+
+    .ic-format-card .fmt-title {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 4px;
+    }
+
+    .ic-format-card .fmt-desc {
+      font-size: .76rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .bg-blue {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    .bg-cyan {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+    }
+
+    .bg-violet {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    }
+
+    .bg-emerald {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .bg-orange {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+    }
+
+    .bg-rose {
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+    }
+
+    .bg-amber {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .bg-indigo {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+    }
+
+    .ic-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .83rem;
+    }
+
+    .ic-info-table thead th {
+      background: var(--brand-dark);
+      color: #e2e8f0;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .ic-info-table thead th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+
+    .ic-info-table thead th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+
+    .ic-info-table tbody tr {
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ic-info-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .ic-info-table tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    .ic-info-table tbody td {
+      padding: 12px 16px;
+      color: var(--text-body);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .ic-info-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--brand-dark);
+    }
+
+    .ic-info-table-wrap {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .fmt-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: var(--brand-accent);
+      border-radius: 4px;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      margin-right: 4px;
+    }
+
+    .ic-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ic-faq-item {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open {
+      border-color: var(--brand-accent);
+    }
+
+    .ic-faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      cursor: pointer;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .ic-faq-q h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin: 0;
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .ic-faq-q .faq-toggle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open .faq-toggle {
+      background: var(--brand-accent);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .ic-faq-a {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: .85rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    .ic-faq-item.open .ic-faq-a {
+      display: block;
+    }
+
+    .ic-faq-a code {
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: .82rem;
+    }
+
+    .ic-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-why-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-why-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .ic-why-card .why-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .ic-why-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-why-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .ic-related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .ic-related-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      color: inherit;
+    }
+
+    .ic-related-card .rel-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-related-card .rel-name {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 2px;
+    }
+
+    .ic-related-card .rel-desc {
+      font-size: .72rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .ic-related-card .rel-arrow {
+      margin-left: auto;
+      color: var(--brand-accent);
+      font-size: .72rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover .rel-arrow {
+      opacity: 1;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* DROP AREA */
+    #drop-area {
+      border: 2px dashed #cbd5e1;
+      padding: 40px;
+      text-align: center;
+      border-radius: 12px;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    #drop-area.dragover {
+      border-color: #16a34a;
+      background: #ecfdf5;
+    }
+
+    /* BUTTONS */
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .btn-green {
+      background: #065f46;
+      color: white;
+    }
+
+    .btn-red {
+      background: #dc2626;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    /* PROGRESS */
+    #progress-container {
+      display: none;
+      margin: 20px 0;
+    }
+
+    .progress-bar-bg {
+      background: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #progress-bar {
+      height: 14px;
+      width: 0%;
+      background: linear-gradient(90deg, #16a34a, #065f46);
+      transition: width 0.2s;
+    }
+
+    #progress-text {
+      text-align: right;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* FILE CARDS */
+    .file-card {
+      background: #fff;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .file-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .file-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .file-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 0;
+      padding: 8px;
+      min-height: 169px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .ic-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-format-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ic-steps-wrap::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .ic-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-format-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ic-related-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+  <style>
+
+
+.panel{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+ 
+}
+
+#grid{
+display:grid;
+gap:20px;
+}
+
+.card-box{
+background:white;
+border-radius:8px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+.card-box img{
+width:100%;
+height:140px;
+object-fit:cover;
+}
+
+.card-body{
+padding:15px;
+}
+
+.card-box.active { 
+    outline: 2px solid #2196F3;
+    outline-offset: 3px;
+}
+
+textarea{
+font-family:monospace;
+}
+
+/* TOAST NOTIFICATION */
+.ic-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.ic-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 576px) {
+  .ic-toast {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}
+	  .minH200 {min-height:400px; margin-bottom: 20px;}
+</style>
+
+</body>
+
+</html>
