@@ -206,6 +206,9 @@ nav.main-nav {
 .icon-blue   { background: #dbeafe; color: #2563eb }
 .icon-green  { background: #d1fae5; color: #059669 }
 .icon-amber  { background: #fef3c7; color: #d97706 }
+.icon-indigo { background: #e0e7ff; color: #4f46e5 }
+.icon-pink   { background: #fce7f3; color: #db2777 }
+.icon-teal   { background: #ccfbf1; color: #0d9488 }
 
 .link-title {
 	display: block;
