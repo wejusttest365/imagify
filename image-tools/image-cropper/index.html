@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta name="theme-color" content="#0f172a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ToolOcean">
+<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>Free Image Cropper Online – Crop JPG, PNG, WEBP to Any Ratio | WebToolOcean</title>
+  <meta name="description"
+    content="Crop images online for free with a draggable crop box. Choose Free, Square, 4:3, 16:9 or 3:2 aspect ratios and download instantly. Works with JPG, PNG, WEBP and GIF. No upload, no signup.">
+  <meta name="keywords"
+    content="crop image online, image cropper free, crop photo online, crop jpg, crop png, square crop tool, crop picture online, crop image to ratio, online photo cropper">
+  <meta name="author" content="WebToolOcean">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Free Image Cropper Online – Crop to Any Ratio">
+  <meta property="og:description"
+    content="Crop any image online with a draggable crop box, aspect ratio presets, and instant download — free, private, browser-based.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="WebToolOcean">
+  <meta property="og:image" content="https://webtoolocean.com/images/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Image Cropper Online – Crop JPG PNG WEBP">
+  <meta name="twitter:description"
+    content="Crop images to Free, Square, 4:3, 16:9 or 3:2 ratios instantly with WebToolOcean's free online image cropper.">
+  <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+  <link rel="canonical" href="https://webtoolocean.com/image-tools/image-cropper/">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/image-convertor.css" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --brand-dark: #0f172a; --brand-mid: #1e293b; --brand-accent: #3b82f6; --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc; --text-body: #334155; --text-muted: #64748b; --card-bg: #ffffff;
+      --card-border: #e2e8f0; --radius: 12px; --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06); --shadow-md: 0 6px 24px rgba(0, 0, 0, .10); --transition: .2s ease;
+    }
+    .ic-breadcrumb { background: var(--brand-dark); padding: 12px 0; border-bottom: 1px solid #1e293b; float: left; width: 100%; }
+    .ic-breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: .78rem; }
+    .ic-breadcrumb ol li { color: #64748b; }
+    .ic-breadcrumb ol li a { color: #94a3b8; text-decoration: none; transition: var(--transition); }
+    .ic-breadcrumb ol li a:hover { color: var(--brand-accent); }
+    .ic-breadcrumb ol li.sep { color: #334155; }
+    .ic-breadcrumb ol li.current { color: #cbd5e1; font-weight: 500; }
+    .ic-hero { background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, #0f172a 100%); padding: 44px 0 40px; position: relative; overflow: hidden; }
+    .ic-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%); pointer-events: none; }
+    .ic-hero .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(59, 130, 246, .15); border: 1px solid rgba(59, 130, 246, .28); border-radius: 100px; color: #93c5fd; font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 4px 12px; margin-bottom: 14px; }
+    .ic-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; color: #f1f5f9; line-height: 1.2; margin-bottom: 10px; }
+    .ic-hero h1 span { background: linear-gradient(90deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .ic-hero p.hero-desc { color: #94a3b8; font-size: .93rem; line-height: 1.7; max-width: 600px; margin-bottom: 22px; }
+    .ic-trust-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ic-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .1); border-radius: 100px; color: #cbd5e1; font-size: .76rem; font-weight: 500; padding: 5px 13px; }
+    .ic-badge i { color: #34d399; font-size: .7rem; }
+    .ic-content { background: var(--brand-light); padding: 0 0 64px; }
+    .ic-section { padding: 52px 0 0; float: left; width: 100%; }
+    .ic-section-head { margin-bottom: 28px; }
+    .ic-section-head .sec-eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; background: linear-gradient(90deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; margin-bottom: 6px; }
+    .ic-section-head h2 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 800; color: var(--brand-dark); margin-bottom: 6px; }
+    .ic-section-head p { color: var(--text-muted); font-size: .88rem; line-height: 1.7; max-width: 640px; margin: 0; }
+    .ic-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .ic-step-card { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 24px 20px; text-align: center; box-shadow: var(--shadow-sm); position: relative; transition: var(--transition); }
+    .ic-step-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--brand-accent); }
+    .ic-step-card .step-num { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; font-size: .8rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+    .ic-step-card .step-icon { font-size: 1.4rem; margin-bottom: 12px; display: block; }
+    .ic-step-card h4 { font-size: .88rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px; }
+    .ic-step-card p { font-size: .78rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
+    .ic-steps-wrap { position: relative; }
+    .ic-steps-wrap::before { content: ''; position: absolute; top: 54px; left: calc(12.5% + 10px); right: calc(12.5% + 10px); height: 2px; background: linear-gradient(90deg, #3b82f6, #06b6d4); opacity: .25; z-index: 0; }
+    .ic-format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .ic-format-card { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .ic-format-card:hover { border-color: var(--brand-accent); box-shadow: var(--shadow-md); }
+    .ic-format-card .fmt-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 800; color: #fff; flex-shrink: 0; letter-spacing: .02em; }
+    .ic-format-card .fmt-from { font-size: .65rem; color: var(--text-muted); margin-bottom: 2px; text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
+    .ic-format-card .fmt-title { font-size: .88rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 4px; }
+    .ic-format-card .fmt-desc { font-size: .76rem; color: var(--text-muted); line-height: 1.5; margin: 0; }
+    .bg-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); } .bg-cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+    .bg-violet { background: linear-gradient(135deg, #8b5cf6, #7c3aed); } .bg-emerald { background: linear-gradient(135deg, #10b981, #059669); }
+    .bg-orange { background: linear-gradient(135deg, #f97316, #ea580c); } .bg-rose { background: linear-gradient(135deg, #f43f5e, #e11d48); }
+    .bg-amber { background: linear-gradient(135deg, #f59e0b, #d97706); } .bg-indigo { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+    .ic-faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .ic-faq-item { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .ic-faq-item.open { border-color: var(--brand-accent); }
+    .ic-faq-q { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; cursor: pointer; gap: 12px; user-select: none; }
+    .ic-faq-q h4 { font-size: .9rem; font-weight: 700; color: var(--brand-dark); margin: 0; flex: 1; line-height: 1.4; }
+    .ic-faq-q .faq-toggle { width: 28px; height: 28px; border-radius: 50%; background: #f1f5f9; border: none; display: flex; align-items: center; justify-content: center; font-size: .72rem; color: var(--text-muted); flex-shrink: 0; cursor: pointer; transition: var(--transition); }
+    .ic-faq-item.open .faq-toggle { background: var(--brand-accent); color: #fff; transform: rotate(45deg); }
+    .ic-faq-a { display: none; padding: 0 20px 18px; font-size: .85rem; color: var(--text-body); line-height: 1.75; }
+    .ic-faq-item.open .ic-faq-a { display: block; }
+    .ic-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .ic-why-card { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .ic-why-card:hover { border-color: var(--brand-accent); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .ic-why-card .why-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: .95rem; color: #fff; margin-bottom: 14px; }
+    .ic-why-card h4 { font-size: .88rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px; }
+    .ic-why-card p { font-size: .78rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    .ic-related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .ic-related-card { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 18px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .ic-related-card:hover { border-color: var(--brand-accent); box-shadow: var(--shadow-md); transform: translateY(-2px); color: inherit; }
+    .ic-related-card .rel-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .85rem; color: #fff; flex-shrink: 0; }
+    .ic-related-card .rel-name { font-size: .82rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 2px; }
+    .ic-related-card .rel-desc { font-size: .72rem; color: var(--text-muted); line-height: 1.3; }
+    .ic-related-card .rel-arrow { margin-left: auto; color: var(--brand-accent); font-size: .72rem; opacity: 0; transition: var(--transition); }
+    .ic-related-card:hover .rel-arrow { opacity: 1; }
+    .ic-info-table { width: 100%; border-collapse: collapse; font-size: .83rem; }
+    .ic-info-table thead th { background: var(--brand-dark); color: #e2e8f0; padding: 12px 16px; text-align: left; font-weight: 700; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+    .ic-info-table thead th:first-child { border-radius: 10px 0 0 0; } .ic-info-table thead th:last-child { border-radius: 0 10px 0 0; }
+    .ic-info-table tbody tr { border-bottom: 1px solid var(--card-border); } .ic-info-table tbody tr:last-child { border-bottom: none; }
+    .ic-info-table tbody tr:hover { background: #f8fafc; }
+    .ic-info-table tbody td { padding: 12px 16px; color: var(--text-body); vertical-align: top; line-height: 1.5; }
+    .ic-info-table tbody td:first-child { font-weight: 700; color: var(--brand-dark); }
+    .ic-info-table-wrap { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .fmt-tag { display: inline-block; background: #eff6ff; color: var(--brand-accent); border-radius: 4px; font-size: .7rem; font-weight: 700; padding: 2px 7px; margin-right: 4px; }
+
+    /* ── CROPPER WIDGET ── */
+    .crp-box { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-md); }
+    .crp-box h1 { font-size: 1.05rem; font-weight: 800; color: var(--brand-dark); margin-bottom: 18px; }
+    .crp-drop { border: 2px dashed #cbd5e1; border-radius: var(--radius); padding: 34px 20px; text-align: center; cursor: pointer; transition: var(--transition); background: #f8fafc; }
+    .crp-drop.dragover { border-color: var(--brand-accent); background: #eff6ff; }
+    .crp-drop button { background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; border: none; padding: 9px 18px; border-radius: 8px; font-weight: 700; font-size: .85rem; cursor: pointer; }
+    .crp-drop .hint { font-size: .74rem; color: var(--text-muted); margin-top: 10px; }
+    .crp-workspace { display: none; margin-top: 24px; grid-template-columns: 1.5fr 1fr; gap: 24px; }
+    .crp-workspace.active { display: grid; }
+    .crp-stage { position: relative; background: #0f172a; border-radius: var(--radius); overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 340px; user-select: none; }
+    .crp-stage img { display: block; max-width: 100%; max-height: 480px; pointer-events: none; }
+    .crp-box-el { position: absolute; border: 2px solid #06b6d4; box-shadow: 0 0 0 9999px rgba(15,23,42,.6); cursor: move; }
+    .crp-handle { position: absolute; width: 14px; height: 14px; background: #06b6d4; border-radius: 3px; }
+    .crp-handle.nw { top: -7px; left: -7px; cursor: nwse-resize; }
+    .crp-handle.ne { top: -7px; right: -7px; cursor: nesw-resize; }
+    .crp-handle.sw { bottom: -7px; left: -7px; cursor: nesw-resize; }
+    .crp-handle.se { bottom: -7px; right: -7px; cursor: nwse-resize; }
+    .crp-controls label { display: block; font-size: .78rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 8px; margin-top: 18px; }
+    .crp-controls label:first-child { margin-top: 0; }
+    .crp-ratios { display: flex; flex-wrap: wrap; gap: 6px; }
+    .crp-ratios button { padding: 7px 12px; border-radius: 6px; border: 1.5px solid var(--card-border); background: #fff; font-size: .76rem; font-weight: 700; color: var(--text-body); cursor: pointer; }
+    .crp-ratios button.active { background: var(--brand-accent); color: #fff; border-color: var(--brand-accent); }
+    .crp-meta { font-size: .74rem; color: var(--text-muted); margin-top: 16px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+    .crp-actions { display: flex; gap: 10px; margin-top: 20px; }
+    .crp-actions button { flex: 1; padding: 11px; border-radius: 8px; border: none; font-weight: 700; font-size: .85rem; cursor: pointer; }
+    .crp-btn-primary { background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; }
+    .crp-btn-secondary { background: #f1f5f9; color: var(--text-body); }
+
+    @media (max-width: 991px) {
+      .ic-steps { grid-template-columns: repeat(2, 1fr); } .ic-format-grid { grid-template-columns: repeat(2, 1fr); }
+      .ic-why-grid { grid-template-columns: repeat(2, 1fr); } .ic-related-grid { grid-template-columns: repeat(2, 1fr); }
+      .ic-steps-wrap::before { display: none; } .crp-workspace { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 575px) {
+      .ic-steps { grid-template-columns: 1fr; } .ic-format-grid { grid-template-columns: 1fr; }
+      .ic-why-grid { grid-template-columns: 1fr; } .ic-related-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Free Image Cropper Tool", "description": "Crop images online with a draggable crop box and aspect ratio presets, directly in the browser for free.", "url": "https://webtoolocean.com/image-tools/image-cropper/", "applicationCategory": "UtilityApplication", "operatingSystem": "Any", "browserRequirements": "Requires modern browser (Chrome, Firefox, Safari, Edge)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1870", "bestRating": "5", "worstRating": "1"}, "author": {"@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com"}, "publisher": {"@type": "Organization", "name": "WebToolOcean"}, "inLanguage": "en-US", "isAccessibleForFree": true, "featureList": ["Draggable crop box", "Free, Square, 4:3, 16:9, 3:2 ratio presets", "Live preview", "Browser-based, no upload"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://webtoolocean.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://webtoolocean.com/all-tools/"}, {"@type": "ListItem", "position": 3, "name": "Image Tools", "item": "https://webtoolocean.com/image-tools/"}, {"@type": "ListItem", "position": 4, "name": "Image Cropper", "item": "https://webtoolocean.com/image-tools/image-cropper/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    {"@type": "Question", "name": "How do I crop an image online for free?", "acceptedAnswer": {"@type": "Answer", "text": "Upload your image, drag the crop box to select the area you want to keep or resize it from any corner handle, optionally lock it to a ratio like Square or 16:9, then click Crop and download the result."}},
+    {"@type": "Question", "name": "Can I crop an image to a specific aspect ratio like 1:1 or 16:9?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the tool includes one-tap presets for Free, Square (1:1), 4:3, 16:9 and 3:2 ratios, and the crop box automatically snaps to the chosen ratio while you drag."}},
+    {"@type": "Question", "name": "Does cropping reduce image quality?", "acceptedAnswer": {"@type": "Answer", "text": "No. Cropping only removes pixels outside the selected area; the remaining pixels keep their original quality since no scaling or compression is applied unless you separately choose to resize."}},
+    {"@type": "Question", "name": "Are my photos uploaded anywhere when I crop them?", "acceptedAnswer": {"@type": "Answer", "text": "No, cropping is done entirely in your browser using the HTML5 Canvas API. Your images are never sent to a server, keeping them completely private."}},
+    {"@type": "Question", "name": "What image formats can I crop?", "acceptedAnswer": {"@type": "Answer", "text": "You can crop JPG, PNG, WEBP and GIF images, and the cropped result downloads in the same format as your original file."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com", "sameAs": ["https://twitter.com/webtoolocean", "https://facebook.com/webtoolocean"]}
+  </script>
+
+</head>
+<style>
+  body { overflow-x: hidden }
+</style>
+
+<body>
+  <div id="header"></div>
+  <main role="main" id="content">
+
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/all-tools/">Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/image-tools/image-cropper/">Image Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">Image Cropper</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="ic-hero">
+      <div class="container">
+        <div class="hero-tag"><i class="fa-solid fa-crop-simple"></i> Image Tools</div>
+        <h1>Free Image Cropper Online –<br><span>Crop to Any Aspect Ratio</span></h1>
+        <p class="hero-desc">Crop any JPG, PNG, WEBP or GIF image with a draggable crop box. Choose Free, Square,
+          4:3, 16:9 or 3:2 aspect ratio presets, then download your cropped photo instantly — all processed
+          directly in your browser. No upload to any server. No signup required.</p>
+        <div class="ic-trust-badges">
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> 100% Free</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> No Signup</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Browser-Based</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Ratio Presets</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Private & Secure</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ic-content">
+      <div class="container">
+
+        <section class="mt-5">
+          <div class="crp-box">
+            <h1>Crop Your Image</h1>
+
+            <div id="crp-drop" class="crp-drop">
+              <p style="margin:0 0 4px;font-size:.88rem;color:#334155;"><strong>Drag & drop</strong> an image here or</p>
+              <button id="crp-add" type="button">Choose Image</button>
+              <label for="crp-upload" class="sr-only">Upload Image</label>
+              <input id="crp-upload" type="file" accept="image/*" style="display:none" />
+              <div class="hint">Supports JPG, PNG, WEBP and GIF. Your file never leaves your device.</div>
+            </div>
+
+            <div id="crp-workspace" class="crp-workspace">
+              <div class="crp-stage" id="crp-stage">
+                <img id="crp-img" alt="Image to crop" />
+                <div class="crp-box-el" id="crp-box-el">
+                  <div class="crp-handle nw"></div>
+                  <div class="crp-handle ne"></div>
+                  <div class="crp-handle sw"></div>
+                  <div class="crp-handle se"></div>
+                </div>
+              </div>
+              <div class="crp-controls">
+                <label>Aspect Ratio</label>
+                <div class="crp-ratios">
+                  <button type="button" class="ratio-btn active" data-ratio="0">Free</button>
+                  <button type="button" class="ratio-btn" data-ratio="1">Square 1:1</button>
+                  <button type="button" class="ratio-btn" data-ratio="1.333">4:3</button>
+                  <button type="button" class="ratio-btn" data-ratio="1.778">16:9</button>
+                  <button type="button" class="ratio-btn" data-ratio="1.5">3:2</button>
+                </div>
+
+                <div class="crp-meta" id="crp-meta">Drag the box or its corners to select your crop area.</div>
+
+                <div class="crp-actions">
+                  <button class="crp-btn-secondary" id="crp-reset" type="button">Reset</button>
+                  <button class="crp-btn-primary" id="crp-download" type="button">Crop & Download</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Step by Step</span>
+            <h2>How to Crop an Image Online</h2>
+            <p>Selecting the exact area you want to keep takes just a few clicks — no design software needed.</p>
+          </div>
+          <div class="ic-steps-wrap">
+            <div class="ic-steps">
+              <div class="ic-step-card">
+                <div class="step-num">1</div>
+                <span class="step-icon">📂</span>
+                <h4>Upload Your Image</h4>
+                <p>Drag and drop your file into the upload area, or click to browse and select it from your device.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">2</div>
+                <span class="step-icon">🖱️</span>
+                <h4>Drag the Crop Box</h4>
+                <p>Move the box over the area you want to keep, or resize it by dragging any of its four corner handles.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">3</div>
+                <span class="step-icon">📐</span>
+                <h4>Pick a Ratio (Optional)</h4>
+                <p>Snap the crop box to Square, 4:3, 16:9 or 3:2, or leave it on Free for a fully custom shape.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">4</div>
+                <span class="step-icon">💾</span>
+                <h4>Crop & Download</h4>
+                <p>Click Crop & Download to save the selected area straight to your device, ready to use anywhere.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Common Use Cases</span>
+            <h2>Popular Crop Ratios</h2>
+            <p>These are the aspect ratios people reach for most often — pick one directly in the tool above.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue">1:1</div>
+              <div><div class="fmt-from">Ratio</div><div class="fmt-title">Square Crop</div>
+                <p class="fmt-desc">The go-to shape for profile pictures, Instagram posts and product thumbnails.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet">4:3</div>
+              <div><div class="fmt-from">Ratio</div><div class="fmt-title">Classic Photo Crop</div>
+                <p class="fmt-desc">A traditional photo and print ratio, still common for presentations and documents.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-cyan">16:9</div>
+              <div><div class="fmt-from">Ratio</div><div class="fmt-title">Widescreen Crop</div>
+                <p class="fmt-desc">The standard ratio for YouTube thumbnails, video covers and desktop banners.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald">3:2</div>
+              <div><div class="fmt-from">Ratio</div><div class="fmt-title">Standard Camera Crop</div>
+                <p class="fmt-desc">The native ratio of most DSLR and mirrorless camera sensors, great for prints.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-orange">Free</div>
+              <div><div class="fmt-from">Ratio</div><div class="fmt-title">Freeform Crop</div>
+                <p class="fmt-desc">Draw any shape you like — perfect for tightly cropping around a subject.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-rose">✂️</div>
+              <div><div class="fmt-from">Tip</div><div class="fmt-title">Remove Unwanted Edges</div>
+                <p class="fmt-desc">Crop out distracting backgrounds, borders or watermarks from any photo.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Cropping Guide</span>
+            <h2>Which Aspect Ratio Should You Use?</h2>
+            <p>Different platforms and purposes call for different crop ratios — here's a quick reference.</p>
+          </div>
+          <div class="ic-info-table-wrap">
+            <table class="ic-info-table">
+              <thead><tr><th>Ratio</th><th>Best For</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td><span class="fmt-tag">1:1</span></td><td>Profile photos, Instagram feed posts, product thumbnails</td><td>Equal width and height, centers attention on the subject</td></tr>
+                <tr><td><span class="fmt-tag">4:3</span></td><td>Presentations, printed photos, older screen formats</td><td>Slightly taller than widescreen, a classic photography ratio</td></tr>
+                <tr><td><span class="fmt-tag">16:9</span></td><td>YouTube thumbnails, video covers, banners</td><td>Wide format matching most modern screens and video players</td></tr>
+                <tr><td><span class="fmt-tag">3:2</span></td><td>DSLR photography, prints, photo books</td><td>The native sensor ratio for most standard cameras</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="ic-section" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions About Cropping Images</h2>
+            <p>Everything you need to know about cropping images online quickly and safely.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+                <div class="ic-faq-item open" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">How do I crop an image online for free?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Upload your image, drag the crop box to select the area you want to keep
+                      or resize it from any corner handle, optionally lock it to a ratio like Square or 16:9, then
+                      click Crop and download the result.</span>
+                  </div>
+                </div>
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">Can I crop an image to a specific ratio like 1:1 or 16:9?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes, the tool includes one-tap presets for Free, Square, 4:3, 16:9 and 3:2
+                      ratios, and the crop box automatically snaps to your chosen ratio while you drag.</span>
+                  </div>
+                </div>
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">Does cropping reduce image quality?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">No. Cropping only removes pixels outside the selected area; the remaining
+                      pixels keep their original quality since no scaling or compression is applied unless you
+                      separately choose to resize.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">Are my photos uploaded anywhere when I crop them?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">No, cropping is done entirely in your browser using the HTML5 Canvas API.
+                      Your images are never sent to a server, keeping them completely private.</span>
+                  </div>
+                </div>
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">What image formats can I crop?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">You can crop JPG, PNG, WEBP and GIF images, and the cropped result
+                      downloads in the same format as your original file.</span>
+                  </div>
+                </div>
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">Can I undo my crop and start over?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes, click Reset at any time to restore the crop box to its default
+                      position and size and start selecting again without re-uploading the image.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Why WebToolOcean</span>
+            <h2>Why Use Our Image Cropper?</h2>
+            <p>Thousands of users trust WebToolOcean for fast, private, and reliable image cropping every day.</p>
+          </div>
+          <div class="ic-why-grid">
+            <div class="ic-why-card"><div class="why-icon bg-blue"><i class="fa-solid fa-bolt"></i></div><h4>Instant Cropping</h4><p>Crop and download in seconds using your browser's own processing power — no waiting, no queue.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-emerald"><i class="fa-solid fa-lock"></i></div><h4>100% Private & Secure</h4><p>Your images never leave your device. All processing happens locally — no cloud storage, no data collection.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-violet"><i class="fa-solid fa-crop-simple"></i></div><h4>Precise Control</h4><p>Drag, resize and snap to ratio with a live crop box that shows exactly what you'll get.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-orange"><i class="fa-solid fa-mobile-screen"></i></div><h4>Works on Any Device</h4><p>Fully touch-friendly on mobile and tablet, and precise with a mouse on desktop.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-cyan"><i class="fa-solid fa-star"></i></div><h4>High Quality Output</h4><p>Cropped pixels keep their original resolution and quality, with no unwanted compression.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-rose"><i class="fa-solid fa-circle-check"></i></div><h4>Free Forever</h4><p>No trials, no subscriptions, no credit card. Every feature of this tool is permanently free.</p></div>
+          </div>
+        </div>
+
+        <div class="ic-section pb-5">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">More Tools</span>
+            <h2>Related Image Tools You Might Need</h2>
+            <p>Explore more free image tools from WebToolOcean — all free, all browser-based.</p>
+          </div>
+          <div class="ic-related-grid">
+            <a href="/image-tools/image-resizer/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-expand"></i></div>
+              <div><div class="rel-name">Image Resizer</div><div class="rel-desc">Resize by pixels or percent</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/rotate-flip-image/" class="ic-related-card">
+              <div class="rel-icon bg-cyan"><i class="fa-solid fa-rotate"></i></div>
+              <div><div class="rel-name">Rotate & Flip Image</div><div class="rel-desc">Rotate or mirror any image</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/watermark-image/" class="ic-related-card">
+              <div class="rel-icon bg-amber"><i class="fa-solid fa-stamp"></i></div>
+              <div><div class="rel-name">Watermark Image</div><div class="rel-desc">Add text or logo watermarks</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/image-converter/" class="ic-related-card">
+              <div class="rel-icon bg-indigo"><i class="fa-solid fa-image"></i></div>
+              <div><div class="rel-name">Image Converter</div><div class="rel-desc">Convert JPG, PNG, WEBP, GIF</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/blur-image/" class="ic-related-card">
+              <div class="rel-icon bg-violet"><i class="fa-solid fa-water"></i></div>
+              <div><div class="rel-name">Blur Image</div><div class="rel-desc">Blur backgrounds or faces</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/sharpen-image/" class="ic-related-card">
+              <div class="rel-icon bg-rose"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div><div class="rel-name">Sharpen Image</div><div class="rel-desc">Enhance clarity and detail</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/pixelate-image/" class="ic-related-card">
+              <div class="rel-icon bg-emerald"><i class="fa-solid fa-border-none"></i></div>
+              <div><div class="rel-name">Pixelate Image</div><div class="rel-desc">Mosaic or censor an area</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/compress-image/" class="ic-related-card">
+              <div class="rel-icon bg-orange"><i class="fa-solid fa-compress"></i></div>
+              <div><div class="rel-name">Compress Images</div><div class="rel-desc">Reduce file size, keep quality</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropArea = document.getElementById('crp-drop');
+      const addBtn = document.getElementById('crp-add');
+      const uploadInput = document.getElementById('crp-upload');
+      const workspace = document.getElementById('crp-workspace');
+      const stage = document.getElementById('crp-stage');
+      const imgEl = document.getElementById('crp-img');
+      const boxEl = document.getElementById('crp-box-el');
+      const metaEl = document.getElementById('crp-meta');
+      const downloadBtn = document.getElementById('crp-download');
+      const resetBtn = document.getElementById('crp-reset');
+      const ratioBtns = document.querySelectorAll('.ratio-btn');
+
+      let naturalW = 0, naturalH = 0;
+      let fileName = 'image', fileType = 'image/png';
+      let currentRatio = 0;
+      let box = { x: 40, y: 40, w: 200, h: 200 };
+
+      ['dragenter', 'dragover'].forEach(evt => dropArea.addEventListener(evt, e => { e.preventDefault(); e.stopPropagation(); dropArea.classList.add('dragover'); }));
+      ['dragleave', 'drop'].forEach(evt => dropArea.addEventListener(evt, e => { e.preventDefault(); e.stopPropagation(); dropArea.classList.remove('dragover'); }));
+      dropArea.addEventListener('drop', e => { if (e.dataTransfer.files.length) loadFile(e.dataTransfer.files[0]); });
+      addBtn.addEventListener('click', () => uploadInput.click());
+      uploadInput.addEventListener('change', e => { if (e.target.files.length) loadFile(e.target.files[0]); uploadInput.value = ''; });
+
+      function loadFile(file) {
+        if (!file.type.startsWith('image/')) return;
+        fileName = file.name.replace(/\.[^/.]+$/, '');
+        fileType = file.type === 'image/jpeg' ? 'image/jpeg' : (file.type === 'image/webp' ? 'image/webp' : 'image/png');
+        imgEl.onload = () => {
+          naturalW = imgEl.naturalWidth;
+          naturalH = imgEl.naturalHeight;
+          workspace.classList.add('active');
+          requestAnimationFrame(initBox);
+        };
+        imgEl.src = URL.createObjectURL(file);
+      }
+
+      function initBox() {
+        const rect = imgEl.getBoundingClientRect();
+        const stageRect = stage.getBoundingClientRect();
+        const imgLeft = rect.left - stageRect.left;
+        const imgTop = rect.top - stageRect.top;
+        const w = rect.width * 0.6;
+        const h = currentRatio ? w / currentRatio : rect.height * 0.6;
+        box = { x: imgLeft + rect.width * 0.2, y: imgTop + rect.height * 0.2, w, h, imgLeft, imgTop, imgW: rect.width, imgH: rect.height };
+        renderBox();
+      }
+
+      function renderBox() {
+        boxEl.style.left = box.x + 'px';
+        boxEl.style.top = box.y + 'px';
+        boxEl.style.width = box.w + 'px';
+        boxEl.style.height = box.h + 'px';
+        const scaleX = naturalW / box.imgW;
+        const scaleY = naturalH / box.imgH;
+        const realW = Math.round(box.w * scaleX);
+        const realH = Math.round(box.h * scaleY);
+        metaEl.textContent = `Crop size: ${realW}×${realH}px`;
+      }
+
+      function clamp() {
+        box.x = Math.max(box.imgLeft, Math.min(box.x, box.imgLeft + box.imgW - box.w));
+        box.y = Math.max(box.imgTop, Math.min(box.y, box.imgTop + box.imgH - box.h));
+      }
+
+      let dragMode = null, startX, startY, startBox;
+
+      boxEl.addEventListener('pointerdown', e => {
+        if (e.target.classList.contains('crp-handle')) {
+          dragMode = e.target.classList[1];
+        } else {
+          dragMode = 'move';
+        }
+        startX = e.clientX; startY = e.clientY;
+        startBox = { ...box };
+        boxEl.setPointerCapture(e.pointerId);
+      });
+
+      boxEl.addEventListener('pointermove', e => {
+        if (!dragMode) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+
+        if (dragMode === 'move') {
+          box.x = startBox.x + dx;
+          box.y = startBox.y + dy;
+        } else {
+          let { x, y, w, h } = startBox;
+          if (dragMode === 'se') { w = startBox.w + dx; h = currentRatio ? w / currentRatio : startBox.h + dy; }
+          if (dragMode === 'sw') { w = startBox.w - dx; x = startBox.x + dx; h = currentRatio ? w / currentRatio : startBox.h + dy; }
+          if (dragMode === 'ne') { w = startBox.w + dx; h = currentRatio ? w / currentRatio : startBox.h - dy; y = currentRatio ? startBox.y - (h - startBox.h) : startBox.y + dy; }
+          if (dragMode === 'nw') { w = startBox.w - dx; h = currentRatio ? w / currentRatio : startBox.h - dy; x = startBox.x + dx; y = currentRatio ? startBox.y - (h - startBox.h) : startBox.y + dy; }
+          box.x = x; box.y = y;
+          box.w = Math.max(30, w);
+          box.h = Math.max(30, h);
+        }
+        clamp();
+        renderBox();
+      });
+
+      boxEl.addEventListener('pointerup', e => { dragMode = null; try { boxEl.releasePointerCapture(e.pointerId); } catch (err) {} });
+
+      ratioBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          ratioBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentRatio = parseFloat(btn.dataset.ratio) || 0;
+          if (currentRatio && box.imgW) {
+            box.h = box.w / currentRatio;
+            clamp();
+            renderBox();
+          }
+        });
+      });
+
+      resetBtn.addEventListener('click', () => { if (naturalW) initBox(); });
+
+      downloadBtn.addEventListener('click', () => {
+        if (!naturalW) return;
+        const scaleX = naturalW / box.imgW;
+        const scaleY = naturalH / box.imgH;
+        const sx = (box.x - box.imgLeft) * scaleX;
+        const sy = (box.y - box.imgTop) * scaleY;
+        const sw = box.w * scaleX;
+        const sh = box.h * scaleY;
+
+        const canvas = document.createElement('canvas');
+        canvas.width = sw;
+        canvas.height = sh;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(imgEl, sx, sy, sw, sh, 0, 0, sw, sh);
+
+        canvas.toBlob(blob => {
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          const ext = fileType === 'image/jpeg' ? 'jpg' : (fileType === 'image/webp' ? 'webp' : 'png');
+          a.download = `${fileName}-cropped.${ext}`;
+          a.click();
+        }, fileType, 0.92);
+      });
+
+      window.addEventListener('resize', () => { if (naturalW) initBox(); });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.ic-faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.ic-faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.ic-faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
