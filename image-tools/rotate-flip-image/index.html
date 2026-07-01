@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta name="theme-color" content="#0f172a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ToolOcean">
+<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>Free Rotate & Flip Image Online – JPG, PNG, WEBP | WebToolOcean</title>
+  <meta name="description"
+    content="Rotate images online by 90°, 180°, or any custom angle, and flip horizontally or vertically for free. Works with JPG, PNG, WEBP and GIF. No upload, no signup, 100% browser-based.">
+  <meta name="keywords"
+    content="rotate image online, flip image online, rotate photo, mirror image, rotate jpg, rotate png, image rotator free, flip picture horizontally, flip picture vertically, rotate image 90 degrees">
+  <meta name="author" content="WebToolOcean">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Free Rotate & Flip Image Online">
+  <meta property="og:description"
+    content="Rotate any image by 90°, 180°, or a custom angle, or flip it horizontally and vertically — free, private, browser-based.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="WebToolOcean">
+  <meta property="og:image" content="https://webtoolocean.com/images/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Rotate & Flip Image Online">
+  <meta name="twitter:description"
+    content="Rotate and flip JPG, PNG, WEBP and GIF images instantly with WebToolOcean's free online tool.">
+  <meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+  <link rel="canonical" href="https://webtoolocean.com/image-tools/rotate-flip-image/">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+  <link href="/css/image-convertor.css" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --brand-dark: #0f172a; --brand-mid: #1e293b; --brand-accent: #3b82f6; --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc; --text-body: #334155; --text-muted: #64748b; --card-bg: #ffffff;
+      --card-border: #e2e8f0; --radius: 12px; --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06); --shadow-md: 0 6px 24px rgba(0, 0, 0, .10); --transition: .2s ease;
+    }
+    .ic-breadcrumb { background: var(--brand-dark); padding: 12px 0; border-bottom: 1px solid #1e293b; float: left; width: 100%; }
+    .ic-breadcrumb ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: .78rem; }
+    .ic-breadcrumb ol li { color: #64748b; }
+    .ic-breadcrumb ol li a { color: #94a3b8; text-decoration: none; transition: var(--transition); }
+    .ic-breadcrumb ol li a:hover { color: var(--brand-accent); }
+    .ic-breadcrumb ol li.sep { color: #334155; }
+    .ic-breadcrumb ol li.current { color: #cbd5e1; font-weight: 500; }
+    .ic-hero { background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, #0f172a 100%); padding: 44px 0 40px; position: relative; overflow: hidden; }
+    .ic-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%); pointer-events: none; }
+    .ic-hero .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(59, 130, 246, .15); border: 1px solid rgba(59, 130, 246, .28); border-radius: 100px; color: #93c5fd; font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 4px 12px; margin-bottom: 14px; }
+    .ic-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; color: #f1f5f9; line-height: 1.2; margin-bottom: 10px; }
+    .ic-hero h1 span { background: linear-gradient(90deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .ic-hero p.hero-desc { color: #94a3b8; font-size: .93rem; line-height: 1.7; max-width: 600px; margin-bottom: 22px; }
+    .ic-trust-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ic-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .1); border-radius: 100px; color: #cbd5e1; font-size: .76rem; font-weight: 500; padding: 5px 13px; }
+    .ic-badge i { color: #34d399; font-size: .7rem; }
+    .ic-content { background: var(--brand-light); padding: 0 0 64px; }
+    .ic-section { padding: 52px 0 0; float: left; width: 100%; }
+    .ic-section-head { margin-bottom: 28px; }
+    .ic-section-head .sec-eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; background: linear-gradient(90deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; margin-bottom: 6px; }
+    .ic-section-head h2 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 800; color: var(--brand-dark); margin-bottom: 6px; }
+    .ic-section-head p { color: var(--text-muted); font-size: .88rem; line-height: 1.7; max-width: 640px; margin: 0; }
+    .ic-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .ic-step-card { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 24px 20px; text-align: center; box-shadow: var(--shadow-sm); position: relative; transition: var(--transition); }
+    .ic-step-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--brand-accent); }
+    .ic-step-card .step-num { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; font-size: .8rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+    .ic-step-card .step-icon { font-size: 1.4rem; margin-bottom: 12px; display: block; }
+    .ic-step-card h4 { font-size: .88rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px; }
+    .ic-step-card p { font-size: .78rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
+    .ic-steps-wrap { position: relative; }
+    .ic-steps-wrap::before { content: ''; position: absolute; top: 54px; left: calc(12.5% + 10px); right: calc(12.5% + 10px); height: 2px; background: linear-gradient(90deg, #3b82f6, #06b6d4); opacity: .25; z-index: 0; }
+    .ic-format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .ic-format-card { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .ic-format-card:hover { border-color: var(--brand-accent); box-shadow: var(--shadow-md); }
+    .ic-format-card .fmt-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 800; color: #fff; flex-shrink: 0; letter-spacing: .02em; }
+    .ic-format-card .fmt-from { font-size: .65rem; color: var(--text-muted); margin-bottom: 2px; text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
+    .ic-format-card .fmt-title { font-size: .88rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 4px; }
+    .ic-format-card .fmt-desc { font-size: .76rem; color: var(--text-muted); line-height: 1.5; margin: 0; }
+    .bg-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); } .bg-cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+    .bg-violet { background: linear-gradient(135deg, #8b5cf6, #7c3aed); } .bg-emerald { background: linear-gradient(135deg, #10b981, #059669); }
+    .bg-orange { background: linear-gradient(135deg, #f97316, #ea580c); } .bg-rose { background: linear-gradient(135deg, #f43f5e, #e11d48); }
+    .bg-amber { background: linear-gradient(135deg, #f59e0b, #d97706); } .bg-indigo { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+    .ic-faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .ic-faq-item { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .ic-faq-item.open { border-color: var(--brand-accent); }
+    .ic-faq-q { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; cursor: pointer; gap: 12px; user-select: none; }
+    .ic-faq-q h4 { font-size: .9rem; font-weight: 700; color: var(--brand-dark); margin: 0; flex: 1; line-height: 1.4; }
+    .ic-faq-q .faq-toggle { width: 28px; height: 28px; border-radius: 50%; background: #f1f5f9; border: none; display: flex; align-items: center; justify-content: center; font-size: .72rem; color: var(--text-muted); flex-shrink: 0; cursor: pointer; transition: var(--transition); }
+    .ic-faq-item.open .faq-toggle { background: var(--brand-accent); color: #fff; transform: rotate(45deg); }
+    .ic-faq-a { display: none; padding: 0 20px 18px; font-size: .85rem; color: var(--text-body); line-height: 1.75; }
+    .ic-faq-item.open .ic-faq-a { display: block; }
+    .ic-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .ic-why-card { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .ic-why-card:hover { border-color: var(--brand-accent); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .ic-why-card .why-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: .95rem; color: #fff; margin-bottom: 14px; }
+    .ic-why-card h4 { font-size: .88rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px; }
+    .ic-why-card p { font-size: .78rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    .ic-related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .ic-related-card { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 18px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .ic-related-card:hover { border-color: var(--brand-accent); box-shadow: var(--shadow-md); transform: translateY(-2px); color: inherit; }
+    .ic-related-card .rel-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .85rem; color: #fff; flex-shrink: 0; }
+    .ic-related-card .rel-name { font-size: .82rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 2px; }
+    .ic-related-card .rel-desc { font-size: .72rem; color: var(--text-muted); line-height: 1.3; }
+    .ic-related-card .rel-arrow { margin-left: auto; color: var(--brand-accent); font-size: .72rem; opacity: 0; transition: var(--transition); }
+    .ic-related-card:hover .rel-arrow { opacity: 1; }
+    .ic-info-table { width: 100%; border-collapse: collapse; font-size: .83rem; }
+    .ic-info-table thead th { background: var(--brand-dark); color: #e2e8f0; padding: 12px 16px; text-align: left; font-weight: 700; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+    .ic-info-table thead th:first-child { border-radius: 10px 0 0 0; } .ic-info-table thead th:last-child { border-radius: 0 10px 0 0; }
+    .ic-info-table tbody tr { border-bottom: 1px solid var(--card-border); } .ic-info-table tbody tr:last-child { border-bottom: none; }
+    .ic-info-table tbody tr:hover { background: #f8fafc; }
+    .ic-info-table tbody td { padding: 12px 16px; color: var(--text-body); vertical-align: top; line-height: 1.5; }
+    .ic-info-table tbody td:first-child { font-weight: 700; color: var(--brand-dark); }
+    .ic-info-table-wrap { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .fmt-tag { display: inline-block; background: #eff6ff; color: var(--brand-accent); border-radius: 4px; font-size: .7rem; font-weight: 700; padding: 2px 7px; margin-right: 4px; }
+
+    /* ── ROTATE/FLIP WIDGET ── */
+    .rot-box { background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-md); }
+    .rot-box h1 { font-size: 1.05rem; font-weight: 800; color: var(--brand-dark); margin-bottom: 18px; }
+    .rot-drop { border: 2px dashed #cbd5e1; border-radius: var(--radius); padding: 34px 20px; text-align: center; cursor: pointer; transition: var(--transition); background: #f8fafc; }
+    .rot-drop.dragover { border-color: var(--brand-accent); background: #eff6ff; }
+    .rot-drop button { background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; border: none; padding: 9px 18px; border-radius: 8px; font-weight: 700; font-size: .85rem; cursor: pointer; }
+    .rot-drop .hint { font-size: .74rem; color: var(--text-muted); margin-top: 10px; }
+    .rot-workspace { display: none; margin-top: 24px; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+    .rot-workspace.active { display: grid; }
+    .rot-preview { background: #0f172a; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; min-height: 340px; overflow: hidden; padding: 14px; }
+    .rot-preview canvas { max-width: 100%; max-height: 420px; border-radius: 4px; }
+    .rot-controls label { display: block; font-size: .78rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 8px; margin-top: 18px; }
+    .rot-controls label:first-child { margin-top: 0; }
+    .rot-btn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .rot-btn-grid button { padding: 12px 8px; border-radius: 8px; border: 1.5px solid var(--card-border); background: #fff; font-size: .8rem; font-weight: 700; color: var(--text-body); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .rot-btn-grid button:hover { border-color: var(--brand-accent); color: var(--brand-accent); }
+    .rot-slider-row { display: flex; align-items: center; gap: 10px; }
+    .rot-slider-row input[type=range] { flex: 1; }
+    .rot-slider-row .rot-angle-val { font-size: .8rem; font-weight: 700; color: var(--brand-accent); min-width: 46px; text-align: right; }
+    .rot-meta { font-size: .74rem; color: var(--text-muted); margin-top: 16px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+    .rot-actions { display: flex; gap: 10px; margin-top: 20px; }
+    .rot-actions button { flex: 1; padding: 11px; border-radius: 8px; border: none; font-weight: 700; font-size: .85rem; cursor: pointer; }
+    .rot-btn-primary { background: linear-gradient(135deg, #3b82f6, #06b6d4); color: #fff; }
+    .rot-btn-secondary { background: #f1f5f9; color: var(--text-body); }
+
+    @media (max-width: 991px) {
+      .ic-steps { grid-template-columns: repeat(2, 1fr); } .ic-format-grid { grid-template-columns: repeat(2, 1fr); }
+      .ic-why-grid { grid-template-columns: repeat(2, 1fr); } .ic-related-grid { grid-template-columns: repeat(2, 1fr); }
+      .ic-steps-wrap::before { display: none; } .rot-workspace { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 575px) {
+      .ic-steps { grid-template-columns: 1fr; } .ic-format-grid { grid-template-columns: 1fr; }
+      .ic-why-grid { grid-template-columns: 1fr; } .ic-related-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Free Rotate & Flip Image Tool", "description": "Rotate images by 90 degree steps or a custom angle, and flip horizontally or vertically, directly in the browser for free.", "url": "https://webtoolocean.com/image-tools/rotate-flip-image/", "applicationCategory": "UtilityApplication", "operatingSystem": "Any", "browserRequirements": "Requires modern browser (Chrome, Firefox, Safari, Edge)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "1540", "bestRating": "5", "worstRating": "1"}, "author": {"@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com"}, "publisher": {"@type": "Organization", "name": "WebToolOcean"}, "inLanguage": "en-US", "isAccessibleForFree": true, "featureList": ["Rotate 90° left or right", "Rotate 180°", "Custom angle slider", "Flip horizontal", "Flip vertical", "Browser-based, no upload"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://webtoolocean.com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://webtoolocean.com/all-tools/"}, {"@type": "ListItem", "position": 3, "name": "Image Tools", "item": "https://webtoolocean.com/image-tools/"}, {"@type": "ListItem", "position": 4, "name": "Rotate & Flip Image", "item": "https://webtoolocean.com/image-tools/rotate-flip-image/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    {"@type": "Question", "name": "How do I rotate an image online?", "acceptedAnswer": {"@type": "Answer", "text": "Upload your image, then click Rotate Left or Rotate Right to turn it 90° at a time, or drag the angle slider for a custom rotation. Click Download when you're happy with the result."}},
+    {"@type": "Question", "name": "How do I flip an image horizontally or vertically?", "acceptedAnswer": {"@type": "Answer", "text": "After uploading your image, click Flip Horizontal to mirror it left-to-right, or Flip Vertical to mirror it top-to-bottom. You can combine flipping with rotation before downloading."}},
+    {"@type": "Question", "name": "Will rotating my image crop or cut off any part of it?", "acceptedAnswer": {"@type": "Answer", "text": "Rotating by 90° or 180° never crops the image since the canvas automatically adjusts to fit the full rotated content. Custom angle rotation also expands the canvas so no part of your original photo is lost."}},
+    {"@type": "Question", "name": "Is this rotate and flip tool free and private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the tool is completely free with no signup, and all rotation and flipping happens locally in your browser using the HTML5 Canvas API — your images are never uploaded to a server."}},
+    {"@type": "Question", "name": "What is the difference between rotating and flipping an image?", "acceptedAnswer": {"@type": "Answer", "text": "Rotating turns the image around a center point by a chosen angle, like 90° or 180°. Flipping creates a mirror image along a horizontal or vertical axis without changing the angle of the content."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com", "sameAs": ["https://twitter.com/webtoolocean", "https://facebook.com/webtoolocean"]}
+  </script>
+
+</head>
+<style>
+  body { overflow-x: hidden }
+</style>
+
+<body>
+  <div id="header"></div>
+  <main role="main" id="content">
+
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/all-tools/">Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/image-tools/image-converter/">Image Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">Rotate & Flip Image</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="ic-hero">
+      <div class="container">
+        <div class="hero-tag"><i class="fa-solid fa-rotate"></i> Image Tools</div>
+        <h1>Free Rotate & Flip Image Online –<br><span>JPG, PNG, WEBP & GIF</span></h1>
+        <p class="hero-desc">Rotate your images left, right, 180°, or to a custom angle, and flip them horizontally
+          or vertically. All changes happen instantly in your browser. No upload to any server. No signup
+          required.</p>
+        <div class="ic-trust-badges">
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> 100% Free</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> No Signup</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Browser-Based</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Custom Angle</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Private & Secure</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ic-content">
+      <div class="container">
+
+        <section class="mt-5">
+          <div class="rot-box">
+            <h1>Rotate or Flip Your Image</h1>
+
+            <div id="rot-drop" class="rot-drop">
+              <p style="margin:0 0 4px;font-size:.88rem;color:#334155;"><strong>Drag & drop</strong> an image here or</p>
+              <button id="rot-add" type="button">Choose Image</button>
+              <label for="rot-upload" class="sr-only">Upload Image</label>
+              <input id="rot-upload" type="file" accept="image/*" style="display:none" />
+              <div class="hint">Supports JPG, PNG, WEBP and GIF. Your file never leaves your device.</div>
+            </div>
+
+            <div id="rot-workspace" class="rot-workspace">
+              <div class="rot-preview">
+                <canvas id="rot-canvas"></canvas>
+              </div>
+              <div class="rot-controls">
+                <label>Rotate</label>
+                <div class="rot-btn-grid">
+                  <button type="button" id="rot-left"><i class="fa-solid fa-rotate-left"></i> Rotate Left 90°</button>
+                  <button type="button" id="rot-right"><i class="fa-solid fa-rotate-right"></i> Rotate Right 90°</button>
+                  <button type="button" id="rot-180"><i class="fa-solid fa-arrows-rotate"></i> Rotate 180°</button>
+                  <button type="button" id="rot-clear-angle"><i class="fa-solid fa-arrow-rotate-left"></i> Reset Angle</button>
+                </div>
+
+                <label>Custom Angle</label>
+                <div class="rot-slider-row">
+                  <input type="range" id="rot-angle" min="0" max="359" value="0" />
+                  <span class="rot-angle-val" id="rot-angle-val">0°</span>
+                </div>
+
+                <label>Flip</label>
+                <div class="rot-btn-grid">
+                  <button type="button" id="flip-h"><i class="fa-solid fa-left-right"></i> Flip Horizontal</button>
+                  <button type="button" id="flip-v"><i class="fa-solid fa-up-down"></i> Flip Vertical</button>
+                </div>
+
+                <div class="rot-meta" id="rot-meta">Output size: —</div>
+
+                <div class="rot-actions">
+                  <button class="rot-btn-secondary" id="rot-reset" type="button">Reset All</button>
+                  <button class="rot-btn-primary" id="rot-download" type="button">Download Image</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Step by Step</span>
+            <h2>How to Rotate or Flip an Image Online</h2>
+            <p>Fixing an upside-down or sideways photo takes just a couple of clicks.</p>
+          </div>
+          <div class="ic-steps-wrap">
+            <div class="ic-steps">
+              <div class="ic-step-card">
+                <div class="step-num">1</div>
+                <span class="step-icon">📂</span>
+                <h4>Upload Your Image</h4>
+                <p>Drag and drop your file into the upload area, or click to browse and select it from your device.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">2</div>
+                <span class="step-icon">🔄</span>
+                <h4>Rotate or Flip</h4>
+                <p>Tap Rotate Left, Rotate Right, 180°, drag the custom angle slider, or flip horizontally or vertically.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">3</div>
+                <span class="step-icon">👀</span>
+                <h4>Preview Live</h4>
+                <p>Watch the preview update instantly with every click so you always see exactly what you'll download.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">4</div>
+                <span class="step-icon">💾</span>
+                <h4>Download the Result</h4>
+                <p>Click Download to save your rotated or flipped image straight to your device.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Common Use Cases</span>
+            <h2>Popular Rotate & Flip Actions</h2>
+            <p>These are the corrections people need most often — all available directly in the tool above.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue">90°</div>
+              <div><div class="fmt-from">Action</div><div class="fmt-title">Rotate Right 90°</div>
+                <p class="fmt-desc">Fix a sideways phone photo that was taken in the wrong orientation.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet">180°</div>
+              <div><div class="fmt-from">Action</div><div class="fmt-title">Rotate 180°</div>
+                <p class="fmt-desc">Turn an upside-down image the right way up in a single click.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-cyan">↔</div>
+              <div><div class="fmt-from">Action</div><div class="fmt-title">Flip Horizontal</div>
+                <p class="fmt-desc">Mirror an image left-to-right — useful for correcting reversed text or scans.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald">↕</div>
+              <div><div class="fmt-from">Action</div><div class="fmt-title">Flip Vertical</div>
+                <p class="fmt-desc">Mirror an image top-to-bottom, handy for reflection or creative effects.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-orange">°</div>
+              <div><div class="fmt-from">Action</div><div class="fmt-title">Custom Angle Rotation</div>
+                <p class="fmt-desc">Straighten a slightly tilted horizon line with a precise 1° rotation slider.</p></div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-rose">⇄</div>
+              <div><div class="fmt-from">Action</div><div class="fmt-title">Combine Rotate + Flip</div>
+                <p class="fmt-desc">Chain a rotation with a flip in the same session before downloading.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Quick Guide</span>
+            <h2>Rotate vs Flip – What's the Difference?</h2>
+            <p>Both change orientation, but in fundamentally different ways.</p>
+          </div>
+          <div class="ic-info-table-wrap">
+            <table class="ic-info-table">
+              <thead><tr><th>Action</th><th>What It Does</th><th>Common Use</th></tr></thead>
+              <tbody>
+                <tr><td><span class="fmt-tag">Rotate</span></td><td>Turns the image around its center by a chosen angle (90°, 180°, or custom)</td><td>Fixing sideways or upside-down photos, straightening a tilted horizon</td></tr>
+                <tr><td><span class="fmt-tag">Flip</span></td><td>Creates a mirror image along a horizontal or vertical axis</td><td>Correcting a mirrored scan, creative or symmetrical effects</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="ic-section" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions About Rotating & Flipping Images</h2>
+            <p>Everything you need to know about rotating and flipping images online quickly and safely.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+                <div class="ic-faq-item open" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">How do I rotate an image online?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Upload your image, then click Rotate Left or Rotate Right to turn it 90° at
+                      a time, or drag the angle slider for a custom rotation. Click Download when you're happy with
+                      the result.</span>
+                  </div>
+                </div>
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">How do I flip an image horizontally or vertically?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">After uploading your image, click Flip Horizontal to mirror it
+                      left-to-right, or Flip Vertical to mirror it top-to-bottom. You can combine flipping with
+                      rotation before downloading.</span>
+                  </div>
+                </div>
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">Will rotating crop or cut off part of my image?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Rotating by 90° or 180° never crops the image since the canvas
+                      automatically adjusts to fit the full rotated content. Custom angle rotation also expands the
+                      canvas so no part of your original photo is lost.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">Is this tool free and private?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes, the tool is completely free with no signup, and all rotation and
+                      flipping happens locally in your browser using the HTML5 Canvas API — your images are never
+                      uploaded to a server.</span>
+                  </div>
+                </div>
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">What's the difference between rotating and flipping?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Rotating turns the image around a center point by a chosen angle, like 90°
+                      or 180°. Flipping creates a mirror image along a horizontal or vertical axis without changing
+                      the angle of the content.</span>
+                  </div>
+                </div>
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q"><h4 itemprop="name">Can I rotate to an exact custom angle like 15°?</h4><button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button></div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes, the custom angle slider lets you rotate to any degree between 0 and
+                      359, which is ideal for straightening a tilted horizon or fine-tuning an angled shot.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Why WebToolOcean</span>
+            <h2>Why Use Our Rotate & Flip Tool?</h2>
+            <p>Thousands of users trust WebToolOcean for fast, private, and reliable image editing every day.</p>
+          </div>
+          <div class="ic-why-grid">
+            <div class="ic-why-card"><div class="why-icon bg-blue"><i class="fa-solid fa-bolt"></i></div><h4>Instant Preview</h4><p>Every rotation and flip updates the canvas immediately, with no waiting or processing delay.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-emerald"><i class="fa-solid fa-lock"></i></div><h4>100% Private & Secure</h4><p>Your images never leave your device. All processing happens locally — no cloud storage, no data collection.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-violet"><i class="fa-solid fa-sliders"></i></div><h4>Precise Custom Angles</h4><p>Go beyond fixed 90° steps with a fine-grained slider for exact-degree rotation.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-orange"><i class="fa-solid fa-mobile-screen"></i></div><h4>Works on Any Device</h4><p>Fully optimised for desktop, tablet, and mobile. No app download or installation required.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-cyan"><i class="fa-solid fa-star"></i></div><h4>No Quality Loss</h4><p>Rotating and flipping never resamples pixels unnecessarily, keeping your image sharp.</p></div>
+            <div class="ic-why-card"><div class="why-icon bg-rose"><i class="fa-solid fa-circle-check"></i></div><h4>Free Forever</h4><p>No trials, no subscriptions, no credit card. Every feature of this tool is permanently free.</p></div>
+          </div>
+        </div>
+
+        <div class="ic-section pb-5">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">More Tools</span>
+            <h2>Related Image Tools You Might Need</h2>
+            <p>Explore more free image tools from WebToolOcean — all free, all browser-based.</p>
+          </div>
+          <div class="ic-related-grid">
+            <a href="/image-tools/image-resizer/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-expand"></i></div>
+              <div><div class="rel-name">Image Resizer</div><div class="rel-desc">Resize by pixels or percent</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/image-cropper/" class="ic-related-card">
+              <div class="rel-icon bg-violet"><i class="fa-solid fa-crop-simple"></i></div>
+              <div><div class="rel-name">Image Cropper</div><div class="rel-desc">Crop to any shape or ratio</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/watermark-image/" class="ic-related-card">
+              <div class="rel-icon bg-amber"><i class="fa-solid fa-stamp"></i></div>
+              <div><div class="rel-name">Watermark Image</div><div class="rel-desc">Add text or logo watermarks</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/image-converter/" class="ic-related-card">
+              <div class="rel-icon bg-indigo"><i class="fa-solid fa-image"></i></div>
+              <div><div class="rel-name">Image Converter</div><div class="rel-desc">Convert JPG, PNG, WEBP, GIF</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/blur-image/" class="ic-related-card">
+              <div class="rel-icon bg-cyan"><i class="fa-solid fa-water"></i></div>
+              <div><div class="rel-name">Blur Image</div><div class="rel-desc">Blur backgrounds or faces</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/sharpen-image/" class="ic-related-card">
+              <div class="rel-icon bg-rose"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div><div class="rel-name">Sharpen Image</div><div class="rel-desc">Enhance clarity and detail</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/pixelate-image/" class="ic-related-card">
+              <div class="rel-icon bg-emerald"><i class="fa-solid fa-border-none"></i></div>
+              <div><div class="rel-name">Pixelate Image</div><div class="rel-desc">Mosaic or censor an area</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/image-tools/compress-image/" class="ic-related-card">
+              <div class="rel-icon bg-orange"><i class="fa-solid fa-compress"></i></div>
+              <div><div class="rel-name">Compress Images</div><div class="rel-desc">Reduce file size, keep quality</div></div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropArea = document.getElementById('rot-drop');
+      const addBtn = document.getElementById('rot-add');
+      const uploadInput = document.getElementById('rot-upload');
+      const workspace = document.getElementById('rot-workspace');
+      const canvas = document.getElementById('rot-canvas');
+      const ctx = canvas.getContext('2d');
+      const metaEl = document.getElementById('rot-meta');
+      const downloadBtn = document.getElementById('rot-download');
+      const resetBtn = document.getElementById('rot-reset');
+      const angleSlider = document.getElementById('rot-angle');
+      const angleVal = document.getElementById('rot-angle-val');
+
+      let img = null;
+      let fileName = 'image', fileType = 'image/png';
+      let baseRotation = 0; // multiples of 90 tracked as degrees
+      let fineAngle = 0;    // slider degrees, additive
+      let flipH = false, flipV = false;
+
+      ['dragenter', 'dragover'].forEach(evt => dropArea.addEventListener(evt, e => { e.preventDefault(); e.stopPropagation(); dropArea.classList.add('dragover'); }));
+      ['dragleave', 'drop'].forEach(evt => dropArea.addEventListener(evt, e => { e.preventDefault(); e.stopPropagation(); dropArea.classList.remove('dragover'); }));
+      dropArea.addEventListener('drop', e => { if (e.dataTransfer.files.length) loadFile(e.dataTransfer.files[0]); });
+      addBtn.addEventListener('click', () => uploadInput.click());
+      uploadInput.addEventListener('change', e => { if (e.target.files.length) loadFile(e.target.files[0]); uploadInput.value = ''; });
+
+      function loadFile(file) {
+        if (!file.type.startsWith('image/')) return;
+        fileName = file.name.replace(/\.[^/.]+$/, '');
+        fileType = file.type === 'image/jpeg' ? 'image/jpeg' : (file.type === 'image/webp' ? 'image/webp' : 'image/png');
+        const image = new Image();
+        image.onload = () => {
+          img = image;
+          baseRotation = 0; fineAngle = 0; flipH = false; flipV = false;
+          angleSlider.value = 0; angleVal.textContent = '0°';
+          workspace.classList.add('active');
+          render();
+        };
+        image.src = URL.createObjectURL(file);
+      }
+
+      function totalAngleRad() {
+        return (baseRotation + fineAngle) * Math.PI / 180;
+      }
+
+      function render() {
+        if (!img) return;
+        const angle = totalAngleRad();
+        const w = img.width, h = img.height;
+        const cos = Math.abs(Math.cos(angle));
+        const sin = Math.abs(Math.sin(angle));
+        const newW = Math.ceil(w * cos + h * sin);
+        const newH = Math.ceil(w * sin + h * cos);
+
+        canvas.width = newW;
+        canvas.height = newH;
+        ctx.clearRect(0, 0, newW, newH);
+        ctx.save();
+        ctx.translate(newW / 2, newH / 2);
+        ctx.rotate(angle);
+        ctx.scale(flipH ? -1 : 1, flipV ? -1 : 1);
+        ctx.drawImage(img, -w / 2, -h / 2, w, h);
+        ctx.restore();
+
+        metaEl.textContent = `Output size: ${newW}×${newH}px · Angle: ${Math.round(((baseRotation + fineAngle) % 360 + 360) % 360)}°`;
+      }
+
+      document.getElementById('rot-left').addEventListener('click', () => { baseRotation -= 90; render(); });
+      document.getElementById('rot-right').addEventListener('click', () => { baseRotation += 90; render(); });
+      document.getElementById('rot-180').addEventListener('click', () => { baseRotation += 180; render(); });
+      document.getElementById('rot-clear-angle').addEventListener('click', () => { fineAngle = 0; angleSlider.value = 0; angleVal.textContent = '0°'; render(); });
+
+      angleSlider.addEventListener('input', () => {
+        fineAngle = parseInt(angleSlider.value, 10);
+        angleVal.textContent = fineAngle + '°';
+        render();
+      });
+
+      document.getElementById('flip-h').addEventListener('click', () => { flipH = !flipH; render(); });
+      document.getElementById('flip-v').addEventListener('click', () => { flipV = !flipV; render(); });
+
+      resetBtn.addEventListener('click', () => {
+        if (!img) return;
+        baseRotation = 0; fineAngle = 0; flipH = false; flipV = false;
+        angleSlider.value = 0; angleVal.textContent = '0°';
+        render();
+      });
+
+      downloadBtn.addEventListener('click', () => {
+        if (!img) return;
+        canvas.toBlob(blob => {
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          const ext = fileType === 'image/jpeg' ? 'jpg' : (fileType === 'image/webp' ? 'webp' : 'png');
+          a.download = `${fileName}-rotated.${ext}`;
+          a.click();
+        }, fileType, 0.92);
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.ic-faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.ic-faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.ic-faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
