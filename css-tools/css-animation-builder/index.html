@@ -1,0 +1,1735 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta name="theme-color" content="#0f172a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ToolOcean">
+<link rel="apple-touch-icon" href="https://webtoolocean.com/icons/icon-192.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="https://webtoolocean.com/images/favicon.png">
+  <title>CSS Animation Builder – Create Hover, Button & Image Animations Online | WebToolOcean</title>
+<meta name="description" content="Build advanced CSS animations online with WebToolOcean's Animation Builder. 35+ hover, button, image, card, loader and text effects with live preview. Export HTML, CSS and Tailwind code instantly.">
+<meta name="keywords" content="CSS Animation Generator, CSS Hover Effects, Button Animation CSS, Image Hover Effects, CSS Loader Generator, Tailwind Animation, Online CSS Animator">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="CSS Animation Builder – Create Hover, Button & Image Animations Online">
+<meta property="og:description" content="Build advanced CSS animations online with 35+ ready-made effects, live preview, and instant HTML/CSS/Tailwind export.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webtoolocean.com/css-tools/css-animation-builder/index.html">
+<meta property="og:image" content="https://webtoolocean.com/assets/images/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CSS Animation Builder – Create Hover, Button & Image Animations Online">
+<meta name="twitter:description" content="Build advanced CSS animations online with 35+ ready-made effects, live preview, and instant HTML/CSS/Tailwind export.">
+<meta name="twitter:image" content="https://webtoolocean.com/images/preview.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I create a CSS animation with this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick a category, click any effect in the list to load it into the live preview, then fine-tune duration, easing, and accent color. Copy the generated HTML, CSS, or Tailwind code instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the animations work without JavaScript?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every effect is built with pure CSS using hover, active, and keyframe animations, so the exported code works by simply pasting the HTML and CSS into your project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export animations as Tailwind CSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The builder generates Tailwind-ready markup using arbitrary value utilities, plus a tailwind.config.js keyframes snippet for effects that rely on @keyframes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the CSS Animation Builder free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The builder is completely free, browser-based, and requires no signup. All animation building happens locally without uploading."
+      }
+    }
+  ]
+}
+</script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C1PP726EZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4C1PP726EZ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5153046300758044"
+    crossorigin="anonymous"></script>
+
+  <!-- SoftwareApplication schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CSS Animation Builder",
+    "description": "Create advanced CSS animations online across button, hover, image, card, loader and text categories with live preview. Export HTML, CSS and Tailwind-ready code.",
+    "url": "https://webtoolocean.com/css-tools/css-animation-builder/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    "author": { "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" },
+    "publisher": { "@type": "Organization", "name": "WebToolOcean" },
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "featureList": ["35+ ready-made effects","Live side-by-side preview","Export HTML/CSS","Tailwind-ready output","Duration, easing & color controls"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Organization", "name": "WebToolOcean", "url": "https://webtoolocean.com" }
+  </script>
+</head>
+
+<body>
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="ic-toast"></div>
+
+  <div id="header"></div>
+  <main role="main" id="content">
+
+    <!-- ═══════════════════════════════════════════════════════
+    1. BREADCRUMB
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="ic-breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="/"><i class="fa-solid fa-house" style="font-size:.7rem;"></i> Home</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="/all-tools/">Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li><a href="#">CSS Tools</a></li>
+          <li class="sep"><i class="fa-solid fa-chevron-right" style="font-size:.6rem;"></i></li>
+          <li class="current">Animation Builder</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+    2. PAGE HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="ic-hero">
+      <div class="container">
+        <div class="hero-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> CSS Tools</div>
+        <h1>Free CSS Animation Builder –<br><span>35+ Hover, Button, Image & Loader Effects with Live Preview</span></h1>
+        <p class="hero-desc">Browse a library of advanced, pure-CSS animations across six categories, tune duration, easing and color live, and export production-ready HTML, CSS, and Tailwind code — no JavaScript required.</p>
+        <div class="ic-trust-badges">
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> 35+ Effects</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Live Side-by-Side Demo</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> HTML / CSS / Tailwind Export</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Pure CSS, No JS Needed</span>
+          <span class="ic-badge"><i class="fa-solid fa-circle-check"></i> Browser-Based</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ic-content">
+      <div class="container">
+
+        <!-- ═══════════════════════════════════════════════════════
+        MAIN WIDGET
+        ═══════════════════════════════════════════════════════ -->
+        <section class="py-5">
+          <div class="container-fluid px-0">
+
+            <h1 class="text-center mb-1 aw-h1">CSS Animation Builder</h1>
+            <p class="text-center aw-sub mb-4">Click any effect to preview it live, tune the controls, then copy the code.</p>
+
+            <div class="row g-4">
+
+              <!-- LEFT: LIBRARY -->
+              <div class="col-lg-3">
+                <div class="panel aw-library-panel">
+                  <h6>Effect Library</h6>
+                  <div class="aw-cat-tabs" id="catTabs"></div>
+                  <input type="text" id="awSearch" class="form-control form-control-sm mt-2" placeholder="Search effects…">
+                  <div class="aw-list" id="effectList"></div>
+                </div>
+              </div>
+
+              <!-- RIGHT: DEMO + CONTROLS + CODE -->
+              <div class="col-lg-9">
+
+                <div class="panel">
+                  <div class="aw-demo-head">
+                    <div>
+                      <h6 class="mb-0" id="activeEffectName">Ripple Click</h6>
+                      <small class="aw-effect-cat" id="activeEffectCat">Button Effect</small>
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm" onclick="replayDemo()"><i class="fa-solid fa-rotate-right"></i> Replay</button>
+                  </div>
+
+                  <div class="aw-controls">
+                    <div class="aw-control">
+                      <label>Duration <span id="durVal">0.6s</span></label>
+                      <input type="range" id="ctrlDuration" min="0.1" max="2" step="0.1" value="0.6">
+                    </div>
+                    <div class="aw-control">
+                      <label>Easing</label>
+                      <select id="ctrlEasing" class="form-select form-select-sm">
+                        <option value="ease">ease</option>
+                        <option value="ease-in-out">ease-in-out</option>
+                        <option value="ease-out">ease-out</option>
+                        <option value="linear">linear</option>
+                        <option value="cubic-bezier(.68,-0.55,.27,1.55)">bounce</option>
+                      </select>
+                    </div>
+                    <div class="aw-control">
+                      <label>Accent Color</label>
+                      <input type="color" id="ctrlColor" value="#3b82f6" class="form-control form-control-color">
+                    </div>
+                  </div>
+
+                  <div class="aw-stage-wrap">
+                    <div class="aw-stage" id="demoStage"></div>
+                  </div>
+                  <style id="dynStyle"></style>
+                </div>
+
+                <div class="panel copyHTMLPanel mt-3">
+                  <div class="aw-code-tabs">
+                    <button class="aw-code-tab active" data-target="htmlCode">HTML</button>
+                    <button class="aw-code-tab" data-target="cssCode">CSS</button>
+                    <button class="aw-code-tab" data-target="tailwindCode">Tailwind</button>
+                  </div>
+                  <div class="aw-code-panes">
+                    <div class="aw-code-pane active" id="pane-htmlCode">
+                      <textarea id="htmlCode" class="form-control" rows="9" readonly></textarea>
+                      <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('htmlCode')">Copy HTML</button>
+                    </div>
+                    <div class="aw-code-pane" id="pane-cssCode">
+                      <textarea id="cssCode" class="form-control" rows="9" readonly></textarea>
+                      <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('cssCode')">Copy CSS</button>
+                    </div>
+                    <div class="aw-code-pane" id="pane-tailwindCode">
+                      <textarea id="tailwindCode" class="form-control" rows="9" readonly></textarea>
+                      <button class="btn btn-dark btn-sm w-100 mt-1" onclick="copyCode('tailwindCode')">Copy Tailwind</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- ═══════════════════════════════════════════════════════
+        HOW TO USE
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">How to Use</span>
+            <h2>How to Use the CSS Animation Builder</h2>
+            <p>Pick an effect, watch it live, adjust it to match your brand, and export ready-to-paste code.</p>
+          </div>
+          <div class="ic-steps-wrap">
+            <div class="ic-steps">
+              <div class="ic-step-card">
+                <div class="step-num">1</div>
+                <span class="step-icon">📚</span>
+                <h4>Browse the Library</h4>
+                <p>Filter by category — Button, Hover, Image, Card, Loader, or Text — or search for an effect by name.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">2</div>
+                <span class="step-icon">👁️</span>
+                <h4>Preview Side-by-Side</h4>
+                <p>Click any effect to load it into the live stage next to the library, and interact with it directly.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">3</div>
+                <span class="step-icon">🎛️</span>
+                <h4>Tune the Details</h4>
+                <p>Adjust duration, easing curve, and accent color — the demo and generated code update instantly.</p>
+              </div>
+              <div class="ic-step-card">
+                <div class="step-num">4</div>
+                <span class="step-icon">💾</span>
+                <h4>Export Your Code</h4>
+                <p>Copy pure HTML/CSS or Tailwind-ready markup with one click and drop it straight into your project.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FEATURES
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Features</span>
+            <h2>An Advanced Toolkit for Motion Design</h2>
+            <p>Everything from micro-interactions to loaders and animated text, all built with production-quality pure CSS.</p>
+          </div>
+          <div class="ic-format-grid">
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-blue"><i class="fa-solid fa-layer-group" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">6 Effect Categories</div>
+                <p class="fmt-desc">Button, hover, image, card, loader, and text effects — 35+ presets and growing.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-emerald"><i class="fa-solid fa-sliders" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Live Tuning Controls</div>
+                <p class="fmt-desc">Adjust duration, easing curve, and accent color and watch the preview update instantly.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-violet"><i class="fa-solid fa-code" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">HTML, CSS & Tailwind Export</div>
+                <p class="fmt-desc">Copy clean, dependency-free HTML/CSS, or Tailwind-ready markup with a config snippet.</p>
+              </div>
+            </div>
+            <div class="ic-format-card">
+              <div class="fmt-icon bg-amber"><i class="fa-solid fa-bolt" style="font-size:.9rem;"></i></div>
+              <div>
+                <div class="fmt-from">Feature</div>
+                <div class="fmt-title">Zero JavaScript Output</div>
+                <p class="fmt-desc">Every effect runs on hover, active, and keyframe CSS alone — no scripts required in your project.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        FAQ
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about building CSS animations with this free tool.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+
+                <div class="ic-faq-item open" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">How do I create a CSS animation with this tool?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Pick a category, click any effect in the list to load it into the live preview, then fine-tune duration, easing, and accent color. Copy the generated HTML, CSS, or Tailwind code instantly.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Do the animations work without JavaScript?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. Every effect is built with pure CSS using hover, active, and keyframe animations, so exported code works by simply pasting the HTML and CSS into your project.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I export animations as Tailwind CSS?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. The builder generates Tailwind-ready markup using arbitrary value utilities, plus a tailwind.config.js keyframes snippet for effects relying on @keyframes.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Is the CSS Animation Builder free?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. The builder is completely free, browser-based, and requires no signup. All animation building happens locally without uploading.</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ic-faq-list">
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">What kinds of effects are included?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Button clicks and ripples, hover lifts and tilts, image reveals and zooms, flip and gradient-border cards, spinners and loaders, and animated text like gradients and glitch.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Can I change the color and speed of an effect?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Yes. The duration slider, easing dropdown, and accent color picker apply live to both the preview and the exported code.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Will the effects work on mobile devices?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">Hover-based effects rely on a pointing device, but keyframe-based loaders, text, and click/active effects work on touch screens too.</span>
+                  </div>
+                </div>
+
+                <div class="ic-faq-item" itemscope itemtype="https://schema.org/Question">
+                  <div class="ic-faq-q">
+                    <h4 itemprop="name">Does this tool store or upload my designs?</h4>
+                    <button class="faq-toggle" aria-label="Toggle"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <div class="ic-faq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                    <span itemprop="text">No. Everything runs locally in your browser, and nothing is uploaded to a server.</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        WHY USE THIS TOOL
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">Why Use This Tool</span>
+            <h2>Why Choose Our CSS Animation Builder?</h2>
+            <p>Skip the trial-and-error of hand-writing keyframes — browse, tune, and ship in minutes.</p>
+          </div>
+          <div class="ic-why-grid">
+            <div class="ic-why-card">
+              <div class="why-icon bg-blue"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Fast Iteration</h4>
+              <p>Cycle through 35+ effects instantly instead of writing and testing keyframes by hand.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-emerald"><i class="fa-solid fa-rocket"></i></div>
+              <h4>Multiple Export Formats</h4>
+              <p>Copy HTML/CSS or Tailwind-ready code instantly for any project type.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-violet"><i class="fa-solid fa-eye-dropper-empty"></i></div>
+              <h4>Full Customization</h4>
+              <p>Control duration, easing curve, and accent color for every effect in the library.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-orange"><i class="fa-solid fa-flask"></i></div>
+              <h4>Live Side-by-Side Demo</h4>
+              <p>See exactly how the effect behaves before you ever touch your codebase.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-cyan"><i class="fa-solid fa-code"></i></div>
+              <h4>Pure CSS Output</h4>
+              <p>No dependencies, no JavaScript — every effect is copy-paste ready.</p>
+            </div>
+            <div class="ic-why-card">
+              <div class="why-icon bg-rose"><i class="fa-solid fa-circle-check"></i></div>
+              <h4>No Signup Required</h4>
+              <p>Use the builder instantly, completely free, with no registration or downloads.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+        RELATED TOOLS
+        ═══════════════════════════════════════════════════════ -->
+        <div class="ic-section pb-5">
+          <div class="ic-section-head">
+            <span class="sec-eyebrow">More Tools</span>
+            <h2>Related CSS Tools</h2>
+            <p>Explore more free CSS utilities from WebToolOcean for building polished, professional designs.</p>
+          </div>
+          <div class="ic-related-grid">
+            <a href="/css-tools/card-builder/" class="ic-related-card">
+              <div class="rel-icon bg-blue"><i class="fa-solid fa-id-card"></i></div>
+              <div>
+                <div class="rel-name">CSS Card Builder</div>
+                <div class="rel-desc">Design custom CSS cards with live preview.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/box-shadow-generator/" class="ic-related-card">
+              <div class="rel-icon bg-indigo"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <div class="rel-name">Box Shadow Generator</div>
+                <div class="rel-desc">Create and customize CSS shadows with live preview.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/gradient-generator/" class="ic-related-card">
+              <div class="rel-icon bg-emerald"><i class="fa-solid fa-droplet"></i></div>
+              <div>
+                <div class="rel-name">Gradient Generator</div>
+                <div class="rel-desc">Create smooth CSS gradients and export code instantly.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/css-tools/css-formatter/" class="ic-related-card">
+              <div class="rel-icon bg-violet"><i class="fa-solid fa-magic"></i></div>
+              <div>
+                <div class="rel-name">CSS Formatter</div>
+                <div class="rel-desc">Beautify and optimize your CSS code instantly.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+            <a href="/all-tools/" class="ic-related-card">
+              <div class="rel-icon bg-amber"><i class="fa-solid fa-grid-2"></i></div>
+              <div>
+                <div class="rel-name">All Tools</div>
+                <div class="rel-desc">Browse the full WebToolOcean collection.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right rel-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </div><!-- /ic-content -->
+
+  </main>
+  <div class="clearfix"></div>
+  <div id="footer"></div>
+  <div class="clearfix"></div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ═══════════════════════════════════════════════════════
+  ANIMATION BUILDER ENGINE
+  ═══════════════════════════════════════════════════════ -->
+  <script>
+  (function(){
+
+    // ---------- Effect library ----------
+    // Each preset is pure CSS (hover / active / @keyframes) — no JS needed in exported code.
+    const CATS = [
+      {id:'button', label:'Button', icon:'🔘'},
+      {id:'hover',  label:'Hover',  icon:'✨'},
+      {id:'image',  label:'Image',  icon:'🖼️'},
+      {id:'card',   label:'Card',   icon:'🗂️'},
+      {id:'loader', label:'Loader', icon:'⏳'},
+      {id:'text',   label:'Text',   icon:'🔤'},
+    ];
+
+    const P = []; // presets
+
+    function add(id, cat, name, mainClass, html, cssFn){
+      P.push({id, cat, name, mainClass, html, cssFn});
+    }
+
+    // ---- BUTTON ----
+    add('btn-ripple','button','Ripple Click','.aw-ripple',
+      `<button class="aw-btn aw-ripple">Click Me</button>`,
+      (d,c,e)=>`.aw-ripple{position:relative;overflow:hidden;padding:14px 34px;border:none;border-radius:10px;background:${c};color:#fff;font-weight:600;font-size:15px;cursor:pointer;}
+.aw-ripple::after{content:'';position:absolute;width:0;height:0;border-radius:50%;background:rgba(255,255,255,.5);top:50%;left:50%;transform:translate(-50%,-50%);transition:width ${d}s ${e}, height ${d}s ${e};}
+.aw-ripple:active::after{width:320px;height:320px;}`);
+
+    add('btn-gradient-shift','button','Gradient Shift','.aw-grad',
+      `<button class="aw-btn aw-grad">Gradient Shift</button>`,
+      (d,c,e)=>`.aw-grad{padding:14px 34px;border:none;border-radius:10px;color:#fff;font-weight:600;font-size:15px;cursor:pointer;background:linear-gradient(90deg,${c},#06b6d4,${c});background-size:200% auto;transition:background-position ${d}s ${e};}
+.aw-grad:hover{background-position:right center;}`);
+
+    add('btn-shine','button','Shine Sweep','.aw-shine',
+      `<button class="aw-btn aw-shine">Shine Sweep</button>`,
+      (d,c,e)=>`.aw-shine{position:relative;overflow:hidden;padding:14px 34px;border:none;border-radius:10px;background:${c};color:#fff;font-weight:600;font-size:15px;cursor:pointer;}
+.aw-shine::before{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-25deg);transition:left ${d}s ${e};}
+.aw-shine:hover::before{left:125%;}`);
+
+    add('btn-3d-press','button','3D Press','.aw-press',
+      `<button class="aw-btn aw-press">Press Me</button>`,
+      (d,c,e)=>`.aw-press{padding:14px 34px;border:none;border-radius:10px;background:${c};color:#fff;font-weight:600;font-size:15px;cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.25);transition:transform ${d}s ${e}, box-shadow ${d}s ${e};}
+.aw-press:active{transform:translateY(6px);box-shadow:0 0 0 rgba(0,0,0,.25);}`);
+
+    add('btn-pulse','button','Pulse Glow','.aw-pulse',
+      `<button class="aw-btn aw-pulse">Pulse Glow</button>`,
+      (d,c,e)=>`.aw-pulse{padding:14px 34px;border:none;border-radius:10px;background:${c};color:#fff;font-weight:600;font-size:15px;cursor:pointer;animation:awPulse ${(d*2.2).toFixed(2)}s ${e} infinite;}
+@keyframes awPulse{0%{box-shadow:0 0 0 0 ${c}66;}70%{box-shadow:0 0 0 16px ${c}00;}100%{box-shadow:0 0 0 0 ${c}00;}}`);
+
+    add('btn-border-fill','button','Border Fill','.aw-borderfill',
+      `<button class="aw-btn aw-borderfill">Border Fill</button>`,
+      (d,c,e)=>`.aw-borderfill{padding:14px 34px;border:2px solid ${c};border-radius:10px;background:transparent;color:${c};font-weight:600;font-size:15px;cursor:pointer;position:relative;overflow:hidden;transition:color ${d}s ${e};z-index:0;}
+.aw-borderfill::before{content:'';position:absolute;inset:0;background:${c};transform:scaleX(0);transform-origin:left;transition:transform ${d}s ${e};z-index:-1;}
+.aw-borderfill:hover{color:#fff;}
+.aw-borderfill:hover::before{transform:scaleX(1);}`);
+
+    add('btn-icon-slide','button','Icon Slide','.aw-iconslide',
+      `<button class="aw-btn aw-iconslide">Get Started <span class="arrow">→</span></button>`,
+      (d,c,e)=>`.aw-iconslide{padding:14px 30px;border:none;border-radius:10px;background:${c};color:#fff;font-weight:600;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;overflow:hidden;}
+.aw-iconslide .arrow{display:inline-block;transition:transform ${d}s ${e};}
+.aw-iconslide:hover .arrow{transform:translateX(6px);}`);
+
+    add('btn-loading','button','Loading Spinner','.aw-loading',
+      `<button class="aw-btn aw-loading"><span class="spin"></span>Loading</button>`,
+      (d,c,e)=>`.aw-loading{padding:14px 30px;border:none;border-radius:10px;background:${c};color:#fff;font-weight:600;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:10px;}
+.aw-loading .spin{width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:awBtnSpin ${d}s linear infinite;}
+@keyframes awBtnSpin{to{transform:rotate(360deg);}}`);
+
+    // ---- HOVER ----
+    add('hover-lift','hover','Card Lift','.aw-lift',
+      `<div class="aw-card aw-lift">Hover to Lift</div>`,
+      (d,c,e)=>`.aw-lift{padding:30px;border-radius:12px;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.08);text-align:center;font-weight:600;color:#1e293b;transition:transform ${d}s ${e}, box-shadow ${d}s ${e};}
+.aw-lift:hover{transform:translateY(-10px);box-shadow:0 20px 30px rgba(0,0,0,.15);}`);
+
+    add('hover-tilt','hover','3D Tilt','.aw-tilt3d',
+      `<div class="aw-card aw-tilt3d">3D Tilt</div>`,
+      (d,c,e)=>`.aw-tilt3d{padding:30px;border-radius:12px;background:${c};color:#fff;text-align:center;font-weight:600;transition:transform ${d}s ${e};transform-style:preserve-3d;}
+.aw-tilt3d:hover{transform:perspective(600px) rotateX(8deg) rotateY(-8deg) scale(1.03);}`);
+
+    add('hover-underline','hover','Underline Draw','.aw-underline',
+      `<a href="#" class="aw-link aw-underline" onclick="return false;">Hover Underline</a>`,
+      (d,c,e)=>`.aw-underline{position:relative;text-decoration:none;color:${c};font-weight:600;font-size:16px;}
+.aw-underline::after{content:'';position:absolute;left:0;bottom:-3px;width:100%;height:2px;background:${c};transform:scaleX(0);transform-origin:right;transition:transform ${d}s ${e};}
+.aw-underline:hover::after{transform:scaleX(1);transform-origin:left;}`);
+
+    add('hover-glow-border','hover','Glow Border','.aw-glowborder',
+      `<div class="aw-card aw-glowborder">Glow Border</div>`,
+      (d,c,e)=>`.aw-glowborder{padding:30px;border-radius:12px;background:#0f172a;color:#fff;text-align:center;font-weight:600;border:2px solid transparent;transition:border-color ${d}s ${e}, box-shadow ${d}s ${e};}
+.aw-glowborder:hover{border-color:${c};box-shadow:0 0 24px ${c}99;}`);
+
+    add('hover-scale-rotate','hover','Scale & Rotate','.aw-scalerotate',
+      `<div class="aw-card aw-scalerotate">Scale &amp; Rotate</div>`,
+      (d,c,e)=>`.aw-scalerotate{padding:30px;border-radius:12px;background:${c};color:#fff;text-align:center;font-weight:600;transition:transform ${d}s ${e};}
+.aw-scalerotate:hover{transform:scale(1.08) rotate(-3deg);}`);
+
+    add('hover-skew','hover','Skew Shift','.aw-skew',
+      `<div class="aw-card aw-skew">Skew Shift</div>`,
+      (d,c,e)=>`.aw-skew{padding:30px;border-radius:12px;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.08);color:#1e293b;text-align:center;font-weight:600;transition:transform ${d}s ${e};}
+.aw-skew:hover{transform:skewY(-3deg) translateY(-4px);}`);
+
+    add('hover-color-wipe','hover','Color Wipe','.aw-colorwipe',
+      `<button class="aw-btn aw-colorwipe">Color Wipe</button>`,
+      (d,c,e)=>`.aw-colorwipe{position:relative;padding:14px 34px;border:none;border-radius:10px;background:#1e293b;color:#fff;font-weight:600;font-size:15px;cursor:pointer;overflow:hidden;z-index:0;}
+.aw-colorwipe::before{content:'';position:absolute;inset:0;background:${c};transform:translateY(100%);transition:transform ${d}s ${e};z-index:-1;}
+.aw-colorwipe:hover::before{transform:translateY(0);}`);
+
+    add('hover-shadow-pop','hover','Shadow Pop','.aw-shadowpop',
+      `<div class="aw-card aw-shadowpop">Shadow Pop</div>`,
+      (d,c,e)=>`.aw-shadowpop{padding:30px;border-radius:12px;background:#fff;border:2px solid #1e293b;color:#1e293b;text-align:center;font-weight:600;transition:box-shadow ${d}s ${e}, transform ${d}s ${e};}
+.aw-shadowpop:hover{box-shadow:8px 8px 0 ${c};transform:translate(-4px,-4px);}`);
+
+    // ---- IMAGE ----
+    add('img-zoom','image','Zoom In','.aw-imgzoom',
+      `<div class="aw-imgwrap"><img src="https://picsum.photos/400/260?1" class="aw-imgzoom" alt=""></div>`,
+      (d,c,e)=>`.aw-imgwrap{overflow:hidden;border-radius:12px;}
+.aw-imgzoom{width:100%;display:block;transition:transform ${d}s ${e};}
+.aw-imgwrap:hover .aw-imgzoom{transform:scale(1.15);}`);
+
+    add('img-grayscale','image','Grayscale to Color','.aw-imggray',
+      `<div class="aw-imgwrap"><img src="https://picsum.photos/400/260?2" class="aw-imggray" alt=""></div>`,
+      (d,c,e)=>`.aw-imgwrap{overflow:hidden;border-radius:12px;}
+.aw-imggray{width:100%;display:block;filter:grayscale(100%);transition:filter ${d}s ${e};}
+.aw-imgwrap:hover .aw-imggray{filter:grayscale(0%);}`);
+
+    add('img-blur-focus','image','Blur to Focus','.aw-imgblur',
+      `<div class="aw-imgwrap"><img src="https://picsum.photos/400/260?3" class="aw-imgblur" alt=""></div>`,
+      (d,c,e)=>`.aw-imgwrap{overflow:hidden;border-radius:12px;}
+.aw-imgblur{width:100%;display:block;filter:blur(6px);transform:scale(1.05);transition:filter ${d}s ${e}, transform ${d}s ${e};}
+.aw-imgwrap:hover .aw-imgblur{filter:blur(0);transform:scale(1);}`);
+
+    add('img-overlay-reveal','image','Overlay Reveal','.aw-overlay',
+      `<div class="aw-imgwrap aw-overlaywrap"><img src="https://picsum.photos/400/260?4" alt=""><div class="aw-overlay"><span>View Project</span></div></div>`,
+      (d,c,e)=>`.aw-overlaywrap{position:relative;overflow:hidden;border-radius:12px;}
+.aw-overlaywrap img{width:100%;display:block;}
+.aw-overlay{position:absolute;inset:0;background:${c}cc;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;opacity:0;transition:opacity ${d}s ${e};}
+.aw-overlaywrap:hover .aw-overlay{opacity:1;}`);
+
+    add('img-flip','image','Flip Reveal','.aw-flipinner',
+      `<div class="aw-flipwrap"><div class="aw-flipinner"><div class="aw-flipfront"><img src="https://picsum.photos/400/260?5" alt=""></div><div class="aw-flipback">Flipped!</div></div></div>`,
+      (d,c,e)=>`.aw-flipwrap{perspective:1000px;border-radius:12px;overflow:hidden;}
+.aw-flipinner{position:relative;width:100%;height:220px;transition:transform ${d}s ${e};transform-style:preserve-3d;}
+.aw-flipwrap:hover .aw-flipinner{transform:rotateY(180deg);}
+.aw-flipfront,.aw-flipback{position:absolute;inset:0;backface-visibility:hidden;}
+.aw-flipfront img{width:100%;height:100%;object-fit:cover;}
+.aw-flipback{background:${c};color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;transform:rotateY(180deg);}`);
+
+    add('img-caption-slide','image','Caption Slide Up','.aw-caption',
+      `<div class="aw-imgwrap aw-captionwrap"><img src="https://picsum.photos/400/260?6" alt=""><div class="aw-caption">Beautiful Scenery</div></div>`,
+      (d,c,e)=>`.aw-captionwrap{position:relative;overflow:hidden;border-radius:12px;}
+.aw-captionwrap img{width:100%;display:block;}
+.aw-caption{position:absolute;left:0;right:0;bottom:0;padding:14px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-weight:600;transform:translateY(100%);transition:transform ${d}s ${e};}
+.aw-captionwrap:hover .aw-caption{transform:translateY(0);}`);
+
+    // ---- CARD ----
+    add('card-flip-3d','card','3D Flip','.aw-cflipinner',
+      `<div class="aw-cflip"><div class="aw-cflipinner"><div class="aw-cflipfront">Front Side</div><div class="aw-cflipback">Back Side</div></div></div>`,
+      (d,c,e)=>`.aw-cflip{perspective:1200px;height:200px;}
+.aw-cflipinner{position:relative;width:100%;height:100%;transition:transform ${d}s ${e};transform-style:preserve-3d;}
+.aw-cflip:hover .aw-cflipinner{transform:rotateY(180deg);}
+.aw-cflipfront,.aw-cflipback{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;}
+.aw-cflipfront{background:${c};}
+.aw-cflipback{background:#1e293b;transform:rotateY(180deg);}`);
+
+    add('card-gradient-border','card','Gradient Border','.aw-gborder',
+      `<div class="aw-gborder"><div class="aw-gborder-inner">Gradient Border</div></div>`,
+      (d,c,e)=>`.aw-gborder{padding:3px;border-radius:14px;background:linear-gradient(120deg,${c},#06b6d4,${c});background-size:200% auto;transition:background-position ${d}s ${e};}
+.aw-gborder:hover{background-position:right center;}
+.aw-gborder-inner{background:#fff;border-radius:11px;padding:30px;text-align:center;font-weight:600;color:#1e293b;}`);
+
+    add('card-tilt-shadow','card','Tilt & Shadow','.aw-tshadow',
+      `<div class="aw-tshadow">Tilt &amp; Shadow</div>`,
+      (d,c,e)=>`.aw-tshadow{padding:30px;border-radius:12px;background:#fff;color:#1e293b;text-align:center;font-weight:600;box-shadow:0 4px 10px rgba(0,0,0,.08);transition:transform ${d}s ${e}, box-shadow ${d}s ${e};}
+.aw-tshadow:hover{transform:perspective(600px) rotateX(6deg) translateY(-6px);box-shadow:0 24px 34px rgba(0,0,0,.18);}`);
+
+    add('card-reveal-content','card','Content Reveal','.aw-reveal',
+      `<div class="aw-reveal"><h4>Project Title</h4><p class="aw-revealtext">Extra details slide into view on hover.</p></div>`,
+      (d,c,e)=>`.aw-reveal{padding:24px;border-radius:12px;background:${c};color:#fff;overflow:hidden;}
+.aw-reveal h4{margin:0 0 6px;}
+.aw-revealtext{max-height:0;opacity:0;transition:max-height ${d}s ${e}, opacity ${d}s ${e};margin:0;}
+.aw-reveal:hover .aw-revealtext{max-height:80px;opacity:1;margin-top:8px;}`);
+
+    add('card-shine-sweep','card','Shine Sweep Card','.aw-cshine',
+      `<div class="aw-cshine">Shine Sweep Card</div>`,
+      (d,c,e)=>`.aw-cshine{position:relative;overflow:hidden;padding:30px;border-radius:12px;background:#1e293b;color:#fff;text-align:center;font-weight:600;}
+.aw-cshine::before{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left ${d}s ${e};}
+.aw-cshine:hover::before{left:130%;}`);
+
+    // ---- LOADER ----
+    add('loader-spinner','loader','Classic Spinner','.aw-spinner',
+      `<div class="aw-spinner"></div>`,
+      (d,c,e)=>`.aw-spinner{width:44px;height:44px;border:4px solid #e2e8f0;border-top-color:${c};border-radius:50%;animation:awSpinL ${d}s linear infinite;}
+@keyframes awSpinL{to{transform:rotate(360deg);}}`);
+
+    add('loader-dots','loader','Bouncing Dots','.aw-dots',
+      `<div class="aw-dots"><span></span><span></span><span></span></div>`,
+      (d,c,e)=>`.aw-dots{display:flex;gap:8px;}
+.aw-dots span{width:12px;height:12px;border-radius:50%;background:${c};animation:awBounce ${d}s ${e} infinite;}
+.aw-dots span:nth-child(2){animation-delay:${(d/4).toFixed(2)}s;}
+.aw-dots span:nth-child(3){animation-delay:${(d/2).toFixed(2)}s;}
+@keyframes awBounce{0%,80%,100%{transform:translateY(0);opacity:.5;}40%{transform:translateY(-14px);opacity:1;}}`);
+
+    add('loader-bar','loader','Progress Bar','.aw-barwrap',
+      `<div class="aw-barwrap"><div class="aw-bar"></div></div>`,
+      (d,c,e)=>`.aw-barwrap{width:220px;height:8px;background:#e2e8f0;border-radius:6px;overflow:hidden;}
+.aw-bar{height:100%;width:40%;background:${c};border-radius:6px;animation:awBar ${(d*2).toFixed(2)}s ${e} infinite;}
+@keyframes awBar{0%{transform:translateX(-100%);}100%{transform:translateX(350%);}}`);
+
+    add('loader-pulse-ring','loader','Pulse Ring','.aw-pulsering',
+      `<div class="aw-pulsering"></div>`,
+      (d,c,e)=>`.aw-pulsering{width:44px;height:44px;border-radius:50%;background:${c};animation:awPulseRing ${(d*2).toFixed(2)}s ${e} infinite;}
+@keyframes awPulseRing{0%{transform:scale(.7);opacity:1;}70%{transform:scale(1.6);opacity:0;}100%{opacity:0;}}`);
+
+    add('loader-gradient-ring','loader','Gradient Ring','.aw-gring',
+      `<div class="aw-gring"></div>`,
+      (d,c,e)=>`.aw-gring{width:46px;height:46px;border-radius:50%;background:conic-gradient(${c}, transparent 70%);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 6px),#000 calc(100% - 6px));mask:radial-gradient(farthest-side,transparent calc(100% - 6px),#000 calc(100% - 6px));animation:awSpinRing ${d}s linear infinite;}
+@keyframes awSpinRing{to{transform:rotate(360deg);}}`);
+
+    // ---- TEXT ----
+    add('text-gradient-flow','text','Gradient Flow','.aw-gradtext',
+      `<h2 class="aw-gradtext">Animated Gradient Text</h2>`,
+      (d,c,e)=>`.aw-gradtext{font-size:28px;font-weight:800;background:linear-gradient(90deg,${c},#06b6d4,${c});background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:awGradFlow ${(d*3).toFixed(2)}s linear infinite;}
+@keyframes awGradFlow{to{background-position:200% center;}}`);
+
+    add('text-typewriter','text','Typewriter','.aw-typewriter',
+      `<div class="aw-typewrap"><span class="aw-typewriter">Building tools, one line at a time.</span></div>`,
+      (d,c,e)=>`.aw-typewrap{font-family:monospace;font-size:18px;font-weight:600;color:#1e293b;}
+.aw-typewriter{display:inline-block;overflow:hidden;white-space:nowrap;border-right:2px solid ${c};animation:awType ${(d*4).toFixed(2)}s steps(40,end) infinite, awCaret .8s step-end infinite;}
+@keyframes awType{0%,10%{width:0;}70%,100%{width:34ch;}}
+@keyframes awCaret{50%{border-color:transparent;}}`);
+
+    add('text-glitch','text','Glitch','.aw-glitch',
+      `<h2 class="aw-glitch" data-text="GLITCH FX">GLITCH FX</h2>`,
+      (d,c,e)=>`.aw-glitch{position:relative;font-size:30px;font-weight:800;color:#1e293b;}
+.aw-glitch::before,.aw-glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;}
+.aw-glitch::before{color:${c};animation:awGlitch1 ${d}s infinite linear alternate-reverse;clip-path:inset(0 0 60% 0);}
+.aw-glitch::after{color:#ef4444;animation:awGlitch2 ${d}s infinite linear alternate-reverse;clip-path:inset(40% 0 0 0);}
+@keyframes awGlitch1{0%{transform:translate(-2px,-1px);}100%{transform:translate(2px,1px);}}
+@keyframes awGlitch2{0%{transform:translate(2px,1px);}100%{transform:translate(-2px,-1px);}}`);
+
+    add('text-bounce-letters','text','Bounce Letters','.aw-bounceletters',
+      `<div class="aw-bounceletters"><span>B</span><span>O</span><span>U</span><span>N</span><span>C</span><span>E</span></div>`,
+      (d,c,e)=>`.aw-bounceletters{display:flex;font-size:28px;font-weight:800;color:${c};}
+.aw-bounceletters span{display:inline-block;animation:awLetterBounce ${d}s ${e} infinite;}
+.aw-bounceletters span:nth-child(2){animation-delay:.1s;}
+.aw-bounceletters span:nth-child(3){animation-delay:.2s;}
+.aw-bounceletters span:nth-child(4){animation-delay:.3s;}
+.aw-bounceletters span:nth-child(5){animation-delay:.4s;}
+.aw-bounceletters span:nth-child(6){animation-delay:.5s;}
+@keyframes awLetterBounce{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-14px);}}`);
+
+    add('text-underline-draw','text','Underline Draw','.aw-underlinedraw',
+      `<h3 class="aw-underlinedraw">Hover to draw underline beneath this heading</h3>`,
+      (d,c,e)=>`.aw-underlinedraw{position:relative;display:inline;font-size:20px;font-weight:700;color:#1e293b;background-image:linear-gradient(${c},${c});background-size:0% 3px;background-repeat:no-repeat;background-position:0 100%;transition:background-size ${d}s ${e};}
+.aw-underlinedraw:hover{background-size:100% 3px;}`);
+
+    // ---------- State ----------
+    let currentId = P[0].id;
+    let currentCat = 'all';
+
+    const els = {
+      catTabs: document.getElementById('catTabs'),
+      effectList: document.getElementById('effectList'),
+      search: document.getElementById('awSearch'),
+      stage: document.getElementById('demoStage'),
+      dynStyle: document.getElementById('dynStyle'),
+      name: document.getElementById('activeEffectName'),
+      cat: document.getElementById('activeEffectCat'),
+      duration: document.getElementById('ctrlDuration'),
+      durVal: document.getElementById('durVal'),
+      easing: document.getElementById('ctrlEasing'),
+      color: document.getElementById('ctrlColor'),
+      htmlCode: document.getElementById('htmlCode'),
+      cssCode: document.getElementById('cssCode'),
+      tailwindCode: document.getElementById('tailwindCode'),
+    };
+
+    function catLabel(id){ return (CATS.find(c=>c.id===id)||{}).label || id; }
+
+    // ---------- Build category tabs ----------
+    function renderTabs(){
+      let html = `<button class="aw-tab active" data-cat="all">All</button>`;
+      CATS.forEach(c=>{
+        html += `<button class="aw-tab" data-cat="${c.id}">${c.icon} ${c.label}</button>`;
+      });
+      els.catTabs.innerHTML = html;
+      els.catTabs.querySelectorAll('.aw-tab').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          els.catTabs.querySelectorAll('.aw-tab').forEach(b=>b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCat = btn.dataset.cat;
+          renderList();
+        });
+      });
+    }
+
+    // ---------- Build effect list ----------
+    function renderList(){
+      const q = (els.search.value||'').toLowerCase().trim();
+      const items = P.filter(p=>{
+        const inCat = currentCat === 'all' || p.cat === currentCat;
+        const inSearch = !q || p.name.toLowerCase().includes(q);
+        return inCat && inSearch;
+      });
+      els.effectList.innerHTML = items.map(p=>`
+        <div class="aw-list-item ${p.id===currentId?'active':''}" data-id="${p.id}">
+          <span class="aw-list-cat-dot dot-${p.cat}"></span>
+          <span class="aw-list-name">${p.name}</span>
+          <span class="aw-list-cat-label">${catLabel(p.cat)}</span>
+        </div>`).join('') || `<div class="aw-list-empty">No effects match your search.</div>`;
+
+      els.effectList.querySelectorAll('.aw-list-item').forEach(item=>{
+        item.addEventListener('click', ()=>{
+          currentId = item.dataset.id;
+          els.effectList.querySelectorAll('.aw-list-item').forEach(i=>i.classList.remove('active'));
+          item.classList.add('active');
+          renderDemo();
+        });
+      });
+    }
+
+    els.search.addEventListener('input', renderList);
+
+    // ---------- Tailwind approximation ----------
+    function parseDeclBlock(str){
+      return str.split(';').map(s=>s.trim()).filter(Boolean).map(decl=>{
+        const idx = decl.indexOf(':');
+        if(idx<0) return null;
+        const prop = decl.slice(0,idx).trim();
+        const val = decl.slice(idx+1).trim().replace(/\s+/g,'_');
+        return `[${prop}:${val}]`;
+      }).filter(Boolean);
+    }
+
+    function buildTailwind(preset, css, html){
+      const escSel = preset.mainClass.replace('.', '\\.');
+      const baseRe = new RegExp(escSel.replace(/\\\./,'\\.') + '\\s*\\{([^}]*)\\}');
+      const hoverRe = new RegExp(escSel + ':hover\\s*\\{([^}]*)\\}');
+      const activeRe = new RegExp(escSel + ':active\\s*\\{([^}]*)\\}');
+
+      const baseM = css.match(baseRe);
+      const hoverM = css.match(hoverRe);
+      const activeM = css.match(activeRe);
+
+      const baseClasses = baseM ? parseDeclBlock(baseM[1]) : [];
+      const hoverClasses = hoverM ? parseDeclBlock(hoverM[1]).map(c=>'hover:'+c) : [];
+      const activeClasses = activeM ? parseDeclBlock(activeM[1]).map(c=>'active:'+c) : [];
+
+      const hasPseudo = /::before|::after/.test(css);
+      const kfMatches = [...css.matchAll(/@keyframes\s+([\w-]+)/g)].map(m=>m[1]);
+
+      let out = `<!-- Tailwind (v3+) approximation using arbitrary value utilities -->\n`;
+      const allClasses = [...baseClasses, ...hoverClasses, ...activeClasses].join(' ');
+      if(allClasses){
+        out += `<!-- apply this class list to the main element -->\nclass="${allClasses}"\n\n`;
+      }
+
+      if(kfMatches.length){
+        out += `<!-- This effect uses @keyframes. Tailwind can't generate keyframes from utility\n`;
+        out += `classes alone — add them to tailwind.config.js: -->\n\n`;
+        out += `module.exports = {\n  theme: {\n    extend: {\n      keyframes: {\n`;
+        kfMatches.forEach(name=>{
+          const re = new RegExp('@keyframes\\s+'+name+'\\s*\\{([\\s\\S]*?)\\n\\}');
+          out += `        ${name}: /* copy from CSS tab */ {},\n`;
+        });
+        out += `      },\n      animation: {\n`;
+        kfMatches.forEach(name=>{
+          out += `        '${name}': '${name} <duration>s <easing> infinite',\n`;
+        });
+        out += `      }\n    }\n  }\n}\n\n`;
+        out += `<!-- then apply e.g. class="animate-[${kfMatches[0]}]" -->\n`;
+      }
+
+      if(hasPseudo){
+        out += `\n<!-- This effect also uses ::before/::after pseudo-elements.\n`;
+        out += `Tailwind's before:/after: variants can express these, but for pseudo-element\n`;
+        out += `content and positioning it's cleaner to paste the raw CSS from the CSS tab. -->\n`;
+      }
+
+      if(!allClasses && !kfMatches.length){
+        out += `<!-- Paste the CSS from the CSS tab — this effect relies on structural selectors\n`;
+        out += `Tailwind utilities can't express directly. -->\n`;
+      }
+
+      return out;
+    }
+
+    // ---------- Render demo + code ----------
+    function currentPreset(){
+      return P.find(p=>p.id===currentId) || P[0];
+    }
+
+    function renderDemo(){
+      const preset = currentPreset();
+      const d = parseFloat(els.duration.value);
+      const e = els.easing.value;
+      const c = els.color.value;
+
+      els.durVal.textContent = d.toFixed(1) + 's';
+      els.name.textContent = preset.name;
+      els.cat.textContent = catLabel(preset.cat) + ' Effect';
+
+      const css = preset.cssFn(d, c, e);
+
+      els.stage.innerHTML = preset.html;
+      els.dynStyle.textContent = css;
+
+      els.htmlCode.value = preset.html;
+      els.cssCode.value = css;
+      els.tailwindCode.value = buildTailwind(preset, css, preset.html);
+    }
+
+    function replayDemo(){
+      const html = els.stage.innerHTML;
+      els.stage.innerHTML = '';
+      void els.stage.offsetWidth; // force reflow
+      els.stage.innerHTML = html;
+    }
+    window.replayDemo = replayDemo;
+
+    els.duration.addEventListener('input', renderDemo);
+    els.easing.addEventListener('change', renderDemo);
+    els.color.addEventListener('input', renderDemo);
+
+    // ---------- Code tabs ----------
+    document.querySelectorAll('.aw-code-tab').forEach(tab=>{
+      tab.addEventListener('click', ()=>{
+        document.querySelectorAll('.aw-code-tab').forEach(t=>t.classList.remove('active'));
+        document.querySelectorAll('.aw-code-pane').forEach(p=>p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('pane-'+tab.dataset.target).classList.add('active');
+      });
+    });
+
+    // ---------- Copy ----------
+    window.copyCode = function(id){
+      const text = document.getElementById(id);
+      text.select();
+      document.execCommand('copy');
+      showToast('✓ Copied to clipboard!');
+    };
+
+    function showToast(message) {
+      let toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 2000);
+    }
+
+    // ---------- Init ----------
+    renderTabs();
+    renderList();
+    renderDemo();
+
+  })();
+  </script>
+
+  <!-- FAQ ACCORDION -->
+  <script>
+    document.querySelectorAll('.ic-faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.ic-faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.ic-faq-item').forEach(function (i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <style>
+    :root {
+      --brand-dark: #0f172a;
+      --brand-mid: #1e293b;
+      --brand-accent: #3b82f6;
+      --brand-accent2: #06b6d4;
+      --brand-light: #f8fafc;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+      --shadow-md: 0 6px 24px rgba(0, 0, 0, .10);
+      --transition: .2s ease;
+    }
+
+    .ic-breadcrumb {
+      background: var(--brand-dark);
+      padding: 12px 0;
+      border-bottom: 1px solid #1e293b;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-breadcrumb ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+    }
+
+    .ic-breadcrumb ol li {
+      color: #64748b;
+    }
+
+    .ic-breadcrumb ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .ic-breadcrumb ol li a:hover {
+      color: var(--brand-accent);
+    }
+
+    .ic-breadcrumb ol li.sep {
+      color: #334155;
+    }
+
+    .ic-breadcrumb ol li.current {
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .ic-hero {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0c2340 55%, #0f172a 100%);
+      padding: 44px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ic-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 75% 50%, rgba(59, 130, 246, .11) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ic-hero .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, .15);
+      border: 1px solid rgba(59, 130, 246, .28);
+      border-radius: 100px;
+      color: #93c5fd;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      margin-bottom: 14px;
+    }
+
+    .ic-hero h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: #f1f5f9;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .ic-hero h1 span {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ic-hero p.hero-desc {
+      color: #94a3b8;
+      font-size: .93rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 22px;
+    }
+
+    .ic-trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 100px;
+      color: #cbd5e1;
+      font-size: .76rem;
+      font-weight: 500;
+      padding: 5px 13px;
+    }
+
+    .ic-badge i {
+      color: #34d399;
+      font-size: .7rem;
+    }
+
+    .ic-content {
+      background: var(--brand-light);
+      padding: 0 0 64px;
+    }
+
+    .ic-section {
+      padding: 52px 0 0;
+      float: left;
+      width: 100%;
+    }
+
+    .ic-section-head {
+      margin-bottom: 28px;
+    }
+
+    .ic-section-head .sec-eyebrow {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-section-head p {
+      color: var(--text-muted);
+      font-size: .88rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0;
+    }
+
+    .ic-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ic-step-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .ic-step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--brand-accent);
+    }
+
+    .ic-step-card .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .ic-step-card .step-icon {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .ic-step-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-step-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .ic-steps-wrap {
+      position: relative;
+    }
+
+    .ic-steps-wrap::before {
+      content: '';
+      position: absolute;
+      top: 54px;
+      left: calc(12.5% + 10px);
+      right: calc(12.5% + 10px);
+      height: 2px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      opacity: .25;
+      z-index: 0;
+    }
+
+    .ic-format-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-format-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-format-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ic-format-card .fmt-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-format-card .fmt-from {
+      font-size: .65rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 600;
+    }
+
+    .ic-format-card .fmt-title {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 4px;
+    }
+
+    .ic-format-card .fmt-desc {
+      font-size: .76rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .bg-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+    .bg-cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+    .bg-violet { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+    .bg-emerald { background: linear-gradient(135deg, #10b981, #059669); }
+    .bg-orange { background: linear-gradient(135deg, #f97316, #ea580c); }
+    .bg-rose { background: linear-gradient(135deg, #f43f5e, #e11d48); }
+    .bg-amber { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .bg-indigo { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+
+    .ic-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ic-faq-item {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open {
+      border-color: var(--brand-accent);
+    }
+
+    .ic-faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      cursor: pointer;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .ic-faq-q h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin: 0;
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .ic-faq-q .faq-toggle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .ic-faq-item.open .faq-toggle {
+      background: var(--brand-accent);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .ic-faq-a {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: .85rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    .ic-faq-item.open .ic-faq-a {
+      display: block;
+    }
+
+    .ic-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ic-why-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-why-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .ic-why-card .why-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .ic-why-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 6px;
+    }
+
+    .ic-why-card p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .ic-related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .ic-related-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover {
+      border-color: var(--brand-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      color: inherit;
+    }
+
+    .ic-related-card .rel-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .ic-related-card .rel-name {
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 2px;
+    }
+
+    .ic-related-card .rel-desc {
+      font-size: .72rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .ic-related-card .rel-arrow {
+      margin-left: auto;
+      color: var(--brand-accent);
+      font-size: .72rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .ic-related-card:hover .rel-arrow {
+      opacity: 1;
+    }
+
+    body { overflow-x: hidden; }
+
+    .panel {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    textarea { font-family: monospace; }
+
+    /* TOAST NOTIFICATION */
+    .ic-toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+      font-size: 14px;
+      font-weight: 500;
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+
+    .ic-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    @media (max-width: 576px) {
+      .ic-toast { bottom: 20px; right: 20px; padding: 12px 16px; font-size: 13px; }
+    }
+
+    @media (max-width: 991px) {
+      .ic-steps { grid-template-columns: repeat(2, 1fr); }
+      .ic-format-grid { grid-template-columns: repeat(2, 1fr); }
+      .ic-why-grid { grid-template-columns: repeat(2, 1fr); }
+      .ic-related-grid { grid-template-columns: repeat(2, 1fr); }
+      .ic-steps-wrap::before { display: none; }
+    }
+
+    @media (max-width: 575px) {
+      .ic-steps { grid-template-columns: 1fr; }
+      .ic-format-grid { grid-template-columns: 1fr; }
+      .ic-why-grid { grid-template-columns: 1fr; }
+      .ic-related-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════════
+  ANIMATION BUILDER STYLES
+  ═══════════════════════════════════════════════════════ -->
+  <style>
+    .aw-h1 { font-weight: 800; color: var(--brand-dark); }
+    .aw-sub { color: var(--text-muted); font-size: .9rem; }
+
+    /* LEFT LIBRARY PANEL */
+    .aw-library-panel { display: flex; flex-direction: column; height: 100%; }
+    .aw-library-panel h6 { font-weight: 700; color: var(--brand-dark); margin-bottom: 10px; }
+
+    .aw-cat-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .aw-tab {
+      border: 1.5px solid var(--card-border);
+      background: #fff;
+      color: var(--text-body);
+      font-size: .72rem;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .aw-tab:hover { border-color: var(--brand-accent); }
+    .aw-tab.active {
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .aw-list {
+      margin-top: 12px;
+      max-height: 520px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-right: 4px;
+    }
+    .aw-list::-webkit-scrollbar { width: 6px; }
+    .aw-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+    .aw-list-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1.5px solid var(--card-border);
+      cursor: pointer;
+      transition: var(--transition);
+      background: #fff;
+    }
+    .aw-list-item:hover { border-color: var(--brand-accent); background: #f8fafc; }
+    .aw-list-item.active {
+      border-color: var(--brand-accent);
+      background: #eff6ff;
+    }
+    .aw-list-cat-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+      background: #94a3b8;
+    }
+    .dot-button { background: #3b82f6; }
+    .dot-hover { background: #06b6d4; }
+    .dot-image { background: #10b981; }
+    .dot-card { background: #8b5cf6; }
+    .dot-loader { background: #f59e0b; }
+    .dot-text { background: #f43f5e; }
+
+    .aw-list-name { font-size: .82rem; font-weight: 600; color: var(--brand-dark); flex: 1; }
+    .aw-list-cat-label { font-size: .68rem; color: var(--text-muted); }
+    .aw-list-empty { font-size: .8rem; color: var(--text-muted); padding: 20px 8px; text-align: center; }
+
+    /* DEMO STAGE */
+    .aw-demo-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .aw-demo-head h6 { font-weight: 700; color: var(--brand-dark); }
+    .aw-effect-cat { color: var(--text-muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
+
+    .aw-controls {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      background: #f8fafc;
+      border: 1.5px solid var(--card-border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+    .aw-control label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--text-body);
+      margin-bottom: 6px;
+    }
+    .aw-control input[type="range"] { width: 100%; }
+    .aw-control .form-control-color { width: 100%; height: 34px; padding: 2px; }
+
+    .aw-stage-wrap {
+      min-height: 320px;
+      border-radius: 12px;
+      background:
+        linear-gradient(45deg, #f1f5f9 25%, transparent 25%),
+        linear-gradient(-45deg, #f1f5f9 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #f1f5f9 75%),
+        linear-gradient(-45deg, transparent 75%, #f1f5f9 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      border: 1.5px dashed var(--card-border);
+    }
+    .aw-stage {
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    /* CODE TABS */
+    .aw-code-tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+    .aw-code-tab {
+      border: 1.5px solid var(--card-border);
+      background: #fff;
+      color: var(--text-body);
+      font-size: .78rem;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .aw-code-tab.active {
+      background: var(--brand-dark);
+      border-color: var(--brand-dark);
+      color: #fff;
+    }
+    .aw-code-pane { display: none; }
+    .aw-code-pane.active { display: block; }
+    .aw-code-pane textarea {
+      width: 100%;
+      border-radius: 8px;
+      border: 1.5px solid var(--card-border);
+      padding: 12px;
+      box-shadow: none;
+      font-size: .78rem;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    @media (max-width: 991px) {
+      .aw-controls { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</body>
+
+</html>
